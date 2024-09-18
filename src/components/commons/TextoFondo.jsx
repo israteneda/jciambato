@@ -14,13 +14,13 @@ export default function TextoFondo() {
       {/* Texto de fondo con alineación y posiciones ajustadas */}
       <div className="absolute inset-0 flex flex-col justify-center overflow-hidden leading-tight transition-transform duration-500">
         <h1
-          className="text-[11vw] font-bold text-gray-300 opacity-40 transform text-right"
+          className="text-[10vw] font-bold text-gray-300 opacity-40 transform text-right"
           style={{ transform: `translateX(${translateAmountJci - 70 }px)` }}
         >
           JCI AMBATO
         </h1>
         <h1
-          className="text-[11vw] font-bold text-gray-300 opacity-40 transform text-left"
+          className="text-[10vw] font-bold text-gray-300 opacity-40 transform text-left"
           style={{ transform: `translateX(${translateAmountJr}px)`}}
         >
           JUNIOR CHAMBER

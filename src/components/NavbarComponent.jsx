@@ -148,8 +148,3 @@ export function NavbarComponent() {
     </Navbar>
   );
 }
-
-/* 
-
- 
-*/

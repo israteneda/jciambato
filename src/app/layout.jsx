@@ -1,8 +1,9 @@
-import { Providers } from "./providers";
 import "@/styles/globals.css";
-
+import { Inter } from "next/font/google";
 import { NavbarComponent } from "@/components/NavbarComponent";
 import { FooterComponent } from "@/components/FooterComponent";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "JCI Ambato",
@@ -25,13 +26,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className="light">
-      <body>
-        <Providers>
-          <NavbarComponent />
-          <main className="relative">{children}</main>
-          <FooterComponent />
-        </Providers>
+    <html lang="es">
+      <body className={`${inter.className} light`}>
+        <NavbarComponent />
+        {children}
+        <FooterComponent />
       </body>
     </html>
   );
