@@ -12,16 +12,18 @@ export const metadata = {
     "JCI Ambato, liderazgo, voluntariado, jóvenes, comunidad, proyectos sociales",
   author: "JCI Ambato",
   image: "/jci.png",
-  url: "",
+  url: "https://www.jciambato.com", // Aquí va tu URL real
   type: "website",
   openGraph: {
     type: "website",
     locale: "es_EC",
-    url: "",
+    url: "https://www.jciambato.com",
     title: "JCI Ambato",
     description: "Página oficial del capítulo JCI Ambato",
     image: "/jci.png",
   },
+  canonical: "https://www.jciambato.com",
+  robots: "index,follow",
 };
 
 export default function RootLayout({ children }) {
@@ -29,7 +31,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={`${inter.className} light`}>
         <NavbarComponent />
-        {children}
+        <main>{children}</main>
         <FooterComponent />
       </body>
     </html>

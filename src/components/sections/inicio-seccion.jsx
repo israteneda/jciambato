@@ -7,7 +7,10 @@ export default function InicioSeccion() {
   const isScrolled = useScroll();
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section
+      className="relative w-full h-screen overflow-hidden"
+      aria-labelledby="section-title"
+    >
       {/* Video de fondo */}
       <video
         src="/rotary.mp4"
