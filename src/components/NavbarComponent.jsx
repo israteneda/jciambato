@@ -46,8 +46,7 @@ export function NavbarComponent() {
               alt="JCI Ambato Logo"
               width={80}
               height={80}
-              priority={true}
-              loading="eager"
+              loading="lazy"
             />
           </Link>
         </NavbarBrand>
@@ -128,7 +127,8 @@ export function NavbarComponent() {
       </NavbarContent>
 
       <NavbarMenuToggle
-        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+        aria-expanded={isMenuOpen}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         className={`transition-colors duration-200 ${
           isScrolled ? "text-black" : "text-white"
@@ -139,7 +139,12 @@ export function NavbarComponent() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className="w-full" href="#" size="lg">
+            <Link
+              className="w-full"
+              href="#"
+              size="lg"
+              onClick={() => setIsMenuOpen(false)}
+            >
               {item}
             </Link>
           </NavbarMenuItem>
@@ -148,8 +153,3 @@ export function NavbarComponent() {
     </Navbar>
   );
 }
-
-/* 
-
- 
-*/

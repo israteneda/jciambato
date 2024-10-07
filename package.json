@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/button": "^2.0.38",
+    "@nextui-org/navbar": "^2.0.37",
     "@nextui-org/react": "^2.4.6",
+    "@nextui-org/system": "^2.2.6",
+    "@nextui-org/theme": "^2.2.11",
     "framer-motion": "^11.3.30",
     "next": "14.2.5",
     "react": "^18",
