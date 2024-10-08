@@ -13,33 +13,35 @@ export default function Presentacion() {
   return (
     <>
       {/* Primera sección: Información general */}
-      <section className="relative w-full h-auto mt-20">
-        {/* Contenedor principal */}
-        <div className="relative z-30 flex px-4 md:px-8 lg:px-20">
-          {/* Contenedor de texto e información */}
-          <div className="w-3/4 mx-5 lg:mx-10 text-left">
-            <h2 className="text-xs md:text-sm lg:text-md xl:text-sm font-bold mb-5 text-gray-600">
-              EN AMBATO
-            </h2>
-            <h1 className="text-4xl lg:text-6xl xl:text-6xl font-light mb-16 text-cyan-600">
-              JCI Ambato ha liderado el desarrollo de liderazgo por más de 50
-              años.
-            </h1>
+      <section>
+        <div className="w-full mx-auto max-w-7xl px-6 mt-24 sm:mt-32 lg:mt-30">
+          {/* Contenedor principal */}
+          <div className="relative z-30 flex px-4 md:px-8 lg:px-20">
+            {/* Contenedor de texto e información */}
+            <div className="w-3/4 mx-5 lg:mx-10 text-left">
+              <h2 className="text-xs md:text-sm lg:text-md xl:text-sm font-bold mb-5 text-gray-600">
+                EN AMBATO
+              </h2>
+              <h1 className="text-4xl lg:text-6xl xl:text-6xl font-light mb-16 text-cyan-600">
+                JCI Ambato ha liderado el desarrollo de liderazgo por más de 50
+                años.
+              </h1>
 
-            {/* Botón interactivo con transiciones */}
-            <Button
-              variant="bordered"
-              className="relative overflow-hidden text-cyan-800 border-cyan-600 group"
-              aria-label="Conoce nuestra misión y visión"
-            >
-              {/* Fondo del botón con la transición de llenado */}
-              <span className="absolute inset-0 bg-cyan-600 transition-transform duration-300 transform -translate-x-full group-hover:translate-x-0"></span>
+              {/* Botón interactivo con transiciones */}
+              <Button
+                variant="bordered"
+                className="relative overflow-hidden text-cyan-800 border-cyan-600 group"
+                aria-label="Conoce nuestra misión y visión"
+              >
+                {/* Fondo del botón con la transición de llenado */}
+                <span className="absolute inset-0 bg-cyan-600 transition-transform duration-300 transform -translate-x-full group-hover:translate-x-0"></span>
 
-              {/* Texto del botón */}
-              <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-                Nuestra misión y visión
-              </span>
-            </Button>
+                {/* Texto del botón */}
+                <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+                  Nuestra misión y visión
+                </span>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

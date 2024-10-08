@@ -12,7 +12,7 @@ export const metadata = {
     "JCI Ambato, liderazgo, voluntariado, jóvenes, comunidad, proyectos sociales",
   author: "JCI Ambato",
   image: "/jci.png",
-  url: "https://www.jciambato.com", // Aquí va tu URL real
+  url: "https://www.jciambato.com",
   type: "website",
   openGraph: {
     type: "website",

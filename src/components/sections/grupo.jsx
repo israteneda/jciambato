@@ -4,33 +4,36 @@ import Image from "next/image";
 
 export default function Grupo() {
   return (
-    <section className="container mx-auto p-6 my-20">
-      {/* Contenedor de Texto e Imagen a la izquierda */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Texto */}
-        <div className="text-left lg:pr-8">
-          <h2 className="text-sm lg:text-sm font-bold mb-5 text-gray-600">
-            GRUPO
-          </h2>
-          <h2 className="text-3xl font-bold mb-4">
-            Organización mas Importante del Centro del País
-          </h2>
-          <p className="text-gray-700 mb-4">
-            Quasi est quaerat. Sit molestiae et. Provident ad dolorem occaecati
-            eos iste. Soluta rerum quidem minus ut molestiae velit error quod.
-            Excepturi quidem expedita molestias quas.
-          </p>
-        </div>
+    <section>
+      <div className="w-full h-full mx-auto my-20 max-w-8xl">
+        <div className="relative flex flex-col-reverse lg:flex-row">
+          {/* Contenedor de la imagen en la derecha para pantallas grandes y arriba para pantallas pequeñas */}
+          <div className="w-full lg:w-1/2 bg-blue-100 order-2 lg:order-2">
+            <Image
+              src="/grupo.jpeg"
+              alt="People having a conversation"
+              width={700}
+              height={500}
+              className="justify-end w-full h-auto"
+            />
+          </div>
 
-        {/* Imagen al lado del texto */}
-        <div className="lg:col-span-1">
-          <Image
-            src="/grupo.jpeg"
-            alt="People having a conversation"
-            width={700}
-            height={500}
-            className="w-full h-auto rounded-lg object-cover"
-          />
+          {/* Superposición del bloque rojo sobre la imagen */}
+          <div className="relative w-full lg:w-1/2 flex items-center justify-center lg:justify-start">
+            <div className="relative lg:absolute lg:top-10 lg:transform lg:translate-x-10 z-10">
+              <p className="text-xs md:text-sm lg:text-md xl:text-sm font-bold mb-5 text-gray-600">
+                GRUPO
+              </p>
+              <h2 className="text-xl lg:text-3xl font-semibold text-gray-800">
+                Somos la organización de líderes y emprendedores mas importante del centro del país
+              </h2>
+              <p className="m-5">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Necessitatibus dignissimos accusantium culpa eligendi?
+                Repudiandae minus repellat eaque.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

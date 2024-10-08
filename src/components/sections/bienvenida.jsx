@@ -3,7 +3,7 @@
 import { Button } from "@nextui-org/react";
 import { useScroll } from "@/hooks";
 
-export default function InicioSeccion() {
+export default function Bienvenida() {
   const isScrolled = useScroll();
 
   return (
@@ -34,7 +34,7 @@ export default function InicioSeccion() {
       <div className="relative z-30 flex items-center h-full">
         {/* Texto rotado - Aparece en pantallas grandes y desaparece en pantallas pequeñas */}
         <div className="hidden h-full lg:flex items-center justify-center w-12">
-          <p className="text-[8px] tracking-widest text-gray-400 font-semibold -rotate-90 whitespace-nowrap">
+          <p className="text-[9px] tracking-widest text-gray-400 font-semibold -rotate-90 whitespace-nowrap">
             BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO
           </p>
         </div>

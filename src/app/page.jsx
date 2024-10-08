@@ -1,5 +1,5 @@
 import {
-  InicioSeccion,
+  Bienvenida,
   Presentacion,
   Grupo,
   Premios,
@@ -10,10 +10,8 @@ import {
 export default function Inicio() {
   return (
     <div className="relative flex flex-col">
-      {/* <div className="relative flex flex-col flex-auto pt-14"> */}
-
-      {/* Sección de Inicio */}
-      <InicioSeccion />
+      {/* Sección de Bienvenida */}
+      <Bienvenida />
 
       {/* Sección Presentación */}
       <Presentacion />
