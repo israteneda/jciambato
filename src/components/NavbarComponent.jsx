@@ -14,7 +14,7 @@ import {
 } from "@nextui-org/navbar";
 
 import Image from "next/image";
-import { Link } from "@nextui-org/link";
+import Link from "next/link";
 
 export function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

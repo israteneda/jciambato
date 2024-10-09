@@ -1,3 +1,5 @@
+import { Bienvenida } from "@/components/sections/nosotros";
+
 export const metadata = {
   title: "Nosotros",
   description: "Página de Nosotros",
@@ -5,8 +7,8 @@ export const metadata = {
 
 export default function Inicio() {
   return (
-    <div>
-      <h1>Nosotros</h1>
+    <div className="relative flex flex-col">
+      <Bienvenida />
     </div>
   );
 }

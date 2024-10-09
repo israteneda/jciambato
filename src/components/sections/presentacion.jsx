@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
 import useScrollPositionText from "@/hooks/use-scroll-position-text";
 
 export default function Presentacion() {

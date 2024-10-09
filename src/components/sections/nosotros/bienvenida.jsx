@@ -2,23 +2,21 @@
 
 import { Button } from "@nextui-org/button";
 import { useScroll } from "@/hooks";
+import Image from "next/image";
 
 export default function Bienvenida() {
   const isScrolled = useScroll();
 
   return (
-    <section
-      className="relative w-full h-screen overflow-hidden"
-      aria-labelledby="section-title"
-    >
-      {/* Video de fondo */}
-      <video
-        src="/rotary.mp4"
-        autoPlay
-        loop
-        muted
-        className="absolute inset-0 w-full h-full object-cover z-10"
-        aria-label="Video de presentación de la organización"
+    <section className="relative w-full h-screen overflow-hidden">
+      {/* Imagen de Fonod */}
+      <Image
+        /* src="/group.jpg" */
+        src="/lideralider2.jpeg"
+        alt="Grupo JCI Ambato Lider a Lider 2024"
+        layout="fill"
+        objectFit="cover"
+        priority
       />
 
       {/* Capa de oscuridad para el video */}
@@ -32,15 +30,9 @@ export default function Bienvenida() {
 
       {/* Contenedor principal de los elementos sobre el video */}
       <div className="relative z-30 flex items-center h-full">
-        {/* Texto rotado - Aparece en pantallas grandes y desaparece en pantallas pequeñas */}
-        <div className="hidden h-full lg:flex items-center justify-center w-12">
-          <p className="text-[9px] tracking-widest text-gray-400 font-semibold -rotate-90 whitespace-nowrap">
-            BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO
-          </p>
-        </div>
 
         {/* Contenedor de información - Se ajusta al tamaño de la pantalla */}
-        <div className="ml-12 mr-12 lg:ml-24 text-left max-w-xl">
+        <div className="ml-12 mr-12 lg:ml-16 text-left max-w-xl">
           <h2 className="text-sm lg:text-sm font-bold mb-5 text-yellow-400">
             IMPULSANDO EL CAMBIO
           </h2>
