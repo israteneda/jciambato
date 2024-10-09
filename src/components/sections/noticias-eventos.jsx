@@ -2,7 +2,7 @@ import { Button } from "@nextui-org/react";
 
 export default function NoticiasEventos() {
   return (
-    <div className="w-full mx-auto max-w-7xl px-6 mt-24 sm:mt-32 lg:mt-40">
+    <div className="w-full mx-auto max-w-7xl px-6 mt-28 lg:mt-32">
       <header className="flex justify-between mx-auto max-w-2xl lg:max-w-none">
         <h2 className="font-display tracking-tight text-3xl font-medium sm:text-4xl text-neutral-950">
           Noticias y Eventos
