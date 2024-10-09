@@ -39,7 +39,7 @@ export function FooterComponent() {
             <div className="mx-auto max-w-2xl lg:max-w-7xl">
               <div className="relative pb-16 pt-20 text-start sm:py-24">
                 <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-500">
-                  Tenemos una solución para ti
+                  Conviértete en un Jaycees
                 </h2>
                 <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
                   ¿Tienes un proyecto en mente?
