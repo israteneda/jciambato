@@ -5,11 +5,10 @@ export default function Grupo() {
     <section className="relative w-full h-screen">
       {/* Imagen de fondo */}
       <Image
-        /* src="/group.jpg" */
         src="/lideralider2.jpeg"
         alt="Grupo JCI Ambato Lider a Lider 2024"
-        layout="fill"
-        objectFit="cover"
+        fill
+        className="object-cover"
         priority
       />
 

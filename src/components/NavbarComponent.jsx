@@ -15,137 +15,78 @@ import {
 
 import Image from "next/image";
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 export function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isScrolled = useScroll();
 
-  const menuItems = [
-    "Nosotros",
-    "Áreas de Oportunidad",
-    "Proyectos",
-    "Programas",
-    "Miembros",
-    "Involúcrate",
-  ];
-
   return (
     <Navbar
+      maxWidth="lg"
       isBlurred={false}
       className={`fixed w-full z-40 transition-all duration-300 ${
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
       onMenuOpenChange={setIsMenuOpen}
     >
-      {/* Contenido del logo para pantallas pequeñas y grandes */}
+      {/* Logo */}
       <NavbarContent justify="start">
         <NavbarBrand>
-          <Link href="/" title="JCI Ambato - Página Principal">
+          <Link href="/">
             <Image
               src="/jci.png"
               alt="JCI Ambato Logo"
               width={80}
               height={80}
-              loading="lazy"
+              className="object-contain"
             />
           </Link>
         </NavbarBrand>
       </NavbarContent>
 
-      {/* Botón para el menú móvil */}
-      <NavbarContent className="hidden lg:flex gap-6" justify="end">
-        <NavbarItem>
-          <Link
-            color="foreground"
-            href="/nosotros"
-            className={`transition-colors duration-200 ${
-              isScrolled ? "text-black" : "text-white"
-            } hover:text-yellow-400`}
-          >
-            Nosotros
-          </Link>
-        </NavbarItem>
-
-        <NavbarItem>
-          <Link
-            color="foreground"
-            href="/areas_oportunidad"
-            className={`transition-colors duration-200 ${
-              isScrolled ? "text-black" : "text-white"
-            } hover:text-yellow-400`}
-          >
-            Áreas de Oportunidad
-          </Link>
-        </NavbarItem>
-
-        <NavbarItem>
-          <Link
-            color="foreground"
-            href="/#"
-            className={`transition-colors duration-200 ${
-              isScrolled ? "text-black" : "text-white"
-            } hover:text-yellow-400`}
-          >
-            Proyectos
-          </Link>
-        </NavbarItem>
-
-        <NavbarItem>
-          <Link
-            color="foreground"
-            href="/#"
-            className={`transition-colors duration-200 ${
-              isScrolled ? "text-black" : "text-white"
-            } hover:text-yellow-400`}
-          >
-            Programas
-          </Link>
-        </NavbarItem>
-
-        <NavbarItem>
-          <Link
-            color="foreground"
-            href="/#"
-            className={`transition-colors duration-200 ${
-              isScrolled ? "text-black" : "text-white"
-            } hover:text-yellow-400`}
-          >
-            Miembros
-          </Link>
-        </NavbarItem>
-
-        <NavbarItem>
-          <Link
-            href="/#"
-            className={`transition-colors duration-200 ${
-              isScrolled ? "text-yellow-600" : "text-yellow-400"
-            }  hover:text-yellow-400`}
-          >
-            Involúcrate
-          </Link>
-        </NavbarItem>
+      {/* Items */}
+      <NavbarContent className="hidden lg:flex" justify="end">
+        {siteConfig.navItems.map((item, index) => (
+          <NavbarItem key={item.path}>
+            <Link
+              className={`transition-colors duration-200 ${
+                isScrolled
+                  ? index === siteConfig.navItems.length - 1
+                    ? "text-yellow-600"
+                    : "text-black"
+                  : index === siteConfig.navItems.length - 1
+                  ? "text-yellow-400"
+                  : "text-white"
+              } hover:text-yellow-400`}
+              href={item.path}
+            >
+              {item.name}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
 
-      <NavbarMenuToggle
-        aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
-        aria-expanded={isMenuOpen}
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className={`transition-colors duration-200 ${
-          isScrolled ? "text-black" : "text-white"
-        }`}
-      />
+      {/* Toggle del menú para pantallas pequeñas */}
+      <NavbarContent className="lg:hidden" justify="end">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className={`transition-colors duration-200 ${
+            isScrolled ? "text-black" : "text-white"
+          }`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        />
+      </NavbarContent>
 
-      {/* Menú desplegable para pantallas pequeñas */}
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+      {/* Menú desplegable en acción del toggle */}
+      <NavbarMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
+        {siteConfig.navItems.map((item, index) => (
+          <NavbarMenuItem key={`${item.path}-${index}`}>
             <Link
-              className="w-full"
-              href="#"
-              size="lg"
-              onClick={() => setIsMenuOpen(false)}
+              className="w-full text-center transition-colors duration-200 hover:text-yellow-400"
+              href={item.path}
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
