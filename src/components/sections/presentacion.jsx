@@ -11,62 +11,56 @@ export default function Presentacion() {
   const translateAmountJr = -scrollY * 0.1;
 
   return (
-    <>
-      {/* Primera sección: Información general */}
-      <section>
-        <div className="w-full mx-auto max-w-7xl px-6 mt-24 sm:mt-32 lg:mt-30">
-          {/* Contenedor principal */}
-          <div className="relative z-30 flex px-4 md:px-8 lg:px-20">
-            {/* Contenedor de texto e información */}
-            <div className="w-3/4 mx-5 lg:mx-10 text-left">
-              <h2 className="text-xs md:text-sm lg:text-md xl:text-sm font-bold mb-5 text-gray-600">
-                EN AMBATO
-              </h2>
-              <h1 className="text-4xl lg:text-6xl xl:text-6xl font-light mb-16 text-cyan-600">
-                JCI Ambato ha liderado el desarrollo de liderazgo por más de 50
-                años.
-              </h1>
+    <section className="pt-20" aria-labelledby="presentacion-title">
+      <div className="mx-auto max-w-7xl px-9 lg:px-20">
+        <div className="relative z-30 flex flex-col">
+          {/* Contenedor de texto e información */}
+          <div className="lg:w-4/5">
+            <span className="text-xs sm:text-sm lg:text-base font-bold text-gray-600 uppercase">
+              En Ambato
+            </span>
+            <h2
+              id="presentacion-title"
+              className="text-4xl text-balance sm:text-5xl lg:text-6xl font-light my-8 text-cyan-600"
+            >
+              JCI Ambato ha liderado el desarrollo de liderazgo por más de 50
+              años.
+            </h2>
 
-              {/* Botón interactivo con transiciones */}
-              <Button
-                variant="bordered"
-                className="relative overflow-hidden text-cyan-800 border-cyan-600 group"
-                aria-label="Conoce nuestra misión y visión"
-              >
-                {/* Fondo del botón con la transición de llenado */}
-                <span className="absolute inset-0 bg-cyan-600 transition-transform duration-300 transform -translate-x-full group-hover:translate-x-0"></span>
-
-                {/* Texto del botón */}
-                <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-                  Nuestra misión y visión
-                </span>
-              </Button>
-            </div>
+            {/* Botón interactivo con transiciones */}
+            <Button
+              variant="bordered"
+              className="relative overflow-hidden mt-10 text-cyan-800 border-cyan-600 group"
+              aria-label="Conoce nuestra misión y visión"
+            >
+              <span className="absolute inset-0 bg-cyan-600 transition-transform duration-300 transform -translate-x-full group-hover:translate-x-0"></span>
+              <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+                Nuestra misión y visión
+              </span>
+            </Button>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Segunda sección: Texto de fondo con efectos de desplazamiento */}
-      <section className="relative w-full h-80 overflow-hidden mb-20">
-        {/* Texto de fondo con animación de desplazamiento */}
-        <div className="absolute inset-0 flex flex-col justify-center overflow-hidden transition-transform duration-500">
-          <h1
-            id="scrolling-text"
-            className="text-5xl md:text-7xl lg:text-9xl font-extrabold text-gray-300 opacity-40 transform text-right mb-2 md:mb-4 lg:mb-6 xl:mb-8 whitespace-nowrap"
+      <div className="relative w-full h-80 overflow-hidden my-0 lg:mt-10">
+        <div className="absolute inset-0 flex flex-col justify-center overflow-hidden">
+          <h2
+            className="text-5xl sm:text-7xl lg:text-9xl font-extrabold text-gray-300 opacity-40 transform text-right mb-2 sm:mb-4 lg:mb-6 whitespace-nowrap"
             style={{ transform: `translateX(${translateAmountJci - 50}px)` }}
-            aria-label="Texto animado: JCI Ambato"
+            aria-hidden="true"
           >
             JCI AMBATO
-          </h1>
-          <h1
-            className="text-5xl md:text-7xl lg:text-9xl font-extrabold text-gray-300 opacity-40 transform text-left mt-2 md:mt-4 lg:mt-6 xl:mt-8 whitespace-nowrap"
+          </h2>
+          <h2
+            className="text-5xl sm:text-7xl lg:text-9xl font-extrabold text-gray-300 opacity-40 transform text-left mt-2 sm:mt-4 lg:mt-6 whitespace-nowrap"
             style={{ transform: `translateX(${translateAmountJr}px)` }}
-            aria-label="Texto animado: Junior Chamber"
+            aria-hidden="true"
           >
             JUNIOR CHAMBER
-          </h1>
+          </h2>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

@@ -9,7 +9,7 @@ import {
 
 export default function Inicio() {
   return (
-    <div className="relative flex flex-col">
+    <div className="flex flex-col space-y-12 md:space-y-24">
       {/* Sección de Bienvenida */}
       <Bienvenida />
 

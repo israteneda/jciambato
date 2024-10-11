@@ -17,12 +17,17 @@ export default function Bienvenida() {
         autoPlay
         loop
         muted
+        playsInline
         className="absolute inset-0 w-full h-full object-cover z-10"
         aria-label="Video de presentación de la organización"
+        aria-hidden="true"
       />
 
       {/* Capa de oscuridad para el video */}
-      <div className="absolute inset-0 bg-black opacity-40 z-20" />
+      <div
+        role="presentacion"
+        className="absolute inset-0 bg-black opacity-40 z-20"
+      />
 
       {/* Marco que se dibuja en la pantalla */}
       <div
@@ -34,9 +39,9 @@ export default function Bienvenida() {
       <div className="relative z-30 flex items-center h-full">
         {/* Texto rotado - Aparece en pantallas grandes y desaparece en pantallas pequeñas */}
         <div className="hidden h-full lg:flex items-center justify-center w-12">
-          <p className="text-[9px] tracking-widest text-gray-400 font-semibold -rotate-90 whitespace-nowrap">
+          <span className="text-[9px] tracking-widest text-gray-400 font-semibold -rotate-90 whitespace-nowrap">
             BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO
-          </p>
+          </span>
         </div>
 
         {/* Contenedor de información - Se ajusta al tamaño de la pantalla */}
@@ -44,7 +49,10 @@ export default function Bienvenida() {
           <h2 className="text-sm lg:text-sm font-bold mb-5 text-yellow-400">
             IMPULSANDO EL CAMBIO
           </h2>
-          <h1 className="text-4xl lg:text-5xl font-bold mb-5 text-cyan-600">
+          <h1
+            id="seccion-title"
+            className="text-4xl lg:text-5xl font-bold mb-5 text-cyan-600"
+          >
             Líderes en Acción: Impactando el Futuro
           </h1>
           <p className="text-sm lg:text-base mt-7 mb-4 -text-balance text-white">
@@ -54,7 +62,10 @@ export default function Bienvenida() {
           </p>
 
           {/* Botón de acción */}
-          <Button className="relative mt-4 text-white group overflow-hidden bg-cyan-600">
+          <Button
+            className="relative mt-4 text-white group overflow-hidden bg-cyan-600"
+            aria-label="Más información sobre nosotros"
+          >
             {/* Transicion de llenado, puntero entra al botón */}
             <span className="absolute inset-0 w-full h-full bg-cyan-950 transition-transform duration-300 transform -translate-x-full group-hover:translate-x-0"></span>
             <span className="relative z-10">Sobre Nosotros</span>
