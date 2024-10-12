@@ -6,16 +6,16 @@ import Image from "next/image";
 export default function Grupo() {
   return (
     <section aria-labelledby="grupo-title">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-9 lg:px-20">
         <div className="relative flex flex-col lg:flex-row items-center">
           {/* Bloque de Texto */}
-          <div className="w-full lg:w-1/2 px-10 mb-12 lg:mb-0 lg:mt-28">
+          <div className="w-full lg:w-1/2 mb-12 lg:mt-24">
             <span className="text-xs sm:text-sm lg:text-base font-bold text-gray-600 uppercase">
               Grupo
             </span>
             <h2
               id="grupo-title"
-              className="text-3xl lg:text-4xl font-semibold my-8 text-cyan-600"
+              className="text-3xl text-balance lg:text-4xl font-semibold my-8 text-cyan-600"
             >
               Somos la organización de líderes y emprendedores más importante
               del centro del país
@@ -35,32 +35,39 @@ export default function Grupo() {
             </Button>
 
             {/* Bloque de Estadísticas */}
-            <div className="mt-20 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="text-center sm:text-left">
-                <p className="text-6xl font-bold text-gray-800">+20</p>
+            <div className="mt-10 justify-center grid gap-10">
+              {/* Proyectos Ejecutados - Ocupa toda la fila */}
+              <div className="col-span-1 text-left">
+                <p className="text-6xl lg:text-7xl font-bold text-gray-800">+20</p>
                 <p className="text-gray-600 font-semibold">
                   Proyectos Ejecutados
                 </p>
               </div>
-              <div className="text-center sm:text-left">
-                <p className="text-6xl font-bold text-gray-800">+50</p>
-                <p className="text-gray-600 font-semibold">Años en Ambato</p>
-              </div>
-              <div className="text-center sm:text-left">
-                <p className="text-6xl font-bold text-gray-800">+20</p>
-                <p className="text-gray-600 font-semibold">Miembros Activos</p>
+
+              {/* Años en Ambato y Miembros Activos en la siguiente fila */}
+              <div className="grid grid-cols-2 gap-16">
+                <div className="text-left">
+                  <p className="text-6xl lg:text-7xl font-bold text-gray-800">+50</p>
+                  <p className="text-gray-600 font-semibold">Años en Ambato</p>
+                </div>
+                <div className="text-left">
+                  <p className="text-6xl lg:text-7xl font-bold text-gray-800">+20</p>
+                  <p className="text-gray-600 font-semibold">
+                    Miembros Activos
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Imagen */}
-          <div className="w-full lg:w-1/2">
+          <div className="ml-auto justify-center lg:w-1/2">
             <Image
               src="/grupo2r.jpeg"
               alt="Grupo JCI Ambato"
               width={600}
               height={600}
-              className="object-cover w-full h-auto"
+              className="object-cover w-full h-full"
             />
           </div>
         </div>

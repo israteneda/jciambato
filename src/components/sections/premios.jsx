@@ -16,19 +16,20 @@ export default function Grupo() {
       <div className="absolute inset-0 bg-black opacity-60 z-20" />
 
       {/* Contenedor de Información */}
-      <div className="relative z-30 flex items-start h-full p-8 md:p-16 lg:p-20">
-        <div className="text-left max-w-xl">
-          <h2 className="text-xs font-bold mb-5 text-gray-300">
-            PROYECTO GANADOR
-          </h2>
+      <div className="mx-auto max-w-7xl px-9 lg:px-20">
+        <div className="relative z-30 lg:w-3/5 my-12">
+          <span className="text-xs sm:text-sm lg:text-base font-bold text-gray-300 uppercase">
+            En Ambato
+          </span>
 
-          <h1 className="text-3xl lg:text-4xl font-semibold mb-5 text-gray-50">
-            Mejor Proyecto Comunitario:
-          </h1>
-
-          <div className="text-2xl lg:text-3xl mb-5 text-gray-50">
-            <span className="font-bold">Lider a Lider 2024</span> <br />
-            <span> 2da Edición</span>
+          <div className="my-8 text-gray-50">
+            <h2 className="font-semibold text-3xl lg:text-4xl">
+              Mejor Proyecto Comunitario:
+            </h2>
+            <div className="mt-5 text-2xl lg:text-3xl">
+              <p className="font-bold">Lider a Lider 2024</p>
+              <p>2da Edición</p>
+            </div>
           </div>
 
           <p className="text-sm lg:text-base mt-16 mb-4 text-gray-300">

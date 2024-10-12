@@ -11,7 +11,7 @@ export default function Presentacion() {
   const translateAmountJr = -scrollY * 0.1;
 
   return (
-    <section className="pt-20" aria-labelledby="presentacion-title">
+    <section aria-labelledby="presentacion-title">
       <div className="mx-auto max-w-7xl px-9 lg:px-20">
         <div className="relative z-30 flex flex-col">
           {/* Contenedor de texto e información */}
