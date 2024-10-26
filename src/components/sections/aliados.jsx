@@ -83,7 +83,7 @@ export default function Aliados() {
   return (
     <>
       {/* Titulo de la Seccion*/}
-      <div className="mx-auto max-w-7xl px-6 mt-20">
+      <div className="mx-auto max-w-7xl px-6 bg-red-100">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="max-w-2xl">
             <h2>
@@ -96,9 +96,9 @@ export default function Aliados() {
       </div>
 
       {/* Contenido de la Sección */}
-      <div className="mx-auto w-full max-w-6xl px-3 lg:px-6">
+      <div className="mx-auto w-full  px-3 lg:px-6">
         <div className="flex w-full justify-center overflow-x-hidden">
-          <div className="flex w-max items-center animate-scrolling-banner hover:[animation-play-state:paused] space-x-16">
+          <div className="flex w-max items-center space-x-16">
             <div className="flex-shrink-0 w-48 h-24 m-10 flex items-center justify-between">
               <Image
                 src="/aliados/logo-UTI.webp"

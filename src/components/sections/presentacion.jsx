@@ -11,8 +11,8 @@ export default function Presentacion() {
   const translateAmountJr = -scrollY * 0.1;
 
   return (
-    <section aria-labelledby="presentacion-title">
-      <div className="mx-auto max-w-7xl px-9 lg:px-20">
+    <section caria-labelledby="presentacion-title">
+      <div className="mx-auto max-w-7xl px-9 lg:px-24">
         <div className="relative z-30 flex flex-col">
           {/* Contenedor de texto e información */}
           <div className="lg:w-4/5">
@@ -43,7 +43,7 @@ export default function Presentacion() {
       </div>
 
       {/* Segunda sección: Texto de fondo con efectos de desplazamiento */}
-      <div className="relative w-full h-80 overflow-hidden my-0 lg:mt-10">
+      <div className="relative w-full h-48 p-10 sm:h-64 lg:h-96 overflow-hidden lg:my-6">
         <div className="absolute inset-0 flex flex-col justify-center overflow-hidden">
           <h2
             className="text-5xl sm:text-7xl lg:text-9xl font-extrabold text-gray-300 opacity-40 transform text-right mb-2 sm:mb-4 lg:mb-6 whitespace-nowrap"
