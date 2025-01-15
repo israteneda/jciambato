@@ -12,22 +12,22 @@ export default function Bienvenida() {
       aria-labelledby="section-title"
     >
       {/* Video de fondo */}
-      <video
-        src="/rotary.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-10"
-        aria-label="Video de presentación de la organización"
-        aria-hidden="true"
-      />
+        <video
+          src="/rotary.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-10"
+          aria-label="Video de presentación de la organización"
+          aria-hidden="true"
+        />
 
-      {/* Capa de oscuridad para el video */}
-      <div
-        role="presentacion"
-        className="absolute inset-0 bg-black opacity-40 z-20"
-      />
+        {/* Capa de oscuridad para el video */}
+        <div
+          role="presentacion"
+          className="absolute inset-0 bg-black opacity-40 z-20"
+        />
 
       {/* Marco que se dibuja en la pantalla */}
       <div

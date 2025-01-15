@@ -23,8 +23,8 @@ export default function Presentacion() {
               id="presentacion-title"
               className="text-4xl text-balance sm:text-5xl lg:text-6xl font-light my-8 text-cyan-600"
             >
-              JCI Ambato ha liderado el desarrollo de liderazgo por más de 50
-              años.
+              JCI Ambato ha impulsado el desarrollo de líderes durante más de 50
+              años
             </h2>
 
             {/* Botón interactivo con transiciones */}
