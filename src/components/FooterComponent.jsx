@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Divider } from "@nextui-org/divider";
+import { Divider } from "@heroui/divider";
 import Image from "next/image";
 
 const FooterLinkList = ({ title, links }) => (

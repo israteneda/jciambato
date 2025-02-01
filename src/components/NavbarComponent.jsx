@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useScroll } from "@/hooks";
-
 import {
   Navbar,
   NavbarBrand,
@@ -11,11 +10,27 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-} from "@nextui-org/navbar";
-
+} from "@heroui/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+
+const NavbarLink = ({ href, children, isScrolled, isLast }) => (
+  <Link
+    className={`transition-colors duration-200 ${
+      isScrolled
+        ? isLast
+          ? "text-yellow-600"
+          : "text-black"
+        : isLast
+        ? "text-yellow-500"
+        : "text-white"
+    } hover:text-yellow-400`}
+    href={href}
+  >
+    {children}
+  </Link>
+);
 
 export function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +38,7 @@ export function NavbarComponent() {
 
   return (
     <Navbar
-      maxWidth="lg"
+      maxWidth="xl"
       isBlurred={false}
       className={`fixed w-full z-40 transition-all duration-300 ${
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
@@ -31,14 +46,14 @@ export function NavbarComponent() {
       onMenuOpenChange={setIsMenuOpen}
     >
       {/* Logo */}
-      <NavbarContent justify="start">
+      <NavbarContent justify="start" className="">
         <NavbarBrand>
           <Link href="/">
             <Image
               src="/jci.png"
               alt="JCI Ambato Logo"
-              width={80}
-              height={80}
+              width={90}
+              height={90}
               className="object-contain"
             />
           </Link>
@@ -49,20 +64,13 @@ export function NavbarComponent() {
       <NavbarContent className="hidden lg:flex" justify="end">
         {siteConfig.navItems.map((item, index) => (
           <NavbarItem key={item.path}>
-            <Link
-              className={`transition-colors duration-200 ${
-                isScrolled
-                  ? index === siteConfig.navItems.length - 1
-                    ? "text-yellow-600"
-                    : "text-black"
-                  : index === siteConfig.navItems.length - 1
-                  ? "text-yellow-400"
-                  : "text-white"
-              } hover:text-yellow-400`}
+            <NavbarLink
               href={item.path}
+              isScrolled={isScrolled}
+              isLast={index === siteConfig.navItems.length - 1}
             >
               {item.name}
-            </Link>
+            </NavbarLink>
           </NavbarItem>
         ))}
       </NavbarContent>
@@ -83,7 +91,7 @@ export function NavbarComponent() {
         {siteConfig.navItems.map((item, index) => (
           <NavbarMenuItem key={`${item.path}-${index}`}>
             <Link
-              className="w-full text-center transition-colors duration-200 hover:text-yellow-400"
+              className="w-full text-center transition-colors duration-200 hover:text-yellow-500"
               href={item.path}
             >
               {item.name}

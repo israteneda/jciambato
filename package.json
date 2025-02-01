@@ -1,32 +1,32 @@
 {
-  "name": "jciambato",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@nextui-org/button": "^2.0.38",
-    "@nextui-org/link": "^2.0.35",
-    "@nextui-org/navbar": "^2.0.37",
-    "@nextui-org/react": "^2.4.8",
-    "@nextui-org/system": "^2.2.6",
-    "@nextui-org/theme": "^2.2.11",
-    "framer-motion": "^11.3.30",
-    "next": "^14.2.23",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^5.4.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.3.4",
-    "@types/react-dom": "^18.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1"
-  }
+   "name": "jciambato",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint"
+   },
+   "dependencies": {
+      "@heroui/button": "2.2.10",
+      "@heroui/link": "2.2.8",
+      "@heroui/navbar": "2.2.9",
+      "@heroui/react": "2.6.14",
+      "@heroui/system": "2.4.7",
+      "@heroui/theme": "2.4.6",
+      "framer-motion": "^11.3.30",
+      "next": "^14.2.23",
+      "react": "^18",
+      "react-dom": "^18",
+      "react-icons": "^5.4.0"
+   },
+   "devDependencies": {
+      "@types/react": "^18.3.4",
+      "@types/react-dom": "^18.3.0",
+      "eslint": "^8",
+      "eslint-config-next": "14.2.5",
+      "postcss": "^8",
+      "tailwindcss": "^3.4.1"
+   }
 }

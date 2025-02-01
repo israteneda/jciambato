@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import { useScroll } from "@/hooks";
 import Image from "next/image";
 
