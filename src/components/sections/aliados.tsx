@@ -37,10 +37,20 @@ export default function Aliados() {
 
     if (!container1 || !container2) return;
 
-    const animateLogos = (container, direction) => {
+    interface Logo {
+      alt: string;
+      src: string;
+    }
+
+    interface Container extends HTMLDivElement {
+      scrollLeft: number;
+      scrollWidth: number;
+    }
+
+    const animateLogos = (container: Container, direction: number): number => {
       let scrollAmount = 0;
 
-      const scroll = () => {
+      const scroll = (): void => {
         scrollAmount += direction;
         container.scrollLeft = scrollAmount;
 
@@ -53,11 +63,11 @@ export default function Aliados() {
         requestAnimationFrame(scroll);
       };
 
-      scroll();
+      return requestAnimationFrame(scroll);
     };
 
-    let animationId1 = animateLogos(container1, 1); // Izquierda a derecha
-    let animationId2 = animateLogos(container2, -1); // Derecha a izquierda
+    const animationId1 = animateLogos(container1, 1); // Izquierda a derecha
+    const animationId2 = animateLogos(container2, -1); // Derecha a izquierda
 
     return () => {
       cancelAnimationFrame(animationId1);

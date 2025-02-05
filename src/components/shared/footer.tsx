@@ -2,7 +2,12 @@ import Link from "next/link";
 import { Divider } from "@heroui/divider";
 import Image from "next/image";
 
-const FooterLinkList = ({ title, links }) => (
+interface FooterLinkListProps {
+  title: string;
+  links: { text: string; href: string }[];
+}
+
+const FooterLinkList: React.FC<FooterLinkListProps> = ({ title, links }) => (
   <div>
     <h3 className="text-small font-semibold text-gray-800">{title}</h3>
     <ul className="mt-6 space-y-4 text-gray-500">
