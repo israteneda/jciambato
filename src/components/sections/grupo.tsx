@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function Grupo() {
   return (
-    <section aria-labelledby="grupo-title">
-      <div className="mx-auto max-w-7xl">
+    <section className="">
+      <div className="bg-orange-100">
         <div className="relative flex flex-col lg:flex-row items-start">
           {/* Bloque de Texto */}
           <div className="w-full lg:w-1/2 pl-9 lg:mt-44 lg:pl-24">
@@ -37,7 +37,7 @@ export default function Grupo() {
           {/* Imagen */}
           <div className="lg:flex-col lg:w-1/2">
             <Image
-              src="/grupo2r.jpeg"
+              src="/images/grupo2r.jpeg"
               alt="Grupo JCI Ambato"
               width={600}
               height={600}

@@ -34,7 +34,7 @@ export const Navbar = () => {
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink href="/">
             <Image
-              src="/jci.png"
+              src="/images/jci.png"
               alt="JCI Ambato Logo"
               width={85}
               height={85}

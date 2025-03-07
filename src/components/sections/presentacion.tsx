@@ -5,14 +5,14 @@ import useScrollPositionText from "@/hooks/use-scroll-position-text";
 import clsx from "clsx";
 
 const TitleSection = () => (
-  <div className="px-4 md:px-40">
+  <div className="px-8 md:px-40">
     <p className={clsx(
       "text-xs sm:text-sm lg:text-base font-semibold text-gray-600 uppercase tracking-wide"
     )}>
       En Ambato
     </p>
     <h2
-      className="md:w-3/4 mt-8 text-4xl md:text-6xl font-light md:leading-tight text-cyan-600"
+      className="md:w-3/4 mt-8 text-3xl md:text-6xl font-light md:leading-tight text-cyan-600"
     >
       A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.
     </h2>

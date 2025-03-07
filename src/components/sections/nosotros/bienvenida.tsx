@@ -12,7 +12,7 @@ export default function Bienvenida() {
       {/* Imagen de Fonod */}
       <Image
         /* src="/group.jpg" */
-        src="/lideralider2.jpeg"
+        src="/images/lideralider2.jpeg"
         alt="Grupo JCI Ambato Lider a Lider 2024"
         layout="fill"
         objectFit="cover"
