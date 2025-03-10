@@ -3,79 +3,94 @@
 import { Button } from "@heroui/button";
 import Image from "next/image";
 
+
+const TitleSection = () => (
+  <div className="mx-11 xl:mx-0 md:w-4/6">
+
+    <p className="text-xs sm:text-sm lg:text-base font-semibold uppercase tracking-wide text-gray-600">
+      GRUPO
+    </p>
+
+    <h2 className="mt-8 text-4xl font-semibold text-cyan-600 md:leading-tight">
+      A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.
+    </h2>
+
+    <div className="max-w-md mt-8 ml-10 md:ml-16">
+      <p className="text-base md:text-lg text-gray-700">
+        Nos comprometemos a construir un legado de cambio que beneficie a
+        nuestras comunidades y fomente el crecimiento colectivo.
+      </p>
+
+      <Button
+        radius="none"
+        variant="bordered"
+        className="border-gray-400 text-gray-400 group mt-14"
+        aria-label="Conoce nuestra misión y visión"
+      >
+        <span className="absolute inset-0 transform -translate-x-full bg-gray-400 transition-transform duration-300 group-hover:translate-x-0" />
+        <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+          Nuestra misión y visión
+        </span>
+      </Button>
+    </div>
+  </div>
+);
+
+const Stadistycs = () => (
+  <div className="mx-11 w-full md:w-1/2 mt-16">
+
+    {/* Proyectos Ejecutados - Ocupa toda la fila */}
+    <div className="text-left">
+      <p className="text-7xl md:text-8xl font-light text-cyan-600">
+        20+
+      </p>
+      <p className="text-base text-gray-700 font-semibold uppercase">
+        Proyectos Ejecutados
+      </p>
+    </div>
+
+    {/* Años en Ambato y Miembros Activos en la siguiente fila */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-5 mt-10 md:mt-16">
+      <div className="text-left">
+        <p className="text-7xl sm:text-8xl font-light text-cyan-600">
+          50+
+        </p>
+        <p className="text-base text-gray-700 font-semibold uppercase">
+          Años en Ambato
+        </p>
+      </div>
+      <div className="text-left">
+        <p className="text-7xl sm:text-8xl font-light text-cyan-600">
+          20+
+        </p>
+        <p className="text-base text-gray-700 font-semibold uppercase">
+          Miembros Activos
+        </p>
+      </div>
+    </div>
+  </div>
+)
 export default function Grupo() {
   return (
-    <section className="">
-      <div className="bg-orange-100">
-        <div className="relative flex flex-col lg:flex-row items-start">
-          {/* Bloque de Texto */}
-          <div className="w-full lg:w-1/2 pl-9 lg:mt-44 lg:pl-24">
-            <span className="text-xs sm:text-sm lg:text-base font-bold text-gray-600 uppercase">
-              Grupo
-            </span>
-            <h2
-              id="grupo-title"
-              className="text-3xl text-balance lg:text-4xl font-semibold my-8 text-cyan-600"
-            >
-              Somos la organización de líderes y emprendedores más importante
-              del centro del país
-            </h2>
-            <p className="px-5 ml-16 text-base lg:text-lg text-gray-700">
-              Nos comprometemos a construir un legado de cambio que beneficie a
-              nuestras comunidades y fomente el crecimiento colectivo.
-            </p>
-            <Button
-              variant="bordered"
-              className="relative overflow-hidden mt-10 text-gray-500 border-gray-500 group hover:text-white transition-colors duration-300"
-              aria-label="Conoce nuestra misión y visión"
-            >
-              <span className="absolute inset-0 bg-gray-500 transition-transform duration-300 transform -translate-x-full group-hover:translate-x-0"></span>
-              <span className="relative z-10">Nuestra misión y visión</span>
-            </Button>
-          </div>
+    <section className="w-full my-28">
 
-          {/* Imagen */}
-          <div className="lg:flex-col lg:w-1/2">
-            <Image
-              src="/images/grupo2r.jpeg"
-              alt="Grupo JCI Ambato"
-              width={600}
-              height={600}
-              className="object-cover w-full h-full"
-            />
+      {/* Bloque de Imagen */}
+      <div className="flex flex-col items-end">
+        <div className="ml-20 md:w-1/2">
+          <Image
+            src="/images/grupo3.jpeg"
+            alt="Grupo JCI Ambato"
+            width={500}
+            height={500}
+            className="object-cover w-full h-auto"
+          />
+        </div>
 
-            {/* Bloque de Estadísticas */}
-            <div className="mt-10 pl-9 lg:pl-0 grid gap-12">
-              {/* Proyectos Ejecutados - Ocupa toda la fila */}
-              <div className="text-left">
-                <p className="text-6xl sm:text-8xl lg:text-9xl font-light text-cyan-600">
-                  +20
-                </p>
-                <p className="text-lg text-gray-700 font-semibold">
-                  Proyectos Ejecutados
-                </p>
-              </div>
-
-              {/* Años en Ambato y Miembros Activos en la siguiente fila */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
-                <div className="text-left">
-                  <p className="text-6xl sm:text-8xl lg:text-9xl font-light text-cyan-600">
-                    +50
-                  </p>
-                  <p className="text-lg text-gray-700 font-semibold">
-                    Años en Ambato
-                  </p>
-                </div>
-                <div className="text-left">
-                  <p className="text-6xl sm:text-8xl lg:text-9xl font-light text-cyan-600">
-                    +20
-                  </p>
-                  <p className="text-lg text-gray-700 font-semibold">
-                    Miembros Activos
-                  </p>
-                </div>
-              </div>
-            </div>
+        {/* Bloque de Contenido */}
+        <div className="flex flex-col max-w-6xl mx-auto mt-8">
+          <TitleSection />
+          <div className="flex justify-center md:justify-end ">
+            <Stadistycs />
           </div>
         </div>
       </div>

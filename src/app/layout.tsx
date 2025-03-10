@@ -44,9 +44,9 @@ export default function RootLayout({
       <head />
       <body className={bodyClasses}>
         <Providers>
-          <div className="relative flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="container max-w-full flex-grow">
+            <main className="container max-w-full bg-gray-50">
               {children}
             </main>
             <FooterComponent />

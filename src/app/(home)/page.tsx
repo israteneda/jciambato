@@ -9,7 +9,7 @@ import {
 
 export default function Inicio() {
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col items-center">
       {/* Sección de Bienvenida */}
       <Bienvenida />
 

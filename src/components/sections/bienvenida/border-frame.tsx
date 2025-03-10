@@ -8,7 +8,7 @@ interface BorderFrameProps {
 export const BorderFrame = ({ isScrolled }: BorderFrameProps) => (
     <div
         className={clsx(
-            "absolute inset-0 border-white z-30 transition-all duration-300 transform",
+            "absolute inset-0 border-gray-50 z-30 transition-all duration-300 transform",
             isScrolled ? "border-[22px] lg:border-[55px]" : "border-0"
         )}
         aria-hidden="true"
