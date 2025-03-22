@@ -59,9 +59,6 @@ El proyecto estará disponible en `http://localhost:3000/`.
  ├── README.md        # Documentación
 ```
 
-## 🎨 Temas y Estilos
-La página cuenta con un sistema de **modo claro/oscuro**, administrado con `next-themes` y `Tailwind CSS`. Puedes cambiar el tema desde la interfaz de usuario.
-
 ## 📜 Licencia
 Este proyecto está licenciado bajo la [MIT License](https://github.com/jci-ambato/web/blob/main/LICENSE).
 
