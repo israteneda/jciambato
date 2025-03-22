@@ -1,53 +1,71 @@
-# Next.js & HeroUI Template
+# JCI Ambato - Página Web Oficial
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+Página web oficial de **JCI Ambato**, desarrollada con **Next.js 14** y **HeroUI v2**. 
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+![Previsualización](/public/images/preview-welcome.png)
 
-## Technologies Used
+## 🚀 Tecnologías Utilizadas
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI v2](https://heroui.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- [Next.js 14](https://nextjs.org/docs/getting-started) - Framework de React para aplicaciones web.
+- [HeroUI v2](https://heroui.com/) - Biblioteca de componentes UI moderna.
+- [Tailwind CSS](https://tailwindcss.com/) - Framework de estilos basado en utilidades.
+- [TypeScript](https://www.typescriptlang.org/) - Tipado estático para JavaScript.
 
-## How to Use
+## 📌 Requisitos Previos
 
-### Use the template with create-next-app
+Antes de iniciar el proyecto, asegúrate de tener instalado:
+- **Node.js** (v18 o superior) - [Descargar aquí](https://nodejs.org/)
+- **npm** (gestor de paquetes) o **pnpm** (opcional)
 
-To create a new project based on this template using `create-next-app`, run the following command:
+## 🚀 Instalación y Uso
 
+### 1️⃣ Clonar el repositorio
 ```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
+git clone https://github.com/jci-ambato/web.git
+cd web
 ```
 
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
+### 2️⃣ Instalar dependencias
+Usa `npm` o `pnpm` para instalar los paquetes necesarios:
 ```bash
 npm install
 ```
+Si usas `pnpm`, asegúrate de configurar el `.npmrc`:
+```bash
+echo "public-hoist-pattern[]=*@heroui/*" >> .npmrc
+pnpm install
+```
 
-### Run the development server
-
+### 3️⃣ Iniciar el servidor de desarrollo
+Ejecuta el siguiente comando para levantar el entorno de desarrollo:
 ```bash
 npm run dev
 ```
+El proyecto estará disponible en `http://localhost:3000/`.
 
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@heroui/*
+## 📁 Estructura del Proyecto
+```
+/jci-ambato
+ ├── public/          # Archivos estáticos
+ ├── src/             # Código fuente
+ │   ├── app/         # Páginas principales (app router)
+ │   ├── components/  # Componentes reutilizables
+ │   ├── config/      # Archivos de aplicación
+ │   ├── data/        # Información estática (temporal)
+ │   ├── hooks/       # Funciones de estado
+ │   ├── styles/      # Estilos globales
+ │   ├── utils/       # Utilidades y funciones auxiliares
+ ├── package.json     # Dependencias y scripts
+ ├── README.md        # Documentación
 ```
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+## 🎨 Temas y Estilos
+La página cuenta con un sistema de **modo claro/oscuro**, administrado con `next-themes` y `Tailwind CSS`. Puedes cambiar el tema desde la interfaz de usuario.
 
-## License
+## 📜 Licencia
+Este proyecto está licenciado bajo la [MIT License](https://github.com/jci-ambato/web/blob/main/LICENSE).
 
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+---
+
+_Desarrollado con ❤️ por el equipo de JCI Ambato._
+

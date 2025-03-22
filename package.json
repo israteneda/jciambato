@@ -11,7 +11,9 @@
  "dependencies": {
   "@builder.io/dev-tools": "^1.5.3",
   "@heroui/button": "^2.2.16",
+  "@heroui/card": "^2.2.15",
   "@heroui/code": "^2.2.12",
+  "@heroui/divider": "^2.2.11",
   "@heroui/input": "^2.4.16",
   "@heroui/kbd": "^2.2.12",
   "@heroui/link": "^2.2.13",
@@ -29,7 +31,7 @@
   "next": "^15.1.6",
   "react": "18.3.1",
   "react-dom": "18.3.1",
-  "react-icons": "^5.4.0"
+  "react-icons": "^5.5.0"
  },
  "devDependencies": {
   "@next/eslint-plugin-next": "15.0.4",

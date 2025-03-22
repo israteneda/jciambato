@@ -1,4 +1,4 @@
-import { Bienvenida } from "@/components/sections/nosotros";
+import Bienvenida from "@/components/sections/nosotros/bienvenida/inicio";
 
 export const metadata = {
   title: "Nosotros",
