@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# JCI Ambato - Página Web Oficial
 
-## Getting Started
+Página web oficial de **JCI Ambato**, desarrollada con **Next.js 14** y **HeroUI v2**. 
 
-First, run the development server:
+![Previsualización](/public/images/preview-welcome.png)
 
+## 🚀 Tecnologías Utilizadas
+
+- [Next.js 14](https://nextjs.org/docs/getting-started) - Framework de React para aplicaciones web.
+- [HeroUI v2](https://heroui.com/) - Biblioteca de componentes UI moderna.
+- [Tailwind CSS](https://tailwindcss.com/) - Framework de estilos basado en utilidades.
+- [TypeScript](https://www.typescriptlang.org/) - Tipado estático para JavaScript.
+
+## 📌 Requisitos Previos
+
+Antes de iniciar el proyecto, asegúrate de tener instalado:
+- **Node.js** (v18 o superior) - [Descargar aquí](https://nodejs.org/)
+- **npm** (gestor de paquetes) o **pnpm** (opcional)
+
+## 🚀 Instalación y Uso
+
+### 1️⃣ Clonar el repositorio
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/jci-ambato/web.git
+cd web
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Instalar dependencias
+Usa `npm` o `pnpm` para instalar los paquetes necesarios:
+```bash
+npm install
+```
+Si usas `pnpm`, asegúrate de configurar el `.npmrc`:
+```bash
+echo "public-hoist-pattern[]=*@heroui/*" >> .npmrc
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3️⃣ Iniciar el servidor de desarrollo
+Ejecuta el siguiente comando para levantar el entorno de desarrollo:
+```bash
+npm run dev
+```
+El proyecto estará disponible en `http://localhost:3000/`.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📁 Estructura del Proyecto
+```
+/jci-ambato
+ ├── public/          # Archivos estáticos
+ ├── src/             # Código fuente
+ │   ├── app/         # Páginas principales (app router)
+ │   ├── components/  # Componentes reutilizables
+ │   ├── config/      # Archivos de aplicación
+ │   ├── data/        # Información estática (temporal)
+ │   ├── hooks/       # Funciones de estado
+ │   ├── styles/      # Estilos globales
+ │   ├── utils/       # Utilidades y funciones auxiliares
+ ├── package.json     # Dependencias y scripts
+ ├── README.md        # Documentación
+```
 
-## Learn More
+## 🎨 Temas y Estilos
+La página cuenta con un sistema de **modo claro/oscuro**, administrado con `next-themes` y `Tailwind CSS`. Puedes cambiar el tema desde la interfaz de usuario.
 
-To learn more about Next.js, take a look at the following resources:
+## 📜 Licencia
+Este proyecto está licenciado bajo la [MIT License](https://github.com/jci-ambato/web/blob/main/LICENSE).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+_Desarrollado con ❤️ por el equipo de JCI Ambato._
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
