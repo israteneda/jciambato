@@ -12,6 +12,7 @@ import {
   Aliados,
   NoticiasEventos,
 } from "@/components/sections/inicio";
+import '../builder-registry'
 
 // Initialize Builder with your API key
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
