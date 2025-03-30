@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { fontSans, fontHeading } from "@/config/fonts";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 
@@ -34,7 +34,8 @@ export default function RootLayout({
 }) {
   const bodyClasses = clsx(
     "min-h-screen bg-background font-sans antialiased",
-    fontSans.variable
+    fontSans.variable,
+    fontHeading.variable
   );
 
   return (
@@ -44,7 +45,7 @@ export default function RootLayout({
         <Providers>
           <div className="flex flex-col min-h-screen">
             <Navbar className="relative z-50" />
-            <main className="flex-grow w-full pt-16">
+            <main className="flex-grow w-full">
               <div className="mx-auto w-full">
                 {children}
               </div>

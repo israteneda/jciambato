@@ -30,8 +30,8 @@ export const Navbar = ({ className }: NavbarProps) => {
       isBlurred={false}
       position="sticky"
       className={clsx(
-        "fixed transition-all duration-300",
-        isScrolled ? "bg-white shadow-md" : "bg-transparent",
+        "fixed transition-all duration-300 z-50",
+        isScrolled ? "bg-jci-navy shadow-md" : "bg-jci-navy",
         className
       )}
     >
@@ -58,11 +58,11 @@ export const Navbar = ({ className }: NavbarProps) => {
               <NavbarItem key={item.href}>
                 <NextLink
                   className={clsx(
-                    "transition-colors duration-200 hover:text-yellow-400",
+                    "transition-colors duration-200 hover:text-jci-gold",
                     isLast
-                      ? "text-yellow-400 font-semibold" // "Involúcrate" siempre amarillo
+                      ? "text-jci-gold font-semibold" // "Involúcrate" siempre dorado
                       : isScrolled
-                        ? "text-black" // Cuando hay scroll, texto negro
+                        ? "text-jci-black" // Cuando hay scroll, texto negro
                         : "text-white" // Antes del scroll, texto blanco
                   )}
                   href={item.href}
