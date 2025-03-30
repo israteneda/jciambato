@@ -28,10 +28,10 @@ export const Navbar = ({ className }: NavbarProps) => {
     <HeroUINavbar
       maxWidth="xl"
       isBlurred={false}
-      position="sticky"
+      position="static"
       className={clsx(
-        "fixed transition-all duration-300 z-50",
-        isScrolled ? "bg-jci-navy shadow-md" : "bg-jci-navy",
+        "fixed top-0 left-0 right-0 transition-all duration-300 z-50",
+        isScrolled ? "bg-white shadow-md" : "bg-jci-navy",
         className
       )}
     >

@@ -44,7 +44,7 @@ export default function RootLayout({
       <body className={bodyClasses}>
         <Providers>
           <div className="flex flex-col min-h-screen">
-            <Navbar className="relative z-50" />
+            <Navbar />
             <main className="flex-grow w-full">
               <div className="mx-auto w-full">
                 {children}

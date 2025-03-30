@@ -1,12 +1,23 @@
 'use client';
 
-import { builder } from '@builder.io/react';
+import { builder, Builder } from '@builder.io/react';
 import { BuilderComponent } from '@builder.io/react';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import {
+  Bienvenida,
+  Presentacion,
+  Grupo,
+  Premios,
+  Aliados,
+  NoticiasEventos,
+} from "@/components/sections/inicio";
 
 // Initialize Builder with your API key
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
+
+// Enable dev tools
+Builder.isStatic = false;
 
 export default function BuilderPage() {
   const [content, setContent] = useState<any>(null);
@@ -31,6 +42,7 @@ export default function BuilderPage() {
 
   return (
     <div className="w-full">
+      {/* Builder.io Integration */}
       <BuilderComponent
         model="page"
         content={content}
@@ -38,7 +50,29 @@ export default function BuilderPage() {
           title: 'Builder.io Page',
           path: pathname 
         }}
+        options={{ includeRefs: true }}
       />
+
+      {/* Legacy Sections */}
+      <div className="flex flex-col items-center">
+        {/* Sección de Bienvenida */}
+        <Bienvenida />
+
+        {/* Sección Presentación */}
+        <Presentacion />
+
+        {/* Seccion Grupo */}
+        <Grupo />
+
+        {/* Seccion Premios */}
+        <Premios />
+
+        {/* Aliados */}
+        {/* <Aliados /> */}
+
+        {/* Noticias y Eventos */}
+        <NoticiasEventos />
+      </div>
     </div>
   );
 } 
