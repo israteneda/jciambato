@@ -17,7 +17,11 @@ import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import { useScroll } from "@/hooks";
 
-export const Navbar = () => {
+interface NavbarProps {
+  className?: string;
+}
+
+export const Navbar = ({ className }: NavbarProps) => {
   const isScrolled = useScroll();
 
   return (
@@ -27,7 +31,8 @@ export const Navbar = () => {
       position="sticky"
       className={clsx(
         "fixed transition-all duration-300",
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        isScrolled ? "bg-white shadow-md" : "bg-transparent",
+        className
       )}
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">

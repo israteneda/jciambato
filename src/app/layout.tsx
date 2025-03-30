@@ -32,8 +32,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
-  // Clases para el body con clsx
   const bodyClasses = clsx(
     "min-h-screen bg-background font-sans antialiased",
     fontSans.variable
@@ -45,9 +43,11 @@ export default function RootLayout({
       <body className={bodyClasses}>
         <Providers>
           <div className="flex flex-col min-h-screen">
-            <Navbar />
-            <main className="container max-w-full bg-gray-50">
-              {children}
+            <Navbar className="relative z-50" />
+            <main className="flex-grow w-full pt-16">
+              <div className="mx-auto w-full">
+                {children}
+              </div>
             </main>
             <Footer />
           </div>
