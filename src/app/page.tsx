@@ -41,8 +41,7 @@ export default function BuilderPage() {
   }, [pathname]);
 
   return (
-    <div className="w-full">
-      {/* Builder.io Integration */}
+    <>
       <BuilderComponent
         model="page"
         content={content}
@@ -73,6 +72,6 @@ export default function BuilderPage() {
         {/* Noticias y Eventos */}
         <NoticiasEventos />
       </div>
-    </div>
+    </>
   );
 } 
