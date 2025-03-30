@@ -14,7 +14,7 @@ export const siteConfig = {
     description: "Página Oficial de JCI Ambato",
     images: [
       {
-        url: "/images/jci.png",
+        url: "/images/logo-jci.png",
         width: 1200,
         height: 630,
         alt: "JCI Ambato Logo",

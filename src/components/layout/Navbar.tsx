@@ -39,7 +39,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink href="/">
             <Image
-              src="/images/jci.png"
+              src={isScrolled ? "/images/logo-jci.png" : "/images/logo-blanco-jci.png"}
               alt="JCI Ambato Logo"
               width={85}
               height={85}
