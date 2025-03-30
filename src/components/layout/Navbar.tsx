@@ -82,23 +82,22 @@ export const Navbar = ({ className }: NavbarProps) => {
 
       <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
+          {siteConfig.navItems.map((item, index) => {
+            const isLast = index === siteConfig.navItems.length - 1;
+            return (
+              <NavbarMenuItem key={`${item}-${index}`}>
+                <NextLink
+                  className={clsx(
+                    "transition-colors duration-200 hover:text-jci-gold text-lg",
+                    isLast ? "text-jci-gold font-semibold" : "text-jci-black"
+                  )}
+                  href={item.href}
+                >
+                  {item.label}
+                </NextLink>
+              </NavbarMenuItem>
+            );
+          })}
         </div>
       </NavbarMenu>
     </HeroUINavbar>
