@@ -46,7 +46,7 @@ export default function RootLayout({
         <Providers>
           <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="container max-w-full bg-gray-50">
+            <main className="container max-w-full leading-none bg-gray-50">
               {children}
             </main>
             <Footer />

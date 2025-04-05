@@ -9,7 +9,7 @@ import {
 
 export default function Inicio() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="">  {/* bg-[rgb(245,245,245)] */}
       {/* Sección de Bienvenida */}
       <Bienvenida />
 
