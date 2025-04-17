@@ -33,11 +33,11 @@ export function Footer() {
       </section>
 
       {/* Sección decorativa */}
-      <section className="relative z-20">
+      {/* <section className="relative z-20">
         <div className="absolute left-0 right-0 -top-36 md:top-[-135px] z-30 opacity-20 text-7xl md:text-[180px] font-black leading-[280px] text-center whitespace-nowrap pointer-events-none uppercase">
           JCI AMBATO
         </div>
-      </section>
+      </section> */}
 
       {/* Sección principal del footer */}
 

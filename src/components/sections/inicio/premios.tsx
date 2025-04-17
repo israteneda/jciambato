@@ -2,14 +2,16 @@
 
 import { carouselItems } from "@/data/carouselItems";
 import { Carousel } from "@/components/ui/Carousel";
+import { Button } from "@heroui/button";
+import { HiArrowNarrowRight, HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 
 
 export default function Grupo() {
 
   return (
-    <div className="w-full my-28">
+    <section className="my-28">
       <Carousel items={carouselItems} />
-    </div >
+    </section>
   );
 }

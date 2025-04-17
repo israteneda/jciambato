@@ -18,7 +18,7 @@ export default function Bienvenida() {
           <BackgroundVideo />
         </div>
 
-        <span className="hidden lg:block absolute top-1/2 left-7 text-xs z-20 leading-relaxed tracking-[1px] text-gray-400 transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] uppercase">
+        <span className="hidden lg:block absolute top-1/2 left-7 text-[11px] z-20 leading-relaxed tracking-[1px] text-gray-400 transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] uppercase">
           BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO
         </span>
 
@@ -33,7 +33,9 @@ export default function Bienvenida() {
         </div>
 
         <div className="absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] text-[10px] font-semibold uppercase z-20 text-yellow-400">
-          JCI Ecuador
+          <a href="https://jciecuador.com" target="_blank" rel="noopener noreferrer">
+            JCI Ecuador
+          </a>
         </div>
       </div>
 
