@@ -10,7 +10,7 @@ export function Footer() {
       {/* Sección de llamada a la acción */}
       <section className="relative z-10 bg-cyan-600">
         <div className="p-10 md:p-28">
-          <div className="pb-20">
+          <div className="mb-10 md:mb-20">
 
             <div className="relative z-10 max-w-7xl m-auto">
               <div className="flex flex-col md:flex-row items-start md:items-center">
@@ -33,18 +33,18 @@ export function Footer() {
       </section>
 
       {/* Sección decorativa */}
-      {/* <section className="relative z-20">
-        <div className="absolute left-0 right-0 -top-36 md:top-[-135px] z-30 opacity-20 text-7xl md:text-[180px] font-black leading-[280px] text-center whitespace-nowrap pointer-events-none uppercase">
+      <section className="hidden xl:block relative z-20">
+        <div className="absolute left-0 right-0 top-[-135px] z-[3] opacity-20 text-[240px] font-black not-italic leading-[280px] text-center whitespace-nowrap pointer-events-none tracking-normal uppercase text-jci-gray">
           JCI AMBATO
         </div>
-      </section> */}
+      </section>
+
 
       {/* Sección principal del footer */}
-
       <section className="relative">
         <div className="pb-0">
           <div className="z-10 w-full">
-            <div className="pt-[192px] pb-[92px] mx-10">
+            <div className="pt-10 xl:pt-[192px] mb-[92px] mx-10">
               <div className="hidden xl:block absolute top-1/2 left-[30px] text-cyan-600 text-[11px] z-30 leading-[60px] tracking-[2px] uppercase transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg]">
                 conócenos mejor
               </div>
@@ -105,13 +105,13 @@ export function Footer() {
             <div className="relative z-10 max-w-5xl mx-10">
               <div className="flex pb-12">
                 <p className="text-small text-default-400">
-                  © 2025 Cámara Junior Internacional | Capítulo Ambato. Todos los Derechos Reservados.
+                  © 2025 Cámara Junior Internacional Ecuador | Capítulo Ambato. Todos los Derechos Reservados.
                 </p>
               </div>
             </div>
 
             {/* Botón para volver arriba */}
-            <div className="absolute top-[20%] right-[6%] md:right-[5%]">
+            <div className="absolute top-[30%] md:top-[20%] right-[8%] md:right-[5%]">
               <div className="flex items-center justify-center">
                 <a href="#" role="button" aria-label="Volver arriba">
                   <HiOutlineArrowUp className="w-8 h-8" />

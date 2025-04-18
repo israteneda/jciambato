@@ -4,7 +4,7 @@ import { Button } from "@heroui/button";
 export const InfoContainer = () => (
     <div className="relative z-20">
         <div className="flex flex-col items-start">
-            <div className="text-xs lg:text-sm uppercase text-yellow-400 font-bold tracking-normal">
+            <div className="text-xs lg:text-sm uppercase text-jci-gold font-bold tracking-normal">
                 Inpulsando el cambio
             </div>
 
@@ -25,7 +25,7 @@ export const InfoContainer = () => (
             <div className="mt-9">
                 <Button
                     radius="none"
-                    className="relative bg-cyan-600 text-white group overflow-hidden"
+                    className="relative bg-jci-aqua text-white group overflow-hidden"
                     aria-label="Más información sobre nosotros"
                 >
                     <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>

@@ -5,6 +5,8 @@ import { BackgroundVideo } from "./background-video";
 import { BorderFrame } from "./border-frame";
 import { Button } from "@heroui/button";
 import { HiArrowNarrowDown } from "react-icons/hi";
+import { MdOutlineArrowOutward } from "react-icons/md";
+
 
 export default function Bienvenida() {
   const isScrolled = useScroll();
@@ -27,14 +29,17 @@ export default function Bienvenida() {
           <Button
             radius="none"
             isIconOnly
-            className="bg-transparent text-cyan-600">
-            <HiArrowNarrowDown className="w-6 h-6 text-gray-50" />
+            className="bg-transparent text-jci-aqua">
+            <HiArrowNarrowDown className="w-7 h-7 text-jci-aqua" />
           </Button>
         </div>
 
-        <div className="absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] text-[10px] font-semibold uppercase z-20 text-yellow-400">
-          <a href="https://jciecuador.com" target="_blank" rel="noopener noreferrer">
-            JCI Ecuador
+        <div className="hidden md:block absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] text-[10px] font-semibold uppercase z-20 text-jci-seafoam">
+          <a href="https://jciecuador.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+            <span>
+              JCI Ecuador
+            </span>
+            <MdOutlineArrowOutward className="w-5 h-5" />
           </a>
         </div>
       </div>
@@ -42,7 +47,7 @@ export default function Bienvenida() {
       <div className="absolute left-1/2 z-20 bottom-0 transform -translate-x-1/2 rotate-90">
         <Button
           radius="none"
-          className="bg-transparent text-cyan-600 text-xs font-semibold text-right uppercase">Sobre Nosotros</Button>
+          className="hidden md:block bg-transparent text-jci-aqua text-xs font-semibold text-right uppercase">Sobre Nosotros</Button>
       </div>
     </section>
   );
