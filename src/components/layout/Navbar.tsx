@@ -53,9 +53,9 @@ export const Navbar = () => {
               <NavbarItem key={item.href}>
                 <NextLink
                   className={clsx(
-                    "transition-colors duration-200 hover:text-yellow-400",
+                    "transition-colors duration-200 hover:text-jci-gold",
                     isLast
-                      ? "text-yellow-400 font-semibold" // "Involúcrate" siempre amarillo
+                      ? "text-jci-gold font-semibold" // "Involúcrate" siempre amarillo
                       : isScrolled
                         ? "text-black" // Cuando hay scroll, texto negro
                         : "text-white" // Antes del scroll, texto blanco

@@ -3,9 +3,8 @@ import { useScroll } from "@/hooks";
 import { InfoContainer } from "./info-container";
 import { BackgroundVideo } from "./background-video";
 import { BorderFrame } from "./border-frame";
-import { Button } from "@heroui/button";
-import { HiArrowNarrowDown } from "react-icons/hi";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import Image from "next/image";
 
 
 export default function Bienvenida() {
@@ -24,14 +23,16 @@ export default function Bienvenida() {
           BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO
         </span>
 
-
-        <div className="hidden md:block absolute z-20 top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2">
-          <Button
-            radius="none"
-            isIconOnly
-            className="bg-transparent text-jci-aqua">
-            <HiArrowNarrowDown className="w-7 h-7 text-jci-aqua" />
-          </Button>
+        <div className="hidden md:block absolute z-20 top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2">
+          <button>
+            <Image
+              src="/images/icon-seta-down-big.svg"
+              alt=""
+              width={500}
+              height={500}
+              className="relative w-[20px] object-cover"
+            />
+          </button>
         </div>
 
         <div className="hidden md:block absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] text-[10px] font-semibold uppercase z-20 text-jci-seafoam">
@@ -45,9 +46,18 @@ export default function Bienvenida() {
       </div>
 
       <div className="absolute left-1/2 z-20 bottom-0 transform -translate-x-1/2 rotate-90">
-        <Button
-          radius="none"
-          className="hidden md:block bg-transparent text-jci-aqua text-xs font-semibold text-right uppercase">Sobre Nosotros</Button>
+        <div className="hidden md:block">
+          <button className="flex items-center">
+            <span className="text-jci-aqua text-xs font-semibold uppercase">Sobre Nosotros</span>
+            <Image
+              src="/images/icon-seta-down-big.svg"
+              alt=""
+              width={500}
+              height={500}
+              className="w-[96px] h-[69px] -rotate-90 object-cover"
+            />
+          </button>
+        </div>
       </div>
     </section>
   );

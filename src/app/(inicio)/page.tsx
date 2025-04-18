@@ -9,7 +9,7 @@ import {
 
 export default function Inicio() {
   return (
-    <div className="">  {/* bg-[rgb(245,245,245)] */}
+    <div className="">
       {/* Sección de Bienvenida */}
       <Bienvenida />
 
@@ -23,7 +23,7 @@ export default function Inicio() {
       <Premios />
 
       {/* Aliados */}
-      {/* <Aliados /> */}
+      <Aliados />
 
       {/* Noticias y Eventos */}
       <NoticiasEventos />

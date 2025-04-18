@@ -1,3 +1,5 @@
+import { url } from "inspector";
+
 export const carouselItems = [
     {
       id: 1,
@@ -7,6 +9,7 @@ export const carouselItems = [
       description:
         "JCI Ambato desarrolló la 2da edición del proyecto Lider a Lider que permitió incorporar a 13 nuevos miembros, quienes desarrollaron habilidades de liderazgo y emprendimiento.",
       image: "/images/lideralider2.jpeg",
+      url: "/",
     },
     {
       id: 2,
@@ -16,6 +19,7 @@ export const carouselItems = [
       description:
         "Premio otorgado por la implementación de prácticas sostenibles en la comunidad. El proyecto Lider a Lider permitió incorporar a 13 nuevos miembros, quienes desarrollaron habilidades de liderazgo y emprendimiento.",
       image: "https://picsum.photos/800/400?random=2",
+      url: "/",
     },
     {
       id: 3,
@@ -25,5 +29,6 @@ export const carouselItems = [
       description:
         "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image: "https://picsum.photos/800/400?random=3",
+      url: "/",
     }
   ];

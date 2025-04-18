@@ -34,7 +34,7 @@ export function Footer() {
 
       {/* Sección decorativa */}
       <section className="hidden xl:block relative z-20">
-        <div className="absolute left-0 right-0 top-[-135px] z-[3] opacity-20 text-[240px] font-black not-italic leading-[280px] text-center whitespace-nowrap pointer-events-none tracking-normal uppercase text-jci-gray">
+        <div className="absolute left-0 right-0 top-[-135px] z-[3] opacity-20 text-[235px] font-black not-italic leading-[280px] text-center whitespace-nowrap pointer-events-none tracking-normal uppercase text-jci-gray">
           JCI AMBATO
         </div>
       </section>
@@ -45,7 +45,7 @@ export function Footer() {
         <div className="pb-0">
           <div className="z-10 w-full">
             <div className="pt-10 xl:pt-[192px] mb-[92px] mx-10">
-              <div className="hidden xl:block absolute top-1/2 left-[30px] text-cyan-600 text-[11px] z-30 leading-[60px] tracking-[2px] uppercase transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg]">
+              <div className="hidden xl:block absolute top-1/2 left-[30px] text-jci-aqua text-[11px] z-30 leading-[60px] tracking-[2px] uppercase transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg]">
                 conócenos mejor
               </div>
 
@@ -105,7 +105,7 @@ export function Footer() {
             <div className="relative z-10 max-w-5xl mx-10">
               <div className="flex pb-12">
                 <p className="text-small text-default-400">
-                  © 2025 Cámara Junior Internacional Ecuador | Capítulo Ambato. Todos los Derechos Reservados.
+                  © 2025 Cámara Junior Internacional del Ecuador | Capítulo Ambato. Todos los Derechos Reservados.
                 </p>
               </div>
             </div>

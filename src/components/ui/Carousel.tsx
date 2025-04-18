@@ -1,8 +1,9 @@
 'use client';
 
 import { Button } from "@heroui/button";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { HiChevronLeft, HiChevronRight, HiOutlineCollection, HiArrowNarrowRight } from "react-icons/hi";
+import { HiChevronLeft, HiChevronRight, HiOutlineCollection, HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 interface CarouselProps {
     items: {
@@ -10,6 +11,7 @@ interface CarouselProps {
         title: string;
         projectName: string;
         edition: string;
+        url: string;
         description: string;
         image: string;
     }[];
@@ -65,7 +67,7 @@ export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
                                             </h3>
                                         </div>
                                         <div className="mt-10 md:mt-20">
-                                            <div className="text-[18px] leading-[1.78] text-white text-left max-w-[470px] md:text-[calc(15.6px+0.125vw)]">
+                                            <div className="text-medium leading-[1.78] text-white text-left max-w-[470px] md:text-[calc(15.6px+0.125vw)]">
                                                 {item.description}
                                             </div>
                                         </div>
@@ -76,12 +78,18 @@ export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
                                         <div className="flex items-center justify-between">
                                             <div className="relative inline-block transition duration-400">
                                                 <div className="flex py-4">
-                                                    <Button
-                                                        className="bg-transparent text-white text-[14px] font-medium"
-                                                        endContent={<HiArrowNarrowRight className="h-5 w-5" />}
-                                                    >
-                                                        Ver Proyecto
-                                                    </Button>
+                                                    <Link href={item.url} className="z-20">
+                                                        <button className="group max-w-full relative inline-block transition duration-[400ms] cursor-pointer">
+                                                            <div className="flex items-center py-4">
+                                                                <span className="text-xs text-jci-aqua leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
+                                                                    Leer más
+                                                                </span>
+                                                                <div className="flex ml-3 items-center transform transition-transform duration-300 group-hover:translate-x-1">
+                                                                    <HiOutlineArrowNarrowRight className="w-6 h-6 text-jci-aqua group-hover:text-jci-red transition-colors duration-300" />
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </Link>
                                                 </div>
                                             </div>
 
@@ -149,7 +157,7 @@ export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
             {/* Botón colección */}
             <div className="hidden md:block absolute right-[45px] bottom-[48px]">
                 <Button
-                    isIconOnly  
+                    isIconOnly
                     radius="full"
                     className="bg-jci-aqua"
                 >

@@ -1,7 +1,11 @@
-import { Fira_Code as FontMono, Inter as FontSans, Arvo } from "next/font/google";
-import localFont from 'next/font/local';
+import {
+  Fira_Code as FontMono,
+  Inter as FontSans,
+  Arvo,
+} from "next/font/google";
+import localFont from "next/font/local";
 
-/* export const fontSans = FontSans({
+export const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans", // Define una variable CSS para la fuente sans
 });
@@ -9,11 +13,10 @@ import localFont from 'next/font/local';
 export const fontMono = FontMono({
   subsets: ["latin"],
   variable: "--font-mono", // Define una variable CSS para la fuente mono
-}); */
-
+});
 
 // Helvetica Neue font configuration
-export const fontSans = localFont({
+/* export const fontSans = localFont({
   src: [
     {
       path: '../../public/fonts/helveticaneue/helveticaneue-light.woff2',
@@ -43,13 +46,13 @@ export const fontSans = localFont({
   ],
   variable: '--font-sans',
   display: 'swap',
-});
+}); */
 
 // Using Arvo as a replacement for Rockwell as suggested in:
 // https://stackoverflow.com/questions/691504/is-rockwell-a-web-safe-font
 export const fontHeading = Arvo({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-heading',
-  display: 'swap',
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-heading",
+  display: "swap",
 });
