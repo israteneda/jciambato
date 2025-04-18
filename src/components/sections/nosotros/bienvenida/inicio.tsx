@@ -1,16 +1,9 @@
-"use client";
-import { useScroll } from "@/hooks";
-import { InfoContainer } from "./info-container";
-import { BackgroundImage } from "./background-video";
-import { BorderFrame } from "./border-frame";
-import { RotatedText } from "./rotated-text";
 import Image from "next/image";
 
 export default function Bienvenida() {
-  const isScrolled = useScroll();
 
   return (
-    <section className="fixed inset-0 w-full h-[760px] flex items-center overflow-hidden pb-[80px] box-border">
+    <section className="fixed inset-0 w-full h-[760px] pb-20 flex items-center overflow-hidden box-border">
 
       <div className="absolute top-1/2 left-[30px] z-[3] text-jci-black text-[11px] leading-[60px] tracking-[2px] uppercase transform -translate-x-1/2 -translate-y-1/2 -rotate-90">
         ENFOCADOS EN EL DESARROLLO DE NUESTRA CIUDAD

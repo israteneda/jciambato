@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
-  description: siteConfig.descripcion,
+  description: siteConfig.description,
   keywords: siteConfig.keywords,
   authors: siteConfig.authors,
   openGraph: siteConfig.openGraph,
