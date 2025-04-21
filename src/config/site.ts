@@ -27,7 +27,6 @@ export const siteConfig = {
     canonical: "https://www.jciambato.com",
     languages: {
       "es-EC": "https://www.jciambato.com/es",
-      "en-US": "https://www.jciambato.com/en",
     },
   },
   openGraph: {
@@ -41,15 +40,15 @@ export const siteConfig = {
       "Únete a JCI Ambato para desarrollar habilidades de liderazgo, participar en proyectos sociales y generar un impacto positivo en la comunidad.",
     images: [
       {
-        url: "/images/jci.png",
-        width: 1200,
-        height: 630,
+        url: "/images/jci-ambato.ico",
+        width: 100,
+        height: 100,
         alt: "Logo oficial de JCI Ambato",
       },
       {
         url: "/images/jci-ambato-secondary.png",
-        width: 800,
-        height: 400,
+        width: 100,
+        height: 100,
         alt: "JCI Ambato en acción",
       },
     ],
@@ -76,7 +75,7 @@ export const siteConfig = {
   },
   manifest: "/manifest.json",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/images/jci-ambato.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
@@ -126,9 +125,9 @@ export const siteConfig = {
       "@type": "ContactPoint",
       telephone: "+593-3-123-4567", // Replace with actual phone number
       contactType: "Información general",
-      email: "info@jciambato.com",
+      email: "tecnologias@jciambato.com",
       areaServed: "EC",
-      availableLanguage: ["Spanish", "English"],
+      availableLanguage: ["Spanish"],
     },
     sameAs: [
       "https://www.facebook.com/jciambatoec",

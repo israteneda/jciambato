@@ -1,48 +1,15 @@
 "use client";
 
 import { Button } from "@heroui/button";
-import useScrollPositionText from "@/hooks/use-scroll-position-text";
-import clsx from "clsx";
-
-// Componente para el texto de fondo con efectos de desplazamiento
-interface BackgroundTextProps {
-  translateAmountLeft: number;
-  translateAmountRigth: number;
-}
-
-const BackgroundText = ({ translateAmountLeft, translateAmountRigth }: BackgroundTextProps) => (
-  <div className="">
-    <h2 className={clsx(
-      "opacity-[0.08] text-7xl md:text-[240px] font-extrabold whitespace-nowrap tracking-normal uppercase text-jci-gray"
-    )}
-      style={{ transform: `translateX(${translateAmountLeft}px)`, willChange: "transform" }}
-    >
-      JCI AMBATO
-    </h2>
-
-    <h2 className={clsx(
-      "opacity-[0.08] text-7xl md:text-[240px] font-extrabold whitespace-nowrap tracking-normal uppercase text-jci-gray"
-    )}
-      style={{ transform: `translateX(${translateAmountRigth}px)`, willChange: "transform" }}
-    >
-      CHAMBER
-    </h2>
-  </div>
-);
+import BackgroundText from "@/components/commons/TextoFondo";
 
 export default function Presentacion() {
-  const scrollY = useScrollPositionText();
-
-  // Cálculo del desplazamiento según la posición del scroll
-  const translateAmountLeft = scrollY * 0.1; // 0.3 para pantallas grandes
-  const translateAmountRigth = -scrollY * 0.1; // 0.1 para pantallas pequeñas
-
   return (
     <section className="relative z-10">
       <div className="pt-20 md:pt-28 lg:pt-32 xl:pt-40 pb-20 md:pb-28 lg:pb-32 xl:pb-40">
         <div className="overflow-hidden">
           <div className="relative z-10 w-[calc(100% - 60px)] md:w-[1156px] mx-8 md:mx-auto">
-            <div className="text-[13px] leading-[1.85] uppercase text-jci-aqua font-bold tracking-normal">
+            <div className="text-xs leading-[1.85] uppercase text-jci-aqua font-bold tracking-normal">
               En Ambato
             </div>
             <div className="mt-8">
@@ -66,7 +33,12 @@ export default function Presentacion() {
 
           </div>
           <div className="mt-16">
-            <BackgroundText translateAmountLeft={translateAmountLeft} translateAmountRigth={translateAmountRigth} />
+            <BackgroundText
+              textoPrimario="JCI AMBATO"
+              textoSecundario="CHAMBER"
+              numberLeft={0.1}
+              numberRight={0.1}
+            />
           </div>
         </div>
       </div>

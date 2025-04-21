@@ -9,7 +9,7 @@ import {
 
 export default function Inicio() {
   return (
-    <div className="">
+    <div>
       {/* Sección de Bienvenida */}
       <Bienvenida />
 

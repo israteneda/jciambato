@@ -6,7 +6,7 @@ import { jciLinks } from "@/data/footer";
 
 export function Footer() {
   return (
-    <footer>
+    <footer className="relative z-10 bg-gray-50">
       {/* Sección de llamada a la acción */}
       <section className="relative z-10 bg-cyan-600">
         <div className="p-10 md:p-28">

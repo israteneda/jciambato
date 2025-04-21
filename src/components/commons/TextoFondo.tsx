@@ -1,31 +1,60 @@
 "use client";
 
-import useScrollPositionText from "@/hooks/use-scroll-position-text";
+import { useScrollPositionText } from '@/hooks';
+import clsx from 'clsx';
+import { useMemo } from 'react';
 
-export default function TextoFondo() {
+interface BackgroundTextProps {
+  textoPrimario: string;
+  textoSecundario: string;
+  numberLeft: number;
+  numberRight: number;
+}
+
+const BackgroundText = ({
+  textoPrimario,
+  textoSecundario,
+  numberLeft,
+  numberRight
+}: BackgroundTextProps) => {
   const scrollY = useScrollPositionText();
 
-  // Ajusta la cantidad de desplazamiento según la posición del scroll
-  const translateAmountJci = scrollY * 0.2;
-  const translateAmountJr = -scrollY * 0.2;
+  // Calculamos desplazamientos de forma memoizada
+  const translateStyles = useMemo(() => ({
+    left: { transform: `translateX(${scrollY * numberLeft}px)` },
+    right: { transform: `translateX(${-scrollY * numberRight}px)` }
+  }), [scrollY, numberLeft, numberRight]);
+
+  const baseTextStyle = clsx(
+    "flex justify-center",
+    "opacity-[0.08]",
+    "text-7xl md:text-[230px]",
+    "font-extrabold",
+    "whitespace-nowrap",
+    "tracking-normal",
+    "uppercase",
+    "text-jci-gray"
+  );
 
   return (
-    <section className="relative w-full h-[50vh] overflow-hidden">
-      {/* Texto de fondo con alineación y posiciones ajustadas */}
-      <div className="absolute inset-0 flex flex-col justify-center overflow-hidden leading-tight transition-transform duration-500">
-        <h1
-          className="text-[10vw] font-bold text-gray-300 opacity-40 transform text-right"
-          style={{ transform: `translateX(${translateAmountJci - 70 }px)` }}
-        >
-          JCI AMBATO
-        </h1>
-        <h1
-          className="text-[10vw] font-bold text-gray-300 opacity-40 transform text-left"
-          style={{ transform: `translateX(${translateAmountJr}px)`}}
-        >
-          JUNIOR CHAMBER
-        </h1>
-      </div>
-    </section>
+    <div className='overflow-hidden mx-auto'>
+      <h2
+        className={baseTextStyle}
+        style={{ ...translateStyles.left, willChange: "transform" }}
+        aria-hidden
+      >
+        {textoPrimario}
+      </h2>
+
+      <h2
+        className={baseTextStyle}
+        style={{ ...translateStyles.right, willChange: "transform" }}
+        aria-hidden
+      >
+        {textoSecundario}
+      </h2>
+    </div>
   );
-}
+};
+
+export default BackgroundText;

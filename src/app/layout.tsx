@@ -22,9 +22,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  icons: siteConfig.icons,
 };
 
 export default function RootLayout({
@@ -35,7 +33,7 @@ export default function RootLayout({
 
   // Clases para el body con clsx
   const bodyClasses = clsx(
-    "min-h-screen bg-background font-sans antialiased",
+    "font-sans leading-none",
     fontSans.variable
   );
 
@@ -44,9 +42,9 @@ export default function RootLayout({
       <head />
       <body className={bodyClasses}>
         <Providers>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col">
             <Navbar />
-            <main className="container max-w-full bg-gray-50">
+            <main className="relative z-10 bg-gray-50">
               {children}
             </main>
             <Footer />
