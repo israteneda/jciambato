@@ -2,6 +2,43 @@ import Image from "next/image";
 import { HiArrowLongRight, HiOutlineArrowUp } from "react-icons/hi2";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
+interface FooterLink {
+  title: string;
+  href: string;
+}
+
+interface FooterSection {
+  title: string;
+  items: FooterLink[];
+}
+
+const jciLinks: FooterSection[] = [
+  {
+    title: "Nosotros",
+    items: [
+      { title: "Historia", href: "/nosotros/historia" },
+      { title: "Misión y Visión", href: "/nosotros/mision-vision" },
+      { title: "Valores", href: "/nosotros/valores" },
+    ],
+  },
+  {
+    title: "Áreas",
+    items: [
+      { title: "Comunidad", href: "/areas/comunidad" },
+      { title: "Negocios", href: "/areas/negocios" },
+      { title: "Internacional", href: "/areas/internacional" },
+    ],
+  },
+  {
+    title: "Actividades",
+    items: [
+      { title: "Eventos", href: "/actividades/eventos" },
+      { title: "Proyectos", href: "/actividades/proyectos" },
+      { title: "Capacitaciones", href: "/actividades/capacitaciones" },
+    ],
+  },
+];
+
 export function Footer() {
   return (
     <footer>
@@ -57,16 +94,11 @@ export function Footer() {
                   >
                     {jciLinks.map((section) => (
                       <div key={section.title} className="flex flex-col">
-                        <h3 className="text-base font-semibold">
-                          {section.title}
-                        </h3>
+                        <h3 className="text-base font-semibold">{section.title}</h3>
                         <ul className="flex flex-col mt-3 m-1 mb-0 max-w-36 space-y-2">
                           {section.items.map((item) => (
                             <li key={item.title} className="text-sm">
-                              <a
-                                className="hover:text-gray-300"
-                                href={item.href}
-                              >
+                              <a className="hover:text-gray-300" href={item.href}>
                                 {item.title}
                               </a>
                             </li>

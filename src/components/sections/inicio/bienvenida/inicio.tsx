@@ -1,6 +1,6 @@
 "use client";
 import { InfoContainer } from "./info-container";
-import { BackgroundVideo } from "./background-video";
+import BackgroundVideo from "./background-video";
 import { BorderFrame } from "./border-frame";
 import { RotatedText } from "./rotated-text";
 

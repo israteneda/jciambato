@@ -12,8 +12,7 @@ const TitleSection = () => (
         En Ambato
       </p>
       <h2 className="mt-8 md:w-3/4 text-3xl md:text-6xl font-light text-cyan-600 md:leading-tight">
-        A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de
-        líderes en la ciudad.
+        A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.
       </h2>
       <div className="mt-16">
         <Button
@@ -38,10 +37,7 @@ interface BackgroundTextProps {
   translateAmountRigth: number;
 }
 
-const BackgroundText = ({
-  translateAmountLeft,
-  translateAmountRigth,
-}: BackgroundTextProps) => (
+const BackgroundText = ({ translateAmountLeft, translateAmountRigth }: BackgroundTextProps) => (
   <div className="w-full overflow-hidden mt-10 md:mt-16">
     <h2
       className={clsx(

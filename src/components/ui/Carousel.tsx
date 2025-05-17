@@ -1,11 +1,7 @@
 import React from "react";
 import { Card, CardBody } from "@heroui/card";
 import { Button } from "@heroui/button";
-import {
-  HiChevronLeft,
-  HiChevronRight,
-  HiOutlineCollection,
-} from "react-icons/hi";
+import { HiChevronLeft, HiChevronRight, HiOutlineCollection } from "react-icons/hi";
 import { Divider } from "@heroui/divider";
 
 interface CarouselProps {

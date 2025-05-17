@@ -8,8 +8,14 @@ import { usePathname } from "next/navigation";
 // Initialize Builder with your API key
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
+interface BuilderContent {
+  id: string;
+  name: string;
+  data: Record<string, unknown>;
+}
+
 export default function CatchAllPage() {
-  const [content, setContent] = useState<any>(null);
+  const [content, setContent] = useState<BuilderContent | undefined>(undefined);
   const pathname = usePathname();
 
   useEffect(() => {

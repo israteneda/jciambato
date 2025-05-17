@@ -106,7 +106,7 @@ Builder.registerComponent(
       marginTop: "7rem",
       marginBottom: "7rem",
     },
-  },
+  }
 );
 
 // Add more component registrations here as needed

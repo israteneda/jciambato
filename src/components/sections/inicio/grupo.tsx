@@ -65,9 +65,7 @@ const TitleSection = ({
       {subtitle}
     </p>
 
-    <h2 className="mt-8 text-4xl font-semibold text-cyan-600 md:leading-tight">
-      {title}
-    </h2>
+    <h2 className="mt-8 text-4xl font-semibold text-cyan-600 md:leading-tight">{title}</h2>
 
     <div className="max-w-md mt-8 ml-10 md:ml-16">
       <p className="text-base md:text-lg text-gray-700">{description}</p>
@@ -95,30 +93,18 @@ const Statistics = ({
 }: StatisticsProps) => (
   <div className="mx-11 w-full md:w-1/2 mt-16">
     <div className="text-left">
-      <p className="text-7xl md:text-8xl font-light text-cyan-600">
-        {projects}+
-      </p>
-      <p className="text-base text-gray-700 font-semibold uppercase">
-        Proyectos Ejecutados
-      </p>
+      <p className="text-7xl md:text-8xl font-light text-cyan-600">{projects}+</p>
+      <p className="text-base text-gray-700 font-semibold uppercase">Proyectos Ejecutados</p>
     </div>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-5 mt-10 md:mt-16">
       <div className="text-left">
-        <p className="text-7xl sm:text-8xl font-light text-cyan-600">
-          {years}+
-        </p>
-        <p className="text-base text-gray-700 font-semibold uppercase">
-          Años en Ambato
-        </p>
+        <p className="text-7xl sm:text-8xl font-light text-cyan-600">{years}+</p>
+        <p className="text-base text-gray-700 font-semibold uppercase">Años en Ambato</p>
       </div>
       <div className="text-left">
-        <p className="text-7xl sm:text-8xl font-light text-cyan-600">
-          {members}+
-        </p>
-        <p className="text-base text-gray-700 font-semibold uppercase">
-          Miembros Activos
-        </p>
+        <p className="text-7xl sm:text-8xl font-light text-cyan-600">{members}+</p>
+        <p className="text-base text-gray-700 font-semibold uppercase">Miembros Activos</p>
       </div>
     </div>
   </div>

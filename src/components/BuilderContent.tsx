@@ -7,16 +7,9 @@ interface BuilderContentProps {
   pathname: string;
 }
 
-export default function BuilderContent({
-  content,
-  pathname,
-}: BuilderContentProps) {
+export default function BuilderContent({ content, pathname }: BuilderContentProps) {
   if (!content) {
-    return (
-      <div className="w-full h-[50vh] flex items-center justify-center">
-        Loading...
-      </div>
-    );
+    return <div className="w-full h-[50vh] flex items-center justify-center">Loading...</div>;
   }
 
   return (

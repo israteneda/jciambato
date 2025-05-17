@@ -32,7 +32,7 @@ export const Navbar = ({ className }: NavbarProps) => {
       className={clsx(
         "fixed top-0 left-0 right-0 transition-all duration-300 z-50",
         isScrolled ? "bg-white shadow-md" : "bg-jci-navy",
-        className,
+        className
       )}
       classNames={{
         toggleIcon: "w-8 h-8",
@@ -50,11 +50,7 @@ export const Navbar = ({ className }: NavbarProps) => {
               alt="JCI Ambato Logo"
               className="object-contain"
               height={85}
-              src={
-                isScrolled
-                  ? "/images/logo-jci.png"
-                  : "/images/logo-blanco-jci.png"
-              }
+              src={isScrolled ? "/images/logo-jci.png" : "/images/logo-blanco-jci.png"}
               width={85}
             />
           </NextLink>
@@ -82,7 +78,7 @@ export const Navbar = ({ className }: NavbarProps) => {
                         : "text-jci-black" // Regular item when scrolled
                       : isActive
                         ? "text-jci-gold font-semibold" // Active item before scroll
-                        : "text-white", // Regular item before scroll
+                        : "text-white" // Regular item before scroll
                   )}
                   href={item.href}
                 >
@@ -94,10 +90,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         </ul>
 
         <div className="md:hidden">
-          <NavbarMenuToggle
-            className="w-12 h-12 p-2"
-            srOnlyText="Toggle navigation menu"
-          />
+          <NavbarMenuToggle className="w-12 h-12 p-2" srOnlyText="Toggle navigation menu" />
         </div>
       </NavbarContent>
 
@@ -108,10 +101,7 @@ export const Navbar = ({ className }: NavbarProps) => {
             const isActive = pathname === item.href;
 
             return (
-              <NavbarMenuItem
-                key={`${item}-${index}`}
-                className="flex justify-start"
-              >
+              <NavbarMenuItem key={`${item}-${index}`} className="flex justify-start">
                 <NextLink
                   className={clsx(
                     "transition-colors duration-200 text-lg",
@@ -120,7 +110,7 @@ export const Navbar = ({ className }: NavbarProps) => {
                       : "hover:text-jci-gold",
                     isActive
                       ? "text-jci-navy font-semibold" // Active item
-                      : "text-jci-black", // Regular item
+                      : "text-jci-black" // Regular item
                   )}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
