@@ -27,17 +27,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   // Clases para el body con clsx
-  const bodyClasses = clsx(
-    "min-h-screen bg-background font-sans antialiased",
-    fontSans.variable
-  );
+  const bodyClasses = clsx("min-h-screen bg-background font-sans antialiased", fontSans.variable);
 
   return (
     <html suppressHydrationWarning lang="es">
@@ -46,9 +38,7 @@ export default function RootLayout({
         <Providers>
           <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="container max-w-full bg-gray-50">
-              {children}
-            </main>
+            <main className="container max-w-full bg-gray-50">{children}</main>
             <Footer />
           </div>
         </Providers>

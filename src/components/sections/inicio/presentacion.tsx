@@ -38,18 +38,20 @@ interface BackgroundTextProps {
 
 const BackgroundText = ({ translateAmountLeft, translateAmountRigth }: BackgroundTextProps) => (
   <div className="w-full overflow-hidden mt-10 md:mt-16">
-    <h2 className={clsx(
-      "mt-5 md:mb-10 text-left font-extrabold leading-none text-gray-300 opacity-40 whitespace-nowrap",
-      "text-[15vw] md:text-[13vw]"
-    )}
+    <h2
+      className={clsx(
+        "mt-5 md:mb-10 text-left font-extrabold leading-none text-gray-300 opacity-40 whitespace-nowrap",
+        "text-[15vw] md:text-[13vw]"
+      )}
       style={{ transform: `translateX(${translateAmountLeft}px)` }}
     >
       JCI AMBATO
     </h2>
-    <h2 className={clsx(
-      "mt-5 md:mt-10 text-left font-extrabold leading-none text-gray-300 opacity-40 whitespace-nowrap",
-      "text-[15vw] md:text-[13vw]"
-    )}
+    <h2
+      className={clsx(
+        "mt-5 md:mt-10 text-left font-extrabold leading-none text-gray-300 opacity-40 whitespace-nowrap",
+        "text-[15vw] md:text-[13vw]"
+      )}
       style={{ transform: `translateX(${translateAmountRigth}px)` }}
     >
       CHAMBER
@@ -70,7 +72,10 @@ export default function Presentacion() {
       <TitleSection />
 
       {/*Texto de Fondo */}
-      <BackgroundText translateAmountLeft={translateAmountLeft} translateAmountRigth={translateAmountRigth} />
+      <BackgroundText
+        translateAmountLeft={translateAmountLeft}
+        translateAmountRigth={translateAmountRigth}
+      />
     </section>
   );
 }

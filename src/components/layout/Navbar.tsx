@@ -72,7 +72,6 @@ export const Navbar = () => {
         <div className="md:hidden">
           <NavbarMenuToggle />
         </div>
-
       </NavbarContent>
 
       <NavbarMenu>
