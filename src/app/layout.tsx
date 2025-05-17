@@ -23,21 +23,23 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  icons: siteConfig.icons,
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // Clases para el body con clsx
-  const bodyClasses = clsx("font-sans leading-none", fontSans.variable);
+  const bodyClasses = clsx("min-h-screen bg-background font-sans antialiased", fontSans.variable);
 
   return (
     <html suppressHydrationWarning lang="es">
       <head />
       <body className={bodyClasses}>
         <Providers>
-          <div className="flex flex-col">
+          <div className="relative flex flex-col min-h-screen">
             <Navbar />
-            <main className="relative z-10 bg-gray-50">{children}</main>
+            <main className="container max-w-full bg-gray-50">{children}</main>
             <Footer />
           </div>
         </Providers>

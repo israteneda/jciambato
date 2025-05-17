@@ -36,37 +36,19 @@ export default function Aliados() {
       </div>
 
       <div className="flex flex-wrap justify-center  mt-10 gap-10 p-5 md:p-8">
-        <Image
-          src="/images/aliados/logo-UTA.webp"
-          alt="Logo MAGAP"
-          width={200}
-          height={50}
-          className="object-contain"
-        />
-        <Image
-          src="/images/aliados/logo-MAGAP.png"
-          alt="Logo MAGAP"
-          width={200}
-          height={50}
-          className="object-contain"
-        />
-        <Image
-          src="/images/aliados/logo-UTI.webp"
-          alt="Logo MAGAP"
-          width={200}
-          height={50}
-          className="object-contain"
-        />
-        <Image
-          src="/images/aliados/logo-RB.png"
-          alt="Logo MAGAP"
-          width={200}
-          height={50}
-          className="object-contain"
-        />
+        {aliados.map((aliado, index) => (
+          <Image
+            key={index}
+            src={aliado.src}
+            alt={aliado.alt}
+            width={200}
+            height={50}
+            className="object-contain"
+          />
+        ))}
         <Image
           src="/images/aliados/logo-municipio.png"
-          alt="Logo MAGAP"
+          alt="Logo Municipio"
           width={200}
           height={50}
           className="object-contain"
