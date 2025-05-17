@@ -54,7 +54,7 @@ export default function BuilderPage() {
       />
 
       {/* Legacy Sections */}
-      <div className="flex flex-col items-center">
+      <div>
         {/* Sección de Bienvenida */}
         <Bienvenida />
 

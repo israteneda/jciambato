@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { HiArrowLongRight, HiOutlineArrowUp } from "react-icons/hi2";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { jciLinks } from "@/data/footer";
 
 export function Footer() {
   return (
