@@ -1,8 +1,9 @@
 "use client";
 
 import { Button } from "@heroui/button";
-import useScrollPositionText from "@/hooks/use-scroll-position-text";
 import clsx from "clsx";
+
+import useScrollPositionText from "@/hooks/use-scroll-position-text";
 
 const TitleSection = () => (
   <div className="max-w-6xl mx-auto">
@@ -11,14 +12,15 @@ const TitleSection = () => (
         En Ambato
       </p>
       <h2 className="mt-8 md:w-3/4 text-3xl md:text-6xl font-light text-cyan-600 md:leading-tight">
-        A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.
+        A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de
+        líderes en la ciudad.
       </h2>
       <div className="mt-16">
         <Button
+          aria-label="Conoce nuestra misión y visión"
+          className="relative overflow-hidden border-cyan-600 text-cyan-800 group"
           radius="none"
           variant="bordered"
-          className="relative overflow-hidden border-cyan-600 text-cyan-800 group"
-          aria-label="Conoce nuestra misión y visión"
         >
           <span className="absolute inset-0 transform -translate-x-full bg-cyan-600 transition-transform duration-300 group-hover:translate-x-0" />
           <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
@@ -36,20 +38,25 @@ interface BackgroundTextProps {
   translateAmountRigth: number;
 }
 
-const BackgroundText = ({ translateAmountLeft, translateAmountRigth }: BackgroundTextProps) => (
+const BackgroundText = ({
+  translateAmountLeft,
+  translateAmountRigth,
+}: BackgroundTextProps) => (
   <div className="w-full overflow-hidden mt-10 md:mt-16">
-    <h2 className={clsx(
-      "mt-5 md:mb-10 text-left font-extrabold leading-none text-gray-300 opacity-40 whitespace-nowrap",
-      "text-[15vw] md:text-[13vw]"
-    )}
+    <h2
+      className={clsx(
+        "mt-5 md:mb-10 text-left font-extrabold leading-none text-gray-300 opacity-40 whitespace-nowrap",
+        "text-[15vw] md:text-[13vw]",
+      )}
       style={{ transform: `translateX(${translateAmountLeft}px)` }}
     >
       JCI AMBATO
     </h2>
-    <h2 className={clsx(
-      "mt-5 md:mt-10 text-left font-extrabold leading-none text-gray-300 opacity-40 whitespace-nowrap",
-      "text-[15vw] md:text-[13vw]"
-    )}
+    <h2
+      className={clsx(
+        "mt-5 md:mt-10 text-left font-extrabold leading-none text-gray-300 opacity-40 whitespace-nowrap",
+        "text-[15vw] md:text-[13vw]",
+      )}
       style={{ transform: `translateX(${translateAmountRigth}px)` }}
     >
       CHAMBER
@@ -70,7 +77,10 @@ export default function Presentacion() {
       <TitleSection />
 
       {/*Texto de Fondo */}
-      <BackgroundText translateAmountLeft={translateAmountLeft} translateAmountRigth={translateAmountRigth} />
+      <BackgroundText
+        translateAmountLeft={translateAmountLeft}
+        translateAmountRigth={translateAmountRigth}
+      />
     </section>
   );
 }

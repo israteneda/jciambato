@@ -82,10 +82,10 @@ export default function Aliados() {
         <Image
           key={index}
           alt={logo.alt}
+          className="h-auto"
+          height={48}
           src={logo.src}
           width={158}
-          height={48}
-          className="h-auto"
         />
       ));
   };
@@ -111,38 +111,38 @@ export default function Aliados() {
           <div className="flex w-max items-center space-x-16">
             <div className="flex-shrink-0 w-48 h-24 m-10 flex items-center justify-between">
               <Image
-                src="/aliados/logo-UTI.webp"
                 alt="Logo UTI"
-                width={200}
-                height={50}
                 className="object-contain"
+                height={50}
+                src="/aliados/logo-UTI.webp"
+                width={200}
               />
             </div>
             <div className="flex-shrink-0 w-48 h-24 flex items-center justify-center bg-white">
               <Image
-                src="/aliados/logo-UTA.webp"
                 alt="Logo UTA"
-                width={200}
-                height={50}
                 className="object-contain"
+                height={50}
+                src="/aliados/logo-UTA.webp"
+                width={200}
               />
             </div>
             <div className="flex-shrink-0 w-48 h-24 flex items-center justify-center bg-white">
               <Image
-                src="/aliados/logo-RB.png"
                 alt="Logo Rompiendo Barreras"
-                width={200}
-                height={50}
                 className="object-contain"
+                height={50}
+                src="/aliados/logo-RB.png"
+                width={200}
               />
             </div>
             <div className="flex-shrink-0 w-48 h-24 flex items-center justify-center bg-white">
               <Image
-                src="/aliados/logo-MAGAP.png"
                 alt="Logo MAGAP"
-                width={200}
-                height={50}
                 className="object-contain"
+                height={50}
+                src="/aliados/logo-MAGAP.png"
+                width={200}
               />
             </div>
           </div>

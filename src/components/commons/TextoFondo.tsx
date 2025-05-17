@@ -15,13 +15,13 @@ export default function TextoFondo() {
       <div className="absolute inset-0 flex flex-col justify-center overflow-hidden leading-tight transition-transform duration-500">
         <h1
           className="text-[10vw] font-bold text-gray-300 opacity-40 transform text-right"
-          style={{ transform: `translateX(${translateAmountJci - 70 }px)` }}
+          style={{ transform: `translateX(${translateAmountJci - 70}px)` }}
         >
           JCI AMBATO
         </h1>
         <h1
           className="text-[10vw] font-bold text-gray-300 opacity-40 transform text-left"
-          style={{ transform: `translateX(${translateAmountJr}px)`}}
+          style={{ transform: `translateX(${translateAmountJr}px)` }}
         >
           JUNIOR CHAMBER
         </h1>

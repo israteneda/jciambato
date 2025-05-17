@@ -1,79 +1,83 @@
-import { Builder } from '@builder.io/react';
-import dynamic from 'next/dynamic';
+import { Builder } from "@builder.io/react";
+import dynamic from "next/dynamic";
 
 // Register Grupo component
 Builder.registerComponent(
-  dynamic(() => import('./components/sections/inicio/grupo')),
+  dynamic(() => import("./components/sections/inicio/grupo")),
   {
-    name: 'Grupo',
+    name: "Grupo",
     inputs: [
       {
-        name: 'image',
-        type: 'object',
+        name: "image",
+        type: "object",
         defaultValue: {
-          src: '/images/grupo3.jpeg',
-          alt: 'Grupo JCI Ambato',
+          src: "/images/grupo3.jpeg",
+          alt: "Grupo JCI Ambato",
           width: 500,
           height: 500,
         },
         subFields: [
           {
-            name: 'src',
-            type: 'file',
-            defaultValue: '/images/grupo3.jpeg',
+            name: "src",
+            type: "file",
+            defaultValue: "/images/grupo3.jpeg",
           },
           {
-            name: 'alt',
-            type: 'string',
-            defaultValue: 'Grupo JCI Ambato',
+            name: "alt",
+            type: "string",
+            defaultValue: "Grupo JCI Ambato",
           },
           {
-            name: 'width',
-            type: 'number',
+            name: "width",
+            type: "number",
             defaultValue: 500,
           },
           {
-            name: 'height',
-            type: 'number',
+            name: "height",
+            type: "number",
             defaultValue: 500,
           },
         ],
       },
       {
-        name: 'titleSection',
-        type: 'object',
+        name: "titleSection",
+        type: "object",
         defaultValue: {
-          subtitle: 'GRUPO',
-          title: 'A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.',
-          description: 'Nos comprometemos a construir un legado de cambio que beneficie a nuestras comunidades y fomente el crecimiento colectivo.',
-          buttonText: 'Nuestra misión y visión',
+          subtitle: "GRUPO",
+          title:
+            "A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.",
+          description:
+            "Nos comprometemos a construir un legado de cambio que beneficie a nuestras comunidades y fomente el crecimiento colectivo.",
+          buttonText: "Nuestra misión y visión",
         },
         subFields: [
           {
-            name: 'subtitle',
-            type: 'string',
-            defaultValue: 'GRUPO',
+            name: "subtitle",
+            type: "string",
+            defaultValue: "GRUPO",
           },
           {
-            name: 'title',
-            type: 'string',
-            defaultValue: 'A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.',
+            name: "title",
+            type: "string",
+            defaultValue:
+              "A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.",
           },
           {
-            name: 'description',
-            type: 'string',
-            defaultValue: 'Nos comprometemos a construir un legado de cambio que beneficie a nuestras comunidades y fomente el crecimiento colectivo.',
+            name: "description",
+            type: "string",
+            defaultValue:
+              "Nos comprometemos a construir un legado de cambio que beneficie a nuestras comunidades y fomente el crecimiento colectivo.",
           },
           {
-            name: 'buttonText',
-            type: 'string',
-            defaultValue: 'Nuestra misión y visión',
+            name: "buttonText",
+            type: "string",
+            defaultValue: "Nuestra misión y visión",
           },
         ],
       },
       {
-        name: 'statistics',
-        type: 'object',
+        name: "statistics",
+        type: "object",
         defaultValue: {
           projects: 20,
           years: 50,
@@ -81,28 +85,28 @@ Builder.registerComponent(
         },
         subFields: [
           {
-            name: 'projects',
-            type: 'number',
+            name: "projects",
+            type: "number",
             defaultValue: 20,
           },
           {
-            name: 'years',
-            type: 'number',
+            name: "years",
+            type: "number",
             defaultValue: 50,
           },
           {
-            name: 'members',
-            type: 'number',
+            name: "members",
+            type: "number",
             defaultValue: 20,
           },
         ],
       },
     ],
     defaultStyles: {
-      marginTop: '7rem',
-      marginBottom: '7rem',
+      marginTop: "7rem",
+      marginBottom: "7rem",
     },
-  }
+  },
 );
 
 // Add more component registrations here as needed
@@ -114,4 +118,4 @@ Builder.registerComponent(
 //     inputs: [{ name: 'title', type: 'text' }],
 //     image: 'https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F6bef27ee40d24f3b88239fd7e616f82a'
 //   }
-// ); 
+// );

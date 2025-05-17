@@ -1,8 +1,9 @@
 "use client";
 
 import { Button } from "@heroui/button";
-import { useScroll } from "@/hooks";
 import Image from "next/image";
+
+import { useScroll } from "@/hooks";
 
 export default function Bienvenida2() {
   const isScrolled = useScroll();
@@ -12,11 +13,11 @@ export default function Bienvenida2() {
       {/* Imagen de Fonod */}
       <Image
         /* src="/group.jpg" */
-        src="/images/lideralider2.jpeg"
+        priority
         alt="Grupo JCI Ambato Lider a Lider 2024"
         layout="fill"
         objectFit="cover"
-        priority
+        src="/images/lideralider2.jpeg"
       />
 
       {/* Capa de oscuridad para el video */}
@@ -30,7 +31,6 @@ export default function Bienvenida2() {
 
       {/* Contenedor principal de los elementos sobre el video */}
       <div className="relative z-30 flex items-center h-full">
-
         {/* Contenedor de información - Se ajusta al tamaño de la pantalla */}
         <div className="ml-12 mr-12 lg:ml-16 text-left max-w-xl">
           <h2 className="text-sm lg:text-sm font-bold mb-5 text-yellow-400">
@@ -48,7 +48,7 @@ export default function Bienvenida2() {
           {/* Botón de acción */}
           <Button className="relative mt-4 text-white group overflow-hidden bg-cyan-600">
             {/* Transicion de llenado, puntero entra al botón */}
-            <span className="absolute inset-0 w-full h-full bg-cyan-950 transition-transform duration-300 transform -translate-x-full group-hover:translate-x-0"></span>
+            <span className="absolute inset-0 w-full h-full bg-cyan-950 transition-transform duration-300 transform -translate-x-full group-hover:translate-x-0" />
             <span className="relative z-10">Sobre Nosotros</span>
           </Button>
         </div>

@@ -8,11 +8,11 @@ export default function NoticiasEventos() {
           Noticias y Eventos
         </h2>
         <Button
-          variant="bordered"
-          className="relative overflow-hidden text-cyan-800 border-cyan-600 group"
           aria-label="Conoce nuestra misión y visión"
+          className="relative overflow-hidden text-cyan-800 border-cyan-600 group"
+          variant="bordered"
         >
-          <span className="absolute inset-0 bg-cyan-600 transition-transform duration-300 transform -translate-x-full group-hover:translate-x-0"></span>
+          <span className="absolute inset-0 bg-cyan-600 transition-transform duration-300 transform -translate-x-full group-hover:translate-x-0" />
           <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
             Ver más
           </span>

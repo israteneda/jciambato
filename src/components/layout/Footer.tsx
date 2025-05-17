@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { HiArrowLongRight, HiOutlineArrowUp } from "react-icons/hi2";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { jciLinks } from "@/data/footer";
 
+import { jciLinks } from "@/data/footer";
 
 export function Footer() {
   return (
@@ -11,7 +11,6 @@ export function Footer() {
       <section className="relative z-10 bg-cyan-600">
         <div className="p-10 md:p-28">
           <div className="pb-20">
-
             <div className="relative z-10 max-w-7xl m-auto">
               <div className="flex flex-col md:flex-row items-start md:items-center">
                 <div>
@@ -27,7 +26,6 @@ export function Footer() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -45,24 +43,32 @@ export function Footer() {
               <div className="relative z-10 max-w-5xl mx-auto">
                 <figure className="mb-10">
                   <Image
-                    src="/images/logo-jci.png"
                     alt="JCI Ambato Logo"
-                    width={85}
-                    height={85}
                     className="object-cover"
+                    height={85}
+                    src="/images/logo-jci.png"
+                    width={85}
                   />
                 </figure>
 
                 <div className="flex md:flex-row">
                   {/* Navegación del footer */}
-                  <nav className="flex flex-wrap justify-between flex-1 gap-8 md:gap-0" aria-label="Footer Navigation">
+                  <nav
+                    aria-label="Footer Navigation"
+                    className="flex flex-wrap justify-between flex-1 gap-8 md:gap-0"
+                  >
                     {jciLinks.map((section) => (
                       <div key={section.title} className="flex flex-col">
-                        <h3 className="text-base font-semibold">{section.title}</h3>
+                        <h3 className="text-base font-semibold">
+                          {section.title}
+                        </h3>
                         <ul className="flex flex-col mt-3 m-1 mb-0 max-w-36 space-y-2">
                           {section.items.map((item) => (
                             <li key={item.title} className="text-sm">
-                              <a href={item.href} className="hover:text-gray-300">
+                              <a
+                                className="hover:text-gray-300"
+                                href={item.href}
+                              >
                                 {item.title}
                               </a>
                             </li>
@@ -74,31 +80,34 @@ export function Footer() {
 
                   {/* Redes sociales */}
                   <div className="ml-20">
-                    <div className="flex flex-col justify-center gap-4" aria-label="Social Media Links">
-                      <a href="#" aria-label="LinkedIn">
+                    <div
+                      aria-label="Social Media Links"
+                      className="flex flex-col justify-center gap-4"
+                    >
+                      <a aria-label="LinkedIn" href="#">
                         <FaLinkedin />
                       </a>
-                      <a href="#" aria-label="Facebook">
+                      <a aria-label="Facebook" href="#">
                         <FaFacebook />
                       </a>
-                      <a href="#" aria-label="Instagram">
+                      <a aria-label="Instagram" href="#">
                         <FaInstagram />
                       </a>
-                      <a href="#" aria-label="YouTube">
+                      <a aria-label="YouTube" href="#">
                         <FaYoutube />
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
 
             {/* Derechos reservados */}
             <div className="relative z-10 max-w-5xl mx-10">
               <div className="flex pb-12">
                 <p className="text-small text-default-400">
-                  © 2025 Cámara Junior Internacional | Capítulo Ambato. Todos los Derechos Reservados.
+                  © 2025 Cámara Junior Internacional | Capítulo Ambato. Todos
+                  los Derechos Reservados.
                 </p>
               </div>
             </div>
@@ -106,7 +115,7 @@ export function Footer() {
             {/* Botón para volver arriba */}
             <div className="absolute top-[20%] right-[6%] md:right-[5%]">
               <div className="flex items-center justify-center">
-                <a href="#" role="button" aria-label="Volver arriba">
+                <a aria-label="Volver arriba" href="#" role="button">
                   <HiOutlineArrowUp className="w-8 h-8" />
                 </a>
               </div>

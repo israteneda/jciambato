@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { builder, Builder } from '@builder.io/react';
-import { BuilderComponent } from '@builder.io/react';
-import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { builder, Builder } from "@builder.io/react";
+import { BuilderComponent } from "@builder.io/react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+
 import {
   Bienvenida,
   Presentacion,
   Grupo,
   Premios,
-  Aliados,
   NoticiasEventos,
 } from "@/components/sections/inicio";
-import '../builder-registry'
+import "../builder-registry";
 
 // Initialize Builder with your API key
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
@@ -27,7 +27,7 @@ export default function BuilderPage() {
   useEffect(() => {
     // Fetch content from Builder.io based on the current path
     builder
-      .get('page', {
+      .get("page", {
         userAttributes: {
           urlPath: pathname,
         },
@@ -37,19 +37,19 @@ export default function BuilderPage() {
         setContent(content);
       })
       .catch((error) => {
-        console.error('Error fetching Builder.io content:', error);
+        console.error("Error fetching Builder.io content:", error);
       });
   }, [pathname]);
 
   return (
     <>
       <BuilderComponent
-        model="page"
         content={content}
-        data={{ 
-          title: 'Builder.io Page',
-          path: pathname 
+        data={{
+          title: "Builder.io Page",
+          path: pathname,
         }}
+        model="page"
         options={{ includeRefs: true }}
       />
 
@@ -75,4 +75,4 @@ export default function BuilderPage() {
       </div>
     </>
   );
-} 
+}

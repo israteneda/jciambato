@@ -39,8 +39,10 @@ const defaultProps: GrupoProps = {
   },
   titleSection: {
     subtitle: "GRUPO",
-    title: "A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.",
-    description: "Nos comprometemos a construir un legado de cambio que beneficie a nuestras comunidades y fomente el crecimiento colectivo.",
+    title:
+      "A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.",
+    description:
+      "Nos comprometemos a construir un legado de cambio que beneficie a nuestras comunidades y fomente el crecimiento colectivo.",
     buttonText: "Nuestra misión y visión",
   },
   statistics: {
@@ -68,15 +70,13 @@ const TitleSection = ({
     </h2>
 
     <div className="max-w-md mt-8 ml-10 md:ml-16">
-      <p className="text-base md:text-lg text-gray-700">
-        {description}
-      </p>
+      <p className="text-base md:text-lg text-gray-700">{description}</p>
 
       <Button
+        aria-label={buttonText}
+        className="border-gray-400 text-gray-400 group mt-14"
         radius="none"
         variant="bordered"
-        className="border-gray-400 text-gray-400 group mt-14"
-        aria-label={buttonText}
         onClick={buttonOnClick}
       >
         <span className="absolute inset-0 transform -translate-x-full bg-gray-400 transition-transform duration-300 group-hover:translate-x-0" />
@@ -144,11 +144,11 @@ export default function Grupo(props?: GrupoProps) {
       <div className="flex flex-col items-end">
         <div className="ml-20 md:w-1/2">
           <Image
-            src={mergedProps.image?.src || defaultProps.image!.src}
             alt={mergedProps.image?.alt || defaultProps.image!.alt}
-            width={mergedProps.image?.width || defaultProps.image!.width}
-            height={mergedProps.image?.height || defaultProps.image!.height}
             className="object-cover w-full h-auto"
+            height={mergedProps.image?.height || defaultProps.image!.height}
+            src={mergedProps.image?.src || defaultProps.image!.src}
+            width={mergedProps.image?.width || defaultProps.image!.width}
           />
         </div>
 
