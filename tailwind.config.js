@@ -1,8 +1,9 @@
 import { heroui } from "@heroui/theme";
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 
@@ -35,6 +36,12 @@ module.exports = {
       },
 
       colors: {
+        primary: "#1E3A8A",
+        secondary: "#2563EB",
+        accent: "#3B82F6",
+        dark: "#1E293B",
+        light: "#F8FAFC",
+
         // Primary Colors
         "jci-navy": "#3A67B1",
         "jci-aqua": "#0087D7",
@@ -50,9 +57,9 @@ module.exports = {
       },
 
       fontFamily: {
-        sans: ["var(--font-sans)"],
+        sans: ["var(--font-inter)"],
         mono: ["var(--font-mono)"],
-        heading: ["var(--font-heading)"],
+        heading: ["var(--font-montserrat)"],
       },
     },
   },
