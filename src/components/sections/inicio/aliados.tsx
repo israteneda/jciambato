@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 export default function Aliados() {
-
   return (
     <section>
       <div className="relative md:w-[calc(100%-180px)] mx-[30px] md:mx-[90px]">

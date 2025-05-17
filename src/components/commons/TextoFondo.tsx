@@ -1,8 +1,8 @@
 "use client";
 
-import { useScrollPositionText } from '@/hooks';
-import clsx from 'clsx';
-import { useMemo } from 'react';
+import { useScrollPositionText } from "@/hooks";
+import clsx from "clsx";
+import { useMemo } from "react";
 
 interface BackgroundTextProps {
   textoPrimario: string;
@@ -15,15 +15,18 @@ const BackgroundText = ({
   textoPrimario,
   textoSecundario,
   numberLeft,
-  numberRight
+  numberRight,
 }: BackgroundTextProps) => {
   const scrollY = useScrollPositionText();
 
   // Calculamos desplazamientos de forma memoizada
-  const translateStyles = useMemo(() => ({
-    left: { transform: `translateX(${scrollY * numberLeft}px)` },
-    right: { transform: `translateX(${-scrollY * numberRight}px)` }
-  }), [scrollY, numberLeft, numberRight]);
+  const translateStyles = useMemo(
+    () => ({
+      left: { transform: `translateX(${scrollY * numberLeft}px)` },
+      right: { transform: `translateX(${-scrollY * numberRight}px)` },
+    }),
+    [scrollY, numberLeft, numberRight]
+  );
 
   const baseTextStyle = clsx(
     "flex justify-center",
@@ -37,7 +40,7 @@ const BackgroundText = ({
   );
 
   return (
-    <div className='overflow-hidden mx-auto'>
+    <div className="overflow-hidden mx-auto">
       <h2
         className={baseTextStyle}
         style={{ ...translateStyles.left, willChange: "transform" }}

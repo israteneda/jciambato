@@ -6,7 +6,6 @@ import { BorderFrame } from "./border-frame";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Image from "next/image";
 
-
 export default function Bienvenida() {
   const isScrolled = useScroll();
 
@@ -36,10 +35,13 @@ export default function Bienvenida() {
         </div>
 
         <div className="hidden md:block absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] text-[10px] font-semibold uppercase z-20 text-jci-seafoam">
-          <a href="https://jciecuador.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-            <span>
-              JCI Ecuador
-            </span>
+          <a
+            href="https://jciecuador.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1"
+          >
+            <span>JCI Ecuador</span>
             <MdOutlineArrowOutward className="w-5 h-5" />
           </a>
         </div>

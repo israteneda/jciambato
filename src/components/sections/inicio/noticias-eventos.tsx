@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { noticiasItems } from "@/data/noticias";
 import { Button } from "@heroui/button";
@@ -8,15 +8,14 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
-import 'swiper/css';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/navigation";
 import Link from "next/link";
 
 export default function NoticiasEventos() {
   return (
     <section className="relative">
       <div className="pt-[calc(62.4px+3vw)] pb-[calc(62.4px+3vw)]">
-
         {/* Título */}
         <div className="pb-[calc(62.4px+3vw)]">
           <div className="relative  md:w-[calc(100%-180px)] mx-[30px] md:mx-[90px]">
@@ -93,7 +92,6 @@ export default function NoticiasEventos() {
                       </div>
                     </div>
                   </Link>
-
                 </SwiperSlide>
               ))}
             </div>
@@ -151,7 +149,6 @@ export default function NoticiasEventos() {
             </Button>
           </div>
         </div>
-
       </div>
     </section>
   );

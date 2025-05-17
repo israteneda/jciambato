@@ -1,169 +1,163 @@
-'use client';
+"use client";
 
 import { Button } from "@heroui/button";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { HiChevronLeft, HiChevronRight, HiOutlineCollection, HiOutlineArrowNarrowRight } from "react-icons/hi";
+import {
+  HiChevronLeft,
+  HiChevronRight,
+  HiOutlineCollection,
+  HiOutlineArrowNarrowRight,
+} from "react-icons/hi";
 
 interface CarouselProps {
-    items: {
-        id: number;
-        title: string;
-        projectName: string;
-        edition: string;
-        url: string;
-        description: string;
-        image: string;
-    }[];
-    autoPlayInterval?: number;
+  items: {
+    id: number;
+    title: string;
+    projectName: string;
+    edition: string;
+    url: string;
+    description: string;
+    image: string;
+  }[];
+  autoPlayInterval?: number;
 }
 
 export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === items.length - 1 ? 0 : prevIndex + 1
-        );
-    };
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === items.length - 1 ? 0 : prevIndex + 1));
+  };
 
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? items.length - 1 : prevIndex - 1
-        );
-    };
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? items.length - 1 : prevIndex - 1));
+  };
 
-    useEffect(() => {
-        const interval = setInterval(nextSlide, autoPlayInterval);
-        return () => clearInterval(interval);
-    }, [autoPlayInterval]);
+  useEffect(() => {
+    const interval = setInterval(nextSlide, autoPlayInterval);
+    return () => clearInterval(interval);
+  }, [autoPlayInterval]);
 
-    return (
-        <div className="relative overflow-hidden">
-            <div className="relative h-[650px] md:h-[760px] w-full">
-                <div className=""> {/* z-30 w-full h-full pt-24 relative pb-[46px] */}
-                    {items.map((item, index) => (
-                        <div
-                            key={item.id}
-                            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+  return (
+    <div className="relative overflow-hidden">
+      <div className="relative h-[650px] md:h-[760px] w-full">
+        <div className="">
+          {" "}
+          {/* z-30 w-full h-full pt-24 relative pb-[46px] */}
+          {items.map((item, index) => (
+            <div
+              key={item.id}
+              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+            >
+              {/* Imagen de fondo */}
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover absolute inset-0"
+              />
+              {/* Capa oscura */}
+              <div className="absolute inset-0 bg-black bg-opacity-60" />
 
-                        >
-                            {/* Imagen de fondo */}
-                            <img src={item.image} alt={item.title} className="w-full h-full object-cover absolute inset-0" />
-                            {/* Capa oscura */}
-                            <div className="absolute inset-0 bg-black bg-opacity-60" />
+              {/* Contenido del Slide */}
+              <div className="relative w-full h-full pt-24 pb-[46px]">
+                <div className="relative h-full md:w-[1156px] mx-[30px] md:mx-auto">
+                  {/* Texto y botón */}
+                  <div>
+                    <div className="text-[13px] leading-[1.85] uppercase text-white font-bold">
+                      Lider A Lider
+                    </div>
+                    <div className="mt-2 md:mt-8">
+                      <h3 className="text-4xl font-light text-left leading-[1.17] text-white max-w-[666px] md:text-[calc(28.8px+1vw)]">
+                        <p>
+                          {item.title} <strong>{item.projectName}</strong>
+                        </p>
+                      </h3>
+                    </div>
+                    <div className="mt-10 md:mt-20">
+                      <div className="text-medium leading-[1.78] text-white text-left max-w-[470px] md:text-[calc(15.6px+0.125vw)]">
+                        {item.description}
+                      </div>
+                    </div>
+                  </div>
 
-                            {/* Contenido del Slide */}
-                            <div className="relative w-full h-full pt-24 pb-[46px]">
-                                <div className="relative h-full md:w-[1156px] mx-[30px] md:mx-auto">
-                                    {/* Texto y botón */}
-                                    <div>
-                                        <div className="text-[13px] leading-[1.85] uppercase text-white font-bold">
-                                            Lider A Lider
-                                        </div>
-                                        <div className="mt-2 md:mt-8">
-                                            <h3 className="text-4xl font-light text-left leading-[1.17] text-white max-w-[666px] md:text-[calc(28.8px+1vw)]">
-                                                <p>{item.title} <strong>{item.projectName}</strong></p>
-                                            </h3>
-                                        </div>
-                                        <div className="mt-10 md:mt-20">
-                                            <div className="text-medium leading-[1.78] text-white text-left max-w-[470px] md:text-[calc(15.6px+0.125vw)]">
-                                                {item.description}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Botón "Ver Proyecto" */}
-                                    <div className="absolute left-0 bottom-0 w-full">
-                                        <div className="flex items-center justify-between">
-                                            <div className="relative inline-block transition duration-400">
-                                                <div className="flex py-4">
-                                                    <Link href={item.url} className="z-20">
-                                                        <button className="group max-w-full relative inline-block transition duration-[400ms] cursor-pointer">
-                                                            <div className="flex items-center py-4">
-                                                                <span className="text-xs text-jci-aqua leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
-                                                                    Leer más
-                                                                </span>
-                                                                <div className="flex ml-3 items-center transform transition-transform duration-300 group-hover:translate-x-1">
-                                                                    <HiOutlineArrowNarrowRight className="w-6 h-6 text-jci-aqua group-hover:text-jci-red transition-colors duration-300" />
-                                                                </div>
-                                                            </div>
-                                                        </button>
-                                                    </Link>
-                                                </div>
-                                            </div>
-
-                                            <div className="flex gap-1 md:hidden">
-                                                <Button
-                                                    isIconOnly
-                                                    variant="bordered"
-                                                    radius="full"
-                                                    className="w-[40px] h-[40px] text-[#989898] border-[#989898]"
-                                                    onPress={prevSlide}
-                                                >
-                                                    <HiChevronLeft className="w-6 h-6 text-gray-50" />
-                                                </Button>
-                                                <div className="h-[12px]" />
-                                                <Button
-                                                    isIconOnly
-                                                    variant="bordered"
-                                                    radius="full"
-                                                    className="w-[40px] h-[40px] text-[#989898] border-[#989898]"
-                                                    onPress={nextSlide}
-                                                >
-                                                    <HiChevronRight className="w-6 h-6 text-gray-50" />
-                                                </Button>
-                                            </div>
-                                        </div>
-                                    </div>
+                  {/* Botón "Ver Proyecto" */}
+                  <div className="absolute left-0 bottom-0 w-full">
+                    <div className="flex items-center justify-between">
+                      <div className="relative inline-block transition duration-400">
+                        <div className="flex py-4">
+                          <Link href={item.url} className="z-20">
+                            <button className="group max-w-full relative inline-block transition duration-[400ms] cursor-pointer">
+                              <div className="flex items-center py-4">
+                                <span className="text-xs text-jci-aqua leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
+                                  Leer más
+                                </span>
+                                <div className="flex ml-3 items-center transform transition-transform duration-300 group-hover:translate-x-1">
+                                  <HiOutlineArrowNarrowRight className="w-6 h-6 text-jci-aqua group-hover:text-jci-red transition-colors duration-300" />
                                 </div>
-                            </div>
+                              </div>
+                            </button>
+                          </Link>
                         </div>
-                    ))}
-                </div>
-            </div>
+                      </div>
 
-            {/* Indicadores numéricos */}
-            <div className="hidden absolute top-1/2 right-[54px] w-[22px] md:flex items-center flex-col transform -translate-y-1/2 z-50">
-                <div className="text-white text-[48px] font-normal">
-                    {String(currentIndex + 1).padStart(2, "0")}
+                      <div className="flex gap-1 md:hidden">
+                        <Button
+                          isIconOnly
+                          variant="bordered"
+                          radius="full"
+                          className="w-[40px] h-[40px] text-[#989898] border-[#989898]"
+                          onPress={prevSlide}
+                        >
+                          <HiChevronLeft className="w-6 h-6 text-gray-50" />
+                        </Button>
+                        <div className="h-[12px]" />
+                        <Button
+                          isIconOnly
+                          variant="bordered"
+                          radius="full"
+                          className="w-[40px] h-[40px] text-[#989898] border-[#989898]"
+                          onPress={nextSlide}
+                        >
+                          <HiChevronRight className="w-6 h-6 text-gray-50" />
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="opacity-50 text-white text-[48px] mt-2 pt-2 border-t border-white">
-                    {String(items.length).padStart(2, "0")}
-                </div>
+              </div>
             </div>
-
-            {/* Botones de navegación pantallas grandes */}
-            <div className="hidden absolute right-[45px] bottom-[112px] md:flex flex-col">
-                <Button
-                    isIconOnly
-                    variant="bordered"
-                    radius="full"
-                    onPress={prevSlide}
-                >
-                    <HiChevronLeft className="w-6 h-6 text-gray-50" />
-                </Button>
-                <div className="h-[12px]" />
-                <Button
-                    isIconOnly
-                    variant="bordered"
-                    radius="full"
-                    onPress={nextSlide}
-                >
-                    <HiChevronRight className="w-6 h-6 text-gray-50" />
-                </Button>
-            </div>
-
-            {/* Botón colección */}
-            <div className="hidden md:block absolute right-[45px] bottom-[48px]">
-                <Button
-                    isIconOnly
-                    radius="full"
-                    className="bg-jci-aqua"
-                >
-                    <HiOutlineCollection className="w-6 h-6 text-gray-50" />
-                </Button>
-            </div>
+          ))}
         </div>
-    );
+      </div>
+
+      {/* Indicadores numéricos */}
+      <div className="hidden absolute top-1/2 right-[54px] w-[22px] md:flex items-center flex-col transform -translate-y-1/2 z-50">
+        <div className="text-white text-[48px] font-normal">
+          {String(currentIndex + 1).padStart(2, "0")}
+        </div>
+        <div className="opacity-50 text-white text-[48px] mt-2 pt-2 border-t border-white">
+          {String(items.length).padStart(2, "0")}
+        </div>
+      </div>
+
+      {/* Botones de navegación pantallas grandes */}
+      <div className="hidden absolute right-[45px] bottom-[112px] md:flex flex-col">
+        <Button isIconOnly variant="bordered" radius="full" onPress={prevSlide}>
+          <HiChevronLeft className="w-6 h-6 text-gray-50" />
+        </Button>
+        <div className="h-[12px]" />
+        <Button isIconOnly variant="bordered" radius="full" onPress={nextSlide}>
+          <HiChevronRight className="w-6 h-6 text-gray-50" />
+        </Button>
+      </div>
+
+      {/* Botón colección */}
+      <div className="hidden md:block absolute right-[45px] bottom-[48px]">
+        <Button isIconOnly radius="full" className="bg-jci-aqua">
+          <HiOutlineCollection className="w-6 h-6 text-gray-50" />
+        </Button>
+      </div>
+    </div>
+  );
 };

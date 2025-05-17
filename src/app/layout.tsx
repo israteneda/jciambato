@@ -25,17 +25,9 @@ export const metadata: Metadata = {
   icons: siteConfig.icons,
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   // Clases para el body con clsx
-  const bodyClasses = clsx(
-    "font-sans leading-none",
-    fontSans.variable
-  );
+  const bodyClasses = clsx("font-sans leading-none", fontSans.variable);
 
   return (
     <html suppressHydrationWarning lang="es">
@@ -44,9 +36,7 @@ export default function RootLayout({
         <Providers>
           <div className="flex flex-col">
             <Navbar />
-            <main className="relative z-10 bg-gray-50">
-              {children}
-            </main>
+            <main className="relative z-10 bg-gray-50">{children}</main>
             <Footer />
           </div>
         </Providers>

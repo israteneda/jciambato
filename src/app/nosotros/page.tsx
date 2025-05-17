@@ -18,9 +18,8 @@ export default function Inicio() {
       <div className="h-[700px] md:h-[640px]"></div>
       <div
         className="absolute top-0 w-full h-full bg-gray-50"
-        style={{ transform: 'translateY(99.9vh)' }}
-      >
-      </div>
+        style={{ transform: "translateY(99.9vh)" }}
+      ></div>
 
       <Presentacion />
 

@@ -1,10 +1,8 @@
 import Image from "next/image";
 
 export default function Bienvenida() {
-
   return (
     <section className="fixed inset-0 w-full h-full md:p-20 flex items-center overflow-hidden box-border">
-
       <div className="hidden md:block absolute top-1/2 left-[30px] z-[3] text-gray-200 text-[11px] leading-[60px] tracking-[2px] uppercase transform -translate-x-1/2 -translate-y-1/2 -rotate-90">
         ENFOCADOS EN EL DESARROLLO DE NUESTRA CIUDAD
       </div>
@@ -15,17 +13,15 @@ export default function Bienvenida() {
         </span>
 
         <div className="mt-8">
-          <h1
-            className="text-gray-200 text-left font-bold leading-[1] max-w-[960px] text-3xl md:text-5xl"
-          >
+          <h1 className="text-gray-200 text-left font-bold leading-[1] max-w-[960px] text-3xl md:text-5xl">
             Creando el futuro de nuestra ciudad, juntos.
           </h1>
 
           <div className="mt-10">
-            <p
-              className="text-white text-left font-normal leading-[1.45] max-w-[568px] text-medium md:text-xl"
-            >
-              We are a leading company in the execution of big projects in the metallic constructions sector, naval industry and energy. We integrate in our culture the values and commitments with our employees, partners and clients.
+            <p className="text-white text-left font-normal leading-[1.45] max-w-[568px] text-medium md:text-xl">
+              We are a leading company in the execution of big projects in the metallic
+              constructions sector, naval industry and energy. We integrate in our culture the
+              values and commitments with our employees, partners and clients.
             </p>
           </div>
         </div>

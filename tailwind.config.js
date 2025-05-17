@@ -11,7 +11,6 @@ export default {
   ],
   theme: {
     extend: {
-    
       /* Animación de Barra en Noticias */
       keyframes: {
         loop: {

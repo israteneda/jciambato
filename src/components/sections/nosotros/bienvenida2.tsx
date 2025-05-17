@@ -30,7 +30,6 @@ export default function Bienvenida2() {
 
       {/* Contenedor principal de los elementos sobre el video */}
       <div className="relative z-30 flex items-center h-full">
-
         {/* Contenedor de información - Se ajusta al tamaño de la pantalla */}
         <div className="ml-12 mr-12 lg:ml-16 text-left max-w-xl">
           <h2 className="text-sm lg:text-sm font-bold mb-5 text-yellow-400">
@@ -40,9 +39,8 @@ export default function Bienvenida2() {
             Líderes en Acción: Impactando el Futuro
           </h1>
           <p className="text-sm lg:text-base mt-7 mb-4 -text-balance text-white">
-            Con cada proyecto, impulsamos el cambio a través de la innovación,
-            transformando ideas en soluciones que construyen comunidades más
-            fuertes y mejoran vidas.
+            Con cada proyecto, impulsamos el cambio a través de la innovación, transformando ideas
+            en soluciones que construyen comunidades más fuertes y mejoran vidas.
           </p>
 
           {/* Botón de acción */}

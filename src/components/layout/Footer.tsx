@@ -3,7 +3,6 @@ import { HiArrowLongRight, HiOutlineArrowUp } from "react-icons/hi2";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { jciLinks } from "@/data/footer";
 
-
 export function Footer() {
   return (
     <footer className="relative z-10 bg-gray-50">
@@ -11,7 +10,6 @@ export function Footer() {
       <section className="relative z-10 bg-cyan-600">
         <div className="p-10 md:p-28">
           <div className="mb-10 md:mb-20">
-
             <div className="relative z-10 max-w-7xl m-auto">
               <div className="flex flex-col md:flex-row items-start md:items-center">
                 <div>
@@ -27,7 +25,6 @@ export function Footer() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -38,7 +35,6 @@ export function Footer() {
           JCI AMBATO
         </div>
       </section> */}
-
 
       {/* Sección principal del footer */}
       <section className="relative">
@@ -62,7 +58,10 @@ export function Footer() {
 
                 <div className="flex md:flex-row">
                   {/* Navegación del footer */}
-                  <nav className="flex flex-wrap justify-between flex-1 gap-8 md:gap-0" aria-label="Footer Navigation">
+                  <nav
+                    className="flex flex-wrap justify-between flex-1 gap-8 md:gap-0"
+                    aria-label="Footer Navigation"
+                  >
                     {jciLinks.map((section) => (
                       <div key={section.title} className="flex flex-col">
                         <h3 className="text-base font-semibold">{section.title}</h3>
@@ -81,7 +80,10 @@ export function Footer() {
 
                   {/* Redes sociales */}
                   <div className="ml-20">
-                    <div className="flex flex-col justify-center gap-4" aria-label="Social Media Links">
+                    <div
+                      className="flex flex-col justify-center gap-4"
+                      aria-label="Social Media Links"
+                    >
                       <a href="#" aria-label="LinkedIn">
                         <FaLinkedin />
                       </a>
@@ -98,14 +100,14 @@ export function Footer() {
                   </div>
                 </div>
               </div>
-
             </div>
 
             {/* Derechos reservados */}
             <div className="relative z-10 max-w-5xl mx-10">
               <div className="flex pb-12">
                 <p className="text-small text-default-400">
-                  © 2025 Cámara Junior Internacional del Ecuador | Capítulo Ambato. Todos los Derechos Reservados.
+                  © 2025 Cámara Junior Internacional del Ecuador | Capítulo Ambato. Todos los
+                  Derechos Reservados.
                 </p>
               </div>
             </div>
