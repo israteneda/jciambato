@@ -1,9 +1,10 @@
 "use client";
-import { useScroll } from "@/hooks";
 import { InfoContainer } from "./info-container";
-import { BackgroundVideo } from "./background-video";
+import BackgroundVideo from "./background-video";
 import { BorderFrame } from "./border-frame";
 import { RotatedText } from "./rotated-text";
+
+import { useScroll } from "@/hooks";
 
 export default function Bienvenida() {
   const isScrolled = useScroll();
@@ -12,7 +13,7 @@ export default function Bienvenida() {
     <section className="relative w-full h-screen overflow-hidden">
       <BackgroundVideo />
       {/* Capa de oscuridad para el video */}
-      <div className="absolute inset-0 bg-black/60 z-20" aria-hidden="true" />
+      <div aria-hidden="true" className="absolute inset-0 bg-black/60 z-20" />
       {/* Marco que se dibuja en la pantalla */}
       <BorderFrame isScrolled={isScrolled} />
       {/* Contenedor principal de los elementos sobre el video */}

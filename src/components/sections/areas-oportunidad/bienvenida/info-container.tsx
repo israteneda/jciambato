@@ -1,5 +1,3 @@
-import { Button } from "@heroui/button";
-
 // Componente para el contenedor de información
 export const InfoContainer = () => (
   <div className="mx-11 max-w-xl text-left lg:ml-28">

@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import clsx from "clsx";
 
 import { Providers } from "./providers";
+
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Footer } from "@/components/layout/Footer";
@@ -36,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head />
       <body className={bodyClasses}>
         <Providers>
-          <div className="flex flex-col min-h-screen">
+          <div className="relative flex flex-col min-h-screen">
             <Navbar />
             <main className="container max-w-full bg-gray-50">{children}</main>
             <Footer />

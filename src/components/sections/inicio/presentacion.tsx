@@ -1,8 +1,9 @@
 "use client";
 
 import { Button } from "@heroui/button";
-import useScrollPositionText from "@/hooks/use-scroll-position-text";
 import clsx from "clsx";
+
+import useScrollPositionText from "@/hooks/use-scroll-position-text";
 
 const TitleSection = () => (
   <div className="max-w-6xl mx-auto">
@@ -15,10 +16,10 @@ const TitleSection = () => (
       </h2>
       <div className="mt-16">
         <Button
+          aria-label="Conoce nuestra misión y visión"
+          className="relative overflow-hidden border-cyan-600 text-cyan-800 group"
           radius="none"
           variant="bordered"
-          className="relative overflow-hidden border-cyan-600 text-cyan-800 group"
-          aria-label="Conoce nuestra misión y visión"
         >
           <span className="absolute inset-0 transform -translate-x-full bg-cyan-600 transition-transform duration-300 group-hover:translate-x-0" />
           <span className="relative z-10 transition-colors duration-300 group-hover:text-white">

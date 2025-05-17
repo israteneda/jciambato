@@ -1,7 +1,43 @@
 import Image from "next/image";
 import { HiArrowLongRight, HiOutlineArrowUp } from "react-icons/hi2";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { jciLinks } from "@/data/footer";
+
+interface FooterLink {
+  title: string;
+  href: string;
+}
+
+interface FooterSection {
+  title: string;
+  items: FooterLink[];
+}
+
+const jciLinks: FooterSection[] = [
+  {
+    title: "Nosotros",
+    items: [
+      { title: "Historia", href: "/nosotros/historia" },
+      { title: "Misión y Visión", href: "/nosotros/mision-vision" },
+      { title: "Valores", href: "/nosotros/valores" },
+    ],
+  },
+  {
+    title: "Áreas",
+    items: [
+      { title: "Comunidad", href: "/areas/comunidad" },
+      { title: "Negocios", href: "/areas/negocios" },
+      { title: "Internacional", href: "/areas/internacional" },
+    ],
+  },
+  {
+    title: "Actividades",
+    items: [
+      { title: "Eventos", href: "/actividades/eventos" },
+      { title: "Proyectos", href: "/actividades/proyectos" },
+      { title: "Capacitaciones", href: "/actividades/capacitaciones" },
+    ],
+  },
+];
 
 export function Footer() {
   return (
@@ -29,13 +65,6 @@ export function Footer() {
         </div>
       </section>
 
-      {/* Sección decorativa */}
-      <section className="relative z-20">
-        <div className="absolute left-0 right-0 -top-36 md:top-[-135px] z-30 opacity-20 text-7xl md:text-[180px] font-black leading-[280px] text-center whitespace-nowrap pointer-events-none uppercase">
-          JCI AMBATO
-        </div>
-      </section>
-
       {/* Sección principal del footer */}
 
       <section className="relative">
@@ -49,11 +78,11 @@ export function Footer() {
               <div className="relative z-10 max-w-5xl mx-auto">
                 <figure className="mb-10">
                   <Image
-                    src="/images/jci.png"
                     alt="JCI Ambato Logo"
-                    width={85}
-                    height={85}
                     className="object-cover"
+                    height={85}
+                    src="/images/logo-jci.png"
+                    width={85}
                   />
                 </figure>
 
@@ -69,7 +98,7 @@ export function Footer() {
                         <ul className="flex flex-col mt-3 m-1 mb-0 max-w-36 space-y-2">
                           {section.items.map((item) => (
                             <li key={item.title} className="text-sm">
-                              <a href={item.href} className="hover:text-gray-300">
+                              <a className="hover:text-gray-300" href={item.href}>
                                 {item.title}
                               </a>
                             </li>
@@ -88,13 +117,13 @@ export function Footer() {
                       <a href="#" aria-label="LinkedIn">
                         <FaLinkedin />
                       </a>
-                      <a href="#" aria-label="Facebook">
+                      <a aria-label="Facebook" href="#">
                         <FaFacebook />
                       </a>
-                      <a href="#" aria-label="Instagram">
+                      <a aria-label="Instagram" href="#">
                         <FaInstagram />
                       </a>
-                      <a href="#" aria-label="YouTube">
+                      <a aria-label="YouTube" href="#">
                         <FaYoutube />
                       </a>
                     </div>
@@ -116,7 +145,7 @@ export function Footer() {
             {/* Botón para volver arriba */}
             <div className="absolute top-[20%] right-[6%] md:right-[5%]">
               <div className="flex items-center justify-center">
-                <a href="#" role="button" aria-label="Volver arriba">
+                <a aria-label="Volver arriba" href="#" role="button">
                   <HiOutlineArrowUp className="w-8 h-8" />
                 </a>
               </div>
