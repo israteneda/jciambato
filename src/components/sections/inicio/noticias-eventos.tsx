@@ -33,10 +33,9 @@ export default function NoticiasEventos() {
               <span>Más {"-->"}</span>
             </p>
             <p className="mt-4 text-base text-neutral-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-              magnam quod. Sunt, aut fuga doloremque saepe atque autem
-              repellendus adipisci nobis possimus aliquam culpa, officiis
-              deleniti quam, ab minus expedita.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, magnam quod. Sunt,
+              aut fuga doloremque saepe atque autem repellendus adipisci nobis possimus aliquam
+              culpa, officiis deleniti quam, ab minus expedita.
             </p>
           </article>
 
@@ -52,10 +51,9 @@ export default function NoticiasEventos() {
               <span>Más {"-->"}</span>
             </p>
             <p className="mt-4 text-base text-neutral-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-              magnam quod. Sunt, aut fuga doloremque saepe atque autem
-              repellendus adipisci nobis possimus aliquam culpa, officiis
-              deleniti quam, ab minus expedita.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, magnam quod. Sunt,
+              aut fuga doloremque saepe atque autem repellendus adipisci nobis possimus aliquam
+              culpa, officiis deleniti quam, ab minus expedita.
             </p>
           </article>
 
@@ -71,10 +69,9 @@ export default function NoticiasEventos() {
               <span>Más {"-->"}</span>
             </p>
             <p className="mt-4 text-base text-neutral-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-              magnam quod. Sunt, aut fuga doloremque saepe atque autem
-              repellendus adipisci nobis possimus aliquam culpa, officiis
-              deleniti quam, ab minus expedita.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, magnam quod. Sunt,
+              aut fuga doloremque saepe atque autem repellendus adipisci nobis possimus aliquam
+              culpa, officiis deleniti quam, ab minus expedita.
             </p>
           </article>
         </div>

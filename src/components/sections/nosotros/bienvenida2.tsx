@@ -40,9 +40,8 @@ export default function Bienvenida2() {
             Líderes en Acción: Impactando el Futuro
           </h1>
           <p className="text-sm lg:text-base mt-7 mb-4 -text-balance text-white">
-            Con cada proyecto, impulsamos el cambio a través de la innovación,
-            transformando ideas en soluciones que construyen comunidades más
-            fuertes y mejoran vidas.
+            Con cada proyecto, impulsamos el cambio a través de la innovación, transformando ideas
+            en soluciones que construyen comunidades más fuertes y mejoran vidas.
           </p>
 
           {/* Botón de acción */}

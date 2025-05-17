@@ -3,8 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "JCI Ambato",
   descripcion: "Página oficial JCI Ambato",
-  keywords:
-    "JCI Ambato, liderazgo, voluntariado, jóvenes, comunidad, proyectos sociales",
+  keywords: "JCI Ambato, liderazgo, voluntariado, jóvenes, comunidad, proyectos sociales",
   authors: [{ name: "JCI Ambato" }],
   openGraph: {
     type: "website",

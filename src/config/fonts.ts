@@ -45,5 +45,5 @@ export const fontHeading = Arvo({
 
 export const fontMono = FontMono({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-mono", // Define una variable CSS para la fuente mono
 });

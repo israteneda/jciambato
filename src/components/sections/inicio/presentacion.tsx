@@ -46,7 +46,7 @@ const BackgroundText = ({
     <h2
       className={clsx(
         "mt-5 md:mb-10 text-left font-extrabold leading-none text-gray-300 opacity-40 whitespace-nowrap",
-        "text-[15vw] md:text-[13vw]",
+        "text-[15vw] md:text-[13vw]"
       )}
       style={{ transform: `translateX(${translateAmountLeft}px)` }}
     >
@@ -55,7 +55,7 @@ const BackgroundText = ({
     <h2
       className={clsx(
         "mt-5 md:mt-10 text-left font-extrabold leading-none text-gray-300 opacity-40 whitespace-nowrap",
-        "text-[15vw] md:text-[13vw]",
+        "text-[15vw] md:text-[13vw]"
       )}
       style={{ transform: `translateX(${translateAmountRigth}px)` }}
     >

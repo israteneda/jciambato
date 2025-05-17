@@ -2,8 +2,6 @@ import Image from "next/image";
 import { HiArrowLongRight, HiOutlineArrowUp } from "react-icons/hi2";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
-import { jciLinks } from "@/data/footer";
-
 export function Footer() {
   return (
     <footer>
@@ -54,8 +52,8 @@ export function Footer() {
                 <div className="flex md:flex-row">
                   {/* Navegación del footer */}
                   <nav
-                    aria-label="Footer Navigation"
                     className="flex flex-wrap justify-between flex-1 gap-8 md:gap-0"
+                    aria-label="Footer Navigation"
                   >
                     {jciLinks.map((section) => (
                       <div key={section.title} className="flex flex-col">
@@ -81,10 +79,10 @@ export function Footer() {
                   {/* Redes sociales */}
                   <div className="ml-20">
                     <div
-                      aria-label="Social Media Links"
                       className="flex flex-col justify-center gap-4"
+                      aria-label="Social Media Links"
                     >
-                      <a aria-label="LinkedIn" href="#">
+                      <a href="#" aria-label="LinkedIn">
                         <FaLinkedin />
                       </a>
                       <a aria-label="Facebook" href="#">
@@ -106,8 +104,8 @@ export function Footer() {
             <div className="relative z-10 max-w-5xl mx-10">
               <div className="flex pb-12">
                 <p className="text-small text-default-400">
-                  © 2025 Cámara Junior Internacional | Capítulo Ambato. Todos
-                  los Derechos Reservados.
+                  © 2025 Cámara Junior Internacional | Capítulo Ambato. Todos los Derechos
+                  Reservados.
                 </p>
               </div>
             </div>
