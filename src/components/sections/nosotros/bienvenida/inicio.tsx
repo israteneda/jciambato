@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { useScroll } from "@/hooks";
+
 export default function Bienvenida() {
   return (
     <section className="fixed inset-0 w-full h-full md:p-20 flex items-center overflow-hidden box-border">

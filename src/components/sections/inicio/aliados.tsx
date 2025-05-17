@@ -1,5 +1,29 @@
 import Image from "next/image";
 
+interface Aliado {
+  alt: string;
+  src: string;
+}
+
+const aliados: Aliado[] = [
+  {
+    alt: "Logo UTI",
+    src: "/aliados/logo-UTI.webp",
+  },
+  {
+    alt: "Logo UTA",
+    src: "/aliados/logo-UTA.webp",
+  },
+  {
+    alt: "Logo Rompiendo Barreras",
+    src: "/aliados/logo-RB.png",
+  },
+  {
+    alt: "Logo MAGAP",
+    src: "/aliados/logo-MAGAP.png",
+  },
+];
+
 export default function Aliados() {
   return (
     <section>

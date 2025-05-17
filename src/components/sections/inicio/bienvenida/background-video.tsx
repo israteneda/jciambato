@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 // Componente para el video de fondo
 export const BackgroundVideo = () => (
   <div className="absolute inset-0">

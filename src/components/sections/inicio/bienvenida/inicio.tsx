@@ -1,10 +1,11 @@
 "use client";
-import { useScroll } from "@/hooks";
 import { InfoContainer } from "./info-container";
 import { BackgroundVideo } from "./background-video";
 import { BorderFrame } from "./border-frame";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Image from "next/image";
+
+import { useScroll } from "@/hooks";
 
 export default function Bienvenida() {
   const isScrolled = useScroll();

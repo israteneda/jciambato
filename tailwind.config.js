@@ -50,15 +50,13 @@ export default {
         "jci-seafoam": "#56BDA3",
 
         // Typography Colors
-        "jci-gray": "#4B4B4D",
         "jci-black": "#414042",
         "jci-off-black": "#0A0F29",
       },
-
       fontFamily: {
-        sans: ["var(--font-inter)"],
+        sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
-        heading: ["var(--font-montserrat)"],
+        heading: ["var(--font-heading)"],
       },
     },
   },
