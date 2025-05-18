@@ -1,8 +1,9 @@
-import React from "react";
-import { Card, CardBody } from "@heroui/card";
+'use client';
+
 import { Button } from "@heroui/button";
-import { HiChevronLeft, HiChevronRight, HiOutlineCollection } from "react-icons/hi";
-import { Divider } from "@heroui/divider";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { HiChevronLeft, HiChevronRight, HiOutlineCollection, HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 interface CarouselProps {
   items: {
@@ -10,6 +11,7 @@ interface CarouselProps {
     title: string;
     projectName: string;
     edition: string;
+    url: string;
     description: string;
     image: string;
   }[];
@@ -17,94 +19,150 @@ interface CarouselProps {
 }
 
 export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
-  const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Función para avanzar el slide
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === items.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === items.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
-  // Función para retroceder el slide
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? items.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? items.length - 1 : prevIndex - 1
+    );
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(nextSlide, autoPlayInterval);
     return () => clearInterval(interval);
   }, [autoPlayInterval]);
 
   return (
-    <div className="relative w-full mx-auto">
-      <Card className="w-full" radius="none" shadow="none">
-        <CardBody className="p-0">
-          <div className="relative h-[650px]">
-            {items.map((item, index) => (
-              <div
-                key={item.id}
-                className={`absolute w-full h-full duration-500 ease-in-out ${
-                  index === currentIndex ? "opacity-100" : "opacity-0"
-                }`}
-              >
-                {/* Superposición oscura */}
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
+    <div className="relative overflow-hidden">
+      <div className="relative h-[650px] md:h-[760px] w-full">
+        <div className="">
+          {items.map((item, index) => (
+            <div
+              key={item.id}
+              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
 
-                <div className="absolute top-0 m-16">
-                  <div className="max-w-5xl mx-auto">
-                    <span className="text-xs sm:text-sm lg:text-base font-bold text-gray-300 uppercase">
-                      Proyectos Ganadores
-                    </span>
+            >
+              {/* Imagen de fondo */}
+              <img src={item.image} alt={item.title} className="w-full h-full object-cover absolute inset-0" />
+              {/* Capa oscura */}
+              <div className="absolute inset-0 bg-black bg-opacity-60" />
 
-                    <div className="my-8 text-gray-50">
-                      <h2 className="font-semibold text-3xl lg:text-4xl">{item.title}</h2>
-                      <div className="mt-5 text-2xl lg:text-3xl">
-                        <p className="font-bold">{item.projectName}</p>
-                        <p>{item.edition}</p>
+              {/* Contenido del Slide */}
+              <div className="relative w-full h-full pt-24 pb-[46px]">
+                <div className="relative h-full md:w-[1156px] mx-[30px] md:mx-auto">
+                  {/* Texto y botón */}
+                  <div>
+                    <div className="text-[13px] leading-[1.85] uppercase text-white font-bold">
+                      Lider A Lider
+                    </div>
+                    <div className="mt-2 md:mt-8">
+                      <h3 className="text-4xl font-light text-left leading-[1.17] text-white max-w-[666px] md:text-[calc(28.8px+1vw)]">
+                        <p>{item.title} <strong>{item.projectName}</strong></p>
+                      </h3>
+                    </div>
+                    <div className="mt-10 md:mt-20">
+                      <div className="text-medium leading-[1.78] text-white text-left max-w-[470px] md:text-[calc(15.6px+0.125vw)]">
+                        {item.description}
                       </div>
-                      <div className="my-8 text-gray-50">
-                        <p className="text-xl">{item.description}</p>
+                    </div>
+                  </div>
+
+                  {/* Botón "Ver Proyecto" */}
+                  <div className="absolute left-0 bottom-0 w-full">
+                    <div className="flex items-center justify-between">
+                      <div className="relative inline-block transition duration-400">
+                        <div className="flex py-4">
+                          <Link href={item.url} className="z-20">
+                            <button className="group max-w-full relative inline-block transition duration-[400ms] cursor-pointer">
+                              <div className="flex items-center py-4">
+                                <span className="text-xs text-jci-seafoam leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
+                                  Leer más
+                                </span>
+                                <div className="flex ml-3 items-center transform transition-transform duration-300 group-hover:translate-x-1">
+                                  <HiOutlineArrowNarrowRight className="w-6 h-6 text-jci-seafoam group-hover:text-jci-red transition-colors duration-300" />
+                                </div>
+                              </div>
+                            </button>
+                          </Link>
+                        </div>
+                      </div>
+
+                      <div className="flex gap-1 md:hidden">
+                        <Button
+                          isIconOnly
+                          variant="bordered"
+                          radius="full"
+                          className="w-[40px] h-[40px] text-[#989898] border-[#989898]"
+                          onPress={prevSlide}
+                        >
+                          <HiChevronLeft className="w-6 h-6 text-gray-50" />
+                        </Button>
+                        <div className="h-[12px]" />
+                        <Button
+                          isIconOnly
+                          variant="bordered"
+                          radius="full"
+                          className="w-[40px] h-[40px] text-[#989898] border-[#989898]"
+                          onPress={nextSlide}
+                        >
+                          <HiChevronRight className="w-6 h-6 text-gray-50" />
+                        </Button>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                <div className="absolute bottom-0 m-16">
-                  <h3 className="text-cyan-600 text-md font-semibold">Ver Proyecto {"--->"}</h3>
-                </div>
               </div>
-            ))}
-          </div>
-        </CardBody>
-      </Card>
-
-      <div className="absolute right-8 bottom-8 flex flex-col gap-16">
-        <div className="flex flex-col items-center text-gray-50">
-          <span className="text-3xl font-serif leading-3">{currentIndex + 1}</span>
-          <Divider className="my-5 w-4 bg-gray-50" />
-          <span className="text-3xl font-serif leading-3">{items.length}</span>
+            </div>
+          ))}
         </div>
+      </div>
 
-        <div className="flex flex-col gap-7">
-          <div className="flex flex-col gap-2">
-            <Button isIconOnly variant="bordered" radius="full" onPress={prevSlide}>
-              <HiChevronLeft className="w-6 h-6 text-gray-50" />
-            </Button>
-
-            <Button isIconOnly variant="bordered" radius="full" onPress={nextSlide}>
-              <HiChevronRight className="w-6 h-6 text-gray-50" />
-            </Button>
-          </div>
-
-          <Button
-            isIconOnly
-            variant="bordered"
-            radius="full"
-            className="bg-cyan-600 border-cyan-600"
-          >
-            <HiOutlineCollection className="w-6 h-6 text-gray-50" />
-          </Button>
+      {/* Indicadores numéricos */}
+      <div className="hidden absolute top-1/2 right-[54px] w-[22px] md:flex items-center flex-col transform -translate-y-1/2 z-50">
+        <div className="text-white text-[48px] font-normal">
+          {String(currentIndex + 1).padStart(2, "0")}
         </div>
+        <div className="opacity-50 text-white text-[48px] mt-2 pt-2 border-t border-white">
+          {String(items.length).padStart(2, "0")}
+        </div>
+      </div>
+
+      {/* Botones de navegación pantallas grandes */}
+      <div className="hidden absolute right-[45px] bottom-[112px] md:flex flex-col">
+        <Button
+          isIconOnly
+          variant="bordered"
+          radius="full"
+          onPress={prevSlide}
+        >
+          <HiChevronLeft className="w-6 h-6 text-gray-50" />
+        </Button>
+        <div className="h-[12px]" />
+        <Button
+          isIconOnly
+          variant="bordered"
+          radius="full"
+          onPress={nextSlide}
+        >
+          <HiChevronRight className="w-6 h-6 text-gray-50" />
+        </Button>
+      </div>
+
+      {/* Botón colección */}
+      <div className="hidden md:block absolute right-[45px] bottom-[48px]">
+        <Button
+          isIconOnly
+          radius="full"
+          className="bg-jci-aqua"
+        >
+          <HiOutlineCollection className="w-6 h-6 text-gray-50" />
+        </Button>
       </div>
     </div>
   );

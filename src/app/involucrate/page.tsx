@@ -1,10 +1,19 @@
+import { Metadata } from "next";
 import Bienvenida from "@/components/sections/involucrate/bienvenida/inicio";
+import Accion from "@/components/sections/involucrate/accion";
+
+export const metadata: Metadata = {
+  title: "Involucrate",
+  description: "Página de Involucrate",
+};
 
 export default function Inicio() {
   return (
     <div>
       {/* Sección de Bienvenida */}
       <Bienvenida />
+
+      <Accion />
     </div>
   );
 }

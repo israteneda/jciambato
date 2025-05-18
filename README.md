@@ -1,20 +1,19 @@
 # JCI Ambato - Página Web Oficial
 
-Página web oficial de **JCI Ambato**, desarrollada con **Next.js 14** y **HeroUI v2**.
+Bienvenido al repositorio oficial de la página web de **JCI Ambato**, una organización dedicada a empoderar a jóvenes líderes para generar impacto positivo en la comunidad de Ambato, Ecuador. Esta plataforma, desarrollada con **Next.js 14** y **HeroUI v2**, ofrece información sobre nuestras iniciativas, eventos y oportunidades de participación.
 
 ![Previsualización](/public/images/preview-welcome.png)
 
 ## 🚀 Tecnologías Utilizadas
 
-- [Next.js 14](https://nextjs.org/docs/getting-started) - Framework de React para aplicaciones web.
-- [HeroUI v2](https://heroui.com/) - Biblioteca de componentes UI moderna.
-- [Tailwind CSS](https://tailwindcss.com/) - Framework de estilos basado en utilidades.
-- [TypeScript](https://www.typescriptlang.org/) - Tipado estático para JavaScript.
+- [Next.js 14](https://nextjs.org/docs/getting-started) - Framework de React para aplicaciones web modernas.
+- [HeroUI v2](https://heroui.com/) - Biblioteca de componentes UI para interfaces elegantes.
+- [Tailwind CSS](https://tailwindcss.com/) - Estilos basados en utilidades para un diseño consistente.
+- [TypeScript](https://www.typescriptlang.org/) - Tipado estático para un código robusto y mantenible.
 
 ## 📌 Requisitos Previos
 
-Antes de iniciar el proyecto, asegúrate de tener instalado:
-
+Antes de comenzar, asegúrate de tener instalado:
 - **Node.js** (v18 o superior) - [Descargar aquí](https://nodejs.org/)
 - **npm** (gestor de paquetes) o **pnpm** (opcional)
 
@@ -73,6 +72,13 @@ El proyecto estará disponible en `http://localhost:3000/`.
 
 Este proyecto está licenciado bajo la [MIT License](https://github.com/jci-ambato/web/blob/main/LICENSE).
 
+
+## 📬 Contacto
+
+Para preguntas, sugerencias o más información sobre JCI Ambato:
+
+- **Correo**: tecnologias@jciambato.com
+
 ---
 
-_Desarrollado con ❤️ por el equipo de JCI Ambato._
+_Desarrollado por el equipo de JCI Ambato._

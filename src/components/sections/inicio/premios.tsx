@@ -1,12 +1,11 @@
-"use client";
-
 import { carouselItems } from "@/data/carouselItems";
 import { Carousel } from "@/components/ui/Carousel";
 
 export default function Grupo() {
+
   return (
-    <div className="w-full my-28">
+    <section className="my-28">
       <Carousel items={carouselItems} />
-    </div>
+    </section>
   );
 }

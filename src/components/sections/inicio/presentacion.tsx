@@ -1,82 +1,47 @@
 "use client";
 
 import { Button } from "@heroui/button";
-import clsx from "clsx";
-
-import useScrollPositionText from "@/hooks/use-scroll-position-text";
-
-const TitleSection = () => (
-  <div className="max-w-6xl mx-auto">
-    <div className="mx-11 xl:mx-0">
-      <p className="text-xs sm:text-sm lg:text-base font-semibold uppercase tracking-wide text-gray-600">
-        En Ambato
-      </p>
-      <h2 className="mt-8 md:w-3/4 text-3xl md:text-6xl font-light text-cyan-600 md:leading-tight">
-        A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.
-      </h2>
-      <div className="mt-16">
-        <Button
-          aria-label="Conoce nuestra misión y visión"
-          className="relative overflow-hidden border-cyan-600 text-cyan-800 group"
-          radius="none"
-          variant="bordered"
-        >
-          <span className="absolute inset-0 transform -translate-x-full bg-cyan-600 transition-transform duration-300 group-hover:translate-x-0" />
-          <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-            Nuestra misión y visión
-          </span>
-        </Button>
-      </div>
-    </div>
-  </div>
-);
-
-// Componente para el texto de fondo con efectos de desplazamiento
-interface BackgroundTextProps {
-  translateAmountLeft: number;
-  translateAmountRigth: number;
-}
-
-const BackgroundText = ({ translateAmountLeft, translateAmountRigth }: BackgroundTextProps) => (
-  <div className="w-full overflow-hidden mt-10 md:mt-16">
-    <h2
-      className={clsx(
-        "mt-5 md:mb-10 text-left font-extrabold leading-none text-gray-300 opacity-40 whitespace-nowrap",
-        "text-[15vw] md:text-[13vw]"
-      )}
-      style={{ transform: `translateX(${translateAmountLeft}px)` }}
-    >
-      JCI AMBATO
-    </h2>
-    <h2
-      className={clsx(
-        "mt-5 md:mt-10 text-left font-extrabold leading-none text-gray-300 opacity-40 whitespace-nowrap",
-        "text-[15vw] md:text-[13vw]"
-      )}
-      style={{ transform: `translateX(${translateAmountRigth}px)` }}
-    >
-      CHAMBER
-    </h2>
-  </div>
-);
+import BackgroundText from "@/components/commons/TextoFondo";
 
 export default function Presentacion() {
-  const scrollY = useScrollPositionText();
-
-  // Cálculo del desplazamiento según la posición del scroll
-  const translateAmountLeft = scrollY * 0.3;
-  const translateAmountRigth = -scrollY * 0.1;
-
   return (
-    <section className="flex w-full flex-col my-28 md:my-52">
-      {/* Presentación de la Organización */}
-      <TitleSection />
+    <section className="relative z-10">
+      <div className="pt-20 md:pt-28 lg:pt-32 xl:pt-40 pb-20 md:pb-28 lg:pb-32 xl:pb-40">
+        <div className="overflow-hidden">
+          <div className="relative z-10 w-[calc(100% - 60px)] md:w-[1156px] mx-8 md:mx-auto">
+            <div className="text-xs leading-[1.85] uppercase text-jci-aqua font-bold tracking-normal">
+              En Ambato
+            </div>
+            <div className="mt-8">
+              <div className="text-4xl md:text-[72px] font-[250] text-left text-gray-600 leading-[1.1] tracking-[-1px] max-w-xl md:max-w-[calc(75%)]">
+                A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.
+              </div>
+            </div>
+            <div className="mt-16">
+              <Button
+                radius="none"
+                variant="bordered"
+                className="relative overflow-hidden border-jci-aqua text-jci-aqua group"
+                aria-label="Conoce nuestra misión y visión"
+              >
+                <span className="absolute inset-0 transform -translate-x-full bg-cyan-600 transition-transform duration-300 group-hover:translate-x-0" />
+                <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+                  Nuestra misión y visión
+                </span>
+              </Button>
+            </div>
 
-      {/*Texto de Fondo */}
-      <BackgroundText
-        translateAmountLeft={translateAmountLeft}
-        translateAmountRigth={translateAmountRigth}
-      />
+          </div>
+          <div className="mt-16">
+            <BackgroundText
+              textoPrimario="JCI AMBATO"
+              textoSecundario="CHAMBER"
+              numberLeft={0.1}
+              numberRight={0.1}
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

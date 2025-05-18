@@ -11,6 +11,7 @@ import {
   Grupo,
   Premios,
   NoticiasEventos,
+  Aliados,
 } from "@/components/sections/inicio";
 import "../builder-registry";
 
@@ -54,7 +55,7 @@ export default function BuilderPage() {
       />
 
       {/* Legacy Sections */}
-      <div className="flex flex-col items-center">
+      <div>
         {/* Sección de Bienvenida */}
         <Bienvenida />
 
@@ -68,7 +69,7 @@ export default function BuilderPage() {
         <Premios />
 
         {/* Aliados */}
-        {/* <Aliados /> */}
+        <Aliados />
 
         {/* Noticias y Eventos */}
         <NoticiasEventos />

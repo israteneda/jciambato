@@ -6,3 +6,4 @@ export const RotatedText = () => (
     </span>
   </aside>
 );
+
