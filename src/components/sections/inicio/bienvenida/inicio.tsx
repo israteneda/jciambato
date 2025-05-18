@@ -1,11 +1,11 @@
 "use client";
+import { useScroll } from "@/hooks";
 import { InfoContainer } from "./info-container";
 import { BackgroundVideo } from "./background-video";
 import { BorderFrame } from "./border-frame";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Image from "next/image";
 
-import { useScroll } from "@/hooks";
 
 export default function Bienvenida() {
   const isScrolled = useScroll();
@@ -19,14 +19,14 @@ export default function Bienvenida() {
           <BackgroundVideo />
         </div>
 
-        <span className="hidden lg:block absolute top-1/2 left-7 text-[11px] z-20 leading-relaxed tracking-[1px] text-gray-400 transform -translate-x-1/2 -translate-y-1/2 rotate-[-90deg] uppercase">
+        <div className="hidden md:block absolute top-1/2 left-[30px] text-[10.5px] font-semibold z-20 text-gray-400 leading-[60px] tracking-[2px] uppercase transform -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap">
           BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO
-        </span>
+        </div>
 
         <div className="hidden md:block absolute z-20 top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2">
           <button>
             <Image
-              src="/images/icon-seta-down-big.svg"
+              src="/icons/arrow-down.svg"
               alt=""
               width={500}
               height={500}
@@ -36,13 +36,10 @@ export default function Bienvenida() {
         </div>
 
         <div className="hidden md:block absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] text-[10px] font-semibold uppercase z-20 text-jci-seafoam">
-          <a
-            href="https://jciecuador.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1"
-          >
-            <span>JCI Ecuador</span>
+          <a href="https://jciecuador.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+            <span>
+              JCI Ecuador
+            </span>
             <MdOutlineArrowOutward className="w-5 h-5" />
           </a>
         </div>
@@ -53,7 +50,7 @@ export default function Bienvenida() {
           <button className="flex items-center">
             <span className="text-jci-aqua text-xs font-semibold uppercase">Sobre Nosotros</span>
             <Image
-              src="/images/icon-seta-down-big.svg"
+              src="/icons/arrow-down.svg"
               alt=""
               width={500}
               height={500}

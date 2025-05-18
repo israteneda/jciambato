@@ -1,14 +1,9 @@
-"use client";
+'use client';
 
 import { Button } from "@heroui/button";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import {
-  HiChevronLeft,
-  HiChevronRight,
-  HiOutlineCollection,
-  HiOutlineArrowNarrowRight,
-} from "react-icons/hi";
+import { HiChevronLeft, HiChevronRight, HiOutlineCollection, HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 interface CarouselProps {
   items: {
@@ -27,11 +22,15 @@ export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === items.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === items.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? items.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? items.length - 1 : prevIndex - 1
+    );
   };
 
   useEffect(() => {
@@ -43,19 +42,14 @@ export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
     <div className="relative overflow-hidden">
       <div className="relative h-[650px] md:h-[760px] w-full">
         <div className="">
-          {" "}
-          {/* z-30 w-full h-full pt-24 relative pb-[46px] */}
           {items.map((item, index) => (
             <div
               key={item.id}
               className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+
             >
               {/* Imagen de fondo */}
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full object-cover absolute inset-0"
-              />
+              <img src={item.image} alt={item.title} className="w-full h-full object-cover absolute inset-0" />
               {/* Capa oscura */}
               <div className="absolute inset-0 bg-black bg-opacity-60" />
 
@@ -69,9 +63,7 @@ export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
                     </div>
                     <div className="mt-2 md:mt-8">
                       <h3 className="text-4xl font-light text-left leading-[1.17] text-white max-w-[666px] md:text-[calc(28.8px+1vw)]">
-                        <p>
-                          {item.title} <strong>{item.projectName}</strong>
-                        </p>
+                        <p>{item.title} <strong>{item.projectName}</strong></p>
                       </h3>
                     </div>
                     <div className="mt-10 md:mt-20">
@@ -89,11 +81,11 @@ export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
                           <Link href={item.url} className="z-20">
                             <button className="group max-w-full relative inline-block transition duration-[400ms] cursor-pointer">
                               <div className="flex items-center py-4">
-                                <span className="text-xs text-jci-aqua leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
+                                <span className="text-xs text-jci-seafoam leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
                                   Leer más
                                 </span>
                                 <div className="flex ml-3 items-center transform transition-transform duration-300 group-hover:translate-x-1">
-                                  <HiOutlineArrowNarrowRight className="w-6 h-6 text-jci-aqua group-hover:text-jci-red transition-colors duration-300" />
+                                  <HiOutlineArrowNarrowRight className="w-6 h-6 text-jci-seafoam group-hover:text-jci-red transition-colors duration-300" />
                                 </div>
                               </div>
                             </button>
@@ -143,18 +135,32 @@ export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
 
       {/* Botones de navegación pantallas grandes */}
       <div className="hidden absolute right-[45px] bottom-[112px] md:flex flex-col">
-        <Button isIconOnly variant="bordered" radius="full" onPress={prevSlide}>
+        <Button
+          isIconOnly
+          variant="bordered"
+          radius="full"
+          onPress={prevSlide}
+        >
           <HiChevronLeft className="w-6 h-6 text-gray-50" />
         </Button>
         <div className="h-[12px]" />
-        <Button isIconOnly variant="bordered" radius="full" onPress={nextSlide}>
+        <Button
+          isIconOnly
+          variant="bordered"
+          radius="full"
+          onPress={nextSlide}
+        >
           <HiChevronRight className="w-6 h-6 text-gray-50" />
         </Button>
       </div>
 
       {/* Botón colección */}
       <div className="hidden md:block absolute right-[45px] bottom-[48px]">
-        <Button isIconOnly radius="full" className="bg-jci-aqua">
+        <Button
+          isIconOnly
+          radius="full"
+          className="bg-jci-aqua"
+        >
           <HiOutlineCollection className="w-6 h-6 text-gray-50" />
         </Button>
       </div>

@@ -1,5 +1,5 @@
 import ActividadesAnuales from "@/components/sections/nosotros/actividadesAnuales";
-import Bienvenida from "@/components/sections/nosotros/bienvenida/inicio";
+import Bienvenida from "@/components/sections/nosotros/bienvenida";
 import MisionVision from "@/components/sections/nosotros/misionVision";
 import Presentacion from "@/components/sections/nosotros/presentacion";
 import Valores from "@/components/sections/nosotros/valores";
@@ -18,8 +18,9 @@ export default function Inicio() {
       <div className="h-[700px] md:h-[640px]"></div>
       <div
         className="absolute top-0 w-full h-full bg-gray-50"
-        style={{ transform: "translateY(99.9vh)" }}
-      ></div>
+        style={{ transform: 'translateY(99.9vh)' }}
+      >
+      </div>
 
       <Presentacion />
 

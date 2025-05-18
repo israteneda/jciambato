@@ -1,30 +1,7 @@
 import Image from "next/image";
 
-interface Aliado {
-  alt: string;
-  src: string;
-}
-
-const aliados: Aliado[] = [
-  {
-    alt: "Logo UTI",
-    src: "/aliados/logo-UTI.webp",
-  },
-  {
-    alt: "Logo UTA",
-    src: "/aliados/logo-UTA.webp",
-  },
-  {
-    alt: "Logo Rompiendo Barreras",
-    src: "/aliados/logo-RB.png",
-  },
-  {
-    alt: "Logo MAGAP",
-    src: "/aliados/logo-MAGAP.png",
-  },
-];
-
 export default function Aliados() {
+
   return (
     <section>
       <div className="relative md:w-[calc(100%-180px)] mx-[30px] md:mx-[90px]">
@@ -36,19 +13,37 @@ export default function Aliados() {
       </div>
 
       <div className="flex flex-wrap justify-center  mt-10 gap-10 p-5 md:p-8">
-        {aliados.map((aliado, index) => (
-          <Image
-            key={index}
-            src={aliado.src}
-            alt={aliado.alt}
-            width={200}
-            height={50}
-            className="object-contain"
-          />
-        ))}
+        <Image
+          src="/images/aliados/logo-UTA.webp"
+          alt="Logo MAGAP"
+          width={200}
+          height={50}
+          className="object-contain"
+        />
+        <Image
+          src="/images/aliados/logo-MAGAP.png"
+          alt="Logo MAGAP"
+          width={200}
+          height={50}
+          className="object-contain"
+        />
+        <Image
+          src="/images/aliados/logo-UTI.webp"
+          alt="Logo MAGAP"
+          width={200}
+          height={50}
+          className="object-contain"
+        />
+        <Image
+          src="/images/aliados/logo-RB.png"
+          alt="Logo MAGAP"
+          width={200}
+          height={50}
+          className="object-contain"
+        />
         <Image
           src="/images/aliados/logo-municipio.png"
-          alt="Logo Municipio"
+          alt="Logo MAGAP"
           width={200}
           height={50}
           className="object-contain"

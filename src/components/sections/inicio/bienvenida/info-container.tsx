@@ -1,4 +1,5 @@
 import { Button } from "@heroui/button";
+import Link from "next/link";
 
 // Componente para el contenedor de información
 export const InfoContainer = () => {
@@ -17,8 +18,9 @@ export const InfoContainer = () => {
 
         <div className="mt-10">
           <div className="text-white max-w-md text-sm lg:text-medium leading-relaxed">
-            Con cada proyecto, impulsamos el cambio a través de la innovación, transformando ideas
-            en soluciones que construyen comunidades más fuertes y mejoran vidas.
+            Con cada proyecto, impulsamos el cambio a través de la innovación,
+            transformando ideas en soluciones que construyen comunidades más fuertes y
+            mejoran vidas.
           </div>
         </div>
 
@@ -28,8 +30,10 @@ export const InfoContainer = () => {
             className="relative bg-jci-aqua text-white group overflow-hidden"
             aria-label="Más información sobre nosotros"
           >
-            <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>
-            <span className="relative z-10">Sobre Nosotros</span>
+            <Link href="/nosotros">
+              <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>
+              <span className="relative z-10">Sobre Nosotros</span>
+            </Link>
           </Button>
         </div>
       </div>

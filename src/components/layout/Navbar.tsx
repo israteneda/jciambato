@@ -70,7 +70,7 @@ export const Navbar = ({ className }: NavbarProps) => {
                   className={clsx(
                     "transition-colors duration-200",
                     isLast
-                      ? "text-jci-gold font-semibold px-4 py-2 rounded-full border-2 border-jci-gold hover:bg-jci-gold hover:text-white" // Enhanced "Involúcrate" styling
+                      ? "text-jci-gold font-semibold hover:text-yellow-400" // Enhanced "Involúcrate" styling
                       : "hover:text-jci-gold",
                     isScrolled
                       ? isActive

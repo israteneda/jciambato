@@ -17,23 +17,27 @@ export const siteConfig = {
   authors: [
     {
       name: "JCI Ambato",
-      url: "https://www.jciambato.com",
+      url: "https://www.jciambato.org",
     },
   ],
   creator: "JCI Ambato",
   publisher: "JCI Ambato",
-  metadataBase: new URL("https://www.jciambato.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000"
+  ),
   alternates: {
-    canonical: "https://www.jciambato.com",
+    canonical: "https://www.jciambato.org",
     languages: {
-      "es-EC": "https://www.jciambato.com/es",
+      "es-EC": "https://www.jciambato.org/es",
     },
   },
   openGraph: {
     type: "website",
     locale: "es_EC",
     alternateLocale: ["en_US"],
-    url: "https://www.jciambato.com",
+    url: "https://www.jciambato.org",
     siteName: "JCI Ambato",
     title: "JCI Ambato - Líderes Juveniles por un Futuro Mejor",
     description:
@@ -51,7 +55,13 @@ export const siteConfig = {
         height: 100,
         alt: "JCI Ambato en acción",
       },
-    ],
+    ].map((img) => ({
+      ...img,
+      url: new URL(
+        img.url,
+        process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+      ).toString(),
+    })),
   },
   twitter: {
     card: "summary_large_image",
@@ -60,7 +70,12 @@ export const siteConfig = {
     title: "JCI Ambato - Líderes Juveniles",
     description:
       "Organización de jóvenes líderes en Ambato, Ecuador, dedicada al voluntariado y desarrollo comunitario.",
-    images: ["/images/jci-ambato-twitter.png"],
+    images: ["/images/jci-ambato-twitter.png"].map((img) =>
+      new URL(
+        img,
+        process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+      ).toString()
+    ),
   },
   robots: {
     index: true,

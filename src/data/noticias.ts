@@ -4,7 +4,7 @@ export const noticiasItems = [
     type: "noticia",
     title:
       "Ocean Winds and Martifer announce partnership for Portuguese floating offshore wind tender",
-    image: "/images/lideralider2.jpeg",
+    image: "/images/grupo/lideralider2.jpeg",
     url: "/",
   },
   {
@@ -12,7 +12,7 @@ export const noticiasItems = [
     type: "evento",
     title:
       "Ocean Winds and Martifer announce partnership for Portuguese floating offshore wind tender",
-    image: "/images/lideralider2.jpeg",
+    image: "/images/grupo/lideralider2.jpeg",
     url: "/",
   },
   {
@@ -20,7 +20,7 @@ export const noticiasItems = [
     type: "noticia",
     title:
       "Ocean Winds and Martifer announce partnership for Portuguese floating offshore wind tender",
-    image: "/images/lideralider2.jpeg",
+    image: "/images/grupo/lideralider2.jpeg",
     url: "/",
   },
   {
@@ -28,7 +28,7 @@ export const noticiasItems = [
     type: "evento",
     title:
       "Ocean Winds and Martifer announce partnership for Portuguese floating offshore wind tender",
-    image: "/images/lideralider2.jpeg",
+    image: "/images/grupo/lideralider2.jpeg",
     url: "/",
   },
   {
@@ -36,7 +36,7 @@ export const noticiasItems = [
     type: "evento",
     title:
       "Ocean Winds and Martifer announce partnership for Portuguese floating offshore wind tender",
-    image: "/images/lideralider2.jpeg",
+    image: "/images/grupo/lideralider2.jpeg",
     url: "/",
   },
   {
@@ -44,7 +44,7 @@ export const noticiasItems = [
     type: "evento",
     title:
       "Ocean Winds and Martifer announce partnership for Portuguese floating offshore wind tender",
-    image: "/images/lideralider2.jpeg",
+    image: "/images/grupo/lideralider2.jpeg",
     url: "/",
   },
 ];

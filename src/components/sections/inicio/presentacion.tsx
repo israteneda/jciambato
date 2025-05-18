@@ -14,8 +14,7 @@ export default function Presentacion() {
             </div>
             <div className="mt-8">
               <div className="text-4xl md:text-[72px] font-[250] text-left text-gray-600 leading-[1.1] tracking-[-1px] max-w-xl md:max-w-[calc(75%)]">
-                A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la
-                ciudad.
+                A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.
               </div>
             </div>
             <div className="mt-16">
@@ -31,6 +30,7 @@ export default function Presentacion() {
                 </span>
               </Button>
             </div>
+
           </div>
           <div className="mt-16">
             <BackgroundText

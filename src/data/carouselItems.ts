@@ -6,7 +6,7 @@ export const carouselItems = [
     edition: "2da Edición",
     description:
       "JCI Ambato desarrolló la 2da edición del proyecto Lider a Lider que permitió incorporar a 13 nuevos miembros, quienes desarrollaron habilidades de liderazgo y emprendimiento.",
-    image: "/images/lideralider2.jpeg",
+    image: "/images/grupo/lideralider2.jpeg",
     url: "/",
   },
   {
