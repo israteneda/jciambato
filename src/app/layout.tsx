@@ -10,6 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jciambato.com"),
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
