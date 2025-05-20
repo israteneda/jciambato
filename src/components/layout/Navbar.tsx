@@ -90,7 +90,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         </ul>
 
         <div className="md:hidden">
-          <NavbarMenuToggle className="w-12 h-12 p-2" srOnlyText="Toggle navigation menu" />
+          <NavbarMenuToggle className="w-12 h-12 p-2 text-white" srOnlyText="Toggle navigation menu" />
         </div>
       </NavbarContent>
 
