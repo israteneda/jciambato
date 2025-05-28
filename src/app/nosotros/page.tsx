@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function Inicio() {
   return (
-    <div>
+    <div className="relative">
       <Bienvenida />
 
       {/* Bloque espaciado */}
