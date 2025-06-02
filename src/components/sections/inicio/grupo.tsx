@@ -22,7 +22,7 @@ export default function Grupo() {
           {/* Titulo Principal */}
           <div className="relative z-10 bg-transparent w-[1156px] px-[30px] md:mx-auto">
 
-            <div className="text-[13px] leading-[1.85] uppercase text-jci-seafoam font-bold tracking-normal">
+            <div className="text-[13px] leading-[1.85] uppercase text-jci-gold font-bold tracking-normal">
               Grupo JCI
             </div>
             <div className="mt-1 md:mt-6">
@@ -39,8 +39,10 @@ export default function Grupo() {
               <div className="flex-1 grow shrink basis-0 mx-[30px] md:ml-16">
                 <div className="mt-8">
                   <div className="text-[18px] font-normal normal-case leading-[1.78] tracking-normal text-jci-gray text-left max-w-[333px] lg:text-[calc(15.6px+0.125vw)]">
-                    <p><strong>We deliver on time and work to exceed expectations.</strong> Our teams are solution-oriented, and proactivity and agility are what we focus on in each project.</p>
-
+                    <p>
+                      <strong>Somos líderes y emprendedores.</strong>
+                      Conformamos un equipo comprometido con la construcción de un legado transformador que impulse el desarrollo de nuestras comunidades.
+                    </p>
                   </div>
                 </div>
 
@@ -75,28 +77,28 @@ export default function Grupo() {
 
                   <div className="flex-none w-full md:w-[50%] mt-6 md:mt-[48px] ml-[25px] box-border">
                     <div className="text-jci-navy text-[calc(44px+3.125vw)] leading-[1] tracking-[-5px] font-light">
-                      <span>+34</span>
+                      <span>+200</span>
                     </div>
                     <div className="text-[calc(13.6px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
-                      <p><strong>Miembros</strong> dentro del capítulo</p>
+                      <p><strong>Proyectos</strong> ejecutados</p>
                     </div>
                   </div>
 
                   <div className="flex-1 grow shrink basis-0 w-[50%] mt-6 md:mt-[48px] ml-[25px] box-border">
                     <div className="text-jci-navy text-[calc(44px+3.125vw)] leading-[1] font-light tracking-[-5px] ">
-                      <span>~1,350</span>
+                      <span>+50</span>
                     </div>
                     <div className="text-[calc(13.6px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
-                      <p><strong>Miembros</strong> dentro del capítulo</p>
+                      <p><strong>Años</strong> en Ambato</p>
                     </div>
                   </div>
 
                   <div className="flex-1 grow shrink basis-0 w-[50%] mt-6 md:mt-[48px] ml-[25px] box-border">
                     <div className="text-jci-navy text-[calc(44px+3.125vw)] leading-[1] font-light tracking-[-5px] ">
-                      <span>~1,350</span>
+                      <span>+30</span>
                     </div>
                     <div className="text-[calc(13.6px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
-                      <p><strong>Miembros</strong> dentro del capítulo</p>
+                      <p><strong>Miembros</strong> activos</p>
                     </div>
                   </div>
                 </div>

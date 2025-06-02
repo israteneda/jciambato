@@ -11,7 +11,9 @@ export const InfoContainer = () => {
         </div>
 
         <div className="mt-6">
-          <h1 className="text-white max-w-xl font-bold text-3xl lg:text-6xl">
+          <h1
+            className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-3xl lg:text-6xl max-w-xl"
+          >
             Líderes que Impactan el Futuro
           </h1>
         </div>

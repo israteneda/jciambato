@@ -1,25 +1,22 @@
 export const noticiasItems = [
   {
     id: 1,
-    type: "noticia",
-    title:
-      "Ocean Winds and Martifer announce partnership for Portuguese floating offshore wind tender",
+    type: "evento",
+    title: "Transmisión de Mando Local: JCI Ambato inicia una nueva etapa",
     image: "/images/grupo/lideralider2.jpeg",
     url: "/",
   },
   {
     id: 2,
-    type: "evento",
-    title:
-      "Ocean Winds and Martifer announce partnership for Portuguese floating offshore wind tender",
+    type: "noticia",
+    title: "JCI Ambato participa en alianza para el desarrollo con Indoamérica",
     image: "/images/grupo/lideralider2.jpeg",
     url: "/",
   },
   {
     id: 3,
     type: "noticia",
-    title:
-      "Ocean Winds and Martifer announce partnership for Portuguese floating offshore wind tender",
+    title: "Capacitación en obligaciones laborales para miembros de JCI Ambato",
     image: "/images/grupo/lideralider2.jpeg",
     url: "/",
   },
