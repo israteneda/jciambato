@@ -15,38 +15,38 @@ export default function Aliados() {
       <div className="flex flex-wrap justify-center  mt-10 gap-10 p-5 md:p-8">
         <Image
           src="/images/aliados/logo-UTA.webp"
-          alt="Logo MAGAP"
+          alt="Logo UTA"
           width={200}
           height={50}
-          className="object-contain"
+          className="object-contain w-[200px] h-[50px]"
         />
         <Image
           src="/images/aliados/logo-MAGAP.webp"
           alt="Logo MAGAP"
           width={200}
           height={50}
-          className="object-contain"
+          className="object-contain w-[200px] h-[50px]"
         />
         <Image
           src="/images/aliados/logo-UTI.webp"
-          alt="Logo MAGAP"
+          alt="Logo UTI"
           width={200}
           height={50}
-          className="object-contain"
+          className="object-contain w-[200px] h-[50px]"
         />
         <Image
           src="/images/aliados/logo-RB.webp"
-          alt="Logo MAGAP"
+          alt="Logo RB"
           width={200}
           height={50}
-          className="object-contain"
+          className="object-contain w-[200px] h-[50px]"
         />
         <Image
           src="/images/aliados/logo-municipio.webp"
-          alt="Logo MAGAP"
+          alt="Logo Municipio"
           width={200}
           height={50}
-          className="object-contain"
+          className="object-contain w-[200px] h-[50px]"
         />
       </div>
     </section>

@@ -48,11 +48,12 @@ export const Navbar = ({ className }: NavbarProps) => {
           <NextLink href="/">
             <Image
               alt="JCI Ambato Logo"
-              className="object-contain"
+              className="object-contain w-[85px] h-[85px]"
               // src={isScrolled ? "/images/jci-ambato.webp" : "/images/jci-ambato-bw.webp"}
               src="/images/logos/jci-ambato.webp"
-              height={85}
               width={85}
+              height={85}
+              priority
             />
           </NextLink>
         </NavbarBrand>

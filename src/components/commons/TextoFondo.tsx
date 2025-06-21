@@ -19,10 +19,16 @@ const BackgroundText = ({
 }: BackgroundTextProps) => {
   const scrollY = useScrollPositionText();
 
-  // Calculamos desplazamientos de forma memoizada
+  // Calculamos desplazamientos de forma memoizada con mayor precisión
   const translateStyles = useMemo(() => ({
-    left: { transform: `translateX(${scrollY * numberLeft}px)` },
-    right: { transform: `translateX(${-scrollY * numberRight}px)` }
+    left: {
+      transform: `translateX(${scrollY * numberLeft}px)`,
+      willChange: "transform"
+    },
+    right: {
+      transform: `translateX(${-scrollY * numberRight}px)`,
+      willChange: "transform"
+    }
   }), [scrollY, numberLeft, numberRight]);
 
   const baseTextStyle = clsx(
@@ -33,14 +39,15 @@ const BackgroundText = ({
     "whitespace-nowrap",
     "tracking-normal",
     "uppercase",
-    "text-jci-gray"
+    "text-jci-gray",
+    "select-none"
   );
 
   return (
     <div className='overflow-hidden mx-auto select-none'>
       <h2
         className={baseTextStyle}
-        style={{ ...translateStyles.left, willChange: "transform" }}
+        style={translateStyles.left}
         aria-hidden
       >
         {textoPrimario}
@@ -48,7 +55,7 @@ const BackgroundText = ({
 
       <h2
         className={baseTextStyle}
-        style={{ ...translateStyles.right, willChange: "transform" }}
+        style={translateStyles.right}
         aria-hidden
       >
         {textoSecundario}

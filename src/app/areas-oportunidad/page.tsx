@@ -1,12 +1,12 @@
-import AreasOportunidad from "@/components/sections/areas-oportunidad/areasOportunidad";
-import Bienvenida from "@/components/sections/areas-oportunidad/bienvenida/inicio";
+import AreasOportunidad from "@/components/sections/areas-oportunidad/areas-oportunidad";
+import Bienvenida from "@/components/sections/areas-oportunidad/inicio";
 
 export const metadata = {
   title: "Áreas de Oportunidad — Desarrolla tu Potencial",
   description: "Página de Áreas de Oportunidad",
 };
 
-export default function Inicio() {
+export default function AreasOportunidadPage() {
   return (
     <div>
       {/* Sección de Bienvenida */}

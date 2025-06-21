@@ -1,4 +1,4 @@
-import Bienvenida from "@/components/sections/miembros/bienvenida/inicio";
+import Bienvenida from "@/components/sections/miembros/inicio";
 import Miembros from "@/components/sections/miembros/miembros";
 import MiembrosGenerales from "@/components/sections/miembros/miembros-generales";
 import Senadores from "@/components/sections/miembros/senadores";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Página de Miembros",
 };
 
-export default function Inicio() {
+export default function MiembrosPage() {
   return (
     <div className="flex flex-col items-center">
       {/* Sección de Bienvenida */}

@@ -2,7 +2,7 @@
 
 import { builder, Builder } from "@builder.io/react";
 import { BuilderComponent } from "@builder.io/react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 
 import {
@@ -16,43 +16,60 @@ import {
 import "../builder-registry";
 
 // Initialize Builder with your API key
-builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
+if (process.env.NEXT_PUBLIC_BUILDER_API_KEY) {
+  builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
+}
 
 // Enable dev tools
 Builder.isStatic = false;
 
 export default function BuilderPage() {
   const [content, setContent] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
   const pathname = usePathname();
 
-  useEffect(() => {
-    // Fetch content from Builder.io based on the current path
-    builder
-      .get("page", {
-        userAttributes: {
-          urlPath: pathname,
-        },
-      })
-      .promise()
-      .then((content) => {
-        setContent(content);
-      })
-      .catch((error) => {
-        console.error("Error fetching Builder.io content:", error);
-      });
+  const fetchContent = useCallback(async () => {
+    if (!process.env.NEXT_PUBLIC_BUILDER_API_KEY) {
+      console.warn("Builder.io API key not found");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const builderContent = await builder
+        .get("page", {
+          userAttributes: {
+            urlPath: pathname,
+          },
+        })
+        .promise();
+
+      setContent(builderContent);
+    } catch (error) {
+      console.error("Error fetching Builder.io content:", error);
+    } finally {
+      setLoading(false);
+    }
   }, [pathname]);
+
+  useEffect(() => {
+    fetchContent();
+  }, [fetchContent]);
 
   return (
     <>
-      <BuilderComponent
-        content={content}
-        data={{
-          title: "Builder.io Page",
-          path: pathname,
-        }}
-        model="page"
-        options={{ includeRefs: true }}
-      />
+      {!loading && (
+        <BuilderComponent
+          content={content}
+          data={{
+            title: "Builder.io Page",
+            path: pathname,
+          }}
+          model="page"
+          options={{ includeRefs: true }}
+        />
+      )}
 
       {/* Legacy Sections */}
       <div>

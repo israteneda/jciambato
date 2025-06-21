@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 
-export default function Inicio() {
+export default function ActividadesPage() {
   return (
     <div>
       {/* Sección de Bienvenida */}

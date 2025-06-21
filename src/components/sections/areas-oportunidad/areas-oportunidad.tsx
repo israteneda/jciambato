@@ -152,8 +152,8 @@ export default function AreasOportunidad() {
                             </div>
 
                         </div>
-                    </div>                    
-                
+                    </div>
+
                     <div className="relative block md:flex flex-col md:flex-row justify-start">
                         {/* Imagen */}
                         <div className="relative w-full min-h-min h-[300px] md:w-1/2 md:h-auto xl:w-1/3 overflow-hidden md:min-h-[632px]">
