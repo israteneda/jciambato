@@ -14,7 +14,7 @@ export default function Bienvenida() {
 
         <div className="mt-8">
           <h1
-            className="text-gray-200 text-left font-bold leading-[1] max-w-xl text-3xl md:text-5xl"
+            className="text-gray-200 text-left font-bold leading-[1] max-w-3xl text-3xl md:text-6xl"
           >
             Creando el futuro de nuestra ciudad, juntos.
           </h1>
@@ -33,7 +33,7 @@ export default function Bienvenida() {
         <div className="relative bg-white w-full h-full overflow-hidden">
           <div className="absolute inset-0 w-full h-full text-transparent">
             <Image
-              src="/images/secciones/nosotros2.webp"
+              src="/images/secciones/nosotros.webp"
               width={1920}
               height={1080}
               alt="Texto alternativo"

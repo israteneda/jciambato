@@ -21,7 +21,7 @@ export default function Aliados() {
           className="object-contain"
         />
         <Image
-          src="/images/aliados/logo-MAGAP.png"
+          src="/images/aliados/logo-MAGAP.webp"
           alt="Logo MAGAP"
           width={200}
           height={50}
@@ -35,14 +35,14 @@ export default function Aliados() {
           className="object-contain"
         />
         <Image
-          src="/images/aliados/logo-RB.png"
+          src="/images/aliados/logo-RB.webp"
           alt="Logo MAGAP"
           width={200}
           height={50}
           className="object-contain"
         />
         <Image
-          src="/images/aliados/logo-municipio.png"
+          src="/images/aliados/logo-municipio.webp"
           alt="Logo MAGAP"
           width={200}
           height={50}

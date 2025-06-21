@@ -135,7 +135,7 @@ export const siteConfig = {
     name: "JCI Ambato",
     alternateName: "Cámara Junior Internacional Ambato",
     url: "https://www.jciambato.com",
-    logo: "https://www.jciambato.com/images/jci.png",
+    logo: "https://www.jciambato.com/images/jci-ambato.webp",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+593-3-123-4567", // Replace with actual phone number

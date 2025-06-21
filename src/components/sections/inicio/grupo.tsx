@@ -18,9 +18,9 @@ export default function Grupo() {
           />
         </div>
 
-        <div className="-mt-¨[336px] lg:-mt-52">
+        <div className="-mt-¨[336px] lg:-mt-64">
           {/* Titulo Principal */}
-          <div className="relative z-10 bg-transparent w-[1156px] px-[30px] md:mx-auto">
+          <div className="relative z-10 bg-transparent w-full max-w-[1156px] mx-auto px-[30px]">
 
             <div className="text-[13px] leading-[1.85] uppercase text-jci-gold font-bold tracking-normal">
               Grupo JCI
@@ -32,11 +32,11 @@ export default function Grupo() {
             </div>
           </div>
 
-          <div className="relative z-10 bg-transparent md:w-[1156px] mx-auto">
+          <div className="relative z-10 bg-transparent w-full max-w-[1156px] mx-auto px-[30px]">
 
             <div className="relative md:flex">
               {/* Descripción */}
-              <div className="flex-1 grow shrink basis-0 mx-[30px] md:ml-16">
+              <div className="flex-1 grow shrink basis-0 md:ml-16">
                 <div className="mt-8">
                   <div className="text-[18px] font-normal normal-case leading-[1.78] tracking-normal text-jci-gray text-left max-w-[333px] lg:text-[calc(15.6px+0.125vw)]">
                     <p>
@@ -72,19 +72,10 @@ export default function Grupo() {
               </div>
 
               {/* Estadisticas */}
-              <div className="flex-1 grow shrink basis-0 md:mt-[120px]">
-                <div className="flex flex-wrap mr-28 mt-8">
+              <div className="relative flex-1 grow shrink basis-0 md:mt-[120px]">
+                <div className="flex flex-wrap gap-10 mt-8 mr-28">
 
-                  <div className="flex-none w-full md:w-[50%] mt-6 md:mt-[48px] ml-[25px] box-border">
-                    <div className="text-jci-navy text-[calc(44px+3.125vw)] leading-[1] tracking-[-5px] font-light">
-                      <span>+200</span>
-                    </div>
-                    <div className="text-[calc(13.6px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
-                      <p><strong>Proyectos</strong> ejecutados</p>
-                    </div>
-                  </div>
-
-                  <div className="flex-1 grow shrink basis-0 w-[50%] mt-6 md:mt-[48px] ml-[25px] box-border">
+                  <div className="md:mt-[48px]">
                     <div className="text-jci-navy text-[calc(44px+3.125vw)] leading-[1] font-light tracking-[-5px] ">
                       <span>+50</span>
                     </div>
@@ -93,12 +84,23 @@ export default function Grupo() {
                     </div>
                   </div>
 
-                  <div className="flex-1 grow shrink basis-0 w-[50%] mt-6 md:mt-[48px] ml-[25px] box-border">
-                    <div className="text-jci-navy text-[calc(44px+3.125vw)] leading-[1] font-light tracking-[-5px] ">
-                      <span>+30</span>
+                  <div className="flex flex-col md:flex-row w-full gap-10">
+                    <div className="flex-1">
+                      <div className="text-jci-navy text-[calc(44px+3.125vw)] leading-[1] tracking-[-5px] font-light">
+                        <span>+200</span>
+                      </div>
+                      <div className="text-[calc(13.6px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
+                        <p><strong>Proyectos</strong> ejecutados</p>
+                      </div>
                     </div>
-                    <div className="text-[calc(13.6px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
-                      <p><strong>Miembros</strong> activos</p>
+
+                    <div className="flex-1">
+                      <div className="text-jci-navy text-[calc(44px+3.125vw)] leading-[1] font-light tracking-[-5px] ">
+                        <span>+30</span>
+                      </div>
+                      <div className="text-[calc(13.6px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
+                        <p><strong>Miembros</strong> activos</p>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -1,5 +1,7 @@
 import Bienvenida from "@/components/sections/miembros/bienvenida/inicio";
 import Miembros from "@/components/sections/miembros/miembros";
+import MiembrosGenerales from "@/components/sections/miembros/miembros-generales";
+import Senadores from "@/components/sections/miembros/senadores";
 
 import { Metadata } from "next";
 
@@ -15,6 +17,10 @@ export default function Inicio() {
       <Bienvenida />
 
       <Miembros />
+
+      <MiembrosGenerales />
+
+      <Senadores />
     </div>
   );
 }

@@ -30,10 +30,10 @@ export const Navbar = ({ className }: NavbarProps) => {
     <HeroUINavbar
       className={clsx(
         "fixed top-0 left-0 right-0 transition-all duration-300 z-50",
-        isScrolled ? "bg-white shadow-md" : "bg-jci-navy",
+        // isScrolled ? "bg-white shadow-md" : "bg-jci-navy",
+        isScrolled ? "bg-white shadow-md" : "bg-transparent",
         className
       )}
-      /* isScrolled ? "bg-white shadow-md" : "bg-transparent", */
       classNames={{
         toggleIcon: "w-8 h-8",
       }}
@@ -49,11 +49,11 @@ export const Navbar = ({ className }: NavbarProps) => {
             <Image
               alt="JCI Ambato Logo"
               className="object-contain"
-              src={isScrolled ? "/images/logo-jci.png" : "/images/logo-blanco-jci.png"}
+              // src={isScrolled ? "/images/jci-ambato.webp" : "/images/jci-ambato-bw.webp"}
+              src="/images/logos/jci-ambato.webp"
               height={85}
               width={85}
             />
-            {/* src="/images/logo-jci.png" */}
           </NextLink>
         </NavbarBrand>
       </NavbarContent>

@@ -61,7 +61,7 @@ export function Footer() {
               <div className="relative z-10 max-w-5xl mx-auto">
                 <figure className="mb-10">
                   <Image
-                    src="/images/jci.png"
+                    src="/images/logos/jci-ambato.webp"
                     alt="JCI Ambato Logo"
                     width={85}
                     height={85}

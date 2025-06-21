@@ -11,7 +11,7 @@ export default function AreasOportunidad() {
                         <div className="relative w-full min-h-min h-[300px] md:w-1/2 md:h-auto xl:w-1/3 overflow-hidden md:min-h-[632px]">
                             <div className="relative w-full h-full overflow-hidden">
                                 <Image
-                                    src="/images/areas_oportunidad/area1.webp"
+                                    src="/images/areas_oportunidad/area.webp"
                                     width={1920}
                                     height={1080}
                                     alt="Texto alternativo"
@@ -84,7 +84,7 @@ export default function AreasOportunidad() {
                         <div className="relative w-full min-h-min h-[300px] md:w-1/2 md:h-auto xl:w-1/3 overflow-hidden md:min-h-[632px]">
                             <div className="relative w-full h-full overflow-hidden">
                                 <Image
-                                    src="/images/areas_oportunidad/area1.webp"
+                                    src="/images/areas_oportunidad/area.webp"
                                     width={1920}
                                     height={1080}
                                     alt="Texto alternativo"
@@ -159,7 +159,7 @@ export default function AreasOportunidad() {
                         <div className="relative w-full min-h-min h-[300px] md:w-1/2 md:h-auto xl:w-1/3 overflow-hidden md:min-h-[632px]">
                             <div className="relative w-full h-full overflow-hidden">
                                 <Image
-                                    src="/images/areas_oportunidad/area1.webp"
+                                    src="/images/areas_oportunidad/area.webp"
                                     width={1920}
                                     height={1080}
                                     alt="Texto alternativo"
@@ -232,7 +232,7 @@ export default function AreasOportunidad() {
                         <div className="relative w-full min-h-min h-[300px] md:w-1/2 md:h-auto xl:w-1/3 overflow-hidden md:min-h-[632px]">
                             <div className="relative w-full h-full overflow-hidden">
                                 <Image
-                                    src="/images/areas_oportunidad/area1.webp"
+                                    src="/images/areas_oportunidad/area.webp"
                                     width={1920}
                                     height={1080}
                                     alt="Texto alternativo"

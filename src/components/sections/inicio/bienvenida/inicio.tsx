@@ -19,7 +19,7 @@ export default function Bienvenida() {
           <BackgroundVideo />
         </div>
 
-        <div className="hidden md:block absolute top-1/2 left-[30px] text-[10.5px] font-semibold z-20 text-gray-400 leading-[60px] tracking-[2px] uppercase transform -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap">
+        <div className="hidden md:block absolute top-1/2 left-[30px] text-[10.5px] font-semibold z-20 text-gray-400 leading-[60px] tracking-[1.5px] uppercase transform -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap">
           BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO
         </div>
 
@@ -35,7 +35,7 @@ export default function Bienvenida() {
           </button>
         </div>
 
-        <div className="hidden md:block absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] text-[10px] font-semibold uppercase z-20 text-jci-seafoam">
+        <div className="hidden md:block absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] text-[10.5px] font-semibold uppercase z-20 text-jci-seafoam">
           <a href="https://jciecuador.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
             <span>
               JCI Ecuador
@@ -48,7 +48,7 @@ export default function Bienvenida() {
       <div className="absolute left-1/2 z-20 bottom-0 transform -translate-x-1/2 rotate-90">
         <div className="hidden md:block">
           <button className="flex items-center">
-            <span className="text-jci-aqua text-xs font-semibold uppercase">Sobre Nosotros</span>
+            <span className="text-jci-aqua text-[10.5px] font-semibold uppercase">Sobre Nosotros</span>
             <Image
               src="/icons/arrow-down.svg"
               alt=""
