@@ -5,7 +5,7 @@ import Presentacion from "@/components/sections/nosotros/presentacion";
 import Valores from "@/components/sections/nosotros/valores";
 
 export const metadata = {
-  title: "Nosotros",
+  title: "Sobre Nosotros — Liderazgo y Oportunidades",
   description: "Página de Nosotros",
 };
 

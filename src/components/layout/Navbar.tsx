@@ -121,6 +121,6 @@ export const Navbar = ({ className }: NavbarProps) => {
           })}
         </div>
       </NavbarMenu>
-    </HeroUINavbar>
+    </HeroUINavbar >
   );
 };

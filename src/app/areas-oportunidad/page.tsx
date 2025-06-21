@@ -2,7 +2,7 @@ import AreasOportunidad from "@/components/sections/areas-oportunidad/areasOport
 import Bienvenida from "@/components/sections/areas-oportunidad/bienvenida/inicio";
 
 export const metadata = {
-  title: "Áreas de Oportunidad",
+  title: "Áreas de Oportunidad — Desarrolla tu Potencial",
   description: "Página de Áreas de Oportunidad",
 };
 

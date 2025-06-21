@@ -3,7 +3,7 @@ import Bienvenida from "@/components/sections/involucrate/bienvenida/inicio";
 import Accion from "@/components/sections/involucrate/accion";
 
 export const metadata: Metadata = {
-  title: "Involucrate",
+  title: "Involúcrate — Únete a JCI Ambato",
   description: "Página de Involucrate",
 };
 

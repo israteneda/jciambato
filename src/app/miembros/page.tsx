@@ -6,7 +6,7 @@ import Senadores from "@/components/sections/miembros/senadores";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Miembros",
+  title: "Nuestros Miembros — Conoce al Equipo",
   description: "Página de Miembros",
 };
 

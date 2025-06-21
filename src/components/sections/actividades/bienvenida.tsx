@@ -33,7 +33,7 @@ export default function Bienvenida() {
                 <div className="relative bg-white w-full h-full overflow-hidden">
                     <div className="absolute inset-0 w-full h-full text-transparent">
                         <Image
-                            src="/images/secciones/actividades.jpg"
+                            src="/images/secciones/actividades.webp"
                             width={1920}
                             height={1080}
                             alt="Texto alternativo"

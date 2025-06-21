@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "JCI Ambato",
+  name: "JCI Ambato — Formación de Líderes Juveniles con Impacto Social",
   description:
     "Página oficial de JCI Ambato, una organización de jóvenes líderes comprometidos con el desarrollo comunitario, liderazgo y voluntariado en Ambato, Ecuador.",
   keywords: [
@@ -44,23 +44,20 @@ export const siteConfig = {
       "Únete a JCI Ambato para desarrollar habilidades de liderazgo, participar en proyectos sociales y generar un impacto positivo en la comunidad.",
     images: [
       {
-        url: "/images/jci-ambato.ico",
+        url: "https://www.jciambato.org/images/jci-ambato.ico",
         width: 100,
         height: 100,
         alt: "Logo oficial de JCI Ambato",
       },
       {
-        url: "/images/jci-ambato-secondary.png",
+        url: "https://www.jciambato.org/images/jci-ambato-secondary.png",
         width: 100,
         height: 100,
         alt: "JCI Ambato en acción",
       },
     ].map((img) => ({
       ...img,
-      url: new URL(
-        img.url,
-        process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-      ).toString(),
+      url: new URL(img.url, process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").toString(),
     })),
   },
   twitter: {
@@ -71,10 +68,7 @@ export const siteConfig = {
     description:
       "Organización de jóvenes líderes en Ambato, Ecuador, dedicada al voluntariado y desarrollo comunitario.",
     images: ["/images/jci-ambato-twitter.png"].map((img) =>
-      new URL(
-        img,
-        process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-      ).toString()
+      new URL(img, process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").toString()
     ),
   },
   robots: {
@@ -90,7 +84,7 @@ export const siteConfig = {
   },
   manifest: "/manifest.json",
   icons: {
-    icon: "/images/jci-ambato.ico",
+    icon: "/imagesjci-ambato.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
@@ -134,8 +128,8 @@ export const siteConfig = {
     "@type": "NGO",
     name: "JCI Ambato",
     alternateName: "Cámara Junior Internacional Ambato",
-    url: "https://www.jciambato.com",
-    logo: "https://www.jciambato.com/images/jci-ambato.webp",
+    url: "https://www.jciambato.org",
+    logo: "https://www.jciambato.org/images/jci-ambato.webp",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+593-3-123-4567", // Replace with actual phone number

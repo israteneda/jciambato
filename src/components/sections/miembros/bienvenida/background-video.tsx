@@ -3,7 +3,7 @@ export const BackgroundImage = () => (
   <div
     className="absolute inset-0 w-full h-full bg-cover bg-center z-10"
     style={{
-      backgroundImage: "url('/images/secciones/miembros.jpeg')",
+      backgroundImage: "url('/images/secciones/miembros.webp')",
     }}
     aria-label="Imagen de presentación de la organización"
     aria-hidden="true"
