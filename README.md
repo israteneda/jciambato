@@ -25,7 +25,6 @@
 - **SEO Optimizado**: Configuración completa para motores de búsqueda
 - **Accesibilidad**: Cumple con estándares WCAG
 - **Rendimiento**: Optimizado con Next.js 15 y Turbopack
-- **Internacionalización**: Soporte para múltiples idiomas
 
 ![Previsualización de la Plataforma](/public/images/preview-welcome.png)
 
@@ -55,7 +54,7 @@
 
 - **[Swiper](https://swiperjs.com/)** - Carousel y slider
 - **[React Icons](https://react-icons.github.io/react-icons/)** - Iconografía
-- **[React Aria](https://react-spectrum.adobe.com/react-aria/)** - Accesibilidad
+- **[React Aria](https://react-spectrum.adobe.com/react-aria/)** - Accesibilida
 
 
 ## 🚀 Instalación y Configuración
@@ -100,50 +99,6 @@ npm run dev
 
 La aplicación estará disponible en `http://localhost:3000`
 
-## 📁 Estructura del Proyecto
-
-```
-jci-ambato/
-├── 📁 public/                    # Archivos estáticos
-│   ├── 📁 fonts/                # Fuentes tipográficas
-│   ├── 📁 icons/                # Iconos SVG
-│   ├── 📁 images/               # Imágenes optimizadas
-│   │   ├── 📁 aliados/          # Logos de aliados
-│   │   ├── 📁 areas_oportunidad/ # Imágenes de áreas
-│   │   ├── 📁 grupo/            # Imágenes del grupo
-│   │   ├── 📁 logos/            # Logos oficiales
-│   │   ├── 📁 miembros/         # Fotos de miembros
-│   │   └── 📁 secciones/        # Imágenes por sección
-│   └── 📁 videos/               # Contenido multimedia
-├── 📁 src/
-│   ├── 📁 app/                  # App Router (Next.js 15)
-│   │   ├── 📁 [...page]/        # Páginas dinámicas
-│   │   ├── 📁 actividades/      # Sección de actividades
-│   │   ├── 📁 areas-oportunidad/ # Áreas de oportunidad
-│   │   ├── 📁 involucrate/      # Página de involucramiento
-│   │   ├── 📁 miembros/         # Directorio de miembros
-│   │   ├── 📁 nosotros/         # Información institucional
-│   │   ├── layout.tsx           # Layout principal
-│   │   ├── page.tsx             # Página de inicio
-│   │   └── providers.tsx        # Proveedores de contexto
-│   ├── 📁 components/           # Componentes reutilizables
-│   │   ├── 📁 commons/          # Componentes comunes
-│   │   ├── 📁 layout/           # Componentes de layout
-│   │   ├── 📁 sections/         # Secciones de página
-│   │   └── 📁 ui/               # Componentes de UI
-│   ├── 📁 config/               # Configuraciones
-│   │   ├── fonts.ts             # Configuración de fuentes
-│   │   ├── primitives.ts        # Primitivas de diseño
-│   │   └── site.ts              # Configuración del sitio
-│   ├── 📁 data/                 # Datos estáticos
-│   ├── 📁 hooks/                # Custom hooks
-│   └── 📁 styles/               # Estilos globales
-├── 📄 package.json              # Dependencias y scripts
-├── 📄 tailwind.config.js        # Configuración de Tailwind
-├── 📄 next.config.js            # Configuración de Next.js
-└── 📄 tsconfig.json             # Configuración de TypeScript
-```
-
 ## 🎨 Sistema de Diseño
 
 ### Paleta de Colores
@@ -179,7 +134,6 @@ Este proyecto está licenciado bajo la [MIT License](LICENSE) - ver el archivo [
 
 ### JCI Ambato
 
-- **Sitio Web**: [jciambato.org](https://www.jciambato.org)
 - **Email**: tecnologias@jciambato.com
 - **Ubicación**: Ambato, Ecuador
 
@@ -195,7 +149,5 @@ Este proyecto está licenciado bajo la [MIT License](LICENSE) - ver el archivo [
 <div align="center">
 
 **Desarrollado con ❤️ por el equipo de JCI Ambato**
-
-_Empoderando líderes juveniles para un futuro mejor_
 
 </div>

@@ -91,7 +91,6 @@ export default function Presentacion() {
                                 width={1920}
                                 height={1080}
                                 className="w-full h-full object-cover"
-                                priority
                             />
                         </div>
                     </div>

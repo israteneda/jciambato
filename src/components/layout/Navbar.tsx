@@ -41,20 +41,20 @@ export const Navbar = ({ className }: NavbarProps) => {
       return;
     }
 
-    // Si estamos en una página que depende del scroll
+    // Texto blanco por defecto, oscuro con scroll para páginas dinámicas (como /areas-oportunidad/slug)
+    if (pathname.startsWith('/areas-oportunidad/')) {
+      setShouldUseDarkText(isScrolled);
+      return;
+    }
+
+    // Texto blanco (scroll dependiente)
     if (scrollDependentPages.includes(pathname)) {
       setShouldUseDarkText(isScrolled);
       return;
     }
 
-    // Para páginas dinámicas (como áreas individuales), usar texto blanco
-    if (pathname.startsWith('/areas-oportunidad/')) {
-      setShouldUseDarkText(false);
-      return;
-    }
-
-    // Por defecto, usar texto blanco
-    setShouldUseDarkText(false);
+    // Rutas desconocidas o error (texto oscuro por defecto)
+    setShouldUseDarkText(true);
   };
 
   useEffect(() => {
