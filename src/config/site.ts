@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "JCI Ambato — Formación de Líderes Juveniles con Impacto Social",
+  name: "JCI Ambato",
   description:
     "Página oficial de JCI Ambato, una organización de jóvenes líderes comprometidos con el desarrollo comunitario, liderazgo y voluntariado en Ambato, Ecuador.",
   keywords: [

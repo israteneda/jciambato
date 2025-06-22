@@ -6,7 +6,7 @@ import Formulario from "@/components/sections/involucrate/formulario";
 
 export const metadata: Metadata = {
   title: "Involúcrate — Únete a JCI Ambato",
-  description: "Página de Involucrate",
+  description: "Únete a JCI Ambato y forma parte del cambio. Descubre los beneficios de ser miembro y cómo puedes contribuir al desarrollo de la comunidad.",
 };
 
 export default function InvolucratePage() {

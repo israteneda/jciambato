@@ -11,10 +11,7 @@ import { Navbar } from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jciambato.com"),
-  title: {
-    default: siteConfig.name,
-    template: `%s — ${siteConfig.name}`,
-  },
+  title: "JCI Ambato — Formación de Líderes Juveniles con Impacto Social",
   description: siteConfig.description,
   keywords: siteConfig.keywords,
   authors: siteConfig.authors,
