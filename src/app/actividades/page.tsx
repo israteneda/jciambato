@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Actividades — Impacto y Acción en la Comunidad",
-  description: "Página de Actividades",
+  description: "Explora nuestros eventos, proyectos y actividades que generan impacto positivo en la comunidad de Ambato.",
 };
 
 

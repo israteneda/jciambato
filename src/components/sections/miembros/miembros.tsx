@@ -51,8 +51,8 @@ const miembrosData = [
 
 export default function Miembros() {
     return (
-        <div className="py-16 z-10">
-            <div className="container mx-auto px-4">
+        <div className="relative py-16 z-10">
+            <div className="max-w-6xl mx-8 lg:mx-auto">
                 {/* Header */}
                 <div className="text-start mb-12">
                     <h2 className="text-3xl md:text-5xl font-bold text-gray-800">
@@ -64,7 +64,7 @@ export default function Miembros() {
                 </div>
 
                 {/* Miembros Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
                     {miembrosData.map((miembro, index) => (
                         <div
                             key={index}
@@ -80,11 +80,11 @@ export default function Miembros() {
                                         alt={`Foto de ${miembro.nombre}`}
                                         width={400}
                                         height={400}
-                                        className="w-full h-96 object-cover"
+                                        className="w-full h-auto md:h-96 object-cover"
                                     />
                                 ) : (
-                                    <div className="w-full h-96 bg-gray-400 flex items-center justify-center">
-                                        <span className="text-white text-lg">Próximamente</span>
+                                    <div className="w-full h-auto md:h-96 bg-gray-400 flex items-center justify-center">
+                                        <span className="text-white h-full text-lg">Próximamente</span>
                                     </div>
                                 )}
                             </div>

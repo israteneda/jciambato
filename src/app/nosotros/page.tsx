@@ -8,7 +8,7 @@ import {
 
 export const metadata = {
     title: "Sobre Nosotros — Liderazgo y Oportunidades",
-    description: "Página de Nosotros",
+    description: "Conoce nuestra misión, visión, valores y la historia de JCI Ambato en el desarrollo de líderes juveniles.",
 };
 
 export default function NosotrosPage() {
