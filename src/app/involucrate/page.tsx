@@ -1,8 +1,10 @@
 import { Metadata } from "next";
-import Bienvenida from "@/components/sections/involucrate/inicio";
-import Accion from "@/components/sections/involucrate/accion";
-import Beneficios from "@/components/sections/involucrate/beneficios";
-import Formulario from "@/components/sections/involucrate/formulario";
+import {
+  Bienvenida,
+  Acciones,
+  Beneficios,
+  Formulario,
+} from "@/components/sections/involucrate";
 
 export const metadata: Metadata = {
   title: "Involúcrate — Únete a JCI Ambato",
@@ -24,7 +26,7 @@ export default function InvolucratePage() {
       >
       </div>
 
-      <Accion />
+      <Acciones />
 
       <Beneficios />
 

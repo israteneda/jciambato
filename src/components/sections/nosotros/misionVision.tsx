@@ -9,9 +9,9 @@ export default function MisionVision() {
                     <div>
                         <div className="flex">
                             {/* Texto Vertical */}
-                            <div className="hidden md:block absolute -top-20 left-3 translate-x-[-50%] translate-y-[-50%] -rotate-90 origin-bottom-right">
-                                <div className="text-[#aeaeae] leading-none text-[11px] font-medium relative tracking-[2px] uppercase after:content-[''] after:absolute after:top-[4px] after:w-[160px] after:h-[1px] after:bg-[#aeaeae] after:right-[260px]" aria-hidden="true">
-                                    Nuestro Sentido de Propósito
+                            <div className="hidden md:block absolute top-0 left-3 translate-x-[-50%] translate-y-[-50%] -rotate-90 origin-bottom-right">
+                                <div className="text-[#aeaeae] leading-none text-[11px] font-medium relative tracking-[2px] uppercase after:content-[''] after:absolute after:top-[4px] after:w-[160px] after:h-[1px] after:bg-[#aeaeae] after:right-[160px]" aria-hidden="true">
+                                    Nuestro Propósito
                                 </div>
                             </div>
 

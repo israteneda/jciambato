@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { HiArrowLongRight, HiOutlineArrowUp } from "react-icons/hi2";
+import Link from "next/link";
+import { HiOutlineArrowUp } from "react-icons/hi2";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { jciLinks } from "@/data/footer";
 import { siteConfig } from "@/config/site";
@@ -21,13 +22,20 @@ export function Footer() {
                     Conoce, Suma, Transforma
                   </span>
                   <h2 id="cta-heading" className="mt-8 text-4xl md:text-5xl max-w-2xl  font-medium tracking-tight text-white">
-                    Tienes un proyecto en mente?
+                    ¿Te atreves a ser el cambio que quieres ver en el mundo?
                   </h2>
                 </header>
 
-                <div className="md:ml-52 text-white" aria-hidden="true">
-                  <HiArrowLongRight className="h-32 w-32" />
-                </div>
+                <Link href="/involucrate" className="md:ml-52 text-white group cursor-pointer" aria-label="Ir a Involúcrate">
+                  <Image
+                    src="/icons/arrow-down.svg"
+                    alt=""
+                    width={128}
+                    height={128}
+                    className="h-32 w-32 transform transition-transform duration-300 group-hover:translate-x-4 -rotate-90 brightness-0 invert"
+                  />
+                </Link>
+
               </div>
             </div>
 
@@ -45,28 +53,31 @@ export function Footer() {
 
       {/* Sección principal del footer */}
       <section className="relative" aria-labelledby="footer-content-heading">
-        <div className="pb-0">
+        <div>
+
           <div className="z-10 w-full">
-            <div className="pt-20 xl:pt-[192px] mb-[92px] mx-10">
-              <span
-                className="absolute top-1/2 left-[27px] text-jci-aqua text-[11px] font-semibold z-20 leading-[60px] tracking-[1px] uppercase transform -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap"
-                aria-hidden="true"
-                role="presentation"
-              >
-                Conócenos mejor
-              </span>
 
+            <span
+              className="hidden md:block absolute top-1/2 left-[27px] text-jci-aqua text-[11px] font-semibold z-20 leading-[60px] tracking-[1px] uppercase transform -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap"
+              aria-hidden="true"
+              role="presentation"
+            >
+              Conócenos mejor
+            </span>
 
+            <div className="pt-24 xl:pt-48 mb-24">
               {/* Items */}
-              <div className="relative z-10 max-w-5xl mx-auto">
-                <figure className="mb-10">
-                  <Image
-                    alt="JCI Ambato Logo"
-                    className="object-contain w-[85px] h-[85px]"
-                    src="/images/logos/jci-ambato.webp"
-                    width={85}
-                    height={85}
-                  />
+              <div className="relative z-10 max-w-6xl mx-8 md:mx-auto">
+                <figure className="mb-8">
+                  <Link href="/" aria-label="Ir a Inicio">
+                    <Image
+                      alt="JCI Ambato Logo"
+                      className="object-contain w-[85px] h-[85px]"
+                      src="/images/logos/jci-ambato.webp"
+                      width={85}
+                      height={85}
+                    />
+                  </Link>
                 </figure>
 
                 <div className="flex md:flex-row">
@@ -136,13 +147,11 @@ export function Footer() {
             </div>
 
             {/* Derechos reservados */}
-            <div className="relative py-5 z-10 max-w-6xl mx-8">
-              <div className="flex">
-                <div className="justify-start">
-                  <p className="text-sm text-default-400">
-                    © 2025 Cámara Junior Internacional del Ecuador — Capítulo Ambato. Todos los Derechos Reservados.
-                  </p>
-                </div>
+            <div className="relative py-5 z-10 max-w-6xl mx-8 md:mx-auto">
+              <div>
+                <p className="text-sm text-default-400">
+                  © 2025 Cámara Junior Internacional del Ecuador — Capítulo Ambato. Todos los Derechos Reservados.
+                </p>
               </div>
             </div>
 

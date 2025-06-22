@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import BackgroundText from "@/components/commons/TextoFondo";
+import BackgroundText from "@/components/commons/background-text";
 import { Input } from "@heroui/input";
 import { Button } from "@heroui/button";
 import { Switch } from "@heroui/switch";

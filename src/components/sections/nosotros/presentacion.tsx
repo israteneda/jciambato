@@ -69,7 +69,7 @@ export default function Presentacion() {
 
                 {/* Fotografía */}
                 <div className="w-full px-0">
-                    <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-8 md:gap-12 bg-white">
+                    <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-8 md:gap-12">
                         {/* Flecha solo visible en pantallas grandes */}
                         <div className="hidden md:flex justify-center items-center flex-shrink-0">
                             <Image

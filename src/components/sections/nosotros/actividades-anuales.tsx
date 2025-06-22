@@ -1,6 +1,6 @@
 'use client';
 
-import BackgroundText from "@/components/commons/TextoFondo";
+import BackgroundText from "@/components/commons/background-text";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 

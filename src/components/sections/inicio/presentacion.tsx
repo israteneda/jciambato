@@ -1,7 +1,8 @@
 "use client";
 
 import { Button } from "@heroui/button";
-import BackgroundText from "@/components/commons/TextoFondo";
+import BackgroundText from "@/components/commons/background-text";
+import Link from "next/link";
 
 export default function Presentacion() {
   return (
@@ -27,11 +28,14 @@ export default function Presentacion() {
                 className="relative overflow-hidden border-jci-aqua text-jci-aqua group"
                 aria-label="Conoce nuestra misión y visión"
               >
-                <span className="absolute inset-0 transform -translate-x-full bg-cyan-600 transition-transform duration-300 group-hover:translate-x-0" />
-                <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-                  Nuestra misión y visión
-                </span>
+                <Link href="/nosotros">
+                  <span className="absolute inset-0 transform -translate-x-full bg-cyan-600 transition-transform duration-300 group-hover:translate-x-0" />
+                  <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+                    Nuestra misión y visión
+                  </span>
+                </Link>
               </Button>
+
             </div>
 
           </div>
@@ -41,8 +45,8 @@ export default function Presentacion() {
               textoSecundario="LIDERAZGO"
               numberLeft={0.1}
               numberRight={0.1}
-              numberLeftMobile={0.03}
-              numberRightMobile={0.03}
+              numberLeftMobile={0.1}
+              numberRightMobile={0.1}
             />
           </div>
         </div>

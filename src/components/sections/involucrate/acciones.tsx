@@ -1,4 +1,4 @@
-export default function Accion() {
+export default function Acciones() {
     return (
         <section className="relative z-10" aria-labelledby="accion-heading">
             <div className="flex flex-col justify-center items-center">

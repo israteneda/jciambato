@@ -1,7 +1,9 @@
-import Bienvenida from "@/components/sections/miembros/inicio";
-import Miembros from "@/components/sections/miembros/miembros";
-import MiembrosGenerales from "@/components/sections/miembros/miembros-generales";
-import Senadores from "@/components/sections/miembros/senadores";
+import {
+  Bienvenida,
+  Miembros,
+  MiembrosGenerales,
+  Senadores,
+} from "@/components/sections/miembros";
 
 import { Metadata } from "next";
 

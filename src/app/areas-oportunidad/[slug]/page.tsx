@@ -1,8 +1,10 @@
 import { notFound } from 'next/navigation';
 import { getAreaBySlug, getAllAreas } from '@/data/areas-oportunidad';
-import Bienvenida from '@/components/sections/areas-oportunidad/slug/bienvenida';
-import Presentacion from '@/components/sections/areas-oportunidad/slug/presentacion';
-import ConstruccionLoader from '@/components/sections/areas-oportunidad/slug/ConstruccionLoader';
+import {
+  Bienvenida,
+  Presentacion,
+  ConstruccionLoader,
+} from '@/components/sections/areas-oportunidad/slug';
 
 interface AreaOportunidadPageProps {
     params: Promise<{
