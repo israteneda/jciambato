@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://jciambato.com"),
   title: {
     default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    template: `%s — ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,

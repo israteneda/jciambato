@@ -13,7 +13,7 @@ export default function Presentacion() {
               En Ambato
             </div>
             <div className="mt-8">
-              <div className="text-4xl md:text-[72px] font-[250] text-left text-gray-600 leading-[1.1] tracking-[-1px] max-w-xl md:max-w-[calc(75%)]">
+              <div className="text-4xl md:text-[65px] font-[250] text-left text-jci-black leading-[1.1] tracking-[-1px] max-w-xl md:max-w-[calc(75%)]">
                 A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.
               </div>
             </div>
@@ -35,9 +35,11 @@ export default function Presentacion() {
           <div className="mt-16">
             <BackgroundText
               textoPrimario="JCI AMBATO"
-              textoSecundario="CHAMBER"
+              textoSecundario="LIDERAZGO"
               numberLeft={0.1}
               numberRight={0.1}
+              numberLeftMobile={0.03}
+              numberRightMobile={0.03}
             />
           </div>
         </div>

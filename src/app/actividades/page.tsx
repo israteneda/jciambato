@@ -4,12 +4,12 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "Actividades",
+  title: "Actividades — Impacto y Acción en la Comunidad",
   description: "Página de Actividades",
 };
 
 
-export default function Inicio() {
+export default function ActividadesPage() {
   return (
     <div>
       {/* Sección de Bienvenida */}

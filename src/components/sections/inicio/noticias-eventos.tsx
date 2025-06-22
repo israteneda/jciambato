@@ -115,21 +115,21 @@ export default function NoticiasEventos() {
             <div className="flex space-x-14">
               <button className="noticias-prev ...">
                 <Image
-                  src="/images/icon-seta-down-big.svg"
+                  src="/icons/arrow-down.svg"
                   alt=""
                   width={500}
                   height={500}
-                  className="relative w-[25px] rotate-90 object-cover"
+                  className="relative w-[20px] rotate-90 object-cover"
                 />
               </button>
 
               <button className="noticias-next ...">
                 <Image
-                  src="/images/icon-seta-down-big.svg"
+                  src="/icons/arrow-down.svg"
                   alt=""
                   width={500}
                   height={500}
-                  className="relative w-[25px] -rotate-90 object-cover"
+                  className="relative w-[20px] -rotate-90 object-cover"
                 />
               </button>
             </div>

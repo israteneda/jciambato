@@ -17,10 +17,10 @@ export function Footer() {
               <div className="flex flex-col md:flex-row items-start md:items-center">
                 <div>
                   <span className="text-xs text-white line-clamp-1 uppercase tracking-widest">
-                    Conviértete en un líder
+                  Conoce, Suma, Transforma
                   </span>
                   <h2 className="mt-8 text-4xl md:text-5xl max-w-2xl  font-medium tracking-tight text-white">
-                    ¿Tienes un proyecto en mente?
+                    Tienes un proyecto en mente?
                   </h2>
                 </div>
 
@@ -35,12 +35,6 @@ export function Footer() {
       </section>
 
       {/* Sección decorativa */}
-      {/* <section className="hidden xl:block relative z-20">
-        <div className="absolute left-0 right-0 top-[-135px] z-[3] opacity-20 text-[235px] font-black not-italic leading-[280px] text-center whitespace-nowrap pointer-events-none tracking-normal uppercase text-jci-gray">
-          JCI AMBATO
-        </div>
-      </section> */}
-
       <section className="relative z-20">
         <div className="absolute left-0 right-0 top-[-145px] z-[3] opacity-20 text-[60px] sm:text-[100px] md:text-[150px] xl:text-[235px] font-black not-italic leading-[280px] text-center whitespace-nowrap pointer-events-none tracking-normal uppercase text-jci-gray">
           JCI AMBATO
@@ -61,11 +55,11 @@ export function Footer() {
               <div className="relative z-10 max-w-5xl mx-auto">
                 <figure className="mb-10">
                   <Image
-                    src="/images/jci.png"
                     alt="JCI Ambato Logo"
+                    className="object-contain w-[85px] h-[85px]"
+                    src="/images/logos/jci-ambato.webp"
                     width={85}
                     height={85}
-                    className="object-cover"
                   />
                 </figure>
 

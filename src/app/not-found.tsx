@@ -4,7 +4,7 @@ import { Button } from "@heroui/button";
 import Link from "next/link";
 import { useEffect } from "react";
 
-export default function Error({ error }: { error: Error }) {
+export default function NotFoundPage({ error }: { error: Error }) {
   useEffect(() => {
     // Log the error to an error reporting service
 

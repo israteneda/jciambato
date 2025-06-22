@@ -10,9 +10,9 @@ export default function MisionVision() {
                         <div className="flex">
 
                             {/* Texto Vertical */}
-                            <div className="hidden md:block absolute top-0 left-3 translate-x-[-50%] translate-y-[-50%] -rotate-90 origin-bottom-right">
-                                <div className="text-[#aeaeae] leading-none text-[11px] font-medium relative tracking-[2px] uppercase after:content-[''] after:absolute after:top-[6px] after:w-[160px] after:h-[1px] after:bg-[#aeaeae] after:right-[170px]">
-                                    A fantastic year
+                            <div className="hidden md:block absolute -top-20 left-3 translate-x-[-50%] translate-y-[-50%] -rotate-90 origin-bottom-right">
+                                <div className="text-[#aeaeae] leading-none text-[11px] font-medium relative tracking-[2px] uppercase after:content-[''] after:absolute after:top-[4px] after:w-[160px] after:h-[1px] after:bg-[#aeaeae] after:right-[260px]">
+                                    Nuestro Sentido de Propósito
                                 </div>
                             </div>
 
@@ -25,9 +25,9 @@ export default function MisionVision() {
                                 </div>
                                 <div className="mt-8">
                                     <div className="flex flex-col gap-3 text-gray-700 text-left text-medium leading-[1.78] max-w-[470px]">
-                                        <p>To create value with products and services designed and executed by motivated employees and partners</p>
+                                        <p>Crear oportunidades de desarrollo para que jóvenes se conviertan en agentes de cambio positivo</p>
 
-                                        <p>To create value with products and services designed and executed by motivated employees and partners, </p>
+                                        <p>Ser la red de liderazgo juvenil más reconocida y transformadora del mundo.</p>
                                     </div>
                                 </div>
                             </div>

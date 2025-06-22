@@ -1,36 +1,38 @@
-import ActividadesAnuales from "@/components/sections/nosotros/actividadesAnuales";
-import Bienvenida from "@/components/sections/nosotros/bienvenida";
-import MisionVision from "@/components/sections/nosotros/misionVision";
-import Presentacion from "@/components/sections/nosotros/presentacion";
-import Valores from "@/components/sections/nosotros/valores";
+import {
+    ActividadesAnuales,
+    Bienvenida,
+    MisionVision,
+    Presentacion,
+    Valores,
+} from "@/components/sections/nosotros";
 
 export const metadata = {
-  title: "Nosotros",
-  description: "Página de Nosotros",
+    title: "Sobre Nosotros — Liderazgo y Oportunidades",
+    description: "Página de Nosotros",
 };
 
-export default function Inicio() {
-  return (
-    <div>
-      <Bienvenida />
+export default function NosotrosPage() {
+    return (
+        <div className="relative">
+            <Bienvenida />
 
-      {/* Bloque espaciado */}
-      <div className="h-[700px] md:h-[640px]"></div>
-      <div
-        className="absolute top-0 w-full h-full bg-gray-50"
-        style={{ transform: 'translateY(99.9vh)' }}
-      >
-      </div>
+            {/* Bloque espaciado */}
+            <div className="h-[700px] md:h-[640px]"></div>
+            <div
+                className="absolute top-0 w-full h-full bg-gray-50"
+                style={{ transform: 'translateY(99.9vh)' }}
+            >
+            </div>
 
-      <Presentacion />
+            <Presentacion />
 
-      <MisionVision />
+            <MisionVision />
 
-      <Valores />
+            <Valores />
 
-      {/* <DescripcionPersonal /> */}
+            {/* <DescripcionPersonal /> */}
 
-      <ActividadesAnuales />
-    </div>
-  );
-}
+            <ActividadesAnuales />
+        </div>
+    );
+} 

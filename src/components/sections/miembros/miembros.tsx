@@ -1,216 +1,103 @@
 import Image from "next/image";
 
+const miembrosData = [
+    {
+        nombre: "Israel Teneda",
+        cargo: "Pasado Presidente",
+        imagen: "/images/miembros/miembro1.png",
+    },
+    {
+        nombre: "Gabriela González",
+        cargo: "Presidente Local",
+        imagen: "/images/miembros/miembro1.png",
+    },
+    {
+        nombre: "Mauricio",
+        cargo: "Director del Senado",
+        imagen: "/images/miembros/miembro1.png",
+    },
+    {
+        nombre: "Romina Benítez",
+        cargo: "Secretaria Local",
+        imagen: "/images/miembros/miembro1.png",
+    },
+    {
+        nombre: "Emilia Santamaría",
+        cargo: "Vicepresidenta Ejecutiva",
+        imagen: "/images/miembros/miembro1.png",
+    },
+    {
+        nombre: "Gabriela González",
+        cargo: "Tesorero Local",
+        imagen: "/images/miembros/miembro1.png",
+    },
+    {
+        nombre: "Miembro Ejemplo 1",
+        cargo: "Vocal",
+        imagen: null,
+    },
+    {
+        nombre: "Miembro Ejemplo 2",
+        cargo: "Vocal",
+        imagen: null,
+    },
+    {
+        nombre: "Miembro Ejemplo 3",
+        cargo: "Vocal",
+        imagen: null,
+    },
+];
+
+
 export default function Miembros() {
     return (
-        <div className="flex flex-col w-full">
-            <div className="flex justify-between mx-20 gap-32">
-                <p className="text-lg font-bold uppercase w-1/2 text-justify mb-8">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis consequuntur, amet minus
-                </p>
-                <p className="text-lg w-1/2 text-justify mb-8">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum nam nisi reiciendis nihil perspiciatis. Quae, tenetur suscipit ad voluptatem voluptatum similique nisi maxime dolorum earum eos ea est neque, obcaecati voluptas voluptates veniam blanditiis minima enim asperiores esse optio. Voluptates?
-                </p>
-            </div>
+        <div className="py-16 z-10">
+            <div className="container mx-auto px-4">
+                {/* Header */}
+                <div className="text-start mb-12">
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-800">
+                        Junta Directiva
+                    </h2>
+                    <p className="text-lg text-gray-600 mt-2 max-w-3xl">
+                        Conforma miembros que se encargan de la gestión de la Cámara Junior Internacional del Ecuador - Capítulo Ambato.
+                    </p>
+                </div>
 
-
-            {/* Miembros */}
-            <div>
-                <div className="flex gap-10 mx-20 my-10">
-                    <div className="flex flex-col items-center w-1/4">
-                        {/* Contenedor de la imagen con bordes redondeados específicos */}
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/images/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col items-center w-1/4">
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col items-center w-1/4">
-                        {/* Contenedor de la imagen con bordes redondeados específicos */}
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-
-                  
-
-                    <div className="flex flex-col items-center w-1/4 group">
-                        {/* Contenedor con fondo azul y bordes redondeados específicos */}
-                        <div className="w-full bg-jci-navy h-full rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col justify-between">
-
-                            {/* Contenido principal */}
-                            <div className="w-full p-6 flex flex-col h-full">
-                                {/* Logo JCI */}
-                                <div className="mb-4">
-                                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                                        </svg>
+                {/* Miembros Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 max-w-6xl mx-auto">
+                    {miembrosData.map((miembro, index) => (
+                        <div
+                            key={index}
+                            className={`flex flex-col items-center text-center group ${
+                                // Apply margin-top to the side elements in each row on large screens
+                                index % 3 !== 1 ? "lg:mt-12" : ""
+                                }`}
+                        >
+                            <div className="w-full bg-gray-300 overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
+                                {miembro.imagen ? (
+                                    <Image
+                                        src={miembro.imagen}
+                                        alt={`Foto de ${miembro.nombre}`}
+                                        width={400}
+                                        height={400}
+                                        className="w-full h-96 object-cover"
+                                    />
+                                ) : (
+                                    <div className="w-full h-96 bg-gray-400 flex items-center justify-center">
+                                        <span className="text-white text-lg">Próximamente</span>
                                     </div>
-                                </div>
-
-                                {/* Mensaje o dato curioso */}
-                                <div className="flex-grow">
-                                    <p className="text-base text-white leading-relaxed mb-4">
-                                        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, nostrum ab? Assumenda vero explicabo tempora."
-                                    </p>
-
-                                    {/* Decoración visual */}
-                                    <div className="w-12 h-1 bg-white/30 my-4"></div>
-                                </div>
-
-                                {/* Información del miembro */}
-                                <div className="mt-auto">
-                                    <h3 className="font-bold text-xl text-white mb-1">Juan Pérez</h3>
-                                    <p className="text-base text-white/70">
-                                        Presidente 2025
-                                    </p>
-                                </div>
+                                )}
                             </div>
 
-                            {/* Decoración en la esquina inferior */}
-                            <div className="absolute bottom-0 right-0 w-24 h-24 opacity-10">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-white">
-                                    <path fillRule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clipRule="evenodd" />
-                                    <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
-                                </svg>
+                            <div className="w-full py-5 text-start">
+                                <h3 className="font-bold text-xl text-jci-black">{miembro.nombre}</h3>
+                                <p className="text-md text-jci-gray">
+                                    {miembro.cargo}
+                                </p>
                             </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
-
-
-                <div className="flex gap-10 mx-20 my-10">
-                    <div className="flex flex-col items-center w-1/4">
-                        {/* Contenedor de la imagen con bordes redondeados específicos */}
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col items-center w-1/4">
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col items-center w-1/4">
-                        {/* Contenedor de la imagen con bordes redondeados específicos */}
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col items-center w-1/4">
-                        {/* Contenedor de la imagen con bordes redondeados específicos */}
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     );

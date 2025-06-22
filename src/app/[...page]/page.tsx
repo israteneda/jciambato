@@ -1,9 +1,8 @@
 "use client";
 
-import { builder } from "@builder.io/react";
-import { BuilderComponent } from "@builder.io/react";
+import { builder, BuilderComponent, useIsPreviewing } from "@builder.io/react";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, notFound } from "next/navigation";
 
 // Initialize Builder with your API key
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
@@ -15,11 +14,13 @@ interface BuilderContent {
 }
 
 export default function CatchAllPage() {
-  const [content, setContent] = useState<BuilderContent | undefined>(undefined);
+  const isPreviewing = useIsPreviewing();
+  const [content, setContent] = useState<BuilderContent | null>(null);
+  const [loading, setLoading] = useState(true);
   const pathname = usePathname();
 
   useEffect(() => {
-    // Fetch content from Builder.io based on the current path
+    setLoading(true);
     builder
       .get("page", {
         userAttributes: {
@@ -28,17 +29,24 @@ export default function CatchAllPage() {
       })
       .promise()
       .then((content) => {
-        setContent(content);
+        setContent(content as BuilderContent | null);
       })
       .catch((error) => {
         console.error("Error fetching Builder.io content:", error);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   }, [pathname]);
+
+  if (!loading && !content && !isPreviewing) {
+    notFound();
+  }
 
   return (
     <div className="w-full">
       <BuilderComponent
-        content={content}
+        content={content || undefined}
         data={{
           title: "Builder.io Page",
           path: pathname,

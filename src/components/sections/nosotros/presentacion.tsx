@@ -6,7 +6,7 @@ export default function Presentacion() {
             <div className="flex flex-col justify-center items-center">
                 {/* Información */}
                 <div className="w-full flex justify-center">
-                    <div className="relative mx-auto md:max-w-6xl py-20 px-8 md:px-24 pb-[120px] bg-white">
+                    <div className="relative mx-auto md:max-w-6xl py-20 px-8 md:px-24 pb-36 bg-white">
                         <div className="relative">
                             <div className="">
                                 <p className="text-xs leading-[1.85] font-bold uppercase text-jci-gray">
@@ -69,24 +69,24 @@ export default function Presentacion() {
                 </div>
 
                 {/* Fotografía */}
-                <div className="w-full px-6 md:px-0">
-                    <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-20">
+                <div className="w-full px-0">
+                    <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-8 md:gap-12 bg-white">
 
                         {/* Flecha solo visible en pantallas grandes */}
-                        <div className="hidden md:flex justify-center items-center">
+                        <div className="hidden md:flex justify-center items-center flex-shrink-0">
                             <Image
                                 src="/icons/arrow-down.svg"
                                 alt="Flecha decorativa"
-                                width={110}
-                                height={110}
-                                className="object-contain"
+                                width={120}
+                                height={120}
+                                className="object-contain w-[80px] h-[80px] md:w-[120px] md:h-[120px]"
                             />
                         </div>
 
                         {/* Imagen principal */}
-                        <div className="w-full md:w-[1182px] h-auto max-h-[470px] relative overflow-hidden">
+                        <div className="w-full md:w-auto md:flex-1 h-auto max-h-[470px] relative overflow-hidden">
                             <Image
-                                src="/images/secciones/miembros.jpeg"
+                                src="/images/secciones/miembros.webp"
                                 alt="Nosotros"
                                 width={1920}
                                 height={1080}

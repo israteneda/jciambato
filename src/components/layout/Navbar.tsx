@@ -14,7 +14,6 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { useState } from "react";
 import Image from "next/image";
-
 import { siteConfig } from "@/config/site";
 import { useScroll } from "@/hooks";
 
@@ -31,7 +30,8 @@ export const Navbar = ({ className }: NavbarProps) => {
     <HeroUINavbar
       className={clsx(
         "fixed top-0 left-0 right-0 transition-all duration-300 z-50",
-        isScrolled ? "bg-white shadow-md" : "bg-jci-navy",
+        // isScrolled ? "bg-white shadow-md" : "bg-jci-navy",
+        isScrolled ? "bg-white shadow-md" : "bg-transparent",
         className
       )}
       classNames={{
@@ -48,10 +48,12 @@ export const Navbar = ({ className }: NavbarProps) => {
           <NextLink href="/">
             <Image
               alt="JCI Ambato Logo"
-              className="object-contain"
-              height={85}
-              src={isScrolled ? "/images/logo-jci.png" : "/images/logo-blanco-jci.png"}
+              className="object-contain w-[85px] h-[85px]"
+              // src={isScrolled ? "/images/jci-ambato.webp" : "/images/jci-ambato-bw.webp"}
+              src="/images/logos/jci-ambato.webp"
               width={85}
+              height={85}
+              priority
             />
           </NextLink>
         </NavbarBrand>
@@ -70,15 +72,14 @@ export const Navbar = ({ className }: NavbarProps) => {
                   className={clsx(
                     "transition-colors duration-200",
                     isLast
-                      ? "text-jci-gold font-semibold hover:text-yellow-400" // Enhanced "Involúcrate" styling
-                      : "hover:text-jci-gold",
-                    isScrolled
-                      ? isActive
-                        ? "text-jci-navy font-semibold" // Active item when scrolled
-                        : "text-jci-black" // Regular item when scrolled
-                      : isActive
-                        ? "text-jci-gold font-semibold" // Active item before scroll
-                        : "text-white" // Regular item before scroll
+                      ? "text-jci-gold font-semibold hover:text-yellow-400"
+                      : isScrolled
+                        ? isActive
+                          ? "text-jci-gold"
+                          : "text-jci-black hover:text-jci-gold"
+                        : isActive
+                          ? "text-jci-gold"
+                          : "text-white hover:text-jci-gold"
                   )}
                   href={item.href}
                 >
@@ -90,7 +91,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         </ul>
 
         <div className="md:hidden">
-          <NavbarMenuToggle className="w-12 h-12 p-2" srOnlyText="Toggle navigation menu" />
+          <NavbarMenuToggle className="w-12 h-12 p-2 text-white" srOnlyText="Toggle navigation menu" />
         </div>
       </NavbarContent>
 
@@ -106,14 +107,13 @@ export const Navbar = ({ className }: NavbarProps) => {
                   className={clsx(
                     "transition-colors duration-200 text-lg",
                     isLast
-                      ? "text-jci-gold font-semibold px-4 py-2 rounded-full border-2 border-jci-gold hover:bg-jci-gold hover:text-white w-fit" // Added w-fit
+                      ? "text-jci-gold font-semibold hover:bg-jci-gold hover:text-white w-fit" // Added w-fit
                       : "hover:text-jci-gold",
                     isActive
                       ? "text-jci-navy font-semibold" // Active item
                       : "text-jci-black" // Regular item
                   )}
                   href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </NextLink>
@@ -122,6 +122,6 @@ export const Navbar = ({ className }: NavbarProps) => {
           })}
         </div>
       </NavbarMenu>
-    </HeroUINavbar>
+    </HeroUINavbar >
   );
 };
