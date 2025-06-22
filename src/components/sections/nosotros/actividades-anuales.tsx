@@ -14,12 +14,14 @@ import Image from "next/image";
 export default function ActividadesAnuales() {
     return (
         <section className="relative z-10 md:my-32">
-            <div>
+            <div className="mt-14 md:mt-28">
                 <BackgroundText
                     textoPrimario="Desarrollo"
                     textoSecundario="Somos Ambato"
-                    numberLeft={0.1}
+                    numberLeft={0.08}
                     numberRight={0.1}
+                    numberLeftMobile={0.05}
+                    numberRightMobile={0.03}
                 />
             </div>
 
@@ -28,7 +30,7 @@ export default function ActividadesAnuales() {
                     <div className="flex">
                         <div className="hidden md:block absolute top-[80px] left-0 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
                             <div className="relative text-[rgb(174,174,174)] leading-none text-[11px] font-medium not-italic tracking-[2px] whitespace-nowrap uppercase">
-                                Desde 2025
+                                Desde 1973
                                 <span className="absolute top-[6px] left-[-170px] w-[160px] h-[1px] bg-[rgb(174,174,174)] content-['']"></span>
                             </div>
                         </div>
@@ -36,12 +38,12 @@ export default function ActividadesAnuales() {
                         <div className="md:mr-48">
                             <div className="mt-20">
                                 <h3 className="text-4xl md:text-5xl font-bold not-italic text-left leading-[1.17] tracking-normal text-black md:max-w-[470px]">
-                                    20 years of great achievements
+                                    Un legado que trasciende generaciones.
                                 </h3>
                             </div>
                             <div className="mt-8">
                                 <div className="text-medium font-normal not-italic leading-[1.78] tracking-normal text-[rgb(50,50,50)] text-left md:max-w-[470px]">
-                                    Learn more about JCI Ambato and its history. We are a group of young people who are committed to the development of our community and the world. We believe that we can make a difference and we invite you to be part of this change.
+                                    Durante cinco décadas, JCI Ambato ha consolidado un liderazgo transformador, destacando en la formación de ciudadanos activos y en la ejecución de proyectos de alto impacto. Su historia se escribe con logros, desafíos superados y generaciones de jóvenes comprometidos con hacer de Ambato una ciudad más inclusiva, participativa y preparada para el futuro.
                                 </div>
                             </div>
                         </div>

@@ -16,6 +16,14 @@ export default function MiembrosPage() {
       {/* Sección de Bienvenida */}
       <Bienvenida />
 
+      {/* Bloque espaciado */}
+      <div className="h-screen"></div>
+      <div
+        className="absolute top-0 w-full h-full bg-gray-50"
+        style={{ transform: 'translateY(99.9vh)' }}
+      >
+      </div>
+
       <Miembros />
 
       <MiembrosGenerales />

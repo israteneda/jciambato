@@ -90,9 +90,9 @@ export default function Bienvenida() {
             <Image
               src="/icons/arrow-down.svg"
               alt="Flecha hacia abajo"
-              width={500}
-              height={500}
-              className="relative w-[20px] h-[20px] object-cover"
+              width={30}
+              height={30}
+              className="relative w-[30px] h-[30px] object-contain"
             />
           </button>
         </div>

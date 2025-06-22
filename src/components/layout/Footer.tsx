@@ -17,10 +17,10 @@ export function Footer() {
               <div className="flex flex-col md:flex-row items-start md:items-center">
                 <div>
                   <span className="text-xs text-white line-clamp-1 uppercase tracking-widest">
-                    Conviértete en un líder
+                  Conoce, Suma, Transforma
                   </span>
                   <h2 className="mt-8 text-4xl md:text-5xl max-w-2xl  font-medium tracking-tight text-white">
-                    ¿Tienes un proyecto en mente?
+                    Tienes un proyecto en mente?
                   </h2>
                 </div>
 

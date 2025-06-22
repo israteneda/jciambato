@@ -66,7 +66,7 @@ const miembrosData = [
 
 export default function MiembrosGenerales() {
     return (
-        <div className="py-16">
+        <div className="py-16 z-10">
             <div className="container mx-11 lg:mx-auto">
                 {/* Header */}
                 <div className="text-start mb-12">

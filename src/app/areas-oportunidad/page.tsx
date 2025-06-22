@@ -8,11 +8,9 @@ export const metadata = {
 
 export default function AreasOportunidadPage() {
   return (
-    <div>
-      {/* Sección de Bienvenida */}
+    <div className="relative">
       <Bienvenida />
 
-      {/* Seccion de Áreas de Oportunidad	 */}
       <AreasOportunidad />
     </div>
   );

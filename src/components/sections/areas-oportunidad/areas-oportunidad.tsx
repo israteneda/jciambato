@@ -30,8 +30,7 @@ export default function AreasOportunidad() {
                                 </div>
                                 <div className="mt-5">
                                     <div className="text-md font-normal not-italic text-left leading-[1.78] tracking-normal text-jci-gray max-w-[372px]">
-                                        Martifer Metallic Constructions is a globally recognised player in the sector. It provides global and innovative engineering solutions in the segments of metallic constructions, aluminium and glass façades, and oil & gas.
-
+                                        Impulsamos la cultura emprendedora. Creamos espacios donde las ideas se convierten en negocios y los jóvenes acceden a herramientas reales, mentoría y redes estratégicas.
                                     </div>
                                 </div>
                             </div>
@@ -104,8 +103,7 @@ export default function AreasOportunidad() {
                                 </div>
                                 <div className="mt-5">
                                     <div className="text-md font-normal not-italic text-left leading-[1.78] tracking-normal text-jci-gray max-w-[372px]">
-                                        Martifer Metallic Constructions is a globally recognised player in the sector. It provides global and innovative engineering solutions in the segments of metallic constructions, aluminium and glass façades, and oil & gas.
-
+                                        Participamos en academias, hermanamientos y eventos globales para conectar a nuestros miembros con una red mundial de líderes comprometidos.
                                     </div>
                                 </div>
                             </div>
@@ -178,8 +176,7 @@ export default function AreasOportunidad() {
                                 </div>
                                 <div className="mt-5">
                                     <div className="text-md font-normal not-italic text-left leading-[1.78] tracking-normal text-jci-gray max-w-[372px]">
-                                        Martifer Metallic Constructions is a globally recognised player in the sector. It provides global and innovative engineering solutions in the segments of metallic constructions, aluminium and glass façades, and oil & gas.
-
+                                        Formamos líderes desde adentro: oratoria, inteligencia emocional, liderazgo ético y más. Nuestro objetivo es empoderar al ser para impactar mejor.
                                     </div>
                                 </div>
                             </div>
@@ -252,8 +249,7 @@ export default function AreasOportunidad() {
                                 </div>
                                 <div className="mt-5">
                                     <div className="text-md font-normal not-italic text-left leading-[1.78] tracking-normal text-jci-gray max-w-[372px]">
-                                        Martifer Metallic Constructions is a globally recognised player in the sector. It provides global and innovative engineering solutions in the segments of metallic constructions, aluminium and glass façades, and oil & gas.
-
+                                        La acción social es nuestra bandera. Trabajamos en proyectos que mejoran vidas, fortalecen barrios y transforman realidades locales.
                                     </div>
                                 </div>
                             </div>

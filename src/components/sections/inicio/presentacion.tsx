@@ -38,6 +38,8 @@ export default function Presentacion() {
               textoSecundario="LIDERAZGO"
               numberLeft={0.1}
               numberRight={0.1}
+              numberLeftMobile={0.03}
+              numberRightMobile={0.03}
             />
           </div>
         </div>

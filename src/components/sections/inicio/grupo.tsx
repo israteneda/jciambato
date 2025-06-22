@@ -20,7 +20,7 @@ export default function Grupo() {
 
         <div className="-mt-¨[336px] lg:-mt-64">
           {/* Titulo Principal */}
-          <div className="relative z-10 bg-transparent w-full max-w-[1156px] mx-auto px-[30px]">
+          <div className="relative z-10 bg-transparent w-full max-w-6xl mx-auto px-8">
 
             <div className="text-[13px] leading-[1.85] uppercase text-jci-gold font-bold tracking-normal">
               Grupo JCI
@@ -32,16 +32,16 @@ export default function Grupo() {
             </div>
           </div>
 
-          <div className="relative z-10 bg-transparent w-full max-w-[1156px] mx-auto px-[30px]">
+          <div className="relative z-10 bg-transparent w-full max-w-6xl px-8 md:mx-auto">
 
             <div className="relative md:flex">
               {/* Descripción */}
               <div className="flex-1 grow shrink basis-0 md:ml-16">
                 <div className="mt-8">
-                  <div className="text-[18px] font-normal normal-case leading-[1.78] tracking-normal text-jci-gray text-left max-w-[333px] lg:text-[calc(15.6px+0.125vw)]">
+                  <div className="text-lg font-normal normal-case leading-[1.78] tracking-normal text-jci-gray text-left max-w-lg">
                     <p>
-                      <strong>Somos líderes y emprendedores.</strong>
-                      Conformamos un equipo comprometido con la construcción de un legado transformador que impulse el desarrollo de nuestras comunidades.
+                      <strong>No nacimos para ser espectadores.</strong>
+                      En JCI Ambato, lideramos con propósito, servimos con pasión y construimos un mañana con cada acción que emprendemos
                     </p>
                   </div>
                 </div>
@@ -63,7 +63,7 @@ export default function Grupo() {
 
               {/* Información de la fotografía, visible en pantallas grandes */}
               <div className="hidden md:block flex-1 grow shrink basis-0">
-                <div className="absolute top-0 right-[20px] origin-left transform translate-x-[100%] translate-y-[50%] rotate-90">
+                <div className="absolute -top-24 right-[20px] origin-left transform translate-x-[100%] translate-y-[50%] rotate-90">
                   <div className="relative text-[11px] font-medium leading-none tracking-[2px] text-[rgb(174,174,174)] uppercase pl-[170px]">
                     <div className="absolute left-0 top-[5px] w-[160px] h-[1px] bg-[rgb(174,174,174)]"></div>
                     Sesión Solemne por los 50 años de JCI Ambato, 2025
@@ -72,34 +72,34 @@ export default function Grupo() {
               </div>
 
               {/* Estadisticas */}
-              <div className="relative flex-1 grow shrink basis-0 md:mt-[120px]">
-                <div className="flex flex-wrap gap-10 mt-8 mr-28">
+              <div className="relative flex-1 grow shrink basis-0 md:mt-28 mr-28">
+                <div className="flex flex-wrap gap-10">
 
-                  <div className="md:mt-[48px]">
-                    <div className="text-jci-navy text-[calc(44px+3.125vw)] leading-[1] font-light tracking-[-5px] ">
+                  <div className="mt-20">
+                    <div className="text-jci-navy text-[calc(50px+3.125vw)] leading-[1] font-light tracking-[-5px] ">
                       <span>+50</span>
                     </div>
-                    <div className="text-[calc(13.6px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
-                      <p><strong>Años</strong> en Ambato</p>
+                    <div className="text-[calc(15px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
+                      <p><strong>Años</strong> inspirando líderes</p>
                     </div>
                   </div>
 
                   <div className="flex flex-col md:flex-row w-full gap-10">
                     <div className="flex-1">
-                      <div className="text-jci-navy text-[calc(44px+3.125vw)] leading-[1] tracking-[-5px] font-light">
+                      <div className="text-jci-navy text-[calc(50px+3.125vw)] leading-[1] tracking-[-5px] font-light">
                         <span>+200</span>
                       </div>
-                      <div className="text-[calc(13.6px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
+                      <div className="text-[calc(15px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
                         <p><strong>Proyectos</strong> ejecutados</p>
                       </div>
                     </div>
 
                     <div className="flex-1">
-                      <div className="text-jci-navy text-[calc(44px+3.125vw)] leading-[1] font-light tracking-[-5px] ">
-                        <span>+30</span>
+                      <div className="text-jci-navy text-[calc(50px+3.125vw)] leading-[1] font-light tracking-[-5px] ">
+                        <span>+500</span>
                       </div>
-                      <div className="text-[calc(13.6px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
-                        <p><strong>Miembros</strong> activos</p>
+                      <div className="text-[calc(15px+0.125vw)] text-left mt-1 max-w-[180px] uppercase leading-[1.5] tracking-normal">
+                        <p><strong>Jóvenes</strong> formados y empoderados</p>
                       </div>
                     </div>
                   </div>
