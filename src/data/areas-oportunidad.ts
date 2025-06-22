@@ -5,6 +5,7 @@ export type AreaOportunidad = {
   subtitle: string;
   description: string;
   image: string;
+  background_image: string;
   features: string[];
   longDescription?: string;
 };
@@ -14,50 +15,50 @@ export const areasOportunidad: AreaOportunidad[] = [
     id: "1",
     slug: "negocios-emprendimiento",
     title: "Negocios y Emprendimiento",
-    subtitle: "Impulsamos la cultura emprendedora",
-    description:
-      "Impulsamos la cultura emprendedora. Creamos espacios donde las ideas se convierten en negocios y los jóvenes acceden a herramientas reales, mentoría y redes estratégicas.",
-    image: "/images/areas_oportunidad/area.webp",
-    features: ["Emprendimiento", "Negocios", "Mentoría"],
+    subtitle: "Fomentando el espíritu emprendedor",
+    description: "Fomentamos el emprendimiento, transformando ideas en negocios con mentoría, herramientas y redes estratégicas.",
+    image: "/images/areas_oportunidad/negocios-emprendimiento/negocios-emprendimiento.webp",
+    background_image: "/images/areas_oportunidad/negocios-emprendimiento/negocios-emprendimiento-back.webp",
+    features: ["Emprendimiento", "Innovación Empresarial", "Redes de Negocios"],
     longDescription:
-      "En JCI Ambato, creemos que el emprendimiento es la fuerza motriz del desarrollo económico y social. Nuestro programa de Negocios y Emprendimiento está diseñado para empoderar a jóvenes visionarios con las herramientas, conocimientos y conexiones necesarias para transformar sus ideas en empresas exitosas.",
+      "En JCI, impulsamos el emprendimiento como motor de desarrollo económico y social. Nuestro programa de Negocios y Emprendimiento empodera a jóvenes visionarios, proporcionándoles herramientas prácticas, mentorías especializadas y acceso a una red global de contactos. A través de talleres, eventos y proyectos, transformamos ideas innovadoras en empresas sostenibles que generan impacto positivo en las comunidades locales y globales."
   },
   {
     id: "2",
     slug: "cooperacion-internacional",
     title: "Cooperación Internacional",
-    subtitle: "Participamos en academias",
-    description:
-      "Participamos en academias, hermanamientos y eventos globales para conectar a nuestros miembros con una red mundial de líderes comprometidos.",
-    image: "/images/areas_oportunidad/area.webp",
-    features: ["Academias", "Hermanamientos", "Eventos Globales"],
+    subtitle: "Conectando líderes globales",
+    description: "Conectamos líderes a través de academias, hermanamientos y eventos globales para un impacto mundial.",
+    image: "/images/areas_oportunidad/cooperacion-internacional/cooperacion-internacional.webp",
+    background_image: "/images/areas_oportunidad/cooperacion-internacional/cooperacion-internacional-back.webp",
+    features: ["Intercambio Cultural", "Redes Globales", "Liderazgo Internacional"],
     longDescription:
-      "La cooperación internacional es fundamental para el desarrollo de líderes globales. A través de nuestra red mundial de JCI, conectamos a nuestros miembros con oportunidades únicas de aprendizaje, intercambio cultural y colaboración internacional.",
+      "La Cooperación Internacional de JCI fomenta el liderazgo global mediante conexiones significativas. A través de academias, hermanamientos y eventos internacionales, nuestros miembros acceden a una red mundial de jóvenes líderes. Estas experiencias promueven el intercambio cultural, la colaboración y el desarrollo de soluciones innovadoras para desafíos globales, fortaleciendo la comprensión mutua y el impacto sostenible en comunidades de todo el mundo."
   },
   {
     id: "3",
     slug: "desarrollo-individual",
     title: "Desarrollo Individual",
-    subtitle: "Formamos líderes desde adentro",
-    description:
-      "Formamos líderes desde adentro: oratoria, inteligencia emocional, liderazgo ético y más. Nuestro objetivo es empoderar al ser para impactar mejor.",
-    image: "/images/areas_oportunidad/area.webp",
-    features: ["Oratoria", "Inteligencia Emocional", "Liderazgo Ético"],
+    subtitle: "Forjando líderes integrales",
+    description: "Forjamos líderes con oratoria, inteligencia emocional y liderazgo ético para un impacto transformador.",
+    image: "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual.webp",
+    background_image: "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual-back.webp",
+    features: ["Liderazgo Ético", "Oratoria", "Inteligencia Emocional"],
     longDescription:
-      "El desarrollo personal es la base del liderazgo efectivo. Nuestro programa de Desarrollo Individual se enfoca en fortalecer las habilidades blandas, la inteligencia emocional y las competencias de liderazgo que son esenciales para el éxito en cualquier ámbito.",
+      "El Desarrollo Individual es el pilar del liderazgo transformador en JCI. Nuestro programa fortalece habilidades esenciales como la oratoria, la inteligencia emocional y el liderazgo ético. A través de capacitaciones dinámicas y experiencias prácticas, empoderamos a los jóvenes para que descubran su potencial, tomen decisiones informadas y lideren con impacto en sus comunidades y más allá."
   },
   {
     id: "4",
     slug: "impacto-comunidad",
     title: "Impacto en la Comunidad",
-    subtitle: "La acción social es nuestra bandera",
-    description:
-      "La acción social es nuestra bandera. Trabajamos en proyectos que mejoran vidas, fortalecen barrios y transforman realidades locales.",
-    image: "/images/areas_oportunidad/area.webp",
-    features: ["Acciones Sociales", "Proyectos de Impacto", "Colaboración Internacional"],
+    subtitle: "Transformando vidas localmente",
+    description: "Transformamos comunidades con proyectos sociales que mejoran vidas y generan cambios sostenibles.",
+    image: "/images/areas_oportunidad/impacto-comunidad/impacto-comunidad.webp",
+    background_image: "/images/areas_oportunidad/impacto-comunidad/impacto-comunidad-back.webp",
+    features: ["Impacto Social", "Proyectos Sostenibles", "Ciudadanía Activa"],
     longDescription:
-      "Creemos en el poder transformador de la acción social. Nuestro programa de Impacto en la Comunidad se dedica a identificar y ejecutar proyectos que generen un cambio positivo y duradero en nuestra sociedad.",
-  },
+      "En JCI, el Impacto en la Comunidad es nuestra misión principal. Diseñamos y ejecutamos proyectos sociales que abordan desafíos locales, desde mejorar la calidad de vida hasta fortalecer el tejido social. Con un enfoque en sostenibilidad y ciudadanía activa, trabajamos junto a las comunidades para crear soluciones innovadoras que generan cambios positivos y duraderos."
+  }
 ];
 
 export function getAreaBySlug(slug: string): AreaOportunidad | undefined {

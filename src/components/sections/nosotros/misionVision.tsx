@@ -8,21 +8,19 @@ export default function MisionVision() {
                     {/* Caja de Información */}
                     <div>
                         <div className="flex">
-
                             {/* Texto Vertical */}
                             <div className="hidden md:block absolute -top-20 left-3 translate-x-[-50%] translate-y-[-50%] -rotate-90 origin-bottom-right">
-                                <div className="text-[#aeaeae] leading-none text-[11px] font-medium relative tracking-[2px] uppercase after:content-[''] after:absolute after:top-[4px] after:w-[160px] after:h-[1px] after:bg-[#aeaeae] after:right-[260px]">
+                                <div className="text-[#aeaeae] leading-none text-[11px] font-medium relative tracking-[2px] uppercase after:content-[''] after:absolute after:top-[4px] after:w-[160px] after:h-[1px] after:bg-[#aeaeae] after:right-[260px]" aria-hidden="true">
                                     Nuestro Sentido de Propósito
                                 </div>
                             </div>
 
-
                             <div className="relative md:ml-44">
-                                <div className="">
-                                    <h3 className="text-4xl text-black font-semibold leading-2 text-left">
-                                        Muestra Misión <br /> y Visión
-                                    </h3>
-                                </div>
+                                <header>
+                                    <h2 className="text-4xl text-black font-semibold leading-2 text-left">
+                                        Nuestra Misión <br /> y Visión
+                                    </h2>
+                                </header>
                                 <div className="mt-8">
                                     <div className="flex flex-col gap-3 text-gray-700 text-left text-medium leading-[1.78] max-w-[470px]">
                                         <p>Crear oportunidades de desarrollo para que jóvenes se conviertan en agentes de cambio positivo</p>
@@ -32,19 +30,18 @@ export default function MisionVision() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     {/* Caja de Imagen */}
-                    <div>
+                    <figure>
                         <Image
                             src="/icons/eye.svg"
-                            alt="Misión y Visión"
+                            alt="Icono representativo de misión y visión"
                             width={500}
                             height={500}
                             className="w-[220px] h-[220px] md:w-[320px] md:h-[320px] object-cover"
                         />
-                    </div>
+                    </figure>
                 </div>
             </div>
         </section>

@@ -12,7 +12,7 @@ export default function BorderFrame({ isScrolled }: BorderFrameProps) {
                 isScrolled ? "border-[22px] lg:border-[55px]" : "border-0"
             )}
             aria-hidden="true"
+            role="presentation"
         />
-
     );
 }

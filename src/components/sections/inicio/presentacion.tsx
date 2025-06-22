@@ -9,14 +9,17 @@ export default function Presentacion() {
       <div className="pt-20 md:pt-28 lg:pt-32 xl:pt-40 pb-20 md:pb-28 lg:pb-32 xl:pb-40">
         <div className="overflow-hidden">
           <div className="relative z-10 w-[calc(100% - 60px)] md:w-[1156px] mx-8 md:mx-auto">
-            <div className="text-xs leading-[1.85] uppercase text-jci-aqua font-bold tracking-normal">
-              En Ambato
-            </div>
-            <div className="mt-8">
-              <div className="text-4xl md:text-[65px] font-[250] text-left text-jci-black leading-[1.1] tracking-[-1px] max-w-xl md:max-w-[calc(75%)]">
-                A lo largo de mas de 50 años, JCI Ambato a fomentado del desarrollo de líderes en la ciudad.
+            <header>
+              <div className="text-xs leading-[1.85] uppercase text-jci-aqua font-bold tracking-normal">
+                En Ambato
               </div>
-            </div>
+              <div className="mt-8">
+                <h2 className="text-4xl md:text-[65px] font-[250] text-left text-jci-black leading-[1.1] tracking-[-1px] max-w-xl md:max-w-[calc(75%)]">
+                  A lo largo de más de 50 años, JCI Ambato ha fomentado el desarrollo de líderes en la ciudad.
+                </h2>
+              </div>
+            </header>
+
             <div className="mt-16">
               <Button
                 radius="none"

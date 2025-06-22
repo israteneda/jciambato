@@ -65,11 +65,12 @@ const BackgroundText = ({
   );
 
   return (
-    <div className='overflow-hidden mx-auto select-none'>
+    <section className='overflow-hidden mx-auto select-none' aria-hidden="true">
       <h2
         className={baseTextStyle}
         style={translateStyles.left}
-        aria-hidden
+        aria-hidden="true"
+        role="presentation"
       >
         {textoPrimario}
       </h2>
@@ -77,11 +78,12 @@ const BackgroundText = ({
       <h2
         className={baseTextStyle}
         style={translateStyles.right}
-        aria-hidden
+        aria-hidden="true"
+        role="presentation"
       >
         {textoSecundario}
       </h2>
-    </div>
+    </section>
   );
 };
 

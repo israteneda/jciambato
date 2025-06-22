@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 
 export default function ActividadesPage() {
   return (
-    <div>
+    <main>
       {/* Sección de Bienvenida */}
 
       <Bienvenida />
-      <div className="h-[640px]"></div>
+      <div className="h-[640px]" aria-hidden="true"></div>
 
       <Actividades />
 
-    </div>
+    </main>
   );
 }

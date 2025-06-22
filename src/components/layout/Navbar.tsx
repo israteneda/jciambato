@@ -102,10 +102,12 @@ export const Navbar = ({ className }: NavbarProps) => {
       maxWidth="xl"
       position="static"
       onMenuOpenChange={setIsMenuOpen}
+      role="banner"
+      aria-label="Navegación principal"
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink href="/">
+          <NextLink href="/" aria-label="Ir a la página de inicio">
             <Image
               alt="JCI Ambato Logo"
               className="object-contain w-[85px] h-[85px]"
@@ -120,26 +122,30 @@ export const Navbar = ({ className }: NavbarProps) => {
 
       {/* Sección de navegación */}
       <NavbarContent className="flex basis-1/5 sm:basis-full" justify="end">
-        <ul className="hidden md:flex gap-8 justify-start ml-2">
-          {siteConfig.navItems.map((item, index) => {
-            const isLast = index === siteConfig.navItems.length - 1;
-            const isActive = pathname === item.href;
+        <nav className="hidden md:block" aria-label="Navegación principal">
+          <ul className="flex gap-8 justify-start ml-2" role="menubar">
+            {siteConfig.navItems.map((item, index) => {
+              const isLast = index === siteConfig.navItems.length - 1;
+              const isActive = pathname === item.href;
 
-            return (
-              <NavbarItem key={item.href}>
-                <NextLink
-                  className={clsx(
-                    "transition-colors duration-200",
-                    getTextColor(isActive, isLast)
-                  )}
-                  href={item.href}
-                >
-                  {item.label}
-                </NextLink>
-              </NavbarItem>
-            );
-          })}
-        </ul>
+              return (
+                <NavbarItem key={item.href} role="none">
+                  <NextLink
+                    className={clsx(
+                      "transition-colors duration-200",
+                      getTextColor(isActive, isLast)
+                    )}
+                    href={item.href}
+                    role="menuitem"
+                    aria-current={isActive ? "page" : undefined}
+                  >
+                    {item.label}
+                  </NextLink>
+                </NavbarItem>
+              );
+            })}
+          </ul>
+        </nav>
 
         <div className="md:hidden">
           <NavbarMenuToggle
@@ -147,13 +153,20 @@ export const Navbar = ({ className }: NavbarProps) => {
               "w-12 h-12 p-2",
               shouldUseDarkText ? "text-jci-black" : "text-white"
             )}
-            srOnlyText="Toggle navigation menu"
+            srOnlyText="Abrir menú de navegación"
+            aria-label="Abrir menú de navegación"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           />
         </div>
       </NavbarContent>
 
-      <NavbarMenu className={clsx("bg-white")}>
-        <div className="mx-4 mt-6 flex flex-col gap-4">
+      <NavbarMenu
+        className={clsx("bg-white")}
+        id="mobile-menu"
+        aria-label="Menú de navegación móvil"
+      >
+        <nav className="mx-4 mt-6 flex flex-col gap-4" aria-label="Navegación móvil">
           {siteConfig.navItems.map((item, index) => {
             const isLast = index === siteConfig.navItems.length - 1;
             const isActive = pathname === item.href;
@@ -166,13 +179,14 @@ export const Navbar = ({ className }: NavbarProps) => {
                     getMobileTextColor(isActive, isLast)
                   )}
                   href={item.href}
+                  aria-current={isActive ? "page" : undefined}
                 >
                   {item.label}
                 </NextLink>
               </NavbarMenuItem>
             );
           })}
-        </div>
+        </nav>
       </NavbarMenu>
     </HeroUINavbar >
   );

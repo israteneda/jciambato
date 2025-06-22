@@ -121,7 +121,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                         </div>
 
                         <div className="flex space-x-4">
-                            <button className="construccion-prev p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors">
+                            <button className="construccion-prev p-2">
                                 <Image
                                     src="/icons/arrow-down.svg"
                                     alt="Anterior"
@@ -131,7 +131,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                                 />
                             </button>
 
-                            <button className="construccion-next p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors">
+                            <button className="construccion-next p-2">
                                 <Image
                                     src="/icons/arrow-down.svg"
                                     alt="Siguiente"

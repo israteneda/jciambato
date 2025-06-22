@@ -51,29 +51,30 @@ const miembrosData = [
 
 export default function Miembros() {
     return (
-        <div className="relative py-16 z-10">
+        <section className="relative py-16 z-10" aria-labelledby="junta-directiva-heading">
             <div className="max-w-6xl mx-8 lg:mx-auto">
                 {/* Header */}
-                <div className="text-start mb-12">
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-800">
+                <header className="text-start mb-12">
+                    <h2 id="junta-directiva-heading" className="text-3xl md:text-5xl font-bold text-gray-800">
                         Junta Directiva
                     </h2>
                     <p className="text-lg text-gray-600 mt-2 max-w-3xl">
                         Conforma miembros que se encargan de la gestión de la Cámara Junior Internacional del Ecuador - Capítulo Ambato.
                     </p>
-                </div>
+                </header>
 
                 {/* Miembros Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16" role="list" aria-label="Lista de miembros de la junta directiva">
                     {miembrosData.map((miembro, index) => (
-                        <div
+                        <article
                             key={index}
                             className={`flex flex-col items-center text-center group ${
                                 // Apply margin-top to the side elements in each row on large screens
                                 index % 3 !== 1 ? "lg:mt-12" : ""
                                 }`}
+                            role="listitem"
                         >
-                            <div className="w-full bg-gray-300 overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
+                            <figure className="w-full bg-gray-300 overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
                                 {miembro.imagen ? (
                                     <Image
                                         src={miembro.imagen}
@@ -87,7 +88,7 @@ export default function Miembros() {
                                         <span className="text-white h-full text-lg">Próximamente</span>
                                     </div>
                                 )}
-                            </div>
+                            </figure>
 
                             <div className="w-full py-5 text-start">
                                 <h3 className="font-bold text-xl text-jci-black">{miembro.nombre}</h3>
@@ -95,10 +96,10 @@ export default function Miembros() {
                                     {miembro.cargo}
                                 </p>
                             </div>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

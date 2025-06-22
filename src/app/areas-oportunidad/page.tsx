@@ -8,10 +8,10 @@ export const metadata = {
 
 export default function AreasOportunidadPage() {
   return (
-    <div className="relative">
+    <main className="relative">
       <Bienvenida />
 
       <AreasOportunidad />
-    </div>
+    </main>
   );
 }

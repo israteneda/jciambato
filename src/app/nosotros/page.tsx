@@ -13,14 +13,15 @@ export const metadata = {
 
 export default function NosotrosPage() {
     return (
-        <div className="relative">
+        <main className="relative">
             <Bienvenida />
 
             {/* Bloque espaciado */}
-            <div className="h-[700px] md:h-[640px]"></div>
+            <div className="h-[700px] md:h-[640px]" aria-hidden="true"></div>
             <div
                 className="absolute top-0 w-full h-full bg-gray-50"
                 style={{ transform: 'translateY(99.9vh)' }}
+                aria-hidden="true"
             >
             </div>
 
@@ -33,6 +34,6 @@ export default function NosotrosPage() {
             {/* <DescripcionPersonal /> */}
 
             <ActividadesAnuales />
-        </div>
+        </main>
     );
 } 

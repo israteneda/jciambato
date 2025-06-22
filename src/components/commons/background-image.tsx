@@ -2,15 +2,16 @@ import Image from "next/image";
 
 interface BackgroundImageProps {
     image: string;
+    alt?: string;
 }
 
-export default function BackgroundImage({ image }: BackgroundImageProps) {
+export default function BackgroundImage({ image, alt = "Imagen de fondo" }: BackgroundImageProps) {
     return (
-        <div className="absolute inset-0 overflow-hidden">
+        <figure className="absolute inset-0 overflow-hidden" aria-hidden="true">
             <div className="relative bg-white w-full h-full overflow-hidden" >
                 <Image
                     src={image}
-                    alt="Texto alternativo"
+                    alt={alt}
                     fill
                     className="absolute h-full w-full inset-0 bg-transparent object-cover"
                 />
@@ -18,6 +19,6 @@ export default function BackgroundImage({ image }: BackgroundImageProps) {
 
             {/* Fondo Oscuro */}
             <div className="absolute inset-0 bg-black/50" aria-hidden="true"></div>
-        </div>
+        </figure>
     );
 }
