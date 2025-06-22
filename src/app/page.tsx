@@ -25,18 +25,17 @@ Builder.isStatic = false;
 
 export default function BuilderPage() {
   const [content, setContent] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const pathname = usePathname();
 
   const fetchContent = useCallback(async () => {
+    // Si no hay API key de Builder.io, simplemente no hacer nada
     if (!process.env.NEXT_PUBLIC_BUILDER_API_KEY) {
-      console.warn("Builder.io API key not found");
-      setLoading(false);
+      console.log("Builder.io no configurado - usando contenido estático");
       return;
     }
 
     try {
-      setLoading(true);
       const builderContent = await builder
         .get("page", {
           userAttributes: {
@@ -48,8 +47,7 @@ export default function BuilderPage() {
       setContent(builderContent);
     } catch (error) {
       console.error("Error fetching Builder.io content:", error);
-    } finally {
-      setLoading(false);
+      setError("Error al cargar el contenido dinámico");
     }
   }, [pathname]);
 
@@ -59,7 +57,8 @@ export default function BuilderPage() {
 
   return (
     <>
-      {!loading && (
+      {/* Builder.io Content - solo mostrar si hay contenido */}
+      {content && (
         <BuilderComponent
           content={content}
           data={{
@@ -71,7 +70,7 @@ export default function BuilderPage() {
         />
       )}
 
-      {/* Legacy Sections */}
+      {/* Static Content - siempre mostrar inmediatamente */}
       <div>
         {/* Sección de Bienvenida */}
         <Bienvenida />
@@ -91,6 +90,13 @@ export default function BuilderPage() {
         {/* Noticias y Eventos */}
         <NoticiasEventos />
       </div>
+
+      {/* Error message - solo mostrar si hay error real */}
+      {error && (
+        <div className="fixed bottom-4 right-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+          <p className="text-sm">{error}</p>
+        </div>
+      )}
     </>
   );
 }

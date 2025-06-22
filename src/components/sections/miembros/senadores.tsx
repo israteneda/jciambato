@@ -1,68 +1,6 @@
+import { senadoresData } from "@/data/senadores";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
-
-const miembrosData = [
-    {
-        nombre: "Scott Belsky",
-        cargo: "Board Member",
-        imagen: "/images/miembros/miembro1.png",
-        social: { instagram: "#", linkedin: "#" },
-    },
-    {
-        nombre: "Shona Brown",
-        cargo: "Chair of the Board",
-        imagen: "/images/miembros/miembro1.png",
-        social: { instagram: "#", linkedin: "#" },
-    },
-    {
-        nombre: "Mike Cannon-Brookes",
-        cargo: "Board Member",
-        imagen: "/images/miembros/miembro1.png",
-        social: { instagram: "#", linkedin: "#" },
-    },
-    {
-        nombre: "Scott Farquhar",
-        cargo: "Board Member",
-        imagen: "/images/miembros/miembro1.png",
-        social: { instagram: "#", linkedin: "#" },
-    },
-    {
-        nombre: "Heather M. Fernandez",
-        cargo: "Board Member",
-        imagen: "/images/miembros/miembro1.png",
-        social: { instagram: "#", linkedin: "#" },
-    },
-    {
-        nombre: "Sasan Goodarzi",
-        cargo: "Board Member",
-        imagen: "/images/miembros/miembro1.png",
-        social: { instagram: "#", linkedin: "#" },
-    },
-    {
-        nombre: "Karen Dykstra",
-        cargo: "Board Member",
-        imagen: "/images/miembros/miembro1.png",
-        social: { instagram: "#", linkedin: "#" },
-    },
-    {
-        nombre: "Christian Smith",
-        cargo: "Board Member",
-        imagen: "/images/miembros/miembro1.png",
-        social: { instagram: "#", linkedin: "#" },
-    },
-    {
-        nombre: "Steve Sordello",
-        cargo: "Board Member",
-        imagen: "/images/miembros/miembro1.png",
-        social: { instagram: "#", linkedin: "#" },
-    },
-    {
-        nombre: "Rich Wong",
-        cargo: "Board Member",
-        imagen: "/images/miembros/miembro1.png",
-        social: { instagram: "#", linkedin: "#" },
-    },
-];
 
 export default function Senadores() {
     return (
@@ -80,7 +18,7 @@ export default function Senadores() {
 
                 {/* Miembros Grid */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-12" role="list" aria-label="Lista de senadores">
-                    {miembrosData.map((miembro, index) => (
+                    {senadoresData.map((miembro, index) => (
                         <article key={index} className="flex flex-col items-center text-center" role="listitem">
                             <figure className="w-32 h-32 mb-4">
                                 <Image
