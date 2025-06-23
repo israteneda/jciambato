@@ -1,51 +1,51 @@
 "use client";
+
 import { useScroll } from "@/hooks";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Image from "next/image";
-import clsx from "clsx";
 import { Button } from "@heroui/button";
 import Link from "next/link";
+import BorderFrame from "@/components/commons/border-frame";
+import RotatedText from "@/components/commons/rotated-text";
 
 
 export default function Bienvenida() {
   const isScrolled = useScroll();
 
   return (
-    <section className="relative">
+    <section
+      className="relative"
+      aria-labelledby="bienvenida-heading"
+    >
+      <header className="sr-only">
+        <h1 id="bienvenida-heading">Bienvenido a JCI Ambato</h1>
+      </header>
+
       <div className="flex w-full">
         <div className="h-screen flex px-[45px] lg:px-[180px] pb-[92px] items-center box-border">
-          {/* <BorderFrame isScrolled={isScrolled} /> */}
-          <div
-            className={clsx(
-              "absolute inset-0 border-gray-50 z-10 transition-all duration-300 transform",
-              isScrolled ? "border-[22px] lg:border-[60px]" : "border-0"
-            )}
-            aria-hidden="true"
-          />
+          <BorderFrame isScrolled={isScrolled} />
 
-
-
-          {/* <InfoContainer /> */}
-          <div className="relative z-20">
+          {/* Contenido principal */}
+          <main className="relative z-20">
             <div className="flex flex-col items-start">
               <div className="text-xs lg:text-sm uppercase text-jci-gold font-bold tracking-normal">
-                Inpulsando el cambio
+                Impulsando el cambio
               </div>
 
               <div className="mt-6">
-                <h1
+                <h2
                   className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-3xl lg:text-6xl max-w-xl"
                 >
                   Líderes que Impactan el Futuro
-                </h1>
+                </h2>
               </div>
 
               <div className="mt-10">
-                <div className="text-white max-w-md text-sm lg:text-medium leading-relaxed">
+                <p className="text-white max-w-md text-sm lg:text-medium leading-relaxed">
                   Con cada proyecto, impulsamos el cambio a través de la innovación,
                   transformando ideas en soluciones que construyen comunidades más fuertes y
                   mejoran vidas.
-                </div>
+                </p>
               </div>
 
               <div className="mt-9">
@@ -61,10 +61,10 @@ export default function Bienvenida() {
                 </Button>
               </div>
             </div>
-          </div>
+          </main>
 
-          {/* <BackgroundVideo /> */}
-          <div className="absolute inset-0">
+          {/* Video de fondo */}
+          <figure className="absolute inset-0">
             <video
               autoPlay
               className="w-full h-full object-cover"
@@ -73,54 +73,77 @@ export default function Bienvenida() {
               preload="auto"
               muted
               playsInline
+              aria-hidden="true"
             />
 
             {/* Fondo Oscuro */}
             <div className="absolute inset-0 bg-black/50" aria-hidden="true"></div>
-          </div>
+          </figure>
 
         </div>
 
-        <div className="hidden md:block absolute top-1/2 left-[30px] text-[10.5px] font-semibold z-20 text-gray-400 leading-[60px] tracking-[1.5px] uppercase transform -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap">
-          BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO
-        </div>
+        <RotatedText text="BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO" />
 
+        {/* Botón de scroll */}
         <div className="hidden md:block absolute z-20 top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2">
-          <button>
+          <button
+            aria-label="Desplazarse hacia abajo"
+            onClick={() => {
+              // Función para scroll suave hacia abajo
+              window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+              });
+            }}
+          >
             <Image
               src="/icons/arrow-down.svg"
-              alt="Flecha hacia abajo"
+              alt=""
               width={30}
               height={30}
               className="relative w-[30px] h-[30px] object-contain"
+              aria-hidden="true"
             />
           </button>
         </div>
 
+        {/* Enlace a JCI Ecuador */}
         <div className="hidden md:block absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] text-[10.5px] font-semibold uppercase z-20 text-jci-seafoam">
-          <a href="https://jciecuador.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+          <a
+            href="https://jciecuador.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1"
+            aria-label="Visitar JCI Ecuador (se abre en nueva ventana)"
+          >
             <span>
               JCI Ecuador
             </span>
-            <MdOutlineArrowOutward className="w-5 h-5" />
+            <MdOutlineArrowOutward className="w-5 h-5" aria-hidden="true" />
           </a>
         </div>
       </div>
 
-      <div className="absolute left-1/2 z-20 bottom-0 transform -translate-x-1/2 rotate-90">
+      {/* Botón lateral de navegación */}
+      <nav className="absolute left-1/2 z-20 bottom-0 transform -translate-x-1/2 rotate-90">
         <div className="hidden md:block">
-          <button className="flex items-center">
+          <Link
+            href="/nosotros"
+            className="flex items-center"
+            aria-label="Ir a la sección Sobre Nosotros"
+          >
             <span className="text-jci-aqua text-[10.5px] font-semibold uppercase">Sobre Nosotros</span>
             <Image
               src="/icons/arrow-down.svg"
-              alt="Flecha hacia abajo"
+              alt=""
               width={500}
               height={500}
               className="w-[96px] h-[69px] -rotate-90 object-cover"
+              aria-hidden="true"
             />
-          </button>
+          </Link>
         </div>
-      </div>
+      </nav>
     </section>
   );
 }

@@ -1,104 +1,61 @@
+import { miembrosData } from "@/data/miembros";
 import Image from "next/image";
-
-const miembrosData = [
-    {
-        nombre: "Israel Teneda",
-        cargo: "Pasado Presidente",
-        imagen: "/images/miembros/miembro1.png",
-    },
-    {
-        nombre: "Gabriela González",
-        cargo: "Presidente Local",
-        imagen: "/images/miembros/miembro1.png",
-    },
-    {
-        nombre: "Mauricio",
-        cargo: "Director del Senado",
-        imagen: "/images/miembros/miembro1.png",
-    },
-    {
-        nombre: "Romina Benítez",
-        cargo: "Secretaria Local",
-        imagen: "/images/miembros/miembro1.png",
-    },
-    {
-        nombre: "Emilia Santamaría",
-        cargo: "Vicepresidenta Ejecutiva",
-        imagen: "/images/miembros/miembro1.png",
-    },
-    {
-        nombre: "Gabriela González",
-        cargo: "Tesorero Local",
-        imagen: "/images/miembros/miembro1.png",
-    },
-    {
-        nombre: "Miembro Ejemplo 1",
-        cargo: "Vocal",
-        imagen: null,
-    },
-    {
-        nombre: "Miembro Ejemplo 2",
-        cargo: "Vocal",
-        imagen: null,
-    },
-    {
-        nombre: "Miembro Ejemplo 3",
-        cargo: "Vocal",
-        imagen: null,
-    },
-];
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 
-export default function Miembros() {
+export default function MiembrosGenerales() {
     return (
-        <div className="relative py-16 z-10">
+        <section className="relative py-16 z-10" aria-labelledby="miembros-activos-heading">
             <div className="max-w-6xl mx-8 lg:mx-auto">
                 {/* Header */}
-                <div className="text-start mb-12">
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-800">
-                        Junta Directiva
+                <header className="text-start mb-12">
+                    <h2 id="miembros-activos-heading" className="text-3xl md:text-5xl font-bold text-gray-800">
+                        Miembros Activos
                     </h2>
                     <p className="text-lg text-gray-600 mt-2 max-w-3xl">
-                        Conforma miembros que se encargan de la gestión de la Cámara Junior Internacional del Ecuador - Capítulo Ambato.
+                        Los mejores y más brillantes innovadores del centro del país asesoran a nuestros líderes.
                     </p>
-                </div>
+                </header>
 
                 {/* Miembros Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-12" role="list" aria-label="Lista de miembros activos">
                     {miembrosData.map((miembro, index) => (
-                        <div
-                            key={index}
-                            className={`flex flex-col items-center text-center group ${
-                                // Apply margin-top to the side elements in each row on large screens
-                                index % 3 !== 1 ? "lg:mt-12" : ""
-                                }`}
-                        >
-                            <div className="w-full bg-gray-300 overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
-                                {miembro.imagen ? (
-                                    <Image
-                                        src={miembro.imagen}
-                                        alt={`Foto de ${miembro.nombre}`}
-                                        width={400}
-                                        height={400}
-                                        className="w-full h-auto md:h-96 object-cover"
-                                    />
-                                ) : (
-                                    <div className="w-full h-auto md:h-96 bg-gray-400 flex items-center justify-center">
-                                        <span className="text-white h-full text-lg">Próximamente</span>
-                                    </div>
-                                )}
-                            </div>
-
-                            <div className="w-full py-5 text-start">
-                                <h3 className="font-bold text-xl text-jci-black">{miembro.nombre}</h3>
-                                <p className="text-md text-jci-gray">
-                                    {miembro.cargo}
-                                </p>
-                            </div>
-                        </div>
+                        <article key={index} className="flex flex-col items-center text-center" role="listitem">
+                            <figure className="w-32 h-32 mb-4">
+                                <Image
+                                    src={miembro.imagen}
+                                    alt={`Foto de ${miembro.nombre}`}
+                                    width={128}
+                                    height={128}
+                                    className="w-full h-full object-cover rounded-full"
+                                />
+                            </figure>
+                            <h3 className="font-bold text-lg text-gray-800">{miembro.nombre}</h3>
+                            <p className="text-sm text-gray-500 mb-3">{miembro.cargo}</p>
+                            <nav className="flex items-center space-x-4" aria-label={`Redes sociales de ${miembro.nombre}`}>
+                                <a
+                                    href={miembro.social.instagram}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-400 hover:text-gray-600 transition-colors"
+                                    aria-label={`Instagram de ${miembro.nombre}`}
+                                >
+                                    <FaInstagram />
+                                </a>
+                                <a
+                                    href={miembro.social.linkedin}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-400 hover:text-gray-600 transition-colors"
+                                    aria-label={`LinkedIn de ${miembro.nombre}`}
+                                >
+                                    <FaLinkedin />
+                                </a>
+                            </nav>
+                        </article>
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
-}
+} 

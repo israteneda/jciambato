@@ -48,19 +48,21 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
     }, [pathname]);
 
     return (
-        <div className="relative z-30 bg-transparent max-w-6xl mx-8 md:mx-auto">
+        <section className="relative z-30 bg-transparent max-w-6xl mx-8 md:mx-auto">
             {shouldUseLightText ? (
                 // Version Claro (para fondos oscuros)
                 <>
-                    <h2 className="text-xs leading-[1.85] not-italic uppercase text-jci-gold font-bold tracking-normal">
-                        {subtitle}
-                    </h2>
+                    <header>
+                        <h2 className="text-xs leading-[1.85] not-italic uppercase text-jci-gold font-bold tracking-normal">
+                            {subtitle}
+                        </h2>
 
-                    <div className="mt-8">
-                        <h1 className="text-3xl lg:text-6xl font-bold not-italic text-left leading-[1] tracking-[-0.5px] text-gray-200 max-w-4xl">
-                            {title}
-                        </h1>
-                    </div>
+                        <div className="mt-8">
+                            <h1 className="text-3xl lg:text-6xl font-bold not-italic text-left leading-[1] tracking-[-0.5px] text-gray-200 max-w-4xl">
+                                {title}
+                            </h1>
+                        </div>
+                    </header>
 
                     <div className="mt-9">
                         <p className="text-xl font-normal not-italic leading-[1.45] tracking-normal text-gray-100 text-left max-w-xl">
@@ -71,15 +73,17 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
             ) : (
                 // Version Oscuro (para fondos claros)
                 <>
-                    <h2 className="text-xs leading-[1.85] not-italic uppercase text-jci-aqua font-bold tracking-normal">
-                        {subtitle}
-                    </h2>
+                    <header>
+                        <h2 className="text-xs leading-[1.85] not-italic uppercase text-jci-aqua font-bold tracking-normal">
+                            {subtitle}
+                        </h2>
 
-                    <div className="mt-8">
-                        <h1 className="text-3xl lg:text-6xl font-bold not-italic text-left leading-[1] tracking-[-0.5px] text-gray-900 max-w-4xl">
-                            {title}
-                        </h1>
-                    </div>
+                        <div className="mt-8">
+                            <h1 className="text-3xl lg:text-6xl font-bold not-italic text-left leading-[1] tracking-[-0.5px] text-gray-900 max-w-4xl">
+                                {title}
+                            </h1>
+                        </div>
+                    </header>
 
                     <div className="mt-9">
                         <p className="text-xl font-normal not-italic leading-[1.45] tracking-normal text-gray-900 text-left max-w-xl">
@@ -88,6 +92,6 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
                     </div>
                 </>
             )}
-        </div>
+        </section>
     );
 }

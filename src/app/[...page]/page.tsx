@@ -45,14 +45,16 @@ export default function CatchAllPage() {
 
   return (
     <div className="w-full">
-      <BuilderComponent
-        content={content || undefined}
-        data={{
-          title: "Builder.io Page",
-          path: pathname,
-        }}
-        model="page"
-      />
+      {content && (
+        <BuilderComponent
+          content={content}
+          data={{
+            title: "Builder.io Page",
+            path: pathname,
+          }}
+          model="page"
+        />
+      )}
     </div>
   );
 }

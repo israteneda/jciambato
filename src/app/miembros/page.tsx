@@ -1,7 +1,9 @@
-import Bienvenida from "@/components/sections/miembros/inicio";
-import Miembros from "@/components/sections/miembros/miembros";
-import MiembrosGenerales from "@/components/sections/miembros/miembros-generales";
-import Senadores from "@/components/sections/miembros/senadores";
+import {
+  Bienvenida,
+  Miembros,
+  MiembrosGenerales,
+  Senadores,
+} from "@/components/sections/miembros";
 
 import { Metadata } from "next";
 
@@ -12,15 +14,16 @@ export const metadata: Metadata = {
 
 export default function MiembrosPage() {
   return (
-    <div className="relative">
+    <main className="relative">
       {/* Sección de Bienvenida */}
       <Bienvenida />
 
       {/* Bloque espaciado para efecto de scroll */}
-      <div className="h-screen"></div>
+      <div className="h-screen" aria-hidden="true"></div>
       <div
         className="absolute top-0 w-full h-full bg-gray-50"
         style={{ transform: 'translateY(100vh)' }}
+        aria-hidden="true"
       >
       </div>
 
@@ -32,6 +35,6 @@ export default function MiembrosPage() {
 
       {/* Sección de Senadores */}
       <Senadores />
-    </div>
+    </main>
   );
 }

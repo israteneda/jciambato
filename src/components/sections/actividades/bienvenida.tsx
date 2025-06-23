@@ -4,7 +4,10 @@ import RotatedText from "@/components/commons/rotated-text";
 
 export default function Bienvenida() {
     return (
-        <section className="inset-0 w-full fixed overflow-hidden items-center box-border h-[760px] pb-[80px]">
+        <section className="inset-0 w-full fixed overflow-hidden items-center box-border h-[760px] pb-[80px]" aria-labelledby="actividades-heading">
+            <header className="sr-only">
+                <h1 id="actividades-heading">Actividades y Proyectos</h1>
+            </header>
 
             <RotatedText text="Dentro de nuestros proyectos" />
 
@@ -18,6 +21,7 @@ export default function Bienvenida() {
 
             <BackgroundImage
                 image="/images/secciones/actividades.webp"
+                alt="Imagen de fondo de actividades y proyectos de JCI Ambato"
             />
         </section>
     );

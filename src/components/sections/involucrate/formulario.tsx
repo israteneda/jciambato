@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import BackgroundText from "@/components/commons/TextoFondo";
+import BackgroundText from "@/components/commons/background-text";
 import { Input } from "@heroui/input";
 import { Button } from "@heroui/button";
 import { Switch } from "@heroui/switch";
@@ -13,6 +13,7 @@ export default function Formulario() {
     const [message, setMessage] = useState("");
     const [termsAccepted, setTermsAccepted] = useState(false);
     const [promoAccepted, setPromoAccepted] = useState(false);
+    const [showError, setShowError] = useState(false);
 
     // Validación simple de email
     const isEmailValid = email.length === 0 || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -26,8 +27,18 @@ export default function Formulario() {
         !termsAccepted ||
         !promoAccepted;
 
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setShowError(true);
+
+        if (!isButtonDisabled) {
+            console.log("Formulario enviado con éxito:", { name, email, phone, message });
+            // Aquí se podría agregar la lógica para enviar los datos a un servidor
+        }
+    };
+
     return (
-        <section className="relative z-[1] overflow-hidden">
+        <section className="relative z-[1] overflow-hidden" aria-labelledby="formulario-heading">
 
             <div className="mt-16">
                 <BackgroundText
@@ -47,33 +58,34 @@ export default function Formulario() {
                         <div className="relative z-[1] bg-transparent max-w-6xl mx-auto">
                             <div className="flex flex-wrap">
 
-                                <div className="flex-1 pr-16 box-border min-w-[calc(50%-100px)]">
+                                <article className="flex-1 pr-16 box-border min-w-[calc(50%-100px)]">
                                     <div className="pt-[120px]">
-                                        <div>
+                                        <header>
                                             <div className="text-[13px] leading-[1.85] not-italic uppercase text-[#989898] font-bold tracking-normal">
                                                 Estamos aquí para ayudarte
                                             </div>
 
                                             <div className="mt-6">
-                                                <div className="text-[48px] font-bold not-italic text-left leading-[1.17] tracking-normal text-black max-w-[370px]">
+                                                <h2 id="formulario-heading" className="text-[48px] font-bold not-italic text-left leading-[1.17] tracking-normal text-black max-w-[370px]">
                                                     Te esperamos con los brazos abiertos
-                                                </div>
+                                                </h2>
                                             </div>
 
                                             <div className="mt-6">
-                                                <div className="text-[18px] font-normal not-italic leading-[32px] tracking-normal text-[#323232] text-left max-w-[370px]">
+                                                <p className="text-[18px] font-normal not-italic leading-[32px] tracking-normal text-[#323232] text-left max-w-[370px]">
                                                     Si deseas contactarnos, por favor completa el formulario o envíanos un correo a {" "}
                                                     <a
-                                                        href="mailto:info@jciecuador.com"
+                                                        href="mailto:info@jciambato.com"
                                                         className="text-jci-aqua underline"
+                                                        aria-label="Enviar correo electrónico a info@jciambato.com"
                                                     >
                                                         info@jciambato.com
                                                     </a>
-                                                </div>
+                                                </p>
                                             </div>
-                                        </div>
+                                        </header>
                                     </div>
-                                </div>
+                                </article>
 
                                 <div className="flex-1 min-w-[calc(50%+100px)]">
                                     {/* Formulario */}
@@ -81,45 +93,59 @@ export default function Formulario() {
                                         <div className="text-sm font-bold text-jci-aqua uppercase tracking-wider mb-8">
                                             Envíanos un mensaje
                                         </div>
-                                        <form className="space-y-6">
-                                            <Input
-                                                label="Tu Nombre *"
-                                                variant="underlined"
-                                                placeholder="Escribe tu nombre"
-                                                value={name}
-                                                onValueChange={setName}
-                                                classNames={{ label: "text-sm font-semibold text-gray-500" }}
-                                            />
-                                            <Input
-                                                label="Tu Email *"
-                                                variant="underlined"
-                                                type="email"
-                                                placeholder="Escribe tu email"
-                                                value={email}
-                                                onValueChange={setEmail}
-                                                isInvalid={!isEmailValid}
-                                                errorMessage="Por favor, introduce un email válido."
-                                                classNames={{ label: "text-sm font-semibold text-gray-500" }}
-                                            />
-                                            <Input
-                                                label="Teléfono *"
-                                                variant="underlined"
-                                                type="tel"
-                                                placeholder="Escribe tu número de teléfono"
-                                                value={phone}
-                                                onValueChange={setPhone}
-                                                classNames={{ label: "text-sm font-semibold text-gray-500" }}
-                                            />
-                                            <Input
-                                                label="Mensaje *"
-                                                variant="underlined"
-                                                placeholder="¿Cómo podemos ayudarte?"
-                                                value={message}
-                                                onValueChange={setMessage}
-                                                classNames={{ label: "text-sm font-semibold text-gray-500" }}
-                                            />
+                                        <form className="space-y-6" aria-label="Formulario de contacto" onSubmit={handleSubmit}>
+                                            <fieldset className="space-y-6">
+                                                <legend className="sr-only">Información personal</legend>
 
-                                            <div className="pt-6 space-y-5">
+                                                <Input
+                                                    label="Tu Nombre"
+                                                    variant="underlined"
+                                                    placeholder="Escribe tu nombre"
+                                                    value={name}
+                                                    onValueChange={setName}
+                                                    classNames={{ label: "text-sm font-semibold text-gray-500" }}
+                                                    isRequired
+                                                    aria-required="true"
+                                                />
+                                                <Input
+                                                    label="Tu Email"
+                                                    variant="underlined"
+                                                    type="email"
+                                                    placeholder="Escribe tu email"
+                                                    value={email}
+                                                    onValueChange={setEmail}
+                                                    isInvalid={showError && !isEmailValid}
+                                                    errorMessage="Por favor, introduce un email válido."
+                                                    classNames={{ label: "text-sm font-semibold text-gray-500" }}
+                                                    isRequired
+                                                    aria-required="true"
+                                                />
+                                                <Input
+                                                    label="Teléfono"
+                                                    variant="underlined"
+                                                    type="tel"
+                                                    placeholder="Escribe tu número de teléfono"
+                                                    value={phone}
+                                                    onValueChange={setPhone}
+                                                    classNames={{ label: "text-sm font-semibold text-gray-500" }}
+                                                    isRequired
+                                                    aria-required="true"
+                                                />
+                                                <Input
+                                                    label="Mensaje"
+                                                    variant="underlined"
+                                                    placeholder="¿Cómo podemos ayudarte?"
+                                                    value={message}
+                                                    onValueChange={setMessage}
+                                                    classNames={{ label: "text-sm font-semibold text-gray-500" }}
+                                                    isRequired
+                                                    aria-required="true"
+                                                />
+                                            </fieldset>
+
+                                            <fieldset className="pt-6 space-y-5">
+                                                <legend className="sr-only">Términos y condiciones</legend>
+
                                                 <div className="flex items-start">
                                                     <Switch
                                                         id="terms"
@@ -142,16 +168,22 @@ export default function Formulario() {
                                                         Acepto el procesamiento de mis datos para recibir mensajes promocionales y propuestas comerciales de JCI Ambato.
                                                     </label>
                                                 </div>
-                                            </div>
+                                            </fieldset>
 
                                             <div className="pt-6">
                                                 <Button
                                                     type="submit"
                                                     disabled={isButtonDisabled}
                                                     className="bg-jci-aqua text-white font-semibold rounded-md transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                                                    {...(isButtonDisabled && { "aria-describedby": "form-error" })}
                                                 >
                                                     Postula ahora
                                                 </Button>
+                                                {showError && isButtonDisabled && (
+                                                    <p id="form-error" className="text-sm text-red-600 mt-2">
+                                                        Por favor, completa todos los campos requeridos y acepta los términos.
+                                                    </p>
+                                                )}
                                             </div>
                                         </form>
                                     </div>
