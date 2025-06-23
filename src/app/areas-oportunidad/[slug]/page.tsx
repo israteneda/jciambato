@@ -1,9 +1,9 @@
 import { notFound } from 'next/navigation';
 import { getAreaBySlug, getAllAreas } from '@/data/areas-oportunidad';
 import {
-  Bienvenida,
-  Presentacion,
-  ConstruccionLoader,
+    Bienvenida,
+    Presentacion,
+    Construccion,
 } from '@/components/sections/areas-oportunidad/slug';
 
 interface AreaOportunidadPageProps {
@@ -49,7 +49,7 @@ export default async function AreaOportunidadPage({ params }: AreaOportunidadPag
         <main className="relative">
             <Bienvenida area={area} />
             <Presentacion area={area} />
-            <ConstruccionLoader area={area} />
+            <Construccion area={area} />
         </main>
     );
 } 

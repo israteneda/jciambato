@@ -100,9 +100,9 @@ export const siteConfig = {
       description: "Descubre nuestras áreas de impacto comunitario.",
     },
     {
-      label: "Actividades",
-      href: "/actividades",
-      description: "Explora nuestros eventos y proyectos.",
+      label: "Proyectos",
+      href: "/proyectos",
+      description: "Explora nuestros proyectos.",
     },
     {
       label: "Miembros",

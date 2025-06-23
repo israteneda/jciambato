@@ -29,7 +29,7 @@ export const jciLinks = [
     ],
   },
   {
-    title: "Actividades",
+    title: "Proyectos",
     href: "#",
     items: [
       { title: "Programas", href: "#" },
