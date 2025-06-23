@@ -21,7 +21,7 @@ export function Footer() {
                   <span className="text-xs text-white line-clamp-1 uppercase tracking-widest">
                     Conoce, Suma, Transforma
                   </span>
-                  <h2 id="cta-heading" className="mt-8 text-4xl md:text-5xl max-w-2xl  font-medium tracking-tight text-white">
+                  <h2 id="cta-heading" className="mt-8 text-3xl md:text-5xl max-w-2xl  font-medium tracking-tight text-white">
                     ¿Te atreves a ser el cambio que quieres ver en el mundo?
                   </h2>
                 </header>
@@ -156,7 +156,7 @@ export function Footer() {
             </div>
 
             {/* Botón para volver arriba */}
-            <div className="absolute top-[30%] md:top-[20%] right-[8%] md:right-[5%]">
+            <div className="absolute top-[45%] md:top-[20%] right-[6%] md:right-[5%]">
               <div className="flex items-center justify-center">
                 <a
                   href="#"

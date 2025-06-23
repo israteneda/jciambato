@@ -32,12 +32,18 @@ export default function Acciones() {
                             </div> */}
 
                             <div className="mt-9">
-                                <h3 className="text-[22px] font-bold not-italic text-left leading-[1.25] tracking-normal text-jci-aqua">
-                                    Grupo JCI Ambato
-                                </h3>
+
+                                <div className="flex flex-col gap-2">
+                                    <h3 className="text-xl font-bold not-italic text-left leading-[1.25] tracking-normal text-jci-navy">
+                                        Grupo JCI Ecuador
+                                    </h3>
+                                    <h3 className="text-[18px] font-bold not-italic text-left leading-[1.25] tracking-normal text-jci-aqua">
+                                        Grupo JCI Ambato
+                                    </h3>
+                                </div>
 
                                 <address className="mt-6 not-italic">
-                                    <div className="flex">
+                                    <div className="flex flex-col md:flex-row gap-5">
                                         <div className="mr-8">
                                             <h4 className="text-[18px] font-bold not-italic leading-[1.78] tracking-normal text-[#323232] text-left">
                                                 Ambato, Ecuador
@@ -79,14 +85,14 @@ export default function Acciones() {
                                             <h4 className="text-[18px] font-bold not-italic leading-[1.78] tracking-normal text-[#323232] text-left">
                                                 Correo
                                             </h4>
+
                                             <a
                                                 href="mailto:info@jciambato.com"
-                                                className="text-sm text-jci-aqua leading-[1.5] not-italic font-normal tracking-normal underline font-aeonik-regular"
+                                                className="text-sm text-jci-aqua leading-[1.5] not-italic font-normal tracking-normal underline"
                                                 aria-label="Enviar correo electrónico a info@jciambato.com"
                                             >
-                                                info@jciambato.com
+                                                jciambato@jciecuador.com
                                             </a>
-
                                         </div>
                                     </div>
                                 </address>

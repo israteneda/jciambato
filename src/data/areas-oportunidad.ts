@@ -4,6 +4,9 @@ export type AreaOportunidad = {
   title: string;
   subtitle: string;
   description: string;
+  responsable: string;
+  responsable_image: string;
+  correo: string;
   image: string;
   background_image: string;
   features: string[];
@@ -25,6 +28,9 @@ export const areasOportunidad: AreaOportunidad[] = [
     subtitle: "Fomentando el espíritu emprendedor",
     description:
       "Fomentamos el emprendimiento, transformando ideas en negocios con mentoría, herramientas y redes estratégicas.",
+    responsable: "Juan Pérez",
+    responsable_image: "/images/miembros/miembro.png",
+    correo: "juan.perez@jciambato.com",
     image: "/images/areas_oportunidad/negocios-emprendimiento/negocios-emprendimiento.webp",
     background_image:
       "/images/areas_oportunidad/negocios-emprendimiento/negocios-emprendimiento-back.webp",
@@ -62,6 +68,9 @@ export const areasOportunidad: AreaOportunidad[] = [
     subtitle: "Conectando líderes globales",
     description:
       "Conectamos líderes a través de academias, hermanamientos y eventos globales para un impacto mundial.",
+    responsable: "Juan Pérez",
+    responsable_image: "/images/miembros/miembro.png",
+    correo: "juan.perez@jciambato.com",
     image: "/images/areas_oportunidad/cooperacion-internacional/cooperacion-internacional.webp",
     background_image:
       "/images/areas_oportunidad/cooperacion-internacional/cooperacion-internacional-back.webp",
@@ -99,6 +108,9 @@ export const areasOportunidad: AreaOportunidad[] = [
     subtitle: "Forjando líderes integrales",
     description:
       "Forjamos líderes con oratoria, inteligencia emocional y liderazgo ético para un impacto transformador.",
+    responsable: "Juan Pérez",
+    responsable_image: "/images/miembros/miembro.png",
+    correo: "juan.perez@jciambato.com",
     image: "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual.webp",
     background_image:
       "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual-back.webp",
@@ -136,6 +148,9 @@ export const areasOportunidad: AreaOportunidad[] = [
     subtitle: "Transformando vidas localmente",
     description:
       "Transformamos comunidades con proyectos sociales que mejoran vidas y generan cambios sostenibles.",
+    responsable: "Juan Pérez",
+    responsable_image: "/images/miembros/miembro.png",
+    correo: "juan.perez@jciambato.com",
     image: "/images/areas_oportunidad/impacto-comunidad/impacto-comunidad.webp",
     background_image: "/images/areas_oportunidad/impacto-comunidad/impacto-comunidad-back.webp",
     features: ["Impacto Social", "Proyectos Sostenibles", "Ciudadanía Activa"],

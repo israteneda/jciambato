@@ -40,19 +40,19 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                     <div className="relative z-10 max-w-6xl m-8 md:mx-auto">
                         <div className="p-4 md:p-10 bg-jci-navy z-30 md:translate-y-1/2 md:max-w-[50%] box-border flex">
                             <div className="w-full">
-                                <div className="text-white text-sm font-bold flex flex-wrap gap-x-2">
+                                <div className="text-white text-xs md:text-sm font-bold flex flex-wrap gap-x-2">
                                     <span>Brochure</span>
                                     <span>14.02.2025</span>
                                 </div>
 
                                 <div className="mt-2">
-                                    <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight">
+                                    <h3 className="text-xl md:text-3xl font-bold text-white leading-tight">
                                         {area.title}
                                     </h3>
                                 </div>
 
                                 <div className="mt-4">
-                                    <a href="#" className="text-sm text-white font-semibold inline-flex items-center gap-2 hover:underline">
+                                    <a href="#" className="text-xs md:text-sm text-white font-semibold inline-flex items-center gap-2 hover:underline">
                                         Descargar PDF
                                         <span className="opacity-75">3.9 MB</span>
                                     </a>
@@ -104,7 +104,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
 
                     {/* Controles de navegación */}
                     <div className="relative z-10 bg-transparent max-w-3xl mx-8 md:mx-auto px-4 md:px-0">
-                        <div className="flex justify-between items-center mt-2 md:mt-8">
+                        <div className="flex justify-between items-center mt-2">
 
                             {/* Contador */}
                             <div className="inline-flex flex-col -rotate-90 pointer-events-none">
