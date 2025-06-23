@@ -175,7 +175,7 @@ export default function Formulario() {
                                                     type="submit"
                                                     disabled={isButtonDisabled}
                                                     className="bg-jci-aqua text-white font-semibold rounded-md transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
-                                                    aria-describedby={isButtonDisabled ? "form-error" : undefined}
+                                                    {...(isButtonDisabled && { "aria-describedby": "form-error" })}
                                                 >
                                                     Postula ahora
                                                 </Button>

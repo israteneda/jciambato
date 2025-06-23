@@ -1,3 +1,5 @@
+"use client";
+
 import { AreaOportunidad } from "@/data/areas-oportunidad";
 import { FaFilePdf } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
