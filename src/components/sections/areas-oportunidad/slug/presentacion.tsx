@@ -7,19 +7,19 @@ export default function Presentacion({ area }: { area: AreaOportunidad }) {
                 <div className="mt-16">
                     <div className="max-w-3xl">
                         <header>
-                            <div className="text-[13px] leading-[1.85] not-italic uppercase text-[#989898] font-bold tracking-normal">
+                            <div className="text-xs leading-[1.85] not-italic uppercase text-[#989898] font-bold tracking-normal">
                                 {area.subtitle}
                             </div>
 
                             <div className="mt-8">
-                                <h2 id={`presentacion-${area.slug}-heading`} className="text-[40px] font-bold not-italic text-left leading-[1.33] tracking-normal text-black max-w-4xl">
+                                <h2 id={`presentacion-${area.slug}-heading`} className="text-3xl md:text-5xl font-bold not-italic text-left leading-[1.33] tracking-normal text-black max-w-4xl">
                                     {area.description}
                                 </h2>
                             </div>
                         </header>
 
-                        <div className="mt-20">
-                            <p className="text-[18px] font-normal not-italic leading-[1.78] tracking-normal text-[#323232] text-left [column-count:2] [column-gap:40px]">
+                        <div className="mt-16 md:mt-20">
+                            <p className="text-medium leading-loose text-jci-off-black text-left columns-1 md:columns-2 gap-10">
                                 {area.longDescription}
                             </p>
                         </div>

@@ -17,7 +17,7 @@ export default function Bienvenida({ area }: { area: AreaOportunidad }) {
             </header>
 
             <div className="flex w-full">
-                <div className="h-screen flex px-[45px] lg:px-[180px] pb-[92px] items-center box-border">
+                <div className="h-screen flex lg:px-[180px] pb-[92px] items-center box-border">
                     <BorderFrame isScrolled={isScrolled} />
 
                     <InfoContainer
@@ -56,7 +56,7 @@ export default function Bienvenida({ area }: { area: AreaOportunidad }) {
             </div>
 
             <nav className="absolute left-1/2 bottom-0 transform -translate-x-1/2 rotate-90 z-20">
-                <div className="hidden md:block">
+                <div className="">
                     <button
                         className="flex items-center"
                         aria-label="Descubrir más contenido"

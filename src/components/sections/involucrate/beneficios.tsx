@@ -6,7 +6,7 @@ export default function Beneficios() {
             <div className="relative z-[1] bg-transparent max-w-6xl px-8 md:mx-auto">
                 <article className="flex">
                     {/* Caja de Información */}
-                    <div className="relative">
+                    <div className="hidden md:block relative">
                         <div className="absolute top-[80px] left-[24px] transform -translate-x-1/2 -translate-y-1/2 -rotate-90">
                             <div className="text-[#aeaeae] leading-none text-[11px] font-medium relative not-italic tracking-[2px] whitespace-nowrap uppercase">
                                 <span className="absolute top-[6px] left-[-170px] w-[160px] h-px bg-[#aeaeae]"></span>
@@ -15,9 +15,9 @@ export default function Beneficios() {
                         </div>
                     </div>
 
-                    <div className="relative ml-[170px]">
+                    <div className="relative md:ml-[170px]">
                         <header className="mt-20">
-                            <h2 id="beneficios-heading" className="text-[48px] not-italic text-left leading-[1.17] tracking-normal text-black max-w-[470px]">
+                            <h2 id="beneficios-heading" className="text-4xl md:text-5xl not-italic text-left leading-[1.17] tracking-normal text-black max-w-[470px]">
                                 Beneficios de ser parte de JCI Ambato
                             </h2>
                         </header>

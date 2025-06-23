@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function ActividadesPorArea() {
+export default function ProyectosPorArea() {
     // Estado para controlar el botón activo (0 = Todos, 1 = Negocios, etc.)
     const [activeButton, setActiveButton] = useState(0);
 
@@ -64,14 +64,14 @@ export default function ActividadesPorArea() {
                     <div className="relative flex flex-wrap mx-10">
                         <div className="flex flex-col md:flex-row w-full mt-16 items-center">
                             <ActivityCard
-                                image="/images/secciones/actividades.jpg"
+                                image="/images/secciones/actividades.webp"
                                 category="Naval Industry"
                                 title="World Navigator"
                                 year="2025"
                                 location="Ambato, Ecuador"
                             />
                             <ActivityCard
-                                image="/images/secciones/actividades.jpg"
+                                image="/images/secciones/actividades.webp"
                                 category="Naval Industry"
                                 title="World Navigator"
                                 year="2025"
@@ -85,7 +85,7 @@ export default function ActividadesPorArea() {
                     <div className="relative flex flex-wrap mx-10">
                         <div className="flex flex-col md:flex-row w-full mt-16 items-center">
                             <ActivityCard
-                                image="/images/secciones/miembros.jpeg"
+                                image="/images/secciones/actividades.webp"
                                 category="Naval Industry"
                                 title="World Navigator"
                                 year="2025"
@@ -99,7 +99,7 @@ export default function ActividadesPorArea() {
                     <div className="relative flex flex-wrap mx-10">
                         <div className="flex flex-col md:flex-row w-full mt-16 items-center">
                             <ActivityCard
-                                image="/images/secciones/proyectos.webp"
+                                image="/images/secciones/actividades.webp"
                                 category="Naval Industry"
                                 title="World Navigator"
                                 year="2025"
@@ -120,7 +120,7 @@ export default function ActividadesPorArea() {
                                 location="Ambato, Ecuador"
                             />
                             <ActivityCard
-                                image="/images/secciones/actividades.jpg"
+                                image="/images/secciones/proyectos.webp"
                                 category="Naval Industry"
                                 title="World Navigator"
                                 year="2025"
@@ -134,14 +134,14 @@ export default function ActividadesPorArea() {
                     <div className="relative flex flex-wrap mx-10">
                         <div className="flex flex-col md:flex-row w-full mt-16 items-center">
                             <ActivityCard
-                                image="/images/secciones/actividades.jpg"
+                                image="/images/secciones/actividades.webp"
                                 category="Naval Industry"
                                 title="World Navigator"
                                 year="2025"
                                 location="Ambato, Ecuador"
                             />
                             <ActivityCard
-                                image="/images/secciones/actividades.jpg"
+                                image="/images/secciones/actividades.webp"
                                 category="Naval Industry"
                                 title="World Navigator"
                                 year="2025"
@@ -157,11 +157,11 @@ export default function ActividadesPorArea() {
 
     return (
         <div>
-            <nav className="md:mx-24 p-12 box-border bg-gray-50" aria-label="Filtros de actividades por área">
+            <nav className="md:mx-24 p-12 box-border bg-gray-50" aria-label="Filtros de proyectos por área">
                 <div className="text-[13px] leading-[1.85] not-italic uppercase text-[#989898] font-bold">
                     Explora por área de oportunidad
                 </div>
-                <div className="flex flex-wrap gap-6 mt-5" role="tablist" aria-label="Categorías de actividades">
+                <div className="flex flex-wrap gap-6 mt-5" role="tablist" aria-label="Categorías de proyectos">
                     {categories.map((category, index) => (
                         <button
                             key={index}
@@ -195,7 +195,7 @@ export default function ActividadesPorArea() {
                         radius="none"
                         size="lg"
                         className="relative bg-jci-aqua text-white group overflow-hidden"
-                        aria-label="Ver más actividades y proyectos"
+                        aria-label="Ver más proyectos"
                     >
                         <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>
                         <span className="relative z-10">Ver más</span>
