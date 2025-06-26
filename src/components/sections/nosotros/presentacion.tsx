@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AnimatedNumber from "@/components/ui/AnimatedNumber";
 
 export default function Presentacion() {
     return (
@@ -10,19 +11,25 @@ export default function Presentacion() {
                         <div className="relative">
                             <header>
                                 <p className="text-xs leading-[1.85] font-bold uppercase text-jci-gray">
-                                    Get to know us better
+                                    Conócenos mejor
                                 </p>
                                 <div className="mt-8">
                                     <h2 className="text-3xl md:text-[48px] font-aeonik-bold font-bold leading-[1.33] text-black max-w-[862px] text-left sm:text-[calc(28.8px+1vw)]">
-                                        Exceeding expectations, JCI Ambato is a team of professionals with extensive experience in the field of engineering and architecture.
+                                        En JCI Ambato, unimos jóvenes líderes para transformar ideas en acciones que impulsan el cambio social, cultural y económico.
                                     </h2>
                                 </div>
                             </header>
 
-                                <div className="mt-20">
-                                <p className="text-medium leading-loose text-jci-off-black text-left columns-1 md:columns-2 gap-10">
-                                        We work daily to exceed our clients' expectations, meeting deadlines and presenting the best solutions for each project. To undertake this commitment, the motivation of our teams is to analyse each project critically and creatively, always oriented to the best solution. The personal and professional development of our employees is the way to reach the best solutions, surprising and surpassing all challenges with confidence and ambition.
-                                </p>
+                            <div className="mt-20">
+                                <div className="text-medium leading-loose text-jci-off-black text-left columns-1 md:columns-2 gap-10 space-y-4">
+                                    <p>
+                                        Aquí, cada miembro es un protagonista que impulsa el cambio, guiado por la innovación, el compromiso con la comunidad y una visión de liderazgo global. Juntos, fusionamos ideas, acciones y propósitos para generar un impacto positivo y transformador en nuestra ciudad y más allá. Para alcanzar este objetivo, trabajamos con dedicación diaria, superando las expectativas de nuestros clientes, cumpliendo plazos con precisión y entregando soluciones óptimas para cada proyecto. Nuestro compromiso se sustenta en la motivación de nuestros equipos, quienes abordan cada desafío con un análisis crítico y creativo, siempre enfocados en encontrar la mejor solución.
+                                    </p>
+
+                                    <p>
+                                        Fomentamos el desarrollo personal y profesional de nuestros empleados como pilar fundamental para innovar y superar retos con confianza, ambición y excelencia.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
@@ -31,7 +38,12 @@ export default function Presentacion() {
                                 <div className="flex flex-wrap gap-8 md:gap-0" role="list" aria-label="Estadísticas de JCI Ambato">
                                     <div className="mr-20" role="listitem">
                                         <div className="text-7xl md:text-8xl leading-none font-light text-jci-aqua">
-                                        <span>+50</span>
+                                            <AnimatedNumber
+                                                end={50}
+                                                prefix="+"
+                                                duration={2.5}
+                                                delay={0.2}
+                                            />
                                         </div>
                                         <p className="md:text-medium text-black text-left uppercase max-w-44">
                                             <strong>Años</strong> inspirando líderes
@@ -40,19 +52,29 @@ export default function Presentacion() {
 
                                     <div className="mr-20" role="listitem">
                                         <div className="text-7xl md:text-8xl leading-none font-light text-jci-aqua">
-                                        <span>+200</span>
+                                            <AnimatedNumber
+                                                end={200}
+                                                prefix="+"
+                                                duration={2.5}
+                                                delay={0.4}
+                                            />
                                         </div>
                                         <p className="md:text-medium text-black text-left uppercase max-w-44">
-                                        <strong>Proyectos</strong> ejecutados
+                                            <strong>Proyectos</strong> ejecutados
                                         </p>
                                     </div>
 
                                     <div className="mr-20" role="listitem">
                                         <div className="text-7xl md:text-8xl leading-none font-light text-jci-aqua">
-                                        <span>+500</span>
+                                            <AnimatedNumber
+                                                end={500}
+                                                prefix="+"
+                                                duration={2.5}
+                                                delay={0.6}
+                                            />
                                         </div>
                                         <p className="md:text-medium text-black text-left uppercase max-w-44">
-                                        <strong>Jóvenes</strong> formados y empoderados
+                                            <strong>Jóvenes</strong> formados y empoderados
                                         </p>
                                     </div>
                                 </div>
