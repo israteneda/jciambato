@@ -1,5 +1,6 @@
 import { juntaDirectivaData } from "@/data/junta-directiva";
 import Image from "next/image";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Miembros() {
     return (
@@ -43,10 +44,47 @@ export default function Miembros() {
                             </figure>
 
                             <div className="w-full py-5 text-start">
-                                <h3 className="font-bold text-xl text-jci-black">{miembro.nombre}</h3>
-                                <p className="text-md text-jci-gray">
-                                    {miembro.cargo}
-                                </p>
+                                <div className="flex justify-between">
+                                    <div>
+                                        <h3 className="font-bold text-xl text-jci-black">{miembro.nombre}</h3>
+                                        <p className="text-md text-jci-gray">
+                                            {miembro.cargo}
+                                        </p>
+                                    </div>
+
+                                    <div className="flex items-center">
+                                        {miembro.social && (
+                                            <nav className="flex items-center space-x-4 mt-3" aria-label={`Redes sociales de ${miembro.nombre}`}>
+                                                {miembro.social.instagram && (
+                                                    <a
+                                                        href={miembro.social.instagram}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-gray-400 hover:text-gray-600 transition-colors"
+                                                        aria-label={`Instagram de ${miembro.nombre}`}
+                                                    >
+                                                        <FaInstagram />
+                                                    </a>
+                                                )}
+                                                {miembro.social.linkedin && (
+                                                    <a
+                                                        href={miembro.social.linkedin}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-gray-400 hover:text-gray-600 transition-colors"
+                                                        aria-label={`LinkedIn de ${miembro.nombre}`}
+                                                    >
+                                                        <FaLinkedin />
+                                                    </a>
+                                                )}
+                                            </nav>
+                                        )}
+                                    </div>
+
+                                </div>
+
+
+
                             </div>
                         </article>
                     ))}

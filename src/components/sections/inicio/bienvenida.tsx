@@ -109,18 +109,30 @@ export default function Bienvenida() {
 
         {/* Enlace a JCI Ecuador */}
         <div className="hidden md:block absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] text-[10.5px] font-semibold uppercase z-20 text-jci-seafoam">
-          <a
-            href="https://jciecuador.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1"
-            aria-label="Visitar JCI Ecuador (se abre en nueva ventana)"
-          >
-            <span>
-              JCI Ecuador
-            </span>
-            <MdOutlineArrowOutward className="w-5 h-5" aria-hidden="true" />
-          </a>
+
+          <div className="flex flex-col items-center gap-1">
+            <Image
+              alt="Somos Liderazgo Logo"
+              className="object-contain w-[150px] h-[70px]"
+              src="/images/logos/somos-liderazgo.webp"
+              width={150}
+              height={70}
+              priority
+            />
+
+            <a
+              href="https://jciecuador.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1"
+              aria-label="Visitar JCI Ecuador (se abre en nueva ventana)"
+            >
+              <span>
+                JCI Ecuador
+              </span>
+              <MdOutlineArrowOutward className="w-5 h-5" aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </div>
 

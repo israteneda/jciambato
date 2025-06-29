@@ -3,14 +3,14 @@
 import { noticiasItems } from "@/data/noticias";
 import { Button } from "@heroui/button";
 import Image from "next/image";
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+/* import { HiOutlineArrowNarrowRight } from "react-icons/hi"; */
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Link from "next/link";
+/* import Link from "next/link"; */
 
 export default function NoticiasEventos() {
   return (
@@ -24,7 +24,9 @@ export default function NoticiasEventos() {
               <h2 id="noticias-heading" className="text-2xl font-bold not-italic leading-[1.25] tracking-normal text-left text-jci-off-black md:text-[calc(22.4px+0.5vw)]">
                 Noticias y Eventos
               </h2>
-              <div className="hidden md:block">
+
+              {/* Comendado hasta desarrollar el blog */}
+              {/* <div className="hidden md:block">
                 <Button
                   radius="none"
                   variant="bordered"
@@ -36,7 +38,7 @@ export default function NoticiasEventos() {
                     Ver más
                   </span>
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
         </header>
@@ -59,7 +61,10 @@ export default function NoticiasEventos() {
               {noticiasItems.map((item) => (
                 <SwiperSlide key={item.id} style={{ width: "320px" }}>
                   <article>
-                    <Link href={item.url} className="w-full group">
+                    {/* Comentado hasta desarrollar el blog, div en vez de link */}
+                    {/* <Link href={item.url} className="w-full group"> */}
+                    <div className="w-full group">
+
                       <header>
                         <div className="text-[13px] leading-[1.85] not-italic uppercase text-jci-gray font-normal tracking-normal">
                           <span>{item.type}</span>
@@ -72,7 +77,8 @@ export default function NoticiasEventos() {
                         </div>
                       </header>
 
-                      <div className="mt-6">
+                      {/* Comendado hasta desarrollar el blog */}
+                      {/* <div className="mt-6">
                         <div className="group max-w-full relative inline-block transition duration-[400ms] cursor-pointer">
                           <div className="flex items-center py-4">
                             <span className="text-xs text-jci-gray leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
@@ -86,7 +92,7 @@ export default function NoticiasEventos() {
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </div> */}
 
                       <figure className="w-full h-[247px] mt-[16px] overflow-hidden bg-black">
                         <div className="relative w-full h-full overflow-hidden group-hover:opacity-80 group-hover:scale-105 transition-all duration-300 ease-in-out">
@@ -99,7 +105,7 @@ export default function NoticiasEventos() {
                           />
                         </div>
                       </figure>
-                    </Link>
+                    </div>
                   </article>
                 </SwiperSlide>
               ))}
