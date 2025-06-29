@@ -52,7 +52,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                                 </div>
 
                                 <div className="mt-4">
-                                    <a href="#" className="text-xs md:text-sm text-white font-semibold inline-flex items-center gap-2 hover:underline">
+                                    <a href={area.document} target="_blank" className="text-xs md:text-sm text-white font-semibold inline-flex items-center gap-2 hover:underline">
                                         Descargar PDF
                                         <span className="opacity-75">3.9 MB</span>
                                     </a>

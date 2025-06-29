@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineArrowUp } from "react-icons/hi2";
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, /* FaYoutube */ } from "react-icons/fa";
 import { jciLinks } from "@/data/footer";
 import { siteConfig } from "@/config/site";
 
@@ -89,6 +89,7 @@ export function Footer() {
                         <ul className="flex flex-col mt-3 m-1 mb-0 max-w-36 space-y-2" role="list">
                           {section.items.map((item) => (
                             <li key={item.title} className="text-sm">
+                              {item.href ? (
                               <a
                                 href={item.href}
                                 className="hover:text-gray-500"
@@ -96,6 +97,11 @@ export function Footer() {
                               >
                                 {item.title}
                               </a>
+                              ) : (
+                                <span className="text-gray-500">
+                                  {item.title}
+                                </span>
+                              )}
                             </li>
                           ))}
                         </ul>
@@ -131,14 +137,14 @@ export function Footer() {
                       >
                         <FaInstagram className="hover:text-jci-seafoam" aria-hidden="true" />
                       </a>
-                      <a
+                      {/* <a
                         href={siteConfig.links.youtube}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Síguenos en YouTube"
                       >
                         <FaYoutube className="hover:text-jci-seafoam" aria-hidden="true" />
-                      </a>
+                      </a> */}
                     </div>
                   </aside>
                 </div>

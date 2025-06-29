@@ -1,48 +1,42 @@
 export const jciLinks = [
   {
     title: "JCI Ambato",
-    href: "#",
     items: [
-      { title: "Nosotros", href: "#" },
-      { title: "Ser Junior", href: "#" },
-      { title: "Política y Privacidad", href: "#" },
+      { title: "Nosotros", href: null },
+      { title: "Ser Junior", href: null },
+      { title: "Política y Privacidad", href: null },
     ],
   },
 
   {
     title: "Nosotros",
-    href: "#",
     items: [
-      { title: "Nosotros", href: "#" },
-      { title: "Equipo Local", href: "#" },
-      { title: "Contacto", href: "#" },
+      { title: "Equipo Local", href: null },
+      { title: "Contacto", href: null },
     ],
   },
   {
     title: "Áreas de Oportunidad",
-    href: "#",
     items: [
-      { title: "Negocios y Emprendimiento", href: "#" },
-      { title: "Cooperación Internacional", href: "#" },
-      { title: "Desarrollo Individual", href: "#" },
-      { title: "Impacto en la Comunidad", href: "#" },
+      { title: "Negocios y Emprendimiento", href: "/areas-oportunidad/negocios-emprendimiento" },
+      { title: "Cooperación Internacional", href: "/areas-oportunidad/cooperacion-internacional" },
+      { title: "Desarrollo Individual", href: "/areas-oportunidad/desarrollo-individual" },
+      { title: "Impacto en la Comunidad", href: "/areas-oportunidad/impacto-comunidad" },
     ],
   },
   {
     title: "Proyectos",
-    href: "#",
     items: [
-      { title: "Programas", href: "#" },
-      { title: "Proyectos", href: "#" },
-      { title: "Eventos", href: "#" },
+      { title: "Programas", href: null },
+      { title: "Proyectos", href: null },
+      { title: "Eventos", href: null },
     ],
   },
   {
     title: "Involúcrate",
-    href: "#",
     items: [
-      { title: "Membresías", href: "#" },
-      { title: "Voluntariado", href: "#" },
+      { title: "Membresías", href: null },
+      { title: "Voluntariado", href: null },
     ],
   },
 ];
