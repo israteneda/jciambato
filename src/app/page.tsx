@@ -6,7 +6,7 @@ import { useEffect, useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 
 import {
-  Bienvenida,
+  BienvenidaV2,
   Presentacion,
   Grupo,
   Premios,
@@ -72,8 +72,8 @@ export default function BuilderPage() {
 
       {/* Static Content - siempre mostrar inmediatamente */}
       <div>
-        {/* Sección de Bienvenida */}
-        <Bienvenida />
+        {/* Sección de Bienvenida (V1 y V2 Disponibles) */}
+        <BienvenidaV2 />
 
         {/* Sección Presentación */}
         <Presentacion />

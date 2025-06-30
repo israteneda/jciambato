@@ -30,10 +30,10 @@ export const Navbar = ({ className }: NavbarProps) => {
   // Función para detectar si el navbar debe usar texto oscuro
   const detectTextColor = () => {
     // Páginas que siempre necesitan texto oscuro (fondo claro)
-    const darkTextPages = ['/areas-oportunidad', '/involucrate'];
+    const darkTextPages = ['/', '/areas-oportunidad', '/involucrate'];
 
     // Páginas que necesitan texto blanco por defecto pero pueden cambiar con scroll (fondo oscuro)
-    const scrollDependentPages = ['/', '/nosotros', '/proyectos', '/miembros'];
+    const scrollDependentPages = ['/nosotros', '/proyectos', '/miembros'];
 
     // Si estamos en una página que siempre necesita texto oscuro
     if (darkTextPages.includes(pathname)) {
