@@ -61,7 +61,7 @@ export const areasOportunidad: AreaOportunidad[] = [
         alt: "Negocios y Emprendimiento - Imagen 5",
       },
     ],
-    document: "/documents/negocios-emprendimiento.pdf",
+    document: "/documents/areas-oportunidad/negocios-emprendimiento.pdf",
   },
   {
     id: "2",
