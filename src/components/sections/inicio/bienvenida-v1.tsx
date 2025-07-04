@@ -68,7 +68,8 @@ export default function BienvenidaV1() {
             <video
               autoPlay
               className="w-full h-full object-cover"
-              src="/videos/rotary.mp4"
+              /* src="/videos/rotary.mp4" */
+              src="/videos/company-hero.mp4"
               loop
               preload="auto"
               muted
