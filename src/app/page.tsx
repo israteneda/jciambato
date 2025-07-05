@@ -72,7 +72,7 @@ export default function BuilderPage() {
 
       {/* Static Content - siempre mostrar inmediatamente */}
       <div>
-        {/* Sección de Bienvenida (V1 y V2 Disponibles) */}
+        {/* Sección de Bienvenida (V1, V2 y V3 Disponibles) */}
         <BienvenidaV3 />
 
         {/* Sección Presentación */}
