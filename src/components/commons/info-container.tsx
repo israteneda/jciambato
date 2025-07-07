@@ -19,7 +19,7 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
         const lightTextPages = ['/', '/nosotros', '/proyectos', '/miembros'];
 
         // Páginas que siempre necesitan texto oscuro (fondo claro)
-        const darkTextPages = ['/areas-oportunidad', '/involucrate'];
+        const darkTextPages = ['/areas-oportunidad', '/involucrate', '/politica-gestion'];
 
         // Si estamos en una página que necesita texto claro
         if (lightTextPages.includes(pathname)) {

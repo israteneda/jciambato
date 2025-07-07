@@ -9,6 +9,7 @@ import Link from "next/link";
 import BorderFrame from "@/components/commons/border-frame";
 import RotatedText from "@/components/commons/rotated-text";
 import gsap from "gsap";
+import { RowScroll } from "@/components/commons";
 
 export default function BienvenidaV3() {
   const isScrolled = useScroll();
@@ -209,7 +210,7 @@ export default function BienvenidaV3() {
         <RotatedText text="BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO" />
 
         {/* Botón de scroll */}
-        <div className="hidden sm:block absolute z-20 top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2">
+        {/* <div className="hidden sm:block absolute z-20 top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2">
           <button
             aria-label="Desplazarse hacia abajo"
             onClick={() => {
@@ -229,7 +230,8 @@ export default function BienvenidaV3() {
               aria-hidden="true"
             />
           </button>
-        </div>
+        </div> */}
+        <RowScroll />
 
         {/* Logo Somos Liderazgo */}
         <div className="hidden md:block absolute bottom-[60px] right-[20px] sm:bottom-[80px] sm:right-[30px] md:bottom-[60px] md:right-[124px] z-20">
