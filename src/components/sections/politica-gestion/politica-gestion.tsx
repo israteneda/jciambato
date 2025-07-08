@@ -8,7 +8,7 @@ export default function PoliticaGestion() {
 
             <div className="mt-16">
                 <div className="relative z-10 md:max-w-6xl mx-auto px-8">
-                    <h3 className="text-2xl md:text-5xl font-bold text-left text-jci-off-black max-w-3xl leading-[1.5]">
+                    <h3 className="text-2xl md:text-5xl font-bold text-left text-jci-off-black max-w-3xl md:leading-[1.5]">
                         JCI Ambato se compromete a empoderar a sus miembros, senadores y colaboradores, fortaleciendo su sentido de pertenencia y satisfacción mediante relaciones sólidas, sostenibles y basadas en valores compartidos. {/* A través de la innovación, la colaboración, el liderazgo transformador y la responsabilidad social, buscamos ser una organización referente en el desarrollo integral de nuestra comunidad, impulsando el impacto positivo en Ambato y más allá. */}
                     </h3>
 
@@ -66,8 +66,6 @@ export default function PoliticaGestion() {
                         </div>
                     </div>
                 </div>
-
-
             </div>
 
         </section >
