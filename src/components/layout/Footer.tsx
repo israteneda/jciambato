@@ -90,13 +90,13 @@ export function Footer() {
                           {section.items.map((item) => (
                             <li key={item.title} className="text-sm">
                               {item.href ? (
-                              <a
-                                href={item.href}
-                                className="hover:text-gray-500"
-                                aria-label={`Ir a ${item.title}`}
-                              >
-                                {item.title}
-                              </a>
+                                <a
+                                  href={item.href}
+                                  className="hover:text-gray-500"
+                                  aria-label={`Ir a ${item.title}`}
+                                >
+                                  {item.title}
+                                </a>
                               ) : (
                                 <span className="text-gray-500">
                                   {item.title}
@@ -154,10 +154,25 @@ export function Footer() {
 
             {/* Derechos reservados */}
             <div className="relative py-5 z-10 max-w-6xl mx-8 md:mx-auto">
-              <div>
-                <p className="text-sm text-default-400">
+              <div className="flex flex-col md:flex-row gap-3">
+                <p className="text-xs md:text-sm text-default-400">
                   © 2025 Cámara Junior Internacional del Ecuador — Capítulo Ambato. Todos los Derechos Reservados.
+                  {/* © 2025 JCI Ambato. Todos los Derechos Reservados. */}
                 </p>
+
+                <div className="flex flex-row justify-between md:justify-start md:gap-3">
+                  <p className="text-xs md:text-sm text-default-600">
+                    <Link href="/politica-gestion" className="hover:text-gray-500">
+                      Política de Gestión
+                    </Link>
+                  </p>
+
+                  <p className="text-xs md:text-sm text-default-600">
+                    <Link href="/politica-privacidad" className="hover:text-gray-500">
+                      Política de Privacidad
+                    </Link>
+                  </p>
+                </div>
               </div>
             </div>
 

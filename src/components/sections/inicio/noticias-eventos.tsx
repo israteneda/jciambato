@@ -14,7 +14,7 @@ import 'swiper/css/navigation';
 
 export default function NoticiasEventos() {
   return (
-    <section className="relative" aria-labelledby="noticias-heading">
+    <section className="relative select-none" aria-labelledby="noticias-heading">
       <div className="pt-[calc(62.4px+3vw)] pb-[calc(62.4px+3vw)]">
 
         {/* Título */}

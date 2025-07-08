@@ -4,22 +4,20 @@ import { Button } from "@heroui/button";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { HiChevronLeft, HiChevronRight, HiOutlineCollection, HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { getProyectosDestacados, type ProyectoDestacado } from "@/data/proyectos-destacados";
 
 interface CarouselProps {
-  items: {
-    id: number;
-    title: string;
-    projectName: string;
-    edition: string;
-    url: string;
-    description: string;
-    image: string;
-  }[];
+  items?: ProyectoDestacado[];
   autoPlayInterval?: number;
 }
 
-export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
+export const Carousel = ({ items = getProyectosDestacados(), autoPlayInterval = 5000 }: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Si no hay items, no renderizar nada
+  if (!items || items.length === 0) {
+    return null;
+  }
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -36,7 +34,7 @@ export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
   useEffect(() => {
     const interval = setInterval(nextSlide, autoPlayInterval);
     return () => clearInterval(interval);
-  }, [autoPlayInterval]);
+  }, [autoPlayInterval, items.length]);
 
   return (
     <section
@@ -72,7 +70,7 @@ export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
                   {/* Texto y botón */}
                   <header>
                     <div className="text-[13px] leading-[1.85] uppercase text-white font-bold">
-                      Lider A Lider
+                      {item.premio || "Proyecto Destacado"}
                     </div>
                     <div className="mt-2 md:mt-8">
                       <h3 className="text-4xl font-light text-left leading-[1.17] text-white max-w-[666px] md:text-[calc(28.8px+1vw)]">
@@ -185,14 +183,16 @@ export const Carousel = ({ items, autoPlayInterval = 5000 }: CarouselProps) => {
 
       {/* Botón colección */}
       <div className="hidden md:block absolute right-[45px] bottom-[48px]">
-        <Button
-          isIconOnly
-          radius="full"
-          className="bg-jci-aqua"
-          aria-label="Ver colección de proyectos"
-        >
-          <HiOutlineCollection className="w-6 h-6 text-gray-50" />
-        </Button>
+        <Link href="/proyectos" aria-label="Ver todos los proyectos">
+          <Button
+            isIconOnly
+            radius="full"
+            className="bg-jci-aqua hover:bg-cyan-950 transition-colors duration-300"
+            aria-label="Ver colección de proyectos"
+          >
+            <HiOutlineCollection className="w-6 h-6 text-gray-50" />
+          </Button>
+        </Link>
       </div>
     </section>
   );

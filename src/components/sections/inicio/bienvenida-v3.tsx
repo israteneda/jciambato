@@ -9,6 +9,7 @@ import Link from "next/link";
 import BorderFrame from "@/components/commons/border-frame";
 import RotatedText from "@/components/commons/rotated-text";
 import gsap from "gsap";
+import { RowScroll } from "@/components/commons";
 
 export default function BienvenidaV3() {
   const isScrolled = useScroll();
@@ -177,7 +178,7 @@ export default function BienvenidaV3() {
             <div className="flex flex-col items-start select-none">
               <div className="mt-6">
                 <h2
-                  className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-5xl lg:text-6xl xl:text-7xl max-w-xl lg:max-w-5xl py-1 leading-tight"
+                  className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-4xl lg:text-7xl max-w-xl lg:max-w-5xl py-1 leading-tight"
                 >
                   Unidos Construyendo un <span className="text-inherit italic">Futuro</span> de Liderazgo
                 </h2>
@@ -209,7 +210,7 @@ export default function BienvenidaV3() {
         <RotatedText text="BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO" />
 
         {/* Botón de scroll */}
-        <div className="hidden sm:block absolute z-20 top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2">
+        {/* <div className="hidden sm:block absolute z-20 top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2">
           <button
             aria-label="Desplazarse hacia abajo"
             onClick={() => {
@@ -229,7 +230,8 @@ export default function BienvenidaV3() {
               aria-hidden="true"
             />
           </button>
-        </div>
+        </div> */}
+        <RowScroll />
 
         {/* Logo Somos Liderazgo */}
         <div className="hidden md:block absolute bottom-[60px] right-[20px] sm:bottom-[80px] sm:right-[30px] md:bottom-[60px] md:right-[124px] z-20">
