@@ -1,4 +1,4 @@
-import { carouselItems } from "@/data/carouselItems";
+import { proyectosDestacados } from "@/data/proyectos-destacados";
 import { Carousel } from "@/components/ui/Carousel";
 
 export default function Premios() {
@@ -8,7 +8,7 @@ export default function Premios() {
       <header className="sr-only">
         <h2 id="premios-heading">Premios y Reconocimientos</h2>
       </header>
-      <Carousel items={carouselItems} />
+      <Carousel items={proyectosDestacados} />
     </section>
   );
 }

@@ -178,7 +178,7 @@ export default function BienvenidaV3() {
             <div className="flex flex-col items-start select-none">
               <div className="mt-6">
                 <h2
-                  className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-5xl lg:text-6xl xl:text-7xl max-w-xl lg:max-w-5xl py-1 leading-tight"
+                  className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-4xl lg:text-7xl max-w-xl lg:max-w-5xl py-1 leading-tight"
                 >
                   Unidos Construyendo un <span className="text-inherit italic">Futuro</span> de Liderazgo
                 </h2>
