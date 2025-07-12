@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
 import { getProyectoBySlug, getAllProyectos } from '@/data/proyectos';
 import {
-    Detalles,
+    Presentacion,
+    Descripcion,
 } from '@/components/sections/proyectos/slug';
 
 interface ProyectosPageProps {
@@ -82,7 +83,8 @@ export default async function ProyectosPage({ params }: ProyectosPageProps) {
 
     return (
         <main className="relative">
-            <Detalles proyecto={proyecto} />
+            <Presentacion proyecto={proyecto} />
+            <Descripcion proyecto={proyecto} />
         </main>
     );
 } 
