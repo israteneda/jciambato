@@ -165,7 +165,7 @@ export const proyectos: Proyecto[] = [
     fecha: "24 Junio, 2024",
     lugar: "Ambato, Ecuador",
     imagen:
-      "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
+      "/images/areas_oportunidad/desarrollo-individual/proyectos/lider-a-lider.webp",
     area_oportunidad: "desarrollo-individual",
     url: "/proyectos/lider-a-lider",
     descripcion:

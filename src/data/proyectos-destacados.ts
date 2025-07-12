@@ -21,7 +21,7 @@ export const proyectosDestacados: ProyectoDestacado[] = [
     description:
       "Programa intensivo de desarrollo de habilidades de comunicación efectiva que empodera a jóvenes líderes para expresarse con confianza y elocuencia en cualquier escenario público.",
     image:
-      "/images/secciones/proyectos/areas_oportunidad/desarrollo-individual/conquistando-audiencias.webp",
+      "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
     premio: "Mejor Proyecto de Desarrollo Individual",
     categoria: "Desarrollo Individual",
     año: "2024",
@@ -29,13 +29,13 @@ export const proyectosDestacados: ProyectoDestacado[] = [
   {
     id: 2,
     title: "Iniciativa de Impacto Comunitario",
-    projectName: "Dale Otro Chance",
+    projectName: "Feria del Libro",
     edition: "2024",
-    url: "/proyectos/dale-otro-chance",
+    url: "/proyectos/feria-del-libro",
     description:
       "Proyecto innovador de economía circular que promueve la sostenibilidad ambiental y el emprendimiento social, conectando donantes con personas que necesitan ropa de calidad a precios accesibles.",
     image:
-      "/images/secciones/proyectos/areas_oportunidad/negocios-emprendimiento/dale-otro-chance.webp",
+      "/images/areas_oportunidad/impacto-comunidad/proyectos/feria-libro.webp",
     premio: "Proyecto Más Innovador del Año",
     categoria: "Negocios y Emprendimiento",
     año: "2024",
@@ -48,7 +48,7 @@ export const proyectosDestacados: ProyectoDestacado[] = [
     url: "/proyectos/lider-a-lider",
     description:
       "Iniciativa de capacitación y mentoría que desarrolla el potencial de liderazgo en jóvenes profesionales, creando una red de líderes comprometidos con el desarrollo sostenible de la comunidad.",
-    image: "/images/secciones/proyectos/areas_oportunidad/desarrollo-individual/lider-a-lider.webp",
+    image: "/images/areas_oportunidad/desarrollo-individual/proyectos/lider-a-lider.webp",
     premio: "Excelencia en Liderazgo Joven",
     categoria: "Desarrollo Individual",
     año: "2024",

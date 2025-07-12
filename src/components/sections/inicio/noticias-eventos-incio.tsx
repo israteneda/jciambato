@@ -1,6 +1,6 @@
 'use client';
 
-import { noticiasItems } from "@/data/noticias";
+import { getAllNoticiasEventos } from "@/data/noticias-eventos";
 import { Button } from "@heroui/button";
 import Image from "next/image";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
@@ -13,6 +13,8 @@ import 'swiper/css/navigation';
 import Link from "next/link";
 
 export default function NoticiasEventos() {
+  const noticiasItems = getAllNoticiasEventos();
+
   return (
     <section className="relative" aria-labelledby="noticias-heading">
       <div className="pt-[calc(62.4px+3vw)] pb-[calc(62.4px+3vw)]">
@@ -61,17 +63,17 @@ export default function NoticiasEventos() {
                 <SwiperSlide key={item.id} style={{ width: "320px" }}>
                   <article>
                     {/* Comentado hasta desarrollar el blog, div en vez de link */}
-                    <Link href={item.url} className="w-full group">
+                    <Link href={`/noticias-eventos/${item.url}`} className="w-full group">
                       <div className="w-full group">
 
                         <header>
                           <div className="text-[13px] leading-[1.85] not-italic uppercase text-jci-gray font-normal tracking-normal">
-                            <span>{item.type}</span>
+                            <span>{item.tipo}</span>
                           </div>
 
                           <div className="mt-4">
                             <h3 className="text-[22px] font-bold not-italic text-left leading-[1.45] tracking-normal text-jci-off-black md:text-[calc(17.2px+0.25vw)]">
-                              {item.title}
+                              {item.titulo}
                             </h3>
                           </div>
                         </header>
@@ -95,8 +97,8 @@ export default function NoticiasEventos() {
                         <figure className="w-full h-[247px] mt-[16px] overflow-hidden bg-black">
                           <div className="relative w-full h-full overflow-hidden group-hover:opacity-80 group-hover:scale-105 transition-all duration-300 ease-in-out">
                             <Image
-                              src={item.image}
-                              alt={`Imagen de ${item.title}`}
+                              src={item.imagen}
+                              alt={`Imagen de ${item.titulo}`}
                               width={500}
                               height={500}
                               className="absolute w-full h-full inset-0 object-cover transition-opacity duration-300 group-hover:opacity-100"

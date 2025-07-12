@@ -10,6 +10,7 @@ import { getAllProyectos, getProyectosPorArea, getConteoProyectosPorArea, type P
 export default function ProyectosPorArea() {
     // Estado para controlar el botón activo (0 = Todos, 1 = Negocios, etc.)
     const [activeButton, setActiveButton] = useState(0);
+    
     // Estado para controlar la paginación
     const [currentPage, setCurrentPage] = useState(1);
     const proyectosPorPagina = 8;
@@ -59,7 +60,7 @@ export default function ProyectosPorArea() {
                     </div>
 
                     <p className="text-[14px] leading-[1.78] font-normal text-jci-aqua">
-                        <strong>{proyecto.fecha_lugar}</strong>
+                        <strong>{proyecto.fecha} - {proyecto.lugar}</strong>
                     </p>
                 </div>
             </Link>

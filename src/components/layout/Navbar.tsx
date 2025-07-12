@@ -33,7 +33,7 @@ export const Navbar = ({ className }: NavbarProps) => {
     const darkTextPages = ['/areas-oportunidad', '/involucrate', '/politica-gestion', '/politica-privacidad'];
 
     // Páginas que necesitan texto blanco por defecto pero pueden cambiar con scroll (fondo oscuro)
-    const scrollDependentPages = ['/', '/nosotros', '/proyectos', '/miembros'];
+    const scrollDependentPages = ['/', '/nosotros', '/proyectos', '/miembros', '/noticias-eventos'];
 
     // Si estamos en una página que siempre necesita texto oscuro
     if (darkTextPages.includes(pathname)) {
