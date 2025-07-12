@@ -69,7 +69,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                 {/* Contenedor del Swiper*/}
                 <section className="relative z-10 bg-transparent">
                     {/* Swiper con imágenes */}
-                    <div className="select-none">
+                    <div>
                         <div className="cursor-none">
                             <div className="relative z-10 bg-transparent max-w-4xl mx-auto px-8 md:px-0">
                                 <Swiper

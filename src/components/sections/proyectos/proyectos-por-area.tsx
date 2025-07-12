@@ -38,7 +38,7 @@ export default function ProyectosPorArea() {
     // Componente para renderizar una actividad individual
     const ActivityCard = ({ proyecto }: { proyecto: Proyecto }) => (
         <article className="w-full md:w-1/2 mx-5 mb-20">
-            <Link href={proyecto.url} className="w-full" aria-label={`Ver detalles de ${proyecto.titulo}`}>
+            <Link href={`/proyectos/${proyecto.slug}`} className="w-full" aria-label={`Ver detalles de ${proyecto.titulo}`}>
                 <figure className="h-[350px] md:h-[512px] overflow-hidden bg-gray-200">
                     <div className="relative bg-white w-full h-full overflow-hidden">
                         <Image
@@ -159,7 +159,7 @@ export default function ProyectosPorArea() {
                                     size="lg"
                                     className="relative bg-jci-aqua text-white group overflow-hidden"
                                     aria-label="Ver más proyectos"
-                                    onClick={() => setCurrentPage(currentPage + 1)}
+                                    onPress={() => setCurrentPage(currentPage + 1)}
                                 >
                                     <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>
                                     <span className="relative z-10">Ver más</span>

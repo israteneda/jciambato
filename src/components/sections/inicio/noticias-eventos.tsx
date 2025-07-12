@@ -3,18 +3,18 @@
 import { noticiasItems } from "@/data/noticias";
 import { Button } from "@heroui/button";
 import Image from "next/image";
-/* import { HiOutlineArrowNarrowRight } from "react-icons/hi"; */
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-/* import Link from "next/link"; */
+import Link from "next/link";
 
 export default function NoticiasEventos() {
   return (
-    <section className="relative select-none" aria-labelledby="noticias-heading">
+    <section className="relative" aria-labelledby="noticias-heading">
       <div className="pt-[calc(62.4px+3vw)] pb-[calc(62.4px+3vw)]">
 
         {/* Título */}
@@ -25,7 +25,6 @@ export default function NoticiasEventos() {
                 Noticias y Eventos
               </h2>
 
-              {/* Comendado hasta desarrollar el blog */}
               {/* <div className="hidden md:block">
                 <Button
                   radius="none"
@@ -62,50 +61,50 @@ export default function NoticiasEventos() {
                 <SwiperSlide key={item.id} style={{ width: "320px" }}>
                   <article>
                     {/* Comentado hasta desarrollar el blog, div en vez de link */}
-                    {/* <Link href={item.url} className="w-full group"> */}
-                    <div className="w-full group">
+                    <Link href={item.url} className="w-full group">
+                      <div className="w-full group">
 
-                      <header>
-                        <div className="text-[13px] leading-[1.85] not-italic uppercase text-jci-gray font-normal tracking-normal">
-                          <span>{item.type}</span>
-                        </div>
+                        <header>
+                          <div className="text-[13px] leading-[1.85] not-italic uppercase text-jci-gray font-normal tracking-normal">
+                            <span>{item.type}</span>
+                          </div>
 
-                        <div className="mt-4">
-                          <h3 className="text-[22px] font-bold not-italic text-left leading-[1.45] tracking-normal text-jci-off-black md:text-[calc(17.2px+0.25vw)]">
-                            {item.title}
-                          </h3>
-                        </div>
-                      </header>
+                          <div className="mt-4">
+                            <h3 className="text-[22px] font-bold not-italic text-left leading-[1.45] tracking-normal text-jci-off-black md:text-[calc(17.2px+0.25vw)]">
+                              {item.title}
+                            </h3>
+                          </div>
+                        </header>
 
-                      {/* Comendado hasta desarrollar el blog */}
-                      {/* <div className="mt-6">
-                        <div className="group max-w-full relative inline-block transition duration-[400ms] cursor-pointer">
-                          <div className="flex items-center py-4">
-                            <span className="text-xs text-jci-gray leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
-                              Leer más
-                            </span>
-                            <div
-                              className="flex ml-3 items-center transform transition-transform duration-300 group-hover:translate-x-1"
-                              aria-hidden="true"
-                            >
-                              <HiOutlineArrowNarrowRight className="w-6 h-6 text-jci-gray group-hover:text-jci-red transition-colors duration-300" />
+                        <div className="mt-6">
+                          <div className="group max-w-full relative inline-block transition duration-[400ms] cursor-pointer">
+                            <div className="flex items-center py-4">
+                              <span className="text-xs text-jci-gray leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
+                                Leer más
+                              </span>
+                              <div
+                                className="flex ml-3 items-center transform transition-transform duration-300 group-hover:translate-x-1"
+                                aria-hidden="true"
+                              >
+                                <HiOutlineArrowNarrowRight className="w-6 h-6 text-jci-gray group-hover:text-jci-red transition-colors duration-300" />
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div> */}
 
-                      <figure className="w-full h-[247px] mt-[16px] overflow-hidden bg-black">
-                        <div className="relative w-full h-full overflow-hidden group-hover:opacity-80 group-hover:scale-105 transition-all duration-300 ease-in-out">
-                          <Image
-                            src={item.image}
-                            alt={`Imagen de ${item.title}`}
-                            width={500}
-                            height={500}
-                            className="absolute w-full h-full inset-0 object-cover transition-opacity duration-300 group-hover:opacity-100"
-                          />
-                        </div>
-                      </figure>
-                    </div>
+                        <figure className="w-full h-[247px] mt-[16px] overflow-hidden bg-black">
+                          <div className="relative w-full h-full overflow-hidden group-hover:opacity-80 group-hover:scale-105 transition-all duration-300 ease-in-out">
+                            <Image
+                              src={item.image}
+                              alt={`Imagen de ${item.title}`}
+                              width={500}
+                              height={500}
+                              className="absolute w-full h-full inset-0 object-cover transition-opacity duration-300 group-hover:opacity-100"
+                            />
+                          </div>
+                        </figure>
+                      </div>
+                    </Link>
                   </article>
                 </SwiperSlide>
               ))}

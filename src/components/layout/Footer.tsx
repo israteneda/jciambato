@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="relative z-10 bg-gray-50 select-none overflow-x-hidden" role="contentinfo" aria-label="Pie de página">
+    <footer className="relative z-20 bg-gray-50 select-none overflow-x-hidden" role="contentinfo" aria-label="Pie de página">
       {/* Sección de llamada a la acción */}
       <section className="relative z-10 bg-cyan-600" aria-labelledby="cta-heading">
         <div className="p-10 md:p-28">

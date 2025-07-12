@@ -175,7 +175,7 @@ export default function BienvenidaV3() {
 
           {/* Contenido principal */}
           <main className="relative z-20 w-full">
-            <div className="flex flex-col items-start select-none">
+            <div className="flex flex-col items-start">
               <div className="mt-6">
                 <h2
                   className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-4xl lg:text-7xl max-w-xl lg:max-w-5xl py-1 leading-tight"

@@ -11,7 +11,7 @@ import {
   Grupo,
   Premios,
   NoticiasEventos,
-  Aliados,
+  Aliados
 } from "@/components/sections/inicio";
 import "../builder-registry";
 

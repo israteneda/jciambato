@@ -1,9 +1,12 @@
 export type Proyecto = {
   id: string;
+  slug: string;
   titulo: string;
   subtitulo: string;
-  fecha_lugar: string;
+  fecha: string;
+  lugar: string;
   imagen: string;
+  director: string; // Nombre del director del proyecto
   area_oportunidad: string; // Para filtrar por área de oportunidad
   url: string; // URL para navegación
   descripcion?: string;
@@ -14,9 +17,12 @@ export const proyectos: Proyecto[] = [
   // Negocios y Emprendimiento
   {
     id: "1",
+    slug: "dale-otro-chance",
     titulo: "Dale Otro Chance",
     subtitulo: "Competencia de emprendimiento de 54 horas",
-    fecha_lugar: "2024. Ambato, Ecuador",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
     imagen:
       "/images/areas_oportunidad/negocios-emprendimiento/proyectos/negocios-emprendimiento-p1.webp",
     area_oportunidad: "negocios-emprendimiento",
@@ -27,9 +33,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "2",
+    slug: "mentoria-empresarial-jci",
     titulo: "Mentoría Empresarial JCI",
     subtitulo: "Programa de acompañamiento para startups",
-    fecha_lugar: "2024. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen:
       "/images/areas_oportunidad/negocios-emprendimiento/proyectos/negocios-emprendimiento-p1.webp",
     area_oportunidad: "negocios-emprendimiento",
@@ -39,9 +48,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "3",
+    slug: "feria-emprendimiento",
     titulo: "Feria de Emprendimiento",
     subtitulo: "Exposición de proyectos innovadores",
-    fecha_lugar: "2024. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen:
       "/images/areas_oportunidad/negocios-emprendimiento/proyectos/negocios-emprendimiento-p1.webp",
     area_oportunidad: "negocios-emprendimiento",
@@ -51,9 +63,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "4",
+    slug: "workshop-innovacion",
     titulo: "Workshop de Innovación",
     subtitulo: "Talleres de design thinking y metodologías ágiles",
-    fecha_lugar: "2024. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen:
       "/images/areas_oportunidad/negocios-emprendimiento/proyectos/negocios-emprendimiento-p1.webp",
     area_oportunidad: "negocios-emprendimiento",
@@ -65,9 +80,12 @@ export const proyectos: Proyecto[] = [
   // Cooperación Internacional
   {
     id: "5",
+    slug: "academia-liderazgo-global",
     titulo: "Academia de Liderazgo Global",
     subtitulo: "Intercambio cultural y desarrollo de habilidades internacionales",
-    fecha_lugar: "2024. Quito, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Quito, Ecuador",
     imagen:
       "/images/areas_oportunidad/cooperacion-internacional/proyectos/cooperacion-internacional-p1.webp",
     area_oportunidad: "cooperacion-internacional",
@@ -77,9 +95,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "6",
+    slug: "hermanamiento-jci-tokio",
     titulo: "Hermanamiento con JCI Tokio",
     subtitulo: "Colaboración internacional con Japón",
-    fecha_lugar: "2024. Tokio, Japón",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Tokio, Japón",
     imagen:
       "/images/areas_oportunidad/cooperacion-internacional/proyectos/cooperacion-internacional-p1.webp",
     area_oportunidad: "cooperacion-internacional",
@@ -89,9 +110,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "7",
+    slug: "conferencia-mundial-jci",
     titulo: "Conferencia Mundial JCI",
     subtitulo: "Participación en el evento global de JCI",
-    fecha_lugar: "2024. Seúl, Corea del Sur",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Seúl, Corea del Sur",
     imagen:
       "/images/areas_oportunidad/cooperacion-internacional/proyectos/cooperacion-internacional-p1.webp",
     area_oportunidad: "cooperacion-internacional",
@@ -101,9 +125,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "8",
+    slug: "proyecto-binacional-ecuador-colombia",
     titulo: "Proyecto Binacional Ecuador-Colombia",
     subtitulo: "Iniciativa de desarrollo fronterizo",
-    fecha_lugar: "2024. Tulcán, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Tulcán, Ecuador",
     imagen:
       "/images/areas_oportunidad/cooperacion-internacional/proyectos/cooperacion-internacional-p1.webp",
     area_oportunidad: "cooperacion-internacional",
@@ -115,9 +142,12 @@ export const proyectos: Proyecto[] = [
   // Desarrollo Individual
   {
     id: "9",
+    slug: "conquistando-audiencias",
     titulo: "Programa de Oratoria y Debate (Conquistando Audiencias)",
     subtitulo: "Programa intensivo de comunicación efectiva",
-    fecha_lugar: "2025. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen:
       "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
     area_oportunidad: "desarrollo-individual",
@@ -128,9 +158,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "10",
+    slug: "lider-a-lider",
     titulo: "Líder a Líder",
     subtitulo: "Programa de capacitación para líderes",
-    fecha_lugar: "2025. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen:
       "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
     area_oportunidad: "desarrollo-individual",
@@ -141,9 +174,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "11",
+    slug: "programa-liderazgo-etico",
     titulo: "Programa de Liderazgo Ético",
     subtitulo: "Programa de capacitación para líderes",
-    fecha_lugar: "2025. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen:
       "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
     area_oportunidad: "desarrollo-individual",
@@ -154,9 +190,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "12",
+    slug: "programa-liderazgo",
     titulo: "Programa de Liderazgo",
     subtitulo: "Programa de capacitación para líderes",
-    fecha_lugar: "2025. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen:
       "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
     area_oportunidad: "desarrollo-individual",
@@ -169,9 +208,12 @@ export const proyectos: Proyecto[] = [
   // Impacto en la Comunidad
   {
     id: "13",
+    slug: "feria-del-libro",
     titulo: "Feria del Libro",
     subtitulo: "Feria de venta de libros",
-    fecha_lugar: "2025. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+      fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/impacto-comunidad-p1.webp",
     area_oportunidad: "impacto-comunidad",
     url: "/proyectos/feria-del-libro",
@@ -181,9 +223,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "14",
+    slug: "podcast-pan-de-pinllo",
     titulo: "Podcast 'A los Tiempos Pan de Pinllo'",
     subtitulo: "Podcast sobre experiencia de grandes lideres en la ciudad de Ambato",
-    fecha_lugar: "2025. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/impacto-comunidad-p1.webp",
     area_oportunidad: "impacto-comunidad",
     url: "/proyectos/podcast-pan-de-pinllo",
@@ -193,9 +238,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "15",
+    slug: "campana-de-donacion-de-sangre",
     titulo: "Campaña de Donación de Sangre",
     subtitulo: "Jornadas de donación voluntaria de sangre",
-    fecha_lugar: "2025. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/impacto-comunidad-p1.webp",
     area_oportunidad: "impacto-comunidad",
     url: "/proyectos/campana-de-donacion-de-sangre",
@@ -205,9 +253,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "16",
+    slug: "proyecto-de-reciclaje-comunitario",
     titulo: "Proyecto de Reciclaje Comunitario",
     subtitulo: "Implementación de sistemas de reciclaje en barrios de la ciudad",
-    fecha_lugar: "2025. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/impacto-comunidad-p1.webp",
     area_oportunidad: "impacto-comunidad",
     url: "/proyectos/proyecto-de-reciclaje-comunitario",
@@ -217,9 +268,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "17",
+    slug: "apoyo-a-comedores-comunitarios",
     titulo: "Apoyo a Comedores Comunitarios",
     subtitulo: "Iniciativa de seguridad alimentaria",
-    fecha_lugar: "2024. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/impacto-comunidad-p1.webp",
     area_oportunidad: "impacto-comunidad",
     url: "/proyectos/apoyo-a-comedores-comunitarios",
@@ -228,9 +282,12 @@ export const proyectos: Proyecto[] = [
   },
   {
     id: "18",
+    slug: "programa-de-apoyo-escolar",
     titulo: "Programa de Apoyo Escolar",
     subtitulo: "Tutorías para estudiantes de bajos recursos",
-    fecha_lugar: "2024. Ambato, Ecuador",
+    director: "Juan Pablo Pérez",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
     imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/impacto-comunidad-p1.webp",
     area_oportunidad: "impacto-comunidad",
     url: "/proyectos/programa-de-apoyo-escolar",
@@ -250,6 +307,10 @@ export function getAllProyectos(): Proyecto[] {
 
 export function getProyectoById(id: string): Proyecto | undefined {
   return proyectos.find((proyecto) => proyecto.id === id);
+}
+
+export function getProyectoBySlug(slug: string): Proyecto | undefined {
+  return proyectos.find((proyecto) => proyecto.slug === slug);
 }
 
 export function getProyectosPorEstado(estado: "activo" | "completado" | "planificado"): Proyecto[] {
