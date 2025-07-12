@@ -5,6 +5,7 @@ import BackgroundText from "@/components/commons/background-text";
 import { Input } from "@heroui/input";
 import { Button } from "@heroui/button";
 import { Switch } from "@heroui/switch";
+import Link from "next/link";
 
 export default function Formulario() {
     const [name, setName] = useState("");
@@ -152,7 +153,7 @@ export default function Formulario() {
                                                     onValueChange={setTermsAccepted}
                                                 />
                                                 <label htmlFor="terms" className="ml-3 text-xs text-gray-600">
-                                                    He leído y acepto los <a href="#" className="underline font-semibold">términos y condiciones</a> de la política de privacidad de JCI Ambato.
+                                                    He leído y acepto los <Link href="/politica-privacidad" className="underline font-semibold">términos y condiciones</Link> de la política de privacidad de JCI Ambato.
                                                 </label>
                                             </div>
                                             <div className="flex items-start">

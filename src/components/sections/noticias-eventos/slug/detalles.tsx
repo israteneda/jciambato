@@ -67,7 +67,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
             </div>
 
             <div className="relative">
-                <div className="relative mx-auto md:max-w-6xl py-20 px-8 md:px-24 pb-36 ">
+                <div className="relative mx-auto md:max-w-6xl py-20 px-8 md:px-24 pb-36 md:bg-white">
 
                     <div className="">
                         <header>
