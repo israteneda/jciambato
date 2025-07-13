@@ -32,7 +32,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
             <div className="pb-28">
                 <section className="relative overflow-hidden">
 
-                    <div className="relative w-full h-[300px] md:h-[960px] md:h-[calc(151.919px + 52.5253vw)]">
+                    <div className="relative w-full h-[550px] md:h-[860px]">
                         <div className="relative w-full h-full overflow-hidden bg-white">
                             <Image
                                 src={proyecto.imagen}
@@ -45,7 +45,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                     </div>
                     <div className="relative top-[-140px] mb-[-140px] z-20">
                         <div className="relative bg-white mx-auto max-w-7xl">
-                            <div className="pl-8 md:pl-24 py-20 w-[300px] md:w-[960px] box-border">
+                            <div className="p-8 md:pt-20 md:p-20 w-full box-border">
                                 <div className="text-[13px] leading-[1.85] not-italic uppercase text-jci-black tracking-[1px]">
                                     {proyecto.area_oportunidad}
 
