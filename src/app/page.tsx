@@ -6,18 +6,15 @@ import {
   Grupo,
   Premios,
   NoticiasEventos,
-  Aliados
+  Aliados,
 } from "@/components/sections/inicio";
 
 export default function HomePage() {
   return (
-    {/* Static Content - siempre mostrar inmediatamente */}
     <div>
+      {/* Static Content - siempre mostrar inmediatamente */}
       {/* Sección de Bienvenida (V1, V2 y V3 Disponibles) */}
       <BienvenidaV3 />
-
-      {/* Sección Presentación */}
-      <Presentacion />
 
       {/* Sección Presentación */}
       <Presentacion />
