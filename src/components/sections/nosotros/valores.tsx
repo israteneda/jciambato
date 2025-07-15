@@ -19,7 +19,7 @@ export default function Valores() {
 
                         <div className="mt-16">
                             <p className="text-jci-black text-medium md:text-xl leading-[1.78] text-left max-w-md">
-                                Nuestros valores son el punto de referencia para desarrollar un trabajo excelente. Desde el primer hasta el último día de cada proyecto. Creando valor, siempre enfocados en la calidad del producto final.
+                                En JCI Ambato, nuestros valores son la base que guía tanto el crecimiento personal como el organizacional. Creemos firmemente que el desarrollo de las personas impulsa el progreso de la organización, y viceversa.
                             </p>
                         </div>
                     </header>

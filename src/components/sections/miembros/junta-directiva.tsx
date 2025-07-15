@@ -5,19 +5,19 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 export default function Miembros() {
     return (
         <section className="relative py-16 z-10" aria-labelledby="junta-directiva-heading">
-            <div className="max-w-6xl mx-8 lg:mx-auto">
+            <div className="max-w-5xl mx-8 lg:mx-auto">
                 {/* Header */}
                 <header className="text-start mb-12">
                     <h2 id="junta-directiva-heading" className="text-3xl md:text-5xl font-bold text-gray-800">
                         Junta Directiva
                     </h2>
-                    <p className="text-lg text-gray-600 mt-2 max-w-3xl">
-                        Conforma miembros que se encargan de la gestión de la Cámara Junior Internacional del Ecuador - Capítulo Ambato.
+                    <p className="text-lg text-gray-600 mt-2">
+                        La Junta Directiva de la JCI Ambato es el órgano de gobierno responsable de liderar y gestionar las operaciones y actividades de la organización local. Conformada por miembros elegidos democráticamente, esta junta desempeña un rol clave en la planificación estratégica, la administración financiera, la representación institucional y la supervisión de proyectos y eventos. Su labor garantiza el cumplimiento de los objetivos de la JCI Ambato, promoviendo el desarrollo de iniciativas que generen un impacto positivo en la comunidad y fortaleciendo el compromiso con la misión de la organización.
                     </p>
                 </header>
 
                 {/* Miembros Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16" role="list" aria-label="Lista de miembros de la junta directiva">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-10" role="list" aria-label="Lista de miembros de la junta directiva">
                     {juntaDirectivaData.map((miembro, index) => (
                         <article
                             key={index}
@@ -32,9 +32,11 @@ export default function Miembros() {
                                     <Image
                                         src={miembro.imagen}
                                         alt={`Foto de ${miembro.nombre}`}
-                                        width={400}
-                                        height={400}
+                                        width={800}
+                                        height={800}
                                         className="w-full h-auto md:h-96 object-cover"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                        priority={index < 6}
                                     />
                                 ) : (
                                     <div className="w-full h-auto md:h-96 bg-gray-400 flex items-center justify-center">
@@ -44,7 +46,7 @@ export default function Miembros() {
                             </figure>
 
                             <div className="w-full py-5 text-start">
-                                <div className="flex justify-between">
+                                <div className="flex flex-col lg:flex-row justify-between">
                                     <div>
                                         <h3 className="font-bold text-xl text-jci-black">{miembro.nombre}</h3>
                                         <p className="text-md text-jci-gray">
@@ -53,7 +55,7 @@ export default function Miembros() {
                                     </div>
 
                                     <div className="flex items-center">
-                                        {miembro.social && (
+                                        {miembro.social && (miembro.social.instagram || miembro.social.linkedin) && (
                                             <nav className="flex items-center space-x-4 mt-3" aria-label={`Redes sociales de ${miembro.nombre}`}>
                                                 {miembro.social.instagram && (
                                                     <a
