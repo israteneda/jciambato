@@ -21,7 +21,7 @@
 ### 🎯 Características Principales
 
 - **Diseño Responsivo**: Interfaz optimizada para todos los dispositivos
-- **CMS Integrado**: Gestión de contenido con Builder.io
+- **Contenido Estático**: Gestión de contenido optimizada para rendimiento
 - **SEO Optimizado**: Configuración completa para motores de búsqueda
 - **Accesibilidad**: Cumple con estándares WCAG
 - **Rendimiento**: Optimizado con Next.js 15 y Turbopack
@@ -39,11 +39,6 @@
 - **[HeroUI v2](https://heroui.com/)** - Biblioteca de componentes UI
 - **[Framer Motion](https://www.framer.com/motion/)** - Animaciones fluidas
 
-### CMS y Gestión de Contenido
-
-- **[Builder.io](https://builder.io/)** - CMS headless para gestión de contenido
-- **[Builder.io React SDK](https://www.npmjs.com/package/@builder.io/react)** - Integración React
-
 ### Herramientas de Desarrollo
 
 - **[ESLint](https://eslint.org/)** - Linting de código
@@ -55,7 +50,6 @@
 - **[Swiper](https://swiperjs.com/)** - Carousel y slider
 - **[React Icons](https://react-icons.github.io/react-icons/)** - Iconografía
 - **[React Aria](https://react-spectrum.adobe.com/react-aria/)** - Accesibilida
-
 
 ## 🚀 Instalación y Configuración
 
@@ -76,14 +70,11 @@ npm install
 pnpm install
 ```
 
-### 3. Configurar Variables de Entorno
+### 3. Configurar Variables de Entorno (Opcional)
 
 Crea un archivo `.env.local` en la raíz del proyecto:
 
 ```env
-# Builder.io Configuration
-NEXT_PUBLIC_BUILDER_API_KEY=your_builder_api_key_here
-
 # Site Configuration
 NEXT_PUBLIC_SITE_URL=https://www.jciambato.org
 
@@ -108,7 +99,6 @@ La aplicación estará disponible en `http://localhost:3000`
 - **JCI Gold**: `#EDBE3B` - Color de acento
 - **JCI Seafoam**: `#56BDA3` - Color complementario
 
-
 ## 📝 Scripts Disponibles
 
 ```bash
@@ -124,7 +114,6 @@ npm run format       # Formatea código con Prettier
 # Análisis
 npm run analyze      # Analiza el bundle (si está configurado)
 ```
-
 
 ## 📄 Licencia
 
