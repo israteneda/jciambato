@@ -8,12 +8,13 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+import Chatbot from "@/components/ui/Chatbot";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jciambato.org"),
   title: {
     default: "JCI Ambato — Formación de Líderes Juveniles con Impacto Social",
-    template: "%s | JCI Ambato"
+    template: "%s | JCI Ambato",
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Navbar />
             <main className="container max-w-full bg-gray-50">{children}</main>
             <Footer />
+            <Chatbot />
           </div>
         </Providers>
       </body>
