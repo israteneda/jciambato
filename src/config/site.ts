@@ -105,6 +105,11 @@ export const siteConfig = {
       description: "Explora nuestros proyectos.",
     },
     {
+      label: "Media",
+      href: "/noticias-eventos",
+      description: "Explora nuestras noticias y eventos.",
+    },
+    {
       label: "Miembros",
       href: "/miembros",
       description: "Conoce a nuestro equipo de líderes juveniles.",

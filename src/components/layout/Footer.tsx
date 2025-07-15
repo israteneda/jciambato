@@ -3,13 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineArrowUp } from "react-icons/hi2";
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, /* FaYoutube */ } from "react-icons/fa";
 import { jciLinks } from "@/data/footer";
 import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="relative z-10 bg-gray-50 select-none overflow-x-hidden" role="contentinfo" aria-label="Pie de página">
+    <footer className="relative z-20 bg-gray-50 select-none overflow-x-hidden" role="contentinfo" aria-label="Pie de página">
       {/* Sección de llamada a la acción */}
       <section className="relative z-10 bg-cyan-600" aria-labelledby="cta-heading">
         <div className="p-10 md:p-28">
@@ -89,13 +89,19 @@ export function Footer() {
                         <ul className="flex flex-col mt-3 m-1 mb-0 max-w-36 space-y-2" role="list">
                           {section.items.map((item) => (
                             <li key={item.title} className="text-sm">
-                              <a
-                                href={item.href}
-                                className="hover:text-gray-500"
-                                aria-label={`Ir a ${item.title}`}
-                              >
-                                {item.title}
-                              </a>
+                              {item.href ? (
+                                <a
+                                  href={item.href}
+                                  className="hover:text-gray-500"
+                                  aria-label={`Ir a ${item.title}`}
+                                >
+                                  {item.title}
+                                </a>
+                              ) : (
+                                <span className="text-gray-500">
+                                  {item.title}
+                                </span>
+                              )}
                             </li>
                           ))}
                         </ul>
@@ -131,14 +137,14 @@ export function Footer() {
                       >
                         <FaInstagram className="hover:text-jci-seafoam" aria-hidden="true" />
                       </a>
-                      <a
+                      {/* <a
                         href={siteConfig.links.youtube}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Síguenos en YouTube"
                       >
                         <FaYoutube className="hover:text-jci-seafoam" aria-hidden="true" />
-                      </a>
+                      </a> */}
                     </div>
                   </aside>
                 </div>
@@ -148,10 +154,25 @@ export function Footer() {
 
             {/* Derechos reservados */}
             <div className="relative py-5 z-10 max-w-6xl mx-8 md:mx-auto">
-              <div>
-                <p className="text-sm text-default-400">
+              <div className="flex flex-col md:flex-row gap-3">
+                <p className="text-xs md:text-sm text-default-400">
                   © 2025 Cámara Junior Internacional del Ecuador — Capítulo Ambato. Todos los Derechos Reservados.
+                  {/* © 2025 JCI Ambato. Todos los Derechos Reservados. */}
                 </p>
+
+                <div className="flex flex-row justify-between md:justify-start md:gap-3">
+                  <p className="text-xs md:text-sm text-default-600">
+                    <Link href="/politica-gestion" className="hover:text-gray-500">
+                      Política de Gestión
+                    </Link>
+                  </p>
+
+                  <p className="text-xs md:text-sm text-default-600">
+                    <Link href="/politica-privacidad" className="hover:text-gray-500">
+                      Política de Privacidad
+                    </Link>
+                  </p>
+                </div>
               </div>
             </div>
 

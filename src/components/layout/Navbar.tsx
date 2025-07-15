@@ -30,10 +30,10 @@ export const Navbar = ({ className }: NavbarProps) => {
   // Función para detectar si el navbar debe usar texto oscuro
   const detectTextColor = () => {
     // Páginas que siempre necesitan texto oscuro (fondo claro)
-    const darkTextPages = ['/areas-oportunidad', '/involucrate'];
+    const darkTextPages = ['/areas-oportunidad', '/involucrate', '/politica-gestion', '/politica-privacidad'];
 
     // Páginas que necesitan texto blanco por defecto pero pueden cambiar con scroll (fondo oscuro)
-    const scrollDependentPages = ['/', '/nosotros', '/proyectos', '/miembros'];
+    const scrollDependentPages = ['/', '/nosotros', '/proyectos', '/miembros', '/noticias-eventos'];
 
     // Si estamos en una página que siempre necesita texto oscuro
     if (darkTextPages.includes(pathname)) {
@@ -90,7 +90,7 @@ export const Navbar = ({ className }: NavbarProps) => {
   return (
     <HeroUINavbar
       className={clsx(
-        "fixed top-0 left-0 right-0 transition-all duration-300 z-50",
+        "fixed top-0 left-0 right-0 transition-all duration-300 z-50 select-none",
         isScrolled ? "bg-white shadow-md" : "bg-transparent",
         className
       )}

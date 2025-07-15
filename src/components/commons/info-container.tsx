@@ -16,10 +16,10 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
     // Función para detectar si debe usar texto claro (para fondos oscuros)
     const detectTextColor = () => {
         // Páginas que siempre necesitan texto claro (fondo oscuro)
-        const lightTextPages = ['/', '/nosotros', '/proyectos', '/miembros'];
+        const lightTextPages = ['/', '/nosotros', '/proyectos', '/miembros', '/noticias-eventos'];
 
         // Páginas que siempre necesitan texto oscuro (fondo claro)
-        const darkTextPages = ['/areas-oportunidad', '/involucrate'];
+        const darkTextPages = ['/areas-oportunidad', '/involucrate', '/politica-gestion', '/politica-privacidad'];
 
         // Si estamos en una página que necesita texto claro
         if (lightTextPages.includes(pathname)) {

@@ -20,7 +20,7 @@ export default function NotFoundPage() {
 
             </div>
 
-            <div className="relative ml-48">
+            <div className="relative md:ml-36">
               <div className="mt-20">
                 <h3 className="text-4xl md:text-5xl font-bold not-italic text-left leading-[1.17] tracking-normal text-black md:max-w-[470px]">
                   ¡La página ha sido eliminada o no existe!

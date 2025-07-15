@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Aliados() {
 
   return (
-    <section aria-labelledby="aliados-heading">
+    <section className="select-none" aria-labelledby="aliados-heading">
       <header className="relative md:w-[calc(100%-180px)] mx-8 md:mx-20">
         <div className="flex justify-center">
           <h2 id="aliados-heading" className="text-2xl font-bold not-italic leading-[1.25] tracking-normal text-left text-jci-off-black md:text-[calc(22.4px+0.5vw)]">

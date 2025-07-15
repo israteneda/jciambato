@@ -65,7 +65,7 @@ const BackgroundText = ({
   );
 
   return (
-    <section className='overflow-hidden mx-auto select-none' aria-hidden="true">
+    <section className='overflow-hidden mx-auto' aria-hidden="true">
       <h2
         className={baseTextStyle}
         style={translateStyles.left}

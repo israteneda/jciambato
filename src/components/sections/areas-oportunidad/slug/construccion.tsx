@@ -52,7 +52,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                                 </div>
 
                                 <div className="mt-4">
-                                    <a href="#" className="text-xs md:text-sm text-white font-semibold inline-flex items-center gap-2 hover:underline">
+                                    <a href={area.document} target="_blank" className="text-xs md:text-sm text-white font-semibold inline-flex items-center gap-2 hover:underline">
                                         Descargar PDF
                                         <span className="opacity-75">3.9 MB</span>
                                     </a>
@@ -69,7 +69,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                 {/* Contenedor del Swiper*/}
                 <section className="relative z-10 bg-transparent">
                     {/* Swiper con imágenes */}
-                    <div className="select-none">
+                    <div>
                         <div className="cursor-none">
                             <div className="relative z-10 bg-transparent max-w-4xl mx-auto px-8 md:px-0">
                                 <Swiper

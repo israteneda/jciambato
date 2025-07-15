@@ -13,6 +13,7 @@ export type AreaOportunidad = {
   longDescription?: string;
   brochure?: string;
   images?: Image[];
+  document?: string;
 };
 
 interface Image {
@@ -60,6 +61,7 @@ export const areasOportunidad: AreaOportunidad[] = [
         alt: "Negocios y Emprendimiento - Imagen 5",
       },
     ],
+    document: "/documents/areas-oportunidad/negocios-emprendimiento.pdf",
   },
   {
     id: "2",
@@ -100,6 +102,7 @@ export const areasOportunidad: AreaOportunidad[] = [
         alt: "Cooperación Internacional - Imagen 5",
       },
     ],
+    document: "/documents/areas-oportunidad/cooperacion-internacional.pdf",
   },
   {
     id: "3",
@@ -140,6 +143,7 @@ export const areasOportunidad: AreaOportunidad[] = [
         alt: "Desarrollo Individual - Imagen 5",
       },
     ],
+    document: "/documents/areas-oportunidad/desarrollo-individual.pdf",
   },
   {
     id: "4",
@@ -179,6 +183,7 @@ export const areasOportunidad: AreaOportunidad[] = [
         alt: "Impacto en la Comunidad - Imagen 5",
       },
     ],
+    document: "/documents/areas-oportunidad/impacto-comunidad.pdf",
   },
 ];
 

@@ -9,7 +9,7 @@ import BorderFrame from "@/components/commons/border-frame";
 import RotatedText from "@/components/commons/rotated-text";
 
 
-export default function Bienvenida() {
+export default function BienvenidaV1() {
   const isScrolled = useScroll();
 
   return (
@@ -68,7 +68,8 @@ export default function Bienvenida() {
             <video
               autoPlay
               className="w-full h-full object-cover"
-              src="/videos/rotary.mp4"
+              /* src="/videos/rotary.mp4" */
+              src="/videos/company-hero.mp4"
               loop
               preload="auto"
               muted
@@ -107,8 +108,20 @@ export default function Bienvenida() {
           </button>
         </div>
 
+        {/* Logo Somos Liderazgo */}
+        <div className="hidden md:block absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] z-20">
+          <Image
+            alt="Somos Liderazgo Logo"
+            className="object-contain w-[150px] h-[70px]"
+            src="/images/logos/somos-liderazgo.webp"
+            width={150}
+            height={70}
+            priority
+          />
+        </div>
+
         {/* Enlace a JCI Ecuador */}
-        <div className="hidden md:block absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] text-[10.5px] font-semibold uppercase z-20 text-jci-seafoam">
+        <div className="hidden md:block absolute bottom-[100px] left-[40px] md:bottom-[80px] md:left-[180px] text-[10.5px] font-semibold uppercase z-20 text-jci-seafoam">
           <a
             href="https://jciecuador.com"
             target="_blank"
