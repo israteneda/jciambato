@@ -8,7 +8,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
-import Chatbot from "@/components/ui/Chatbot";
+import ChatbotWrapper from "@/components/ui/ChatbotWrapper";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jciambato.org"),
@@ -73,7 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Navbar />
             <main className="container max-w-full bg-gray-50">{children}</main>
             <Footer />
-            <Chatbot />
+            <ChatbotWrapper />
           </div>
         </Providers>
       </body>

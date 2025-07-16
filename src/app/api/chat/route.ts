@@ -56,6 +56,47 @@ CÓMO INVOLUCRARSE:
 - Contribuir a través de voluntariado
 `;
 
+// Función para detectar si el mensaje es sobre lanzar la página web
+function detectLaunchAction(message: string): boolean {
+  const launchKeywords = [
+    "lanzar",
+    "lanzamiento",
+    "lanza",
+    "página web",
+    "sitio web",
+    "web",
+    "website",
+    "inaugurar",
+    "inauguración",
+    "estrenar",
+    "presentar",
+    "presentación",
+    "activar",
+    "abrir",
+    "iniciar",
+  ];
+
+  const webKeywords = ["página", "sitio", "web", "website", "portal", "plataforma"];
+
+  const messageLower = message.toLowerCase();
+
+  // Verificar si contiene palabras de lanzamiento
+  const hasLaunchKeyword = launchKeywords.some((keyword) => messageLower.includes(keyword));
+
+  // Verificar si contiene palabras relacionadas con web
+  const hasWebKeyword = webKeywords.some((keyword) => messageLower.includes(keyword));
+
+  // Si contiene ambos tipos de palabras o específicamente "lanzar" con contexto web
+  return (
+    (hasLaunchKeyword && hasWebKeyword) ||
+    messageLower.includes("lanzar página") ||
+    messageLower.includes("lanzar sitio") ||
+    messageLower.includes("lanzar web") ||
+    messageLower.includes("lanzamiento web") ||
+    messageLower.includes("lanzamiento página")
+  );
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -63,6 +104,18 @@ export async function POST(request: NextRequest) {
 
     if (!message) {
       return NextResponse.json({ error: "El mensaje es requerido" }, { status: 400 });
+    }
+
+    // Detectar si es una acción de lanzamiento
+    if (detectLaunchAction(message)) {
+      return NextResponse.json(
+        {
+          response:
+            "🚀 ¡Perfecto! Vamos a lanzar la página web de JCI Ambato. ¡Prepárate para una experiencia increíble!",
+          action: "launch_website",
+        },
+        { status: 200 }
+      );
     }
 
     // Construir el historial de conversación

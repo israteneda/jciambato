@@ -4,14 +4,13 @@ import { Button } from "@heroui/button";
 import Image from "next/image";
 import Link from "next/link";
 
-
 export default function Grupo() {
   return (
     <section className="relative z-10 overflow-hidden">
       <div>
         <figure className="z-10 flex relative justify-end h-52 md:h-[calc(20px+34.375vw)] mb-10">
           <Image
-            src="/images/grupo/sesion-solemne-50-aniversario.webp"
+            src="/images/inicio/inicio.png"
             alt="Grupo JCI Ambato - Sesión Solemne 50 Aniversario"
             width={500}
             height={500}
@@ -35,15 +34,14 @@ export default function Grupo() {
           </div>
 
           <div className="relative z-10 bg-transparent w-full max-w-6xl px-8 md:mx-auto">
-
             <div className="relative gap-5 md:flex">
               {/* Descripción */}
               <div className="md:ml-16">
-
                 <div className="mt-8">
                   <p className="text-lg font-normal normal-case leading-[1.78] tracking-normal text-jci-black text-left max-w-lg">
-                    <strong>No nacimos para ser espectadores. {" "}</strong>
-                    En JCI Ambato, lideramos con propósito, servimos con pasión y construimos un mañana con cada acción que emprendemos
+                    <strong>No nacimos para ser espectadores. </strong>
+                    En JCI Ambato, lideramos con propósito, servimos con pasión y construimos un
+                    mañana con cada acción que emprendemos
                   </p>
                 </div>
 
@@ -68,7 +66,10 @@ export default function Grupo() {
               <div className="hidden md:block flex-1 grow shrink basis-0">
                 <div className="absolute -top-24 right-[20px] origin-left transform translate-x-[100%] translate-y-[50%] rotate-90">
                   <div className="relative text-[11px] font-medium leading-none tracking-[2px] text-[rgb(174,174,174)] uppercase pl-[170px]">
-                    <div className="absolute left-0 top-[5px] w-[160px] h-[1px] bg-[rgb(174,174,174)]" aria-hidden="true"></div>
+                    <div
+                      className="absolute left-0 top-[5px] w-[160px] h-[1px] bg-[rgb(174,174,174)]"
+                      aria-hidden="true"
+                    ></div>
                     Sesión Solemne por los 50 años de JCI Ambato, 2025
                   </div>
                 </div>
