@@ -32,7 +32,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     responsable: "Juan Pérez",
     responsable_image: "/images/miembros/miembro.png",
     correo: "juan.perez@jciambato.com",
-    image: "/images/areas_oportunidad/negocios-emprendimiento/negocios-emprendimiento.webp",
+    image: "/images/areas_oportunidad/negocios-emprendimiento/negocios-emprendimiento.jpg",
     background_image:
       "/images/areas_oportunidad/negocios-emprendimiento/negocios-emprendimiento-back.webp",
     features: ["Creación de Empresas", "Desarrollo Empresarial", "Networking Global", "Innovación"],
@@ -73,7 +73,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     responsable: "Juan Pérez",
     responsable_image: "/images/miembros/miembro.png",
     correo: "juan.perez@jciambato.com",
-    image: "/images/areas_oportunidad/cooperacion-internacional/cooperacion-internacional.webp",
+    image: "/images/areas_oportunidad/cooperacion-internacional/internacionalizacion.webp",
     background_image:
       "/images/areas_oportunidad/cooperacion-internacional/cooperacion-internacional-back.webp",
     features: [
@@ -119,7 +119,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     responsable: "Juan Pérez",
     responsable_image: "/images/miembros/miembro.png",
     correo: "juan.perez@jciambato.com",
-    image: "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual.webp",
+    image: "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual.jpg",
     background_image:
       "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual-back.webp",
     features: [
@@ -166,7 +166,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     responsable: "Juan Pérez",
     responsable_image: "/images/miembros/miembro.png",
     correo: "juan.perez@jciambato.com",
-    image: "/images/areas_oportunidad/impacto-comunidad/impacto-comunidad.webp",
+    image: "/images/areas_oportunidad/impacto-comunidad/impacto-comunidad.jpg",
     background_image: "/images/areas_oportunidad/impacto-comunidad/impacto-comunidad-back.webp",
     features: [
       "Proyectos Sostenibles",
