@@ -6,7 +6,7 @@ export const senadoresData = [
     social: { instagram: null, linkedin: null },
   },
   {
-    nombre: "Francisco Guaman",
+    nombre: "Francisco Rivera",
     cargo: "Abogado",
     imagen: "/images/miembros/senadores/francisco-rivera.png",
     social: { instagram: null, linkedin: null },
@@ -50,7 +50,7 @@ export const senadoresData = [
   {
     nombre: "Jorge Fabara",
     cargo: "Senador",
-      imagen: "/images/miembros/senadores/na.png",
+    imagen: "/images/miembros/senadores/na.png",
     social: { instagram: null, linkedin: null },
   },
   {
