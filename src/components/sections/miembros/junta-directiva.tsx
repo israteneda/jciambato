@@ -11,13 +11,14 @@ export default function Miembros() {
                     <h2 id="junta-directiva-heading" className="text-3xl md:text-5xl font-bold text-gray-800">
                         Junta Directiva
                     </h2>
-                    <p className="text-lg text-gray-600 mt-2">
-                        La Junta Directiva de la JCI Ambato es el órgano de gobierno responsable de liderar y gestionar las operaciones y actividades de la organización local. Conformada por miembros elegidos democráticamente, esta junta desempeña un rol clave en la planificación estratégica, la administración financiera, la representación institucional y la supervisión de proyectos y eventos. Su labor garantiza el cumplimiento de los objetivos de la JCI Ambato, promoviendo el desarrollo de iniciativas que generen un impacto positivo en la comunidad y fortaleciendo el compromiso con la misión de la organización.
+                    <p className="text-lg text-gray-600 mt-2 max-w-3xl">
+                        {/* La Junta Directiva es el <strong>órgano de gobierno</strong> encargado de liderar y gestionar las operaciones de la organización local. Desempeña un papel fundamental en la definición de la estrategia, la gestión financiera, la representación institucional y la supervisión de proyectos y eventos, asegurando el cumplimiento de la misión y visión de la JCI. */}
+                        Lidera con visión y profesionalismo las operaciones de la JCI local, impulsando estrategias innovadoras, gestionando recursos con excelencia y supervisando proyectos que materializan la misión y visión de la organización.
                     </p>
                 </header>
 
                 {/* Miembros Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-10" role="list" aria-label="Lista de miembros de la junta directiva">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-9" role="list" aria-label="Lista de miembros de la junta directiva">
                     {juntaDirectivaData.map((miembro, index) => (
                         <article
                             key={index}

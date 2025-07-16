@@ -1,9 +1,10 @@
 import {
   Bienvenida,
+  JuntaDirectiva,
   Miembros,
-  MiembrosGenerales,
   Senadores,
 } from "@/components/sections/miembros";
+import MiembrosNacionales from "@/components/sections/miembros/miembros-nacionales";
 
 import { Metadata } from "next";
 
@@ -28,13 +29,16 @@ export default function MiembrosPage() {
       </div>
 
       {/* Sección de Miembros */}
-      <Miembros />
+      <JuntaDirectiva />
 
       {/* Sección de Miembros Generales */}
-      <MiembrosGenerales />
+      <Miembros />
 
       {/* Sección de Senadores */}
       <Senadores />
+
+      {/* Sección de Miembros Nacionales */}
+      <MiembrosNacionales />
     </main>
   );
 }

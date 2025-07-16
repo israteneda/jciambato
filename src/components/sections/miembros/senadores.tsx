@@ -11,14 +11,11 @@ export default function Senadores() {
                     <h2 id="senadores-heading" className="text-3xl md:text-5xl font-bold text-gray-800">
                         Senaduría
                     </h2>
-                    <div className="flex flex-col gap-4">
-                        <p className="text-lg text-gray-600 mt-2">
-                            Los Senadores son <strong>miembros honorarios</strong> distinguidos por su compromiso excepcional con la organización y su misión de generar un impacto positivo en la comunidad. Este prestigioso título se les otorga en reconocimiento a sus destacados logros, servicio ejemplar y dedicación sostenida.
-                        </p>
-                        <p className="text-lg text-gray-600 mt-2">
-                            Como líderes y mentores, los Senadores <strong>inspiran y guían a los miembros más jóvenes</strong>, promoviendo activamente los programas y actividades de la JCI. Su experiencia y compromiso los convierten en un pilar invaluable, fortaleciendo el liderazgo, la colaboración y el cumplimiento de la visión de la JCI Ambato.
-                        </p>
-                    </div>
+                    <p className="text-lg text-gray-600 mt-2 max-w-3xl">
+                        {/* Los Senadores son miembros honorarios reconocidos por su excepcional compromiso con la misión de la JCI y su impacto transformador en la comunidad. Este prestigioso título se otorga en honor a sus logros destacados, servicio ejemplar y dedicación constante. Como mentores y líderes, los Senadores inspiran a las nuevas generaciones, promueven activamente los programas de la JCI y fortalecen los pilares de liderazgo, colaboración y compromiso con la visión de la JCI Ambato. */}
+
+                        Distinguidos por su <strong>compromiso excepcional</strong> y <strong>logros sobresalientes</strong>, son el pilar de la JCI. Como mentores inspiradores, guían a las nuevas generaciones, fortalecen los valores de la organización y promueven un liderazgo transformador alineado con la visión de JCI Ambato.
+                    </p>
                 </header>
 
                 {/* Miembros Grid */}

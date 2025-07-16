@@ -110,11 +110,11 @@ export default function Formulario() {
                         Si deseas contactarnos, por favor completa el formulario o envíanos un
                         correo a{" "}
                         <a
-                          href="mailto:info@jciambato.com"
+                          href="mailto:jciambato@jciecuador.com"
                           className="text-jci-aqua underline"
-                          aria-label="Enviar correo electrónico a info@jciambato.com"
+                          aria-label="Enviar correo electrónico a jciambato@jciecuador.com"
                         >
-                          info@jciambato.com
+                          jciambato@jciecuador.com
                         </a>
                       </p>
                     </div>

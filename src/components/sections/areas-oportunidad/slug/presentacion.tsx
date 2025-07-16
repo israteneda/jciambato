@@ -12,7 +12,7 @@ export default function Presentacion({ area }: { area: AreaOportunidad }) {
                             </div>
 
                             <div className="mt-8">
-                                <h2 id={`presentacion-${area.slug}-heading`} className="text-3xl md:text-5xl font-bold not-italic text-left leading-[1.33] tracking-normal text-black max-w-4xl">
+                                <h2 id={`presentacion-${area.slug}-heading`} className="text-3xl md:text-5xl font-bold not-italic text-left md:leading-[1.33] tracking-normal text-black max-w-4xl">
                                     {area.description}
                                 </h2>
                             </div>

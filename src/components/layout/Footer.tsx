@@ -6,8 +6,21 @@ import { HiOutlineArrowUp } from "react-icons/hi2";
 import { FaFacebook, FaInstagram, FaLinkedin, /* FaYoutube */ } from "react-icons/fa";
 import { jciLinks } from "@/data/footer";
 import { siteConfig } from "@/config/site";
+import { useEffect, useState } from "react";
 
 export function Footer() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const handleScrollToTop = () => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="relative z-20 bg-gray-50 select-none overflow-x-hidden" role="contentinfo" aria-label="Pie de página">
       {/* Sección de llamada a la acción */}
@@ -179,17 +192,15 @@ export function Footer() {
             {/* Botón para volver arriba */}
             <div className="absolute top-[45%] md:top-[20%] right-[6%] md:right-[5%]">
               <div className="flex items-center justify-center">
-                <a
-                  href="#"
-                  role="button"
-                  aria-label="Volver arriba"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                >
-                  <HiOutlineArrowUp className="w-8 h-8" aria-hidden="true" />
-                </a>
+                {isClient && (
+                  <button
+                    type="button"
+                    aria-label="Volver arriba"
+                    onClick={handleScrollToTop}
+                  >
+                    <HiOutlineArrowUp className="w-8 h-8" aria-hidden="true" />
+                  </button>
+                )}
               </div>
             </div>
           </div>

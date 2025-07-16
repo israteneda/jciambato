@@ -1,5 +1,11 @@
 export const miembrosData = [
     {
+        nombre: "Andrés Alarcón",
+        cargo: "Miembro",
+        imagen: "/images/miembros/miembros/andres-alarcon.png",
+        social: { instagram: "https://www.instagram.com/reinventateconandres/", linkedin: null },
+    },
+    {
         nombre: "Lizbeth Arboleda",
         cargo: "Miembro",
         imagen: "/images/miembros/miembros/lizbeth-arboleda.png",
@@ -165,12 +171,6 @@ export const miembrosData = [
     },
     {
         nombre: "Ana Punina",
-        cargo: "Miembro",
-        imagen: "/images/miembros/miembros/na.png",
-        social: { instagram: null, linkedin: null },
-    },
-    {
-        nombre: "Andrés Alarcón",
         cargo: "Miembro",
         imagen: "/images/miembros/miembros/na.png",
         social: { instagram: null, linkedin: null },

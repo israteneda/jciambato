@@ -112,7 +112,7 @@ export default function Chatbot({ className }: ChatbotProps) {
     }
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       sendMessage();
@@ -150,7 +150,7 @@ export default function Chatbot({ className }: ChatbotProps) {
               isIconOnly
               variant="light"
               className="text-white hover:bg-white/10"
-              onClick={toggleChat}
+              onPress={toggleChat}
             >
               <IoIosClose className="w-6 h-6" />
             </Button>
@@ -161,9 +161,8 @@ export default function Chatbot({ className }: ChatbotProps) {
             {messages.map((message) => (
               <div
                 key={message.id}
-                className={`flex items-start gap-2 ${
-                  message.sender === "user" ? "justify-end" : "justify-start"
-                }`}
+                className={`flex items-start gap-2 ${message.sender === "user" ? "justify-end" : "justify-start"
+                  }`}
               >
                 {message.sender === "bot" && (
                   <div className="w-6 h-6 bg-jci-aqua rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -171,17 +170,15 @@ export default function Chatbot({ className }: ChatbotProps) {
                   </div>
                 )}
                 <div
-                  className={`max-w-[70%] p-3 rounded-lg text-sm ${
-                    message.sender === "user"
-                      ? "bg-jci-navy text-white rounded-br-none"
-                      : "bg-white text-gray-800 rounded-bl-none border"
-                  }`}
+                  className={`max-w-[70%] p-3 rounded-lg text-sm ${message.sender === "user"
+                    ? "bg-jci-navy text-white rounded-br-none"
+                    : "bg-white text-gray-800 rounded-bl-none border"
+                    }`}
                 >
                   <p className="whitespace-pre-wrap">{message.content}</p>
                   <p
-                    className={`text-xs mt-1 opacity-70 ${
-                      message.sender === "user" ? "text-gray-200" : "text-gray-500"
-                    }`}
+                    className={`text-xs mt-1 opacity-70 ${message.sender === "user" ? "text-gray-200" : "text-gray-500"
+                      }`}
                   >
                     {formatTime(message.timestamp)}
                   </p>
@@ -223,14 +220,14 @@ export default function Chatbot({ className }: ChatbotProps) {
               <Input
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
-                onKeyPress={handleKeyPress}
+                onKeyDown={handleKeyDown}
                 placeholder="Escribe tu mensaje..."
                 className="flex-1"
                 size="sm"
                 disabled={isLoading}
               />
               <Button
-                onClick={sendMessage}
+                onPress={sendMessage}
                 isIconOnly
                 className="bg-jci-aqua text-white hover:bg-jci-navy"
                 disabled={isLoading || !inputMessage.trim()}
@@ -246,9 +243,8 @@ export default function Chatbot({ className }: ChatbotProps) {
       {/* Toggle Button */}
       <Button
         onClick={toggleChat}
-        className={`w-14 h-14 rounded-full bg-gradient-to-r from-jci-navy to-jci-aqua text-white shadow-lg hover:shadow-xl transition-all duration-300 ${
-          isOpen ? "rotate-180" : ""
-        }`}
+        className={`w-14 h-14 rounded-full bg-gradient-to-r from-jci-navy to-jci-aqua text-white shadow-lg hover:shadow-xl transition-all duration-300 ${isOpen ? "rotate-180" : ""
+          }`}
         isIconOnly
       >
         {isOpen ? <IoIosClose className="w-6 h-6" /> : <IoChatbubbleOutline className="w-6 h-6" />}

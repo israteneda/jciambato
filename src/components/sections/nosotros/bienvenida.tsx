@@ -12,7 +12,7 @@ export default function Bienvenida() {
         <InfoContainer
           subtitle="Sobre Nosotros"
           title="Creando el futuro de nuestra ciudad, juntos."
-          description="We are a leading organization in the development of our city, focused on creating a better future for all. "
+          description="Somos una organización líder en el desarrollo de nuestra ciudad, enfocada en crear un futuro mejor para todos."
         />
       </div>
 

@@ -27,7 +27,7 @@ export default function Grupo() {
                 Grupo JCI
               </div>
               <div className="mt-1 md:mt-6">
-                <h3 className="text-3xl md:text-[48px] font-bold normal-case text-jci-aqua leading-[1.33] tracking-normal max-w-xs md:max-w-[calc(75%)] text-left sm:text-[calc(28.8px+1vw)]">
+                <h3 className="text-3xl md:text-[48px] font-bold normal-case text-jci-aqua md:leading-[1.33] tracking-normal max-w-xs md:max-w-[calc(75%)] text-left sm:text-[calc(28.8px+1vw)]">
                   Somos la organización de liderazgo más importante del centro del país.
                 </h3>
               </div>

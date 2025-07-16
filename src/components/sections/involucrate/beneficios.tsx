@@ -2,7 +2,7 @@ import { FiAward, FiGlobe, FiUsers } from "react-icons/fi";
 
 export default function Beneficios() {
     return (
-        <section className="my-36" aria-labelledby="beneficios-heading">
+        <section className="my-12 md:my-36" aria-labelledby="beneficios-heading">
             <div className="relative z-[1] bg-transparent max-w-6xl px-8 md:mx-auto">
                 <article className="flex">
                     {/* Caja de Información */}

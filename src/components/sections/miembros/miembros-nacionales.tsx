@@ -1,26 +1,27 @@
-import { miembrosData } from "@/data/miembros";
+import { miembrosNacionalesData } from "@/data/miembros-nacionales";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 
-export default function MiembrosGenerales() {
+export default function MiembrosNacionales() {
     return (
         <section className="relative py-16 z-10" aria-labelledby="miembros-activos-heading">
             <div className="max-w-6xl mx-8 lg:mx-auto">
                 {/* Header */}
                 <header className="text-start mb-12">
                     <h2 id="miembros-activos-heading" className="text-3xl md:text-5xl font-bold text-gray-800">
-                        Miembros
+                        En JCI Ecuador
                     </h2>
                     <p className="text-lg text-gray-600 mt-2 max-w-3xl">
-                        {/* Los miembros de la JCI son personas comprometidas con generar un impacto positivo en sus comunidades. A través de su participación activa en proyectos y actividades, fomentan el desarrollo de habilidades de liderazgo, emprendimiento, acción comunitaria y cooperación internacional, contribuyendo al crecimiento personal y colectivo. */}
-                        Son agentes de cambio apasionados por transformar sus comunidades. A través de proyectos dinámicos, desarrollan <strong>liderazgo</strong>, <strong>emprendimiento</strong> y <strong>acción comunitaria</strong>, generando un impacto positivo y sostenible a nivel local y global.
+                        {/* Ser parte de la JCI Ecuador permite a los miembros de la organización local escalar su impacto a nivel nacional e internacional. Al participar en la organización nacional, los miembros contribuyen a iniciativas de mayor alcance, colaboran con líderes de otras localidades y fortalecen su compromiso con los valores y objetivos de la JCI. Además, tienen la oportunidad de participar en proyectos internacionales, colaborando con otras JCI a nivel global, lo que fomenta el intercambio de ideas, el aprendizaje intercultural y la creación de soluciones conjuntas para desafíos globales. */}
+
+                        Formar parte de JCI Ecuador eleva el impacto de los miembros locales a escenarios nacionales e internacionales. Colaboran en <strong>iniciativas de alto alcance</strong>, <strong>conectan con líderes globales</strong> y <strong>participan en proyectos internacionales</strong> que impulsan soluciones innovadoras, fomentando el intercambio cultural y el compromiso con los valores de la JCI.
                     </p>
                 </header>
 
                 {/* Miembros Grid */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-x-8 gap-y-12" role="list" aria-label="Lista de miembros activos">
-                    {miembrosData.map((miembro, index) => (
+                    {miembrosNacionalesData.map((miembro, index) => (
                         <article key={index} className="flex flex-col items-center text-center" role="listitem">
                             <figure className="w-36 h-36 lg:w-48 lg:h-48 mb-4">
                                 <Image
