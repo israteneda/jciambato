@@ -17,9 +17,25 @@ export default function BienvenidaV3() {
   const linesRef = useRef<Array<HTMLDivElement | null>>([]);
   const blobsRef = useRef<Array<HTMLDivElement | null>>([]);
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Ensure component is mounted before accessing window
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Función para calcular tamaños y posiciones de blobs según el tamaño de pantalla
   const getBlobStyles = (index: number) => {
+    // Default to desktop styles during SSR to prevent hydration mismatches
+    if (!isMounted) {
+      return {
+        width: `${260 + index * 60}px`,
+        height: `${180 + index * 40}px`,
+        left: index === 0 ? "8%" : index === 1 ? "60%" : index === 2 ? "30%" : "75%",
+        top: index === 0 ? "7%" : index === 1 ? "10%" : index === 2 ? "60%" : "55%",
+      };
+    }
+
     const isMobile = windowSize.width < 640;
     const isTablet = windowSize.width >= 640 && windowSize.width < 1024;
 
@@ -27,27 +43,29 @@ export default function BienvenidaV3() {
       return {
         width: `${Math.max(0, 200 - index * 0)}px`,
         height: `${Math.max(100, 200 - index * 0)}px`,
-        left: index === 0 ? '1%' : index === 1 ? '50%' : index === 2 ? '10%' : '80%',
-        top: index === 0 ? '10%' : index === 1 ? '15%' : index === 2 ? '70%' : '60%',
+        left: index === 0 ? "1%" : index === 1 ? "50%" : index === 2 ? "10%" : "80%",
+        top: index === 0 ? "10%" : index === 1 ? "15%" : index === 2 ? "70%" : "60%",
       };
     } else if (isTablet) {
       return {
         width: `${160 + index * 30}px`,
         height: `${120 + index * 20}px`,
-        left: index === 0 ? '8%' : index === 1 ? '60%' : index === 2 ? '30%' : '75%',
-        top: index === 0 ? '7%' : index === 1 ? '10%' : index === 2 ? '60%' : '55%',
+        left: index === 0 ? "8%" : index === 1 ? "60%" : index === 2 ? "30%" : "75%",
+        top: index === 0 ? "7%" : index === 1 ? "10%" : index === 2 ? "60%" : "55%",
       };
     } else {
       return {
         width: `${260 + index * 60}px`,
         height: `${180 + index * 40}px`,
-        left: index === 0 ? '8%' : index === 1 ? '60%' : index === 2 ? '30%' : '75%',
-        top: index === 0 ? '7%' : index === 1 ? '10%' : index === 2 ? '60%' : '55%',
+        left: index === 0 ? "8%" : index === 1 ? "60%" : index === 2 ? "30%" : "75%",
+        top: index === 0 ? "7%" : index === 1 ? "10%" : index === 2 ? "60%" : "55%",
       };
     }
   };
 
   useEffect(() => {
+    if (!isMounted) return;
+
     // Función para actualizar el tamaño de ventana
     const updateWindowSize = () => {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
@@ -57,10 +75,10 @@ export default function BienvenidaV3() {
     updateWindowSize();
 
     // Escuchar cambios de tamaño
-    window.addEventListener('resize', updateWindowSize);
+    window.addEventListener("resize", updateWindowSize);
 
-    return () => window.removeEventListener('resize', updateWindowSize);
-  }, []);
+    return () => window.removeEventListener("resize", updateWindowSize);
+  }, [isMounted]);
 
   useEffect(() => {
     // Animación de líneas
@@ -131,10 +149,7 @@ export default function BienvenidaV3() {
   }, []);
 
   return (
-    <section
-      className="relative"
-      aria-labelledby="bienvenida-heading"
-    >
+    <section className="relative" aria-labelledby="bienvenida-heading">
       <header className="sr-only">
         <h1 id="bienvenida-heading">Bienvenido a JCI Ambato</h1>
       </header>
@@ -146,7 +161,9 @@ export default function BienvenidaV3() {
           {[0, 1, 2, 3].map((_i) => (
             <div
               key={_i}
-              ref={el => { blobsRef.current[_i] = el; }}
+              ref={(el) => {
+                blobsRef.current[_i] = el;
+              }}
               className="absolute blur-[1px] sm:blur-[2px] opacity-50 sm:opacity-70"
               style={{
                 ...getBlobStyles(_i),
@@ -154,10 +171,27 @@ export default function BienvenidaV3() {
               }}
             >
               {/* SVG blob shape con gradiente */}
-              <svg width="100%" height="100%" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 400 300"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <defs>
-                  <radialGradient id={`blob-gradient-${_i}`} cx="50%" cy="50%" r="70%" fx="60%" fy="40%">
-                    <stop offset="0%" stopColor={_i % 2 === 0 ? '#7FFFD4' : '#A3E635'} stopOpacity="0.7" />
+                  <radialGradient
+                    id={`blob-gradient-${_i}`}
+                    cx="50%"
+                    cy="50%"
+                    r="70%"
+                    fx="60%"
+                    fy="40%"
+                  >
+                    <stop
+                      offset="0%"
+                      stopColor={_i % 2 === 0 ? "#7FFFD4" : "#A3E635"}
+                      stopOpacity="0.7"
+                    />
                     <stop offset="100%" stopColor="#0e3749" stopOpacity="0.2" />
                   </radialGradient>
                 </defs>
@@ -177,17 +211,16 @@ export default function BienvenidaV3() {
           <main className="relative z-20 w-full">
             <div className="flex flex-col items-start">
               <div className="mt-6">
-                <h2
-                  className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-4xl lg:text-7xl max-w-xl lg:max-w-5xl py-1 leading-tight"
-                >
-                  Unidos Construyendo un <span className="text-inherit italic">Futuro</span> de Liderazgo
+                <h2 className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-4xl lg:text-7xl max-w-xl lg:max-w-5xl py-1 leading-tight">
+                  Unidos Construyendo un <span className="text-inherit italic">Futuro</span> de
+                  Liderazgo
                 </h2>
               </div>
 
               <div className="mt-6 sm:mt-8 md:mt-10">
                 <p className="text-white max-w-xl text-base lg:text-lg leading-relaxed">
-                  Impulsamos el cambio a través de la innovación, transformando ideas en soluciones que construyen comunidades más fuertes y
-                  mejoran vidas.
+                  Impulsamos el cambio a través de la innovación, transformando ideas en soluciones
+                  que construyen comunidades más fuertes y mejoran vidas.
                 </p>
               </div>
 
@@ -254,10 +287,11 @@ export default function BienvenidaV3() {
             className="flex items-center gap-1"
             aria-label="Visitar JCI Ecuador (se abre en nueva ventana)"
           >
-            <span>
-              JCI Ecuador
-            </span>
-            <MdOutlineArrowOutward className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" aria-hidden="true" />
+            <span>JCI Ecuador</span>
+            <MdOutlineArrowOutward
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5"
+              aria-hidden="true"
+            />
           </a>
         </div>
       </div>
@@ -270,7 +304,9 @@ export default function BienvenidaV3() {
             className="flex items-center"
             aria-label="Ir a la sección Sobre Nosotros"
           >
-            <span className="text-jci-aqua text-[8px] lg:text-[10.5px] font-semibold uppercase">Sobre Nosotros</span>
+            <span className="text-jci-aqua text-[8px] lg:text-[10.5px] font-semibold uppercase">
+              Sobre Nosotros
+            </span>
             <Image
               src="/icons/arrow-down.svg"
               alt=""
