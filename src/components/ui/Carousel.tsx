@@ -187,7 +187,7 @@ export const Carousel = ({ items = getProyectosDestacados(), autoPlayInterval = 
           <Button
             isIconOnly
             radius="full"
-            className="bg-jci-aqua hover:bg-cyan-950 transition-colors duration-300"
+            className="bg-jci-aqua hover:bg-[#003D62] transition-colors duration-300"
             aria-label="Ver colección de proyectos"
           >
             <HiOutlineCollection className="w-6 h-6 text-gray-50" />

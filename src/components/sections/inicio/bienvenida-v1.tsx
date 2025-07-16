@@ -55,7 +55,7 @@ export default function BienvenidaV1() {
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/nosotros">
-                    <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>
+                    <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
                     <span className="relative z-10">Sobre Nosotros</span>
                   </Link>
                 </Button>

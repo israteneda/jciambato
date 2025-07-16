@@ -29,7 +29,7 @@ export default function Presentacion() {
                 aria-label="Conoce nuestra misión y visión"
               >
                 <Link href="/nosotros">
-                  <span className="absolute inset-0 transform -translate-x-full bg-cyan-600 transition-transform duration-300 group-hover:translate-x-0" />
+                  <span className="absolute inset-0 transform -translate-x-full bg-jci-aqua transition-transform duration-300 group-hover:translate-x-0" />
                   <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
                     Nuestra misión y visión
                   </span>

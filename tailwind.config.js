@@ -57,6 +57,8 @@ export default {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
         heading: ["var(--font-heading)"],
+        "helvetica-neue": ["var(--font-helvetica-neue)"],
+        rockwell: ["var(--font-rockwell)"],
       },
     },
   },
