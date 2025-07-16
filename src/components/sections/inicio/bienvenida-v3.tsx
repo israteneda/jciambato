@@ -154,7 +154,7 @@ export default function BienvenidaV3() {
         <h1 id="bienvenida-heading">Bienvenido a JCI Ambato</h1>
       </header>
 
-      <div ref={containerRef} className="flex w-full bg-cyan-950 relative overflow-hidden">
+      <div ref={containerRef} className="flex w-full bg-[#003D62] relative overflow-hidden">
         {/* BLOBS ABSTRACTOS */}
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
           {/* 4 blobs, ajustados para responsividad */}
@@ -231,7 +231,7 @@ export default function BienvenidaV3() {
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/nosotros">
-                    <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>
+                    <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-[#004D7A] transition-transform duration-300 group-hover:translate-x-0"></span>
                     <span className="relative z-10">Sobre Nosotros</span>
                   </Link>
                 </Button>

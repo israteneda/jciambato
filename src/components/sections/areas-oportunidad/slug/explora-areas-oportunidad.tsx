@@ -67,7 +67,7 @@ export default function ExploraAreasOportunidad({ area }: { area: AreaOportunida
                                         aria-label="Explora nuestras áreas"
                                     >
                                         <Link href="/areas-oportunidad">
-                                            <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>
+                                            <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
                                             <span className="relative z-10">Explora nuestras áreas</span>
                                         </Link>
                                     </Button>

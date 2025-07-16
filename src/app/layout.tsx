@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { fontSans, fontHelveticaNeue, fontRockwell } from "@/config/fonts";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import ChatbotWrapper from "@/components/ui/ChatbotWrapper";
@@ -62,7 +62,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // Clases para el body con clsx
-  const bodyClasses = clsx("min-h-screen bg-background font-sans antialiased", fontSans.variable);
+  const bodyClasses = clsx(
+    "min-h-screen bg-background font-sans antialiased",
+    fontSans.variable,
+    fontHelveticaNeue.variable,
+    fontRockwell.variable
+  );
 
   return (
     <html suppressHydrationWarning lang="es">
