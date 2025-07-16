@@ -1,217 +1,69 @@
+import { miembrosData } from "@/data/miembros";
 import Image from "next/image";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
-export default function Miembros() {
+
+export default function MiembrosGenerales() {
     return (
-        <div className="flex flex-col w-full">
-            <div className="flex justify-between mx-20 gap-32">
-                <p className="text-lg font-bold uppercase w-1/2 text-justify mb-8">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis consequuntur, amet minus
-                </p>
-                <p className="text-lg w-1/2 text-justify mb-8">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum nam nisi reiciendis nihil perspiciatis. Quae, tenetur suscipit ad voluptatem voluptatum similique nisi maxime dolorum earum eos ea est neque, obcaecati voluptas voluptates veniam blanditiis minima enim asperiores esse optio. Voluptates?
-                </p>
-            </div>
+        <section className="relative py-16 z-10" aria-labelledby="miembros-activos-heading">
+            <div className="max-w-6xl mx-8 lg:mx-auto">
+                {/* Header */}
+                <header className="text-start mb-12">
+                    <h2 id="miembros-activos-heading" className="text-3xl md:text-5xl font-bold text-gray-800">
+                        Miembros
+                    </h2>
+                    <p className="text-lg text-gray-600 mt-2 max-w-3xl">
+                        {/* Los miembros de la JCI son personas comprometidas con generar un impacto positivo en sus comunidades. A través de su participación activa en proyectos y actividades, fomentan el desarrollo de habilidades de liderazgo, emprendimiento, acción comunitaria y cooperación internacional, contribuyendo al crecimiento personal y colectivo. */}
+                        Son agentes de cambio apasionados por transformar sus comunidades. A través de proyectos dinámicos, desarrollan <strong>liderazgo</strong>, <strong>emprendimiento</strong> y <strong>acción comunitaria</strong>, generando un impacto positivo y sostenible a nivel local y global.
+                    </p>
+                </header>
 
+                {/* Miembros Grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-x-8 gap-y-12" role="list" aria-label="Lista de miembros activos">
+                    {miembrosData.map((miembro, index) => (
+                        <article key={index} className="flex flex-col items-center text-center" role="listitem">
+                            <figure className="w-36 h-36 lg:w-48 lg:h-48 mb-4">
+                                <Image
+                                    src={miembro.imagen}
+                                    alt={`Foto de ${miembro.nombre}`}
+                                    width={256}
+                                    height={256}
+                                    className="w-full h-full object-cover rounded-full"
+                                />
+                            </figure>
+                            <h3 className="font-bold text-lg text-gray-800">{miembro.nombre}</h3>
+                            <p className="text-sm text-gray-500 mb-3">{miembro.cargo}</p>
 
-            {/* Miembros */}
-            <div>
-                <div className="flex gap-10 mx-20 my-10">
-                    <div className="flex flex-col items-center w-1/4">
-                        {/* Contenedor de la imagen con bordes redondeados específicos */}
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/images/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col items-center w-1/4">
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col items-center w-1/4">
-                        {/* Contenedor de la imagen con bordes redondeados específicos */}
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-
-                  
-
-                    <div className="flex flex-col items-center w-1/4 group">
-                        {/* Contenedor con fondo azul y bordes redondeados específicos */}
-                        <div className="w-full bg-jci-navy h-full rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col justify-between">
-
-                            {/* Contenido principal */}
-                            <div className="w-full p-6 flex flex-col h-full">
-                                {/* Logo JCI */}
-                                <div className="mb-4">
-                                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                                        </svg>
-                                    </div>
-                                </div>
-
-                                {/* Mensaje o dato curioso */}
-                                <div className="flex-grow">
-                                    <p className="text-base text-white leading-relaxed mb-4">
-                                        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, nostrum ab? Assumenda vero explicabo tempora."
-                                    </p>
-
-                                    {/* Decoración visual */}
-                                    <div className="w-12 h-1 bg-white/30 my-4"></div>
-                                </div>
-
-                                {/* Información del miembro */}
-                                <div className="mt-auto">
-                                    <h3 className="font-bold text-xl text-white mb-1">Juan Pérez</h3>
-                                    <p className="text-base text-white/70">
-                                        Presidente 2025
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Decoración en la esquina inferior */}
-                            <div className="absolute bottom-0 right-0 w-24 h-24 opacity-10">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-white">
-                                    <path fillRule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clipRule="evenodd" />
-                                    <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+                            {miembro.social && (miembro.social.instagram || miembro.social.linkedin) && (
+                                <nav className="flex items-center space-x-4" aria-label={`Redes sociales de ${miembro.nombre}`}>
+                                    {miembro.social.instagram && (
+                                        <a
+                                            href={miembro.social.instagram}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-gray-400 hover:text-gray-600 transition-colors"
+                                            aria-label={`Instagram de ${miembro.nombre}`}
+                                        >
+                                            <FaInstagram />
+                                        </a>
+                                    )}
+                                    {miembro.social.linkedin && (
+                                        <a
+                                            href={miembro.social.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-gray-400 hover:text-gray-600 transition-colors"
+                                            aria-label={`LinkedIn de ${miembro.nombre}`}
+                                        >
+                                            <FaLinkedin />
+                                        </a>
+                                    )}
+                                </nav>
+                            )}
+                        </article>
+                    ))}
                 </div>
-
-
-                <div className="flex gap-10 mx-20 my-10">
-                    <div className="flex flex-col items-center w-1/4">
-                        {/* Contenedor de la imagen con bordes redondeados específicos */}
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col items-center w-1/4">
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col items-center w-1/4">
-                        {/* Contenedor de la imagen con bordes redondeados específicos */}
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col items-center w-1/4">
-                        {/* Contenedor de la imagen con bordes redondeados específicos */}
-                        <div className="w-full bg-white rounded-tr-3xl rounded-bl-3xl rounded-br-3xl overflow-hidden">
-                            <Image
-                                src="/miembros/miembro1.png"
-                                alt="Miembro 1"
-                                width={500}
-                                height={500}
-                                className="w-full h-[300px] object-cover rounded-tr-lg rounded-bl-lg rounded-br-lg"
-                            />
-                        </div>
-
-                        {/* Información del miembro */}
-                        <div className="w-full p-5">
-                            <h3 className="font-bold text-xl">Juan Pérez</h3>
-                            <p className="text-lg text-jci-gray">
-                                Presidente 2025
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
+        </section>
     );
-}
+} 

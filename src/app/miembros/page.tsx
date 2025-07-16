@@ -1,20 +1,44 @@
-import Bienvenida from "@/components/sections/miembros/bienvenida/inicio";
-import Miembros from "@/components/sections/miembros/miembros";
+import {
+  Bienvenida,
+  JuntaDirectiva,
+  Miembros,
+  Senadores,
+} from "@/components/sections/miembros";
+import MiembrosNacionales from "@/components/sections/miembros/miembros-nacionales";
 
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Miembros",
-  description: "Página de Miembros",
+  title: "Nuestros Miembros — Conoce al Equipo",
+  description: "Conoce a nuestro equipo de líderes juveniles, junta directiva, miembros activos y senadores de JCI Ambato.",
 };
 
-export default function Inicio() {
+export default function MiembrosPage() {
   return (
-    <div className="flex flex-col items-center">
+    <main className="relative">
       {/* Sección de Bienvenida */}
       <Bienvenida />
 
+      {/* Bloque espaciado para efecto de scroll */}
+      <div className="h-screen" aria-hidden="true"></div>
+      <div
+        className="absolute top-0 w-full h-full bg-gray-50"
+        style={{ transform: 'translateY(100vh)' }}
+        aria-hidden="true"
+      >
+      </div>
+
+      {/* Sección de Miembros */}
+      <JuntaDirectiva />
+
+      {/* Sección de Miembros Generales */}
       <Miembros />
-    </div>
+
+      {/* Sección de Senadores */}
+      <Senadores />
+
+      {/* Sección de Miembros Nacionales */}
+      <MiembrosNacionales />
+    </main>
   );
 }

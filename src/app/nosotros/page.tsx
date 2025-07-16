@@ -1,36 +1,40 @@
-import ActividadesAnuales from "@/components/sections/nosotros/actividadesAnuales";
-import Bienvenida from "@/components/sections/nosotros/bienvenida";
-import MisionVision from "@/components/sections/nosotros/misionVision";
-import Presentacion from "@/components/sections/nosotros/presentacion";
-import Valores from "@/components/sections/nosotros/valores";
+import {
+    ActividadesAnuales,
+    Bienvenida,
+    MisionVision,
+    Presentacion,
+    Valores,
+    Opinion
+} from "@/components/sections/nosotros";
 
 export const metadata = {
-  title: "Nosotros",
-  description: "Página de Nosotros",
+    title: "Sobre Nosotros — Liderazgo y Oportunidades",
+    description: "Conoce nuestra misión, visión, valores y la historia de JCI Ambato en el desarrollo de líderes juveniles.",
 };
 
-export default function Inicio() {
-  return (
-    <div className="relative">
-      <Bienvenida />
+export default function NosotrosPage() {
+    return (
+        <main className="relative">
+            <Bienvenida />
 
-      {/* Bloque espaciado */}
-      <div className="h-[700px] md:h-[640px]"></div>
-      <div
-        className="absolute top-0 w-full h-full bg-gray-50"
-        style={{ transform: 'translateY(99.9vh)' }}
-      >
-      </div>
+            {/* Bloque espaciado */}
+            <div className="h-[700px] md:h-[640px]" aria-hidden="true"></div>
+            <div
+                className="absolute top-0 w-full h-full bg-gray-50"
+                style={{ transform: 'translateY(99.9vh)' }}
+                aria-hidden="true"
+            >
+            </div>
 
-      <Presentacion />
+            <Presentacion />
 
-      <MisionVision />
+            <MisionVision />
 
-      <Valores />
+            <Valores />
 
-      {/* <DescripcionPersonal /> */}
+            <Opinion />
 
-      <ActividadesAnuales />
-    </div>
-  );
-}
+            <ActividadesAnuales />
+        </main>
+    );
+} 

@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 
 import { Providers } from "./providers";
@@ -8,25 +8,56 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+import ChatbotWrapper from "@/components/ui/ChatbotWrapper";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jciambato.com"),
+  metadataBase: new URL("https://jciambato.org"),
   title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    default: "JCI Ambato — Formación de Líderes Juveniles con Impacto Social",
+    template: "%s | JCI Ambato",
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
   authors: siteConfig.authors,
-  openGraph: siteConfig.openGraph,
+  openGraph: {
+    ...siteConfig.openGraph,
+    type: "website",
+    locale: "es_EC",
+    siteName: "JCI Ambato",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JCI Ambato — Formación de Líderes Juveniles con Impacto Social",
+    description: siteConfig.description,
+    images: ["/images/logos/jci-ambato.webp"],
+  },
   alternates: siteConfig.alternates,
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
+  manifest: "/manifest.json",
+  verification: {
+    google: "your-google-verification-code",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -42,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Navbar />
             <main className="container max-w-full bg-gray-50">{children}</main>
             <Footer />
+            <ChatbotWrapper />
           </div>
         </Providers>
       </body>

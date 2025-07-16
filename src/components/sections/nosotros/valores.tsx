@@ -1,146 +1,52 @@
+import { valores } from "@/data/valores";
+
 export default function Valores() {
     return (
         <section className="relative z-10">
-            <div className="p-8 md:p-28 bg-gray-200">
-                <div className="max-w-6xl mx-auto">
+            <div className="py-14 md:py-28 bg-gray-200">
+                <div className="max-w-6xl mx-8 md:mx-auto">
                     {/* Titulo */}
-                    <div>
+                    <header>
                         <div className="text-jci-gold text-xs leading-2 font-bold uppercase">
                             Nuestro ADN
                         </div>
 
                         <div className="mt-6">
-                            <div className="text-gray-800 text-4xl md:text-5xl leading-none font-bold text-left max-w-[470px]">
+                            <h2 className="text-gray-800 text-4xl md:text-5xl leading-none font-bold text-left max-w-[470px]">
                                 Nuestros Valores
-                            </div>
+                            </h2>
                         </div>
 
                         <div className="mt-16">
-                            <div className="text-jci-black text-medium md:text-xl leading-[1.78] text-left max-w-md">
-                                Our values are the benchmark to develop excellent work. From the first to the last day of each project. Creating value, always focused on the quality of the final product.
-                            </div>
+                            <p className="text-jci-black text-medium md:text-xl leading-[1.78] text-left max-w-md">
+                                En JCI Ambato, nuestros valores son la base que guía tanto el crecimiento personal como el organizacional. Creemos firmemente que el desarrollo de las personas impulsa el progreso de la organización, y viceversa.
+                            </p>
                         </div>
-                    </div>
+                    </header>
 
                     {/* Valores */}
-                    <div className="mt-28">
-
+                    <div className="mt-14 md:mt-28">
                         {/* Contenedor Padre */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-3 gap-5 max-w-3xl mx-auto">
-
-                            {/* Hijo 1 - Primera Fila */}
-                            <div className="flex flex-row items-start mb-14">
-                                <div className="w-12 mr-5">
-                                    <div className="text-jci-seafoam text-4xl leading-none font-bold">
-                                        01
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="text-jci-off-black text-xl leading-[1.45] font-bold text-left">
-                                        Rigour and Commitment
-                                    </div>
-                                    <div className="mt-2">
-                                        <div className="text-jci-gray text-xs leading-normal text-left">
-                                            Rigour in processes, rigour in complying with rules and rigour in relations with partners and clients. Commitment to ensure technical competence in all the activities we carry out.
+                        <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-3 gap-5 max-w-3xl mx-auto" role="list" aria-label="Lista de valores de JCI Ambato">
+                            {valores.map((valor) => (
+                                <article key={valor.id} className="flex flex-row items-start mb-7 md:mb-14" role="listitem">
+                                    <div className="w-12 mr-5">
+                                        <div className="text-jci-seafoam text-4xl leading-none font-bold">
+                                            {valor.id}
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            {/* Hijo 2 - Primera Fila */}
-                            <div className="flex flex-row items-start mb-14">
-                                <div className="w-12 mr-5">
-                                    <div className="text-jci-seafoam text-4xl leading-none font-bold">
-                                        01
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="text-jci-off-black text-xl leading-[1.45] font-bold text-left">
-                                        Rigour and Commitment
-                                    </div>
-                                    <div className="mt-2">
-                                        <div className="text-jci-gray text-xs leading-normal text-left">
-                                            Rigour in processes, rigour in complying with rules and rigour in relations with partners and clients. Commitment to ensure technical competence in all the activities we carry out.
+                                    <div>
+                                        <h3 className="text-jci-off-black text-xl leading-[1.45] font-bold text-left">
+                                            {valor.title}
+                                        </h3>
+                                        <div className="mt-2">
+                                            <p className="text-jci-gray text-xs leading-normal text-left">
+                                                {valor.description}
+                                            </p>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            {/* Hijo 1 - Primera Fila */}
-                            <div className="flex flex-row items-start mb-14">
-                                <div className="w-12 mr-5">
-                                    <div className="text-jci-seafoam text-4xl leading-none font-bold">
-                                        01
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="text-jci-off-black text-xl leading-[1.45] font-bold text-left">
-                                        Rigour and Commitment
-                                    </div>
-                                    <div className="mt-2">
-                                        <div className="text-jci-gray text-xs leading-normal text-left">
-                                            Rigour in processes, rigour in complying with rules and rigour in relations with partners and clients. Commitment to ensure technical competence in all the activities we carry out.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Hijo 2 - Primera Fila */}
-                            <div className="flex flex-row items-start mb-14">
-                                <div className="w-12 mr-5">
-                                    <div className="text-jci-seafoam text-4xl leading-none font-bold">
-                                        01
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="text-jci-off-black text-xl leading-[1.45] font-bold text-left">
-                                        Rigour and Commitment
-                                    </div>
-                                    <div className="mt-2">
-                                        <div className="text-jci-gray text-xs leading-normal text-left">
-                                            Rigour in processes, rigour in complying with rules and rigour in relations with partners and clients. Commitment to ensure technical competence in all the activities we carry out.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Hijo 1 - Primera Fila */}
-                            <div className="flex flex-row items-start mb-14">
-                                <div className="w-12 mr-5">
-                                    <div className="text-jci-seafoam text-4xl leading-none font-bold">
-                                        01
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="text-jci-off-black text-xl leading-[1.45] font-bold text-left">
-                                        Rigour and Commitment
-                                    </div>
-                                    <div className="mt-2">
-                                        <div className="text-jci-gray text-xs leading-normal text-left">
-                                            Rigour in processes, rigour in complying with rules and rigour in relations with partners and clients. Commitment to ensure technical competence in all the activities we carry out.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Hijo 2 - Primera Fila */}
-                            <div className="flex flex-row items-start mb-14">
-                                <div className="w-12 mr-5">
-                                    <div className="text-jci-seafoam text-4xl leading-none font-bold">
-                                        01
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="text-jci-off-black text-xl leading-[1.45] font-bold text-left">
-                                        Rigour and Commitment
-                                    </div>
-                                    <div className="mt-2">
-                                        <div className="text-jci-gray text-xs leading-normal text-left">
-                                            Rigour in processes, rigour in complying with rules and rigour in relations with partners and clients. Commitment to ensure technical competence in all the activities we carry out.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                </article>
+                            ))}
                         </div>
                     </div>
                 </div>

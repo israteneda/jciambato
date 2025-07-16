@@ -1,19 +1,19 @@
-import AreasOportunidad from "@/components/sections/areas-oportunidad/areasOportunidad";
-import Bienvenida from "@/components/sections/areas-oportunidad/bienvenida/inicio";
+import {
+  Bienvenida,
+  AreasOportunidad,
+} from "@/components/sections/areas-oportunidad";
 
 export const metadata = {
-  title: "Áreas de Oportunidad",
-  description: "Página de Áreas de Oportunidad",
+  title: "Áreas de Oportunidad — Desarrolla tu Potencial",
+  description: "Descubre nuestras áreas de impacto: Negocios y Emprendimiento, Cooperación Internacional, Desarrollo Individual e Impacto en la Comunidad.",
 };
 
-export default function Inicio() {
+export default function AreasOportunidadPage() {
   return (
-    <div>
-      {/* Sección de Bienvenida */}
+    <main className="relative">
       <Bienvenida />
 
-      {/* Seccion de Áreas de Oportunidad	 */}
       <AreasOportunidad />
-    </div>
+    </main>
   );
 }

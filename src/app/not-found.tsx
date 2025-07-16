@@ -2,19 +2,12 @@
 
 import { Button } from "@heroui/button";
 import Link from "next/link";
-import { useEffect } from "react";
 
-export default function Error({ error }: { error: Error }) {
-  useEffect(() => {
-    // Log the error to an error reporting service
-
-    console.error(error);
-  }, [error]);
-
+export default function NotFoundPage() {
   return (
     <div className="relative z-10 h-screen">
       <div className="h-full flex items-center">
-        <div className="relative z-10 w-[1156px] mx-auto">
+        <div className="relative z-10 max-w-6xl mx-8 md:mx-auto">
           <div className="flex">
             <div className="relative">
               <div className="hidden md:block absolute top-20 left-6 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
@@ -27,7 +20,7 @@ export default function Error({ error }: { error: Error }) {
 
             </div>
 
-            <div className="relative ml-48">
+            <div className="relative md:ml-36">
               <div className="mt-20">
                 <h3 className="text-4xl md:text-5xl font-bold not-italic text-left leading-[1.17] tracking-normal text-black md:max-w-[470px]">
                   ¡La página ha sido eliminada o no existe!

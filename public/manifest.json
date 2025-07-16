@@ -1,0 +1,27 @@
+{
+  "name": "JCI Ambato - Formación de Líderes Juveniles con Impacto Social",
+  "short_name": "JCI Ambato",
+  "description": "Página web oficial de la Cámara Junior Internacional Capítulo Ambato",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3A67B1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/logos/jci-ambato.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logos/jci-ambato.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "education", "social"],
+  "lang": "es-EC",
+  "dir": "ltr"
+}
