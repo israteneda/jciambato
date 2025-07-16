@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineArrowUp } from "react-icons/hi2";
-import { FaFacebook, FaInstagram, FaLinkedin, /* FaYoutube */ } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { jciLinks } from "@/data/footer";
 import { siteConfig } from "@/config/site";
 import { useEffect, useState } from "react";
