@@ -185,10 +185,11 @@ export default function Chatbot({ className }: ChatbotProps) {
       <div className={`fixed bottom-3 right-3 z-[9999] ${className}`}>
         {/* Chat Window */}
         <div
-          className={`absolute bottom-16 right-0 transition-all duration-300 ease-in-out transform ${isOpen
+          className={`absolute bottom-16 right-0 transition-all duration-300 ease-in-out transform ${
+            isOpen
               ? "opacity-100 scale-100 translate-y-0"
               : "opacity-0 scale-95 translate-y-4 pointer-events-none"
-            }`}
+          }`}
         >
           <Card className="w-80 h-96 shadow-2xl border-0 bg-white">
             {/* Header */}
@@ -217,19 +218,7 @@ export default function Chatbot({ className }: ChatbotProps) {
               {messages.map((message) => (
                 <div
                   key={message.id}
-                  className={`flex items-start gap-2 animate-in slide-in-from-bottom-2 duration-300 ${message.sender === "user" ? "justify-end" : "justify-start"
-                    }`}
-              >
-                <IoIosClose className="w-6 h-6" />
-              </Button>
-            </div>
-
-            {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-50">
-              {messages.map((message) => (
-                <div
-                  key={message.id}
-                  className={`flex items-start gap-2 ${
+                  className={`flex items-start gap-2 animate-in slide-in-from-bottom-2 duration-300 ${
                     message.sender === "user" ? "justify-end" : "justify-start"
                   }`}
                 >

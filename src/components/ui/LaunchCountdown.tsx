@@ -9,14 +9,12 @@ interface LaunchCountdownProps {
 
 export default function LaunchCountdown({ onComplete }: LaunchCountdownProps) {
   const [count, setCount] = useState(10);
-  const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
     if (count > 0) {
       const timer = setTimeout(() => setCount(count - 1), 1000);
       return () => clearTimeout(timer);
     } else {
-      setShowConfetti(true);
       triggerConfettiCelebration();
       const completeTimer = setTimeout(() => {
         onComplete();
