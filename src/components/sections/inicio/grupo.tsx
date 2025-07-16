@@ -10,7 +10,7 @@ export default function Grupo() {
       <div>
         <figure className="z-10 flex relative justify-end h-52 md:h-[calc(20px+34.375vw)] mb-10">
           <Image
-            src="/images/inicio/inicio-foto.jpg"
+            src="/images/inicio/cincuentenario.png"
             alt="Grupo JCI Ambato - Sesión Solemne 50 Aniversario"
             width={500}
             height={500}
