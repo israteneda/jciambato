@@ -20,18 +20,20 @@ export const noticiasEventos: NoticiaEvento[] = [
     lugar: "Ambato, Ecuador",
     imagen: "/images/noticias_eventos/noticiaEvento.webp",
     url: "transmision-mando-local-jci-ambato-inicia-nueva-etapa",
-    descripcion: "JCI Ambato inicia una nueva etapa",
+    descripcion:
+      "La Cámara Junior Internacional Capítulo Ambato celebró la ceremonia de transmisión de mando en el auditorio de la Universidad Indoamérica el 16 de marzo. El evento marcó el inicio del nuevo año de liderazgo con la presencia de autoridades, senadores e invitados especiales. Israel Teneda asumió la presidencia local, mientras que el presidente nacional Andrés Ramírez tomó el juramento a la nueva membresía. La ceremonia también conmemoró el 50° aniversario de JCI en Ambato y anunció proyectos como 'De líder a líder' y 'Feria del libro', reafirmando el compromiso de la organización con el desarrollo de líderes jóvenes y el servicio comunitario.",
   },
   {
     id: 2,
     tipo: "noticia",
-    titulo: "Ecuador Campeón Internacional de Oratoria y Debate",
-    subtitulo: "Ecuador Campeón Internacional de Oratoria y Debate",
-    fecha: "24 Julio, 2024",
-    lugar: "Taiwan, China",
+    titulo: "Ecuador Campeón Mundial de Debate JCI 2024",
+    subtitulo: "Primera vez que Ecuador gana el concurso mundial de debate",
+    fecha: "Noviembre, 2024",
+    lugar: "Taoyuan, Taiwán",
     imagen: "/images/noticias_eventos/concurso.webp",
     url: "ecuador-campeon-internacional-de-oratoria-y-debate",
-    descripcion: "Ecuador Campeón Internacional de Oratoria y Debate",
+    descripcion:
+      "¡Histórico logro para Ecuador! El equipo nacional se coronó Campeón Mundial de Debate en español de la JCI (Junior Chamber International) durante el Congreso Mundial JCI 2024 celebrado en Taoyuan, Taiwán. Es la primera vez que JCI Ecuador gana este concurso a nivel mundial. El equipo estuvo conformado por Alex Barreno (capitán) de JCI Ambato y Anthony Cabrera (orador 2), quienes además llegaron a las semifinales de debate en inglés, demostrando su versatilidad lingüística y excelencia en oratoria. Este triunfo histórico posiciona a Ecuador como una potencia emergente en el debate internacional y marca un hito en la representación del país en competencias mundiales de oratoria y liderazgo juvenil.",
   },
 ];
 
