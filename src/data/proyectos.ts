@@ -38,21 +38,21 @@ export const proyectos: Proyecto[] = [
   // Cooperación Internacional
   {
     id: "5",
-    slug: "academia-liderazgo-global",
-    titulo: "Academia de Liderazgo Global",
-    subtitulo: "Intercambio cultural y desarrollo de habilidades internacionales",
-    director: "Juan Pablo Pérez",
-    fecha: "24 Junio, 2024",
-    lugar: "Quito, Ecuador",
+    slug: "construyendo-cultura-juntos",
+    titulo: "Construyendo la cultura juntos – Edición Ecuador",
+    subtitulo: "Vibrante viaje cultural al corazón de Ecuador",
+    director: "Mario Lourido Delgado y Romina Benítez",
+    fecha: "2 y 9 de marzo, 2025",
+    lugar: "Ecuador",
     imagen:
       "/images/areas_oportunidad/cooperacion-internacional/proyectos/cooperacion-internacional-p1.webp",
     area_oportunidad: "cooperacion-internacional",
-    url: "/proyectos/academia-liderazgo-global",
+    url: "/proyectos/construyendo-cultura-juntos",
     descripcion:
-      "La Academia de Liderazgo Global es un programa intensivo diseñado para fomentar el liderazgo intercultural y las habilidades globales en jóvenes de diferentes países. Realizado en Quito, Ecuador, este proyecto reúne a participantes de diversas nacionalidades para un intercambio cultural que incluye talleres, dinámicas de grupo y proyectos colaborativos. Los temas tratados incluyen resolución de conflictos, comunicación intercultural, liderazgo ético y trabajo en equipo en contextos globales. Los participantes tienen la oportunidad de aprender de mentores internacionales, desarrollar proyectos que aborden desafíos globales y establecer redes de contacto con jóvenes líderes de todo el mundo. El programa culmina con la presentación de iniciativas grupales que proponen soluciones a problemáticas sociales o ambientales",
+      "Los días 2 y 9 de marzo de 2025, tomamos un vibrante viaje cultural al corazón de Ecuador como parte de nuestra iniciativa Construyendo Cultura Juntos. Un agradecimiento especial a nuestros apasionados presentadores Mario Lourido Delgado y Romina Benítez, que nos transportaron a través de los impresionantes paisajes de Ecuador, ricas tradiciones, patrimonio indígena, festivales coloridos y cocina deliciosa. Desde los Andes hasta el Amazonas, cada historia compartida y cada tradición explorada nos acercó a entender la belleza y diversidad de la cultura ecuatoriana. Este intercambio intercultural fue tan significativo, donde juntos seguimos celebrando la unidad en la diversidad y construyendo conexiones globales más fuertes.",
     impacto:
-      "Ha conectado a más de 50 jóvenes de 10 países, creando una red de líderes comprometidos con el cambio global.",
-    estado: "completado",
+      "Permite a participantes de diferentes países conocer y apreciar la riqueza cultural de Ecuador, fortaleciendo lazos interculturales y promoviendo el entendimiento global.",
+    estado: "planificado",
   },
 
   // Desarrollo Individual
