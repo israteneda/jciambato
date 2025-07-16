@@ -13,7 +13,7 @@ export default function Miembros() {
                     </h2>
                     <p className="text-lg text-gray-600 mt-2 max-w-3xl">
                         {/* La Junta Directiva es el <strong>órgano de gobierno</strong> encargado de liderar y gestionar las operaciones de la organización local. Desempeña un papel fundamental en la definición de la estrategia, la gestión financiera, la representación institucional y la supervisión de proyectos y eventos, asegurando el cumplimiento de la misión y visión de la JCI. */}
-                        Lidera con visión y profesionalismo las operaciones de la JCI local, impulsando estrategias innovadoras, gestionando recursos con excelencia y supervisando proyectos que materializan la misión y visión de la organización.
+                        Lidera con <strong>visión y profesionalismo</strong> las operaciones de la JCI local, impulsando estrategias innovadoras, gestionando recursos con excelencia y supervisando proyectos que materializan la misión y visión de la organización.
                     </p>
                 </header>
 

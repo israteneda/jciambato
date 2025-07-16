@@ -2,21 +2,23 @@ export const jciLinks = [
   {
     title: "JCI Ambato",
     items: [
-      { title: "Nosotros", href: null },
-      { title: "Ser Junior", href: null },
-      { title: "Política y Privacidad", href: null },
+      { title: "Nosotros", href: "/nosotros" },
+      /* { title: "Ser Junior", href: null }, */
+      { title: "Política de Gestión", href: "/politica-gestion" },
+      { title: "Política de Privacidad", href: "/politica-privacidad" },
     ],
   },
 
   {
     title: "Nosotros",
+    href: "/nosotros",
     items: [
-      { title: "Equipo Local", href: null },
-      { title: "Contacto", href: null },
+      { title: "Equipo Local", href: "/miembros" },
     ],
   },
   {
     title: "Áreas de Oportunidad",
+    href: "/areas-oportunidad",
     items: [
       { title: "Negocios y Emprendimiento", href: "/areas-oportunidad/negocios-emprendimiento" },
       { title: "Cooperación Internacional", href: "/areas-oportunidad/cooperacion-internacional" },
@@ -26,17 +28,20 @@ export const jciLinks = [
   },
   {
     title: "Proyectos",
+    href: "/proyectos",
+    items: [],
+  },
+  {
+    title: "Media",
+    href: "/media",
     items: [
-      { title: "Programas", href: null },
-      { title: "Proyectos", href: null },
-      { title: "Eventos", href: null },
+      { title: "Noticias y Eventos", href: "/noticias-eventos" },
+      { title: "Premios", href: "/premios" },
     ],
   },
   {
     title: "Involúcrate",
-    items: [
-      { title: "Membresías", href: null },
-      { title: "Voluntariado", href: null },
-    ],
+    href: "/involucrate",
+    items: [{ title: "Carrera", href: null }],
   },
 ];

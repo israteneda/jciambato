@@ -17,12 +17,12 @@ export const senadoresData = [
     imagen: "/images/miembros/senadores/santiago-vargas.png",
     social: { instagram: null, linkedin: null },
   },
-  {
+ /*  {
     nombre: "Stalin Naranjo",
     cargo: "Ingeniero",
     imagen: "/images/miembros/senadores/stalin-naranjo.png",
     social: { instagram: null, linkedin: null },
-  },
+  }, */
   {
     nombre: "Marcelo Rubio",
     cargo: "Senador",

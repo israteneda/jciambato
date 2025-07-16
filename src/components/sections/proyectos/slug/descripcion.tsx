@@ -56,7 +56,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                                     </h2>
                                 </div>
 
-                                <div className="mt-20">
+                                <div className="mt-10 md:mt-20">
                                     <div className="border-t border-t-gray-200">
                                         <div className="flex flex-col md:flex-row py-[23px] border-a border-a-gray-200">
                                             <div className="leading-[1.33] text-[18px] text-jci-black md:w-[30%]">Estado</div>
@@ -80,25 +80,33 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                                             <div className="leading-[1.33] text-[18px] text-jci-black md:w-[30%]">Fecha</div>
                                             <div className="leading-[1.33] text-medium md:text-[18px] text-jci-off-black md:w-[70%] md:pl-[20px]">{proyecto.fecha}</div>
                                         </div>
-                                    </div>  
+                                    </div>
                                     <div className="border-t border-t-gray-200">
                                         <div className="flex flex-col md:flex-row py-[23px] border-a border-a-gray-200">
                                             <div className="leading-[1.33] text-[18px] text-jci-black md:w-[30%]">Lugar</div>
                                             <div className="leading-[1.33] text-medium md:text-[18px] text-jci-off-black md:w-[70%] md:pl-[20px]">{proyecto.lugar}</div>
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
 
                                 <div className="mt-20">
+
                                     <div className="text-xl mb-5 font-bold leading-[1.33] text-jci-off-black">
                                         Intervención
                                     </div>
                                     <div className="flex flex-col md:flex-row w-full">
+
+
                                         <div className="pr-0 md:pr-24 w-full">
                                             <div className="pb-20">
                                                 <div className="flex flex-col gap-5 text-medium leading-[1.71] text-jci-off-black">
+
                                                     <p>
                                                         {proyecto.descripcion}
+                                                    </p>
+
+                                                    <p>
+                                                        <strong>Impacto: </strong>                                                     {proyecto.impacto}
                                                     </p>
                                                 </div>
                                             </div>

@@ -73,8 +73,8 @@ export const Carousel = ({ items = getProyectosDestacados(), autoPlayInterval = 
                       {item.premio || "Proyecto Destacado"}
                     </div>
                     <div className="mt-2 md:mt-8">
-                      <h3 className="text-4xl font-light text-left leading-[1.17] text-white max-w-[666px] md:text-[calc(28.8px+1vw)]">
-                        <span>{item.title} <strong>{item.projectName}</strong></span>
+                      <h3 className="text-3xl md:text-4xl font-light text-left leading-[1.17] text-white max-w-[666px] ">
+                        <span>{item.title} <br /> <strong>{item.projectName}</strong></span>
                       </h3>
                     </div>
                     <div className="mt-10 md:mt-20">
