@@ -45,7 +45,8 @@ export const historiaItems = [
     id: 4,
     year: 2010,
     title: "Reconocimiento Nacional al Desarrollo Local",
-    image: "/images/historia/historia.webp",
+    // TODO: Agregar imagen
+    // image: "/images/historia/historia.jpg",
     description: {
       paragraph:
         "JCI Ambato recibe el reconocimiento nacional al 'Mejor Programa de Crecimiento y Desarrollo Local' por su proyecto integral de capacitación comunitaria y emprendimiento.",
@@ -59,7 +60,8 @@ export const historiaItems = [
     id: 5,
     year: 2000,
     title: "Internacionalización de Líderes",
-    image: "/images/historia/historia.webp",
+    // TODO: Agregar imagen
+    // image: "/images/historia/historia.jpg",
     description: {
       paragraph:
         "JCI Ambato fortalece su proyección internacional al participar activamente en academias de liderazgo global como JCI Academy en Japón y el Congreso Mundial de JCI.",
@@ -73,7 +75,8 @@ export const historiaItems = [
     id: 6,
     year: 1989,
     title: "Proyección Regional y Participación Continental",
-    image: "/images/historia/historia.webp",
+    // TODO: Agregar imagen
+    // image: "/images/historia/historia.jpg",
     description: {
       paragraph:
         "Durante esta década, JCI Ambato intensifica su participación en convenciones nacionales y representa a Ecuador en eventos latinoamericanos, fortaleciendo la imagen del país en el exterior.",
@@ -101,7 +104,8 @@ export const historiaItems = [
     id: 8,
     year: "1973",
     title: "Fundación de JCI Ambato",
-    image: "/images/historia/fundacion.png",
+    // TODO: Agregar imagen
+    // image: "/images/historia/historia.jpg",
     description: {
       paragraph:
         "JCI Ambato fue fundada en 1973 por un grupo de jóvenes visionarios que creyeron en la acción como motor del cambio. Inspirados por el lema 'Servir a la humanidad es la mejor obra de una vida', impulsaron la creación de una organización comprometida con el desarrollo social.",

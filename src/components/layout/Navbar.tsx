@@ -36,10 +36,17 @@ export const Navbar = ({ className }: NavbarProps) => {
   // Función para detectar si el navbar debe usar texto oscuro
   const detectTextColor = () => {
     // Páginas que siempre necesitan texto oscuro (fondo claro)
-    const darkTextPages = ['/areas-oportunidad', '/involucrate', '/politica-gestion', '/politica-privacidad'];
+    const darkTextPages = ["/areas-oportunidad", "/politica-gestion", "/politica-privacidad"];
 
     // Páginas que necesitan texto blanco por defecto pero pueden cambiar con scroll (fondo oscuro)
-    const scrollDependentPages = ['/', '/nosotros', '/proyectos', '/miembros', '/noticias-eventos'];
+    const scrollDependentPages = [
+      "/",
+      "/nosotros",
+      "/proyectos",
+      "/miembros",
+      "/involucrate",
+      "/noticias-eventos",
+    ];
 
     // Si estamos en una página que siempre necesita texto oscuro
     if (darkTextPages.includes(pathname)) {
@@ -48,7 +55,7 @@ export const Navbar = ({ className }: NavbarProps) => {
     }
 
     // Texto blanco por defecto, oscuro con scroll para páginas dinámicas (como /areas-oportunidad/slug)
-    if (pathname.startsWith('/areas-oportunidad/')) {
+    if (pathname.startsWith("/areas-oportunidad/")) {
       setShouldUseDarkText(isScrolled);
       return;
     }
@@ -73,13 +80,9 @@ export const Navbar = ({ className }: NavbarProps) => {
     }
 
     if (shouldUseDarkText) {
-      return isActive
-        ? "text-jci-gold"
-        : "text-jci-black hover:text-jci-gold";
+      return isActive ? "text-jci-gold" : "text-jci-black hover:text-jci-gold";
     } else {
-      return isActive
-        ? "text-jci-gold"
-        : "text-white hover:text-jci-gold";
+      return isActive ? "text-jci-gold" : "text-white hover:text-jci-gold";
     }
   };
 
@@ -155,10 +158,7 @@ export const Navbar = ({ className }: NavbarProps) => {
 
         <div className="md:hidden">
           <NavbarMenuToggle
-            className={clsx(
-              "w-12 h-12 p-2",
-              shouldUseDarkText ? "text-jci-black" : "text-white"
-            )}
+            className={clsx("w-12 h-12 p-2", shouldUseDarkText ? "text-jci-black" : "text-white")}
             srOnlyText="Abrir menú de navegación"
             aria-label="Abrir menú de navegación"
             aria-expanded={isMenuOpen}
@@ -190,9 +190,7 @@ export const Navbar = ({ className }: NavbarProps) => {
                   {item.label}
                 </NextLink>
                 {item.description && (
-                  <p className="text-sm text-gray-600 mt-1 leading-relaxed">
-                    {item.description}
-                  </p>
+                  <p className="text-sm text-gray-600 mt-1 leading-relaxed">{item.description}</p>
                 )}
               </NavbarMenuItem>
             );
@@ -238,6 +236,6 @@ export const Navbar = ({ className }: NavbarProps) => {
           </div>
         </div>
       </NavbarMenu>
-    </HeroUINavbar >
+    </HeroUINavbar>
   );
 };
