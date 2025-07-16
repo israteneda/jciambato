@@ -34,6 +34,7 @@ export default function Chatbot({ className }: ChatbotProps) {
   const [isInitialized, setIsInitialized] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [showLaunchCountdown, setShowLaunchCountdown] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Ensure component is mounted before any client-side operations
@@ -138,7 +139,22 @@ export default function Chatbot({ className }: ChatbotProps) {
   };
 
   const toggleChat = () => {
-    setIsOpen(!isOpen);
+    if (isAnimating) return;
+
+    setIsAnimating(true);
+    if (isOpen) {
+      // Closing animation
+      setTimeout(() => {
+        setIsOpen(false);
+        setIsAnimating(false);
+      }, 200);
+    } else {
+      // Opening animation
+      setIsOpen(true);
+      setTimeout(() => {
+        setIsAnimating(false);
+      }, 300);
+    }
   };
 
   const handleLaunchComplete = () => {
@@ -166,10 +182,15 @@ export default function Chatbot({ className }: ChatbotProps) {
       {/* Componente de cuenta regresiva */}
       {showLaunchCountdown && <LaunchCountdown onComplete={handleLaunchComplete} />}
 
-      <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
+      <div className={`fixed bottom-3 right-3 z-[9999] ${className}`}>
         {/* Chat Window */}
-        {isOpen && (
-          <Card className="w-80 h-96 mb-4 shadow-2xl border-0 bg-white">
+        <div
+          className={`absolute bottom-16 right-0 transition-all duration-300 ease-in-out transform ${isOpen
+              ? "opacity-100 scale-100 translate-y-0"
+              : "opacity-0 scale-95 translate-y-4 pointer-events-none"
+            }`}
+        >
+          <Card className="w-80 h-96 shadow-2xl border-0 bg-white">
             {/* Header */}
             <div className="flex items-center justify-between p-4 bg-gradient-to-r from-jci-navy to-jci-aqua text-white rounded-t-lg">
               <div className="flex items-center gap-2">
@@ -184,8 +205,20 @@ export default function Chatbot({ className }: ChatbotProps) {
               <Button
                 isIconOnly
                 variant="light"
-                className="text-white hover:bg-white/10"
+                className="text-white hover:bg-white/10 transition-all duration-200"
                 onPress={toggleChat}
+              >
+                <IoIosClose className="w-6 h-6" />
+              </Button>
+            </div>
+
+            {/* Messages */}
+            <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-50">
+              {messages.map((message) => (
+                <div
+                  key={message.id}
+                  className={`flex items-start gap-2 animate-in slide-in-from-bottom-2 duration-300 ${message.sender === "user" ? "justify-end" : "justify-start"
+                    }`}
               >
                 <IoIosClose className="w-6 h-6" />
               </Button>
@@ -206,7 +239,7 @@ export default function Chatbot({ className }: ChatbotProps) {
                     </div>
                   )}
                   <div
-                    className={`max-w-[70%] p-3 rounded-lg text-sm ${
+                    className={`max-w-[70%] p-3 rounded-lg text-sm transition-all duration-200 ${
                       message.sender === "user"
                         ? "bg-jci-navy text-white rounded-br-none"
                         : "bg-white text-gray-800 rounded-bl-none border"
@@ -230,7 +263,7 @@ export default function Chatbot({ className }: ChatbotProps) {
               ))}
 
               {isLoading && (
-                <div className="flex items-start gap-2">
+                <div className="flex items-start gap-2 animate-in slide-in-from-bottom-2 duration-300">
                   <div className="w-6 h-6 bg-jci-aqua rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <BsRobot className="w-3 h-3 text-white" />
                   </div>
@@ -260,14 +293,14 @@ export default function Chatbot({ className }: ChatbotProps) {
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Escribe tu mensaje..."
-                  className="flex-1"
+                  className="flex-1 transition-all duration-200 focus:ring-2 focus:ring-jci-aqua"
                   size="sm"
                   disabled={isLoading}
                 />
                 <Button
                   onPress={sendMessage}
                   isIconOnly
-                  className="bg-jci-aqua text-white hover:bg-jci-navy"
+                  className="bg-jci-aqua text-white hover:bg-jci-navy transition-all duration-200 hover:scale-105 active:scale-95"
                   disabled={isLoading || !inputMessage.trim()}
                   size="sm"
                 >
@@ -276,20 +309,20 @@ export default function Chatbot({ className }: ChatbotProps) {
               </div>
             </div>
           </Card>
-        )}
+        </div>
 
         {/* Toggle Button */}
         <Button
           onClick={toggleChat}
-          className={`w-14 h-14 rounded-full bg-gradient-to-r from-jci-navy to-jci-aqua text-white shadow-lg hover:shadow-xl transition-all duration-300 ${
-            isOpen ? "rotate-180" : ""
+          className={`w-14 h-14 rounded-full bg-gradient-to-r from-jci-navy to-jci-aqua text-white shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-110 active:scale-95 ${
+            isOpen ? "rotate-45" : "rotate-0"
           }`}
           isIconOnly
         >
           {isOpen ? (
-            <IoIosClose className="w-6 h-6" />
+            <IoIosClose className="w-6 h-6 transition-transform duration-300" />
           ) : (
-            <IoChatbubbleOutline className="w-6 h-6" />
+            <IoChatbubbleOutline className="w-6 h-6 transition-transform duration-300" />
           )}
         </Button>
       </div>

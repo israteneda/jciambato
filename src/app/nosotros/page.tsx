@@ -4,6 +4,7 @@ import {
     MisionVision,
     Presentacion,
     Valores,
+    Opinion
 } from "@/components/sections/nosotros";
 
 export const metadata = {
@@ -31,7 +32,7 @@ export default function NosotrosPage() {
 
             <Valores />
 
-            {/* <DescripcionPersonal /> */}
+            <Opinion />
 
             <ActividadesAnuales />
         </main>

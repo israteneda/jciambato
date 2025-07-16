@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineArrowUp } from "react-icons/hi2";
-import { FaFacebook, FaInstagram, FaLinkedin, /* FaYoutube */ } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { jciLinks } from "@/data/footer";
 import { siteConfig } from "@/config/site";
 import { useEffect, useState } from "react";
@@ -34,7 +34,7 @@ export function Footer() {
                   <span className="text-xs text-white line-clamp-1 uppercase tracking-widest">
                     Conoce, Suma, Transforma
                   </span>
-                  <h2 id="cta-heading" className="mt-8 text-3xl md:text-5xl max-w-2xl  font-medium tracking-tight text-white">
+                  <h2 id="cta-heading" className="mt-8 text-3xl md:text-5xl max-w-2xl font-medium md:leading-[1.33] tracking-tight text-white">
                     ¿Te atreves a ser el cambio que quieres ver en el mundo?
                   </h2>
                 </header>
@@ -81,24 +81,49 @@ export function Footer() {
             <div className="pt-24 xl:pt-48 mb-24">
               {/* Items */}
               <div className="relative z-10 max-w-6xl mx-8 md:mx-auto">
-                <figure className="mb-8">
+                <div className="flex flex-row justify-between items-center gap-8 mb-8">
                   <Link href="/" aria-label="Ir a Inicio">
                     <Image
                       alt="JCI Ambato Logo"
-                      className="object-contain w-[85px] h-[85px]"
+                      className="object-contain w-[100px] h-[45px]"
                       src="/images/logos/jci-ambato.webp"
                       width={85}
                       height={85}
                     />
                   </Link>
-                </figure>
+                  {/* <div className="flex flex-col md:flex-row gap-1 md:gap-8">
+                    <Link href="https://jciecuador.com/" target="_blank" aria-label="Ir a JCI Ecuador">
+                      <Image
+                        alt="JCI Ecuador Logo"
+                        className="object-contain w-[85px] h-[45px]"
+                        src="/images/logos/jci-ecuador.png"
+                        width={85}
+                        height={85}
+                      />
+                    </Link>
+
+                    <Link href="https://jci.cc/" target="_blank" aria-label="Ir a JCI Ecuador">
+                      <Image
+                        alt="JCI Logo"
+                        className="object-contain w-[72px] h-[45px]"
+                        src="/images/logos/jci.png"
+                        width={85}
+                        height={85}
+                      />
+                    </Link>
+                  </div> */}
+                </div>
 
                 <div className="flex md:flex-row">
                   {/* Navegación del footer */}
                   <nav className="flex flex-wrap justify-between flex-1 gap-8 md:gap-0" aria-label="Enlaces de navegación del pie de página">
                     {jciLinks.map((section) => (
                       <div key={section.title} className="flex flex-col">
-                        <h3 className="text-base font-semibold">{section.title}</h3>
+                        <h3 className="text-base font-semibold">
+                          <Link href={section.href || ""} className="hover:text-gray-500">
+                            {section.title}
+                          </Link>
+                        </h3>
                         <ul className="flex flex-col mt-3 m-1 mb-0 max-w-36 space-y-2" role="list">
                           {section.items.map((item) => (
                             <li key={item.title} className="text-sm">
@@ -169,11 +194,11 @@ export function Footer() {
             <div className="relative py-5 z-10 max-w-6xl mx-8 md:mx-auto">
               <div className="flex flex-col md:flex-row gap-3">
                 <p className="text-xs md:text-sm text-default-400">
-                  © 2025 Cámara Junior Internacional del Ecuador — Capítulo Ambato. Todos los Derechos Reservados.
-                  {/* © 2025 JCI Ambato. Todos los Derechos Reservados. */}
+                  {/* © 2025 Cámara Junior Internacional del Ecuador — Capítulo Ambato. Todos los Derechos Reservados. */}
+                  © 2025 JCI Ambato. Todos los Derechos Reservados.
                 </p>
 
-                <div className="flex flex-row justify-between md:justify-start md:gap-3">
+                <div className="flex flex-row justify-start gap-3">
                   <p className="text-xs md:text-sm text-default-600">
                     <Link href="/politica-gestion" className="hover:text-gray-500">
                       Política de Gestión

@@ -16,6 +16,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { useScroll } from "@/hooks";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 interface NavbarProps {
   className?: string;
@@ -26,6 +27,11 @@ export const Navbar = ({ className }: NavbarProps) => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [shouldUseDarkText, setShouldUseDarkText] = useState(false);
+
+  // Cerrar el menú móvil cuando cambia la ruta
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   // Función para detectar si el navbar debe usar texto oscuro
   const detectTextColor = () => {
@@ -79,12 +85,12 @@ export const Navbar = ({ className }: NavbarProps) => {
 
   const getMobileTextColor = (isActive: boolean, isLast: boolean) => {
     if (isLast) {
-      return "text-jci-gold font-semibold hover:bg-jci-gold hover:text-white w-fit";
+      return "text-jci-gold font-semibold hover:text-yellow-400 transition-colors duration-200";
     }
 
     return isActive
       ? "text-jci-navy font-semibold"
-      : "text-jci-black";
+      : "text-jci-black hover:text-gray-600 transition-colors duration-200";
   };
 
   return (
@@ -162,20 +168,20 @@ export const Navbar = ({ className }: NavbarProps) => {
       </NavbarContent>
 
       <NavbarMenu
-        className={clsx("bg-white")}
+        className={clsx("bg-white flex flex-col")}
         id="mobile-menu"
         aria-label="Menú de navegación móvil"
       >
-        <nav className="mx-4 mt-6 flex flex-col gap-4" aria-label="Navegación móvil">
+        <nav className="mx-4 mt-6 flex flex-col gap-6 flex-1" aria-label="Navegación móvil">
           {siteConfig.navItems.map((item, index) => {
             const isLast = index === siteConfig.navItems.length - 1;
             const isActive = pathname === item.href;
 
             return (
-              <NavbarMenuItem key={`${item}-${index}`} className="flex justify-start">
+              <NavbarMenuItem key={`${item}-${index}`} className="flex flex-col items-start">
                 <NextLink
                   className={clsx(
-                    "transition-colors duration-200 text-lg",
+                    "transition-colors duration-200 text-lg font-medium",
                     getMobileTextColor(isActive, isLast)
                   )}
                   href={item.href}
@@ -183,10 +189,54 @@ export const Navbar = ({ className }: NavbarProps) => {
                 >
                   {item.label}
                 </NextLink>
+                {item.description && (
+                  <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+                    {item.description}
+                  </p>
+                )}
               </NavbarMenuItem>
             );
           })}
         </nav>
+
+        {/* Redes sociales - Pie del menú móvil */}
+        <div className="mx-4 mt-auto pt-6 border-t border-gray-200 pb-6">
+          <div className="flex gap-4 justify-start">
+            {siteConfig.links.facebook && (
+              <a
+                href={siteConfig.links.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9"
+                aria-label="Síguenos en Facebook"
+              >
+                <FaFacebook className="w-full h-full" aria-hidden="true" />
+              </a>
+            )}
+            {siteConfig.links.instagram && (
+              <a
+                href={siteConfig.links.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9"
+                aria-label="Síguenos en Instagram"
+              >
+                <FaInstagram className="w-full h-full" aria-hidden="true" />
+              </a>
+            )}
+            {siteConfig.links.linkedin && (
+              <a
+                href={siteConfig.links.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9"
+                aria-label="Síguenos en LinkedIn"
+              >
+                <FaLinkedin className="w-full h-full" aria-hidden="true" />
+              </a>
+            )}
+          </div>
+        </div>
       </NavbarMenu>
     </HeroUINavbar >
   );
