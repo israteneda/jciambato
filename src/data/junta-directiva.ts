@@ -37,7 +37,7 @@ export const juntaDirectivaData = [
   },
   {
     nombre: "Gustavo Solís",
-    cargo: "vicepresidente de desarrollo individual",
+    cargo: "Vicepresidente de Desarrollo Individual",
     imagen: "/images/miembros/junta-directiva/vicepresidente-desarrollo-individual.png",
     social: { instagram: "https://www.instagram.com/gustavoandressolis/", linkedin: null },
   },
