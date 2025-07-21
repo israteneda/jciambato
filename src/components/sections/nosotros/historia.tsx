@@ -46,12 +46,8 @@ export default function ActividadesAnuales() {
                   </h2>
                 </div>
                 <div className="mt-8">
-                  <p className="text-medium font-normal not-italic leading-[1.78] tracking-normal text-[rgb(50,50,50)] text-left md:max-w-[470px]">
-                    Durante cinco décadas, JCI Ambato ha consolidado un liderazgo transformador,
-                    destacando en la formación de ciudadanos activos y en la ejecución de proyectos
-                    de alto impacto. Su historia se escribe con logros, desafíos superados y
-                    generaciones de jóvenes comprometidos con hacer de Ambato una ciudad más
-                    inclusiva, participativa y preparada para el futuro.
+                  <p className="text-base font-normal not-italic leading-[1.78] tracking-normal text-[rgb(50,50,50)] text-left md:max-w-[470px]">
+                    Por cinco décadas, JCI Ambato ha forjado un liderazgo transformador, impulsando la formación de ciudadanos activos y ejecutando proyectos de gran impacto. Su legado se construye con logros, retos superados y generaciones de jóvenes dedicadas a hacer de Ambato una ciudad más inclusiva, participativa y preparada para el futuro.
                   </p>
                 </div>
               </header>

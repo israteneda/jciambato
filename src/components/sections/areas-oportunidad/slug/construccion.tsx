@@ -60,7 +60,14 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                             </div>
 
                             <div className="flex items-center justify-center pl-16">
-                                <FaFilePdf className="text-white text-4xl opacity-80" />
+                                <a
+                                    href={area.document}
+                                    target="_blank"
+                                    className="text-white text-4xl opacity-80 hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+                                    aria-label="Descargar PDF del brochure"
+                                >
+                                    <FaFilePdf />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -116,17 +123,6 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                                     {totalSlides.toString().padStart(2, '0')}
                                 </div>
                             </div>
-
-
-                            {/* Mensaje de Accion */}
-                            {/* <div className="flex items-center">
-                                <div className="text-[13px] leading-[1.85] not-italic uppercase text-jci-gray font-bold tracking-normal">
-                                    Arrastra para mover
-                                </div>
-                                <div className="w-[60px] h-px overflow-hidden ml-[32px] relative bg-[rgb(204,204,204)]">
-                                    <span className="absolute top-0 left-0 w-[60px] h-px bg-jci-aqua animate-loop" aria-hidden="true" />
-                                </div>
-                            </div> */}
 
                             {/* Navegación */}
                             <nav className="flex space-x-4 md:space-x-8 items-center" aria-label="Navegación del carrusel">

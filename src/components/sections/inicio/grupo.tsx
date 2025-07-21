@@ -39,9 +39,7 @@ export default function Grupo() {
               <div className="md:ml-16">
                 <div className="mt-8">
                   <p className="text-lg font-normal normal-case leading-[1.78] tracking-normal text-jci-black text-left max-w-lg">
-                    <strong>No nacimos para ser espectadores. </strong>
-                    En JCI Ambato, lideramos con propósito, servimos con pasión y construimos un
-                    mañana con cada acción que emprendemos
+                    <strong>En JCI Ambato, no solo observamos, actuamos. </strong> Lideramos con propósito, servimos con pasión y forjamos un futuro mejor con cada paso que damos, inspirando impacto y transformación en nuestra comunidad.
                   </p>
                 </div>
 
@@ -82,7 +80,7 @@ export default function Grupo() {
                     <div className="text-jci-navy text-6xl md:text-8xl leading-[1] font-light tracking-[-5px] ">
                       <span>+50</span>
                     </div>
-                    <p className="text-base md:text-  xl text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
+                    <p className="text-base md:text-xl text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
                       <strong>Años</strong> inspirando líderes
                     </p>
                   </div>

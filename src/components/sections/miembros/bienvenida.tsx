@@ -16,7 +16,7 @@ export default function Bienvenida() {
         <InfoContainer
           subtitle="Miembros"
           title="Miembros JCI Ambato"
-          description="Apasionados por su desarrollo personal y por construir un mundo mejor, contribuyendo activamente tanto en su comunidad como en la organización."
+          description="Apasionados por su desarrollo personal y por construir un mundo mejor."
         />
       </div>
 

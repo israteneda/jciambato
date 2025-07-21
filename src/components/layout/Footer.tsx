@@ -28,24 +28,24 @@ export function Footer() {
         <div className="p-10 md:p-28">
           <div className="mb-10 md:mb-20">
 
-            <div className="relative z-10 max-w-7xl m-auto">
+            <div className="relative z-10 max-w-6xl m-auto">
               <div className="flex flex-col md:flex-row items-start md:items-center">
                 <header>
-                  <span className="text-xs text-white line-clamp-1 uppercase tracking-widest">
+                  <span className="text-xs text-gray-50 line-clamp-1 uppercase tracking-widest">
                     Conoce, Suma, Transforma
                   </span>
-                  <h2 id="cta-heading" className="mt-8 text-3xl md:text-5xl max-w-2xl font-medium md:leading-[1.33] tracking-tight text-white">
-                    ¿Te atreves a ser el cambio que quieres ver en el mundo?
+                  <h2 id="cta-heading" className="mt-8 text-3xl md:text-5xl max-w-2xl font-base md:leading-[1.33] tracking-tight text-white">
+                    Te atreves a <strong>ser el cambio que quieres ver en el mundo?</strong>
                   </h2>
                 </header>
 
-                <Link href="/involucrate" className="md:ml-52 text-white group cursor-pointer" aria-label="Ir a Involúcrate">
+                <Link href="/involucrate" className="my-8 md:ml-48 text-white group cursor-pointer" aria-label="Ir a Involúcrate">
                   <Image
                     src="/icons/arrow-down.svg"
                     alt=""
                     width={128}
                     height={128}
-                    className="h-32 w-32 transform transition-transform duration-300 group-hover:translate-x-4 -rotate-90 brightness-0 invert"
+                    className="h-28 w-28 md:h-32 md:w-32 transform transition-transform duration-300 group-hover:translate-x-4 -rotate-90 brightness-0 invert"
                   />
                 </Link>
 

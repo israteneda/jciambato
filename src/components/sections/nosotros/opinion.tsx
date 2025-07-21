@@ -12,7 +12,7 @@ export default function Opinion() {
               Gabriela González, Presidenta de JCI Ambato 2025
             </div>
             <div className="mt-10">
-              <p className="text-lg font-normal leading-[1.78] text-white text-left max-w-md]">
+              <p className="text-lg font-normal leading-[1.78] text-white text-left max-w-md">
                 50 años después, JCI Ambato se distingue por su capacidad de implementación,
                 valentía para enfrentar retos y compromiso con nuestros valores fundamentales. Esta
                 forma de pensar nos guía en los momentos más difíciles. Seguimos siendo una

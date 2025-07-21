@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function MisionVision() {
     return (
-        <section className="relative my-48">
+        <section className="relative my-24 md:my-48">
             <div className="relative max-w-6xl px-8 md:mx-auto">
                 <div className="flex flex-col md:flex-row gap-24 md:gap-0 items-center justify-between">
                     {/* Caja de Información */}
@@ -17,7 +17,7 @@ export default function MisionVision() {
 
                             <div className="relative md:ml-44">
                                 <header>
-                                    <h2 className="text-4xl text-black font-semibold leading-2 text-left">
+                                    <h2 className="text-4xl text-black font-bold leading-2 text-left">
                                         Nuestra Misión <br /> y Visión
                                     </h2>
                                 </header>
