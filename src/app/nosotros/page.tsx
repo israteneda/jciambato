@@ -18,7 +18,7 @@ export default function NosotrosPage() {
             <Bienvenida />
 
             {/* Bloque espaciado */}
-            <div className="h-[700px] md:h-[640px]" aria-hidden="true"></div>
+            <div className="h-[500px] lg:h-[640px]" aria-hidden="true"></div>
             <div
                 className="absolute top-0 w-full h-full bg-gray-50"
                 style={{ transform: 'translateY(99.9vh)' }}

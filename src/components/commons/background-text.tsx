@@ -66,7 +66,7 @@ const BackgroundText = ({
   const baseTextStyle = clsx(
     "flex justify-center",
     "opacity-[0.08]",
-    "text-7xl md:text-[210px]",
+    "text-7xl md:text-9xl lg:text-[210px]",
     "font-extrabold",
     "whitespace-nowrap",
     "tracking-normal",

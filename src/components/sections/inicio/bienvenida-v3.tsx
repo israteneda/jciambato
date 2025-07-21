@@ -204,7 +204,7 @@ export default function BienvenidaV3() {
           ))}
         </div>
 
-        <div className="h-screen flex max-w-5xl mx-6 md:mx-9 lg:mx-[180px] items-center box-border">
+        <div className="h-screen flex max-w-5xl mx-6 md:mx-8 lg:mx-48 items-center box-border">
           <BorderFrame isScrolled={isScrolled} />
 
           {/* Contenido principal */}
@@ -217,7 +217,7 @@ export default function BienvenidaV3() {
                 </h2>
               </div>
 
-              <div className="mt-6 sm:mt-8 md:mt-10">
+              <div className="mt-6 lg:mt-10">
                 <p className="text-white max-w-xl text-base lg:text-lg leading-relaxed">
                   Fomentamos el cambio mediante la innovación, convirtiendo ideas en soluciones que fortalecen comunidades y mejoran vidas.
                 </p>
@@ -245,7 +245,7 @@ export default function BienvenidaV3() {
         <RowScroll />
 
         {/* Logo Somos Liderazgo */}
-        <div className="hidden md:block absolute bottom-[60px] right-[20px] sm:bottom-[80px] sm:right-[30px] md:bottom-[60px] md:right-[124px] z-20">
+        <div className="hidden lg:block absolute bottom-[60px] right-[20px] sm:bottom-[80px] sm:right-[30px] md:bottom-[60px] md:right-[124px] z-20">
           <Image
             alt="Somos Liderazgo Logo"
             className="object-contain w-[100px] h-[50px] sm:w-[120px] sm:h-[60px] md:w-[150px] md:h-[70px]"
@@ -257,7 +257,7 @@ export default function BienvenidaV3() {
         </div>
 
         {/* Enlace a JCI Ecuador */}
-        <div className="hidden md:block absolute bottom-[60px] left-[20px] sm:bottom-[80px] sm:left-[30px] md:bottom-[80px] md:left-[180px] text-[8px] sm:text-[9px] md:text-[10.5px] font-semibold uppercase z-20 text-jci-seafoam">
+        <div className="hidden lg:block absolute bottom-[60px] left-[20px] sm:bottom-[80px] sm:left-[30px] md:bottom-[80px] md:left-[180px] text-[8px] sm:text-[9px] md:text-[10.5px] font-semibold uppercase z-20 text-jci-seafoam">
           <a
             href="https://jciecuador.com"
             target="_blank"

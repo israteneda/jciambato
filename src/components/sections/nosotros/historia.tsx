@@ -56,7 +56,7 @@ export default function ActividadesAnuales() {
         </div>
       </div>
 
-      <div className="md:ml-72 my-32">
+      <div className="ml-48 lg:ml-72 my-32">
         <Swiper
           modules={[Navigation, Mousewheel, FreeMode]}
           spaceBetween={20}

@@ -99,7 +99,7 @@ export default function Formulario() {
                     <div className="mt-6">
                       <h2
                         id="formulario-heading"
-                        className="text-3xl md:text-5xl font-bold not-italic text-left leading-[1.17] tracking-normal text-black max-w-[370px]"
+                        className="text-4xl lg:text-5xl font-bold not-italic text-left leading-[1.17] tracking-normal text-black max-w-[370px]"
                       >
                         Te esperamos con los brazos abiertos
                       </h2>
@@ -124,7 +124,7 @@ export default function Formulario() {
 
               <div className="flex-1 min-w-[calc(50%+100px)]">
                 {/* Formulario */}
-                <div className="w-full h-full box-border px-8 md:px-24 py-16 md:py-20 bg-white md:-translate-y-24">
+                <div className="w-full h-full box-border px-8 md:px-24 py-16 bg-white md:-translate-y-24">
                   <div className="text-sm font-bold text-jci-aqua uppercase tracking-wider mb-8">
                     Envíanos un mensaje
                   </div>

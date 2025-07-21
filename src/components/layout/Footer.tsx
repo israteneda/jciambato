@@ -25,16 +25,16 @@ export function Footer() {
     <footer className="relative z-20 bg-gray-50 select-none overflow-x-hidden" role="contentinfo" aria-label="Pie de página">
       {/* Sección de llamada a la acción */}
       <section className="relative z-10 bg-jci-aqua" aria-labelledby="cta-heading">
-        <div className="p-10 md:p-28">
+        <div className="p-10 md:p-20">
           <div className="mb-10 md:mb-20">
 
-            <div className="relative z-10 max-w-6xl m-auto">
+            <div className="relative z-10 max-w-6xl mx-auto">
               <div className="flex flex-col md:flex-row items-start md:items-center">
                 <header>
                   <span className="text-xs text-gray-50 line-clamp-1 uppercase tracking-widest">
                     Conoce, Suma, Transforma
                   </span>
-                  <h2 id="cta-heading" className="mt-8 text-3xl md:text-5xl max-w-2xl font-base md:leading-[1.33] tracking-tight text-white">
+                  <h2 id="cta-heading" className="mt-8 text-4xl lg:text-5xl max-w-2xl font-base md:leading-[1.33] tracking-tight text-white">
                     Te atreves a <strong>ser el cambio que quieres ver en el mundo?</strong>
                   </h2>
                 </header>
@@ -67,18 +67,16 @@ export function Footer() {
       {/* Sección principal del footer */}
       <section className="relative" aria-labelledby="footer-content-heading">
         <div>
-
           <div className="z-10 w-full">
-
             <span
-              className="hidden md:block absolute top-1/2 left-[27px] text-jci-aqua text-[11px] font-semibold z-20 leading-[60px] tracking-[1px] uppercase transform -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap"
+              className="hidden lg:block absolute top-1/2 left-[27px] text-jci-aqua text-[11px] font-semibold z-20 leading-[60px] tracking-[1px] uppercase transform -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap"
               aria-hidden="true"
               role="presentation"
             >
               Conócenos mejor
             </span>
 
-            <div className="pt-24 xl:pt-48 mb-24">
+            <div className="pt-24 md:p-20 lg:pt-48">
               {/* Items */}
               <div className="relative z-10 max-w-6xl mx-8 md:mx-auto">
                 <div className="flex flex-row justify-between items-center gap-8 mb-8">
@@ -187,11 +185,10 @@ export function Footer() {
                   </aside>
                 </div>
               </div>
-
             </div>
 
             {/* Derechos reservados */}
-            <div className="relative py-5 z-10 max-w-6xl mx-8 md:mx-auto">
+            <div className="relative py-5 z-10 max-w-6xl  mx-20 lg:mx-auto">
               <div className="flex flex-col md:flex-row gap-3">
                 <p className="text-xs md:text-sm text-default-400">
                   {/* © 2025 Cámara Junior Internacional del Ecuador — Capítulo Ambato. Todos los Derechos Reservados. */}
@@ -215,17 +212,17 @@ export function Footer() {
             </div>
 
             {/* Botón para volver arriba */}
-            <div className="absolute top-[45%] md:top-[20%] right-[6%] md:right-[5%]">
+            <div className="absolute top-[45%] md:top-[50%] lg:top-[30%] right-[6%] md:right-[8%] lg:right-[5%]">
               <div className="flex items-center justify-center">
-                {isClient && (
-                  <button
-                    type="button"
-                    aria-label="Volver arriba"
-                    onClick={handleScrollToTop}
-                  >
-                    <HiOutlineArrowUp className="w-8 h-8" aria-hidden="true" />
-                  </button>
-                )}
+                <button
+                  type="button"
+                  aria-label="Volver arriba"
+                  onClick={handleScrollToTop}
+                  className={isClient ? 'block' : 'hidden'}
+                  suppressHydrationWarning
+                >
+                  <HiOutlineArrowUp className="w-10 h-10" aria-hidden="true" />
+                </button>
               </div>
             </div>
           </div>

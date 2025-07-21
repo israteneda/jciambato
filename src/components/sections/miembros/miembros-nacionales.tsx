@@ -13,8 +13,6 @@ export default function MiembrosNacionales() {
                         En JCI Ecuador
                     </h2>
                     <p className="text-lg text-gray-600 mt-2 max-w-3xl">
-                        {/* Ser parte de la JCI Ecuador permite a los miembros de la organización local escalar su impacto a nivel nacional e internacional. Al participar en la organización nacional, los miembros contribuyen a iniciativas de mayor alcance, colaboran con líderes de otras localidades y fortalecen su compromiso con los valores y objetivos de la JCI. Además, tienen la oportunidad de participar en proyectos internacionales, colaborando con otras JCI a nivel global, lo que fomenta el intercambio de ideas, el aprendizaje intercultural y la creación de soluciones conjuntas para desafíos globales. */}
-
                         Formar parte de JCI Ecuador eleva el impacto de los miembros locales a escenarios nacionales e internacionales. Colaboran en <strong>iniciativas de alto alcance</strong>, <strong>conectan con líderes globales</strong> y <strong>participan en proyectos internacionales</strong> que impulsan soluciones innovadoras, fomentando el intercambio cultural y el compromiso con los valores de la JCI.
                     </p>
                 </header>

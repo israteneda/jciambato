@@ -131,7 +131,7 @@ export const Navbar = ({ className }: NavbarProps) => {
 
       {/* Sección de navegación */}
       <NavbarContent className="flex basis-1/5 sm:basis-full" justify="end">
-        <nav className="hidden md:block" aria-label="Navegación principal">
+        <nav className="hidden lg:block" aria-label="Navegación principal">
           <ul className="flex gap-8 justify-start ml-2" role="menubar">
             {siteConfig.navItems.map((item, index) => {
               const isLast = index === siteConfig.navItems.length - 1;
@@ -156,7 +156,7 @@ export const Navbar = ({ className }: NavbarProps) => {
           </ul>
         </nav>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <NavbarMenuToggle
             className={clsx("w-12 h-12 p-2", shouldUseDarkText ? "text-jci-black" : "text-white")}
             srOnlyText="Abrir menú de navegación"

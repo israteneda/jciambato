@@ -12,9 +12,7 @@ export default function Senadores() {
                         Senaduría
                     </h2>
                     <p className="text-lg text-gray-600 mt-2 max-w-3xl">
-                        {/* Los Senadores son miembros honorarios reconocidos por su excepcional compromiso con la misión de la JCI y su impacto transformador en la comunidad. Este prestigioso título se otorga en honor a sus logros destacados, servicio ejemplar y dedicación constante. Como mentores y líderes, los Senadores inspiran a las nuevas generaciones, promueven activamente los programas de la JCI y fortalecen los pilares de liderazgo, colaboración y compromiso con la visión de la JCI Ambato. */}
-
-                        Distinguidos por su <strong>compromiso excepcional</strong> y <strong>logros sobresalientes</strong>, son el pilar de la JCI. Como mentores inspiradores, guían a las nuevas generaciones, fortalecen los valores de la organización y promueven un liderazgo transformador alineado con la visión de JCI Ambato.
+                        Reconocidos por su <strong>compromiso</strong> y <strong>logros destacados</strong>, son el pilar de JCI. Como mentores inspiradores, guían a las nuevas generaciones, fortalecen los valores organizacionales y promueven un liderazgo transformador alineado con la visión de JCI Ambato.
                     </p>
                 </header>
 

@@ -38,7 +38,7 @@ export default function ProyectosPorArea() {
 
     // Componente para renderizar una actividad individual
     const ActivityCard = ({ proyecto }: { proyecto: Proyecto }) => (
-        <article className="w-full md:w-1/2 mx-5 mb-20">
+        <article className="w-full lg:w-1/2 mx-5 mb-20">
             <Link href={`/proyectos/${proyecto.slug}`} className="w-full" aria-label={`Ver detalles de ${proyecto.titulo}`}>
                 <figure className="h-[350px] md:h-[512px] overflow-hidden bg-gray-200">
                     <div className="relative bg-white w-full h-full overflow-hidden">

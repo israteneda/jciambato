@@ -4,7 +4,7 @@ export default function DeclaracionPrivacidad() {
             <div className="py-16">
                 <div className="relative z-10 md:max-w-6xl mx-auto px-8">
                     <header>
-                        <h1 className="text-2xl md:text-5xl font-bold text-left text-jci-off-black max-w-3xl md:leading-[1.33]">
+                        <h1 className="text-2xl lg:text-5xl font-bold text-left text-jci-off-black max-w-3xl md:leading-[1.33]">
                             Declaración de Privacidad y Protección de Datos Personales
                         </h1>
 

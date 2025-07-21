@@ -4,7 +4,7 @@ export default function Valores() {
     return (
         <section className="relative z-10">
             <div className="py-14 md:py-28 bg-gray-200">
-                <div className="max-w-6xl mx-8 md:mx-auto">
+                <div className="max-w-6xl mx-8 lg:mx-auto">
                     {/* Titulo */}
                     <header>
                         <div className="text-jci-gold text-xs leading-2 font-bold uppercase">

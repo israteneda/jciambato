@@ -13,7 +13,7 @@ import ChatbotWrapper from "@/components/ui/ChatbotWrapper";
 export const metadata: Metadata = {
   metadataBase: new URL("https://jciambato.org"),
   title: {
-    default: "JCI Ambato — Formación de Líderes Juveniles con Impacto Social",
+    default: "JCI Ambato — Unidos Construyendo un Futuro de Liderazgo",
     template: "%s | JCI Ambato",
   },
   description: siteConfig.description,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "JCI Ambato — Formación de Líderes Juveniles con Impacto Social",
+    title: "JCI Ambato — Unidos Construyendo un Futuro de Liderazgo",
     description: siteConfig.description,
     images: ["/images/logos/jci-ambato.webp"],
   },
