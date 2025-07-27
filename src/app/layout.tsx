@@ -9,6 +9,7 @@ import { fontSans, fontHelveticaNeue, fontRockwell } from "@/config/fonts";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import ChatbotWrapper from "@/components/ui/ChatbotWrapper";
+import Clarity from "@/components/ui/Clarity";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jciambato.org"),
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main className="container max-w-full bg-gray-50">{children}</main>
             <Footer />
             <ChatbotWrapper />
+            <Clarity />
           </div>
         </Providers>
       </body>
