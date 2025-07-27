@@ -13,8 +13,7 @@ export default function MiembrosGenerales() {
                         Miembros
                     </h2>
                     <p className="text-lg text-gray-600 mt-2 max-w-3xl">
-                        {/* Los miembros de la JCI son personas comprometidas con generar un impacto positivo en sus comunidades. A través de su participación activa en proyectos y actividades, fomentan el desarrollo de habilidades de liderazgo, emprendimiento, acción comunitaria y cooperación internacional, contribuyendo al crecimiento personal y colectivo. */}
-                        Son agentes de cambio apasionados por transformar sus comunidades. A través de proyectos dinámicos, desarrollan <strong>liderazgo</strong>, <strong>emprendimiento</strong> y <strong>acción comunitaria</strong>, generando un impacto positivo y sostenible a nivel local y global.
+                        Son agentes de cambio apasionados que transforman comunidades mediante proyectos dinámicos, fomentando <strong>liderazgo</strong>, <strong>emprendimiento</strong> y <strong>acción comunitaria</strong> para generar un impacto positivo y sostenible a nivel local y global.
                     </p>
                 </header>
 

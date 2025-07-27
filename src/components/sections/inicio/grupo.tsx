@@ -18,15 +18,15 @@ export default function Grupo() {
           />
         </figure>
 
-        <div className="-mt-¨[336px] lg:-mt-64">
+        <div className="-mt-48 lg:-mt-64">
           {/* Titulo Principal */}
-          <div className="relative z-10 bg-transparent w-full max-w-6xl mx-auto px-8">
+          <div className="relative z-10 bg-transparent w-full max-w-6xl lg:mx-auto px-8">
             <header>
               <div className="text-[13px] leading-[1.85] uppercase text-jci-gold font-bold tracking-normal">
                 Grupo JCI
               </div>
-              <div className="mt-1 md:mt-6">
-                <h3 className="text-3xl md:text-[48px] font-bold normal-case text-jci-aqua md:leading-[1.33] tracking-normal max-w-xs md:max-w-[calc(75%)] text-left sm:text-[calc(28.8px+1vw)]">
+              <div className="mt-6">
+                <h3 className="text-4xl lg:text-5xl font-bold normal-case text-jci-aqua leading-[1.33] lg:leading-[1.33] tracking-normal max-w-xs md:max-w-[75%] text-left">
                   Somos la organización de liderazgo más importante del centro del país.
                 </h3>
               </div>
@@ -38,10 +38,8 @@ export default function Grupo() {
               {/* Descripción */}
               <div className="md:ml-16">
                 <div className="mt-8">
-                  <p className="text-lg font-normal normal-case leading-[1.78] tracking-normal text-jci-black text-left max-w-lg">
-                    <strong>No nacimos para ser espectadores. </strong>
-                    En JCI Ambato, lideramos con propósito, servimos con pasión y construimos un
-                    mañana con cada acción que emprendemos
+                  <p className="text-base lg:text-lg font-normal normal-case lg:leading-[1.78] tracking-normal text-jci-black text-left max-w-lg">
+                    <strong>En JCI Ambato, no solo observamos, actuamos. </strong> Lideramos con propósito, servimos con pasión y forjamos un futuro mejor con cada paso que damos, inspirando impacto y transformación en nuestra comunidad.
                   </p>
                 </div>
 
@@ -79,29 +77,29 @@ export default function Grupo() {
               <div className="relative flex-1 grow shrink basis-0 md:mt-28 mr-28">
                 <div className="flex flex-wrap gap-10">
                   <div className="mt-20">
-                    <div className="text-jci-navy text-6xl md:text-8xl leading-[1] font-light tracking-[-5px] ">
+                    <div className="text-jci-navy text-7xl lg:text-8xl leading-[1] font-light tracking-[-5px] ">
                       <span>+50</span>
                     </div>
-                    <p className="text-base md:text-  xl text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
+                    <p className="text-base lg:text-xl text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
                       <strong>Años</strong> inspirando líderes
                     </p>
                   </div>
 
                   <div className="flex flex-col md:flex-row w-full gap-10">
                     <div className="flex-1">
-                      <div className="text-jci-navy text-6xl md:text-8xl leading-[1] tracking-[-5px] font-light">
+                      <div className="text-jci-navy text-7xl lg:text-8xl leading-[1] tracking-[-5px] font-light">
                         <span>+200</span>
                       </div>
-                      <p className="text-base md:text-xl text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
+                      <p className="text-base lg:text-xl text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
                         <strong>Proyectos</strong> ejecutados
                       </p>
                     </div>
 
                     <div className="flex-1">
-                      <div className="text-jci-navy text-6xl md:text-8xl leading-[1] font-light tracking-[-5px] ">
+                      <div className="text-jci-navy text-7xl lg:text-8xl leading-[1] font-light tracking-[-5px] ">
                         <span>+500</span>
                       </div>
-                      <p className="text-base md:text-xl text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
+                      <p className="text-base lg:text-xl text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
                         <strong>Jóvenes</strong> formados y empoderados
                       </p>
                     </div>

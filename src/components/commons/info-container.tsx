@@ -55,7 +55,7 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
   }, [pathname]);
 
   return (
-    <section className="relative z-30 bg-transparent max-w-6xl mx-8 md:mx-auto">
+    <section className="relative z-30 bg-transparent max-w-6xl mx-8 lg:mx-auto">
       {shouldUseLightText ? (
         // Version Claro (para fondos oscuros)
         <>

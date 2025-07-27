@@ -204,23 +204,22 @@ export default function BienvenidaV3() {
           ))}
         </div>
 
-        <div className="h-screen flex max-w-5xl mx-6 md:mx-9 lg:mx-[180px] items-center box-border">
+        <div className="h-screen flex max-w-5xl mx-6 md:mx-8 lg:mx-48 items-center box-border">
           <BorderFrame isScrolled={isScrolled} />
 
           {/* Contenido principal */}
           <main className="relative z-20 w-full">
             <div className="flex flex-col items-start">
               <div className="mt-6">
-                <h2 className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-4xl lg:text-7xl max-w-xl lg:max-w-5xl py-1 leading-tight">
+                <h2 className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-4xl lg:text-7xl max-w-xl lg:max-w-5xl py-1.5 leading-tight">
                   Unidos Construyendo un <span className="text-inherit italic">Futuro</span> de
                   Liderazgo
                 </h2>
               </div>
 
-              <div className="mt-6 sm:mt-8 md:mt-10">
+              <div className="mt-6 lg:mt-10">
                 <p className="text-white max-w-xl text-base lg:text-lg leading-relaxed">
-                  Impulsamos el cambio a través de la innovación, transformando ideas en soluciones
-                  que construyen comunidades más fuertes y mejoran vidas.
+                  Fomentamos el cambio mediante la innovación, convirtiendo ideas en soluciones que fortalecen comunidades y mejoran vidas.
                 </p>
               </div>
 
@@ -243,31 +242,10 @@ export default function BienvenidaV3() {
         <RotatedText text="BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO" />
 
         {/* Botón de scroll */}
-        {/* <div className="hidden sm:block absolute z-20 top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2">
-          <button
-            aria-label="Desplazarse hacia abajo"
-            onClick={() => {
-              // Función para scroll suave hacia abajo
-              window.scrollTo({
-                top: window.innerHeight,
-                behavior: 'smooth'
-              });
-            }}
-          >
-            <Image
-              src="/icons/arrow-down.svg"
-              alt=""
-              width={30}
-              height={30}
-              className="relative w-[20px] h-[20px] sm:w-[25px] sm:h-[25px] md:w-[30px] md:h-[30px] object-contain"
-              aria-hidden="true"
-            />
-          </button>
-        </div> */}
         <RowScroll />
 
         {/* Logo Somos Liderazgo */}
-        <div className="hidden md:block absolute bottom-[60px] right-[20px] sm:bottom-[80px] sm:right-[30px] md:bottom-[60px] md:right-[124px] z-20">
+        <div className="hidden lg:block absolute bottom-[60px] right-[20px] sm:bottom-[80px] sm:right-[30px] md:bottom-[60px] md:right-[124px] z-20">
           <Image
             alt="Somos Liderazgo Logo"
             className="object-contain w-[100px] h-[50px] sm:w-[120px] sm:h-[60px] md:w-[150px] md:h-[70px]"
@@ -279,7 +257,7 @@ export default function BienvenidaV3() {
         </div>
 
         {/* Enlace a JCI Ecuador */}
-        <div className="hidden md:block absolute bottom-[60px] left-[20px] sm:bottom-[80px] sm:left-[30px] md:bottom-[80px] md:left-[180px] text-[8px] sm:text-[9px] md:text-[10.5px] font-semibold uppercase z-20 text-jci-seafoam">
+        <div className="hidden lg:block absolute bottom-[60px] left-[20px] sm:bottom-[80px] sm:left-[30px] md:bottom-[80px] md:left-[180px] text-[8px] sm:text-[9px] md:text-[10.5px] font-semibold uppercase z-20 text-jci-seafoam">
           <a
             href="https://jciecuador.com"
             target="_blank"

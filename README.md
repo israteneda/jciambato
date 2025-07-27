@@ -4,7 +4,7 @@
 
 ![JCI Ambato Logo](/public/images/logos/jci-ambato.webp)
 
-**Formación de Líderes Juveniles con Impacto Social**
+**Unidos Construyendo un Futuro de Liderazgo**
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.1.6-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-18.3.1-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
@@ -131,7 +131,6 @@ Este proyecto está licenciado bajo la [MIT License](LICENSE) - ver el archivo [
 - **Facebook**: [@jciambatoec](https://www.facebook.com/jciambatoec)
 - **Instagram**: [@jciambato](https://www.instagram.com/jciambato)
 - **LinkedIn**: [JCI Ambato](https://www.linkedin.com/company/jci-ambato/)
-- **YouTube**: [JCI Ambato](https://www.youtube.com/channel/jciambato)
 
 ---
 

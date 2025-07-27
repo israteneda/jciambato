@@ -25,7 +25,7 @@ export const proyectos: Proyecto[] = [
     lugar: "Ambato, Ecuador",
     director: "Erick Calvache",
     imagen:
-      "/images/areas_oportunidad/negocios-emprendimiento/proyectos/negocios-emprendimiento-p1.webp",
+      "/images/areas_oportunidad/negocios-emprendimiento/proyectos/dale-otro-chance.webp",
     area_oportunidad: "negocios-emprendimiento",
     url: "/proyectos/dale-otro-chance",
     descripcion:

@@ -9,11 +9,12 @@ import { fontSans, fontHelveticaNeue, fontRockwell } from "@/config/fonts";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import ChatbotWrapper from "@/components/ui/ChatbotWrapper";
+import Clarity from "@/components/ui/Clarity";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jciambato.org"),
   title: {
-    default: "JCI Ambato — Formación de Líderes Juveniles con Impacto Social",
+    default: "JCI Ambato — Unidos Construyendo un Futuro de Liderazgo",
     template: "%s | JCI Ambato",
   },
   description: siteConfig.description,
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "JCI Ambato — Formación de Líderes Juveniles con Impacto Social",
+    title: "JCI Ambato — Unidos Construyendo un Futuro de Liderazgo",
     description: siteConfig.description,
     images: ["/images/logos/jci-ambato.webp"],
   },
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main className="container max-w-full bg-gray-50">{children}</main>
             <Footer />
             <ChatbotWrapper />
+            <Clarity />
           </div>
         </Providers>
       </body>

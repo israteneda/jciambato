@@ -119,7 +119,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     responsable: "Juan Pérez",
     responsable_image: "/images/miembros/miembro.png",
     correo: "juan.perez@jciambato.com",
-    image: "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual.jpg",
+    image: "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual.jpeg",
     background_image:
       "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual-back.webp",
     features: [

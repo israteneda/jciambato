@@ -4,7 +4,9 @@ import {
     Bienvenida,
     Presentacion,
     Construccion,
-    ExploraAreasOportunidad
+    ExploraAreasOportunidad,
+    SiguienteArea,
+    Caracteristicas
 } from '@/components/sections/areas-oportunidad/slug';
 
 interface AreaOportunidadPageProps {
@@ -52,6 +54,8 @@ export default async function AreaOportunidadPage({ params }: AreaOportunidadPag
             <Presentacion area={area} />
             <Construccion area={area} />
             <ExploraAreasOportunidad area={area} />
+            <Caracteristicas area={area} />
+            <SiguienteArea area={area} />
             {/* <Responsable area={area} /> */}
         </main>
     );

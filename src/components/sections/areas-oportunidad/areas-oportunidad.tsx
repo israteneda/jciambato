@@ -80,7 +80,7 @@ export default function AreasOportunidad() {
                                         >
                                             <div className="flex items-center py-4">
                                                 <span className="text-sm text-jci-black leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-seafoam">
-                                                    Explora esta área
+                                                    Explora esta Área de Oportunidad
                                                 </span>
                                                 <div
                                                     className="flex ml-3 items-center transform transition-transform duration-300 group-hover:translate-x-1"

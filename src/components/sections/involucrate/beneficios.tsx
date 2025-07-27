@@ -47,13 +47,6 @@ export default function Beneficios() {
                     </div>
                 </article>
             </div>
-
-            {/* El mapa se incrustará aquí */}
-            {/* <div className="relative z-10 mx-auto w-full max-w-6xl p-8">
-                <div className="mt-16 w-full h-[450px] rounded-lg overflow-hidden">
-                    
-                </div>
-            </div> */}
         </section>
     );
 }

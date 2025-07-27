@@ -27,19 +27,21 @@ export default function NoticiasEventos() {
                 Noticias y Eventos
               </h2>
 
-              {/* <div className="hidden md:block">
+              <div className="hidden md:block">
                 <Button
                   radius="none"
                   variant="bordered"
                   className="relative overflow-hidden border-gray-400 text-gray-400 group"
                   aria-label="Ver todas las noticias y eventos"
                 >
-                  <span className="absolute inset-0 transform -translate-x-full bg-gray-400 transition-transform duration-300 group-hover:translate-x-0" />
-                  <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-                    Ver más
-                  </span>
+                  <Link href="/noticias-eventos">
+                    <span className="absolute inset-0 transform -translate-x-full bg-gray-400 transition-transform duration-300 group-hover:translate-x-0" />
+                    <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+                      Ver más
+                    </span>
+                  </Link>
                 </Button>
-              </div> */}
+              </div>
             </div>
           </div>
         </header>

@@ -9,12 +9,12 @@ export default function Bienvenida() {
       </header>
 
       <div className="relative">
-        <RotatedText text="Dentro de nuestras áreas de oportunidad" />
+        <RotatedText text="Nuestras Áreas de Oportunidad" />
 
         <InfoContainer
           subtitle="Tu camino empieza aquí. Elige dónde crecer y servir"
           title="Áreas de Oportunidad"
-          description="Las áreas de oportunidad son las que te permitirán crecer y servir en JCI Ambato. Cada una de ellas tiene un propósito y una misión."
+          description="Te permitirán crecer y servir en JCI Ambato. Cada una de ellas tiene un propósito y una misión."
         />
       </div>
     </section>

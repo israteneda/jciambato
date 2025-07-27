@@ -66,7 +66,7 @@ export const Carousel = ({ items = getProyectosDestacados(), autoPlayInterval = 
 
               {/* Contenido del Slide */}
               <div className="relative w-full h-full pt-24 pb-[46px]">
-                <div className="relative h-full md:w-[1156px] mx-[30px] md:mx-auto">
+                <div className="relative h-full md:w-[1156px] mx-8 lg:mx-auto">
                   {/* Texto y botón */}
                   <header>
                     <div className="text-[13px] leading-[1.85] uppercase text-white font-bold">
@@ -147,10 +147,10 @@ export const Carousel = ({ items = getProyectosDestacados(), autoPlayInterval = 
         aria-label="Indicador de posición"
         aria-live="polite"
       >
-        <div className="text-white text-[48px] font-normal">
+        <div className="text-white text-4xl lg:text-5xl font-normal">
           {String(currentIndex + 1).padStart(2, "0")}
         </div>
-        <div className="opacity-50 text-white text-[48px] mt-2 pt-2 border-t border-white">
+        <div className="opacity-50 text-white text-4xl lg:text-5xl mt-2 pt-2 border-t border-white">
           {String(items.length).padStart(2, "0")}
         </div>
       </div>

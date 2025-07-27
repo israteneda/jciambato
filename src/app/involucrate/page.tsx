@@ -18,7 +18,7 @@ export default function InvolucratePage() {
       <Bienvenida />
 
       {/* Bloque espaciado */}
-      <div className="h-[650px]" aria-hidden="true"></div>
+      <div className="h-[500px] lg:h-[640px]" aria-hidden="true"></div>
       <div
         className="absolute top-0 w-full h-full bg-gray-50"
         style={{ transform: 'translateY(99.9vh)' }}

@@ -14,28 +14,27 @@ export default function Presentacion() {
                                     Conócenos mejor
                                 </p>
                                 <div className="mt-8">
-                                    <h2 className="text-3xl md:text-[48px] font-aeonik-bold font-bold leading-[1.33] text-black max-w-[862px] text-left sm:text-[calc(28.8px+1vw)]">
+                                    <h2 className="text-3xl lg:text-5xl font-bold md:leading-[1.33] text-black max-w-4xl text-left sm:text-[calc(28.8px+1vw)]">
                                         En JCI Ambato, unimos jóvenes líderes para transformar ideas en acciones que impulsan el cambio social, cultural y económico.
                                     </h2>
                                 </div>
                             </header>
 
                             <div className="mt-20">
-                                <div className="text-medium leading-loose text-jci-off-black text-left columns-1 md:columns-2 gap-10 space-y-4">
+                                <div className="text-base leading-loose text-jci-off-black text-left columns-1 lg:columns-2 gap-10 space-y-4">
                                     <p>
-                                        Aquí, cada miembro es un protagonista que impulsa el cambio, guiado por la innovación, el compromiso con la comunidad y una visión de liderazgo global. Juntos, fusionamos ideas, acciones y propósitos para generar un impacto positivo y transformador en nuestra ciudad y más allá. Para alcanzar este objetivo, trabajamos con dedicación diaria, superando las expectativas de nuestros clientes, cumpliendo plazos con precisión y entregando soluciones óptimas para cada proyecto. Nuestro compromiso se sustenta en la motivación de nuestros equipos, quienes abordan cada desafío con un análisis crítico y creativo, siempre enfocados en encontrar la mejor solución.
+                                        Cada miembro es un agente de cambio, impulsado por la innovación, la pasión por la comunidad y una visión de liderazgo global. Unimos talento, ideas y propósitos para crear soluciones transformadoras que impactan positivamente nuestra ciudad y trascienden fronteras. Nuestros equipos, motivados y comprometidos, enfrentan cada desafío con creatividad, análisis crítico y un enfoque en resultados excepcionales.
                                     </p>
-
                                     <p>
-                                        Fomentamos el desarrollo personal y profesional de nuestros empleados como pilar fundamental para innovar y superar retos con confianza, ambición y excelencia.
+                                        Promovemos el crecimiento personal y profesional como base para innovar con confianza, superar retos con ambición y alcanzar la excelencia en todo lo que hacemos.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="mt-20 md:mt-40">
+                        <div className="mt-20 lg:mt-40">
                             <div className="flex justify-end">
-                                <div className="flex flex-wrap gap-8 md:gap-0" role="list" aria-label="Estadísticas de JCI Ambato">
+                                <div className="flex flex-wrap gap-8" role="list" aria-label="Estadísticas de JCI Ambato">
                                     <div className="mr-20" role="listitem">
                                         <div className="text-7xl md:text-8xl leading-none font-light text-jci-aqua">
                                             <AnimatedNumber
@@ -73,7 +72,7 @@ export default function Presentacion() {
                                                 delay={0.6}
                                             />
                                         </div>
-                                        <p className="md:text-medium text-black text-left uppercase max-w-44">
+                                        <p className="text-base text-black text-left uppercase max-w-44">
                                             <strong>Jóvenes</strong> formados y empoderados
                                         </p>
                                     </div>
@@ -81,7 +80,7 @@ export default function Presentacion() {
                             </div>
                         </div>
 
-                        <div className="hidden md:block absolute right-[50px] bottom-[25%] rotate-90 origin-bottom-right">
+                        <div className="hidden lg:block absolute right-[50px] bottom-[25%] rotate-90 origin-bottom-right">
                             <div className="text-[#aeaeae] leading-none text-[11px] font-medium relative tracking-[2px] uppercase after:content-[''] after:absolute after:top-[6px] after:w-[160px] after:h-[1px] after:bg-[#aeaeae] after:right-[-170px]" aria-hidden="true">
                                 Conoce, Suma, Transforma
                             </div>
@@ -105,7 +104,7 @@ export default function Presentacion() {
                         </div>
 
                         {/* Imagen principal */}
-                        <figure className="w-full md:w-auto md:flex-1 h-auto max-h-[650px] relative overflow-hidden">
+                        <figure className="w-full md:w-auto md:flex-1 h-auto max-h-auto relative overflow-hidden">
                             <Image
                                 src="/images/grupo/grupo.webp"
                                 alt="Miembros de JCI Ambato trabajando en equipo"
