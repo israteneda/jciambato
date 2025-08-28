@@ -39,7 +39,7 @@ export default function NoticiasEventosPorTipo() {
 
     // Componente para renderizar una actividad individual
     const ActivityCard = ({ noticiaEvento }: { noticiaEvento: NoticiaEvento }) => (
-        <article className="w-full md:w-1/3 md:px-4 mb-16 flex">
+        <article className="flex w-full mb-16 md:w-1/2 lg:w-1/3">
             <Link
                 href={`/noticias-eventos/${noticiaEvento.url}`}
                 className="w-full flex"
@@ -47,7 +47,7 @@ export default function NoticiasEventosPorTipo() {
             >
                 <div className="w-full group flex flex-col h-full">
                     <header className="min-h-[120px] flex flex-col justify-start">
-                        <div className="text-[13px] leading-[1.85] not-italic uppercase text-jci-gray font-normal tracking-normal">
+                        <div className="text-[13px] leading-[1.85] not-italic uppercase font-bold tracking-normal text-[#989898]">
                             <span>{noticiaEvento.tipo}</span>
                         </div>
 
@@ -60,8 +60,8 @@ export default function NoticiasEventosPorTipo() {
 
                     <div className="mt-6 flex-shrink-0">
                         <div className="group max-w-full relative inline-block transition duration-[400ms] cursor-pointer">
-                            <div className="flex items-center py-4">
-                                <span className="text-xs text-jci-gray leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
+                            <div className="flex items-center py-4 text-[#989898]">
+                                <span className="text-xs leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
                                     Leer más
                                 </span>
                                 <div
@@ -74,8 +74,8 @@ export default function NoticiasEventosPorTipo() {
                         </div>
                     </div>
 
-                    <figure className="h-[280px] md:h-[320px] overflow-hidden bg-gray-200 mt-auto">
-                        <div className="relative bg-white w-full h-full overflow-hidden">
+                    <figure className="h-[280px] md:h-[350px] overflow-hidden bg-gray-200 mt-auto">
+                            <div className="relative bg-white w-full h-full overflow-hidden">
                             <Image
                                 src={noticiaEvento.imagen}
                                 alt={`Imagen de ${noticiaEvento.titulo}`}
@@ -115,9 +115,9 @@ export default function NoticiasEventosPorTipo() {
         }
 
         return (
-            <div className="relative flex flex-wrap mx-10">
+            <div className="relative flex flex-wrap">
                 {noticiasEventosAgrupados.map((grupo, grupoIndex) => (
-                    <div key={grupoIndex} className="flex flex-col md:flex-row w-full mt-16 items-stretch">
+                    <div key={grupoIndex} className="flex flex-col gap-8 md:flex-row w-full mt-16 items-stretch">
                         {grupo.map((proyecto) => (
                             <ActivityCard key={proyecto.id} noticiaEvento={proyecto} />
                         ))}
@@ -129,18 +129,24 @@ export default function NoticiasEventosPorTipo() {
 
     return (
         <div className="relative z-10">
+            <header className="sr-only">
+                <h2 id="proyectos-contenido-heading">Contenido de Noticias y Eventos</h2>
+            </header>
+
             <nav
                 className="relative z-10 w-full transition-all duration-300 opacity-[1] "
                 aria-label="Filtros de noticias y eventos por tipo"
             >
-                <div className="relative flex justify-center z-10 mx-auto h-full">
-                    <div className="p-12 bg-gray-50 box-border w-full max-w-7xl">
+                <div className="relative z-10 mx-auto h-full">
+
+                    <div className="lg:mx-20 p-12 box-border bg-gray-50" aria-label="Filtros de proyectos por área">
                         <div className="text-[13px] leading-[1.85] not-italic uppercase text-[#989898] font-bold">
                             Explora por tipo
                         </div>
 
+                        {/* Para pantallas grandes */}
                         <div
-                            className="flex flex-wrap gap-6 mt-5"
+                            className="hidden lg:flex flex-wrap gap-6 mt-5"
                             role="tablist"
                             aria-label="Categorías de proyectos"
                         >
@@ -162,12 +168,30 @@ export default function NoticiasEventosPorTipo() {
                                 </button>
                             ))}
                         </div>
+
+                        {/* Select desde pantallas medianas */}
+                        {/* <div className="block sm:hidden w-full max-w-xs">
+                            <Select
+                                label="Filtrar por tipo"
+                                placeholder="Selecciona una opción"
+                                value={activeButton}
+                                onChange={(value) => handleCategoryChange(Number(value))}
+                                className="max-w-xs"
+                            >
+                                {tipos.map((tipo, index) => (
+                                    <SelectItem key={tipo.name} data-value={index.toString()}>
+                                        {tipo.name}
+                                    </SelectItem>
+                                ))}
+                            </Select>
+                        </div> */}
+
                     </div>
                 </div>
-            </nav>
+            </nav >
 
             <div className="bg-white min-h-96 pb-9">
-                <div className="relative z-10 max-w-6xl mx-auto">
+                <div className="relative z-10 max-w-6xl mx-8 md:mx-20 lg:mx-auto">
                     <div className="transition-all duration-300 ease-in-out">
                         <div className="min-h-[650px]" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
                             {renderContent()}
@@ -209,6 +233,6 @@ export default function NoticiasEventosPorTipo() {
                     })()}
                 </footer>
             </div>
-        </div>
+        </div >
     );
 }

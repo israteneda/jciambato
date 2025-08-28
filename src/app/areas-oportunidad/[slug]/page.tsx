@@ -56,7 +56,6 @@ export default async function AreaOportunidadPage({ params }: AreaOportunidadPag
             <ExploraAreasOportunidad area={area} />
             <Caracteristicas area={area} />
             <SiguienteArea area={area} />
-            {/* <Responsable area={area} /> */}
         </main>
     );
 } 

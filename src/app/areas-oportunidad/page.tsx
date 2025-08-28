@@ -12,7 +12,6 @@ export default function AreasOportunidadPage() {
   return (
     <main className="relative">
       <Bienvenida />
-
       <AreasOportunidad />
     </main>
   );

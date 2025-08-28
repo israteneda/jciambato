@@ -36,7 +36,12 @@ export const Navbar = ({ className }: NavbarProps) => {
   // Función para detectar si el navbar debe usar texto oscuro
   const detectTextColor = () => {
     // Páginas que siempre necesitan texto oscuro (fondo claro)
-    const darkTextPages = ["/areas-oportunidad", "/politica-gestion", "/politica-privacidad"];
+    const darkTextPages = [
+      "/impacto",
+      "/areas-oportunidad",
+      "/politica-gestion",
+      "/politica-privacidad"
+    ];
 
     // Páginas que necesitan texto blanco por defecto pero pueden cambiar con scroll (fondo oscuro)
     const scrollDependentPages = [
@@ -109,6 +114,7 @@ export const Navbar = ({ className }: NavbarProps) => {
       isBlurred={false}
       isMenuOpen={isMenuOpen}
       maxWidth="xl"
+      height="5rem"
       position="static"
       onMenuOpenChange={setIsMenuOpen}
       role="banner"
@@ -119,11 +125,12 @@ export const Navbar = ({ className }: NavbarProps) => {
           <NextLink href="/" aria-label="Ir a la página de inicio">
             <Image
               alt="JCI Ambato Logo"
-              className="object-contain w-[85px] h-[85px]"
+              className="object-contain w-[90px] h-[90px]"
               src="/images/logos/jci-ambato.webp"
-              width={85}
-              height={85}
+              width={90}
+              height={90}
               priority
+              draggable="false"
             />
           </NextLink>
         </NavbarBrand>

@@ -88,9 +88,9 @@ export default function Formulario() {
       <div className="mt-16 md:mt-60">
         <div className="bg-gray-200">
           <div className="relative z-[1] bg-transparent max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row">
-              <article className="flex-1 md:pr-16 box-border mx-8 min-w-[calc(50%-100px)]">
-                <div className="py-20 md:py-32">
+            <div className="flex flex-col lg:flex-row">
+              <article className="flex-1 md:pr-0 mx-8 md:mx-20 lg:mx-auto box-border min-w-[calc(50%-100px)]">
+                <div className="py-20 md:py-24 md:mb-24">
                   <header>
                     <div className="text-[13px] leading-[1.85] not-italic uppercase text-[#989898] font-bold tracking-normal">
                       Estamos aquí para ayudarte
@@ -122,9 +122,9 @@ export default function Formulario() {
                 </div>
               </article>
 
-              <div className="flex-1 min-w-[calc(50%+100px)]">
+              <div className="flex-1 md:mx-20 lg:mx-auto min-w-[calc(50%+100px)]">
                 {/* Formulario */}
-                <div className="w-full h-full box-border px-8 md:px-24 py-16 bg-white md:-translate-y-24">
+                <div className="w-full h-full box-border p-10 py-14 md:p-16 lg:p-20 bg-white md:-translate-y-24">
                   <div className="text-sm font-bold text-jci-aqua uppercase tracking-wider mb-8">
                     Envíanos un mensaje
                   </div>

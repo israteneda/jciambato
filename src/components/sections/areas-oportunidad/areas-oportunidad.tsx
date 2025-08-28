@@ -33,6 +33,7 @@ export default function AreasOportunidad() {
                                         height={1080}
                                         alt={`Imagen representativa de ${area.title}`}
                                         className="absolute h-full w-full inset-0 object-cover"
+                                        draggable="false"
                                     />
                                 </div>
                             </figure>
@@ -51,13 +52,27 @@ export default function AreasOportunidad() {
                                     </p>
                                 </div>
 
+                                {/* Logo Area */}
+                                <div className="mt-5">
+                                    <div className="flex justify-center py-5">
+                                        {area.logo && (
+                                            <Image
+                                                src={area.logo}
+                                                alt={`Logo de ${area.title}`}
+                                                width={290} height={0}
+                                                draggable="false"
+                                            />
+                                        )}
+                                    </div>
+                                </div>
+
                                 <div className="mt-5">
                                     <section aria-labelledby={`features-${area.id}`}>
                                         <h4 id={`features-${area.id}`} className="sr-only">
                                             Características de {area.title}
                                         </h4>
                                         <ul
-                                            className="flex flex-row flex-wrap mt-[8px] mr-[-10px] mb-[68px] ml-[-10px]"
+                                            className="flex flex-row flex-wrap mt-[8px] mr-[-10px] ml-[-10px]"
                                             role="list"
                                         >
                                             {area.features.map((feature, featureIndex) => (
@@ -72,7 +87,7 @@ export default function AreasOportunidad() {
                                         </ul>
                                     </section>
 
-                                    <footer>
+                                    <footer className="mt-10">
                                         <Link
                                             href={`/areas-oportunidad/${area.slug}`}
                                             className="group max-w-full relative inline-block transition duration-[400ms] cursor-pointer"

@@ -1,3 +1,5 @@
+"use client";
+import { RowScroll } from "@/components/commons";
 import BackgroundImage from "@/components/commons/background-image";
 import InfoContainer from "@/components/commons/info-container";
 import RotatedText from "@/components/commons/rotated-text";
@@ -14,8 +16,8 @@ export default function Bienvenida() {
             <div className="relative w-full pt-48 pb-32">
                 <InfoContainer
                     subtitle="Proyectos"
-                    title="Nuestros Proyectos"
-                    description="Cuando nos unimos, creamos un impacto más grande. Juntos, construimos un mañana mejor."
+                    title="Acciones que dejan huella"
+                    description="Cada proyecto nace del compromiso por mejorar nuestra ciudad. Unidos, logramos un mayor impacto."
                 />
             </div>
 
@@ -23,6 +25,8 @@ export default function Bienvenida() {
                 image="/images/secciones/proyecto-feria-libro.webp"
                 alt="Imagen de fondo de proyectos de JCI Ambato"
             />
+
+            <RowScroll />
         </section>
     );
 

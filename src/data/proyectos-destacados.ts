@@ -48,7 +48,7 @@ export const proyectosDestacados: ProyectoDestacado[] = [
     url: "/proyectos/lider-a-lider",
     description:
       "Iniciativa de capacitación y mentoría que desarrolla el potencial de liderazgo en jóvenes profesionales, creando una red de líderes comprometidos con el desarrollo sostenible de la comunidad.",
-    image: "/images/areas_oportunidad/desarrollo-individual/proyectos/lider-a-lider.webp",
+    image: "/images/areas_oportunidad/desarrollo-individual/proyectos/lider-a-lider/lider-a-lider.jpg",
     premio: "Excelencia en Liderazgo Joven",
     categoria: "Desarrollo Individual",
     año: "2024",

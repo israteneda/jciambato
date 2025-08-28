@@ -8,7 +8,7 @@ export default function Presentacion({ proyecto }: { proyecto: Proyecto }) {
     return (
         <section className="relative bg-transparent overflow-hidden" aria-labelledby={`proyecto-${proyecto.slug}-heading`}>
             <div className="py-24">
-                <div className="relative max-w-6xl mx-8 md:mx-auto">
+                <div className="relative max-w-6xl mx-8 md:mx-20 lg:mx-auto">
                     <div>
                         <div className="text-xs leading-[1.85] not-italic uppercase text-jci-black tracking-[1px]">
                             {proyecto.area_oportunidad}

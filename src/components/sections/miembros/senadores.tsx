@@ -5,7 +5,7 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 export default function Senadores() {
     return (
         <section className="relative py-16 z-10" aria-labelledby="senadores-heading">
-            <div className="max-w-6xl mx-8 lg:mx-auto">
+            <div className="max-w-6xl mx-8 md:mx-20 lg:mx-auto">
                 {/* Header */}
                 <header className="text-start mb-12">
                     <h2 id="senadores-heading" className="text-3xl md:text-5xl font-bold text-gray-800">

@@ -18,23 +18,24 @@ export default function Grupo() {
           />
         </figure>
 
-        <div className="-mt-48 lg:-mt-64">
+        <div className="-mt-0 md:-mt-[150px] lg:-mt-[260px]">
           {/* Titulo Principal */}
-          <div className="relative z-10 bg-transparent w-full max-w-6xl lg:mx-auto px-8">
-            <header>
-              <div className="text-[13px] leading-[1.85] uppercase text-jci-gold font-bold tracking-normal">
-                Grupo JCI
+          <div className="relative z-10 bg-transparent w-full max-w-6xl mx-8 md:mx-20 lg:mx-auto">
+            <header className="lg:max-w-5xl">
+              <div className="text-sm leading-[1.85] uppercase text-jci-gold font-bold tracking-normal">
+                Trayectoria que Transforma
               </div>
-              <div className="mt-6">
-                <h3 className="text-4xl lg:text-5xl font-bold normal-case text-jci-aqua leading-[1.33] lg:leading-[1.33] tracking-normal max-w-xs md:max-w-[75%] text-left">
+              <div className="mt-5">
+                <h3 className="text-3xl lg:text-5xl font-bold normal-case text-jci-aqua leading-[1.33] lg:leading-[1.33] tracking-normal max-w-xs md:max-w-[60%] lg:max-w-[75%] text-left">
+                  {/* JCI Ambato es sinónimo de liderazgo juvenil, impacto comunitario e innovación al servicio del cambio. */}
                   Somos la organización de liderazgo más importante del centro del país.
                 </h3>
               </div>
             </header>
           </div>
 
-          <div className="relative z-10 bg-transparent w-full max-w-6xl px-8 md:mx-auto">
-            <div className="relative gap-5 md:flex">
+          <div className="relative z-10 bg-transparent w-full max-w-6xl px-8 md:mx-20 lg:mx-auto">
+            <div className="relative gap-5 lg:flex">
               {/* Descripción */}
               <div className="md:ml-16">
                 <div className="mt-8">
@@ -74,32 +75,32 @@ export default function Grupo() {
               </div>
 
               {/* Estadisticas */}
-              <div className="relative flex-1 grow shrink basis-0 md:mt-28 mr-28">
+              <div className="relative flex-1 grow shrink basis-0 lg:mt-28 lg:mr-20">
                 <div className="flex flex-wrap gap-10">
                   <div className="mt-20">
-                    <div className="text-jci-navy text-7xl lg:text-8xl leading-[1] font-light tracking-[-5px] ">
+                    <div className="text-jci-navy text-6xl md:text-8xl leading-[1] font-light tracking-[-5px] ">
                       <span>+50</span>
                     </div>
-                    <p className="text-base lg:text-xl text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
-                      <strong>Años</strong> inspirando líderes
+                    <p className="text-base md:text-lg text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
+                      <strong>Años</strong> formando líderes en Ambato
                     </p>
                   </div>
 
                   <div className="flex flex-col md:flex-row w-full gap-10">
                     <div className="flex-1">
-                      <div className="text-jci-navy text-7xl lg:text-8xl leading-[1] tracking-[-5px] font-light">
+                      <div className="text-jci-navy text-6xl md:text-8xl leading-[1] tracking-[-5px] font-light">
                         <span>+200</span>
                       </div>
-                      <p className="text-base lg:text-xl text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
-                        <strong>Proyectos</strong> ejecutados
+                      <p className="text-base md:text-lg text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
+                        <strong>Proyectos</strong> con impacto comunitario
                       </p>
                     </div>
 
                     <div className="flex-1">
-                      <div className="text-jci-navy text-7xl lg:text-8xl leading-[1] font-light tracking-[-5px] ">
+                      <div className="text-jci-navy text-6xl md:text-8xl leading-[1] font-light tracking-[-5px] ">
                         <span>+500</span>
                       </div>
-                      <p className="text-base lg:text-xl text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
+                      <p className="text-base md:text-lg text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
                         <strong>Jóvenes</strong> formados y empoderados
                       </p>
                     </div>

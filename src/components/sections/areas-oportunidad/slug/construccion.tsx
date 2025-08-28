@@ -37,8 +37,8 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
             <div>
                 {/*Caja Roja del Brochure*/}
                 <div className="relative z-20">
-                    <div className="relative z-10 max-w-6xl m-8 md:mx-auto">
-                        <div className="p-4 md:p-10 bg-jci-navy z-30 md:translate-y-1/2 md:max-w-[50%] box-border flex">
+                    <div className="relative z-10 max-w-6xl m-8 md:mx-20 lg:mx-auto">
+                        <div className="p-4 md:p-10 bg-jci-navy z-30 md:translate-y-1/2 md:max-w-[65%] lg:max-w-[50%] box-border flex">
                             <div className="w-full">
                                 <div className="text-white text-xs md:text-sm font-bold flex flex-wrap gap-x-2">
                                     <span>Brochure</span>
@@ -78,7 +78,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                     {/* Swiper con imágenes */}
                     <div>
                         <div className="cursor-none">
-                            <div className="relative z-10 bg-transparent max-w-4xl mx-auto px-8 md:px-0">
+                            <div className="relative z-10 bg-transparent max-w-4xl mx-auto px-0 md:px-0">
                                 <Swiper
                                     ref={swiperRef}
                                     modules={[Navigation]}
@@ -110,7 +110,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                     </div>
 
                     {/* Controles de navegación */}
-                    <div className="relative z-10 bg-transparent max-w-3xl mx-8 md:mx-auto px-4 md:px-0">
+                    <div className="relative z-10 bg-transparent max-w-3xl mx-8 md:mx-20 lg:mx-auto px-4 md:px-0">
                         <div className="flex justify-between items-center mt-2">
 
                             {/* Contador */}

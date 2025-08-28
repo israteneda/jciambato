@@ -1,34 +1,47 @@
 "use client";
 
 import {
-  BienvenidaV3,
   Presentacion,
   Grupo,
-  Premios,
+  Impacto,
+  ProyectosDestacados,
   NoticiasEventos,
   Aliados,
+  BienvenidaV3,
 } from "@/components/sections/inicio";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <div>
-      {/* Static Content - siempre mostrar inmediatamente */}
-      {/* Sección de Bienvenida (V1, V2 y V3 Disponibles) */}
+    <div className="overflow-hidden">
+      {/* Sección de Bienvenida (V1, V2, V3 y V4 Disponibles) */}
       <BienvenidaV3 />
-
-      {/* Sección Presentación */}
       <Presentacion />
-
-      {/* Seccion Grupo */}
       <Grupo />
 
-      {/* Seccion Premios */}
-      <Premios />
+      {/* Contenedor para las imágenes posicionadas */}
+      <div className="relative">
+        {/* Imagen izquierda */}
+        <Image
+          src="/images/figura.png"
+          alt="Imagen desde la izquierda"
+          className="hidden lg:block absolute -left-28 -translate-y-full w-auto h-96 object-cover"
+          width={400}
+          height={320}
+        />
+        {/* Imagen derecha */}
+        <Image
+          src="/images/figura.png"
+          alt="Imagen desde la derecha"
+          className="hidden lg:block absolute -translate-y-10 -right-28 w-auto h-96 object-cover"
+          width={400}
+          height={320}
+        />
+      </div>
 
-      {/* Aliados */}
+      <Impacto />
+      <ProyectosDestacados />
       <Aliados />
-
-      {/* Noticias y Eventos */}
       <NoticiasEventos />
     </div>
   );

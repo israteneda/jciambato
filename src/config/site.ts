@@ -84,7 +84,7 @@ export const siteConfig = {
   },
   manifest: "/manifest.json",
   icons: {
-    icon: "/imagesjci-ambato.ico",
+    icon: "/images/jci-ambato.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
@@ -93,6 +93,11 @@ export const siteConfig = {
       label: "Nosotros",
       href: "/nosotros",
       description: "Conoce nuestra misión, visión y valores.",
+    },
+    {
+      label: "Impacto",
+      href: "/impacto",
+      description: "Conoce que es lo que hacemos.",
     },
     {
       label: "Áreas de Oportunidad",

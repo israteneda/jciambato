@@ -14,6 +14,18 @@ export const noticiasEventos: NoticiaEvento[] = [
   {
     id: 1,
     tipo: "evento",
+    titulo: "LXIX Convención Nacional, Crucita 2025",
+    subtitulo: "Convención Nacional de la JCI en Crucita",
+    fecha: "Octubre, 17, 18 y 19 de 2025",
+    lugar: "Crucita, Manabí",
+    imagen: "/images/noticias_eventos/eventos/convencion-nacional-crucita-2025.png",
+    url: "lxix-convencion-nacional-crucita-2025",
+    descripcion:
+      "La LIXI Convención Nacional se llevará a cabo en Crucita, Manabí, en octubre de 2025. Este evento reunirá a líderes y miembros de la JCI de todo el país para compartir experiencias, aprender y colaborar en proyectos que impulsen el desarrollo de la juventud ecuatoriana. La convención incluirá talleres, conferencias y actividades de networking, fortaleciendo así la red de jóvenes líderes en Ecuador.",
+  },
+  {
+    id: 2,
+    tipo: "evento",
     titulo: "Transmisión de Mando Local: JCI Ambato inicia una nueva etapa",
     subtitulo: "JCI Ambato inicia una nueva etapa",
     fecha: "24 Junio, 2024",
@@ -24,7 +36,7 @@ export const noticiasEventos: NoticiaEvento[] = [
       "La Cámara Junior Internacional Capítulo Ambato celebró la ceremonia de transmisión de mando en el auditorio de la Universidad Indoamérica el 16 de marzo. El evento marcó el inicio del nuevo año de liderazgo con la presencia de autoridades, senadores e invitados especiales. Israel Teneda asumió la presidencia local, mientras que el presidente nacional Andrés Ramírez tomó el juramento a la nueva membresía. La ceremonia también conmemoró el 50° aniversario de JCI en Ambato y anunció proyectos como 'De líder a líder' y 'Feria del libro', reafirmando el compromiso de la organización con el desarrollo de líderes jóvenes y el servicio comunitario.",
   },
   {
-    id: 2,
+    id: 3,
     tipo: "noticia",
     titulo: "Ecuador Campeón Mundial de Debate JCI 2024",
     subtitulo: "Primera vez que Ecuador gana el concurso mundial de debate",
