@@ -38,7 +38,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                 <div className="h-[150px] md:h-80"></div>
 
                 <div className="pt-24 md:pt-44 absolute top-0 left-0 right-0 z-20">
-                    <div className="relative z-10 bg-transparent max-w-6xl mx-8 md:mx-auto">
+                    <div className="relative z-10 bg-transparent max-w-6xl mx-8 md:mx-20 lg:mx-auto">
                         <Link
                             href="/noticias-eventos"
                             className="group inline-flex items-center text-end font-semibold uppercase transition duration-400 cursor-pointer"
@@ -67,7 +67,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
             </div>
 
             <div className="relative">
-                <div className="relative mx-auto md:max-w-6xl py-20 px-8 md:px-24 pb-36 md:bg-white">
+                <div className="relative mx-auto md:max-w-6xl py-20 px-8 md:px-20 pb-36 md:bg-white">
 
                     <div className="">
                         <header>

@@ -12,9 +12,9 @@ export default function Bienvenida() {
         <RotatedText text="Nuestras Áreas de Oportunidad" />
 
         <InfoContainer
-          subtitle="Tu camino empieza aquí. Elige dónde crecer y servir"
-          title="Áreas de Oportunidad"
-          description="Te permitirán crecer y servir en JCI Ambato. Cada una de ellas tiene un propósito y una misión."
+          subtitle="Cómo lo Hacemos"
+          title="Elige tu camino de crecimiento"
+          description="Descubre en qué área puedes desarrollarte, servir y liderar con propósito."
         />
       </div>
     </section>

@@ -9,7 +9,7 @@ export default function Proyectos() {
 
             <div>
                 <div className="relative z-10 w-full transition-all duration-300 opacity-[1]">
-                    <div className="relative z-[1] mx-auto h-full">
+                    <div className="relative z-10 mx-auto h-full">
                         <ProyectosPorArea />
                     </div>
                 </div>

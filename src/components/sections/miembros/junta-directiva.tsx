@@ -5,11 +5,11 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 export default function Miembros() {
     return (
         <section className="relative py-16 z-10" aria-labelledby="junta-directiva-heading">
-            <div className="max-w-5xl mx-8 lg:mx-auto">
+            <div className="max-w-5xl mx-8 md:mx-20 lg:mx-auto">
                 {/* Header */}
                 <header className="text-start mb-12">
                     <h2 id="junta-directiva-heading" className="text-3xl md:text-5xl font-bold text-gray-800">
-                        Junta Directiva
+                        Junta Directiva 2025
                     </h2>
                     <p className="text-lg text-gray-600 mt-2 max-w-3xl">
                         Lidera con <strong>visión</strong> y <strong>profesionalismo</strong> la JCI local, impulsando estrategias innovadoras, gestionando recursos con excelencia y ejecutando proyectos que reflejan la misión y visión de la organización.

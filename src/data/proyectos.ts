@@ -6,33 +6,326 @@ export type Proyecto = {
   fecha: string;
   lugar: string;
   imagen: string;
+  logo: string;
   director: string; // Nombre del director del proyecto
+  subdirector: string; // Nombre del subdirector del proyecto
   area_oportunidad: string; // Para filtrar por área de oportunidad
   url: string; // URL para navegación
   descripcion?: string;
   impacto?: string;
   estado?: "activo" | "completado" | "planificado";
+  // Campos específicos para proyectos complejos
+  tipo_proyecto?: "especial" | "normal";
+  componentes_especificos?: string[]; // Lista de componentes específicos a renderizar
+  cronograma?: {
+    eventos: Array<{
+      fecha: string;
+      titulo: string;
+      descripcion: string;
+      lugar?: string;
+      capacitador: {
+        nombre?: string;
+        origen?: string;
+        imagen?: string | null;
+      };
+    }>;
+    eventos2: Array<{
+      fecha: string;
+      titulo: string;
+      descripcion: string;
+      lugar?: string;
+      capacitador: {
+        nombre?: string;
+        origen?: string;
+        imagen?: string | null;
+      };
+    }>;
+  };
+  galeria?: string[]; // URLs de imágenes adicionales
+  documentos?: Array<{
+    nombre: string;
+    url: string;
+    tipo: "pdf" | "doc" | "link";
+  }>;
+  equipo?: Array<{
+    nombre: string;
+    rol: string;
+    imagen?: string;
+  }>;
+  metricas?: Array<{
+    titulo: string;
+    valor: string;
+    descripcion?: string;
+  }>;
 };
 
 export const proyectos: Proyecto[] = [
-  // Negocios y Emprendimiento
+  // Proyecto Especial - Dominarte (Destacado)
   {
-    id: "1",
-    slug: "dale-otro-chance",
-    titulo: "Dale Otro Chance",
-    subtitulo: "Competencia de emprendimiento de 54 horas",
+    id: "15",
+    slug: "dominArte",
+    titulo: "DominArte",
+    subtitulo: "Workshop de Liderazgo y Acción Juvenil",
+    director: "Israel Teneda",
+    subdirector: "Romina Benítez",
+    fecha: "Agosto - Septiembre, 2025",
+    lugar: "Ambato, Ecuador",
+    imagen: "/images/areas_oportunidad/desarrollo-individual/proyectos/dominarte/logo.png",
+    logo: "",
+    area_oportunidad: "desarrollo-individual",
+    url: "/proyectos/dominarte",
+    descripcion:
+      "En un mundo lleno de ruido, solo quien domina su voz puede transformar su realidad. DominArte es un bootcamp de oratoria intensivo, creativo e introspectivo, impulsado por JCI Ambato, que forma jóvenes líderes capaces de hablar con alma, actuar con intención y pensar con libertad.",
+    impacto:
+      "Fomentar en la juventud ambateña el pensamiento crítico y darles herramientas para alzar su voz de forma firme y consciente, mediante la oratoria, en un bootcamp que culmina en un evento cultural de alto impacto.",
+    estado: "activo",
+    tipo_proyecto: "especial",
+    componentes_especificos: ["oratoria", "liderazgo", "pensamiento critico"],
+    cronograma: {
+      eventos: [
+        {
+          fecha: "11 Agosto, 2025, 07:30 (19H30) PM",
+          titulo: "Introducción a la Oratoria",
+          descripcion:
+            "Introducción a la oratoria y a la importancia de la voz como herramienta artística y política.",
+          lugar: "Virtual",
+          capacitador: {
+            nombre: "Mauricio Rocha",
+            origen: "Bolivia",
+            imagen:
+              "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+          },
+        },
+        {
+          fecha: "12 Agosto, 2025, 07:30 (19H30) PM",
+          titulo: "Como Enfrentar el Miedo Escénico",
+          descripcion: "Como enfrentar el miedo escénico y actuar con intentción.",
+          lugar: "Virtual",
+          capacitador: {
+            nombre: "Domenika Sánchez",
+            origen: "Manta, Ecuador",
+            imagen:
+              "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+          },
+        },
+        {
+          fecha: "13 Agosto, 2025, 07:30 (19H30) PM",
+          titulo: "Persuación y Argumentación",
+          descripcion: "Aprender a convencer y argumentar.",
+          lugar: "Virtual",
+          capacitador: {
+            nombre: "Luis Miguel Rivera",
+            origen: "Ambato, Ecuador",
+            imagen:
+              "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+          },
+        },
+        {
+          fecha: "14 Agosto, 2025, 07:30 (19H30) PM",
+          titulo: "Técnicas de Comunicación No Verbal",
+          descripcion: "Aprender a liderar y a ser un líder.",
+          lugar: "Virtual",
+          capacitador: {
+            nombre: "Ammy Quijije",
+            origen: "Ambato, Ecuador",
+            imagen:
+              "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+          },
+        },
+        {
+          fecha: "15 Agosto, 2025",
+          titulo: "Improvisación Creativa",
+          descripcion: "Técnicas de improvisación para mejorar la fluidez y creatividad al hablar.",
+          lugar: "Virtual",
+          capacitador: {
+            nombre: "Diego Muñoz",
+            origen: "Manta, Ecuador",
+            imagen:
+              "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+          },
+        },
+        {
+          fecha: "16 Agosto, 2025",
+          titulo: "Preliminar de Oratoria",
+          descripcion:
+            "Competencia preliminar de oratoria donde los participantes demostrarán sus habilidades adquiridas.",
+          lugar: "Virtual",
+          capacitador: {
+            nombre: "Equipo de DominArte",
+            origen: "Ambato, Ecuador",
+            imagen:
+              "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+          },
+        },
+      ],
+      eventos2: [
+        {
+          fecha: "Lunes 18 Agosto, 2025, 07:30 (19H30) PM",
+          titulo: "Comunicación Efectiva",
+          descripcion: "Introducción a la comunicación efectiva y su importancia.",
+          lugar: "Virtual",
+          capacitador: {
+            nombre: "Evelyn Triviño",
+            origen: "Quevedo, Ecuador",
+            imagen:
+              "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+          },
+        },
+        {
+          fecha: "Martes 19 Agosto, 2025, 07:30 (19H30) PM",
+          titulo: "Estructura Técnica del Discurso",
+          descripcion: "Como enfrentar el miedo escénico y actuar con intención.",
+          lugar: "Virtual",
+          capacitador: {
+            nombre: "Byron Solórzano",
+            origen: "Manta, Ecuador",
+            imagen:
+              "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+          },
+        },
+        {
+          fecha: "Miércoles 20 Agosto, 2025, 07:30 (19H30) PM",
+          titulo: "Movimiento Expresivo y Coherente",
+          descripcion: "Aprender a convencer y argumentar.",
+          lugar: "Virtual",
+          capacitador: {
+            nombre: "Milagros Morresi",
+            origen: "Argentina",
+            imagen:
+              "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+          },
+        },
+        {
+          fecha: "Del 18 al 22 de Agosto, 2025, 07:30 (19H30) PM",
+          titulo: "Ensayos con Feedback Profesional",
+          descripcion: "Práctica intensiva de oratoria con retroalimentación personalizada.",
+          lugar: "Virtual",
+          capacitador: {
+            nombre: "César Jiménez y Edison Fonseca",
+            origen: "México y Colombia",
+            imagen:
+              "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+          },
+        },
+        {
+          fecha: "Viernes 29 Agosto, 2025",
+          titulo: "Preparación para el Evento Final",
+          descripcion: "Preparación para el evento final de oratoria y presentación de proyectos.",
+          lugar: "Presencial",
+          capacitador: {
+            nombre: "Equipo de DominArte junto a Alex Barreno",
+            origen: "Ambato, Ecuador",
+            imagen:
+              "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+          },
+        },
+        {
+          fecha: "Sábado 30 Agosto, 2025",
+          titulo: "Gala Final: La Palabra Viva",
+          descripcion:
+            "Competencia preliminar de oratoria donde los participantes demostrarán sus habilidades adquiridas.",
+          lugar: "Presencial",
+          capacitador: {
+            nombre: "Equipo de DominArte",
+            origen: "Ambato, Ecuador",
+            imagen:
+              "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+          },
+        },
+      ],
+    },
+    galeria: [
+      "/images/areas_oportunidad/desarrollo-individual/proyectos/dominarte-gallery-1.webp",
+      "/images/areas_oportunidad/desarrollo-individual/proyectos/dominarte-gallery-2.webp",
+      "/images/areas_oportunidad/desarrollo-individual/proyectos/dominarte-gallery-3.webp",
+      "/images/areas_oportunidad/desarrollo-individual/proyectos/dominarte-gallery-4.webp",
+    ],
+    equipo: [
+      {
+        nombre: "María González",
+        rol: "Directora del Proyecto",
+        imagen:
+          "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+      },
+      {
+        nombre: "Carlos Martínez",
+        rol: "Coordinador de Artes Visuales",
+        imagen:
+          "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+      },
+      {
+        nombre: "Ana Rodríguez",
+        rol: "Coordinadora de Artes Escénicas",
+        imagen:
+          "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+      },
+      {
+        nombre: "Luis Torres",
+        rol: "Coordinador de Emprendimiento Cultural",
+        imagen:
+          "/images/areas_oportunidad/desarrollo-individual/proyectos/dominArte/capacitadores/capacitador.png",
+      },
+    ],
+    metricas: [
+      {
+        titulo: "Participantes Formados",
+        valor: "120+",
+        descripcion: "Jóvenes artistas capacitados en diferentes disciplinas",
+      },
+      {
+        titulo: "Exhibiciones Realizadas",
+        valor: "8",
+        descripcion: "Eventos de exhibición y presentación de trabajos",
+      },
+      {
+        titulo: "Emprendimientos Creados",
+        valor: "25",
+        descripcion: "Negocios artísticos y culturales iniciados",
+      },
+      {
+        titulo: "Alianzas Estratégicas",
+        valor: "12",
+        descripcion: "Instituciones culturales y educativas colaborando",
+      },
+    ],
+    documentos: [
+      {
+        nombre: "Manual del Participante",
+        url: "/documents/dominarte/manual-participante.pdf",
+        tipo: "pdf",
+      },
+      {
+        nombre: "Cronograma Detallado",
+        url: "/documents/dominarte/cronograma-detallado.pdf",
+        tipo: "pdf",
+      },
+      {
+        nombre: "Formulario de Inscripción",
+        url: "/documents/dominarte/formulario-inscripcion.pdf",
+        tipo: "pdf",
+      },
+    ],
+  },
+
+  // A los tiempos pan de pinllo (Destacado)
+  {
+    id: "14",
+    slug: "podcast-pan-de-pinllo",
+    titulo: "Podcast 'A los Tiempos Pan de Pinllo'",
+    subtitulo: "Podcast sobre experiencia de grandes lideres en la ciudad de Ambato",
+    director: "Daniel Bombón",
+    subdirector: "Ricardo Santamaría",
     fecha: "24 Junio, 2024",
     lugar: "Ambato, Ecuador",
-    director: "Erick Calvache",
-    imagen:
-      "/images/areas_oportunidad/negocios-emprendimiento/proyectos/dale-otro-chance.webp",
-    area_oportunidad: "negocios-emprendimiento",
-    url: "/proyectos/dale-otro-chance",
+    imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/podcast.png",
+    logo: "/images/areas_oportunidad/impacto-comunidad/proyectos/alpp.png",
+    area_oportunidad: "impacto-comunidad",
+    url: "/proyectos/podcast-pan-de-pinllo",
     descripcion:
-      "'Dale Otro Chance' es una iniciativa innovadora que combina el espíritu emprendedor con la sostenibilidad. Este evento reúne a jóvenes emprendedores de Ambato y alrededores para promover la economía circular a través de la venta de ropa de segunda mano. Los participantes trabajan en equipos para diseñar estrategias de negocio, desde la selección de prendas hasta la creación de planes de marketing y ventas. El objetivo principal es fomentar el emprendimiento juvenil, generar ingresos adicionales para los participantes y ofrecer a la comunidad acceso a ropa de calidad a precios asequibles. Además, el proyecto promueve la conciencia ambiental al incentivar la reutilización de prendas, reduciendo el desperdicio textil. Durante el evento, se realizan talleres de capacitación en habilidades empresariales, mentorías con expertos y una competencia final donde los equipos presentan sus resultados ante un jurado.",
+      "Este podcast, titulado 'A los Tiempos Pan de Pinllo', es una plataforma que destaca las historias y experiencias de líderes destacados de Ambato, Ecuador. A través de entrevistas en profundidad, el programa explora los desafíos, logros y lecciones de vida de figuras influyentes en áreas como el emprendimiento, la educación, la cultura y el activismo comunitario. Cada episodio busca inspirar a la audiencia, especialmente a los jóvenes, a perseguir sus metas y contribuir al desarrollo de su comunidad. El podcast es producido por un equipo de jóvenes comunicadores y se distribuye en plataformas digitales, con planes de expandir su alcance a otras ciudades de Ecuador.",
     impacto:
-      "Más de 100 jóvenes han participado, generando ingresos para ellos y sus comunidades, además de promover la sostenibilidad, la conciencia ambiental y el emprendimiento juvenil.",
-    estado: "completado",
+      "Ha alcanzado a miles de oyentes, inspirando a la comunidad a conocer y aprender de sus líderes locales.",
+    estado: "activo",
   },
 
   // Cooperación Internacional
@@ -40,12 +333,14 @@ export const proyectos: Proyecto[] = [
     id: "5",
     slug: "construyendo-cultura-juntos",
     titulo: "Construyendo la cultura juntos – Edición Ecuador",
+    director: "Romina Benítez",
+    subdirector: "",
     subtitulo: "Vibrante viaje cultural al corazón de Ecuador",
-    director: "Mario Lourido Delgado y Romina Benítez",
     fecha: "2 y 9 de marzo, 2025",
     lugar: "Ecuador",
     imagen:
       "/images/areas_oportunidad/cooperacion-internacional/proyectos/cooperacion-internacional-p1.webp",
+    logo: "",
     area_oportunidad: "cooperacion-internacional",
     url: "/proyectos/construyendo-cultura-juntos",
     descripcion:
@@ -62,10 +357,12 @@ export const proyectos: Proyecto[] = [
     titulo: "Programa de Oratoria y Debate (Conquistando Audiencias)",
     subtitulo: "Programa intensivo de comunicación efectiva",
     director: "Jenniner Castillo",
+    subdirector: "Israel Teneda",
     fecha: "24 Junio, 2024",
     lugar: "Ambato, Ecuador",
     imagen:
       "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
+    logo: "",
     area_oportunidad: "desarrollo-individual",
     url: "/proyectos/conquistando-audiencias",
     descripcion:
@@ -79,10 +376,12 @@ export const proyectos: Proyecto[] = [
     slug: "lider-a-lider",
     titulo: "Líder a Líder",
     subtitulo: "Programa de capacitación para líderes",
-    director: "Alexis Nuñez",
-    fecha: "24 Junio, 2024",
+    director: "María Augusta Gordillo",
+    subdirector: "Alexis Nuñez",
+    fecha: "Actualmente en la 4ta Edición",
     lugar: "Ambato, Ecuador",
-    imagen: "/images/areas_oportunidad/desarrollo-individual/proyectos/lider-a-lider.webp",
+    imagen: "/images/areas_oportunidad/desarrollo-individual/proyectos/lider-a-lider/lider-a-lider.jpg",
+    logo: "/images/areas_oportunidad/desarrollo-individual/proyectos/lal.png",
     area_oportunidad: "desarrollo-individual",
     url: "/proyectos/lider-a-lider",
     descripcion:
@@ -92,6 +391,27 @@ export const proyectos: Proyecto[] = [
     estado: "activo",
   },
 
+  // Negocios y Emprendimiento
+  {
+    id: "1",
+    slug: "dale-otro-chance",
+    titulo: "Dale Otro Chance",
+    subtitulo: "Competencia de emprendimiento de 54 horas",
+    fecha: "24 Junio, 2024",
+    lugar: "Ambato, Ecuador",
+    director: "Erick Calvache",
+    subdirector: "Sebastián Palate",
+    imagen: "/images/areas_oportunidad/negocios-emprendimiento/proyectos/dale-otro-chance.webp",
+    logo: "",
+    area_oportunidad: "negocios-emprendimiento",
+    url: "/proyectos/dale-otro-chance",
+    descripcion:
+      "'Dale Otro Chance' es una iniciativa innovadora que combina el espíritu emprendedor con la sostenibilidad. Este evento reúne a jóvenes emprendedores de Ambato y alrededores para promover la economía circular a través de la venta de ropa de segunda mano. Los participantes trabajan en equipos para diseñar estrategias de negocio, desde la selección de prendas hasta la creación de planes de marketing y ventas. El objetivo principal es fomentar el emprendimiento juvenil, generar ingresos adicionales para los participantes y ofrecer a la comunidad acceso a ropa de calidad a precios asequibles. Además, el proyecto promueve la conciencia ambiental al incentivar la reutilización de prendas, reduciendo el desperdicio textil. Durante el evento, se realizan talleres de capacitación en habilidades empresariales, mentorías con expertos y una competencia final donde los equipos presentan sus resultados ante un jurado.",
+    impacto:
+      "Más de 100 jóvenes han participado, generando ingresos para ellos y sus comunidades, además de promover la sostenibilidad, la conciencia ambiental y el emprendimiento juvenil.",
+    estado: "completado",
+  },
+
   // Impacto en la Comunidad
   {
     id: "13",
@@ -99,9 +419,11 @@ export const proyectos: Proyecto[] = [
     titulo: "Feria del Libro",
     subtitulo: "Feria de venta de libros",
     director: "Nicolas Merizalde",
+    subdirector: "",
     fecha: "24 Junio, 2024",
     lugar: "Ambato, Ecuador",
     imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/feria-libro.webp",
+    logo: "",
     area_oportunidad: "impacto-comunidad",
     url: "/proyectos/feria-del-libro",
     descripcion:
@@ -109,23 +431,6 @@ export const proyectos: Proyecto[] = [
     impacto:
       "Ha beneficiado a más de 500 personas, promoviendo la lectura y apoyando a la industria editorial local.",
     estado: "completado",
-  },
-  {
-    id: "14",
-    slug: "podcast-pan-de-pinllo",
-    titulo: "Podcast 'A los Tiempos Pan de Pinllo'",
-    subtitulo: "Podcast sobre experiencia de grandes lideres en la ciudad de Ambato",
-    director: "Daniel Bombón y Ricardo Santamaría",
-    fecha: "24 Junio, 2024",
-    lugar: "Ambato, Ecuador",
-    imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/podcast.png",
-    area_oportunidad: "impacto-comunidad",
-    url: "/proyectos/podcast-pan-de-pinllo",
-    descripcion:
-      "Este podcast, titulado 'A los Tiempos Pan de Pinllo', es una plataforma que destaca las historias y experiencias de líderes destacados de Ambato, Ecuador. A través de entrevistas en profundidad, el programa explora los desafíos, logros y lecciones de vida de figuras influyentes en áreas como el emprendimiento, la educación, la cultura y el activismo comunitario. Cada episodio busca inspirar a la audiencia, especialmente a los jóvenes, a perseguir sus metas y contribuir al desarrollo de su comunidad. El podcast es producido por un equipo de jóvenes comunicadores y se distribuye en plataformas digitales, con planes de expandir su alcance a otras ciudades de Ecuador.",
-    impacto:
-      "Ha alcanzado a miles de oyentes, inspirando a la comunidad a conocer y aprender de sus líderes locales.",
-    estado: "activo",
   },
 ];
 

@@ -58,22 +58,19 @@ export const Carousel = ({ items = getProyectosDestacados(), autoPlayInterval = 
               <img
                 src={item.image}
                 alt={`Imagen de fondo para ${item.title} ${item.projectName}`}
-                className="w-full h-full object-cover absolute inset-0"
+                className="w-full h-full object-cover absolute inset-0 brightness-50"
               />
-
-              {/* Capa oscura */}
-              <div className="absolute inset-0 bg-black bg-opacity-60" />
 
               {/* Contenido del Slide */}
               <div className="relative w-full h-full pt-24 pb-[46px]">
-                <div className="relative h-full md:w-[1156px] mx-8 lg:mx-auto">
+                <div className="relative h-full md:max-w-7xl mx-8 md:mx-20 lg:mx-auto">
                   {/* Texto y botón */}
                   <header>
                     <div className="text-[13px] leading-[1.85] uppercase text-white font-bold">
                       {item.premio || "Proyecto Destacado"}
                     </div>
-                    <div className="mt-2 md:mt-8">
-                      <h3 className="text-3xl md:text-4xl font-light text-left leading-[1.17] text-white max-w-[666px] ">
+                    <div className="mt-6 md:mt-8">
+                      <h3 className="text-3xl md:text-4xl font-light text-left leading-[1.17] text-white max-w-3xl">
                         <span>{item.title} <br /> <strong>{item.projectName}</strong></span>
                       </h3>
                     </div>

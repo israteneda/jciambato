@@ -5,7 +5,7 @@ export default function Opinion() {
   return (
     <section className="relative z-10 overflow-hidden">
       <RotatedText text="Forma parte de una organización a futuro" />
-      <div className="py-36 md:py-48 md:max-w-7xl mx-8 lg:mx-auto">
+      <div className="py-36 md:py-48 md:max-w-7xl mx-8 md:mx-20 lg:mx-auto">
         <div className="relative max-w-lg z-10">
           <div className="flex flex-col">
             <div className="text-xs leading-[1.85] uppercase text-[#989898] font-bold">
@@ -28,6 +28,7 @@ export default function Opinion() {
         <div className="w-full h-full overflow-hidden relative bg-white">
           <Image
             alt="Gabriela González, Presidenta de JCI Ambato 2025"
+            draggable="false"
             className="absolute w-full h-full inset-0 object-cover"
             src="/images/secciones/hero-presidenta.png"
             width={800}

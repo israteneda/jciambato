@@ -3,7 +3,6 @@ export const jciLinks = [
     title: "JCI Ambato",
     items: [
       { title: "Nosotros", href: "/nosotros" },
-      /* { title: "Ser Junior", href: null }, */
       { title: "Política de Gestión", href: "/politica-gestion" },
       { title: "Política de Privacidad", href: "/politica-privacidad" },
     ],
@@ -12,9 +11,7 @@ export const jciLinks = [
   {
     title: "Nosotros",
     href: "/nosotros",
-    items: [
-      { title: "Equipo Local", href: "/miembros" },
-    ],
+    items: [{ title: "Equipo Local", href: "/miembros" }],
   },
   {
     title: "Áreas de Oportunidad",
@@ -42,6 +39,8 @@ export const jciLinks = [
   {
     title: "Involúcrate",
     href: "/involucrate",
-    items: [{ title: "Carrera", href: null }],
+    items: [
+      { title: "Carrera", href: null },
+    ],
   },
 ];

@@ -13,12 +13,9 @@ export default function ProyectosPage() {
   return (
     <main>
       {/* Sección de Bienvenida */}
-
       <Bienvenida />
       <div className="h-[640px]" aria-hidden="true"></div>
-
       <Proyectos />
-
     </main>
   );
 }

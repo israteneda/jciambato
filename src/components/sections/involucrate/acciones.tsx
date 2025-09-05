@@ -1,27 +1,30 @@
+import Image from "next/image";
+
 export default function Acciones() {
     return (
         <section className="relative z-10" aria-labelledby="accion-heading">
-            <div className="flex flex-col justify-center items-center">
-                <div className="w-full flex justify-center">
-                    <article className="relative mx-auto md:max-w-6xl py-20 px-8 md:px-24 pb-36 bg-white">
 
-                        <header className="relative">
-                            <div className="text-[13px] leading-[1.85] not-italic uppercase text-jci-gold font-bold tracking-normal">
-                                Grupo JCI
-                            </div>
-                            <div className="mt-8">
-                                <h2 id="accion-heading" className="font-bold text-3xl md:text-5xl md:leading-[1.33] tracking-normal text-jci-navy text-left max-w-4xl">
-                                    Se parte de un mundo cambiante, contribuir día a día, estés donde estés.
-                                </h2>
-                            </div>
-                            <div className="mt-8">
-                                <p className="text-base md:text-lg font-normal md:leading-[1.78] tracking-normal text-[rgb(50,50,50)] text-left max-w-[666px]">
-                                    Únete a la red global de jóvenes que ya está creando soluciones reales. No importa si tienes experiencia o recién comienzas: lo que necesitas es voluntad de actuar.
-                                </p>
-                            </div>
 
-                            <div className="mt-9">
+            <article className="relative max-w-6xl lg:mx-auto bg-white">
 
+                <header className="p-8 md:p-20">
+                    <div className="text-[13px] leading-[1.85] not-italic uppercase text-jci-gold font-bold tracking-normal">
+                        Grupo JCI
+                    </div>
+                    <div className="mt-8">
+                        <h2 id="accion-heading" className="font-bold text-3xl md:text-4xl lg:text-5xl lg:leading-[1.33] tracking-normal text-jci-navy text-left max-w-4xl">
+                            Se parte de un mundo cambiante, contribuir día a día, estés donde estés.
+                        </h2>
+                    </div>
+                    <div className="mt-8">
+                        <p className="text-base md:text-lg font-normal md:leading-[1.78] tracking-normal text-[rgb(50,50,50)] text-left max-w-[666px]">
+                            Únete a la red global de jóvenes que ya está creando soluciones reales. No importa si tienes experiencia o recién comienzas: lo que necesitas es voluntad de actuar.
+                        </p>
+                    </div>
+
+                    <div className="mt-9">
+                        <div className="flex flex-col justify-between md:items-center md:flex-row">
+                            <div>
                                 <div className="flex flex-col gap-2">
                                     <h3 className="text-xl font-bold not-italic text-left leading-[1.25] tracking-normal text-jci-navy">
                                         JCI Ecuador
@@ -85,12 +88,21 @@ export default function Acciones() {
                                         </div>
                                     </div>
                                 </address>
-
                             </div>
-                        </header>
-                    </article>
-                </div>
-            </div>
+                            <div className="self-center mt-10 md:mt-0">
+                                {/* Logo con dimensiones reales para optimización de Next.js */}
+                                <Image
+                                    src="/images/logos/logo-riseup.png"
+                                    alt="Logo RISEUP"
+                                    width={3899}
+                                    height={3663}
+                                    className="h-32 lg:h-44 w-auto object-contain"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </article>
         </section>
     );
 }

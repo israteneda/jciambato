@@ -26,7 +26,12 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
     ];
 
     // Páginas que siempre necesitan texto oscuro (fondo claro)
-    const darkTextPages = ["/areas-oportunidad", "/politica-gestion", "/politica-privacidad"];
+    const darkTextPages = [
+      "/impacto",
+      "/areas-oportunidad",
+      "/politica-gestion",
+      "/politica-privacidad"
+    ];
 
     // Si estamos en una página que necesita texto claro
     if (lightTextPages.includes(pathname)) {
@@ -55,7 +60,7 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
   }, [pathname]);
 
   return (
-    <section className="relative z-30 bg-transparent max-w-6xl mx-8 lg:mx-auto">
+    <section className="relative z-30 bg-transparent max-w-6xl mx-8 md:mx-20 lg:mx-auto">
       {shouldUseLightText ? (
         // Version Claro (para fondos oscuros)
         <>
@@ -65,7 +70,7 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
             </h2>
 
             <div className="mt-8">
-              <h1 className="text-3xl lg:text-6xl font-bold not-italic text-left leading-[1] tracking-[-0.5px] text-gray-200 max-w-4xl">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold not-italic text-left leading-[1] tracking-[-0.5px] text-gray-200 max-w-4xl">
                 {title}
               </h1>
             </div>

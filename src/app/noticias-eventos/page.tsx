@@ -12,7 +12,6 @@ export default function NoticiasEventosPage() {
     <main>
       <Bienvenida />
       <div className="h-[640px]" aria-hidden="true"></div>
-
       <NoticiasEventos />
     </main>
   );

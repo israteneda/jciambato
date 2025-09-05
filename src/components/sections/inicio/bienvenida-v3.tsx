@@ -149,7 +149,10 @@ export default function BienvenidaV3() {
   }, []);
 
   return (
-    <section className="relative" aria-labelledby="bienvenida-heading">
+    <section
+      className="relative"
+      aria-labelledby="bienvenida-heading"
+    >
       <header className="sr-only">
         <h1 id="bienvenida-heading">Bienvenido a JCI Ambato</h1>
       </header>
@@ -204,26 +207,33 @@ export default function BienvenidaV3() {
           ))}
         </div>
 
-        <div className="h-screen flex max-w-5xl mx-6 md:mx-8 lg:mx-48 items-center box-border">
+        <div className="h-screen w-full flex mx-9 md:mx-20 lg:mx-44 pb-20 items-center box-border">
           <BorderFrame isScrolled={isScrolled} />
 
           {/* Contenido principal */}
           <main className="relative z-20 w-full">
             <div className="flex flex-col items-start">
-              <div className="mt-6">
-                <h2 className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-4xl lg:text-7xl max-w-xl lg:max-w-5xl py-1.5 leading-tight">
-                  Unidos Construyendo un <span className="text-inherit italic">Futuro</span> de
+
+              {/* <div>
+                <p className="text-jci-gold text-xs md:text-sm font-semibold uppercase leading-relaxed">
+                  Conoce. Suma. Transforma.
+                </p>
+              </div> */}
+
+              <div className="mt-5">
+                <h2 className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-[34px] md:text-5xl lg:text-7xl max-w-xl md:max-w-5xl py-1.5 leading-tight">
+                  Unidos Construyendo un <br /> <span className="text-inherit italic">Futuro</span> de
                   Liderazgo
                 </h2>
               </div>
 
-              <div className="mt-6 lg:mt-10">
-                <p className="text-white max-w-xl text-base lg:text-lg leading-relaxed">
+              <div className="mt-6 lg:mt-8">
+                <p className="text-white max-w-xl text-base leading-relaxed">
                   Fomentamos el cambio mediante la innovación, convirtiendo ideas en soluciones que fortalecen comunidades y mejoran vidas.
                 </p>
               </div>
 
-              <div className="mt-6 sm:mt-8 md:mt-9">
+              <div className="mt-6 lg:mt-8">
                 <Button
                   radius="none"
                   className="relative bg-jci-aqua text-white group overflow-hidden text-sm"
@@ -257,7 +267,7 @@ export default function BienvenidaV3() {
         </div>
 
         {/* Enlace a JCI Ecuador */}
-        <div className="hidden lg:block absolute bottom-[60px] left-[20px] sm:bottom-[80px] sm:left-[30px] md:bottom-[80px] md:left-[180px] text-[8px] sm:text-[9px] md:text-[10.5px] font-semibold uppercase z-20 text-jci-seafoam">
+        <div className="hidden lg:block absolute bottom-[60px] left-[20px] sm:bottom-[80px] sm:left-[30px] md:bottom-[80px] lg:left-[176px] text-[8px] sm:text-[9px] md:text-[10.5px] font-semibold  uppercase z-20 text-jci-seafoam">
           <a
             href="https://jciecuador.com"
             target="_blank"
@@ -282,7 +292,7 @@ export default function BienvenidaV3() {
             className="flex items-center"
             aria-label="Ir a la sección Sobre Nosotros"
           >
-            <span className="text-jci-aqua text-[8px] lg:text-[10.5px] font-semibold uppercase">
+            <span className="text-jci-aqua text-[8px] md:text-[10.5px] font-semibold uppercase">
               Sobre Nosotros
             </span>
             <Image
@@ -290,7 +300,7 @@ export default function BienvenidaV3() {
               alt=""
               width={500}
               height={500}
-              className="w-[60px] h-[40px] lg:w-[96px] lg:h-[69px] -rotate-90 object-cover"
+              className="w-[60px] h-[40px] md:w-[96px] md:h-[69px] -rotate-90 object-cover"
               aria-hidden="true"
             />
           </Link>

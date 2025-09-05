@@ -20,8 +20,8 @@ export default function NoticiasEventos() {
       <div className="pt-[calc(62.4px+3vw)] pb-[calc(62.4px+3vw)]">
 
         {/* Título */}
-        <header className="pb-[calc(62.4px+3vw)]">
-          <div className="relative md:w-[calc(100%-180px)] mx-[30px] md:mx-[90px]">
+        <header className="max-w-6xl mx-8 md:mx-20 lg:mx-auto pb-[calc(62.4px+3vw)]">
+          <div className="relative md:w-[calc(100%-180px)">
             <div className="flex justify-between">
               <h2 id="noticias-heading" className="text-2xl font-bold not-italic leading-[1.25] tracking-normal text-left text-jci-off-black md:text-[calc(22.4px+0.5vw)]">
                 Noticias y Eventos
@@ -47,7 +47,7 @@ export default function NoticiasEventos() {
         </header>
 
         {/* CONTENIDO SIN MÁRGENES */}
-        <div className="w-full overflow-visible pl-[30px] md:pl-[90px]">
+        <div className="w-full overflow-visible">
           <Swiper
             modules={[Navigation]}
             spaceBetween={20}
@@ -57,17 +57,20 @@ export default function NoticiasEventos() {
               prevEl: ".noticias-prev",
             }}
             grabCursor={true}
-            className="mx-0 relative list-none p-0 z-10 block"
+            className="relative list-none p-0 z-10 block"
             aria-label="Carrusel de noticias y eventos"
           >
             <div className="relative w-full h-full z-10 flex">
-              {noticiasItems.map((item) => (
-                <SwiperSlide key={item.id} style={{ width: "320px" }}>
+              {noticiasItems.map((item, index) => (
+                <SwiperSlide
+                  key={item.id}
+                  style={{ width: "325px" }}
+                  className={index === 0 ? "ml-8 md:ml-20 lg:md:ml-[13%]" : ""}
+                >
                   <article>
                     {/* Comentado hasta desarrollar el blog, div en vez de link */}
                     <Link href={`/noticias-eventos/${item.url}`} className="w-full group">
                       <div className="w-full group">
-
                         <header>
                           <div className="text-[13px] leading-[1.85] not-italic uppercase text-jci-gray font-normal tracking-normal">
                             <span>{item.tipo}</span>
@@ -96,7 +99,7 @@ export default function NoticiasEventos() {
                           </div>
                         </div>
 
-                        <figure className="w-full h-[247px] mt-[16px] overflow-hidden bg-black">
+                        <figure className="w-full h-[320px] mt-[16px] overflow-hidden bg-black">
                           <div className="relative w-full h-full overflow-hidden group-hover:opacity-80 group-hover:scale-105 transition-all duration-300 ease-in-out">
                             <Image
                               src={item.imagen}
@@ -117,7 +120,7 @@ export default function NoticiasEventos() {
         </div>
 
         {/* PIE CON MÁRGENES */}
-        <footer className="hidden md:block relative bg-transparent w-[1156px] mx-auto md:w-[calc(100%-180px)] md:mx-[90px]">
+        <footer className="hidden md:block relative bg-transparent max-w-6xl mx-8 md:mx-20 lg:mx-auto">
           <div className="flex mt-16 relative justify-between">
             <div className="flex items-center">
               <div className="text-[13px] leading-[1.85] not-italic uppercase text-jci-gray font-bold tracking-normal">
@@ -168,10 +171,12 @@ export default function NoticiasEventos() {
               className="relative overflow-hidden border-jci-gray text-jci-gray group"
               aria-label="Ver todas las noticias y eventos"
             >
-              <span className="absolute inset-0 transform -translate-x-full bg-jci-black transition-transform duration-300 group-hover:translate-x-0" />
-              <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-                Ver más
-              </span>
+              <Link href="/noticias-eventos">
+                <span className="absolute inset-0 transform -translate-x-full bg-gray-400 transition-transform duration-300 group-hover:translate-x-0" />
+                <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+                  Ver más
+                </span>
+              </Link>
             </Button>
           </div>
         </div>

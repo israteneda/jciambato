@@ -25,7 +25,7 @@ export default function ActividadesAnuales() {
         />
       </div>
 
-      <div className="relative z-10 max-w-5xl md:max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
         <div className="mx-8 md:mx-28">
           <div className="flex">
             <div className="hidden md:block absolute top-[80px] left-0 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
@@ -56,7 +56,7 @@ export default function ActividadesAnuales() {
         </div>
       </div>
 
-      <div className="ml-48 lg:ml-72 my-32">
+      <div className="my-24 md:my-32 sm:ml-20 lg:ml-56 ">
         <Swiper
           modules={[Navigation, Mousewheel, FreeMode]}
           spaceBetween={20}

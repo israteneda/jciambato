@@ -3,6 +3,7 @@ import {
   Bienvenida,
   Acciones,
   Beneficios,
+  Cursos,
   Formulario,
 } from "@/components/sections/involucrate";
 
@@ -14,11 +15,10 @@ export const metadata: Metadata = {
 export default function InvolucratePage() {
   return (
     <main className="relative" role="main" aria-label="Página de Involúcrate">
-      {/* Sección de Bienvenida */}
       <Bienvenida />
 
       {/* Bloque espaciado */}
-      <div className="h-[500px] lg:h-[640px]" aria-hidden="true"></div>
+      <div className="h-[640px]" aria-hidden="true"></div>
       <div
         className="absolute top-0 w-full h-full bg-gray-50"
         style={{ transform: 'translateY(99.9vh)' }}
@@ -27,11 +27,9 @@ export default function InvolucratePage() {
       </div>
 
       <Acciones />
-
       <Beneficios />
-
+      <Cursos />
       <Formulario />
-
     </main>
   );
 }

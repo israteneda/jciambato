@@ -1,12 +1,12 @@
 import { proyectosDestacados } from "@/data/proyectos-destacados";
 import { Carousel } from "@/components/ui/Carousel";
 
-export default function Premios() {
+export default function ProyectosDestacados() {
 
   return (
-    <section className="my-28" aria-labelledby="premios-heading">
+    <section className="my-28" aria-labelledby="proyectos-destacados-heading">
       <header className="sr-only">
-        <h2 id="premios-heading">Premios y Reconocimientos</h2>
+        <h2 id="proyectos-destacados-heading">Proyectos Destacados</h2>
       </header>
       <Carousel items={proyectosDestacados} />
     </section>

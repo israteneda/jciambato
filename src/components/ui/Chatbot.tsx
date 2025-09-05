@@ -302,7 +302,7 @@ export default function Chatbot({ className }: ChatbotProps) {
 
         {/* Toggle Button */}
         <Button
-          onClick={toggleChat}
+          onPress={toggleChat}
           className={`w-14 h-14 rounded-full bg-gradient-to-r from-jci-navy to-jci-aqua text-white shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-110 active:scale-95 ${
             isOpen ? "rotate-45" : "rotate-0"
           }`}

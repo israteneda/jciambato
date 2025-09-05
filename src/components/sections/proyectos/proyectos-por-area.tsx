@@ -10,7 +10,7 @@ import { getAllProyectos, getProyectosPorArea, getConteoProyectosPorArea, type P
 export default function ProyectosPorArea() {
     // Estado para controlar el botón activo (0 = Todos, 1 = Negocios, etc.)
     const [activeButton, setActiveButton] = useState(0);
-    
+
     // Estado para controlar la paginación
     const [currentPage, setCurrentPage] = useState(1);
     const proyectosPorPagina = 8;
@@ -38,7 +38,7 @@ export default function ProyectosPorArea() {
 
     // Componente para renderizar una actividad individual
     const ActivityCard = ({ proyecto }: { proyecto: Proyecto }) => (
-        <article className="w-full lg:w-1/2 mx-5 mb-20">
+        <article className="w-full lg:w-1/2 mt-10 lg:mt-16 m-5">
             <Link href={`/proyectos/${proyecto.slug}`} className="w-full" aria-label={`Ver detalles de ${proyecto.titulo}`}>
                 <figure className="h-[350px] md:h-[512px] overflow-hidden bg-gray-200">
                     <div className="relative bg-white w-full h-full overflow-hidden">
@@ -92,9 +92,9 @@ export default function ProyectosPorArea() {
         }
 
         return (
-            <div className="relative flex flex-wrap mx-10">
+            <div className="relative flex flex-wrap mx-8">
                 {proyectosAgrupados.map((grupo, grupoIndex) => (
-                    <div key={grupoIndex} className="flex flex-col md:flex-row w-full mt-16 items-center">
+                    <div key={grupoIndex} className="flex flex-col md:flex-row w-full items-center">
                         {grupo.map((proyecto) => (
                             <ActivityCard key={proyecto.id} proyecto={proyecto} />
                         ))}
@@ -106,11 +106,15 @@ export default function ProyectosPorArea() {
 
     return (
         <div>
-            <nav className="md:mx-24 p-12 box-border bg-gray-50" aria-label="Filtros de proyectos por área">
+            <nav className="lg:mx-20 p-12 box-border bg-gray-50" aria-label="Filtros de proyectos por área">
                 <div className="text-[13px] leading-[1.85] not-italic uppercase text-[#989898] font-bold">
                     Explora por área de oportunidad
                 </div>
-                <div className="flex flex-wrap gap-6 mt-5" role="tablist" aria-label="Categorías de proyectos">
+                <div
+                    className="flex flex-wrap gap-6 mt-5"
+                    role="tablist"
+                    aria-label="Categorías de proyectos"
+                >
                     {categories.map((category, index) => (
                         <button
                             key={index}

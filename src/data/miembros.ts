@@ -17,7 +17,7 @@ export const miembrosData = [
       linkedin: "https://www.linkedin.com/in/lizbeth-a-4472a9117/",
     },
   },
-  {
+  /*  {
     nombre: "Mateo Ávila",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/mateo-avila.png",
@@ -25,7 +25,7 @@ export const miembrosData = [
       instagram: "https://www.instagram.com/mateo_4vila/",
       linkedin: null,
     },
-  },
+  }, */
   {
     nombre: "Xavier Barragán",
     cargo: "Tesorero",
@@ -86,7 +86,7 @@ export const miembrosData = [
       linkedin: null,
     },
   },
-  /*   {
+ /*  {
     nombre: "Jennifer Castillo",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/na.png",
@@ -224,12 +224,12 @@ export const miembrosData = [
     imagen: "/images/miembros/miembros/erick-rivera.png",
     social: {
       instagram: "https://www.instagram.com/alexander_riv1812/",
-      linkedin: null,
+      linkedin: "https://www.linkedin.com/in/erick-rivera-mor%C3%A1n-3205b8332/",
     },
   },
   {
     nombre: "Erika Sánchez",
-    cargo: "Miembro",
+    cargo: "Presidenta Local 2023",
     imagen: "/images/miembros/miembros/erika-sanchez.png",
     social: {
       instagram: "https://www.instagram.com/epsaltamirano/",

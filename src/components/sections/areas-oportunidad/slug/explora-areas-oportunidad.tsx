@@ -49,7 +49,7 @@ export default function ExploraAreasOportunidad({ area }: { area: AreaOportunida
 
                     {/* Caja de Información */}
                     <div className="mt-16">
-                        <div className="relative z-10 bg-transparent max-w-6xl mx-8 md:mx-auto">
+                        <div className="relative z-10 bg-transparent max-w-6xl mx-8 md:mx-20 lg:mx-auto">
                             <div className="relative z-10">
                                 <div className="text-[13px] leading-[1.85] not-italic uppercase text-[#989898] font-aeonik font-bold tracking-normal">
                                     Quieres conocer más?

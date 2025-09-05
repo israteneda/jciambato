@@ -3,6 +3,12 @@ import { getProyectoBySlug, getAllProyectos } from '@/data/proyectos';
 import {
     Presentacion,
     Descripcion,
+    Cronograma,
+    Beneficios,
+    Direccion,
+    Vivir,
+    FormularioNotion,
+    SiguienteProyecto,
 } from '@/components/sections/proyectos/slug';
 
 interface ProyectosPageProps {
@@ -85,6 +91,23 @@ export default async function ProyectosPage({ params }: ProyectosPageProps) {
         <main className="relative">
             <Presentacion proyecto={proyecto} />
             <Descripcion proyecto={proyecto} />
+
+            {/* Componentes específicos para proyectos complejos */}
+            {proyecto.tipo_proyecto === "especial" && (
+                <>
+                    <Beneficios />
+                    <Direccion />
+                    <Vivir />
+                    <Cronograma proyecto={proyecto} />
+                    {/* <Galeria proyecto={proyecto} /> */}
+                    {/* <Equipo proyecto={proyecto} /> */}
+                    {/* <Metricas proyecto={proyecto} /> */}
+                    {/* <Documentos proyecto={proyecto} /> */}
+                    <FormularioNotion />
+                </>
+            )}
+
+            <SiguienteProyecto proyecto={proyecto} />
         </main>
     );
 } 
