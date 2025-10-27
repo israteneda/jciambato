@@ -1,26 +1,48 @@
-export const miembrosNacionalesData = [
+import { Miembro } from "@/types/miembro";
+
+export const miembrosNacionales: Miembro[] = [
   {
-    nombre: "María Augusta Gordillo",
+    id: "maria-augusta-gordillo",
+    nombre: "María Augusta",
+    apellido: "Gordillo",
     cargo: "Presidenta Nacional",
     imagen: "/images/miembros/en-jci-ecuador/augusta-gordillo.png",
-    social: { instagram: "https://www.instagram.com/magus.gordillo/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/magus.gordillo/",
+      linkedin: "",
+    },
   },
   {
-    nombre: "Alex Barreno",
+    id: "alex-barreno",
+    nombre: "Alex",
+    apellido: "Barreno",
     cargo: "Vicepresidente Nacional",
     imagen: "/images/miembros/en-jci-ecuador/alex-barreno.png",
-    social: { instagram: "https://www.instagram.com/alexbarreno.a/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/alexbarreno.a/",
+      linkedin: "",
+    },
   },
   {
-    nombre: "Patricio Llerena",
+    id: "patricio-llerena",
+    nombre: "Patricio",
+    apellido: "Llerena",
     cargo: "Director Nacional de Relaciones Públicas",
     imagen: "/images/miembros/en-jci-ecuador/patricio-llerena.png",
-    social: { instagram: "https://www.instagram.com/patricio_llerena_foto/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/patricio_llerena_foto/",
+      linkedin: "",
+    },
   },
   {
-    nombre: "Andrés Alarcón",
+    id: "andres-alarcon",
+    nombre: "Andrés",
+    apellido: "Alarcón",
     cargo: "Director Nacional de Eventos",
     imagen: "/images/miembros/en-jci-ecuador/andres-alarcon.png",
-    social: { instagram: "https://www.instagram.com/reinventateconandres/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/reinventateconandres/",
+      linkedin: "",
+    },
   },
 ];

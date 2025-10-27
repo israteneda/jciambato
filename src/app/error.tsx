@@ -42,14 +42,15 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
                   </h3>
                 </div>
 
-
-                <div className='flex flex-col gap-2 mt-9'>
-                  <div className='text-medium font-normal leading-[1.78] tracking-normal text-jci-gray text-left max-w-[470px]'>
-                    Ocurrio un error inesperado. Por favor, intenta nuevamente o contacta al soporte.
+                <div className="flex flex-col gap-2 mt-9">
+                  <div className="text-medium font-normal leading-[1.78] tracking-normal text-jci-gray text-left max-w-[470px]">
+                    Ocurrio un error inesperado. Por favor, intenta nuevamente o contacta al
+                    soporte.
                   </div>
-                  <a href="mailto:tecnologias@jciambato.com" className="text-jci-aqua underline">tecnologias@jciambato.com</a>
+                  <a href="mailto:tecnologias@jciambato.com" className="text-jci-aqua underline">
+                    tecnologias@jciambato.com
+                  </a>
                 </div>
-
 
                 <div className="mt-8">
                   <Button
@@ -64,7 +65,6 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
                     </Link>
                   </Button>
                 </div>
-
               </div>
             </div>
           </div>
@@ -78,16 +78,11 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link href="/">
-            <Button
-              className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90"
-            >
+            <Button className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90">
               Volver al inicio
             </Button>
           </Link>
-          <Link
-            href="/contacto"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
+          <Link href="/contacto" className="text-sm font-semibold leading-6 text-gray-900">
             Contactar soporte <span aria-hidden="true">→</span>
           </Link>
         </div>

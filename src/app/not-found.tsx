@@ -8,7 +8,6 @@ export default function NotFoundPage() {
       <div className="h-full flex items-center">
         <div className="relative z-10 max-w-6xl mx-8 md:mx-auto">
           <div className="flex">
-
             <div className="relative">
               <div className="hidden md:block absolute top-20 left-6 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
                 <div className="relative text-[rgb(174,174,174)] leading-none text-[11px] font-medium not-italic tracking-[2px] whitespace-nowrap uppercase">
@@ -25,9 +24,10 @@ export default function NotFoundPage() {
                 </h3>
               </div>
 
-              <div className='mt-9'>
-                <div className='text-medium font-normal leading-[1.78] tracking-normal text-jci-gray text-left max-w-[470px]'>
-                  ¡Lo sentimos! La página que buscas ya no está disponible o no estaba disponible originalmente.
+              <div className="mt-9">
+                <div className="text-medium font-normal leading-[1.78] tracking-normal text-jci-gray text-left max-w-[470px]">
+                  ¡Lo sentimos! La página que buscas ya no está disponible o no estaba disponible
+                  originalmente.
                 </div>
               </div>
 
@@ -43,12 +43,10 @@ export default function NotFoundPage() {
                   </Link>
                 </Button>
               </div>
-
             </div>
           </div>
         </div>
       </div>
-
 
       <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
         404 - Página no encontrada
@@ -58,16 +56,11 @@ export default function NotFoundPage() {
       </p>
       <div className="mt-10 flex items-center justify-center gap-x-6">
         <Link href="/">
-          <Button
-            className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90"
-          >
+          <Button className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90">
             Volver al inicio
           </Button>
         </Link>
-        <Link
-          href="/contacto"
-          className="text-sm font-semibold leading-6 text-gray-900"
-        >
+        <Link href="/contacto" className="text-sm font-semibold leading-6 text-gray-900">
           Contactar soporte <span aria-hidden="true">→</span>
         </Link>
       </div>

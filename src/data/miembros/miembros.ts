@@ -1,15 +1,20 @@
-export const miembrosData = [
+import { Miembro } from "@/types/miembro";
+
+export const miembros: Miembro[] = [
   {
-    nombre: "Andrés Alarcón",
+    id: "andres-alarcon",
+    nombre: "Andrés",
+    apellido: "Alarcón",
     cargo: "Director Nacional de Eventos",
     imagen: "/images/miembros/miembros/andres-alarcon.png",
     social: {
       instagram: "https://www.instagram.com/reinventateconandres/",
-      linkedin: null,
     },
   },
   {
-    nombre: "Lizbeth Arboleda",
+    id: "lizbeth-arboleda",
+    nombre: "Lizbeth",
+    apellido: "Arboleda",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/lizbeth-arboleda.png",
     social: {
@@ -17,17 +22,10 @@ export const miembrosData = [
       linkedin: "https://www.linkedin.com/in/lizbeth-a-4472a9117/",
     },
   },
-  /*  {
-    nombre: "Mateo Ávila",
-    cargo: "Miembro",
-    imagen: "/images/miembros/miembros/mateo-avila.png",
-    social: {
-      instagram: "https://www.instagram.com/mateo_4vila/",
-      linkedin: null,
-    },
-  }, */
   {
-    nombre: "Xavier Barragán",
+    id: "xavier-barragan",
+    nombre: "Xavier",
+    apellido: "Barragán",
     cargo: "Tesorero",
     imagen: "/images/miembros/miembros/xavier-barragan.png",
     social: {
@@ -36,115 +34,142 @@ export const miembrosData = [
     },
   },
   {
-    nombre: "Alex Barreno",
+    id: "alex-barreno",
+    nombre: "Alex",
+    apellido: "Barreno",
     cargo: "Vicepresidente Nacional",
     imagen: "/images/miembros/miembros/alex-barreno.png",
-    social: { instagram: "https://www.instagram.com/alexbarreno.a/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/alexbarreno.a/",
+    },
   },
   {
-    nombre: "Romina Benítez",
+    id: "romina-benitez",
+    nombre: "Romina",
+    apellido: "Benítez",
+    correo: "romina.benitez@jciambato.org",
     cargo: "Secretaria",
     imagen: "/images/miembros/miembros/romina-benitez.png",
     social: {
       instagram: "https://www.instagram.com/ricaduu/",
-      linkedin: null,
     },
   },
   {
-    nombre: "Daniel Bombón",
+    id: "daniel-bombon",
+    nombre: "Daniel",
+    apellido: "Bombón",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/daniel-bombon.png",
     social: {
       instagram: "https://www.instagram.com/_dan152_/",
-      linkedin: null,
     },
   },
   {
-    nombre: "Christian Cabrera",
+    id: "christian-cabrera",
+    nombre: "Christian",
+    apellido: "Cabrera",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/christian-cabrera.png",
     social: {
       instagram: "https://www.instagram.com/christiancabreraecuador/",
-      linkedin: null,
     },
   },
   {
-    nombre: "Erick Calvache",
+    id: "erick-calvache",
+    nombre: "Erick",
+    apellido: "Calvache",
+    correo: "ecalvache@jciecuador.com",
     cargo: "Vicepresidente de Negocios y Emprendimientos",
     imagen: "/images/miembros/miembros/erick-calvache.png",
     social: {
       instagram: "https://www.instagram.com/erick.calvache.505/",
-      linkedin: null,
     },
   },
   {
-    nombre: "Nicolas Carrión",
+    id: "nicolas-carrion",
+    nombre: "Nicolas",
+    apellido: "Carrión",
+    correo: "ncarrion@jciecuador.com",
     cargo: "Vicepresidente de Acción Internacional Adhoc",
     imagen: "/images/miembros/miembros/nicolas-carrion.png",
     social: {
       instagram: "https://www.instagram.com/nicoc.5/",
-      linkedin: null,
     },
   },
- /*  {
-    nombre: "Jennifer Castillo",
-    cargo: "Miembro",
-    imagen: "/images/miembros/miembros/na.png",
-    social: { instagram: "https://www.instagram.com/jennifercas_/", linkedin: null },
-  }, */
-  /*   {
-    nombre: "Karen Franco",
-    cargo: "Miembro",
-    imagen: "/images/miembros/miembros/na.png",
-    social: { instagram: "https://www.instagram.com/jennifercas_/", linkedin: null },
-  }, */
   {
-    nombre: "Gabriela González",
+    id: "gabriela-gonzalez",
+    nombre: "Gabriela",
+    apellido: "González",
     cargo: "Presidenta Local 2025",
     imagen: "/images/miembros/miembros/gabriela-gonzalez.png",
     social: {
       instagram: "https://www.instagram.com/gabbys.gm/",
-      linkedin: null,
     },
   },
   {
-    nombre: "María Augusta Gordillo",
+    id: "augusta-gordillo",
+    nombre: "María Augusta",
+    apellido: "Gordillo",
     cargo: "Presidenta Nacional",
     imagen: "/images/miembros/miembros/augusta-gordillo.png",
-    social: { instagram: "https://www.instagram.com/magus.gordillo/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/magus.gordillo/",
+    },
   },
   {
-    nombre: "Paula Guevara",
+    id: "paula-guevara",
+    nombre: "Paula",
+    apellido: "Guevara",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/paula-guevara.png",
-    social: { instagram: "https://www.instagram.com/ana_paulaguevara/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/ana_paulaguevara/",
+    },
   },
   {
-    nombre: "Nancy Guillén",
+    id: "nancy-guillen",
+    nombre: "Nancy",
+    apellido: "Guillén",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/nancy-guillen.png",
-    social: { instagram: "https://www.instagram.com/abg.nancyguillen/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/abg.nancyguillen/",
+    },
   },
   {
-    nombre: "Patricio Llerena",
+    id: "patricio-llerena",
+    nombre: "Patricio",
+    apellido: "Llerena",
     cargo: "Director Nacional de Relaciones Públicas",
     imagen: "/images/miembros/miembros/patricio-llerena.png",
-    social: { instagram: "https://www.instagram.com/patricio_llerena_foto/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/patricio_llerena_foto/",
+    },
   },
   {
-    nombre: "Mercy López",
+    id: "mercy-lopez",
+    nombre: "Mercy",
+    apellido: "López",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/mercy-lopez.png",
-    social: { instagram: "https://www.instagram.com/mercylu97/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/mercylu97/",
+    },
   },
   {
-    nombre: "Abigail López",
+    id: "abigail-lopez",
+    nombre: "Abigail",
+    apellido: "López",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/abigail-lopez.png",
-    social: { instagram: "https://www.instagram.com/abymonse31/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/abymonse31/",
+    },
   },
   {
-    nombre: "Carlos Martínez",
+    id: "carlos-martinez",
+    nombre: "Carlos",
+    apellido: "Martínez",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/carlos-martinez.png",
     social: {
@@ -152,38 +177,40 @@ export const miembrosData = [
       linkedin: "https://www.linkedin.com/in/carlos-gabriel-mart%C3%ADnez-72a38a26b/",
     },
   },
-  /* {
-    nombre: "Nicolas Merizalde",
-    cargo: "Miembro",
-    imagen: "/images/miembros/miembros/na.png",
-    social: { instagram: "https://www.instagram.com/nicomerizalde/", linkedin: null },
-  }, */
   {
-    nombre: "Jose Miranda",
+    id: "jose-miranda",
+    nombre: "Jose",
+    apellido: "Miranda",
     cargo: "Asesor Legal",
     imagen: "/images/miembros/miembros/jose-miranda.png",
     social: {
       instagram: "https://www.instagram.com/jmirandaxz/",
-      linkedin: null,
     },
   },
   {
-    nombre: "Martín Monar",
+    id: "martin-monar",
+    nombre: "Martín",
+    apellido: "Monar",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/martin-monar.png",
     social: {
       instagram: "https://www.instagram.com/martin.monar.n/",
-      linkedin: null,
     },
   },
   {
-    nombre: "Johana Ocaña",
+    id: "estefania-ocana",
+    nombre: "Estefanía",
+    apellido: "Ocaña",
     cargo: "Miembro",
-    imagen: "/images/miembros/miembros/johana-ocana.png",
-    social: { instagram: null, linkedin: null },
+    imagen: "/images/miembros/miembros/estefania-ocana.png",
+    social: {
+      instagram: "https://www.instagram.com/stefyocana/",
+    },
   },
   {
-    nombre: "Sebastián Palate",
+    id: "sebastian-palate",
+    nombre: "Sebastián",
+    apellido: "Palate",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/sebastian-palate.png",
     social: {
@@ -192,34 +219,40 @@ export const miembrosData = [
     },
   },
   {
-    nombre: "Sayri Pamballo",
-    cargo: "Vicepresidente de Acción Comunitaria",
+    id: "sayri-pamballo",
+    nombre: "Sayri",
+    apellido: "Pamballo",
+    correo: "wpamballo@jciambato.com",
+    cargo: "Vicepresidenta de Acción Comunitaria",
     imagen: "/images/miembros/miembros/sayri-pamballo.png",
     social: {
       instagram: "https://www.instagram.com/willkamayu.pamballo/",
-      linkedin: null,
     },
   },
   {
-    nombre: "Daniela Pico",
+    id: "daniela-pico",
+    nombre: "Daniela",
+    apellido: "Pico",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/daniela-pico.png",
     social: {
       instagram: "https://www.instagram.com/dany_pico/",
-      linkedin: null,
     },
   },
   {
-    nombre: "Lourdes Ramos",
+    id: "lourdes-ramos",
+    nombre: "Lourdes",
+    apellido: "Ramos",
     cargo: "Directora Local de Comunicación",
     imagen: "/images/miembros/miembros/lourdes-ramos.png",
     social: {
       instagram: "https://www.instagram.com/l.u.c.i.e.r.n.a.g.a_l.u/",
-      linkedin: null,
     },
   },
   {
-    nombre: "Erick Rivera",
+    id: "erick-rivera",
+    nombre: "Erick",
+    apellido: "Rivera",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/erick-rivera.png",
     social: {
@@ -228,7 +261,9 @@ export const miembrosData = [
     },
   },
   {
-    nombre: "Erika Sánchez",
+    id: "erika-sanchez",
+    nombre: "Erika",
+    apellido: "Sánchez",
     cargo: "Presidenta Local 2023",
     imagen: "/images/miembros/miembros/erika-sanchez.png",
     social: {
@@ -237,37 +272,40 @@ export const miembrosData = [
     },
   },
   {
-    nombre: "Emilia Santamaría",
+    id: "emilia-santamaria",
+    nombre: "Emilia",
+    apellido: "Santamaría",
     cargo: "Vicepresidenta Ejecutiva",
     imagen: "/images/miembros/miembros/emilia-santamaria.png",
     social: {
       instagram: "https://www.instagram.com/emyjsc/",
-      linkedin: null,
     },
   },
   {
-    nombre: "Ricardo Santamaría",
+    id: "ricardo-santamaria",
+    nombre: "Ricardo",
+    apellido: "Santamaría",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/ricardo-santamaria.png",
     social: {
       instagram: "https://www.instagram.com/ricardo_.s/",
-      linkedin: null,
     },
   },
-  /*   {
-    nombre: "José Santana",
-    cargo: "Miembro",
-    imagen: "/images/miembros/miembros/na.png",
-    social: { instagram: null, linkedin: null },
-  }, */
   {
-    nombre: "Gustavo Solís",
+    id: "gustavo-solis",
+    nombre: "Gustavo",
+    apellido: "Solís",
+    correo: "gsolis@jciecuador.com",
     cargo: "Vicepresidente de Desarrollo Individual",
     imagen: "/images/miembros/miembros/gustavo-solis.png",
-    social: { instagram: "https://www.instagram.com/gustavoandressolis/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/gustavoandressolis/",
+    },
   },
   {
-    nombre: "Israel Teneda",
+    id: "israel-teneda",
+    nombre: "Israel",
+    apellido: "Teneda",
     cargo: "Presidente Local 2024",
     imagen: "/images/miembros/miembros/israel-teneda.png",
     social: {
@@ -276,15 +314,33 @@ export const miembrosData = [
     },
   },
   {
-    nombre: "Anthony Tobar",
+    id: "anthony-tobar",
+    nombre: "Anthony",
+    apellido: "Tobar",
     cargo: "Revisor Fiscal",
     imagen: "/images/miembros/miembros/anthony-tobar.png",
-    social: { instagram: "https://www.instagram.com/anthon_c1/", linkedin: null },
+    social: {
+      instagram: "https://www.instagram.com/anthon_c1/",
+    },
   },
-  /* {
-    nombre: "Lizbeth Villagomez",
-    cargo: "Miembro",
-    imagen: "/images/miembros/miembros/na.png",
-    social: { instagram: null, linkedin: null },
-  }, */
 ];
+
+// Funciones helper para buscar miembros
+export const getMiembroById = (id: string): Miembro | undefined => {
+  return miembros.find((miembro) => miembro.id === id);
+};
+
+export const getMiembroByNombreCompleto = (
+  nombre: string,
+  apellido: string
+): Miembro | undefined => {
+  return miembros.find(
+    (miembro) =>
+      miembro.nombre.toLowerCase() === nombre.toLowerCase() &&
+      miembro.apellido.toLowerCase() === apellido.toLowerCase()
+  );
+};
+
+export const getAllMiembros = (): Miembro[] => {
+  return miembros;
+};

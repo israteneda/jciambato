@@ -1,4 +1,4 @@
-import { Bienvenida, NoticiasEventos } from "@/components/sections/noticias-eventos";
+import { Bienvenida, NoticiasEventos } from "@/app/noticias-eventos/components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

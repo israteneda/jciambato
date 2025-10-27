@@ -39,8 +39,6 @@ export const jciLinks = [
   {
     title: "Involúcrate",
     href: "/involucrate",
-    items: [
-      { title: "Carrera", href: null },
-    ],
+    items: [{ title: "Carrera", href: null }],
   },
 ];
