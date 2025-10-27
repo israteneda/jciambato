@@ -10,7 +10,8 @@ export const proyectosDestacados: Proyecto[] = [
     edicion: "1ª Edición",
     fecha: "2024-05-15",
     lugar: "Ambato, Ecuador",
-    imagen: "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
+    imagen:
+      "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
     url: "/proyectos/conquistando-audiencias",
     descripcion:
       "Un programa intensivo diseñado para potenciar las habilidades comunicativas de los jóvenes, brindándoles las herramientas necesarias para hablar con confianza y elocuencia en cualquier escenario.",
@@ -45,7 +46,8 @@ export const proyectosDestacados: Proyecto[] = [
     url: "/proyectos/lider-a-lider",
     descripcion:
       "Un programa de capacitación y mentoría que impulsa el liderazgo en jóvenes profesionales, fomentando una red de líderes comprometidos con el desarrollo sostenible de la comunidad.",
-    imagen: "/images/areas_oportunidad/desarrollo-individual/proyectos/lider-a-lider/lider-a-lider.jpg",
+    imagen:
+      "/images/areas_oportunidad/desarrollo-individual/proyectos/lider-a-lider/lider-a-lider.jpg",
     premio: "Excelencia en Liderazgo Joven",
     area_oportunidad: AreaOportunidadEnum.DESARROLLO_INDIVIDUAL,
     año: "2024",
@@ -64,7 +66,6 @@ export const proyectosDestacados: Proyecto[] = [
     año: "2024",
   },
 ];
-
 
 // Funciones de utilidad
 export function getProyectosDestacados(): Proyecto[] {

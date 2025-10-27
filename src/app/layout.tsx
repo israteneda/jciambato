@@ -92,12 +92,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify(siteConfig.structuredData),
           }}
         />
-        
+
         {/* Open Graph adicional para Facebook */}
         <meta property="fb:app_id" content={siteConfig.socialProfiles.facebook.appId || ""} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="JCI Ambato" />
-        
+
         {/* Google Tag Manager */}
         <script>
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

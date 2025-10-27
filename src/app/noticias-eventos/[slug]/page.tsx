@@ -1,11 +1,7 @@
 import { notFound } from "next/navigation";
 import { getNoticiaEventoBySlug, getAllNoticiasEventos } from "@/data/noticias";
 import { Detalles } from "@/app/noticias-eventos/components/slug";
-import {
-  generateNewsArticleSchema,
-  generateEventSchema,
-  generateSocialMetadata,
-} from "@/lib/seo";
+import { generateNewsArticleSchema, generateEventSchema, generateSocialMetadata } from "@/lib/seo";
 // import { generateBreadcrumbSchema } from "@/lib/breadcrumbs";
 
 interface NoticiasEventosPageProps {
@@ -95,7 +91,7 @@ export default async function NoticiasEventosPage({ params }: NoticiasEventosPag
           __html: JSON.stringify(breadcrumbSchema),
         }}
       /> */}
-      
+
       {/* JSON-LD para Noticia/Evento */}
       <script
         type="application/ld+json"

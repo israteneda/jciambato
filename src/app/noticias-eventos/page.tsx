@@ -35,7 +35,9 @@ export const metadata: Metadata = {
     title: "Noticias y Eventos — JCI Ambato",
     description:
       "Explora nuestras noticias y eventos que generan impacto positivo en la comunidad de Ambato.",
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL || "https://jciambato.org"}/images/noticias_eventos/noticias-eventos-og.jpg`],
+    images: [
+      `${process.env.NEXT_PUBLIC_SITE_URL || "https://jciambato.org"}/images/noticias_eventos/noticias-eventos-og.jpg`,
+    ],
   },
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || "https://jciambato.org"}/noticias-eventos`,
