@@ -1,30 +1,7 @@
 "use client";
 import { Proyecto } from "@/types/proyecto";
+import { shareOnSocialMedia, getShareContentFromProyecto } from "@/lib/share";
 import Image from "next/image";
-
-// Función para compartir en redes sociales
-const shareOnSocialMedia = (platform: "facebook" | "linkedin", proyecto: Proyecto) => {
-  const currentUrl = typeof window !== "undefined" ? window.location.href : "";
-  const title = proyecto.nombre || "";
-  const description = proyecto.descripcion || proyecto.subtitulo || "";
-
-  let shareUrl = "";
-
-  switch (platform) {
-    case "facebook":
-      // Facebook usa principalmente la URL, los metadatos OpenGraph se encargan del resto
-      shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}&quote=${encodeURIComponent(`${title} - ${description}`)}&hashtag=%23JCIAmbato`;
-      break;
-    case "linkedin":
-      shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
-      break;
-  }
-
-  // Abrir en nueva ventana
-  if (shareUrl) {
-    window.open(shareUrl, "_blank", "width=600,height=400,scrollbars=yes,resizable=yes");
-  }
-};
 
 export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
   return (
@@ -158,14 +135,18 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                         <div className="flex flex-col items-start gap-1">
                           <button
                             className="text-sm font-semibold text-gray-400 hover:text-jci-seafoam transition-colors duration-300 cursor-pointer"
-                            onClick={() => shareOnSocialMedia("facebook", proyecto)}
+                            onClick={() =>
+                              shareOnSocialMedia("facebook", getShareContentFromProyecto(proyecto))
+                            }
                             aria-label="Compartir en Facebook"
                           >
                             Facebook
                           </button>
                           <button
                             className="text-sm font-semibold text-gray-400 hover:text-jci-seafoam transition-colors duration-300 cursor-pointer"
-                            onClick={() => shareOnSocialMedia("linkedin", proyecto)}
+                            onClick={() =>
+                              shareOnSocialMedia("linkedin", getShareContentFromProyecto(proyecto))
+                            }
                             aria-label="Compartir en LinkedIn"
                           >
                             LinkedIn

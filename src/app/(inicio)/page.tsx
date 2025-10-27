@@ -10,6 +10,8 @@ import {
   BienvenidaV3,
 } from "@/app/(inicio)/components";
 import Image from "next/image";
+import { FAQSection } from "@/components/ui/FAQSection";
+import { faqsInicio } from "@/data/faqs";
 
 export default function HomePage() {
   return (
@@ -43,6 +45,14 @@ export default function HomePage() {
       <ProyectosDestacados />
       <Aliados />
       <NoticiasEventos />
+
+      {/* Sección de Preguntas Frecuentes */}
+      <FAQSection
+        faqs={faqsInicio}
+        className="bg-gray-50"
+        title="Preguntas Frecuentes"
+        subtitle="Encuentra respuestas a las dudas más comunes sobre JCI Ambato"
+      />
     </div>
   );
 }

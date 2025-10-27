@@ -1,35 +1,20 @@
 "use client";
 import { RotatedText } from "@/components/commons";
+// import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { NoticiaEvento } from "@/types/noticia";
+import { shareOnSocialMedia, getShareContentFromNoticia } from "@/lib/share";
 import Link from "next/link";
 import Image from "next/image";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 
-// Función para compartir en redes sociales
-const shareOnSocialMedia = (platform: "facebook" | "linkedin", noticiaEvento: NoticiaEvento) => {
-  const currentUrl = typeof window !== "undefined" ? window.location.href : "";
-  const title = noticiaEvento.titulo;
-  const description = noticiaEvento.descripcion || noticiaEvento.subtitulo || "";
-
-  let shareUrl = "";
-
-  switch (platform) {
-    case "facebook":
-      // Facebook usa principalmente la URL, los metadatos OpenGraph se encargan del resto
-      shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}&quote=${encodeURIComponent(`${title} - ${description}`)}&hashtag=%23JCIAmbato`;
-      break;
-    case "linkedin":
-      shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
-      break;
-  }
-
-  // Abrir en nueva ventana
-  if (shareUrl) {
-    window.open(shareUrl, "_blank", "width=600,height=400,scrollbars=yes,resizable=yes");
-  }
-};
-
 export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEvento }) {
+  // Definir breadcrumbs para navegación
+  /*   const breadcrumbs = [
+    { name: "Inicio", url: "/" },
+    { name: "Noticias y Eventos", url: "/noticias-eventos" },
+    { name: noticiaEvento.titulo, url: `/noticias-eventos/${noticiaEvento.url}` },
+  ]; */
+
   return (
     <section
       className="relative bg-transparent overflow-hidden"
@@ -40,6 +25,11 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
 
         <div className="pt-24 md:pt-44 absolute top-0 left-0 right-0 z-20">
           <div className="relative z-10 bg-transparent max-w-6xl mx-8 md:mx-20 lg:mx-auto">
+            {/* Breadcrumbs */}
+            {/* <div className="mb-4">
+              <Breadcrumbs items={breadcrumbs} className="text-gray-600" />
+            </div> */}
+
             <Link
               href="/noticias-eventos"
               className="group inline-flex items-center text-end font-semibold uppercase transition duration-400 cursor-pointer"
@@ -273,14 +263,24 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         <div className="flex flex-col items-start gap-1">
                           <button
                             className="text-sm font-semibold text-gray-400 hover:text-jci-seafoam transition-colors duration-300 cursor-pointer"
-                            onClick={() => shareOnSocialMedia("facebook", noticiaEvento)}
+                            onClick={() =>
+                              shareOnSocialMedia(
+                                "facebook",
+                                getShareContentFromNoticia(noticiaEvento)
+                              )
+                            }
                             aria-label="Compartir en Facebook"
                           >
                             Facebook
                           </button>
                           <button
                             className="text-sm font-semibold text-gray-400 hover:text-jci-seafoam transition-colors duration-300 cursor-pointer"
-                            onClick={() => shareOnSocialMedia("linkedin", noticiaEvento)}
+                            onClick={() =>
+                              shareOnSocialMedia(
+                                "linkedin",
+                                getShareContentFromNoticia(noticiaEvento)
+                              )
+                            }
                             aria-label="Compartir en LinkedIn"
                           >
                             LinkedIn

@@ -80,7 +80,7 @@ export default function Presentacion() {
                 >
                   <div className="mr-20" role="listitem">
                     <div className="text-7xl md:text-8xl leading-none font-light text-jci-aqua">
-                      <AnimatedNumber end={50} prefix="+" duration={2.5} delay={0.2} />
+                      <AnimatedNumber end={51} prefix="+" duration={2.5} delay={0.2} />
                     </div>
                     <p className="md:text-medium text-black text-left uppercase max-w-44">
                       <strong>Años</strong> inspirando líderes

@@ -20,14 +20,26 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: siteConfig.keywords,
   authors: siteConfig.authors,
+  creator: siteConfig.creator,
+  publisher: siteConfig.publisher,
   openGraph: {
     ...siteConfig.openGraph,
     type: "website",
     locale: "es_EC",
     siteName: "JCI Ambato",
+    images: [
+      {
+        url: "/images/logos/jci-ambato.webp",
+        width: 1200,
+        height: 630,
+        alt: "JCI Ambato - Organización de Jóvenes Líderes",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@jciambato",
+    creator: "@jciambato",
     title: "JCI Ambato — Unidos Construyendo un Futuro de Liderazgo",
     description: siteConfig.description,
     images: ["/images/logos/jci-ambato.webp"],
@@ -73,6 +85,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html suppressHydrationWarning lang="es">
       <head>
+        {/* Datos Estructurados JSON-LD para Organización */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(siteConfig.structuredData),
+          }}
+        />
+        
+        {/* Open Graph adicional para Facebook */}
+        <meta property="fb:app_id" content={siteConfig.socialProfiles.facebook.appId || ""} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="JCI Ambato" />
+        
         {/* Google Tag Manager */}
         <script>
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

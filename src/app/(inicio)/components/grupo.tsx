@@ -81,7 +81,7 @@ export default function Grupo() {
                 <div className="flex flex-wrap gap-10">
                   <div className="mt-20">
                     <div className="text-jci-navy text-6xl md:text-8xl leading-[1] font-light tracking-[-5px] ">
-                      <span>+50</span>
+                      <span>+51</span>
                     </div>
                     <p className="text-base md:text-lg text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
                       <strong>Años</strong> formando líderes en Ambato

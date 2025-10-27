@@ -4,32 +4,31 @@ import { Proyecto } from "@/types/proyecto";
 export const proyectosDestacados: Proyecto[] = [
   {
     id: "oratoria-debate-2024",
-    titulo: "Iniciativa de Desarrollo de Habilidades Comunicativas",
-    subtitulo: "Desarrollo de Habilidades de Comunicación Efectiva",
+    titulo: "Desarrollo de Habilidades Comunicativas",
+    subtitulo: "Fortaleciendo la Comunicación Efectiva",
     nombre: "Programa de Oratoria y Debate",
     edicion: "1ª Edición",
     fecha: "2024-05-15",
     lugar: "Ambato, Ecuador",
-    imagen:
-      "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
+    imagen: "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
     url: "/proyectos/conquistando-audiencias",
     descripcion:
-      "Programa intensivo de desarrollo de habilidades de comunicación efectiva que empodera a jóvenes líderes para expresarse con confianza y elocuencia en cualquier escenario público.",
+      "Un programa intensivo diseñado para potenciar las habilidades comunicativas de los jóvenes, brindándoles las herramientas necesarias para hablar con confianza y elocuencia en cualquier escenario.",
     premio: "Mejor Proyecto de Desarrollo Individual",
     area_oportunidad: AreaOportunidadEnum.DESARROLLO_INDIVIDUAL,
     año: "2024",
   },
   {
     id: "feria-del-libro-2024",
-    titulo: "Iniciativa de Impacto Comunitario",
-    subtitulo: "Feria del Libro y Economía Circular",
+    titulo: "Cultura como Motor de Impacto Ciudadano",
+    subtitulo: "Feria del Libro",
     nombre: "Feria del Libro",
     edicion: "1ª Edición",
     fecha: "2024-06-20",
     lugar: "Ambato, Ecuador",
     url: "/proyectos/feria-del-libro",
     descripcion:
-      "Proyecto innovador de economía circular que promueve la sostenibilidad ambiental y el emprendimiento social, conectando donantes con personas que necesitan ropa de calidad a precios accesibles.",
+      "Un evento cultural que fomenta la lectura y el acceso a libros, promoviendo el intercambio de conocimientos y el desarrollo intelectual dentro de la comunidad.",
     imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/feria-libro.webp",
     premio: "Proyecto Más Innovador del Año",
     area_oportunidad: AreaOportunidadEnum.IMPACTO_COMUNITARIO,
@@ -37,7 +36,7 @@ export const proyectosDestacados: Proyecto[] = [
   },
   {
     id: "lider-a-lider-2024",
-    titulo: "Programa de Liderazgo Transformacional",
+    titulo: "Liderazgo Transformacional",
     subtitulo: "Desarrollo de Líderes con Propósito",
     nombre: "Líder a Líder",
     edicion: "2ª Edición",
@@ -45,9 +44,8 @@ export const proyectosDestacados: Proyecto[] = [
     lugar: "Ambato, Ecuador",
     url: "/proyectos/lider-a-lider",
     descripcion:
-      "Iniciativa de capacitación y mentoría que desarrolla el potencial de liderazgo en jóvenes profesionales, creando una red de líderes comprometidos con el desarrollo sostenible de la comunidad.",
-    imagen:
-      "/images/areas_oportunidad/desarrollo-individual/proyectos/lider-a-lider/lider-a-lider.jpg",
+      "Un programa de capacitación y mentoría que impulsa el liderazgo en jóvenes profesionales, fomentando una red de líderes comprometidos con el desarrollo sostenible de la comunidad.",
+    imagen: "/images/areas_oportunidad/desarrollo-individual/proyectos/lider-a-lider/lider-a-lider.jpg",
     premio: "Excelencia en Liderazgo Joven",
     area_oportunidad: AreaOportunidadEnum.DESARROLLO_INDIVIDUAL,
     año: "2024",
@@ -55,17 +53,18 @@ export const proyectosDestacados: Proyecto[] = [
   {
     id: "mejor-presidencia-local-2025",
     titulo: "Mejor Presidencia Local 2025",
-    subtitulo: "Reconocimiento Nacional a la Excelencia en Liderazgo",
+    subtitulo: "Reconocimiento Nacional a la Excelencia Organizacional",
     nombre: "JCI Ambato",
     url: "/proyectos/mejor-presidencia-local-2025",
     descripcion:
-      "JCI Ambato fue reconocida como la Mejor Presidencia Local de JCI Ecuador por su destacada gestión 2025, liderada por Gabriela González.",
+      "JCI Ambato fue reconocida como la Mejor Presidencia Local de JCI Ecuador, destacando por su excepcional gestión durante el 2025, bajo el liderazgo de Gabriela González.",
     imagen: "/images/premios/convencion-nacional-premios.jpg",
-    premio: "Excelencia en Liderazgo Joven",
+    premio: "Mejor Presidencia Local 2025 de JCI Ecuador",
     area_oportunidad: AreaOportunidadEnum.DESARROLLO_INDIVIDUAL,
     año: "2024",
   },
 ];
+
 
 // Funciones de utilidad
 export function getProyectosDestacados(): Proyecto[] {
