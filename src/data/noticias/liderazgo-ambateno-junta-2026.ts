@@ -7,7 +7,7 @@ export const liderazgoAmbatenoJunta2026: NoticiaEvento = {
   subtitulo: "JCI Ambato sigue formando líderes que trascienden fronteras locales.",
   fecha: "18 Octubre, 2025",
   lugar: "Crucita, Manabí",
-  imagen: "/images/noticias_eventos/junta-directiva-2026.jpg",
+  imagen: "/images/noticias_eventos/junta-directiva-2026.webp",
   url: "liderazgo-ambateno-junta-2026",
   descripcion:
     "Desde Crucita - Manabí, donde se llevó a cabo la Asamblea de Elecciones Nacionales, tenemos el orgullo de anunciar que dos de nuestros valiosos miembros asumirán roles clave en la Junta Directiva Nacional JCI Ecuador 2026. Este logro refleja cómo el liderazgo de nuestra organización continúa abriendo caminos y motivando a más jóvenes a asumir retos nacionales, inspirados por el ejemplo de nuestra Presidenta Nacional 2025, María Augusta Gordillo.",

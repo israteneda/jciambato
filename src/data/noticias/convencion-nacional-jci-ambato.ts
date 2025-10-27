@@ -7,7 +7,7 @@ export const convencionNacionalJCIAmbato: NoticiaEvento = {
   subtitulo: "Crucita fue el escenario del último gran encuentro nacional de JCI Ecuador.",
   fecha: "17-19 Octubre, 2025",
   lugar: "Crucita, Manabí",
-  imagen: "/images/noticias_eventos/convencion-nacional-ambato.jpg",
+  imagen: "/images/noticias_eventos/convencion-nacional-ambato.webp",
   url: "convencion-nacional-jci-ambato",
   descripcion:
     "Del 17 al 19 de octubre, la delegación de JCI Ambato participó activamente en la Convención Nacional en Crucita, un evento que marcó el cierre de actividades nacionales de este gran año 2025.",

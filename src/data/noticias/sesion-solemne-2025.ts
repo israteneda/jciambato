@@ -8,7 +8,7 @@ export const sesionSolemne2025: NoticiaEvento = {
     "JCI Ambato celebró más de medio siglo de historia con una emotiva ceremonia en la Quinta Juan León Mera",
   fecha: "25 Octubre, 2025",
   lugar: "Quinta Juan León Mera, Ambato, Ecuador",
-  imagen: "/images/noticias_eventos/sesion-solemne-noticia.jpg",
+  imagen: "/images/noticias_eventos/sesion-solemne-noticia.webp",
   url: "sesion-solemne-2025",
   descripcion:
     "JCI Ambato conmemoró su 51 aniversario con una Sesión Solemne que reunió a autoridades, senadores, ex presidentes y miembros activos en una noche dedicada al liderazgo, la gratitud y la visión de futuro.",
