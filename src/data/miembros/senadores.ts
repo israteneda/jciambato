@@ -32,7 +32,7 @@ export const senadores: Miembro[] = [
   {
     id: "marco-hernandez",
     nombre: "Marco",
-    apellido: "Hernandéz",
+    apellido: "Hernández",
     cargo: "Senador",
     imagen: "/images/miembros/senadores/na.png",
   },
