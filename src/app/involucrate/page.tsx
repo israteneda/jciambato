@@ -1,15 +1,10 @@
 import { Metadata } from "next";
-import {
-  Bienvenida,
-  Acciones,
-  Beneficios,
-  Cursos,
-  Formulario,
-} from "@/components/sections/involucrate";
+import { Bienvenida, Acciones, Beneficios, Cursos, Formulario } from "@/app/involucrate/components";
 
 export const metadata: Metadata = {
   title: "Involúcrate — Únete a JCI Ambato",
-  description: "Únete a JCI Ambato y forma parte del cambio. Descubre los beneficios de ser miembro y cómo puedes contribuir al desarrollo de la comunidad.",
+  description:
+    "Únete a JCI Ambato y forma parte del cambio. Descubre los beneficios de ser miembro y cómo puedes contribuir al desarrollo de la comunidad.",
 };
 
 export default function InvolucratePage() {
@@ -21,10 +16,9 @@ export default function InvolucratePage() {
       <div className="h-[640px]" aria-hidden="true"></div>
       <div
         className="absolute top-0 w-full h-full bg-gray-50"
-        style={{ transform: 'translateY(99.9vh)' }}
+        style={{ transform: "translateY(99.9vh)" }}
         aria-hidden="true"
-      >
-      </div>
+      ></div>
 
       <Acciones />
       <Beneficios />

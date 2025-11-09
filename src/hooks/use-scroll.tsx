@@ -8,7 +8,7 @@ let isInitialized = false;
 const updateGlobalScrollState = (isScrolled: boolean) => {
   if (globalScrollState !== isScrolled) {
     globalScrollState = isScrolled;
-    globalListeners.forEach(listener => listener(isScrolled));
+    globalListeners.forEach((listener) => listener(isScrolled));
   }
 };
 

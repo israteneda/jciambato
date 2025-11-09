@@ -1,13 +1,11 @@
-import Proyectos from "@/components/sections/proyectos/proyectos";
-import Bienvenida from "@/components/sections/proyectos/bienvenida";
+import Proyectos from "@/app/proyectos/components/proyectos";
+import Bienvenida from "@/app/proyectos/components/bienvenida";
 import { Metadata } from "next";
-
 
 export const metadata: Metadata = {
   title: "Proyectos — Impacto y Acción en la Comunidad",
   description: "Explora nuestros proyectos que generan impacto positivo en la comunidad de Ambato.",
 };
-
 
 export default function ProyectosPage() {
   return (

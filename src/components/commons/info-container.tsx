@@ -30,7 +30,7 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
       "/impacto",
       "/areas-oportunidad",
       "/politica-gestion",
-      "/politica-privacidad"
+      "/politica-privacidad",
     ];
 
     // Si estamos en una página que necesita texto claro

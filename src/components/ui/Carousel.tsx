@@ -1,40 +1,45 @@
-'use client';
+"use client";
 
 import { Button } from "@heroui/button";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { HiChevronLeft, HiChevronRight, HiOutlineCollection, HiOutlineArrowNarrowRight } from "react-icons/hi";
-import { getProyectosDestacados, type ProyectoDestacado } from "@/data/proyectos-destacados";
+import {
+  HiChevronLeft,
+  HiChevronRight,
+  HiOutlineCollection,
+  HiOutlineArrowNarrowRight,
+} from "react-icons/hi";
+import { getProyectosDestacados } from "@/data/proyectos/destacados/proyectos-destacados";
+import { Proyecto } from "@/types/proyecto";
 
 interface CarouselProps {
-  items?: ProyectoDestacado[];
+  proyectos?: Proyecto[];
   autoPlayInterval?: number;
 }
 
-export const Carousel = ({ items = getProyectosDestacados(), autoPlayInterval = 5000 }: CarouselProps) => {
+export const Carousel = ({
+  proyectos = getProyectosDestacados(),
+  autoPlayInterval = 5000,
+}: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Si no hay items, no renderizar nada
-  if (!items || items.length === 0) {
+  // Si no hay proyectos, no renderizar nada
+  if (!proyectos || proyectos.length === 0) {
     return null;
   }
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === items.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === proyectos.length - 1 ? 0 : prevIndex + 1));
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? items.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? proyectos.length - 1 : prevIndex - 1));
   };
 
   useEffect(() => {
     const interval = setInterval(nextSlide, autoPlayInterval);
     return () => clearInterval(interval);
-  }, [autoPlayInterval, items.length]);
+  }, [autoPlayInterval, proyectos.length]);
 
   return (
     <section
@@ -45,19 +50,19 @@ export const Carousel = ({ items = getProyectosDestacados(), autoPlayInterval = 
     >
       <div className="relative h-[650px] md:h-[760px] w-full">
         <div className="">
-          {items.map((item, index) => (
+          {proyectos.map((proyecto, index) => (
             <article
-              key={item.id}
+              key={proyecto.id}
               className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
               aria-hidden={index !== currentIndex}
               role="group"
               aria-roledescription="slide"
-              aria-label={`${index + 1} de ${items.length}`}
+              aria-label={`${index + 1} de ${proyectos.length}`}
             >
               {/* Imagen de fondo */}
               <img
-                src={item.image}
-                alt={`Imagen de fondo para ${item.title} ${item.projectName}`}
+                src={proyecto.imagen}
+                alt={`Imagen de fondo para ${proyecto.titulo} ${proyecto.nombre}`}
                 className="w-full h-full object-cover absolute inset-0 brightness-50"
               />
 
@@ -67,16 +72,18 @@ export const Carousel = ({ items = getProyectosDestacados(), autoPlayInterval = 
                   {/* Texto y botón */}
                   <header>
                     <div className="text-[13px] leading-[1.85] uppercase text-white font-bold">
-                      {item.premio || "Proyecto Destacado"}
+                      {proyecto.premio || "Proyecto Destacado"}
                     </div>
                     <div className="mt-6 md:mt-8">
                       <h3 className="text-3xl md:text-4xl font-light text-left leading-[1.17] text-white max-w-3xl">
-                        <span>{item.title} <br /> <strong>{item.projectName}</strong></span>
+                        <span>
+                          {proyecto.titulo} <br /> <strong>{proyecto.nombre}</strong>
+                        </span>
                       </h3>
                     </div>
                     <div className="mt-10 md:mt-20">
                       <p className="text-medium leading-[1.78] text-white text-left max-w-[470px] md:text-[calc(15.6px+0.125vw)]">
-                        {item.description}
+                        {proyecto.descripcion}
                       </p>
                     </div>
                   </header>
@@ -87,9 +94,9 @@ export const Carousel = ({ items = getProyectosDestacados(), autoPlayInterval = 
                       <div className="relative inline-block transition duration-400">
                         <div className="flex py-4">
                           <Link
-                            href={item.url}
+                            href={proyecto.url}
                             className="z-20 group max-w-full relative inline-block transition duration-[400ms] cursor-pointer"
-                            aria-label={`Leer más sobre ${item.title} ${item.projectName}`}
+                            aria-label={`Leer más sobre ${proyecto.titulo} ${proyecto.nombre}`}
                           >
                             <div className="flex items-center py-4">
                               <span className="text-xs text-jci-seafoam leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
@@ -148,7 +155,7 @@ export const Carousel = ({ items = getProyectosDestacados(), autoPlayInterval = 
           {String(currentIndex + 1).padStart(2, "0")}
         </div>
         <div className="opacity-50 text-white text-4xl lg:text-5xl mt-2 pt-2 border-t border-white">
-          {String(items.length).padStart(2, "0")}
+          {String(proyectos.length).padStart(2, "0")}
         </div>
       </div>
 

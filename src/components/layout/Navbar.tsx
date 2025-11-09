@@ -40,7 +40,7 @@ export const Navbar = ({ className }: NavbarProps) => {
       "/impacto",
       "/areas-oportunidad",
       "/politica-gestion",
-      "/politica-privacidad"
+      "/politica-privacidad",
     ];
 
     // Páginas que necesitan texto blanco por defecto pero pueden cambiar con scroll (fondo oscuro)

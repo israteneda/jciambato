@@ -5,8 +5,6 @@ interface InfoContainerProps {
 }
 
 export default function InfoContainer({ subtitle, title, description }: InfoContainerProps) {
-
-
   return (
     <section>
       <div className="hidden md:block">

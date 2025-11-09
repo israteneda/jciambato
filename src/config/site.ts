@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "JCI Ambato",
   description:
-    "Página oficial de JCI Ambato, una organización de jóvenes líderes comprometidos con el desarrollo comunitario, liderazgo y voluntariado en Ambato, Ecuador.",
+    "Únete a JCI Ambato, la red de jóvenes líderes que impulsa proyectos de impacto social, liderazgo y crecimiento personal en Ambato. ¡Sé parte del cambio!",
   keywords: [
     "JCI Ambato",
     "Cámara Junior Internacional",
@@ -29,9 +29,9 @@ export const siteConfig = {
   ),
   alternates: {
     canonical: "https://www.jciambato.org",
-    languages: {
+    /* languages: {
       "es-EC": "https://www.jciambato.org/es",
-    },
+    }, */
   },
   openGraph: {
     type: "website",
@@ -50,7 +50,7 @@ export const siteConfig = {
         alt: "Logo oficial de JCI Ambato",
       },
       {
-        url: "https://www.jciambato.org/images/jci-ambato-secondary.png",
+        url: "https://www.jciambato.org/images/grupo/sesion-solemne-50-aniversario.webp",
         width: 100,
         height: 100,
         alt: "JCI Ambato en acción",
@@ -131,23 +131,60 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/company/jci-ambato/",
     twitter: "https://twitter.com/jciambato",
     youtube: "https://www.youtube.com/channel/jciambato",
-    whatsapp: "https://wa.me/+593999999999", // Replace with actual WhatsApp number
+    /* whatsapp: "https://wa.me/+593999999999", // Replace with actual WhatsApp number */
   },
   structuredData: {
     "@context": "https://schema.org",
-    "@type": "NGO",
+    "@type": "Organization",
+    "@id": "https://www.jciambato.org/#organization",
     name: "JCI Ambato",
-    alternateName: "Cámara Junior Internacional Ambato",
+    legalName: "Cámara Junior Internacional Ambato",
+    alternateName: ["Cámara Junior Internacional Ambato", "JCI Ambato Ecuador"],
     url: "https://www.jciambato.org",
-    logo: "https://www.jciambato.org/images/jci-ambato.webp",
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+593-3-123-4567", // Replace with actual phone number
-      contactType: "Información general",
-      email: "tecnologias@jciambato.com",
-      areaServed: "EC",
-      availableLanguage: ["Spanish"],
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.jciambato.org/images/logos/jci-ambato.webp",
+      width: 500,
+      height: 500,
     },
+    image: "https://www.jciambato.org/images/logos/jci-ambato.webp",
+    description:
+      "JCI Ambato es una organización de jóvenes líderes dedicada al desarrollo personal, proyectos de impacto social y crecimiento comunitario en Ambato, Ecuador.",
+    foundingDate: "1986",
+    slogan: "Unidos Construyendo un Futuro de Liderazgo",
+    memberOf: {
+      "@type": "Organization",
+      name: "JCI (Junior Chamber International)",
+      url: "https://www.jci.cc",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Ambato",
+      addressRegion: "Tungurahua",
+      addressCountry: "EC",
+      postalCode: "180101",
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "Ambato, Tungurahua, Ecuador",
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+593-3-123-4567",
+        contactType: "Información general",
+        email: "ambato@jciecuador.com",
+        areaServed: "EC",
+        availableLanguage: ["Spanish", "es"],
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "Membresía",
+        email: "ambato@jciecuador.com",
+        areaServed: "EC",
+        availableLanguage: ["Spanish", "es"],
+      },
+    ],
     sameAs: [
       "https://www.facebook.com/jciambatoec",
       "https://www.instagram.com/jciambato",
@@ -155,5 +192,24 @@ export const siteConfig = {
       "https://twitter.com/jciambato",
       "https://www.youtube.com/channel/jciambato",
     ],
+    keywords: [
+      "liderazgo juvenil",
+      "voluntariado",
+      "impacto social",
+      "desarrollo comunitario",
+      "emprendimiento",
+      "Ambato",
+      "Ecuador",
+    ],
+  },
+  // Datos adicionales para redes sociales
+  socialProfiles: {
+    facebook: {
+      appId: "", // Agregar si tienen Facebook App ID
+      pages: ["https://www.facebook.com/jciambatoec"],
+    },
+    linkedin: {
+      company: "jci-ambato",
+    },
   },
 };

@@ -16,25 +16,36 @@ export function Footer() {
   }, []);
 
   const handleScrollToTop = () => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   return (
-    <footer className="relative z-20 bg-gray-50 select-none overflow-hidden" role="contentinfo" aria-label="Pie de página">
+    <footer
+      className="relative z-20 bg-gray-50 select-none overflow-hidden"
+      role="contentinfo"
+      aria-label="Pie de página"
+    >
       {/* Sección de llamada a la acción */}
       <section className="relative z-10 bg-jci-aqua" aria-labelledby="cta-heading">
         <div className="pt-28 pb-16 px-8 md:p-20 md:py-36">
           <div className="mb-10 md:mb-20">
             <div className="relative z-10 max-w-6xl mx-auto">
-              <Link href="/involucrate" className="group cursor-pointer" aria-label="Ir a Involúcrate">
+              <Link
+                href="/involucrate"
+                className="group cursor-pointer"
+                aria-label="Ir a Involúcrate"
+              >
                 <div className="flex flex-col md:flex-row items-start md:items-center">
                   <header>
                     <span className="text-xs text-gray-50 line-clamp-1 uppercase tracking-widest">
                       Conoce. Suma. Transforma.
                     </span>
-                    <h2 id="cta-heading" className="mt-8 text-3xl md:text-4xl lg:text-5xl max-w-2xl font-base md:leading-[1.33] tracking-tight text-white">
+                    <h2
+                      id="cta-heading"
+                      className="mt-8 text-3xl md:text-4xl lg:text-5xl max-w-2xl font-base md:leading-[1.33] tracking-tight text-white"
+                    >
                       Te atreves a <strong>ser el cambio que quieres ver en el mundo?</strong>
                     </h2>
                   </header>
@@ -51,7 +62,6 @@ export function Footer() {
                 </div>
               </Link>
             </div>
-
           </div>
         </div>
       </section>
@@ -62,7 +72,6 @@ export function Footer() {
           JCI AMBATO
         </div>
       </section>
-
 
       {/* Sección principal del footer */}
       <section className="relative" aria-labelledby="footer-content-heading">
@@ -114,7 +123,10 @@ export function Footer() {
 
                 <div className="flex md:flex-row">
                   {/* Navegación del footer */}
-                  <nav className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 flex-1" aria-label="Enlaces de navegación del pie de página">
+                  <nav
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 flex-1"
+                    aria-label="Enlaces de navegación del pie de página"
+                  >
                     {jciLinks.map((section) => (
                       <div key={section.title} className="flex flex-col">
                         <h3 className="text-base font-semibold">
@@ -134,9 +146,7 @@ export function Footer() {
                                   {item.title}
                                 </a>
                               ) : (
-                                <span className="text-gray-500">
-                                  {item.title}
-                                </span>
+                                <span className="text-gray-500">{item.title}</span>
                               )}
                             </li>
                           ))}
@@ -147,8 +157,13 @@ export function Footer() {
 
                   {/* Redes sociales */}
                   <aside className="ml-20" aria-labelledby="social-media-heading">
-                    <h3 id="social-media-heading" className="sr-only">Redes sociales</h3>
-                    <div className="flex flex-col justify-center items-center gap-4" aria-label="Enlaces a redes sociales">
+                    <h3 id="social-media-heading" className="sr-only">
+                      Redes sociales
+                    </h3>
+                    <div
+                      className="flex flex-col justify-center items-center gap-4"
+                      aria-label="Enlaces a redes sociales"
+                    >
                       <a
                         href={siteConfig.links.linkedin}
                         target="_blank"
@@ -171,7 +186,10 @@ export function Footer() {
                         rel="noopener noreferrer"
                         aria-label="Síguenos en Instagram"
                       >
-                        <FaInstagram className="h-6 w-6 hover:text-jci-seafoam" aria-hidden="true" />
+                        <FaInstagram
+                          className="h-6 w-6 hover:text-jci-seafoam"
+                          aria-hidden="true"
+                        />
                       </a>
                       {/* <a
                         href={siteConfig.links.youtube}
@@ -188,7 +206,7 @@ export function Footer() {
                           type="button"
                           aria-label="Volver arriba"
                           onClick={handleScrollToTop}
-                          className={isClient ? 'block' : 'hidden'}
+                          className={isClient ? "block" : "hidden"}
                           suppressHydrationWarning
                         >
                           <HiOutlineArrowUp className="w-10 h-10" aria-hidden="true" />
@@ -221,7 +239,7 @@ export function Footer() {
                   </div>
                 </div>
 
-               {/*  <Image
+                {/*  <Image
                   src="/images/test1.png"
                   alt="Descripción de la imagen"
                   className="relative -bottom-8 h-20 w-auto object-cover"
@@ -229,9 +247,7 @@ export function Footer() {
                   height={100}
                 /> */}
               </div>
-
             </div>
-
 
             {/* Botón para volver arriba, pantallas grandes*/}
             <div className="hidden lg:block absolute top-[45%] md:top-[50%] lg:top-[30%] right-[5%] md:right-[8%] lg:right-[5%]">
@@ -240,7 +256,7 @@ export function Footer() {
                   type="button"
                   aria-label="Volver arriba"
                   onClick={handleScrollToTop}
-                  className={isClient ? 'block' : 'hidden'}
+                  className={isClient ? "block" : "hidden"}
                   suppressHydrationWarning
                 >
                   <HiOutlineArrowUp className="w-10 h-10" aria-hidden="true" />

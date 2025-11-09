@@ -1,61 +1,61 @@
-import { notFound } from 'next/navigation';
-import { getAreaBySlug, getAllAreas } from '@/data/areas-oportunidad';
+import { notFound } from "next/navigation";
+import { getAreaBySlug, getAllAreas } from "@/data/areas-oportunidad";
 import {
-    Bienvenida,
-    Presentacion,
-    Construccion,
-    ExploraAreasOportunidad,
-    SiguienteArea,
-    Caracteristicas
-} from '@/components/sections/areas-oportunidad/slug';
+  Bienvenida,
+  Presentacion,
+  Construccion,
+  ExploraAreasOportunidad,
+  SiguienteArea,
+  Caracteristicas,
+} from "@/app/areas-oportunidad/components/slug";
 
 interface AreaOportunidadPageProps {
-    params: Promise<{
-        slug: string;
-    }>;
+  params: Promise<{
+    slug: string;
+  }>;
 }
 
 export async function generateStaticParams() {
-    const areas = getAllAreas();
+  const areas = getAllAreas();
 
-    return areas.map((area) => ({
-        slug: area.slug,
-    }));
+  return areas.map((area) => ({
+    slug: area.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: AreaOportunidadPageProps) {
-    const { slug } = await params;
-    const area = getAreaBySlug(slug);
+  const { slug } = await params;
+  const area = getAreaBySlug(slug);
 
-    if (!area) {
-        return {
-            title: 'Área no encontrada — Áreas de Oportunidad',
-            description: 'La página que buscas no existe.',
-        };
-    }
-
+  if (!area) {
     return {
-        title: `${area.title} — Áreas de Oportunidad`,
-        description: area.description,
+      title: "Área no encontrada — Áreas de Oportunidad",
+      description: "La página que buscas no existe.",
     };
+  }
+
+  return {
+    title: `${area.title} — Áreas de Oportunidad`,
+    description: area.description,
+  };
 }
 
 export default async function AreaOportunidadPage({ params }: AreaOportunidadPageProps) {
-    const { slug } = await params;
-    const area = getAreaBySlug(slug);
+  const { slug } = await params;
+  const area = getAreaBySlug(slug);
 
-    if (!area) {
-        notFound();
-    }
+  if (!area) {
+    notFound();
+  }
 
-    return (
-        <main className="relative">
-            <Bienvenida area={area} />
-            <Presentacion area={area} />
-            <Construccion area={area} />
-            <ExploraAreasOportunidad area={area} />
-            <Caracteristicas area={area} />
-            <SiguienteArea area={area} />
-        </main>
-    );
-} 
+  return (
+    <main className="relative">
+      <Bienvenida area={area} />
+      <Presentacion area={area} />
+      <Construccion area={area} />
+      <ExploraAreasOportunidad area={area} />
+      <Caracteristicas area={area} />
+      <SiguienteArea area={area} />
+    </main>
+  );
+}

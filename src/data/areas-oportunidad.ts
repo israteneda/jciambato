@@ -1,25 +1,5 @@
-export type AreaOportunidad = {
-  id: string;
-  slug: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  responsable: string;
-  correo: string;
-  image: string;
-  background_image: string;
-  features: string[];
-  longDescription?: string;
-  brochure?: string;
-  images?: Image[];
-  logo?: string;
-  document?: string;
-};
-
-interface Image {
-  src: string;
-  alt: string;
-}
+import { AreaOportunidad } from "@/types/area-oportunidad";
+import { getMiembroById } from "./miembros/miembros";
 
 export const areasOportunidad: AreaOportunidad[] = [
   {
@@ -29,8 +9,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     subtitle: "Impulsa tu espíritu emprendedor con visión global.",
     description:
       "Fomentamos la creación y crecimiento de ideas innovadoras a través de mentoría, formación empresarial y una red global de contactos que impulsa el emprendimiento con propósito.",
-    responsable: "Erick Calvache",
-    correo: "ecalvache@jciecuador.com",
+    responsable: getMiembroById("erick-calvache")!,
     image: "/images/areas_oportunidad/negocios-emprendimiento/negocios-emprendimiento.jpg",
     background_image:
       "/images/areas_oportunidad/negocios-emprendimiento/negocios-emprendimiento-back.webp",
@@ -70,8 +49,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     subtitle: "Conectamos líderes para generar impacto más allá de las fronteras.",
     description:
       "Forma parte de una red global de jóvenes comprometidos con el cambio. Vive experiencias internacionales, intercambios culturales y liderazgo en escenarios globales.",
-    responsable: "Nicolás Carrión",
-    correo: "ncarrion@jciecuador.com",
+    responsable: getMiembroById("nicolas-carrion")!,
     image: "/images/areas_oportunidad/cooperacion-internacional/internacionalizacion.webp",
     background_image:
       "/images/areas_oportunidad/cooperacion-internacional/cooperacion-internacional-back.webp",
@@ -116,8 +94,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     subtitle: "Descubre tu potencial y fortalece tu liderazgo personal.",
     description:
       "Ofrecemos espacios de formación, mentoría y experiencias transformadoras que te preparan para liderar con propósito, comunicar con impacto y crecer con confianza.",
-    responsable: "Gustavo Solis",
-    correo: "gsolis@jciecuador.com",
+    responsable: getMiembroById("gustavo-solis")!,
     image: "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual.jpeg",
     background_image:
       "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual-back.webp",
@@ -163,8 +140,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     subtitle: "Lideramos proyectos con propósito que transforman vidas.",
     description:
       "Diseñamos e implementamos iniciativas sociales que mejoran la calidad de vida, promueven la participación ciudadana y generan soluciones sostenibles a desafíos locales.",
-    responsable: "Sayri Pamballo",
-    correo: "wpamballo@jciambato.com",
+    responsable: getMiembroById("sayri-pamballo")!,
     image: "/images/areas_oportunidad/impacto-comunidad/impacto-comunidad.jpg",
     background_image: "/images/areas_oportunidad/impacto-comunidad/impacto-comunidad-back.webp",
     features: [
