@@ -3,15 +3,15 @@ import { FiAward, FiGlobe, FiUsers } from "react-icons/fi";
 export default function Beneficios() {
   return (
     <section
-      className="relative z-10 max-w-6xl mx-8 md:mx-20 lg:mx-auto "
+      className="relative z-10 mx-8 max-w-6xl md:mx-20 lg:mx-auto"
       aria-labelledby="beneficios-heading"
     >
       <div className="my-12 md:my-28">
         {/* Caja de Información */}
-        <div className="hidden lg:block relative">
-          <div className="absolute top-[80px] left-0 transform -translate-x-1/2 -translate-y-1/2 -rotate-90">
-            <div className="text-[#aeaeae] leading-none text-[11px] font-medium relative not-italic tracking-[2px] whitespace-nowrap uppercase">
-              <span className="absolute top-[6px] left-[-170px] w-[160px] h-px bg-[#aeaeae]"></span>
+        <div className="relative hidden lg:block">
+          <div className="absolute left-0 top-[80px] -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
+            <div className="relative whitespace-nowrap text-[11px] font-medium uppercase not-italic leading-none tracking-[2px] text-[#aeaeae]">
+              <span className="absolute left-[-170px] top-[6px] h-px w-[160px] bg-[#aeaeae]"></span>
               Cada día
             </div>
           </div>
@@ -19,10 +19,10 @@ export default function Beneficios() {
 
         <article className="flex">
           <div className="lg:ml-36">
-            <header className="md:max-w-xl mt-20">
+            <header className="mt-20 md:max-w-xl">
               <h2
                 id="beneficios-heading"
-                className="text-4xl md:text-5xl font-bold not-italic text-left leading-[1.17] tracking-normal text-black"
+                className="text-left text-4xl font-bold not-italic leading-[1.17] tracking-normal text-black md:text-5xl"
               >
                 Beneficios de ser parte de JCI Ambato
               </h2>
@@ -30,13 +30,13 @@ export default function Beneficios() {
 
             <div className="mt-8">
               <ul
-                className="text-base text-jci-black max-w-md space-y-4"
+                className="max-w-md space-y-4 text-base text-jci-black"
                 role="list"
                 aria-label="Lista de beneficios"
               >
                 <li className="flex items-start">
                   <FiAward
-                    className="w-6 h-6 mr-3 mt-1 text-jci-aqua flex-shrink-0"
+                    className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-jci-teal"
                     aria-hidden="true"
                   />
                   <span>
@@ -46,7 +46,7 @@ export default function Beneficios() {
                 </li>
                 <li className="flex items-start">
                   <FiGlobe
-                    className="w-6 h-6 mr-3 mt-1 text-jci-aqua flex-shrink-0"
+                    className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-jci-teal"
                     aria-hidden="true"
                   />
                   <span>
@@ -56,7 +56,7 @@ export default function Beneficios() {
                 </li>
                 <li className="flex items-start">
                   <FiUsers
-                    className="w-6 h-6 mr-3 mt-1 text-jci-aqua flex-shrink-0"
+                    className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-jci-teal"
                     aria-hidden="true"
                   />
                   <span>

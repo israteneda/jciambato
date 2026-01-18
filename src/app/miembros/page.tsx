@@ -12,28 +12,21 @@ export const metadata: Metadata = {
 export default function MiembrosPage() {
   return (
     <main className="relative">
-      {/* Sección de Bienvenida */}
       <Bienvenida />
 
       {/* Bloque espaciado para efecto de scroll */}
       <div className="h-screen" aria-hidden="true"></div>
       <div
-        className="absolute top-0 w-full h-full bg-gray-50"
+        className="absolute top-0 h-full w-full bg-gray-50"
         style={{ transform: "translateY(100vh)" }}
         aria-hidden="true"
       ></div>
 
-      {/* Sección de Miembros */}
       <JuntaDirectiva />
-
-      {/* Sección de Miembros Generales */}
       <Miembros />
-
-      {/* Sección de Senadores */}
       <Senadores />
-
-      {/* Sección de Miembros Nacionales */}
       <MiembrosNacionales />
+      {/* <PasadosPresidentes /> */}
     </main>
   );
 }

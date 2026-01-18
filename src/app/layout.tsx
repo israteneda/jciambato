@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
-import { fontSans, fontHelveticaNeue, fontRockwell } from "@/config/fonts";
+import { fontSans, fontHelveticaNeue, fontRockwell, fontPlusJakarta } from "@/config/fonts";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import ChatbotWrapper from "@/components/ui/ChatbotWrapper";
@@ -79,17 +79,44 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "min-h-screen bg-background font-sans antialiased",
     fontSans.variable,
     fontHelveticaNeue.variable,
-    fontRockwell.variable
+    fontRockwell.variable,
+    fontPlusJakarta.variable
   );
 
   return (
     <html suppressHydrationWarning lang="es">
       <head>
+        <meta name="application-name" content="JCI Ambato" />
+        <meta name="apple-mobile-web-app-title" content="JCI Ambato" />
+
         {/* Datos Estructurados JSON-LD para Organización */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(siteConfig.structuredData),
+          }}
+        />
+
+        {/* Datos Estructurados JSON-LD para WebSite */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": "https://www.jciambato.org/#website",
+              url: "https://www.jciambato.org",
+              name: "JCI Ambato",
+              alternateName: [
+                "Camara Junior Internacional Ambato",
+                "JCI Ambato",
+              ],
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://www.jciambato.org/search?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
           }}
         />
 
@@ -120,7 +147,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <Providers>
-          <div className="relative flex flex-col min-h-screen">
+          <div className="relative flex min-h-screen flex-col">
             <Navbar />
             <main className="container max-w-full bg-gray-50">{children}</main>
             <Footer />

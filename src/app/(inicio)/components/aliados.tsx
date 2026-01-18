@@ -4,11 +4,11 @@ import Image from "next/image";
 export default function Aliados() {
   return (
     <section className="select-none" aria-labelledby="aliados-heading">
-      <header className="relative md:w-[calc(100%-180px)] mx-8 md:mx-20 lg:mx-auto">
+      <header className="relative mx-8 md:mx-20 md:w-[calc(100%-180px)] lg:mx-auto">
         <div className="flex justify-center">
           <h2
             id="aliados-heading"
-            className="text-2xl font-bold not-italic leading-[1.25] tracking-normal text-left text-jci-off-black md:text-[calc(22.4px+0.5vw)]"
+            className="text-jci-off-black text-left text-2xl font-bold not-italic leading-[1.25] tracking-normal md:text-[calc(22.4px+0.5vw)]"
           >
             Nuestros Aliados
           </h2>
@@ -16,7 +16,7 @@ export default function Aliados() {
       </header>
 
       <div
-        className="flex flex-wrap justify-center mt-8 gap-8 lg:gap-16 p-5"
+        className="mt-8 flex flex-wrap justify-center gap-8 p-5 lg:gap-16"
         role="list"
         aria-label="Logos de aliados estratégicos"
       >
@@ -27,7 +27,7 @@ export default function Aliados() {
               alt={`Logo ${aliado.titulo}`}
               width={170}
               height={170}
-              className={`object-contain w-auto h-[${aliado.tamano}px]`}
+              className={`w-auto object-contain h-[${aliado.tamano}px]`}
               draggable="false"
             />
           </figure>

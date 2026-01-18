@@ -17,14 +17,14 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
 
   return (
     <section
-      className="relative bg-transparent overflow-hidden"
+      className="relative overflow-hidden bg-transparent"
       aria-labelledby={`noticiaEvento-${noticiaEvento.url}-heading`}
     >
       <div>
         <div className="h-[150px] md:h-80"></div>
 
-        <div className="pt-24 md:pt-44 absolute top-0 left-0 right-0 z-20">
-          <div className="relative z-10 bg-transparent max-w-6xl mx-8 md:mx-20 lg:mx-auto">
+        <div className="absolute left-0 right-0 top-0 z-20 pt-24 md:pt-44">
+          <div className="relative z-10 mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
             {/* Breadcrumbs */}
             {/* <div className="mb-4">
               <Breadcrumbs items={breadcrumbs} className="text-gray-600" />
@@ -32,44 +32,44 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
 
             <Link
               href="/noticias-eventos"
-              className="group inline-flex items-center text-end font-semibold uppercase transition duration-400 cursor-pointer"
+              className="group inline-flex cursor-pointer items-center text-end font-semibold uppercase transition duration-400"
               aria-label="Volver a noticias y eventos"
             >
               <div className="flex items-center py-4">
                 <div
-                  className="mr-3 flex items-center transform transition-transform duration-300 group-hover:-translate-x-1"
+                  className="mr-3 flex transform items-center transition-transform duration-300 group-hover:-translate-x-1"
                   aria-hidden="true"
                 >
-                  <HiOutlineArrowNarrowLeft className="h-5 w-5 text-jci-black transition-colors duration-300 group-hover:text-jci-aqua" />
+                  <HiOutlineArrowNarrowLeft className="h-5 w-5 text-jci-black transition-colors duration-300 group-hover:text-jci-teal" />
                 </div>
-                <span className="text-xs leading-none text-jci-black transition-colors duration-300 group-hover:text-jci-aqua">
+                <span className="text-xs leading-none text-jci-black transition-colors duration-300 group-hover:text-jci-teal">
                   Volver a noticias y eventos
                 </span>
               </div>
             </Link>
           </div>
 
-          <div className="inset-0 fixed pointer-events-none">
+          <div className="pointer-events-none fixed inset-0">
             <RotatedText text={`${noticiaEvento.titulo}`} />
           </div>
         </div>
       </div>
 
       <div className="relative">
-        <div className="relative mx-auto md:max-w-6xl py-20 px-8 md:px-20 pb-36 md:bg-white">
+        <div className="relative mx-auto px-8 py-20 pb-36 md:max-w-6xl md:bg-white md:px-20">
           <div className="">
             <header>
-              <p className="text-xs leading-[1.85] font-bold uppercase text-jci-black ">
+              <p className="text-xs font-bold uppercase leading-[1.85] text-jci-black">
                 {noticiaEvento.tipo}
               </p>
               <div className="mt-8">
-                <h2 className="text-3xl md:text-[48px] font-aeonik-bold font-bold leading-[1.33] text-black max-w-[862px] text-left sm:text-[calc(28.8px+1vw)]">
+                <h2 className="font-aeonik-bold max-w-[862px] text-left text-3xl font-bold leading-[1.33] text-black sm:text-[calc(28.8px+1vw)] md:text-[48px]">
                   {noticiaEvento.titulo}
                 </h2>
               </div>
               {noticiaEvento.subtitulo && (
                 <div className="mt-4">
-                  <p className="text-lg leading-relaxed text-jci-gray font-medium max-w-[862px]">
+                  <p className="text-jci-gray max-w-[862px] text-lg font-medium leading-relaxed">
                     {noticiaEvento.subtitulo}
                   </p>
                 </div>
@@ -77,10 +77,10 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
             </header>
 
             <div className="mt-10 md:mt-20">
-              <div className="text-xs font-normal leading-[1.71] tracking-[1px] uppercase">
+              <div className="text-xs font-normal uppercase leading-[1.71] tracking-[1px]">
                 {noticiaEvento.fecha}
               </div>
-              <div className="text-[10px] font-normal leading-[1.71] tracking-[1px] uppercase">
+              <div className="text-[10px] font-normal uppercase leading-[1.71] tracking-[1px]">
                 {noticiaEvento.lugar}
               </div>
             </div>
@@ -90,8 +90,8 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                 <div className="mt-20">
                   {/* Imagen principal */}
                   {noticiaEvento.imagen && (
-                    <figure className="w-full mb-12 md:mb-16">
-                      <div className="relative w-full h-[300px] md:h-[500px] overflow-hidden">
+                    <figure className="mb-12 w-full md:mb-16">
+                      <div className="relative h-[300px] w-full overflow-hidden md:h-[500px]">
                         <Image
                           src={noticiaEvento.imagen}
                           alt={`Imagen de ${noticiaEvento.titulo}`}
@@ -103,13 +103,13 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                     </figure>
                   )}
 
-                  <div className="flex flex-col md:flex-row w-full">
-                    <div className="pr-0 md:pr-24 w-full md:w-[80%]">
+                  <div className="flex w-full flex-col md:flex-row">
+                    <div className="w-full pr-0 md:w-[80%] md:pr-24">
                       <article className="pb-20">
                         {/* Introducción */}
                         {noticiaEvento.contenido?.introduccion && (
                           <div className="mb-8">
-                            <p className="text-lg md:text-xl leading-relaxed text-jci-off-black font-medium">
+                            <p className="text-jci-off-black text-lg font-medium leading-relaxed md:text-xl">
                               {noticiaEvento.contenido.introduccion}
                             </p>
                           </div>
@@ -118,7 +118,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {/* Descripción principal (fallback si no hay contenido estructurado) */}
                         {!noticiaEvento.contenido && noticiaEvento.descripcion && (
                           <div className="mb-8">
-                            <p className="text-medium leading-[1.71] text-jci-off-black whitespace-pre-line">
+                            <p className="whitespace-pre-line text-medium leading-[1.71] text-jci-black">
                               {noticiaEvento.descripcion}
                             </p>
                           </div>
@@ -127,7 +127,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {/* Párrafos de contenido */}
                         {noticiaEvento.contenido?.parrafos &&
                           noticiaEvento.contenido.parrafos.length > 0 && (
-                            <div className="flex flex-col gap-5 text-medium leading-[1.71] text-jci-off-black">
+                            <div className="flex flex-col gap-5 text-medium leading-[1.71] text-jci-black">
                               {noticiaEvento.contenido.parrafos.map((parrafo, index) => (
                                 <p key={index}>{parrafo}</p>
                               ))}
@@ -137,17 +137,17 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {/* Puntos destacados */}
                         {noticiaEvento.contenido?.destacados &&
                           noticiaEvento.contenido.destacados.length > 0 && (
-                            <div className="my-10 p-6 bg-gray-50 border-l-4 border-jci-aqua">
-                              <h3 className="text-xl font-bold text-jci-off-black mb-4">
+                            <div className="my-10 border-l-4 border-jci-teal bg-gray-50 p-6">
+                              <h3 className="mb-4 text-xl font-bold text-jci-black">
                                 Puntos Destacados
                               </h3>
                               <ul className="space-y-3">
                                 {noticiaEvento.contenido.destacados.map((punto, index) => (
                                   <li
                                     key={index}
-                                    className="flex items-start text-medium text-jci-off-black"
+                                    className="flex items-start text-medium text-jci-black"
                                   >
-                                    <span className="text-jci-aqua mr-3 font-bold">•</span>
+                                    <span className="mr-3 font-bold text-jci-teal">•</span>
                                     <span>{punto}</span>
                                   </li>
                                 ))}
@@ -162,12 +162,12 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                               {noticiaEvento.contenido.citas.map((cita, index) => (
                                 <blockquote
                                   key={index}
-                                  className="border-l-4 border-jci-seafoam pl-6 py-4 my-6 italic"
+                                  className="my-6 border-l-4 border-jci-seafoam py-4 pl-6 italic"
                                 >
-                                  <p className="text-lg text-jci-off-black leading-relaxed mb-2">
+                                  <p className="mb-2 text-lg leading-relaxed text-jci-black">
                                     &ldquo;{cita.texto}&rdquo;
                                   </p>
-                                  <footer className="text-sm font-semibold text-jci-gray">
+                                  <footer className="text-jci-gray text-sm font-semibold">
                                     — {cita.autor}
                                     {cita.cargo && (
                                       <span className="font-normal">, {cita.cargo}</span>
@@ -182,10 +182,10 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {noticiaEvento.contenido?.imagenes &&
                           noticiaEvento.contenido.imagenes.length > 0 && (
                             <div className="my-12">
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                                 {noticiaEvento.contenido.imagenes.map((img, index) => (
                                   <figure key={index} className="overflow-hidden">
-                                    <div className="relative w-full h-[250px] md:h-[300px] mb-2">
+                                    <div className="relative mb-2 h-[250px] w-full md:h-[300px]">
                                       <Image
                                         src={img.url}
                                         alt={img.alt}
@@ -194,7 +194,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                                       />
                                     </div>
                                     {img.caption && (
-                                      <figcaption className="text-sm text-jci-gray italic">
+                                      <figcaption className="text-jci-gray text-sm italic">
                                         {img.caption}
                                       </figcaption>
                                     )}
@@ -207,20 +207,20 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {/* Logros */}
                         {noticiaEvento.contenido?.logros &&
                           noticiaEvento.contenido.logros.length > 0 && (
-                            <div className="my-10 p-8 bg-gradient-to-br from-jci-aqua/10 to-jci-seafoam/10 rounded-lg">
-                              <h3 className="text-2xl font-bold text-jci-off-black mb-6">
+                            <div className="my-10 rounded-lg bg-gradient-to-br from-jci-teal/10 to-jci-seafoam/10 p-8">
+                              <h3 className="mb-6 text-2xl font-bold text-jci-black">
                                 Logros Alcanzados
                               </h3>
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                                 {noticiaEvento.contenido.logros.map((logro, index) => (
                                   <div
                                     key={index}
-                                    className="flex items-center p-4 bg-white rounded shadow-sm"
+                                    className="flex items-center rounded bg-white p-4 shadow-sm"
                                   >
-                                    <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-jci-aqua text-white rounded-full mr-3 font-bold">
+                                    <div className="mr-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-jci-teal font-bold text-white">
                                       ✓
                                     </div>
-                                    <span className="text-sm text-jci-off-black">{logro}</span>
+                                    <span className="text-sm text-jci-black">{logro}</span>
                                   </div>
                                 ))}
                               </div>
@@ -231,19 +231,19 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {noticiaEvento.contenido?.impacto &&
                           noticiaEvento.contenido.impacto.length > 0 && (
                             <div className="my-10">
-                              <h3 className="text-2xl font-bold text-jci-off-black mb-6">
+                              <h3 className="mb-6 text-2xl font-bold text-jci-black">
                                 Impacto del Evento
                               </h3>
                               <div className="space-y-6">
                                 {noticiaEvento.contenido.impacto.map((item, index) => (
                                   <div
                                     key={index}
-                                    className="p-6 border-l-4 border-jci-red bg-gray-50"
+                                    className="border-jci-red border-l-4 bg-gray-50 p-6"
                                   >
-                                    <h4 className="text-lg font-bold text-jci-off-black mb-2">
+                                    <h4 className="mb-2 text-lg font-bold text-jci-black">
                                       {item.titulo}
                                     </h4>
-                                    <p className="text-medium text-jci-off-black leading-relaxed">
+                                    <p className="text-medium leading-relaxed text-jci-black">
                                       {item.descripcion}
                                     </p>
                                   </div>
@@ -256,13 +256,13 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
 
                     <div className="w-[20%]">
                       <div className="flex flex-col items-start gap-2">
-                        <div className="text-xs font-semibold tracking-[1px] text-jci-black uppercase">
+                        <div className="text-xs font-semibold uppercase tracking-[1px] text-jci-black">
                           Compartir en
                         </div>
 
                         <div className="flex flex-col items-start gap-1">
                           <button
-                            className="text-sm font-semibold text-gray-400 hover:text-jci-seafoam transition-colors duration-300 cursor-pointer"
+                            className="cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300 hover:text-jci-seafoam"
                             onClick={() =>
                               shareOnSocialMedia(
                                 "facebook",
@@ -274,7 +274,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                             Facebook
                           </button>
                           <button
-                            className="text-sm font-semibold text-gray-400 hover:text-jci-seafoam transition-colors duration-300 cursor-pointer"
+                            className="cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300 hover:text-jci-seafoam"
                             onClick={() =>
                               shareOnSocialMedia(
                                 "linkedin",

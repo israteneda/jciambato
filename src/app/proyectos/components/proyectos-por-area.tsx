@@ -40,36 +40,36 @@ export default function ProyectosPorArea() {
 
   // Componente para renderizar una actividad individual
   const ActivityCard = ({ proyecto }: { proyecto: Proyecto }) => (
-    <article className="w-full lg:w-1/2 mt-10 lg:mt-16 m-5">
+    <article className="m-5 mt-10 w-full lg:mt-16 lg:w-1/2">
       <Link
         href={`/proyectos/${proyecto.slug}`}
         className="w-full"
         aria-label={`Ver detalles de ${proyecto.nombre}`}
       >
-        <figure className="h-[350px] md:h-[512px] overflow-hidden bg-gray-200">
-          <div className="relative bg-white w-full h-full overflow-hidden">
+        <figure className="h-[350px] overflow-hidden bg-gray-200 md:h-[512px]">
+          <div className="relative h-full w-full overflow-hidden bg-white">
             <Image
               src={proyecto.imagen}
               alt={`Imagen de ${proyecto.nombre}`}
               width={500}
               height={500}
-              className="object-cover w-full h-full transition-transform duration-300 transform hover:scale-105"
+              className="h-full w-full transform object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>
         </figure>
         <div>
           <div className="mt-8">
-            <p className="text-[13px] leading-[1.85] font-bold uppercase text-jci-gray tracking-[1px]">
+            <p className="text-jci-gray text-[13px] font-bold uppercase leading-[1.85] tracking-[1px]">
               {proyecto.subtitulo}
             </p>
           </div>
           <div className="my-2">
-            <h3 className="text-[22px] leading-[1.25] font-bold text-left text-jci-off-black">
+            <h3 className="text-left text-[22px] font-bold leading-[1.25] text-jci-black">
               {proyecto.nombre}
             </h3>
           </div>
 
-          <p className="text-[14px] leading-[1.78] font-normal text-jci-aqua">
+          <p className="text-[14px] font-normal leading-[1.78] text-jci-teal">
             <strong>
               {proyecto.fecha} - {proyecto.lugar}
             </strong>
@@ -107,9 +107,9 @@ export default function ProyectosPorArea() {
     }
 
     return (
-      <div className="relative flex flex-wrap mx-8">
+      <div className="relative mx-8 flex flex-wrap">
         {proyectosAgrupados.map((grupo, grupoIndex) => (
-          <div key={grupoIndex} className="flex flex-col md:flex-row w-full items-center">
+          <div key={grupoIndex} className="flex w-full flex-col items-center md:flex-row">
             {grupo.map((proyecto) => (
               <ActivityCard key={proyecto.id} proyecto={proyecto} />
             ))}
@@ -122,14 +122,14 @@ export default function ProyectosPorArea() {
   return (
     <div>
       <nav
-        className="lg:mx-20 p-12 box-border bg-gray-50"
+        className="box-border bg-gray-50 p-12 lg:mx-20"
         aria-label="Filtros de proyectos por área"
       >
-        <div className="text-[13px] leading-[1.85] not-italic uppercase text-[#989898] font-bold">
+        <div className="text-[13px] font-bold uppercase not-italic leading-[1.85] text-[#989898]">
           Explora por área de oportunidad
         </div>
         <div
-          className="flex flex-wrap gap-6 mt-5"
+          className="mt-5 flex flex-wrap gap-6"
           role="tablist"
           aria-label="Categorías de proyectos"
         >
@@ -137,7 +137,7 @@ export default function ProyectosPorArea() {
             <button
               key={index}
               onClick={() => handleCategoryChange(index)}
-              className={`text-left text-[30px] font-bold leading-[1.25] mr-[42px] transition duration-300 p-0 hover:text-gray-700 ${
+              className={`mr-[42px] p-0 text-left text-[30px] font-bold leading-[1.25] transition duration-300 hover:text-gray-700 ${
                 activeButton === index ? "text-gray-800" : "text-gray-400"
               }`}
               role="tab"
@@ -146,7 +146,7 @@ export default function ProyectosPorArea() {
               id={`tab-${index}`}
             >
               {category.name}
-              <sup className="inline text-[16px] font-normal pl-[10px] align-super">
+              <sup className="inline pl-[10px] align-super text-[16px] font-normal">
                 {category.count}
               </sup>
             </button>
@@ -184,11 +184,11 @@ export default function ProyectosPorArea() {
                 <Button
                   radius="none"
                   size="lg"
-                  className="relative bg-jci-aqua text-white group overflow-hidden"
+                  className="group relative overflow-hidden bg-jci-teal text-white"
                   aria-label="Ver más proyectos"
                   onPress={() => setCurrentPage(currentPage + 1)}
                 >
-                  <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
+                  <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
                   <span className="relative z-10">Ver más</span>
                 </Button>
               );

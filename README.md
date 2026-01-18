@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![JCI Ambato Logo](/public/images/logos/jci-ambato.webp)
+![JCI Ambato Logo](/public/images/logos/jci-ambato-bw.png)
 
 **Unidos Construyendo un Futuro de Liderazgo**
 
@@ -62,13 +62,9 @@ cd jci-ambato
 
 ### 2. Instalar Dependencias
 
-```bash
-# Usando npm (recomendado)
-npm install
-
-# Usando pnpm (alternativo)
+````bash
+# Usando pnpm (recomendado)
 pnpm install
-```
 
 ### 3. Configurar Variables de Entorno (Opcional)
 
@@ -80,12 +76,12 @@ NEXT_PUBLIC_SITE_URL=https://www.jciambato.org
 
 # Analytics (opcional)
 NEXT_PUBLIC_GA_ID=your_google_analytics_id
-```
+````
 
 ### 4. Iniciar el Servidor de Desarrollo
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 La aplicación estará disponible en `http://localhost:3000`
@@ -103,16 +99,13 @@ La aplicación estará disponible en `http://localhost:3000`
 
 ```bash
 # Desarrollo
-npm run dev          # Inicia servidor de desarrollo con Turbopack
-npm run build        # Construye la aplicación para producción
-npm run start        # Inicia servidor de producción
+pnpm dev          # Inicia servidor de desarrollo con Turbopack
+pnpm build        # Construye la aplicación para producción
+pnpm start        # Inicia servidor de producción
 
 # Calidad de Código
-npm run lint         # Ejecuta ESLint con correcciones automáticas
-npm run format       # Formatea código con Prettier
-
-# Análisis
-npm run analyze      # Analiza el bundle (si está configurado)
+pnpm lint         # Ejecuta ESLint con correcciones automáticas
+pnpm format       # Formatea código con Prettier
 ```
 
 ## 📄 Licencia

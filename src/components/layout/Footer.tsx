@@ -23,40 +23,40 @@ export function Footer() {
 
   return (
     <footer
-      className="relative z-20 bg-gray-50 select-none overflow-hidden"
+      className="relative z-20 select-none overflow-hidden bg-gray-50"
       role="contentinfo"
       aria-label="Pie de página"
     >
       {/* Sección de llamada a la acción */}
-      <section className="relative z-10 bg-jci-aqua" aria-labelledby="cta-heading">
-        <div className="pt-28 pb-16 px-8 md:p-20 md:py-36">
+      <section className="relative z-10 bg-jci-teal" aria-labelledby="cta-heading">
+        <div className="px-8 pb-16 pt-28 md:p-20 md:py-36">
           <div className="mb-10 md:mb-20">
-            <div className="relative z-10 max-w-6xl mx-auto">
+            <div className="relative z-10 mx-auto max-w-6xl">
               <Link
                 href="/involucrate"
                 className="group cursor-pointer"
                 aria-label="Ir a Involúcrate"
               >
-                <div className="flex flex-col md:flex-row items-start md:items-center">
+                <div className="flex flex-col items-start md:flex-row md:items-center">
                   <header>
-                    <span className="text-xs text-gray-50 line-clamp-1 uppercase tracking-widest">
+                    <span className="line-clamp-1 text-xs uppercase tracking-widest text-gray-50">
                       Conoce. Suma. Transforma.
                     </span>
                     <h2
                       id="cta-heading"
-                      className="mt-8 text-3xl md:text-4xl lg:text-5xl max-w-2xl font-base md:leading-[1.33] tracking-tight text-white"
+                      className="font-base mt-8 max-w-2xl text-3xl tracking-tight text-white md:text-4xl md:leading-[1.33] lg:text-5xl"
                     >
                       Te atreves a <strong>ser el cambio que quieres ver en el mundo?</strong>
                     </h2>
                   </header>
 
-                  <div className="my-8 md:ml-48 text-white">
+                  <div className="my-8 text-white md:ml-48">
                     <Image
                       src="/icons/arrow-down.svg"
                       alt=""
                       width={128}
                       height={128}
-                      className="h-28 w-28 md:h-32 md:w-32 transform transition-transform duration-300 group-hover:translate-x-4 -rotate-90 brightness-0 invert"
+                      className="h-28 w-28 -rotate-90 transform brightness-0 invert transition-transform duration-300 group-hover:translate-x-4 md:h-32 md:w-32"
                     />
                   </div>
                 </div>
@@ -67,8 +67,8 @@ export function Footer() {
       </section>
 
       {/* Sección decorativa */}
-      <section className="hidden md:block relative z-20" aria-hidden="true">
-        <div className="absolute left-0 right-0 top-[-145px] z-[3] opacity-20 md:text-[125px] lg:text-[235px] font-black not-italic leading-[280px] text-center whitespace-nowrap pointer-events-none tracking-normal uppercase">
+      <section className="relative z-20 hidden md:block" aria-hidden="true">
+        <div className="pointer-events-none absolute left-0 right-0 top-[-145px] z-[3] whitespace-nowrap text-center font-black uppercase not-italic leading-[280px] tracking-normal opacity-20 md:text-[125px] lg:text-[235px]">
           JCI AMBATO
         </div>
       </section>
@@ -78,53 +78,32 @@ export function Footer() {
         <div>
           <div className="z-10 w-full">
             <span
-              className="hidden lg:block absolute top-1/2 left-[27px] text-jci-aqua text-[11px] font-semibold z-20 leading-[60px] tracking-[1px] uppercase transform -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap"
+              className="absolute left-[27px] top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 transform whitespace-nowrap text-[11px] font-semibold uppercase leading-[60px] tracking-[1px] text-jci-teal lg:block"
               aria-hidden="true"
               role="presentation"
             >
               Conócenos mejor
             </span>
 
-            <div className="pt-14 md:pt-20 lg:pt-48 md:px-20">
+            <div className="pt-14 md:px-20 md:pt-20 lg:pt-48">
               {/* Items */}
-              <div className="relative z-10 max-w-6xl mx-8 sm:mx-auto">
-                <div className="flex flex-row justify-between items-center gap-8 mb-8">
+              <div className="relative z-10 mx-8 max-w-6xl sm:mx-auto">
+                <div className="mb-8 flex flex-row items-center justify-between gap-8">
                   <Link href="/" aria-label="Ir a Inicio">
                     <Image
                       alt="JCI Ambato Logo"
-                      className="object-contain w-[100px] h-[45px]"
-                      src="/images/logos/jci-ambato.webp"
-                      width={85}
-                      height={85}
+                      className="h-[60px] w-[110px] object-contain"
+                      src="/images/logos/jci-ambato.png"
+                      width={110}
+                      height={50}
                     />
                   </Link>
-                  {/* <div className="flex flex-col md:flex-row gap-1 md:gap-8">
-                    <Link href="https://jciecuador.com/" target="_blank" aria-label="Ir a JCI Ecuador">
-                      <Image
-                        alt="JCI Ecuador Logo"
-                        className="object-contain w-[85px] h-[45px]"
-                        src="/images/logos/jci-ecuador.png"
-                        width={85}
-                        height={85}
-                      />
-                    </Link>
-
-                    <Link href="https://jci.cc/" target="_blank" aria-label="Ir a JCI Ecuador">
-                      <Image
-                        alt="JCI Logo"
-                        className="object-contain w-[72px] h-[45px]"
-                        src="/images/logos/jci.png"
-                        width={85}
-                        height={85}
-                      />
-                    </Link>
-                  </div> */}
                 </div>
 
                 <div className="flex md:flex-row">
                   {/* Navegación del footer */}
                   <nav
-                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 flex-1"
+                    className="grid flex-1 grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6"
                     aria-label="Enlaces de navegación del pie de página"
                   >
                     {jciLinks.map((section) => (
@@ -134,7 +113,7 @@ export function Footer() {
                             {section.title}
                           </Link>
                         </h3>
-                        <ul className="flex flex-col mt-3 m-1 mb-0 max-w-36 space-y-2" role="list">
+                        <ul className="m-1 mb-0 mt-3 flex max-w-36 flex-col space-y-2" role="list">
                           {section.items.map((item) => (
                             <li key={item.title} className="text-sm">
                               {item.href ? (
@@ -161,7 +140,7 @@ export function Footer() {
                       Redes sociales
                     </h3>
                     <div
-                      className="flex flex-col justify-center items-center gap-4"
+                      className="flex flex-col items-center justify-center gap-4"
                       aria-label="Enlaces a redes sociales"
                     >
                       <a
@@ -191,17 +170,9 @@ export function Footer() {
                           aria-hidden="true"
                         />
                       </a>
-                      {/* <a
-                        href={siteConfig.links.youtube}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Síguenos en YouTube"
-                      >
-                        <FaYoutube className="hover:text-jci-seafoam" aria-hidden="true" />
-                      </a> */}
 
                       {/* Botón para volver arriba para pantallas pequeñas y medianas*/}
-                      <div className="block lg:hidden mt-10">
+                      <div className="mt-10 block lg:hidden">
                         <button
                           type="button"
                           aria-label="Volver arriba"
@@ -209,7 +180,7 @@ export function Footer() {
                           className={isClient ? "block" : "hidden"}
                           suppressHydrationWarning
                         >
-                          <HiOutlineArrowUp className="w-10 h-10" aria-hidden="true" />
+                          <HiOutlineArrowUp className="h-10 w-10" aria-hidden="true" />
                         </button>
                       </div>
                     </div>
@@ -218,39 +189,33 @@ export function Footer() {
               </div>
 
               {/* Derechos reservados */}
-              <div className="relative py-5 z-10 max-w-6xl mx-8 mt-16 sm:mx-auto">
-                <div className="flex flex-col lg:flex-row gap-2 lg:gap-5 text-jci-gray">
-                  <p className="text-xs md:text-sm text-default-400">
-                    © 2025 JCI Ambato. Todos los Derechos Reservados.
+              <div className="relative z-10 mx-8 mt-16 max-w-6xl py-5 sm:mx-auto">
+                <div className="text-jci-gray flex flex-col justify-between gap-2 lg:flex-row lg:gap-5">
+                  <p className="text-xs text-default-400 md:text-sm">
+                    © 2026 JCI Ambato. Todos los Derechos Reservados.
                   </p>
 
-                  <div className="flex flex-row justify-start gap-5">
-                    <p className="text-xs md:text-sm text-default-600">
-                      <Link href="/politica-gestion" className="hover:text-gray-500">
-                        Política de Gestión
-                      </Link>
-                    </p>
+                  <div>
+                    <div className="flex flex-row justify-start gap-5">
+                      <p className="text-xs text-default-600 md:text-sm">
+                        <Link href="/politica-gestion" className="hover:text-gray-500">
+                          Política de Gestión
+                        </Link>
+                      </p>
 
-                    <p className="text-xs md:text-sm text-default-600">
-                      <Link href="/politica-privacidad" className="hover:text-gray-500">
-                        Política de Privacidad
-                      </Link>
-                    </p>
+                      <p className="text-xs text-default-600 md:text-sm">
+                        <Link href="/politica-privacidad" className="hover:text-gray-500">
+                          Política de Privacidad
+                        </Link>
+                      </p>
+                    </div>
                   </div>
                 </div>
-
-                {/*  <Image
-                  src="/images/test1.png"
-                  alt="Descripción de la imagen"
-                  className="relative -bottom-8 h-20 w-auto object-cover"
-                  width={500}
-                  height={100}
-                /> */}
               </div>
             </div>
 
             {/* Botón para volver arriba, pantallas grandes*/}
-            <div className="hidden lg:block absolute top-[45%] md:top-[50%] lg:top-[30%] right-[5%] md:right-[8%] lg:right-[5%]">
+            <div className="absolute right-[5%] top-[45%] hidden md:right-[8%] md:top-[50%] lg:right-[5%] lg:top-[30%] lg:block">
               <div className="flex items-center justify-center">
                 <button
                   type="button"
@@ -259,7 +224,7 @@ export function Footer() {
                   className={isClient ? "block" : "hidden"}
                   suppressHydrationWarning
                 >
-                  <HiOutlineArrowUp className="w-10 h-10" aria-hidden="true" />
+                  <HiOutlineArrowUp className="h-10 w-10" aria-hidden="true" />
                 </button>
               </div>
             </div>

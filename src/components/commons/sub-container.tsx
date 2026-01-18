@@ -8,13 +8,13 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
   return (
     <section>
       <div className="hidden md:block">
-        <div className="absolute top-[80px] left-0 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
+        <div className="absolute left-0 top-[80px] -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
           <div
-            className="relative text-[rgb(174,174,174)] leading-none text-[11px] font-medium not-italic tracking-[2px] whitespace-nowrap uppercase"
+            className="relative whitespace-nowrap text-[11px] font-medium uppercase not-italic leading-none tracking-[2px] text-[rgb(174,174,174)]"
             aria-hidden="true"
           >
             {subtitle}
-            <span className="absolute top-[6px] left-[-170px] w-[160px] h-[1px] bg-[rgb(174,174,174)] content-['']"></span>
+            <span className="absolute left-[-170px] top-[6px] h-[1px] w-[160px] bg-[rgb(174,174,174)] content-['']"></span>
           </div>
         </div>
       </div>
@@ -23,7 +23,7 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
         <div className="flex">
           <header className="md:max-w-xl">
             <div className="mt-20">
-              <h2 className="text-4xl md:text-5xl font-bold not-italic text-left leading-[1.17] tracking-normal text-black">
+              <h2 className="text-left text-4xl font-bold not-italic leading-[1.17] tracking-normal text-black md:text-5xl">
                 {title}
               </h2>
             </div>

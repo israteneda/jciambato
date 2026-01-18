@@ -42,19 +42,19 @@ export default {
         light: "#F8FAFC",
 
         // Primary Colors
-        "jci-navy": "#3A67B1",
-        "jci-aqua": "#0087D7",
+        "jci-blue": "#1F4789",
+        "jci-black": "#130F2D",
+        "jci-white": "#FFFFFF",
 
         // Secondary Colors
-        "jci-gold": "#EDBE3B",
-        "jci-seafoam": "#56BDA3",
+        "jci-navy": "#1F4789",
+        "jci-teal": "#1F4789",
+        "jci-yellow": "#EFC40F",
 
-        // Typography Colors
-        "jci-black": "#414042",
-        "jci-off-black": "#0A0F29",
+        "jci-seafoam": "#56BDA3", // Eliminar potencialmente hasta nueva revisión
       },
       fontFamily: {
-        sans: ["var(--font-sans)"],
+        sans: ["var(--font-sans)"], // ["var(--font-plus-jakarta)"]
         mono: ["var(--font-mono)"],
         heading: ["var(--font-heading)"],
         "helvetica-neue": ["var(--font-helvetica-neue)"],

@@ -154,9 +154,9 @@ export default function BienvenidaV3() {
         <h1 id="bienvenida-heading">Bienvenido a JCI Ambato</h1>
       </header>
 
-      <div ref={containerRef} className="flex w-full bg-[#003D62] relative overflow-hidden">
+      <div ref={containerRef} className="relative flex w-full overflow-hidden bg-[#003D62]">
         {/* BLOBS ABSTRACTOS */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+        <div className="pointer-events-none absolute inset-0 z-0 h-full w-full">
           {/* 4 blobs, ajustados para responsividad */}
           {[0, 1, 2, 3].map((_i) => (
             <div
@@ -164,7 +164,7 @@ export default function BienvenidaV3() {
               ref={(el) => {
                 blobsRef.current[_i] = el;
               }}
-              className="absolute blur-[1px] sm:blur-[2px] opacity-50 sm:opacity-70"
+              className="absolute opacity-50 blur-[1px] sm:opacity-70 sm:blur-[2px]"
               style={{
                 ...getBlobStyles(_i),
                 zIndex: 1,
@@ -203,28 +203,27 @@ export default function BienvenidaV3() {
             </div>
           ))}
         </div>
-
-        <div className="h-screen w-full flex mx-9 md:mx-20 lg:mx-44 pb-20 items-center box-border">
+        <div className="mx-9 box-border flex h-screen w-full items-center pb-20 md:mx-20 lg:mx-44">
           <BorderFrame isScrolled={isScrolled} />
 
           {/* Contenido principal */}
           <main className="relative z-20 w-full">
             <div className="flex flex-col items-start">
               {/* <div>
-                <p className="text-jci-gold text-xs md:text-sm font-semibold uppercase leading-relaxed">
+                <p className="text-jci-yellow text-xs md:text-sm font-semibold uppercase leading-relaxed">
                   Conoce. Suma. Transforma.
                 </p>
               </div> */}
 
               <div className="mt-5">
-                <h2 className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-[34px] md:text-5xl lg:text-7xl max-w-xl md:max-w-5xl py-1.5 leading-tight">
-                  Unidos Construyendo un <br /> <span className="text-inherit italic">Futuro</span>{" "}
+                <h2 className="max-w-xl bg-gradient-to-br from-jci-navy via-white to-jci-navy bg-clip-text py-1.5 text-[34px] font-bold leading-tight text-transparent md:max-w-5xl md:text-5xl lg:text-7xl">
+                  Unidos Construyendo un <br /> <span className="italic text-inherit">Futuro</span>{" "}
                   de Liderazgo
                 </h2>
               </div>
 
               <div className="mt-6 lg:mt-8">
-                <p className="text-white max-w-xl text-base leading-relaxed">
+                <p className="max-w-xl text-base leading-relaxed text-white">
                   Fomentamos el cambio mediante la innovación, convirtiendo ideas en soluciones que
                   fortalecen comunidades y mejoran vidas.
                 </p>
@@ -233,11 +232,11 @@ export default function BienvenidaV3() {
               <div className="mt-6 lg:mt-8">
                 <Button
                   radius="none"
-                  className="relative bg-jci-aqua text-white group overflow-hidden text-sm"
+                  className="group relative overflow-hidden bg-jci-teal text-sm text-white"
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/nosotros">
-                    <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-[#004D7A] transition-transform duration-300 group-hover:translate-x-0"></span>
+                    <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-[#004D7A] transition-transform duration-300 group-hover:translate-x-0"></span>
                     <span className="relative z-10">Sobre Nosotros</span>
                   </Link>
                 </Button>
@@ -245,26 +244,23 @@ export default function BienvenidaV3() {
             </div>
           </main>
         </div>
-
         <RotatedText text="BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO" />
-
         {/* Botón de scroll */}
         <RowScroll />
-
         {/* Logo Somos Liderazgo */}
-        <div className="hidden lg:block absolute bottom-[60px] right-[20px] sm:bottom-[80px] sm:right-[30px] md:bottom-[60px] md:right-[124px] z-20">
+        <div className="absolute bottom-[60px] right-[20px] z-20 hidden sm:bottom-[80px] sm:right-[30px] md:bottom-[60px] md:right-[124px] lg:block">
           <Image
             alt="Somos Liderazgo Logo"
-            className="object-contain w-[100px] h-[50px] sm:w-[120px] sm:h-[60px] md:w-[150px] md:h-[70px]"
-            src="/images/logos/somos-liderazgo.webp"
+            className="h-[50px] w-[100px] object-contain sm:h-[60px] sm:w-[120px] md:h-[70px] md:w-[150px]"
+            // src="/images/logos/somos-liderazgo.webp"
+            src="/images/logos/actuar-proposito.png"
             width={150}
             height={70}
             priority
           />
         </div>
-
         {/* Enlace a JCI Ecuador */}
-        <div className="hidden lg:block absolute bottom-[60px] left-[20px] sm:bottom-[80px] sm:left-[30px] md:bottom-[80px] lg:left-[176px] text-[8px] sm:text-[9px] md:text-[10.5px] font-semibold  uppercase z-20 text-jci-seafoam">
+        <div className="absolute bottom-[60px] left-[20px] z-20 hidden text-[8px] font-semibold uppercase text-jci-seafoam sm:bottom-[80px] sm:left-[30px] sm:text-[9px] md:bottom-[80px] md:text-[10.5px] lg:left-[176px] lg:block">
           <a
             href="https://jciecuador.com"
             target="_blank"
@@ -274,7 +270,7 @@ export default function BienvenidaV3() {
           >
             <span>JCI Ecuador</span>
             <MdOutlineArrowOutward
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5"
+              className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5"
               aria-hidden="true"
             />
           </a>
@@ -282,14 +278,14 @@ export default function BienvenidaV3() {
       </div>
 
       {/* Botón lateral de navegación */}
-      <nav className="absolute left-1/2 z-20 bottom-0 transform -translate-x-1/2 rotate-90">
+      <nav className="absolute bottom-0 left-1/2 z-20 -translate-x-1/2 rotate-90 transform">
         <div className="hidden md:block">
           <Link
             href="/nosotros"
             className="flex items-center"
             aria-label="Ir a la sección Sobre Nosotros"
           >
-            <span className="text-jci-aqua text-[8px] md:text-[10.5px] font-semibold uppercase">
+            <span className="text-[8px] font-semibold uppercase text-jci-teal md:text-[10.5px]">
               Sobre Nosotros
             </span>
             <Image
@@ -297,7 +293,7 @@ export default function BienvenidaV3() {
               alt=""
               width={500}
               height={500}
-              className="w-[60px] h-[40px] md:w-[96px] md:h-[69px] -rotate-90 object-cover"
+              className="h-[40px] w-[60px] -rotate-90 object-cover md:h-[69px] md:w-[96px]"
               aria-hidden="true"
             />
           </Link>

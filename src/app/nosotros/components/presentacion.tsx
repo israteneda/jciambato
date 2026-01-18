@@ -4,32 +4,27 @@ import AnimatedNumber from "@/components/ui/AnimatedNumber";
 export default function Presentacion() {
   return (
     <section className="relative z-10">
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col items-center justify-center">
         {/* Información */}
-        <div className="w-full flex justify-center">
-          <div className="relative mx-auto max-w-6xl py-20 px-8 md:px-20 pb-36 bg-white">
+        <div className="flex w-full justify-center">
+          <div className="relative mx-auto max-w-6xl bg-white px-8 py-20 pb-36 md:px-20">
             <header className="max-w-3xl">
-              <p className="text-xs leading-[1.85] not-italic uppercase text-[#989898] font-bold tracking-normal">
+              <p className="text-xs font-bold uppercase not-italic leading-[1.85] tracking-normal text-[#989898]">
                 Conócenos mejor
               </p>
               <div className="mt-8">
-                <h2 className="text-3xl md:text-5xl font-bold md:leading-[1.33] text-black text-left">
-                  {/* En JCI Ambato, unimos jóvenes líderes para transformar ideas en acciones que impulsan el cambio social, cultural y económico. */}
+                <h2 className="text-left text-3xl font-bold text-black md:text-5xl md:leading-[1.33]">
                   Lideramos con propósito para transformar nuestra ciudad y conectar con el mundo.
                 </h2>
               </div>
             </header>
 
             <div className="mt-16 md:mt-20">
-              <div className="text-base leading-loose text-jci-off-black text-justify md:text-left columns-1 lg:columns-2 gap-10 space-y-4">
+              <div className="text-jci-off-black columns-1 gap-10 space-y-4 text-justify text-base leading-loose md:text-left lg:columns-2">
                 <p>
                   En JCI Ambato creemos que el liderazgo joven es la fuerza que impulsa la
                   transformación de nuestra sociedad. Somos parte de la red global de la{" "}
-                  <a
-                    href="https://www.jcipartnerships.com/"
-                    className="text-jci-aqua underline"
-                    target="_blank"
-                  >
+                  <a href="https://jci.cc/" className="text-jci-teal underline" target="_blank">
                     Cámara Junior Internacional (JCI)
                   </a>
                   , una organización sin fines de lucro fundada en 1915, que hoy conecta a más de
@@ -39,7 +34,7 @@ export default function Presentacion() {
                   A nivel nacional, formamos parte de{" "}
                   <a
                     href="https://jciecuador.com/"
-                    className="text-jci-aqua underline"
+                    className="text-jci-teal underline"
                     target="_blank"
                   >
                     JCI Ecuador
@@ -79,28 +74,28 @@ export default function Presentacion() {
                   aria-label="Estadísticas de JCI Ambato"
                 >
                   <div className="mr-20" role="listitem">
-                    <div className="text-7xl md:text-8xl leading-none font-light text-jci-aqua">
-                      <AnimatedNumber end={51} prefix="+" duration={2.5} delay={0.2} />
+                    <div className="text-7xl font-light leading-none text-jci-teal md:text-8xl">
+                      <AnimatedNumber end={50} prefix="+" duration={2.5} delay={0.2} />
                     </div>
-                    <p className="md:text-medium text-black text-left uppercase max-w-44">
+                    <p className="max-w-44 text-left uppercase text-black md:text-medium">
                       <strong>Años</strong> inspirando líderes
                     </p>
                   </div>
 
                   <div className="mr-20" role="listitem">
-                    <div className="text-7xl md:text-8xl leading-none font-light text-jci-aqua">
+                    <div className="text-7xl font-light leading-none text-jci-teal md:text-8xl">
                       <AnimatedNumber end={200} prefix="+" duration={2.5} delay={0.4} />
                     </div>
-                    <p className="md:text-medium text-black text-left uppercase max-w-44">
+                    <p className="max-w-44 text-left uppercase text-black md:text-medium">
                       <strong>Proyectos</strong> ejecutados
                     </p>
                   </div>
 
                   <div className="mr-20" role="listitem">
-                    <div className="text-7xl md:text-8xl leading-none font-light text-jci-aqua">
+                    <div className="text-7xl font-light leading-none text-jci-teal md:text-8xl">
                       <AnimatedNumber end={500} prefix="+" duration={2.5} delay={0.6} />
                     </div>
-                    <p className="text-base text-black text-left uppercase max-w-44">
+                    <p className="max-w-44 text-left text-base uppercase text-black">
                       <strong>Jóvenes</strong> formados y empoderados
                     </p>
                   </div>
@@ -108,9 +103,9 @@ export default function Presentacion() {
               </div>
             </div>
 
-            <div className="hidden lg:block absolute right-[50px] bottom-[25%] rotate-90 origin-bottom-right">
+            <div className="absolute bottom-[25%] right-[50px] hidden origin-bottom-right rotate-90 lg:block">
               <div
-                className="text-[#aeaeae] leading-none text-[11px] font-medium relative tracking-[2px] uppercase after:content-[''] after:absolute after:top-[6px] after:w-[160px] after:h-[1px] after:bg-[#aeaeae] after:right-[-170px]"
+                className="relative text-[11px] font-medium uppercase leading-none tracking-[2px] text-[#aeaeae] after:absolute after:right-[-170px] after:top-[6px] after:h-[1px] after:w-[160px] after:bg-[#aeaeae] after:content-['']"
                 aria-hidden="true"
               >
                 Conoce, Suma, Transforma
@@ -121,27 +116,27 @@ export default function Presentacion() {
 
         {/* Fotografía */}
         <div className="w-full px-0">
-          <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-8 md:gap-12">
+          <div className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-8 md:flex-row md:gap-12">
             {/* Flecha solo visible en pantallas grandes */}
-            <div className="hidden md:flex justify-center items-center flex-shrink-0 md:ml-20">
+            <div className="hidden flex-shrink-0 items-center justify-center md:ml-20 md:flex">
               <Image
                 src="/icons/arrow-down.svg"
                 alt=""
                 width={120}
                 height={120}
-                className="object-contain w-[80px] h-[80px] md:w-[120px] md:h-[120px]"
+                className="h-[80px] w-[80px] object-contain md:h-[120px] md:w-[120px]"
                 aria-hidden="true"
               />
             </div>
 
             {/* Imagen principal */}
-            <figure className="w-full md:w-auto md:flex-1 h-auto max-h-auto relative overflow-hidden">
+            <figure className="max-h-auto relative h-auto w-full overflow-hidden md:w-auto md:flex-1">
               <Image
                 src="/images/grupo/grupo.webp"
                 alt="Miembros de JCI Ambato trabajando en equipo"
                 width={1920}
                 height={1080}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             </figure>
           </div>

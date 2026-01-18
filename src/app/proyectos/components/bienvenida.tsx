@@ -7,7 +7,7 @@ import RotatedText from "@/components/commons/rotated-text";
 export default function Bienvenida() {
   return (
     <section
-      className="inset-0 w-full fixed overflow-hidden items-center box-border h-[760px] pb-[80px]"
+      className="fixed inset-0 box-border h-[760px] w-full items-center overflow-hidden pb-[80px]"
       aria-labelledby="proyectos-heading"
     >
       <header className="sr-only">
@@ -16,7 +16,7 @@ export default function Bienvenida() {
 
       <RotatedText text="Dentro de nuestros proyectos" />
 
-      <div className="relative w-full pt-48 pb-32">
+      <div className="relative w-full pb-32 pt-48">
         <InfoContainer
           subtitle="Proyectos"
           title="Acciones que dejan huella"

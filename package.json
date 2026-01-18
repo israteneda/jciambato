@@ -1,6 +1,7 @@
 {
   "name": "jci-ambato",
   "version": "0.0.1",
+  "description": "JCI Ambato - Official Website",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -62,10 +63,13 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-unused-imports": "4.1.4",
     "postcss": "8.4.49",
-    "prettier": "^3.3.3",
+    "prettier": "^3.8.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwind-variants": "0.1.20",
     "tailwindcss": "3.4.16",
     "typescript": "5.6.3"
+  },
+  "engines": {
+    "node": ">=20.12.0"
   }
 }

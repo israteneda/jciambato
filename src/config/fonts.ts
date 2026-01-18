@@ -1,4 +1,8 @@
-import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google";
+import {
+  Fira_Code as FontMono,
+  Inter as FontSans,
+  Plus_Jakarta_Sans as PlusJakarta,
+} from "next/font/google";
 import localFont from "next/font/local";
 
 export const fontSans = FontSans({
@@ -9,6 +13,12 @@ export const fontSans = FontSans({
 export const fontMono = FontMono({
   subsets: ["latin"],
   variable: "--font-mono", // Define una variable CSS para la fuente mono
+});
+
+export const fontPlusJakarta = PlusJakarta({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-plus-jakarta",
 });
 
 // Helvetica Neue font configuration

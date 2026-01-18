@@ -4,7 +4,7 @@ import RotatedText from "@/components/commons/rotated-text";
 export default function Bienvenida() {
   return (
     <section
-      className="relative z-[1] w-full pt-48 pb-32 box-border h-auto"
+      className="relative z-[1] box-border h-auto w-full pb-32 pt-48"
       aria-labelledby="areas-oportunidad-heading"
     >
       <header className="sr-only">

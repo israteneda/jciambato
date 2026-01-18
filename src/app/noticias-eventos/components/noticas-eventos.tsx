@@ -39,49 +39,49 @@ export default function NoticiasEventosPorTipo() {
 
   // Componente para renderizar una actividad individual
   const ActivityCard = ({ noticiaEvento }: { noticiaEvento: NoticiaEvento }) => (
-    <article className="flex w-full mb-16 md:w-1/2 lg:w-1/3">
+    <article className="mb-16 flex w-full md:w-1/2 lg:w-1/3">
       <Link
         href={`/noticias-eventos/${noticiaEvento.url}`}
-        className="w-full flex"
+        className="flex w-full"
         aria-label={`Ver detalles de ${noticiaEvento.titulo}`}
       >
-        <div className="w-full group flex flex-col h-full">
-          <header className="min-h-[120px] flex flex-col justify-start">
-            <div className="text-[13px] leading-[1.85] not-italic uppercase font-bold tracking-normal text-[#989898]">
+        <div className="group flex h-full w-full flex-col">
+          <header className="flex min-h-[120px] flex-col justify-start">
+            <div className="text-[13px] font-bold uppercase not-italic leading-[1.85] tracking-normal text-[#989898]">
               <span>{noticiaEvento.tipo}</span>
             </div>
 
             <div className="mt-4 flex-grow">
-              <h3 className="text-[22px] font-bold not-italic text-left leading-[1.45] tracking-normal text-jci-off-black md:text-[calc(17.2px+0.25vw)]">
+              <h3 className="text-jci-off-black text-left text-[22px] font-bold not-italic leading-[1.45] tracking-normal md:text-[calc(17.2px+0.25vw)]">
                 {noticiaEvento.titulo}
               </h3>
             </div>
           </header>
 
           <div className="mt-6 flex-shrink-0">
-            <div className="group max-w-full relative inline-block transition duration-[400ms] cursor-pointer">
+            <div className="group relative inline-block max-w-full cursor-pointer transition duration-[400ms]">
               <div className="flex items-center py-4 text-[#989898]">
-                <span className="text-xs leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-red">
+                <span className="group-hover:text-jci-red text-xs font-medium not-italic leading-none tracking-normal transition-colors duration-300">
                   Leer más
                 </span>
                 <div
-                  className="flex ml-3 items-center transform transition-transform duration-300 group-hover:translate-x-1"
+                  className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                   aria-hidden="true"
                 >
-                  <HiOutlineArrowNarrowRight className="w-6 h-6 text-jci-gray group-hover:text-jci-red transition-colors duration-300" />
+                  <HiOutlineArrowNarrowRight className="text-jci-gray group-hover:text-jci-red h-6 w-6 transition-colors duration-300" />
                 </div>
               </div>
             </div>
           </div>
 
-          <figure className="h-[280px] md:h-[350px] overflow-hidden bg-gray-200 mt-auto">
-            <div className="relative bg-white w-full h-full overflow-hidden">
+          <figure className="mt-auto h-[280px] overflow-hidden bg-gray-200 md:h-[350px]">
+            <div className="relative h-full w-full overflow-hidden bg-white">
               <Image
                 src={noticiaEvento.imagen}
                 alt={`Imagen de ${noticiaEvento.titulo}`}
                 width={500}
                 height={500}
-                className="object-cover w-full h-full transition-transform duration-300 transform hover:scale-105"
+                className="h-full w-full transform object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
           </figure>
@@ -119,7 +119,7 @@ export default function NoticiasEventosPorTipo() {
         {noticiasEventosAgrupados.map((grupo, grupoIndex) => (
           <div
             key={grupoIndex}
-            className="flex flex-col gap-8 md:flex-row w-full mt-16 items-stretch"
+            className="mt-16 flex w-full flex-col items-stretch gap-8 md:flex-row"
           >
             {grupo.map((proyecto) => (
               <ActivityCard key={proyecto.id} noticiaEvento={proyecto} />
@@ -137,21 +137,21 @@ export default function NoticiasEventosPorTipo() {
       </header>
 
       <nav
-        className="relative z-10 w-full transition-all duration-300 opacity-[1] "
+        className="relative z-10 w-full opacity-[1] transition-all duration-300"
         aria-label="Filtros de noticias y eventos por tipo"
       >
         <div className="relative z-10 mx-auto h-full">
           <div
-            className="lg:mx-20 p-12 box-border bg-gray-50"
+            className="box-border bg-gray-50 p-12 lg:mx-20"
             aria-label="Filtros de proyectos por área"
           >
-            <div className="text-[13px] leading-[1.85] not-italic uppercase text-[#989898] font-bold">
+            <div className="text-[13px] font-bold uppercase not-italic leading-[1.85] text-[#989898]">
               Explora por tipo
             </div>
 
             {/* Para pantallas grandes */}
             <div
-              className="hidden lg:flex flex-wrap gap-6 mt-5"
+              className="mt-5 hidden flex-wrap gap-6 lg:flex"
               role="tablist"
               aria-label="Categorías de proyectos"
             >
@@ -159,7 +159,7 @@ export default function NoticiasEventosPorTipo() {
                 <button
                   key={index}
                   onClick={() => handleCategoryChange(index)}
-                  className={`text-left text-2xl font-bold leading-[1.25] mr-[42px] transition duration-300 p-0 hover:text-gray-700 ${
+                  className={`mr-[42px] p-0 text-left text-2xl font-bold leading-[1.25] transition duration-300 hover:text-gray-700 ${
                     activeButton === index ? "text-gray-800" : "text-gray-400"
                   }`}
                   role="tab"
@@ -168,7 +168,7 @@ export default function NoticiasEventosPorTipo() {
                   id={`tab-${index}`}
                 >
                   {tipo.name}
-                  <sup className="inline text-[16px] font-normal pl-[10px] align-super">
+                  <sup className="inline pl-[10px] align-super text-[16px] font-normal">
                     {tipo.count}
                   </sup>
                 </button>
@@ -195,8 +195,8 @@ export default function NoticiasEventosPorTipo() {
         </div>
       </nav>
 
-      <div className="bg-white min-h-96 pb-9">
-        <div className="relative z-10 max-w-6xl mx-8 md:mx-20 lg:mx-auto">
+      <div className="min-h-96 bg-white pb-9">
+        <div className="relative z-10 mx-8 max-w-6xl md:mx-20 lg:mx-auto">
           <div className="transition-all duration-300 ease-in-out">
             <div className="min-h-[650px]" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
               {renderContent()}
@@ -225,11 +225,11 @@ export default function NoticiasEventosPorTipo() {
                 <Button
                   radius="none"
                   size="lg"
-                  className="relative bg-jci-aqua text-white group overflow-hidden"
+                  className="group relative overflow-hidden bg-jci-teal text-white"
                   aria-label="Ver más noticias y eventos"
                   onPress={() => setCurrentPage(currentPage + 1)}
                 >
-                  <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>
+                  <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>
                   <span className="relative z-10">Ver más</span>
                 </Button>
               );

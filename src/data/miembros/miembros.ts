@@ -2,20 +2,10 @@ import { Miembro } from "@/types/miembro";
 
 export const miembros: Miembro[] = [
   {
-    id: "andres-alarcon",
-    nombre: "Andrés",
-    apellido: "Alarcón",
-    cargo: "Director Nacional de Eventos",
-    imagen: "/images/miembros/miembros/andres-alarcon.png",
-    social: {
-      instagram: "https://www.instagram.com/reinventateconandres/",
-    },
-  },
-  {
     id: "lizbeth-arboleda",
     nombre: "Lizbeth",
     apellido: "Arboleda",
-    cargo: "Miembro",
+    cargo: "Secretaria",
     imagen: "/images/miembros/miembros/lizbeth-arboleda.png",
     social: {
       instagram: "https://www.instagram.com/liz_arboleda/",
@@ -26,7 +16,7 @@ export const miembros: Miembro[] = [
     id: "xavier-barragan",
     nombre: "Xavier",
     apellido: "Barragán",
-    cargo: "Tesorero",
+    cargo: "Miembro",
     imagen: "/images/miembros/miembros/xavier-barragan.png",
     social: {
       instagram: "https://www.instagram.com/xavierbarragan_/",
@@ -37,7 +27,7 @@ export const miembros: Miembro[] = [
     id: "alex-barreno",
     nombre: "Alex",
     apellido: "Barreno",
-    cargo: "Vicepresidente Nacional",
+    cargo: "Miembro",
     imagen: "/images/miembros/miembros/alex-barreno.png",
     social: {
       instagram: "https://www.instagram.com/alexbarreno.a/",
@@ -48,27 +38,17 @@ export const miembros: Miembro[] = [
     nombre: "Romina",
     apellido: "Benítez",
     correo: "romina.benitez@jciambato.org",
-    cargo: "Secretaria",
+    cargo: "Miembro",
     imagen: "/images/miembros/miembros/romina-benitez.png",
     social: {
       instagram: "https://www.instagram.com/ricaduu/",
     },
   },
   {
-    id: "daniel-bombon",
-    nombre: "Daniel",
-    apellido: "Bombón",
-    cargo: "Miembro",
-    imagen: "/images/miembros/miembros/daniel-bombon.png",
-    social: {
-      instagram: "https://www.instagram.com/_dan152_/",
-    },
-  },
-  {
     id: "christian-cabrera",
     nombre: "Christian",
     apellido: "Cabrera",
-    cargo: "Miembro",
+    cargo: "Vicepresidente de Acción Comunitaria",
     imagen: "/images/miembros/miembros/christian-cabrera.png",
     social: {
       instagram: "https://www.instagram.com/christiancabreraecuador/",
@@ -79,7 +59,7 @@ export const miembros: Miembro[] = [
     nombre: "Erick",
     apellido: "Calvache",
     correo: "ecalvache@jciecuador.com",
-    cargo: "Vicepresidente de Negocios y Emprendimientos",
+    cargo: "Vicepresidente del Desarrollo Individual",
     imagen: "/images/miembros/miembros/erick-calvache.png",
     social: {
       instagram: "https://www.instagram.com/erick.calvache.505/",
@@ -97,10 +77,27 @@ export const miembros: Miembro[] = [
     },
   },
   {
+    id: "damaris-castillo",
+    nombre: "Damaris",
+    apellido: "Castillo",
+    cargo: "Miembro",
+    imagen: "/images/miembros/miembros/damaris-castillo.png",
+    social: {
+      instagram: "https://www.instagram.com/damaris_castillob/",
+    },
+  },
+  {
+    id: "belen-castro",
+    nombre: "María Belén",
+    apellido: "Castro",
+    cargo: "Miembro",
+    imagen: "/images/miembros/miembros/belen-castro.png",
+  },
+  {
     id: "gabriela-gonzalez",
     nombre: "Gabriela",
     apellido: "González",
-    cargo: "Presidenta Local 2025",
+    cargo: "Presidente Local 2025",
     imagen: "/images/miembros/miembros/gabriela-gonzalez.png",
     social: {
       instagram: "https://www.instagram.com/gabbys.gm/",
@@ -110,7 +107,7 @@ export const miembros: Miembro[] = [
     id: "augusta-gordillo",
     nombre: "María Augusta",
     apellido: "Gordillo",
-    cargo: "Presidenta Nacional",
+    cargo: "Miembro",
     imagen: "/images/miembros/miembros/augusta-gordillo.png",
     social: {
       instagram: "https://www.instagram.com/magus.gordillo/",
@@ -130,7 +127,7 @@ export const miembros: Miembro[] = [
     id: "nancy-guillen",
     nombre: "Nancy",
     apellido: "Guillén",
-    cargo: "Miembro",
+    cargo: "Asesora Legal",
     imagen: "/images/miembros/miembros/nancy-guillen.png",
     social: {
       instagram: "https://www.instagram.com/abg.nancyguillen/",
@@ -160,7 +157,7 @@ export const miembros: Miembro[] = [
     id: "abigail-lopez",
     nombre: "Abigail",
     apellido: "López",
-    cargo: "Miembro",
+    cargo: "Tesorera",
     imagen: "/images/miembros/miembros/abigail-lopez.png",
     social: {
       instagram: "https://www.instagram.com/abymonse31/",
@@ -181,7 +178,7 @@ export const miembros: Miembro[] = [
     id: "jose-miranda",
     nombre: "Jose",
     apellido: "Miranda",
-    cargo: "Asesor Legal",
+    cargo: "Miembro",
     imagen: "/images/miembros/miembros/jose-miranda.png",
     social: {
       instagram: "https://www.instagram.com/jmirandaxz/",
@@ -198,6 +195,16 @@ export const miembros: Miembro[] = [
     },
   },
   {
+    id: "gitsby-muñoz",
+    nombre: "Gitsby",
+    apellido: "Muñoz",
+    cargo: "Miembro",
+    imagen: "/images/miembros/miembros/gitsby-muñoz.png",
+    social: {
+      instagram: "https://www.instagram.com/anagelmunoz/",
+    },
+  },
+  {
     id: "estefania-ocana",
     nombre: "Estefanía",
     apellido: "Ocaña",
@@ -211,7 +218,7 @@ export const miembros: Miembro[] = [
     id: "sebastian-palate",
     nombre: "Sebastián",
     apellido: "Palate",
-    cargo: "Miembro",
+    cargo: "Vicepresidente de Negocios y Emprendimiento",
     imagen: "/images/miembros/miembros/sebastian-palate.png",
     social: {
       instagram: "https://www.instagram.com/sebastianpalate1/",
@@ -223,7 +230,7 @@ export const miembros: Miembro[] = [
     nombre: "Sayri",
     apellido: "Pamballo",
     correo: "wpamballo@jciambato.com",
-    cargo: "Vicepresidenta de Acción Comunitaria",
+    cargo: "Miembro",
     imagen: "/images/miembros/miembros/sayri-pamballo.png",
     social: {
       instagram: "https://www.instagram.com/willkamayu.pamballo/",
@@ -241,9 +248,9 @@ export const miembros: Miembro[] = [
   },
   {
     id: "lourdes-ramos",
-    nombre: "Lourdes",
+    nombre: "María Lourdes",
     apellido: "Ramos",
-    cargo: "Directora Local de Comunicación",
+    cargo: "Revisora Fiscal",
     imagen: "/images/miembros/miembros/lourdes-ramos.png",
     social: {
       instagram: "https://www.instagram.com/l.u.c.i.e.r.n.a.g.a_l.u/",
@@ -264,7 +271,7 @@ export const miembros: Miembro[] = [
     id: "erika-sanchez",
     nombre: "Erika",
     apellido: "Sánchez",
-    cargo: "Presidenta Local 2023",
+    cargo: "Presidente Local 2023",
     imagen: "/images/miembros/miembros/erika-sanchez.png",
     social: {
       instagram: "https://www.instagram.com/epsaltamirano/",
@@ -275,17 +282,18 @@ export const miembros: Miembro[] = [
     id: "emilia-santamaria",
     nombre: "Emilia",
     apellido: "Santamaría",
-    cargo: "Vicepresidenta Ejecutiva",
+    cargo: "Presidente Local",
     imagen: "/images/miembros/miembros/emilia-santamaria.png",
     social: {
       instagram: "https://www.instagram.com/emyjsc/",
+      linkedin: "https://www.linkedin.com/in/emilia-santamaria-8a249224b/",
     },
   },
   {
     id: "ricardo-santamaria",
     nombre: "Ricardo",
     apellido: "Santamaría",
-    cargo: "Miembro",
+    cargo: "Vicepresidente de Cooperación Internacional",
     imagen: "/images/miembros/miembros/ricardo-santamaria.png",
     social: {
       instagram: "https://www.instagram.com/ricardo_.s/",
@@ -296,7 +304,7 @@ export const miembros: Miembro[] = [
     nombre: "Gustavo",
     apellido: "Solís",
     correo: "gsolis@jciecuador.com",
-    cargo: "Vicepresidente de Desarrollo Individual",
+    cargo: "Vicepresidente Ejecutivo",
     imagen: "/images/miembros/miembros/gustavo-solis.png",
     social: {
       instagram: "https://www.instagram.com/gustavoandressolis/",
@@ -317,7 +325,7 @@ export const miembros: Miembro[] = [
     id: "anthony-tobar",
     nombre: "Anthony",
     apellido: "Tobar",
-    cargo: "Revisor Fiscal",
+    cargo: "Miembro",
     imagen: "/images/miembros/miembros/anthony-tobar.png",
     social: {
       instagram: "https://www.instagram.com/anthon_c1/",

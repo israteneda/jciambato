@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function Bienvenida() {
   return (
-    <section className="inset-0 w-full fixed overflow-hidden items-center box-border h-[760px] pb-[80px]">
-      <div className="relative w-full pt-48 pb-32">
+    <section className="fixed inset-0 box-border h-[760px] w-full items-center overflow-hidden pb-[80px]">
+      <div className="relative w-full pb-32 pt-48">
         <InfoContainer
           subtitle="Información Legal"
           title="Declaración de Privacidad"
@@ -18,7 +18,7 @@ export default function Bienvenida() {
       <RowScroll />
 
       {/* Botón de scroll pantallas pequeñas */}
-      <div className="block md:hidden absolute z-20 bottom-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute bottom-28 left-1/2 z-20 block -translate-x-1/2 -translate-y-1/2 transform md:hidden">
         <button
           aria-label="Desplazarse hacia abajo"
           onClick={() => {
@@ -34,7 +34,7 @@ export default function Bienvenida() {
             alt=""
             width={55}
             height={55}
-            className="relative w-[55px] h-[55px] object-contain"
+            className="relative h-[55px] w-[55px] object-contain"
             aria-hidden="true"
           />
         </button>

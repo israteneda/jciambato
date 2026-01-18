@@ -2,14 +2,14 @@ export default function DeclaracionPrivacidad() {
   return (
     <article className="relative bg-gray-50">
       <div className="py-16">
-        <div className="relative z-10 md:max-w-6xl mx-auto px-8">
+        <div className="relative z-10 mx-auto px-8 md:max-w-6xl">
           <header>
-            <h1 className="text-2xl lg:text-5xl font-bold text-left text-jci-off-black max-w-3xl md:leading-[1.33]">
+            <h1 className="text-jci-off-black max-w-3xl text-left text-2xl font-bold md:leading-[1.33] lg:text-5xl">
               Declaración de Privacidad y Protección de Datos Personales
             </h1>
 
             <time
-              className="text-xl text-inherit italic font-bold text-jci-aqua mt-8 block"
+              className="mt-8 block text-xl font-bold italic text-inherit text-jci-teal"
               dateTime="2025-07"
             >
               Julio, 2025
@@ -18,11 +18,11 @@ export default function DeclaracionPrivacidad() {
 
           <main className="mt-16">
             <section>
-              <h2 className="text-3xl font-bold leading-[1.25] text-left mb-4 text-jci-off-black">
+              <h2 className="mb-4 text-left text-3xl font-bold leading-[1.25] text-jci-black">
                 Declaración de Privacidad y Protección de Datos Personales
               </h2>
               <div>
-                <div className="text-lg font-normal leading-[1.78] text-jci-black text-left max-w-2xl">
+                <div className="max-w-2xl text-left text-lg font-normal leading-[1.78] text-jci-black">
                   <div className="flex flex-col gap-5">
                     <p>
                       La Cámara Junior Internacional (JCI) Ecuador, Capítulo Ambato, en cumplimiento
@@ -40,8 +40,8 @@ export default function DeclaracionPrivacidad() {
                   </div>
 
                   {/* Principios Fundamentales */}
-                  <div className="bg-blue-50 p-6 rounded-lg my-8">
-                    <h3 className="text-xl font-bold mb-4 text-jci-off-black">
+                  <div className="my-8 rounded-lg bg-blue-50 p-6">
+                    <h3 className="mb-4 text-xl font-bold text-jci-black">
                       Principios Fundamentales
                     </h3>
                     <p className="mb-4">
@@ -51,7 +51,7 @@ export default function DeclaracionPrivacidad() {
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start">
-                        <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                        <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                           •
                         </span>
                         <span>
@@ -60,7 +60,7 @@ export default function DeclaracionPrivacidad() {
                         </span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                        <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                           •
                         </span>
                         <span>
@@ -69,7 +69,7 @@ export default function DeclaracionPrivacidad() {
                         </span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                        <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                           •
                         </span>
                         <span>
@@ -78,7 +78,7 @@ export default function DeclaracionPrivacidad() {
                         </span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                        <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                           •
                         </span>
                         <span>
@@ -87,7 +87,7 @@ export default function DeclaracionPrivacidad() {
                         </span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                        <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                           •
                         </span>
                         <span>Los datos personales se tratan de forma confidencial y segura</span>
@@ -95,27 +95,16 @@ export default function DeclaracionPrivacidad() {
                     </ul>
                   </div>
 
-                  <div className="flex flex-col gap-10 mt-10">
+                  <div className="mt-10 flex flex-col gap-10">
                     {/* A */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
-                        A. Definición de Datos Personales
-                      </h4>
-                      <p>
-                        De acuerdo con la LOPDP ecuatoriana, los datos personales son cualquier
-                        información de cualquier naturaleza y en cualquier soporte concerniente a
-                        una persona natural identificada o identificable. Se considera identificable
-                        a una persona natural si puede ser identificada, directa o indirectamente,
-                        en particular por referencia a un identificador como nombre, número de
-                        identificación, datos de localización, identificadores electrónicos o uno o
-                        más elementos específicos de identidad física, fisiológica, genética,
-                        mental, económica, cultural o social.
-                      </p>
-                    </article>
-
-                    {/* B */}
-                    <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                      <h4
+                        className="text-jci-black> A. Definición de Datos Personales </h4> <p> De acuerdo con la LOPDP ecuatoriana, los datos personales son cualquier información de cualquier naturaleza y en cualquier soporte concerniente a una persona natural identificada o identificable. Se considera identificable a una persona natural si puede ser identificada, directa o indirectamente, en particular por referencia a un identificador como nombre, número de identificación, datos de localización, identificadores electrónicos o uno o más elementos específicos de identidad física, fisiológica, genética, mental, económica, cultural o social. </p> </article> {/* B */} <article> <h4 className= mb-4 text-2xl font-bold"
+                        mb-4
+                        text-2xl
+                        font-bold
+                        text-jci-black
+                      >
                         B. Responsable del Tratamiento
                       </h4>
                       <p>
@@ -128,16 +117,16 @@ export default function DeclaracionPrivacidad() {
 
                     {/* C */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                      <h4 className="mb-4 text-2xl font-bold text-jci-black">
                         C. Datos Personales que Recopilamos
                       </h4>
                       <p>
                         De acuerdo con la LOPDP ecuatoriana, recopilamos los siguientes tipos de
                         datos personales:
                       </p>
-                      <ul className="space-y-3 my-2">
+                      <ul className="my-2 space-y-3">
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -146,7 +135,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -155,7 +144,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -164,7 +153,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -177,13 +166,13 @@ export default function DeclaracionPrivacidad() {
 
                     {/* D */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                      <h4 className="mb-4 text-2xl font-bold text-jci-black">
                         D. Finalidades del Tratamiento
                       </h4>
                       <p>Sus datos personales serán tratados para las siguientes finalidades:</p>
-                      <ul className="space-y-3 m-2">
+                      <ul className="m-2 space-y-3">
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -192,7 +181,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -201,7 +190,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -209,13 +198,13 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>Cumplir con obligaciones legales y reglamentarias aplicables</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -228,16 +217,16 @@ export default function DeclaracionPrivacidad() {
 
                     {/* E */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                      <h4 className="mb-4 text-2xl font-bold text-jci-black">
                         E. Base Legal del Tratamiento
                       </h4>
                       <p>
                         El tratamiento de sus datos personales se fundamenta en las siguientes bases
                         legales establecidas en la LOPDP:
                       </p>
-                      <ul className="space-y-3 m-2">
+                      <ul className="m-2 space-y-3">
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -246,7 +235,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -255,7 +244,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -264,7 +253,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -277,13 +266,13 @@ export default function DeclaracionPrivacidad() {
 
                     {/* F */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                      <h4 className="mb-4 text-2xl font-bold text-jci-black">
                         F. Derechos del Titular de Datos
                       </h4>
                       <p>Conforme a la LOPDP ecuatoriana, usted tiene los siguientes derechos:</p>
-                      <ul className="space-y-3 m-2">
+                      <ul className="m-2 space-y-3">
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -292,7 +281,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -301,7 +290,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -310,7 +299,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -319,7 +308,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -328,7 +317,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -337,7 +326,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -346,7 +335,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -360,7 +349,7 @@ export default function DeclaracionPrivacidad() {
 
                     {/* G */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                      <h4 className="mb-4 text-2xl font-bold text-jci-black">
                         G. Conservación de Datos
                       </h4>
                       <p>
@@ -374,28 +363,28 @@ export default function DeclaracionPrivacidad() {
 
                     {/* H */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                      <h4 className="mb-4 text-2xl font-bold text-jci-black">
                         H. Medidas de Seguridad
                       </h4>
                       <p>
                         JCI Ambato implementa medidas técnicas y organizativas apropiadas para
                         proteger sus datos personales contra:
                       </p>
-                      <ul className="space-y-3 m-2">
+                      <ul className="m-2 space-y-3">
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>Acceso no autorizado o uso indebido</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>Pérdida, alteración o destrucción accidental</span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>Divulgación no autorizada</span>
@@ -410,13 +399,13 @@ export default function DeclaracionPrivacidad() {
 
                     {/* I */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                      <h4 className="mb-4 text-2xl font-bold text-jci-black">
                         I. Compartición de Datos
                       </h4>
                       <p>Sus datos personales pueden ser compartidos únicamente con:</p>
-                      <ul className="space-y-3 m-2">
+                      <ul className="m-2 space-y-3">
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -425,7 +414,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -435,7 +424,7 @@ export default function DeclaracionPrivacidad() {
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <span className="text-jci-aqua mr-3 mt-1" aria-hidden="true">
+                          <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
                             •
                           </span>
                           <span>
@@ -454,7 +443,7 @@ export default function DeclaracionPrivacidad() {
 
                     {/* J */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                      <h4 className="mb-4 text-2xl font-bold text-jci-black">
                         J. Transferencias Internacionales
                       </h4>
                       <p>
@@ -468,7 +457,7 @@ export default function DeclaracionPrivacidad() {
 
                     {/* K */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                      <h4 className="mb-4 text-2xl font-bold text-jci-black">
                         K. Autoridad de Control
                       </h4>
                       <p>
@@ -480,7 +469,7 @@ export default function DeclaracionPrivacidad() {
 
                     {/* L */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                      <h4 className="mb-4 text-2xl font-bold text-jci-black">
                         L. Modificaciones a esta Política
                       </h4>
                       <p>
@@ -494,7 +483,7 @@ export default function DeclaracionPrivacidad() {
 
                     {/* M */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                      <h4 className="mb-4 text-2xl font-bold text-jci-black">
                         M. Información Adicional
                       </h4>
                       <p>
@@ -506,12 +495,12 @@ export default function DeclaracionPrivacidad() {
 
                     {/* N */}
                     <article>
-                      <h4 className="text-2xl font-bold mb-4 text-jci-off-black">N. Contacto</h4>
+                      <h4 className="mb-4 text-2xl font-bold text-jci-black">N. Contacto</h4>
                       <p>
                         Para cualquier consulta relacionada con esta Política de Privacidad o el
                         tratamiento de sus datos personales, puede contactarnos a través de:
                       </p>
-                      <address className="bg-gray-100 p-6 rounded-lg not-italic mt-4">
+                      <address className="mt-4 rounded-lg bg-gray-100 p-6 not-italic">
                         <p>
                           <strong>JCI Ambato</strong>
                         </p>
@@ -519,7 +508,7 @@ export default function DeclaracionPrivacidad() {
                           Correo electrónico:{" "}
                           <a
                             href="mailto:jciambato@jciecuador.com"
-                            className="text-jci-aqua font-bold"
+                            className="font-bold text-jci-teal"
                           >
                             jciambato@jciecuador.com
                           </a>

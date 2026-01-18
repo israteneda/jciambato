@@ -46,13 +46,13 @@ export default function ExploraAreasOportunidad({ area }: { area: AreaOportunida
 
           {/* Caja de Información */}
           <div className="mt-16">
-            <div className="relative z-10 bg-transparent max-w-6xl mx-8 md:mx-20 lg:mx-auto">
+            <div className="relative z-10 mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
               <div className="relative z-10">
-                <div className="text-[13px] leading-[1.85] not-italic uppercase text-[#989898] font-aeonik font-bold tracking-normal">
+                <div className="font-aeonik text-[13px] font-bold uppercase not-italic leading-[1.85] tracking-normal text-[#989898]">
                   Quieres conocer más?
                 </div>
                 <div className="mt-2">
-                  <h2 className="text-3xl md:text-4xl font-bold not-italic text-left leading-[1.33] tracking-normal text-black max-w-4xl">
+                  <h2 className="max-w-4xl text-left text-3xl font-bold not-italic leading-[1.33] tracking-normal text-black md:text-4xl">
                     Echa un vistazo a los proyectos que nos han ayudado a crecer a lo largo de los
                     años.
                   </h2>
@@ -61,11 +61,11 @@ export default function ExploraAreasOportunidad({ area }: { area: AreaOportunida
                 <div className="mt-9">
                   <Button
                     radius="none"
-                    className="relative bg-jci-aqua text-white group overflow-hidden"
+                    className="group relative overflow-hidden bg-jci-teal text-white"
                     aria-label="Explora nuestras áreas"
                   >
                     <Link href="/areas-oportunidad">
-                      <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
+                      <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
                       <span className="relative z-10">Explora nuestras áreas</span>
                     </Link>
                   </Button>

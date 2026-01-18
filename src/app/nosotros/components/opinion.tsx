@@ -5,14 +5,14 @@ export default function Opinion() {
   return (
     <section className="relative z-10 overflow-hidden">
       <RotatedText text="Forma parte de una organización a futuro" />
-      <div className="py-36 md:py-48 md:max-w-7xl mx-8 md:mx-20 lg:mx-auto">
-        <div className="relative max-w-lg z-10">
+      <div className="mx-8 py-36 md:mx-20 md:max-w-7xl md:py-48 lg:mx-auto">
+        <div className="relative z-10 max-w-lg">
           <div className="flex flex-col">
-            <div className="text-xs leading-[1.85] uppercase text-[#989898] font-bold">
-              Gabriela González, Presidenta de JCI Ambato 2025
+            <div className="text-xs font-bold uppercase leading-[1.85] text-[#989898]">
+              Emilia Santamaría, Presidenta de JCI Ambato 2026
             </div>
             <div className="mt-10">
-              <p className="text-lg font-normal leading-[1.78] text-white text-left max-w-md">
+              <p className="max-w-md text-left text-lg font-normal leading-[1.78] text-white">
                 50 años después, JCI Ambato se distingue por su capacidad de implementación,
                 valentía para enfrentar retos y compromiso con nuestros valores fundamentales. Esta
                 forma de pensar nos guía en los momentos más difíciles. Seguimos siendo una
@@ -24,12 +24,12 @@ export default function Opinion() {
         </div>
       </div>
 
-      <div className="inset-0 absolute bg-black">
-        <div className="w-full h-full overflow-hidden relative bg-white">
+      <div className="absolute inset-0 bg-black">
+        <div className="relative h-full w-full overflow-hidden bg-white">
           <Image
             alt="Gabriela González, Presidenta de JCI Ambato 2025"
             draggable="false"
-            className="absolute w-full h-full inset-0 object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
             src="/images/secciones/hero-presidenta.png"
             width={800}
             height={800}

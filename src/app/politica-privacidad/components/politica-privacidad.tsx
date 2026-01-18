@@ -31,9 +31,9 @@ export default function PoliticaPrivacidad() {
 
   return (
     <section className="relative bg-gray-50">
-      <nav className="bg-gray-200 min-h-28 mx-8 box-border flex items-center">
+      <nav className="mx-8 box-border flex min-h-28 items-center bg-gray-200">
         <div
-          className="flex flex-wrap gap-6 ml-8 py-8 md:ml-20"
+          className="ml-8 flex flex-wrap gap-6 py-8 md:ml-20"
           role="tablist"
           aria-label="Políticas de privacidad"
         >
@@ -41,7 +41,7 @@ export default function PoliticaPrivacidad() {
             <button
               key={index}
               onClick={() => setActiveButton(index)}
-              className={`text-left text-base font-bold leading-[1.25] mr-11 py-0 transition duration-300 hover:text-gray-700 ${
+              className={`mr-11 py-0 text-left text-base font-bold leading-[1.25] transition duration-300 hover:text-gray-700 ${
                 activeButton === index ? "text-gray-800" : "text-gray-400"
               }`}
               role="tab"

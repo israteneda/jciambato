@@ -8,25 +8,25 @@ export default function Grupo() {
   return (
     <section className="relative z-10 overflow-hidden">
       <div>
-        <figure className="z-10 flex relative justify-end h-52 md:h-[calc(20px+34.375vw)] mb-10">
+        <figure className="relative z-10 mb-10 flex h-52 justify-end md:h-[calc(20px+34.375vw)]">
           <Image
             src="/images/inicio/cincuentenario.png"
             alt="Grupo JCI Ambato - Sesión Solemne 50 Aniversario"
             width={500}
             height={500}
-            className="absolute top-0 right-0 w-[85vw] md:w-[55vw] h-full object-cover"
+            className="absolute right-0 top-0 h-full w-[85vw] object-cover md:w-[55vw]"
           />
         </figure>
 
         <div className="-mt-0 md:-mt-[150px] lg:-mt-[260px]">
           {/* Titulo Principal */}
-          <div className="relative z-10 bg-transparent w-full max-w-6xl mx-8 md:mx-20 lg:mx-auto">
+          <div className="relative z-10 mx-8 w-full max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
             <header className="lg:max-w-5xl">
-              <div className="text-sm leading-[1.85] uppercase text-jci-gold font-bold tracking-normal">
+              <div className="text-sm font-bold uppercase leading-[1.85] tracking-normal text-jci-yellow">
                 Trayectoria que Transforma
               </div>
               <div className="mt-5">
-                <h3 className="text-3xl lg:text-5xl font-bold normal-case text-jci-aqua leading-[1.33] lg:leading-[1.33] tracking-normal max-w-xs md:max-w-[60%] lg:max-w-[75%] text-left">
+                <h3 className="max-w-xs text-left text-3xl font-bold normal-case leading-[1.33] tracking-normal text-jci-teal md:max-w-[60%] lg:max-w-[75%] lg:text-5xl lg:leading-[1.33]">
                   {/* JCI Ambato es sinónimo de liderazgo juvenil, impacto comunitario e innovación al servicio del cambio. */}
                   Somos la organización de liderazgo más importante del centro del país.
                 </h3>
@@ -34,12 +34,12 @@ export default function Grupo() {
             </header>
           </div>
 
-          <div className="relative z-10 bg-transparent w-full max-w-6xl px-8 md:mx-20 lg:mx-auto">
+          <div className="relative z-10 w-full max-w-6xl bg-transparent px-8 md:mx-20 lg:mx-auto">
             <div className="relative gap-5 lg:flex">
               {/* Descripción */}
               <div className="md:ml-16">
                 <div className="mt-8">
-                  <p className="text-base lg:text-lg font-normal normal-case lg:leading-[1.78] tracking-normal text-jci-black text-left max-w-lg">
+                  <p className="max-w-lg text-left text-base font-normal normal-case tracking-normal text-jci-black lg:text-lg lg:leading-[1.78]">
                     <strong>En JCI Ambato, no solo observamos, actuamos. </strong> Lideramos con
                     propósito, servimos con pasión y forjamos un futuro mejor con cada paso que
                     damos, inspirando impacto y transformación en nuestra comunidad.
@@ -50,11 +50,11 @@ export default function Grupo() {
                   <Button
                     radius="none"
                     variant="bordered"
-                    className="relative overflow-hidden border-jci-black text-jci-black group"
+                    className="group relative overflow-hidden border-jci-black text-jci-black"
                     aria-label="Conoce nuestra misión y visión"
                   >
                     <Link href="/nosotros">
-                      <span className="absolute inset-0 transform -translate-x-full bg-jci-black transition-transform duration-300 group-hover:translate-x-0" />
+                      <span className="absolute inset-0 -translate-x-full transform bg-jci-black transition-transform duration-300 group-hover:translate-x-0" />
                       <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
                         Nuestra misión y visión
                       </span>
@@ -64,11 +64,11 @@ export default function Grupo() {
               </div>
 
               {/* Información de la fotografía, visible en pantallas grandes */}
-              <div className="hidden md:block flex-1 grow shrink basis-0">
-                <div className="absolute -top-24 right-[20px] origin-left transform translate-x-[100%] translate-y-[50%] rotate-90">
-                  <div className="relative text-[11px] font-medium leading-none tracking-[2px] text-[rgb(174,174,174)] uppercase pl-[170px]">
+              <div className="hidden flex-1 shrink grow basis-0 md:block">
+                <div className="absolute -top-24 right-[20px] origin-left translate-x-[100%] translate-y-[50%] rotate-90 transform">
+                  <div className="relative pl-[170px] text-[11px] font-medium uppercase leading-none tracking-[2px] text-[rgb(174,174,174)]">
                     <div
-                      className="absolute left-0 top-[5px] w-[160px] h-[1px] bg-[rgb(174,174,174)]"
+                      className="absolute left-0 top-[5px] h-[1px] w-[160px] bg-[rgb(174,174,174)]"
                       aria-hidden="true"
                     ></div>
                     Sesión Solemne por los 50 años de JCI Ambato, 2024
@@ -77,32 +77,32 @@ export default function Grupo() {
               </div>
 
               {/* Estadisticas */}
-              <div className="relative flex-1 grow shrink basis-0 lg:mt-28 lg:mr-20">
+              <div className="relative flex-1 shrink grow basis-0 lg:mr-20 lg:mt-28">
                 <div className="flex flex-wrap gap-10">
                   <div className="mt-20">
-                    <div className="text-jci-navy text-6xl md:text-8xl leading-[1] font-light tracking-[-5px] ">
-                      <span>+51</span>
+                    <div className="text-6xl font-light leading-[1] tracking-[-5px] text-jci-navy md:text-8xl">
+                      <span>+50</span>
                     </div>
-                    <p className="text-base md:text-lg text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
+                    <p className="mt-1 max-w-48 text-left text-base uppercase leading-[1.5] tracking-normal md:text-lg">
                       <strong>Años</strong> formando líderes en Ambato
                     </p>
                   </div>
 
-                  <div className="flex flex-col md:flex-row w-full gap-10">
+                  <div className="flex w-full flex-col gap-10 md:flex-row">
                     <div className="flex-1">
-                      <div className="text-jci-navy text-6xl md:text-8xl leading-[1] tracking-[-5px] font-light">
+                      <div className="text-6xl font-light leading-[1] tracking-[-5px] text-jci-navy md:text-8xl">
                         <span>+200</span>
                       </div>
-                      <p className="text-base md:text-lg text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
+                      <p className="mt-1 max-w-48 text-left text-base uppercase leading-[1.5] tracking-normal md:text-lg">
                         <strong>Proyectos</strong> con impacto comunitario
                       </p>
                     </div>
 
                     <div className="flex-1">
-                      <div className="text-jci-navy text-6xl md:text-8xl leading-[1] font-light tracking-[-5px] ">
+                      <div className="text-6xl font-light leading-[1] tracking-[-5px] text-jci-navy md:text-8xl">
                         <span>+500</span>
                       </div>
-                      <p className="text-base md:text-lg text-left mt-1 max-w-48 uppercase leading-[1.5] tracking-normal">
+                      <p className="mt-1 max-w-48 text-left text-base uppercase leading-[1.5] tracking-normal md:text-lg">
                         <strong>Jóvenes</strong> formados y empoderados
                       </p>
                     </div>
