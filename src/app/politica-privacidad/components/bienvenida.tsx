@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Bienvenida() {
   return (
     <section className="fixed inset-0 box-border h-[760px] w-full items-center overflow-hidden pb-[80px]">
-      <div className="relative w-full pb-32 pt-48">
+      <div className="relative w-full pt-48 pb-32">
         <InfoContainer
           subtitle="Información Legal"
           title="Declaración de Privacidad"

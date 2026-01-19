@@ -5,13 +5,13 @@ export default function Acciones() {
     <section className="relative z-10" aria-labelledby="accion-heading">
       <article className="relative max-w-6xl bg-white lg:mx-auto">
         <header className="p-8 md:p-20">
-          <div className="text-[13px] font-bold uppercase not-italic leading-[1.85] tracking-normal text-jci-yellow">
+          <div className="text-jci-yellow text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
             Grupo JCI
           </div>
           <div className="mt-8">
             <h2
               id="accion-heading"
-              className="max-w-4xl text-left text-3xl font-bold tracking-normal text-jci-navy md:text-4xl lg:text-5xl lg:leading-[1.33]"
+              className="text-jci-navy max-w-4xl text-left text-3xl font-bold tracking-normal md:text-4xl lg:text-5xl lg:leading-[1.33]"
             >
               Se parte de un mundo cambiante, contribuir día a día, estés donde estés.
             </h2>
@@ -27,10 +27,10 @@ export default function Acciones() {
             <div className="flex flex-col justify-between md:flex-row md:items-center">
               <div>
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-left text-xl font-bold not-italic leading-[1.25] tracking-normal text-jci-navy">
+                  <h3 className="text-jci-navy text-left text-xl leading-tight font-bold tracking-normal not-italic">
                     JCI Ecuador
                   </h3>
-                  <h3 className="text-left text-[18px] font-bold not-italic leading-[1.25] tracking-normal text-jci-teal">
+                  <h3 className="text-jci-teal text-left text-[18px] leading-tight font-bold tracking-normal not-italic">
                     JCI Ambato
                   </h3>
                 </div>
@@ -38,14 +38,14 @@ export default function Acciones() {
                 <address className="mt-6 not-italic">
                   <div className="flex flex-col gap-5 md:flex-row">
                     <div className="mr-8">
-                      <h4 className="text-left text-[18px] font-bold not-italic leading-[1.78] tracking-normal text-[#323232]">
+                      <h4 className="text-left text-[18px] leading-[1.78] font-bold tracking-normal text-[#323232] not-italic">
                         Ambato, Ecuador
                       </h4>
                       <div className="mt-2">
-                        <p className="text-left text-sm font-normal not-italic leading-[1.78] tracking-normal text-[#323232]">
+                        <p className="text-left text-sm leading-[1.78] font-normal tracking-normal text-[#323232] not-italic">
                           Zona Metropolitana de Ambato
                         </p>
-                        <p className="text-left text-sm font-normal not-italic leading-[1.78] tracking-normal text-[#323232]">
+                        <p className="text-left text-sm leading-[1.78] font-normal tracking-normal text-[#323232] not-italic">
                           Av. Cevallos y Quito.
                         </p>
                       </div>
@@ -75,13 +75,13 @@ export default function Acciones() {
                                             </div> */}
 
                     <div className="mr-8">
-                      <h4 className="text-left text-[18px] font-bold not-italic leading-[1.78] tracking-normal text-[#323232]">
+                      <h4 className="text-left text-[18px] leading-[1.78] font-bold tracking-normal text-[#323232] not-italic">
                         Correo
                       </h4>
 
                       <a
                         href="mailto:jciambato@jciecuador.com"
-                        className="text-sm font-normal not-italic leading-[1.5] tracking-normal text-jci-teal underline"
+                        className="text-jci-teal text-sm leading-normal font-normal tracking-normal not-italic underline"
                         aria-label="Enviar correo electrónico a jciambato@jciecuador.com"
                       >
                         jciambato@jciecuador.com

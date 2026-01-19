@@ -16,7 +16,7 @@ export default function Bienvenida() {
 
       <RotatedText text="Dentro de nuestros proyectos" />
 
-      <div className="relative w-full pb-32 pt-48">
+      <div className="relative w-full pt-48 pb-32">
         <InfoContainer
           subtitle="Proyectos"
           title="Acciones que dejan huella"

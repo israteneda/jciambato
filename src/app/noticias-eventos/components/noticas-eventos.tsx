@@ -47,21 +47,21 @@ export default function NoticiasEventosPorTipo() {
       >
         <div className="group flex h-full w-full flex-col">
           <header className="flex min-h-[120px] flex-col justify-start">
-            <div className="text-[13px] font-bold uppercase not-italic leading-[1.85] tracking-normal text-[#989898]">
+            <div className="text-[13px] leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
               <span>{noticiaEvento.tipo}</span>
             </div>
 
-            <div className="mt-4 flex-grow">
-              <h3 className="text-jci-off-black text-left text-[22px] font-bold not-italic leading-[1.45] tracking-normal md:text-[calc(17.2px+0.25vw)]">
+            <div className="mt-4 grow">
+              <h3 className="text-jci-off-black text-left text-[22px] leading-[1.45] font-bold tracking-normal not-italic md:text-[calc(17.2px+0.25vw)]">
                 {noticiaEvento.titulo}
               </h3>
             </div>
           </header>
 
-          <div className="mt-6 flex-shrink-0">
-            <div className="group relative inline-block max-w-full cursor-pointer transition duration-[400ms]">
+          <div className="mt-6 shrink-0">
+            <div className="group relative inline-block max-w-full cursor-pointer transition duration-400">
               <div className="flex items-center py-4 text-[#989898]">
-                <span className="group-hover:text-jci-red text-xs font-medium not-italic leading-none tracking-normal transition-colors duration-300">
+                <span className="group-hover:text-jci-red text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                   Leer más
                 </span>
                 <div
@@ -145,7 +145,7 @@ export default function NoticiasEventosPorTipo() {
             className="box-border bg-gray-50 p-12 lg:mx-20"
             aria-label="Filtros de proyectos por área"
           >
-            <div className="text-[13px] font-bold uppercase not-italic leading-[1.85] text-[#989898]">
+            <div className="text-[13px] leading-[1.85] font-bold text-[#989898] uppercase not-italic">
               Explora por tipo
             </div>
 
@@ -159,7 +159,7 @@ export default function NoticiasEventosPorTipo() {
                 <button
                   key={index}
                   onClick={() => handleCategoryChange(index)}
-                  className={`mr-[42px] p-0 text-left text-2xl font-bold leading-[1.25] transition duration-300 hover:text-gray-700 ${
+                  className={`mr-[42px] p-0 text-left text-2xl leading-tight font-bold transition duration-300 hover:text-gray-700 ${
                     activeButton === index ? "text-gray-800" : "text-gray-400"
                   }`}
                   role="tab"
@@ -225,7 +225,7 @@ export default function NoticiasEventosPorTipo() {
                 <Button
                   radius="none"
                   size="lg"
-                  className="group relative overflow-hidden bg-jci-teal text-white"
+                  className="group bg-jci-teal relative overflow-hidden text-white"
                   aria-label="Ver más noticias y eventos"
                   onPress={() => setCurrentPage(currentPage + 1)}
                 >

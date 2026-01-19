@@ -104,7 +104,7 @@ export const Navbar = ({ className }: NavbarProps) => {
   return (
     <HeroUINavbar
       className={clsx(
-        "fixed left-0 right-0 top-0 z-50 select-none transition-all duration-300",
+        "fixed top-0 right-0 left-0 z-50 transition-all duration-300 select-none",
         isScrolled ? "bg-white shadow-md" : "bg-transparent",
         className
       )}
@@ -125,10 +125,9 @@ export const Navbar = ({ className }: NavbarProps) => {
           <NextLink href="/" aria-label="Ir a la página de inicio">
             <Image
               alt="JCI Ambato Logo"
-              className="h-[115px] w-[115px] object-contain"
-              // src="/images/logos/jci-ambato.png"
-              src={isScrolled ? "/images/logos/jci-ambato.png" : "/images/logos/jci-ambato-bw.png"}
-              width={115}
+              className="h-28 w-28 object-contain"
+              src={shouldUseDarkText ? "/images/logos/jci-ambato.png" : "/images/logos/jci-ambato-bw.png"}
+              width={112}
               height={115}
               priority
               draggable="false"
@@ -206,7 +205,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         </nav>
 
         {/* Redes sociales - Pie del menú móvil */}
-        <div className="mx-4 mt-auto border-t border-gray-200 pb-6 pt-6">
+        <div className="mx-4 mt-auto border-t border-gray-200 pt-6 pb-6">
           <div className="flex justify-start gap-4">
             {siteConfig.links.facebook && (
               <a

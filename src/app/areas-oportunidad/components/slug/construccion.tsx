@@ -33,12 +33,12 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
   };
 
   return (
-    <section className="relative z-[1] overflow-hidden">
+    <section className="relative z-1 overflow-hidden">
       <div>
         {/*Caja Roja del Brochure*/}
         <div className="relative z-20">
           <div className="relative z-10 m-8 max-w-6xl md:mx-20 lg:mx-auto">
-            <div className="z-30 box-border flex bg-jci-navy p-4 md:max-w-[65%] md:translate-y-1/2 md:p-10 lg:max-w-[50%]">
+            <div className="bg-jci-navy z-30 box-border flex p-4 md:max-w-[65%] md:translate-y-1/2 md:p-10 lg:max-w-[50%]">
               <div className="w-full">
                 <div className="flex flex-wrap gap-x-2 text-xs font-bold text-white md:text-sm">
                   <span>Brochure</span>
@@ -46,7 +46,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                 </div>
 
                 <div className="mt-2">
-                  <h3 className="text-xl font-bold leading-tight text-white md:text-3xl">
+                  <h3 className="text-xl leading-tight font-bold text-white md:text-3xl">
                     {area.title}
                   </h3>
                 </div>
@@ -89,7 +89,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                   spaceBetween={0}
                   slidesPerView={"auto"}
                   grabCursor={true}
-                  className="!overflow-visible"
+                  className="overflow-visible!"
                   onSlideChange={handleSlideChange}
                 >
                   {area.images
@@ -120,11 +120,11 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
             <div className="mt-2 flex items-center justify-between">
               {/* Contador */}
               <div className="pointer-events-none inline-flex -rotate-90 flex-col">
-                <div className="inline-block border-b border-jci-black py-1 text-2xl text-jci-black md:py-2 md:text-4xl">
+                <div className="border-jci-black text-jci-black inline-block border-b py-1 text-2xl md:py-2 md:text-4xl">
                   {currentSlide.toString().padStart(2, "0")}
                 </div>
 
-                <div className="inline-block py-1 text-2xl text-jci-black md:py-2 md:text-4xl">
+                <div className="text-jci-black inline-block py-1 text-2xl md:py-2 md:text-4xl">
                   {totalSlides.toString().padStart(2, "0")}
                 </div>
               </div>

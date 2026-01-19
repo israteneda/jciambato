@@ -7,16 +7,16 @@ export default function Valores() {
         <div className="mx-8 max-w-6xl sm:mx-20 lg:mx-auto">
           {/* Titulo */}
           <header>
-            <div className="leading-2 text-xs font-bold uppercase text-jci-yellow">Nuestro ADN</div>
+            <div className="text-jci-yellow text-xs leading-2 font-bold uppercase">Nuestro ADN</div>
 
             <div className="mt-6">
-              <h2 className="max-w-[470px] text-left text-4xl font-bold leading-none text-black md:text-5xl">
+              <h2 className="max-w-[470px] text-left text-4xl leading-none font-bold text-black md:text-5xl">
                 Nuestros Valores
               </h2>
             </div>
 
             <div className="mt-16">
-              <p className="max-w-md text-left text-medium leading-[1.78] text-jci-black md:text-xl">
+              <p className="text-medium text-jci-black max-w-md text-left leading-[1.78] md:text-xl">
                 En JCI Ambato, nuestros valores guían el crecimiento personal y organizacional,
                 impulsando un progreso mutuo y sostenible.
               </p>
@@ -34,12 +34,12 @@ export default function Valores() {
               {valores.map((valor) => (
                 <article key={valor.id} className="mb-8 flex flex-row items-start" role="listitem">
                   <div className="mr-5">
-                    <div className="text-5xl font-bold leading-none text-jci-seafoam">
+                    <div className="text-jci-seafoam text-5xl leading-none font-bold">
                       {valor.id}
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-left text-xl font-bold leading-[1.45] text-jci-black">
+                    <h3 className="text-jci-black text-left text-xl leading-[1.45] font-bold">
                       {valor.titulo}
                     </h3>
                     <div className="mt-2">

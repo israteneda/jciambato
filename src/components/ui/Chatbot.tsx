@@ -182,10 +182,10 @@ export default function Chatbot({ className }: ChatbotProps) {
       {/* Componente de cuenta regresiva */}
       {showLaunchCountdown && <LaunchCountdown onComplete={handleLaunchComplete} />}
 
-      <div className={`fixed bottom-3 right-3 z-[9999] ${className}`}>
+      <div className={`fixed right-3 bottom-3 z-9999 ${className}`}>
         {/* Chat Window */}
         <div
-          className={`absolute bottom-16 right-0 transform transition-all duration-300 ease-in-out ${
+          className={`absolute right-0 bottom-16 transform transition-all duration-300 ease-in-out ${
             isOpen
               ? "translate-y-0 scale-100 opacity-100"
               : "pointer-events-none translate-y-4 scale-95 opacity-0"
@@ -193,10 +193,10 @@ export default function Chatbot({ className }: ChatbotProps) {
         >
           <Card className="h-96 w-80 border-0 bg-white shadow-2xl">
             {/* Header */}
-            <div className="flex items-center justify-between rounded-t-lg bg-gradient-to-r from-jci-navy to-jci-teal p-4 text-white">
+            <div className="from-jci-navy to-jci-teal flex items-center justify-between rounded-t-lg bg-linear-to-r p-4 text-white">
               <div className="flex items-center gap-2">
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
-                  <BsRobot className="h-5 w-5 text-jci-navy" />
+                  <BsRobot className="text-jci-navy h-5 w-5" />
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold">Junior Bot</h3>
@@ -223,14 +223,14 @@ export default function Chatbot({ className }: ChatbotProps) {
                   }`}
                 >
                   {message.sender === "bot" && (
-                    <div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-jci-teal">
+                    <div className="bg-jci-teal mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
                       <BsRobot className="h-3 w-3 text-white" />
                     </div>
                   )}
                   <div
                     className={`max-w-[70%] rounded-lg p-3 text-sm transition-all duration-200 ${
                       message.sender === "user"
-                        ? "rounded-br-none bg-jci-navy text-white"
+                        ? "bg-jci-navy rounded-br-none text-white"
                         : "rounded-bl-none border bg-white text-gray-800"
                     }`}
                   >
@@ -244,7 +244,7 @@ export default function Chatbot({ className }: ChatbotProps) {
                     </p>
                   </div>
                   {message.sender === "user" && (
-                    <div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-jci-yellow">
+                    <div className="bg-jci-yellow mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
                       <HiUser className="h-3 w-3 text-white" />
                     </div>
                   )}
@@ -253,18 +253,18 @@ export default function Chatbot({ className }: ChatbotProps) {
 
               {isLoading && (
                 <div className="animate-in slide-in-from-bottom-2 flex items-start gap-2 duration-300">
-                  <div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-jci-teal">
+                  <div className="bg-jci-teal mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
                     <BsRobot className="h-3 w-3 text-white" />
                   </div>
                   <div className="max-w-[70%] rounded-lg rounded-bl-none border bg-white p-3 text-gray-800">
                     <div className="flex space-x-1">
-                      <div className="h-2 w-2 animate-bounce rounded-full bg-jci-teal"></div>
+                      <div className="bg-jci-teal h-2 w-2 animate-bounce rounded-full"></div>
                       <div
-                        className="h-2 w-2 animate-bounce rounded-full bg-jci-teal"
+                        className="bg-jci-teal h-2 w-2 animate-bounce rounded-full"
                         style={{ animationDelay: "0.1s" }}
                       ></div>
                       <div
-                        className="h-2 w-2 animate-bounce rounded-full bg-jci-teal"
+                        className="bg-jci-teal h-2 w-2 animate-bounce rounded-full"
                         style={{ animationDelay: "0.2s" }}
                       ></div>
                     </div>
@@ -282,14 +282,14 @@ export default function Chatbot({ className }: ChatbotProps) {
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Escribe tu mensaje..."
-                  className="flex-1 transition-all duration-200 focus:ring-2 focus:ring-jci-teal"
+                  className="focus:ring-jci-teal flex-1 transition-all duration-200 focus:ring-2"
                   size="sm"
                   disabled={isLoading}
                 />
                 <Button
                   onPress={sendMessage}
                   isIconOnly
-                  className="bg-jci-teal text-white transition-all duration-200 hover:scale-105 hover:bg-jci-navy active:scale-95"
+                  className="bg-jci-teal hover:bg-jci-navy text-white transition-all duration-200 hover:scale-105 active:scale-95"
                   disabled={isLoading || !inputMessage.trim()}
                   size="sm"
                 >
@@ -303,7 +303,7 @@ export default function Chatbot({ className }: ChatbotProps) {
         {/* Toggle Button */}
         <Button
           onPress={toggleChat}
-          className={`h-14 w-14 transform rounded-full bg-gradient-to-r from-jci-navy to-jci-teal text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl active:scale-95 ${
+          className={`from-jci-navy to-jci-teal h-14 w-14 transform rounded-full bg-linear-to-r text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl active:scale-95 ${
             isOpen ? "rotate-45" : "rotate-0"
           }`}
           isIconOnly

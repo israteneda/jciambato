@@ -9,7 +9,7 @@ export default function CondicionesUso() {
             </h1>
 
             <time
-              className="mt-8 block text-xl font-bold italic text-inherit text-jci-teal"
+              className="text-jci-teal mt-8 block text-xl font-bold text-inherit italic"
               dateTime="2025-07"
             >
               Julio, 2025
@@ -18,7 +18,7 @@ export default function CondicionesUso() {
 
           <main className="mt-16">
             <section>
-              <div className="max-w-2xl text-left text-lg font-normal leading-[1.78] text-jci-black">
+              <div className="text-jci-black max-w-2xl text-left text-lg leading-[1.78] font-normal">
                 <div className="flex flex-col gap-5">
                   <section>
                     <div className="flex flex-col gap-10">
@@ -34,7 +34,7 @@ export default function CondicionesUso() {
                         </h4>
                         <ul className="my-2 space-y-3">
                           <li className="flex items-start">
-                            <span className="mr-3 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -47,7 +47,7 @@ export default function CondicionesUso() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="mr-3 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -59,7 +59,7 @@ export default function CondicionesUso() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="mr-3 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -67,7 +67,7 @@ export default function CondicionesUso() {
                               cualquier contenido, contáctenos en{" "}
                               <a
                                 href="mailto:ambato@jciecuador.com"
-                                className="font-bold text-jci-teal"
+                                className="text-jci-teal font-bold"
                               >
                                 ambato@jciecuador.com
                               </a>
@@ -77,12 +77,12 @@ export default function CondicionesUso() {
                       </article>
 
                       <article>
-                        <h4 className="mb-4 text-2xl font-bold text-jci-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           2. Uso Adecuado del Sitio
                         </h4>
                         <ul className="my-2 space-y-3">
                           <li className="flex items-start">
-                            <span className="mr-3 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -95,7 +95,7 @@ export default function CondicionesUso() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="mr-3 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -108,7 +108,7 @@ export default function CondicionesUso() {
                       </article>
 
                       <article>
-                        <h4 className="mb-4 text-2xl font-bold text-jci-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           3. Consecuencias Legales
                         </h4>
                         <p>
@@ -117,7 +117,7 @@ export default function CondicionesUso() {
                         </p>
                         <ul className="my-2 space-y-3">
                           <li className="flex items-start">
-                            <span className="mr-3 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -126,7 +126,7 @@ export default function CondicionesUso() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="mr-3 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -136,7 +136,7 @@ export default function CondicionesUso() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="mr-3 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -147,7 +147,7 @@ export default function CondicionesUso() {
                       </article>
 
                       <article>
-                        <h4 className="mb-4 text-2xl font-bold text-jci-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           4. Enlaces a Terceros
                         </h4>
                         <p>
@@ -160,12 +160,12 @@ export default function CondicionesUso() {
                       </article>
 
                       <article>
-                        <h4 className="mb-4 text-2xl font-bold text-jci-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           5. Limitación de Responsabilidad
                         </h4>
                         <ul className="my-2 space-y-3">
                           <li className="flex items-start">
-                            <span className="mr-3 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -174,7 +174,7 @@ export default function CondicionesUso() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="mr-3 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -187,7 +187,7 @@ export default function CondicionesUso() {
                       </article>
 
                       <article>
-                        <h4 className="mb-4 text-2xl font-bold text-jci-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           6. Modificaciones al Sitio
                         </h4>
                         <p>
@@ -205,7 +205,7 @@ export default function CondicionesUso() {
                       Zona Distrital de la provincia de Tungurahua, municipio de Ambato, Ecuador{" "}
                       <br />
                       Inscrita en el Registro con el número 000 000. <br />
-                      <a href="mailto:ambato@jciecuador.com" className="font-bold text-jci-teal">
+                      <a href="mailto:ambato@jciecuador.com" className="text-jci-teal font-bold">
                         ambato@jciecuador.com
                       </a>
                     </p>

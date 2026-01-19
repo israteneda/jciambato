@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
 
 interface LaunchCountdownProps {
@@ -138,7 +138,7 @@ export default function LaunchCountdown({ onComplete }: LaunchCountdownProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-[9998] flex items-center justify-center bg-black bg-opacity-75">
+    <div className="bg-opacity-75 fixed inset-0 z-9998 flex items-center justify-center bg-black">
       {/* Contador */}
       {count > 0 && (
         <div className="text-center">

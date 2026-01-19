@@ -23,11 +23,11 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
               <div className="box-border w-full p-8 md:p-20 md:pt-20">
                 <div className="flex flex-col justify-between md:flex-row md:items-center">
                   <div>
-                    <div className="text-[13px] uppercase not-italic leading-[1.85] tracking-[1px] text-jci-black">
+                    <div className="text-jci-black text-[13px] leading-[1.85] tracking-[1px] uppercase not-italic">
                       {proyecto.area_oportunidad}
                     </div>
                     <div className="mt-8 max-w-3xl">
-                      <h2 className="text-jci-off-black text-left text-3xl font-bold leading-[1.33] sm:text-[calc(28.8px+1vw)] md:text-5xl">
+                      <h2 className="text-jci-off-black text-left text-3xl leading-[1.33] font-bold sm:text-[calc(28.8px+1vw)] md:text-5xl">
                         {proyecto.nombre}
                       </h2>
                     </div>
@@ -49,7 +49,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                 <div className="mt-10 md:mt-20">
                   <div className="border-t border-t-gray-200">
                     <div className="border-a border-a-gray-200 flex flex-col py-[23px] md:flex-row">
-                      <div className="text-[18px] leading-[1.33] text-jci-black md:w-[30%]">
+                      <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Estado
                       </div>
                       <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
@@ -59,7 +59,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                   </div>
                   <div className="w-full border-t border-t-gray-200">
                     <div className="border-a border-a-gray-200 flex w-full flex-col py-[23px] md:flex-row">
-                      <div className="text-[18px] leading-[1.33] text-jci-black md:w-[30%]">
+                      <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Área de Oportunidad
                       </div>
                       <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
@@ -69,7 +69,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                   </div>
                   <div className="border-t border-t-gray-200">
                     <div className="border-a border-a-gray-200 flex flex-col py-[23px] md:flex-row">
-                      <div className="text-[18px] leading-[1.33] text-jci-black md:w-[30%]">
+                      <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Director/a
                       </div>
                       <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
@@ -79,7 +79,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                   </div>
                   <div className="border-t border-t-gray-200">
                     <div className="border-a border-a-gray-200 flex flex-col py-[23px] md:flex-row">
-                      <div className="text-[18px] leading-[1.33] text-jci-black md:w-[30%]">
+                      <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Subdirector/a
                       </div>
                       <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
@@ -89,7 +89,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                   </div>
                   <div className="border-t border-t-gray-200">
                     <div className="border-a border-a-gray-200 flex flex-col py-[23px] md:flex-row">
-                      <div className="text-[18px] leading-[1.33] text-jci-black md:w-[30%]">
+                      <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Fecha
                       </div>
                       <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
@@ -99,7 +99,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                   </div>
                   <div className="border-t border-t-gray-200">
                     <div className="border-a border-a-gray-200 flex flex-col py-[23px] md:flex-row">
-                      <div className="text-[18px] leading-[1.33] text-jci-black md:w-[30%]">
+                      <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Lugar
                       </div>
                       <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
@@ -110,13 +110,13 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                 </div>
 
                 <div className="mt-20">
-                  <div className="mb-5 text-xl font-bold leading-[1.33] text-jci-black">
+                  <div className="text-jci-black mb-5 text-xl leading-[1.33] font-bold">
                     Intervención
                   </div>
                   <div className="flex w-full flex-col md:flex-row">
                     <div className="w-full pr-0 md:pr-24">
                       <div className="pb-20">
-                        <div className="flex flex-col gap-5 text-medium leading-[1.71] text-jci-black">
+                        <div className="text-medium text-jci-black flex flex-col gap-5 leading-[1.71]">
                           <p>{proyecto.descripcion}</p>
 
                           <p>
@@ -128,13 +128,13 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
 
                     <div className="w-[20%]">
                       <div className="flex flex-col items-start gap-2">
-                        <div className="text-xs font-semibold uppercase tracking-[1px] text-jci-black">
+                        <div className="text-jci-black text-xs font-semibold tracking-[1px] uppercase">
                           Compartir en
                         </div>
 
                         <div className="flex flex-col items-start gap-1">
                           <button
-                            className="cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300 hover:text-jci-seafoam"
+                            className="hover:text-jci-seafoam cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300"
                             onClick={() =>
                               shareOnSocialMedia("facebook", getShareContentFromProyecto(proyecto))
                             }
@@ -143,7 +143,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                             Facebook
                           </button>
                           <button
-                            className="cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300 hover:text-jci-seafoam"
+                            className="hover:text-jci-seafoam cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300"
                             onClick={() =>
                               shareOnSocialMedia("linkedin", getShareContentFromProyecto(proyecto))
                             }

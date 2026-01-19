@@ -28,7 +28,7 @@ export default function Bienvenida({ area }: { area: AreaOportunidad }) {
           <BackgroundImage image={area.background_image} alt={`Imagen de fondo de ${area.title}`} />
         </div>
 
-        <div className="absolute right-2 top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 transform md:block">
+        <div className="absolute top-1/2 right-2 z-20 hidden -translate-x-1/2 -translate-y-1/2 transform md:block">
           <button
             aria-label="Desplazarse hacia abajo"
             onClick={() => {
@@ -64,7 +64,7 @@ export default function Bienvenida({ area }: { area: AreaOportunidad }) {
               });
             }}
           >
-            <span className="text-end text-[10.5px] font-semibold uppercase text-jci-teal">
+            <span className="text-jci-teal text-end text-[10.5px] font-semibold uppercase">
               Descubre <br /> más
             </span>
             <Image

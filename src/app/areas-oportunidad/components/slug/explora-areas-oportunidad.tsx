@@ -38,7 +38,7 @@ export default function ExploraAreasOportunidad({ area }: { area: AreaOportunida
   const [firstKeyword, secondKeyword] = extractTwoKeywords(area.title);
 
   return (
-    <section className="relative z-[1] bg-transparent">
+    <section className="relative z-1 bg-transparent">
       <div className="my-32">
         <div className="relative">
           {/* Texto rotado */}
@@ -48,11 +48,11 @@ export default function ExploraAreasOportunidad({ area }: { area: AreaOportunida
           <div className="mt-16">
             <div className="relative z-10 mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
               <div className="relative z-10">
-                <div className="font-aeonik text-[13px] font-bold uppercase not-italic leading-[1.85] tracking-normal text-[#989898]">
+                <div className="font-aeonik text-[13px] leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
                   Quieres conocer más?
                 </div>
                 <div className="mt-2">
-                  <h2 className="max-w-4xl text-left text-3xl font-bold not-italic leading-[1.33] tracking-normal text-black md:text-4xl">
+                  <h2 className="max-w-4xl text-left text-3xl leading-[1.33] font-bold tracking-normal text-black not-italic md:text-4xl">
                     Echa un vistazo a los proyectos que nos han ayudado a crecer a lo largo de los
                     años.
                   </h2>
@@ -61,7 +61,7 @@ export default function ExploraAreasOportunidad({ area }: { area: AreaOportunida
                 <div className="mt-9">
                   <Button
                     radius="none"
-                    className="group relative overflow-hidden bg-jci-teal text-white"
+                    className="group bg-jci-teal relative overflow-hidden text-white"
                     aria-label="Explora nuestras áreas"
                   >
                     <Link href="/areas-oportunidad">

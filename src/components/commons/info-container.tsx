@@ -65,19 +65,19 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
         // Version Claro (para fondos oscuros)
         <>
           <header>
-            <h2 className="text-xs font-bold uppercase not-italic leading-[1.85] tracking-normal text-jci-yellow">
+            <h2 className="text-jci-yellow text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">
               {subtitle}
             </h2>
 
             <div className="mt-8">
-              <h1 className="max-w-4xl text-left text-3xl font-bold not-italic leading-[1] tracking-[-0.5px] text-gray-200 md:text-5xl lg:text-6xl">
+              <h1 className="max-w-4xl text-left text-3xl leading-none font-bold tracking-[-0.5px] text-gray-200 not-italic md:text-5xl lg:text-6xl">
                 {title}
               </h1>
             </div>
           </header>
 
           <div className="mt-9">
-            <p className="max-w-xl text-left text-xl font-normal not-italic leading-[1.45] tracking-normal text-gray-100">
+            <p className="max-w-xl text-left text-xl leading-[1.45] font-normal tracking-normal text-gray-100 not-italic">
               {description}
             </p>
           </div>
@@ -86,19 +86,19 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
         // Version Oscuro (para fondos claros)
         <>
           <header>
-            <h2 className="text-xs font-bold uppercase not-italic leading-[1.85] tracking-normal text-jci-teal">
+            <h2 className="text-jci-teal text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">
               {subtitle}
             </h2>
 
             <div className="mt-8">
-              <h1 className="max-w-4xl text-left text-3xl font-bold not-italic leading-[1] tracking-[-0.5px] text-gray-900 lg:text-6xl">
+              <h1 className="max-w-4xl text-left text-3xl leading-none font-bold tracking-[-0.5px] text-gray-900 not-italic lg:text-6xl">
                 {title}
               </h1>
             </div>
           </header>
 
           <div className="mt-9">
-            <p className="max-w-xl text-left text-xl font-normal not-italic leading-[1.45] tracking-normal text-gray-900">
+            <p className="max-w-xl text-left text-xl leading-[1.45] font-normal tracking-normal text-gray-900 not-italic">
               {description}
             </p>
           </div>

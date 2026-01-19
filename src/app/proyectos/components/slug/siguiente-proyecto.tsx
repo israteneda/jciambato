@@ -16,7 +16,7 @@ export default function SiguienteProyecto({ proyecto }: { proyecto: Proyecto }) 
   }
 
   return (
-    <section className="relative z-[1] bg-transparent">
+    <section className="relative z-1 bg-transparent">
       <div className="bg-[#e8e8e8] py-28">
         <div className="relative">
           {/* Texto rotado */}
@@ -30,16 +30,16 @@ export default function SiguienteProyecto({ proyecto }: { proyecto: Proyecto }) 
                 aria-label={`Ir a ${nextProyecto.titulo}`}
               >
                 <div className="relative z-10">
-                  <div className="font-aeonik text-[13px] font-bold uppercase not-italic leading-[1.85] tracking-normal text-[#989898]">
+                  <div className="font-aeonik text-[13px] leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
                     Proyectos
                   </div>
                   <div className="mt-2">
                     <div className="flex flex-col gap-2 md:flex-row md:items-center">
                       <div className="flex flex-col gap-1">
-                        <h2 className="max-w-4xl text-left text-3xl font-light leading-[1.33] tracking-normal text-jci-black md:text-4xl lg:text-5xl">
+                        <h2 className="text-jci-black max-w-4xl text-left text-3xl leading-[1.33] font-light tracking-normal md:text-4xl lg:text-5xl">
                           Siguiente Proyecto
                         </h2>
-                        <h2 className="max-w-4xl text-left text-3xl font-bold not-italic leading-[1.33] tracking-normal text-jci-black md:text-4xl lg:text-5xl">
+                        <h2 className="text-jci-black max-w-4xl text-left text-3xl leading-[1.33] font-bold tracking-normal not-italic md:text-4xl lg:text-5xl">
                           {nextProyecto.titulo}
                         </h2>
                       </div>

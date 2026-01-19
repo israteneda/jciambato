@@ -23,7 +23,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
       <div>
         <div className="h-[150px] md:h-80"></div>
 
-        <div className="absolute left-0 right-0 top-0 z-20 pt-24 md:pt-44">
+        <div className="absolute top-0 right-0 left-0 z-20 pt-24 md:pt-44">
           <div className="relative z-10 mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
             {/* Breadcrumbs */}
             {/* <div className="mb-4">
@@ -40,9 +40,9 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                   className="mr-3 flex transform items-center transition-transform duration-300 group-hover:-translate-x-1"
                   aria-hidden="true"
                 >
-                  <HiOutlineArrowNarrowLeft className="h-5 w-5 text-jci-black transition-colors duration-300 group-hover:text-jci-teal" />
+                  <HiOutlineArrowNarrowLeft className="text-jci-black group-hover:text-jci-teal h-5 w-5 transition-colors duration-300" />
                 </div>
-                <span className="text-xs leading-none text-jci-black transition-colors duration-300 group-hover:text-jci-teal">
+                <span className="text-jci-black group-hover:text-jci-teal text-xs leading-none transition-colors duration-300">
                   Volver a noticias y eventos
                 </span>
               </div>
@@ -59,17 +59,17 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
         <div className="relative mx-auto px-8 py-20 pb-36 md:max-w-6xl md:bg-white md:px-20">
           <div className="">
             <header>
-              <p className="text-xs font-bold uppercase leading-[1.85] text-jci-black">
+              <p className="text-jci-black text-xs leading-[1.85] font-bold uppercase">
                 {noticiaEvento.tipo}
               </p>
               <div className="mt-8">
-                <h2 className="font-aeonik-bold max-w-[862px] text-left text-3xl font-bold leading-[1.33] text-black sm:text-[calc(28.8px+1vw)] md:text-[48px]">
+                <h2 className="font-aeonik-bold max-w-[862px] text-left text-3xl leading-[1.33] font-bold text-black sm:text-[calc(28.8px+1vw)] md:text-[48px]">
                   {noticiaEvento.titulo}
                 </h2>
               </div>
               {noticiaEvento.subtitulo && (
                 <div className="mt-4">
-                  <p className="text-jci-gray max-w-[862px] text-lg font-medium leading-relaxed">
+                  <p className="text-jci-gray max-w-[862px] text-lg leading-relaxed font-medium">
                     {noticiaEvento.subtitulo}
                   </p>
                 </div>
@@ -77,10 +77,10 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
             </header>
 
             <div className="mt-10 md:mt-20">
-              <div className="text-xs font-normal uppercase leading-[1.71] tracking-[1px]">
+              <div className="text-xs leading-[1.71] font-normal tracking-[1px] uppercase">
                 {noticiaEvento.fecha}
               </div>
-              <div className="text-[10px] font-normal uppercase leading-[1.71] tracking-[1px]">
+              <div className="text-[10px] leading-[1.71] font-normal tracking-[1px] uppercase">
                 {noticiaEvento.lugar}
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {/* Introducción */}
                         {noticiaEvento.contenido?.introduccion && (
                           <div className="mb-8">
-                            <p className="text-jci-off-black text-lg font-medium leading-relaxed md:text-xl">
+                            <p className="text-jci-off-black text-lg leading-relaxed font-medium md:text-xl">
                               {noticiaEvento.contenido.introduccion}
                             </p>
                           </div>
@@ -118,7 +118,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {/* Descripción principal (fallback si no hay contenido estructurado) */}
                         {!noticiaEvento.contenido && noticiaEvento.descripcion && (
                           <div className="mb-8">
-                            <p className="whitespace-pre-line text-medium leading-[1.71] text-jci-black">
+                            <p className="text-medium text-jci-black leading-[1.71] whitespace-pre-line">
                               {noticiaEvento.descripcion}
                             </p>
                           </div>
@@ -127,7 +127,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {/* Párrafos de contenido */}
                         {noticiaEvento.contenido?.parrafos &&
                           noticiaEvento.contenido.parrafos.length > 0 && (
-                            <div className="flex flex-col gap-5 text-medium leading-[1.71] text-jci-black">
+                            <div className="text-medium text-jci-black flex flex-col gap-5 leading-[1.71]">
                               {noticiaEvento.contenido.parrafos.map((parrafo, index) => (
                                 <p key={index}>{parrafo}</p>
                               ))}
@@ -137,17 +137,17 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {/* Puntos destacados */}
                         {noticiaEvento.contenido?.destacados &&
                           noticiaEvento.contenido.destacados.length > 0 && (
-                            <div className="my-10 border-l-4 border-jci-teal bg-gray-50 p-6">
-                              <h3 className="mb-4 text-xl font-bold text-jci-black">
+                            <div className="border-jci-teal my-10 border-l-4 bg-gray-50 p-6">
+                              <h3 className="text-jci-black mb-4 text-xl font-bold">
                                 Puntos Destacados
                               </h3>
                               <ul className="space-y-3">
                                 {noticiaEvento.contenido.destacados.map((punto, index) => (
                                   <li
                                     key={index}
-                                    className="flex items-start text-medium text-jci-black"
+                                    className="text-medium text-jci-black flex items-start"
                                   >
-                                    <span className="mr-3 font-bold text-jci-teal">•</span>
+                                    <span className="text-jci-teal mr-3 font-bold">•</span>
                                     <span>{punto}</span>
                                   </li>
                                 ))}
@@ -162,9 +162,9 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                               {noticiaEvento.contenido.citas.map((cita, index) => (
                                 <blockquote
                                   key={index}
-                                  className="my-6 border-l-4 border-jci-seafoam py-4 pl-6 italic"
+                                  className="border-jci-seafoam my-6 border-l-4 py-4 pl-6 italic"
                                 >
-                                  <p className="mb-2 text-lg leading-relaxed text-jci-black">
+                                  <p className="text-jci-black mb-2 text-lg leading-relaxed">
                                     &ldquo;{cita.texto}&rdquo;
                                   </p>
                                   <footer className="text-jci-gray text-sm font-semibold">
@@ -207,8 +207,8 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {/* Logros */}
                         {noticiaEvento.contenido?.logros &&
                           noticiaEvento.contenido.logros.length > 0 && (
-                            <div className="my-10 rounded-lg bg-gradient-to-br from-jci-teal/10 to-jci-seafoam/10 p-8">
-                              <h3 className="mb-6 text-2xl font-bold text-jci-black">
+                            <div className="from-jci-teal/10 to-jci-seafoam/10 my-10 rounded-lg bg-linear-to-br p-8">
+                              <h3 className="text-jci-black mb-6 text-2xl font-bold">
                                 Logros Alcanzados
                               </h3>
                               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -217,10 +217,10 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                                     key={index}
                                     className="flex items-center rounded bg-white p-4 shadow-sm"
                                   >
-                                    <div className="mr-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-jci-teal font-bold text-white">
+                                    <div className="bg-jci-teal mr-3 flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-bold text-white">
                                       ✓
                                     </div>
-                                    <span className="text-sm text-jci-black">{logro}</span>
+                                    <span className="text-jci-black text-sm">{logro}</span>
                                   </div>
                                 ))}
                               </div>
@@ -231,7 +231,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {noticiaEvento.contenido?.impacto &&
                           noticiaEvento.contenido.impacto.length > 0 && (
                             <div className="my-10">
-                              <h3 className="mb-6 text-2xl font-bold text-jci-black">
+                              <h3 className="text-jci-black mb-6 text-2xl font-bold">
                                 Impacto del Evento
                               </h3>
                               <div className="space-y-6">
@@ -240,10 +240,10 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                                     key={index}
                                     className="border-jci-red border-l-4 bg-gray-50 p-6"
                                   >
-                                    <h4 className="mb-2 text-lg font-bold text-jci-black">
+                                    <h4 className="text-jci-black mb-2 text-lg font-bold">
                                       {item.titulo}
                                     </h4>
-                                    <p className="text-medium leading-relaxed text-jci-black">
+                                    <p className="text-medium text-jci-black leading-relaxed">
                                       {item.descripcion}
                                     </p>
                                   </div>
@@ -256,13 +256,13 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
 
                     <div className="w-[20%]">
                       <div className="flex flex-col items-start gap-2">
-                        <div className="text-xs font-semibold uppercase tracking-[1px] text-jci-black">
+                        <div className="text-jci-black text-xs font-semibold tracking-[1px] uppercase">
                           Compartir en
                         </div>
 
                         <div className="flex flex-col items-start gap-1">
                           <button
-                            className="cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300 hover:text-jci-seafoam"
+                            className="hover:text-jci-seafoam cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300"
                             onClick={() =>
                               shareOnSocialMedia(
                                 "facebook",
@@ -274,7 +274,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                             Facebook
                           </button>
                           <button
-                            className="cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300 hover:text-jci-seafoam"
+                            className="hover:text-jci-seafoam cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300"
                             onClick={() =>
                               shareOnSocialMedia(
                                 "linkedin",

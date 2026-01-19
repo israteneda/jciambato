@@ -73,7 +73,7 @@ export default function Formulario() {
   };
 
   return (
-    <section className="relative z-[1] overflow-hidden" aria-labelledby="formulario-heading">
+    <section className="relative z-1 overflow-hidden" aria-labelledby="formulario-heading">
       <div className="mt-8 md:mt-16">
         <BackgroundText
           textoPrimario="Hablemos"
@@ -87,26 +87,26 @@ export default function Formulario() {
 
       <div className="mt-16 md:mt-60">
         <div className="bg-gray-200">
-          <div className="relative z-[1] mx-auto max-w-6xl bg-transparent">
+          <div className="relative z-1 mx-auto max-w-6xl bg-transparent">
             <div className="flex flex-col lg:flex-row">
               <article className="mx-8 box-border min-w-[calc(50%-100px)] flex-1 md:mx-20 md:pr-0 lg:mx-auto">
                 <div className="py-20 md:mb-24 md:py-24">
                   <header>
-                    <div className="text-[13px] font-bold uppercase not-italic leading-[1.85] tracking-normal text-[#989898]">
+                    <div className="text-[13px] leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
                       Estamos aquí para ayudarte
                     </div>
 
                     <div className="mt-6">
                       <h2
                         id="formulario-heading"
-                        className="max-w-[370px] text-left text-4xl font-bold not-italic leading-[1.17] tracking-normal text-black lg:text-5xl"
+                        className="max-w-[370px] text-left text-4xl leading-[1.17] font-bold tracking-normal text-black not-italic lg:text-5xl"
                       >
                         Te esperamos con los brazos abiertos
                       </h2>
                     </div>
 
                     <div className="mt-6">
-                      <p className="max-w-[370px] text-left text-[18px] font-normal not-italic leading-[32px] tracking-normal text-[#323232]">
+                      <p className="max-w-[370px] text-left text-[18px] leading-[32px] font-normal tracking-normal text-[#323232] not-italic">
                         Si deseas contactarnos, por favor completa el formulario o envíanos un
                         correo a{" "}
                         <a
@@ -125,7 +125,7 @@ export default function Formulario() {
               <div className="min-w-[calc(50%+100px)] flex-1 md:mx-20 lg:mx-auto">
                 {/* Formulario */}
                 <div className="box-border h-full w-full bg-white p-10 py-14 md:-translate-y-24 md:p-16 lg:p-20">
-                  <div className="mb-8 text-sm font-bold uppercase tracking-wider text-jci-teal">
+                  <div className="text-jci-teal mb-8 text-sm font-bold tracking-wider uppercase">
                     Envíanos un mensaje
                   </div>
 
@@ -133,7 +133,7 @@ export default function Formulario() {
                   {submissionStatus === "success" && (
                     <div className="mb-6 rounded-md border border-green-200 bg-green-50 p-4">
                       <div className="flex">
-                        <div className="flex-shrink-0">
+                        <div className="shrink-0">
                           <svg
                             className="h-5 w-5 text-green-400"
                             viewBox="0 0 20 20"
@@ -162,7 +162,7 @@ export default function Formulario() {
                   {submissionStatus === "error" && (
                     <div className="mb-6 rounded-md border border-red-200 bg-red-50 p-4">
                       <div className="flex">
-                        <div className="flex-shrink-0">
+                        <div className="shrink-0">
                           <svg
                             className="h-5 w-5 text-red-400"
                             viewBox="0 0 20 20"
@@ -278,7 +278,7 @@ export default function Formulario() {
                       <Button
                         type="submit"
                         disabled={isButtonDisabled || isSubmitting}
-                        className="rounded-md bg-jci-teal font-semibold text-white transition-opacity disabled:cursor-not-allowed disabled:opacity-50"
+                        className="bg-jci-teal rounded-md font-semibold text-white transition-opacity disabled:cursor-not-allowed disabled:opacity-50"
                         {...(isButtonDisabled && { "aria-describedby": "form-error" })}
                       >
                         {isSubmitting ? "Enviando..." : "Postula ahora"}

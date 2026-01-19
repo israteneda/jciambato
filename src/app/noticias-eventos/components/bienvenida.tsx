@@ -17,7 +17,7 @@ export default function Bienvenida() {
 
       <RotatedText text="Lo más reciente en JCI Ambato" />
 
-      <div className="relative w-full pb-32 pt-48">
+      <div className="relative w-full pt-48 pb-32">
         <InfoContainer
           subtitle="Noticias y Eventos"
           title="Nuestras Noticias y Eventos"

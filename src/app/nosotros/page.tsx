@@ -19,7 +19,7 @@ export default function NosotrosPage() {
       <Bienvenida />
 
       {/* Bloque espaciado */}
-      <div className="h-[640px]" aria-hidden="true"></div>
+      <div className="h-160" aria-hidden="true"></div>
 
       <div
         className="absolute top-0 h-full w-full bg-gray-50"

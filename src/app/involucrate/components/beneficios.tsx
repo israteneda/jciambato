@@ -9,9 +9,9 @@ export default function Beneficios() {
       <div className="my-12 md:my-28">
         {/* Caja de Información */}
         <div className="relative hidden lg:block">
-          <div className="absolute left-0 top-[80px] -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
-            <div className="relative whitespace-nowrap text-[11px] font-medium uppercase not-italic leading-none tracking-[2px] text-[#aeaeae]">
-              <span className="absolute left-[-170px] top-[6px] h-px w-[160px] bg-[#aeaeae]"></span>
+          <div className="absolute top-20 left-0 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
+            <div className="relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap text-[#aeaeae] uppercase not-italic">
+              <span className="absolute top-1.5 -left-42.5 h-px w-40 bg-[#aeaeae]"></span>
               Cada día
             </div>
           </div>
@@ -22,7 +22,7 @@ export default function Beneficios() {
             <header className="mt-20 md:max-w-xl">
               <h2
                 id="beneficios-heading"
-                className="text-left text-4xl font-bold not-italic leading-[1.17] tracking-normal text-black md:text-5xl"
+                className="text-left text-4xl leading-[1.17] font-bold tracking-normal text-black not-italic md:text-5xl"
               >
                 Beneficios de ser parte de JCI Ambato
               </h2>
@@ -30,13 +30,13 @@ export default function Beneficios() {
 
             <div className="mt-8">
               <ul
-                className="max-w-md space-y-4 text-base text-jci-black"
+                className="text-jci-black max-w-md space-y-4 text-base"
                 role="list"
                 aria-label="Lista de beneficios"
               >
                 <li className="flex items-start">
                   <FiAward
-                    className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-jci-teal"
+                    className="text-jci-teal mt-1 mr-3 h-6 w-6 shrink-0"
                     aria-hidden="true"
                   />
                   <span>
@@ -46,7 +46,7 @@ export default function Beneficios() {
                 </li>
                 <li className="flex items-start">
                   <FiGlobe
-                    className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-jci-teal"
+                    className="text-jci-teal mt-1 mr-3 h-6 w-6 shrink-0"
                     aria-hidden="true"
                   />
                   <span>
@@ -56,7 +56,7 @@ export default function Beneficios() {
                 </li>
                 <li className="flex items-start">
                   <FiUsers
-                    className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-jci-teal"
+                    className="text-jci-teal mt-1 mr-3 h-6 w-6 shrink-0"
                     aria-hidden="true"
                   />
                   <span>

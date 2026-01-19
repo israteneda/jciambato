@@ -8,11 +8,11 @@ export default function Opinion() {
       <div className="mx-8 py-36 md:mx-20 md:max-w-7xl md:py-48 lg:mx-auto">
         <div className="relative z-10 max-w-lg">
           <div className="flex flex-col">
-            <div className="text-xs font-bold uppercase leading-[1.85] text-[#989898]">
+            <div className="text-xs leading-[1.85] font-bold text-[#989898] uppercase">
               Emilia Santamaría, Presidenta de JCI Ambato 2026
             </div>
             <div className="mt-10">
-              <p className="max-w-md text-left text-lg font-normal leading-[1.78] text-white">
+              <p className="max-w-md text-left text-lg leading-[1.78] font-normal text-white">
                 50 años después, JCI Ambato se distingue por su capacidad de implementación,
                 valentía para enfrentar retos y compromiso con nuestros valores fundamentales. Esta
                 forma de pensar nos guía en los momentos más difíciles. Seguimos siendo una

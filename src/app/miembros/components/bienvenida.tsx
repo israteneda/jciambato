@@ -16,7 +16,7 @@ export default function Bienvenida() {
 
       <RotatedText text="Comunidad JCI Ambato" />
 
-      <div className="relative w-full pb-32 pt-48">
+      <div className="relative w-full pt-48 pb-32">
         <InfoContainer
           subtitle="Miembros"
           title="Líderes en formación constante"

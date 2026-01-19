@@ -59,17 +59,17 @@ export default function ProyectosPorArea() {
         </figure>
         <div>
           <div className="mt-8">
-            <p className="text-jci-gray text-[13px] font-bold uppercase leading-[1.85] tracking-[1px]">
+            <p className="text-jci-gray text-[13px] leading-[1.85] font-bold tracking-[1px] uppercase">
               {proyecto.subtitulo}
             </p>
           </div>
           <div className="my-2">
-            <h3 className="text-left text-[22px] font-bold leading-[1.25] text-jci-black">
+            <h3 className="text-jci-black text-left text-[22px] leading-tight font-bold">
               {proyecto.nombre}
             </h3>
           </div>
 
-          <p className="text-[14px] font-normal leading-[1.78] text-jci-teal">
+          <p className="text-jci-teal text-[14px] leading-[1.78] font-normal">
             <strong>
               {proyecto.fecha} - {proyecto.lugar}
             </strong>
@@ -125,7 +125,7 @@ export default function ProyectosPorArea() {
         className="box-border bg-gray-50 p-12 lg:mx-20"
         aria-label="Filtros de proyectos por área"
       >
-        <div className="text-[13px] font-bold uppercase not-italic leading-[1.85] text-[#989898]">
+        <div className="text-[13px] leading-[1.85] font-bold text-[#989898] uppercase not-italic">
           Explora por área de oportunidad
         </div>
         <div
@@ -137,7 +137,7 @@ export default function ProyectosPorArea() {
             <button
               key={index}
               onClick={() => handleCategoryChange(index)}
-              className={`mr-[42px] p-0 text-left text-[30px] font-bold leading-[1.25] transition duration-300 hover:text-gray-700 ${
+              className={`mr-[42px] p-0 text-left text-[30px] leading-tight font-bold transition duration-300 hover:text-gray-700 ${
                 activeButton === index ? "text-gray-800" : "text-gray-400"
               }`}
               role="tab"
@@ -184,7 +184,7 @@ export default function ProyectosPorArea() {
                 <Button
                   radius="none"
                   size="lg"
-                  className="group relative overflow-hidden bg-jci-teal text-white"
+                  className="group bg-jci-teal relative overflow-hidden text-white"
                   aria-label="Ver más proyectos"
                   onPress={() => setCurrentPage(currentPage + 1)}
                 >

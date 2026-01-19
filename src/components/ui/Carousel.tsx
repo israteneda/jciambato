@@ -67,22 +67,22 @@ export const Carousel = ({
               />
 
               {/* Contenido del Slide */}
-              <div className="relative h-full w-full pb-[46px] pt-24">
+              <div className="relative h-full w-full pt-24 pb-[46px]">
                 <div className="relative mx-8 h-full md:mx-20 md:max-w-7xl lg:mx-auto">
                   {/* Texto y botón */}
                   <header>
-                    <div className="text-[13px] font-bold uppercase leading-[1.85] text-white">
+                    <div className="text-[13px] leading-[1.85] font-bold text-white uppercase">
                       {proyecto.premio || "Proyecto Destacado"}
                     </div>
                     <div className="mt-6 md:mt-8">
-                      <h3 className="max-w-3xl text-left text-3xl font-light leading-[1.17] text-white md:text-4xl">
+                      <h3 className="max-w-3xl text-left text-3xl leading-[1.17] font-light text-white md:text-4xl">
                         <span>
                           {proyecto.titulo} <br /> <strong>{proyecto.nombre}</strong>
                         </span>
                       </h3>
                     </div>
                     <div className="mt-10 md:mt-20">
-                      <p className="max-w-[470px] text-left text-medium leading-[1.78] text-white md:text-[calc(15.6px+0.125vw)]">
+                      <p className="text-medium max-w-[470px] text-left leading-[1.78] text-white md:text-[calc(15.6px+0.125vw)]">
                         {proyecto.descripcion}
                       </p>
                     </div>
@@ -95,18 +95,18 @@ export const Carousel = ({
                         <div className="flex py-4">
                           <Link
                             href={proyecto.url}
-                            className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-[400ms]"
+                            className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
                             aria-label={`Leer más sobre ${proyecto.titulo} ${proyecto.nombre}`}
                           >
                             <div className="flex items-center py-4">
-                              <span className="group-hover:text-jci-red text-xs font-medium not-italic leading-none tracking-normal text-jci-seafoam transition-colors duration-300">
+                              <span className="group-hover:text-jci-red text-jci-seafoam text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                                 Leer más
                               </span>
                               <div
                                 className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                                 aria-hidden="true"
                               >
-                                <HiOutlineArrowNarrowRight className="group-hover:text-jci-red h-6 w-6 text-jci-seafoam transition-colors duration-300" />
+                                <HiOutlineArrowNarrowRight className="group-hover:text-jci-red text-jci-seafoam h-6 w-6 transition-colors duration-300" />
                               </div>
                             </div>
                           </Link>
@@ -147,7 +147,7 @@ export const Carousel = ({
 
       {/* Indicadores numéricos */}
       <div
-        className="absolute right-[54px] top-1/2 z-50 hidden w-[22px] -translate-y-1/2 transform flex-col items-center md:flex"
+        className="absolute top-1/2 right-[54px] z-50 hidden w-[22px] -translate-y-1/2 transform flex-col items-center md:flex"
         aria-label="Indicador de posición"
         aria-live="polite"
       >
@@ -161,7 +161,7 @@ export const Carousel = ({
 
       {/* Botones de navegación pantallas grandes */}
       <nav
-        className="absolute bottom-[112px] right-[45px] hidden flex-col md:flex"
+        className="absolute right-[45px] bottom-[112px] hidden flex-col md:flex"
         aria-label="Navegación del carrusel"
       >
         <Button
@@ -186,7 +186,7 @@ export const Carousel = ({
       </nav>
 
       {/* Botón colección */}
-      <div className="absolute bottom-[48px] right-[45px] hidden md:block">
+      <div className="absolute right-[45px] bottom-[48px] hidden md:block">
         <Link href="/proyectos" aria-label="Ver todos los proyectos">
           <Button
             isIconOnly

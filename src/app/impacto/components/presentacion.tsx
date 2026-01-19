@@ -6,7 +6,7 @@ export default function Presentacion() {
         <div className="flex w-full justify-center">
           <div className="relative mx-auto max-w-6xl bg-white px-8 py-20 pb-20 md:px-20">
             <header className="max-w-3xl">
-              <p className="text-xs font-bold uppercase not-italic leading-[1.85] tracking-normal text-[#989898]">
+              <p className="text-xs leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
                 Cómo generamos impacto
               </p>
               <div className="mt-8">
@@ -30,7 +30,7 @@ export default function Presentacion() {
                 <p className="mb-4">Nuestro enfoque está guiado por cuatro áreas de oportunidad:</p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
+                    <span className="text-jci-teal mt-1 mr-3" aria-hidden="true">
                       •
                     </span>
                     <span>
@@ -40,7 +40,7 @@ export default function Presentacion() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
+                    <span className="text-jci-teal mt-1 mr-3" aria-hidden="true">
                       •
                     </span>
                     <span>
@@ -50,7 +50,7 @@ export default function Presentacion() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
+                    <span className="text-jci-teal mt-1 mr-3" aria-hidden="true">
                       •
                     </span>
                     <span>
@@ -60,7 +60,7 @@ export default function Presentacion() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
+                    <span className="text-jci-teal mt-1 mr-3" aria-hidden="true">
                       •
                     </span>
                     <span>
@@ -82,7 +82,7 @@ export default function Presentacion() {
             </div>
 
             {/* <div className="hidden lg:block absolute right-[50px] bottom-[25%] rotate-90 origin-bottom-right">
-                            <div className="text-[#aeaeae] leading-none text-[11px] font-medium relative tracking-[2px] uppercase after:content-[''] after:absolute after:top-[6px] after:w-[160px] after:h-[1px] after:bg-[#aeaeae] after:right-[-170px]" aria-hidden="true">
+                            <div className="text-[#aeaeae] leading-none text-[11px] font-medium relative tracking-[2px] uppercase after:content-[''] after:absolute after:top-1.5 after:w-40 after:h-px after:bg-[#aeaeae] after:right-[-170px]" aria-hidden="true">
                                 Conoce, Suma, Transforma
                             </div>
                         </div> */}

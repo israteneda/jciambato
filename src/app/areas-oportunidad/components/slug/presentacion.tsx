@@ -7,11 +7,11 @@ export default function Presentacion({ area }: { area: AreaOportunidad }) {
       className="relative z-20 overflow-hidden"
       aria-labelledby={`presentacion-${area.slug}-heading`}
     >
-      <div className="relative z-[1] mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
+      <div className="relative z-1 mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
         <div className="mt-16">
           <div className="max-w-5xl">
             <header>
-              <div className="text-xs font-bold uppercase not-italic leading-[1.85] tracking-normal text-[#989898]">
+              <div className="text-xs leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
                 {area.subtitle}
               </div>
 

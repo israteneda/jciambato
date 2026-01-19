@@ -9,23 +9,23 @@ export default function NotFoundPage() {
         <div className="relative z-10 mx-8 max-w-6xl md:mx-auto">
           <div className="flex">
             <div className="relative">
-              <div className="absolute left-6 top-20 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 transform md:block">
-                <div className="relative whitespace-nowrap text-[11px] font-medium uppercase not-italic leading-none tracking-[2px] text-[rgb(174,174,174)]">
+              <div className="absolute top-20 left-6 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 transform md:block">
+                <div className="relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap text-[rgb(174,174,174)] uppercase not-italic">
                   No encontramos la página
-                  <span className="absolute left-[-170px] top-[6px] h-[1px] w-[160px] bg-[rgb(174,174,174)] content-['']"></span>
+                  <span className="absolute top-1.5 -left-42.5 h-px w-40 bg-[rgb(174,174,174)] content-['']"></span>
                 </div>
               </div>
             </div>
 
             <div className="relative md:ml-36">
               <div className="mt-20">
-                <h3 className="text-left text-4xl font-bold not-italic leading-[1.17] tracking-normal text-black md:max-w-[470px] md:text-5xl">
+                <h3 className="text-left text-4xl leading-[1.17] font-bold tracking-normal text-black not-italic md:max-w-2xl md:text-5xl">
                   ¡La página ha sido eliminada o no existe!
                 </h3>
               </div>
 
               <div className="mt-9">
-                <div className="text-jci-gray max-w-[470px] text-left text-medium font-normal leading-[1.78] tracking-normal">
+                <div className="text-jci-gray text-medium max-w-117.5 text-left leading-[1.78] font-normal tracking-normal">
                   ¡Lo sentimos! La página que buscas ya no está disponible o no estaba disponible
                   originalmente.
                 </div>
@@ -34,7 +34,7 @@ export default function NotFoundPage() {
               <div className="mt-8">
                 <Button
                   radius="none"
-                  className="group relative overflow-hidden bg-jci-teal text-white"
+                  className="group bg-jci-teal relative overflow-hidden text-white"
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/">
@@ -56,11 +56,11 @@ export default function NotFoundPage() {
       </p>
       <div className="mt-10 flex items-center justify-center gap-x-6">
         <Link href="/">
-          <Button className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90">
+          <Button className="bg-primary hover:bg-primary/90 rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm">
             Volver al inicio
           </Button>
         </Link>
-        <Link href="/contacto" className="text-sm font-semibold leading-6 text-gray-900">
+        <Link href="/contacto" className="text-sm leading-6 font-semibold text-gray-900">
           Contactar soporte <span aria-hidden="true">→</span>
         </Link>
       </div>

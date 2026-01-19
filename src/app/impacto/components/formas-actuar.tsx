@@ -13,14 +13,14 @@ export default function Valores() {
         />
 
         <div className="my-10 flex flex-col md:flex-row">
-          <div className="flex flex-1 flex-col md:mr-3 md:mt-48">
+          <div className="flex flex-1 flex-col md:mt-48 md:mr-3">
             <div className="md:mt-6">
-              <div className="box-border min-h-52 w-full bg-jci-navy p-10">
-                <div className="self-end text-base font-normal not-italic leading-[1.5] tracking-normal text-gray-50">
+              <div className="bg-jci-navy box-border min-h-52 w-full p-10">
+                <div className="self-end text-base leading-normal font-normal tracking-normal text-gray-50 not-italic">
                   <strong>Negocios y Emprendimiento</strong>
                 </div>
                 <div className="my-2">
-                  <h4 className="w-full text-2xl font-bold not-italic leading-[1-2] tracking-normal text-gray-50">
+                  <h4 className="w-full text-2xl leading-[1-2] font-bold tracking-normal text-gray-50 not-italic">
                     Programas
                   </h4>
                 </div>
@@ -34,11 +34,11 @@ export default function Valores() {
 
                 <Link
                   href="/areas-oportunidad"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-[400ms]"
+                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Áreas de Oportunidad"
                 >
                   <div className="flex items-center py-4">
-                    <span className="group-hover:text-jci-red text-xs font-medium not-italic leading-none tracking-normal text-gray-50 transition-colors duration-300">
+                    <span className="group-hover:text-jci-red text-xs leading-none font-medium tracking-normal text-gray-50 not-italic transition-colors duration-300">
                       Negocios y Emprendimiento
                     </span>
                     <div
@@ -53,17 +53,17 @@ export default function Valores() {
             </div>
 
             <div className="md:mt-6">
-              <div className="box-border min-h-52 w-full bg-jci-yellow p-10">
-                <div className="self-end text-base font-normal not-italic leading-[1.5] tracking-normal text-gray-50">
+              <div className="bg-jci-yellow box-border min-h-52 w-full p-10">
+                <div className="self-end text-base leading-normal font-normal tracking-normal text-gray-50 not-italic">
                   <strong>Cooperación Internacional</strong>
                 </div>
                 <div className="my-2">
-                  <h4 className="w-full text-2xl font-bold not-italic leading-[1-2] tracking-normal text-jci-black">
+                  <h4 className="text-jci-black w-full text-2xl leading-[1-2] font-bold tracking-normal not-italic">
                     Eventos
                   </h4>
                 </div>
 
-                <p className="mb-5 text-sm text-jci-black">
+                <p className="text-jci-black mb-5 text-sm">
                   Desde Congresos Nacionales hasta el Congreso Mundial JCI, conectamos a jóvenes
                   líderes de todo el mundo. Estos eventos fortalecen redes, fomentan el
                   entendimiento intercultural y promueven soluciones globales colaborativas.
@@ -71,11 +71,11 @@ export default function Valores() {
 
                 <Link
                   href="/areas-oportunidad"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-[400ms]"
+                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Áreas de oportunidad"
                 >
                   <div className="flex items-center py-4">
-                    <span className="group-hover:text-jci-red text-jci-off-black text-xs font-medium not-italic leading-none tracking-normal transition-colors duration-300">
+                    <span className="group-hover:text-jci-red text-jci-off-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Cooperación Internacional
                     </span>
                     <div
@@ -93,16 +93,16 @@ export default function Valores() {
           <div className="flex flex-1 flex-col md:ml-3">
             <div className="md:mt-6">
               <div className="box-border min-h-52 w-full bg-[#D8D8D8] p-10">
-                <div className="self-end text-base font-normal not-italic leading-[1.5] tracking-normal text-jci-black">
+                <div className="text-jci-black self-end text-base leading-normal font-normal tracking-normal not-italic">
                   <strong>Desarrollo Individual</strong>
                 </div>
                 <div className="my-2">
-                  <h4 className="w-full text-2xl font-bold not-italic leading-[1-2] tracking-normal text-jci-black">
+                  <h4 className="text-jci-black w-full text-2xl leading-[1-2] font-bold tracking-normal not-italic">
                     Formación
                   </h4>
                 </div>
 
-                <p className="mb-5 text-sm text-jci-black">
+                <p className="text-jci-black mb-5 text-sm">
                   Ofrecemos talleres, mentorías y cursos presenciales y en línea, en temas como
                   liderazgo, oratoria, inteligencia emocional y gestión de proyectos. Estas
                   oportunidades preparan a nuestros miembros para liderar con ética y efectividad.
@@ -110,11 +110,11 @@ export default function Valores() {
 
                 <Link
                   href="/areas-oportunidad"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-[400ms]"
+                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Áreas de Oportunidad"
                 >
                   <div className="flex items-center py-4">
-                    <span className="group-hover:text-jci-red text-jci-off-black text-xs font-medium not-italic leading-none tracking-normal transition-colors duration-300">
+                    <span className="group-hover:text-jci-red text-jci-off-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Desarrollo Individual
                     </span>
                     <div
@@ -129,17 +129,17 @@ export default function Valores() {
             </div>
 
             <div className="md:mt-6">
-              <div className="box-border min-h-52 w-full bg-jci-seafoam p-10">
-                <div className="self-end text-base font-normal not-italic leading-[1.5] tracking-normal text-jci-black">
+              <div className="bg-jci-seafoam box-border min-h-52 w-full p-10">
+                <div className="text-jci-black self-end text-base leading-normal font-normal tracking-normal not-italic">
                   <strong>Impacto en la Comunidad</strong>
                 </div>
                 <div className="my-2">
-                  <h4 className="w-full text-2xl font-bold not-italic leading-[1-2] tracking-normal text-jci-black">
+                  <h4 className="text-jci-black w-full text-2xl leading-[1-2] font-bold tracking-normal not-italic">
                     Proyectos
                   </h4>
                 </div>
 
-                <p className="mb-5 text-sm text-jci-black">
+                <p className="text-jci-black mb-5 text-sm">
                   A través de iniciativas como JCI RISE, nuestros miembros desarrollan proyectos
                   comunitarios centrados en sostenibilidad, salud mental, resiliencia económica y
                   bienestar social. Cada proyecto responde a necesidades reales con impacto medible.
@@ -147,11 +147,11 @@ export default function Valores() {
 
                 <Link
                   href="/areas-oportunidad"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-[400ms]"
+                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Áreas de Oportunidad"
                 >
                   <div className="flex items-center py-4">
-                    <span className="group-hover:text-jci-red text-jci-off-black text-xs font-medium not-italic leading-none tracking-normal transition-colors duration-300">
+                    <span className="group-hover:text-jci-red text-jci-off-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Impacto en la Comunidad
                     </span>
                     <div

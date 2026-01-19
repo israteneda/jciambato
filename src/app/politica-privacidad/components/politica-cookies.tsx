@@ -8,10 +8,10 @@ export default function PoliticaCookies() {
               Política de Cookies
             </h1>
 
-            <time className="mt-8 block text-xl font-bold italic text-jci-teal" dateTime="2025-07">
+            <time className="text-jci-teal mt-8 block text-xl font-bold italic" dateTime="2025-07">
               Julio, 2025
             </time>
-            <p className="mt-2 text-lg text-jci-black">
+            <p className="text-jci-black mt-2 text-lg">
               Al utilizar este sitio web, usted acepta el uso de cookies conforme a esta Política de
               Cookies. Si no está de acuerdo con el uso de cookies, le recomendamos ajustar la
               configuración de su navegador o abstenerse de usar nuestro sitio web.
@@ -21,18 +21,18 @@ export default function PoliticaCookies() {
           <main className="mt-16">
             <section>
               <div className="mt-8">
-                <div className="max-w-2xl text-left text-lg font-normal leading-[1.78] text-jci-black">
+                <div className="text-jci-black max-w-2xl text-left text-lg leading-[1.78] font-normal">
                   <section>
                     <div className="flex flex-col gap-10">
                       <article>
-                        <h4 className="mb-4 text-3xl font-bold text-jci-black">Alcance</h4>
+                        <h4 className="text-jci-black mb-4 text-3xl font-bold">Alcance</h4>
                         Esta Política de Cookies explica qué son las cookies, cómo las utilizamos,
                         los tipos de cookies que empleamos, los fines para los que las usamos y cómo
                         puede gestionarlas.
                       </article>
 
                       <article>
-                        <h4 className="mb-4 text-2xl font-bold text-jci-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           1. ¿Qué son las Cookies?
                         </h4>
                         <p>
@@ -44,7 +44,7 @@ export default function PoliticaCookies() {
                       </article>
 
                       <article>
-                        <h4 className="mb-4 text-2xl font-bold text-jci-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           2. ¿Para qué Utilizamos las Cookies?
                         </h4>
                         <p>
@@ -54,7 +54,7 @@ export default function PoliticaCookies() {
                         </p>
                         <ul className="my-2 space-y-3">
                           <li className="flex items-start">
-                            <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mt-1 mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -63,7 +63,7 @@ export default function PoliticaCookies() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mt-1 mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -75,7 +75,7 @@ export default function PoliticaCookies() {
                       </article>
 
                       <article>
-                        <h4 className="mb-4 text-2xl font-bold text-jci-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           3. Tipos de Cookies que Utilizamos
                         </h4>
                         <p>
@@ -84,7 +84,7 @@ export default function PoliticaCookies() {
 
                         <div className="mt-5 flex flex-col gap-5">
                           <article>
-                            <h4 className="font-bold text-jci-navy">
+                            <h4 className="text-jci-navy font-bold">
                               1. Cookies Esenciales (Permanentes)
                             </h4>
                             <p>
@@ -95,7 +95,7 @@ export default function PoliticaCookies() {
                           </article>
 
                           <article>
-                            <h4 className="font-bold text-jci-navy">2. Cookies de Sesión</h4>
+                            <h4 className="text-jci-navy font-bold">2. Cookies de Sesión</h4>
                             <p>
                               Cookies temporales que se eliminan al cerrar el navegador. Se utilizan
                               para analizar patrones de tráfico y mejorar la experiencia de
@@ -104,7 +104,7 @@ export default function PoliticaCookies() {
                           </article>
 
                           <article>
-                            <h4 className="font-bold text-jci-navy">3. Cookies Estadísticas</h4>
+                            <h4 className="text-jci-navy font-bold">3. Cookies Estadísticas</h4>
                             <p>
                               Recopilan datos anónimos sobre cómo los usuarios interactúan con el
                               sitio web, ayudándonos a mejorar su funcionalidad.
@@ -112,7 +112,7 @@ export default function PoliticaCookies() {
                           </article>
 
                           <article>
-                            <h4 className="font-bold text-jci-navy">4. Cookies Funcionales</h4>
+                            <h4 className="text-jci-navy font-bold">4. Cookies Funcionales</h4>
                             <p>
                               Guardan sus preferencias (como idioma o región) para ofrecer una
                               experiencia personalizada sin necesidad de reconfigurar en cada
@@ -121,7 +121,7 @@ export default function PoliticaCookies() {
                           </article>
 
                           <article>
-                            <h4 className="font-bold text-jci-navy">5. Cookies de Terceros</h4>
+                            <h4 className="text-jci-navy font-bold">5. Cookies de Terceros</h4>
                             <p>
                               Gestionadas por terceros para medir el éxito de aplicaciones o la
                               eficacia de publicidad externa. Estas cookies están sujetas a las
@@ -132,7 +132,7 @@ export default function PoliticaCookies() {
                       </article>
 
                       <article>
-                        <h4 className="mb-4 text-2xl font-bold text-jci-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           4. ¿Cómo Gestionar las Cookies?
                         </h4>
                         <p>
@@ -142,19 +142,19 @@ export default function PoliticaCookies() {
                         </p>
                         <ul className="my-2 space-y-3">
                           <li className="flex items-start">
-                            <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mt-1 mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>Ver las cookies almacenadas y eliminarlas individualmente.</span>
                           </li>
                           <li className="flex items-start">
-                            <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mt-1 mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>Bloquear cookies de terceros o de todos los sitios.</span>
                           </li>
                           <li className="flex items-start">
-                            <span className="mr-3 mt-1 text-jci-teal" aria-hidden="true">
+                            <span className="text-jci-teal mt-1 mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>Configurar notificaciones cuando se recibe una cookie.</span>
@@ -169,7 +169,7 @@ export default function PoliticaCookies() {
                       </article>
 
                       <article>
-                        <h4 className="mb-4 text-2xl font-bold text-jci-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           5. ¿Cómo Protegemos su Privacidad?
                         </h4>
                         <p>
@@ -182,7 +182,7 @@ export default function PoliticaCookies() {
                           Si tiene preguntas sobre esta Política de Cookies, contáctenos a través de{" "}
                           <a
                             href="mailto:ambato@jciecuador.com"
-                            className="font-bold text-jci-teal"
+                            className="text-jci-teal font-bold"
                           >
                             ambato@jciecuador.com
                           </a>

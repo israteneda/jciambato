@@ -9,7 +9,7 @@ export default function Presentacion() {
         <div className="flex w-full justify-center">
           <div className="relative mx-auto max-w-6xl bg-white px-8 py-20 pb-36 md:px-20">
             <header className="max-w-3xl">
-              <p className="text-xs font-bold uppercase not-italic leading-[1.85] tracking-normal text-[#989898]">
+              <p className="text-xs leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
                 Conócenos mejor
               </p>
               <div className="mt-8">
@@ -24,7 +24,7 @@ export default function Presentacion() {
                 <p>
                   En JCI Ambato creemos que el liderazgo joven es la fuerza que impulsa la
                   transformación de nuestra sociedad. Somos parte de la red global de la{" "}
-                  <a href="https://jci.cc/" className="text-jci-teal underline" target="_blank">
+                  <a href="https://jci.cc/" className="text-jci-navy underline" target="_blank">
                     Cámara Junior Internacional (JCI)
                   </a>
                   , una organización sin fines de lucro fundada en 1915, que hoy conecta a más de
@@ -34,7 +34,7 @@ export default function Presentacion() {
                   A nivel nacional, formamos parte de{" "}
                   <a
                     href="https://jciecuador.com/"
-                    className="text-jci-teal underline"
+                    className="text-jci-navy underline"
                     target="_blank"
                   >
                     JCI Ecuador
@@ -74,28 +74,28 @@ export default function Presentacion() {
                   aria-label="Estadísticas de JCI Ambato"
                 >
                   <div className="mr-20" role="listitem">
-                    <div className="text-7xl font-light leading-none text-jci-teal md:text-8xl">
+                    <div className="text-jci-navy text-7xl leading-none font-light md:text-8xl">
                       <AnimatedNumber end={50} prefix="+" duration={2.5} delay={0.2} />
                     </div>
-                    <p className="max-w-44 text-left uppercase text-black md:text-medium">
+                    <p className="md:text-medium max-w-44 text-left text-black uppercase">
                       <strong>Años</strong> inspirando líderes
                     </p>
                   </div>
 
                   <div className="mr-20" role="listitem">
-                    <div className="text-7xl font-light leading-none text-jci-teal md:text-8xl">
+                    <div className="text-jci-navy text-7xl leading-none font-light md:text-8xl">
                       <AnimatedNumber end={200} prefix="+" duration={2.5} delay={0.4} />
                     </div>
-                    <p className="max-w-44 text-left uppercase text-black md:text-medium">
+                    <p className="md:text-medium max-w-44 text-left text-black uppercase">
                       <strong>Proyectos</strong> ejecutados
                     </p>
                   </div>
 
                   <div className="mr-20" role="listitem">
-                    <div className="text-7xl font-light leading-none text-jci-teal md:text-8xl">
+                    <div className="text-jci-navy text-7xl leading-none font-light md:text-8xl">
                       <AnimatedNumber end={500} prefix="+" duration={2.5} delay={0.6} />
                     </div>
-                    <p className="max-w-44 text-left text-base uppercase text-black">
+                    <p className="max-w-44 text-left text-base text-black uppercase">
                       <strong>Jóvenes</strong> formados y empoderados
                     </p>
                   </div>
@@ -103,9 +103,9 @@ export default function Presentacion() {
               </div>
             </div>
 
-            <div className="absolute bottom-[25%] right-[50px] hidden origin-bottom-right rotate-90 lg:block">
+            <div className="absolute right-12.5 bottom-[25%] hidden origin-bottom-right rotate-90 lg:block">
               <div
-                className="relative text-[11px] font-medium uppercase leading-none tracking-[2px] text-[#aeaeae] after:absolute after:right-[-170px] after:top-[6px] after:h-[1px] after:w-[160px] after:bg-[#aeaeae] after:content-['']"
+                className="relative text-[11px] leading-none font-medium tracking-[2px] text-[#aeaeae] uppercase after:absolute after:top-1.5 after:-right-42.5 after:h-px after:w-40 after:bg-[#aeaeae] after:content-['']"
                 aria-hidden="true"
               >
                 Conoce, Suma, Transforma
@@ -118,13 +118,13 @@ export default function Presentacion() {
         <div className="w-full px-0">
           <div className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-8 md:flex-row md:gap-12">
             {/* Flecha solo visible en pantallas grandes */}
-            <div className="hidden flex-shrink-0 items-center justify-center md:ml-20 md:flex">
+            <div className="hidden shrink-0 items-center justify-center md:ml-20 md:flex">
               <Image
                 src="/icons/arrow-down.svg"
                 alt=""
                 width={120}
                 height={120}
-                className="h-[80px] w-[80px] object-contain md:h-[120px] md:w-[120px]"
+                className="h-20 w-20 object-contain md:h-30md:w-30"
                 aria-hidden="true"
               />
             </div>

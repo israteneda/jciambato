@@ -2,8 +2,10 @@
 const nextConfig = {
   // Optimizaciones de rendimiento
   experimental: {
-    optimizePackageImports: ["@heroui/button", "@heroui/navbar", "@heroui/input"],
+    optimizePackageImports: ["@heroui/react"],
   },
+
+  transpilePackages: ["@heroui/react", "@heroui/theme"],
 
   // Configuración de imágenes
   images: {
@@ -38,13 +40,6 @@ const nextConfig = {
 
   // Configuración de compresión
   compress: true,
-
-  // Configuración de PWA (opcional)
-  // pwa: {
-  //   dest: 'public',
-  //   register: true,
-  //   skipWaiting: true,
-  // },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

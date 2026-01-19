@@ -28,25 +28,25 @@ export default function ActividadesAnuales() {
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="mx-8 md:mx-28">
           <div className="flex">
-            <div className="absolute left-0 top-[80px] hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 transform md:block">
+            <div className="absolute top-[80px] left-0 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 transform md:block">
               <div
-                className="relative whitespace-nowrap text-[11px] font-medium uppercase not-italic leading-none tracking-[2px] text-[rgb(174,174,174)]"
+                className="relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap text-[rgb(174,174,174)] uppercase not-italic"
                 aria-hidden="true"
               >
                 Desde 1973
-                <span className="absolute left-[-170px] top-[6px] h-[1px] w-[160px] bg-[rgb(174,174,174)] content-['']"></span>
+                <span className="absolute top-1.5 left-[-170px] h-px w-40 bg-[rgb(174,174,174)] content-['']"></span>
               </div>
             </div>
 
             <div className="md:mr-48">
               <header>
                 <div className="mt-20">
-                  <h2 className="text-left text-4xl font-bold not-italic leading-[1.17] tracking-normal text-black md:max-w-[470px] md:text-5xl">
+                  <h2 className="text-left text-4xl leading-[1.17] font-bold tracking-normal text-black not-italic md:max-w-[470px] md:text-5xl">
                     Un legado que trasciende generaciones.
                   </h2>
                 </div>
                 <div className="mt-8">
-                  <p className="text-left text-base font-normal not-italic leading-[1.78] tracking-normal text-[rgb(50,50,50)] md:max-w-[470px]">
+                  <p className="text-left text-base leading-[1.78] font-normal tracking-normal text-[rgb(50,50,50)] not-italic md:max-w-[470px]">
                     Por cinco décadas, JCI Ambato ha forjado un liderazgo transformador, impulsando
                     la formación de ciudadanos activos y ejecutando proyectos de gran impacto. Su
                     legado se construye con logros, retos superados y generaciones de jóvenes
@@ -89,13 +89,13 @@ export default function ActividadesAnuales() {
                 <article className="max-max-w-xs ml-8 flex h-full flex-col md:ml-10">
                   <header>
                     <div className="mt-6">
-                      <h3 className="text-left text-3xl font-bold not-italic leading-[1.25] tracking-normal text-black">
+                      <h3 className="text-left text-3xl leading-tight font-bold tracking-normal text-black not-italic">
                         {history.year}
                       </h3>
                     </div>
 
                     <div className="mt-16">
-                      <h4 className="text-left text-lg font-bold not-italic leading-normal tracking-normal text-black">
+                      <h4 className="text-left text-lg leading-normal font-bold tracking-normal text-black not-italic">
                         {history.title}
                       </h4>
                     </div>
@@ -118,7 +118,7 @@ export default function ActividadesAnuales() {
                   )}
 
                   <div className="mt-6">
-                    <div className="space-y-9 text-left text-medium not-italic leading-normal tracking-normal">
+                    <div className="text-medium space-y-9 text-left leading-normal tracking-normal not-italic">
                       <p>{history.description.paragraph}</p>
                       <p>{history.description.paragraph2}</p>
                       <p>{history.description.paragraph3}</p>

@@ -23,13 +23,13 @@ export function Footer() {
 
   return (
     <footer
-      className="relative z-20 select-none overflow-hidden bg-gray-50"
+      className="relative z-20 overflow-hidden bg-gray-50 select-none"
       role="contentinfo"
       aria-label="Pie de página"
     >
       {/* Sección de llamada a la acción */}
-      <section className="relative z-10 bg-jci-teal" aria-labelledby="cta-heading">
-        <div className="px-8 pb-16 pt-28 md:p-20 md:py-36">
+      <section className="bg-jci-blue relative z-10" aria-labelledby="cta-heading">
+        <div className="px-8 pt-28 pb-16 md:p-20 md:py-36">
           <div className="mb-10 md:mb-20">
             <div className="relative z-10 mx-auto max-w-6xl">
               <Link
@@ -39,7 +39,7 @@ export function Footer() {
               >
                 <div className="flex flex-col items-start md:flex-row md:items-center">
                   <header>
-                    <span className="line-clamp-1 text-xs uppercase tracking-widest text-gray-50">
+                    <span className="line-clamp-1 text-xs tracking-widest text-gray-50 uppercase">
                       Conoce. Suma. Transforma.
                     </span>
                     <h2
@@ -68,7 +68,7 @@ export function Footer() {
 
       {/* Sección decorativa */}
       <section className="relative z-20 hidden md:block" aria-hidden="true">
-        <div className="pointer-events-none absolute left-0 right-0 top-[-145px] z-[3] whitespace-nowrap text-center font-black uppercase not-italic leading-[280px] tracking-normal opacity-20 md:text-[125px] lg:text-[235px]">
+        <div className="pointer-events-none absolute -top-36.25 right-0 left-0 z-3 text-center leading-70 font-black tracking-normal whitespace-nowrap uppercase not-italic opacity-20 md:text-[125px] lg:text-[235px]">
           JCI AMBATO
         </div>
       </section>
@@ -78,7 +78,7 @@ export function Footer() {
         <div>
           <div className="z-10 w-full">
             <span
-              className="absolute left-[27px] top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 transform whitespace-nowrap text-[11px] font-semibold uppercase leading-[60px] tracking-[1px] text-jci-teal lg:block"
+              className="text-jci-teal absolute top-1/2 left-6.75 z-20 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 transform text-[11px] leading-15 font-semibold tracking-[1px] whitespace-nowrap uppercase lg:block"
               aria-hidden="true"
               role="presentation"
             >
@@ -92,7 +92,7 @@ export function Footer() {
                   <Link href="/" aria-label="Ir a Inicio">
                     <Image
                       alt="JCI Ambato Logo"
-                      className="h-[60px] w-[110px] object-contain"
+                      className="h-15 w-27.5 object-contain"
                       src="/images/logos/jci-ambato.png"
                       width={110}
                       height={50}
@@ -113,7 +113,7 @@ export function Footer() {
                             {section.title}
                           </Link>
                         </h3>
-                        <ul className="m-1 mb-0 mt-3 flex max-w-36 flex-col space-y-2" role="list">
+                        <ul className="m-1 mt-3 mb-0 flex max-w-36 flex-col space-y-2" role="list">
                           {section.items.map((item) => (
                             <li key={item.title} className="text-sm">
                               {item.href ? (
@@ -149,7 +149,7 @@ export function Footer() {
                         rel="noopener noreferrer"
                         aria-label="Síguenos en LinkedIn"
                       >
-                        <FaLinkedin className="h-6 w-6 hover:text-jci-seafoam" aria-hidden="true" />
+                        <FaLinkedin className="hover:text-jci-seafoam h-6 w-6" aria-hidden="true" />
                       </a>
                       <a
                         href={siteConfig.links.facebook}
@@ -157,7 +157,7 @@ export function Footer() {
                         rel="noopener noreferrer"
                         aria-label="Síguenos en Facebook"
                       >
-                        <FaFacebook className="h-6 w-6 hover:text-jci-seafoam" aria-hidden="true" />
+                        <FaFacebook className="hover:text-jci-seafoam h-6 w-6" aria-hidden="true" />
                       </a>
                       <a
                         href={siteConfig.links.instagram}
@@ -166,7 +166,7 @@ export function Footer() {
                         aria-label="Síguenos en Instagram"
                       >
                         <FaInstagram
-                          className="h-6 w-6 hover:text-jci-seafoam"
+                          className="hover:text-jci-seafoam h-6 w-6"
                           aria-hidden="true"
                         />
                       </a>
@@ -191,19 +191,19 @@ export function Footer() {
               {/* Derechos reservados */}
               <div className="relative z-10 mx-8 mt-16 max-w-6xl py-5 sm:mx-auto">
                 <div className="text-jci-gray flex flex-col justify-between gap-2 lg:flex-row lg:gap-5">
-                  <p className="text-xs text-default-400 md:text-sm">
+                  <p className="text-default-400 text-xs md:text-sm">
                     © 2026 JCI Ambato. Todos los Derechos Reservados.
                   </p>
 
                   <div>
                     <div className="flex flex-row justify-start gap-5">
-                      <p className="text-xs text-default-600 md:text-sm">
+                      <p className="text-default-600 text-xs md:text-sm">
                         <Link href="/politica-gestion" className="hover:text-gray-500">
                           Política de Gestión
                         </Link>
                       </p>
 
-                      <p className="text-xs text-default-600 md:text-sm">
+                      <p className="text-default-600 text-xs md:text-sm">
                         <Link href="/politica-privacidad" className="hover:text-gray-500">
                           Política de Privacidad
                         </Link>
@@ -215,7 +215,7 @@ export function Footer() {
             </div>
 
             {/* Botón para volver arriba, pantallas grandes*/}
-            <div className="absolute right-[5%] top-[45%] hidden md:right-[8%] md:top-[50%] lg:right-[5%] lg:top-[30%] lg:block">
+            <div className="absolute top-[45%] right-[5%] hidden md:top-[50%] md:right-[8%] lg:top-[30%] lg:right-[5%] lg:block">
               <div className="flex items-center justify-center">
                 <button
                   type="button"

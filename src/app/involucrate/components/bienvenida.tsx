@@ -13,7 +13,7 @@ export default function Bienvenida() {
     >
       <RotatedText text="Sé el cambio" />
 
-      <header className="relative w-full pb-32 pt-48">
+      <header className="relative w-full pt-48 pb-32">
         <InfoContainer
           subtitle="Involúcrate"
           title="Da el primer paso hacia el cambio"

@@ -154,7 +154,7 @@ export default function BienvenidaV3() {
         <h1 id="bienvenida-heading">Bienvenido a JCI Ambato</h1>
       </header>
 
-      <div ref={containerRef} className="relative flex w-full overflow-hidden bg-[#003D62]">
+      <div ref={containerRef} className="relative flex w-full overflow-hidden bg-[#004268]">
         {/* BLOBS ABSTRACTOS */}
         <div className="pointer-events-none absolute inset-0 z-0 h-full w-full">
           {/* 4 blobs, ajustados para responsividad */}
@@ -203,21 +203,16 @@ export default function BienvenidaV3() {
             </div>
           ))}
         </div>
+
         <div className="mx-9 box-border flex h-screen w-full items-center pb-20 md:mx-20 lg:mx-44">
           <BorderFrame isScrolled={isScrolled} />
 
           {/* Contenido principal */}
           <main className="relative z-20 w-full">
             <div className="flex flex-col items-start">
-              {/* <div>
-                <p className="text-jci-yellow text-xs md:text-sm font-semibold uppercase leading-relaxed">
-                  Conoce. Suma. Transforma.
-                </p>
-              </div> */}
-
               <div className="mt-5">
-                <h2 className="max-w-xl bg-gradient-to-br from-jci-navy via-white to-jci-navy bg-clip-text py-1.5 text-[34px] font-bold leading-tight text-transparent md:max-w-5xl md:text-5xl lg:text-7xl">
-                  Unidos Construyendo un <br /> <span className="italic text-inherit">Futuro</span>{" "}
+                <h2 className="from-jci-navy to-jci-navy max-w-xl bg-linear-to-br via-white bg-clip-text py-1 leading-tight font-bold text-transparent md:max-w-5xl md:text-5xl lg:text-7xl">
+                  Unidos Construyendo un <br /> <span className="text-inherit italic">Futuro</span>{" "}
                   de Liderazgo
                 </h2>
               </div>
@@ -232,7 +227,7 @@ export default function BienvenidaV3() {
               <div className="mt-6 lg:mt-8">
                 <Button
                   radius="none"
-                  className="group relative overflow-hidden bg-jci-teal text-sm text-white"
+                  className="group bg-jci-navy relative overflow-hidden text-sm text-white"
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/nosotros">
@@ -248,19 +243,21 @@ export default function BienvenidaV3() {
         {/* Botón de scroll */}
         <RowScroll />
         {/* Logo Somos Liderazgo */}
-        <div className="absolute bottom-[60px] right-[20px] z-20 hidden sm:bottom-[80px] sm:right-[30px] md:bottom-[60px] md:right-[124px] lg:block">
-          <Image
-            alt="Somos Liderazgo Logo"
-            className="h-[50px] w-[100px] object-contain sm:h-[60px] sm:w-[120px] md:h-[70px] md:w-[150px]"
-            // src="/images/logos/somos-liderazgo.webp"
-            src="/images/logos/actuar-proposito.png"
-            width={150}
-            height={70}
-            priority
-          />
+        <div className="absolute right-5 bottom-16 z-20 hidden sm:right-8 sm:bottom-20 md:right-32 md:bottom-16 lg:block">
+          <div className="md:h-24 md:w-38">
+            <Image
+              alt="Liderazgo con Propósito Logo"
+              className="h-full w-full object-contain"
+              src="/images/logos/actuar-proposito.png"
+              width={150}
+              height={70}
+              priority
+              draggable="false"
+            />
+          </div>
         </div>
         {/* Enlace a JCI Ecuador */}
-        <div className="absolute bottom-[60px] left-[20px] z-20 hidden text-[8px] font-semibold uppercase text-jci-seafoam sm:bottom-[80px] sm:left-[30px] sm:text-[9px] md:bottom-[80px] md:text-[10.5px] lg:left-[176px] lg:block">
+        <div className="text-jci-seafoam absolute bottom-16 left-5 z-20 hidden text-[8px] font-semibold uppercase sm:bottom-20 sm:left-8 sm:text-xs md:bottom-20 md:text-[10.5px] lg:left-44 lg:block">
           <a
             href="https://jciecuador.com"
             target="_blank"
@@ -285,7 +282,7 @@ export default function BienvenidaV3() {
             className="flex items-center"
             aria-label="Ir a la sección Sobre Nosotros"
           >
-            <span className="text-[8px] font-semibold uppercase text-jci-teal md:text-[10.5px]">
+            <span className="text-jci-teal text-[8px] font-semibold uppercase md:text-[10.5px]">
               Sobre Nosotros
             </span>
             <Image
@@ -293,7 +290,7 @@ export default function BienvenidaV3() {
               alt=""
               width={500}
               height={500}
-              className="h-[40px] w-[60px] -rotate-90 object-cover md:h-[69px] md:w-[96px]"
+              className="h-10 w-14 -rotate-90 object-cover md:h-16 md:w-24"
               aria-hidden="true"
             />
           </Link>

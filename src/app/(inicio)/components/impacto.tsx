@@ -22,16 +22,16 @@ export default function Datos() {
             />
 
             {/* Contenido Superior */}
-            <div className="absolute left-0 top-0 z-10 h-full w-full lg:absolute">
-              <div className="h-full w-full overflow-hidden bg-jci-navy lg:h-1/2 lg:w-1/2">
+            <div className="absolute top-0 left-0 z-10 h-full w-full lg:absolute">
+              <div className="bg-jci-navy h-full w-full overflow-hidden lg:h-1/2 lg:w-1/2">
                 <div className="flex h-full flex-col justify-between p-6">
                   <div>
-                    <div className="text-xs font-normal uppercase not-italic leading-[1.8] tracking-normal text-gray-50">
+                    <div className="text-xs leading-[1.8] font-normal tracking-normal text-gray-50 uppercase not-italic">
                       Somos una red Internacional
                     </div>
 
                     <div className="mt-2 w-full">
-                      <h5 className="text-left text-lg font-bold not-italic leading-[1.25] tracking-normal text-gray-50">
+                      <h5 className="text-left text-lg leading-tight font-bold tracking-normal text-gray-50 not-italic">
                         Una red de líderes jóvenes presente en Ambato, más de 10 ciudades del
                         Ecuador y más de 120 países del mundo.
                       </h5>
@@ -41,11 +41,11 @@ export default function Datos() {
                   <div className="mt-5 md:mt-0">
                     <Link
                       href="/involucrate"
-                      className="group z-20 inline-block max-w-full cursor-pointer transition duration-[400ms]"
+                      className="group z-20 inline-block max-w-full cursor-pointer transition duration-400"
                       aria-label="Descubre donde estamos"
                     >
                       <div className="flex items-center">
-                        <span className="text-xs font-medium not-italic leading-none tracking-normal text-gray-50 transition-colors duration-300 group-hover:text-gray-50">
+                        <span className="text-xs leading-none font-medium tracking-normal text-gray-50 not-italic transition-colors duration-300 group-hover:text-gray-50">
                           Descrubre donde estamos
                         </span>
                         <div
@@ -62,7 +62,7 @@ export default function Datos() {
             </div>
 
             {/* Contenido Inferior */}
-            <div className="absolute bottom-0 right-0">
+            <div className="absolute right-0 bottom-0">
               <div className="flex h-full w-full items-end justify-end bg-gray-100">
                 <div className="flex items-start gap-4 p-4">
                   <Image
@@ -89,15 +89,15 @@ export default function Datos() {
           <div className="hidden lg:col-span-2 lg:row-span-1 lg:block"></div>
 
           {/* Segundo Cuadro */}
-          <div className="col-span-1 row-span-1 bg-jci-yellow md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1">
+          <div className="bg-jci-yellow col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1">
             <div className="flex h-full min-h-[400px] flex-col justify-between p-6 md:min-h-[300px] lg:min-h-full">
               <div>
-                <div className="text-xs font-normal uppercase not-italic leading-[1.8] tracking-normal text-jci-black">
+                <div className="text-jci-black text-xs leading-[1.8] font-normal tracking-normal uppercase not-italic">
                   Liderando el cambio en Ecuador
                 </div>
 
                 <div className="mt-2 w-full">
-                  <h5 className="text-left text-lg font-bold not-italic leading-[1.25] tracking-normal text-black">
+                  <h5 className="text-left text-lg leading-tight font-bold tracking-normal text-black not-italic">
                     Uno de los capítulos más activos de JCI Ecuador, con impacto local y proyección
                     nacional.
                   </h5>
@@ -107,18 +107,18 @@ export default function Datos() {
               <div className="mt-5 md:mt-0">
                 <Link
                   href="/impacto"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-[400ms]"
+                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Saber sobre nosotros"
                 >
                   <div className="flex items-center">
-                    <span className="text-xs font-medium not-italic leading-none tracking-normal text-jci-black transition-colors duration-300 group-hover:text-jci-black">
+                    <span className="text-jci-black group-hover:text-jci-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Saber más
                     </span>
                     <div
                       className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                       aria-hidden="true"
                     >
-                      <HiOutlineArrowNarrowRight className="h-6 w-6 text-jci-black transition-colors duration-300 group-hover:text-jci-black" />
+                      <HiOutlineArrowNarrowRight className="text-jci-black group-hover:text-jci-black h-6 w-6 transition-colors duration-300" />
                     </div>
                   </div>
                 </Link>
@@ -127,15 +127,15 @@ export default function Datos() {
           </div>
 
           {/* Tercer Cuadro */}
-          <div className="col-span-1 row-span-1 bg-jci-seafoam md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1">
+          <div className="bg-jci-seafoam col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1">
             <div className="flex h-full min-h-[400px] flex-col justify-between p-6 md:min-h-[300px] lg:min-h-full">
               <div>
-                <div className="text-xs font-normal uppercase not-italic leading-[1.8] tracking-normal text-jci-black">
+                <div className="text-jci-black text-xs leading-[1.8] font-normal tracking-normal uppercase not-italic">
                   Impacto que trasciende fronteras
                 </div>
 
                 <div className="mt-2 w-full">
-                  <h5 className="text-left text-lg font-bold not-italic leading-[1.25] tracking-normal text-black">
+                  <h5 className="text-left text-lg leading-tight font-bold tracking-normal text-black not-italic">
                     Desde Ambato, contribuimos al desarrollo de líderes jóvenes en comunidades de
                     todo el mundo.
                   </h5>
@@ -145,18 +145,18 @@ export default function Datos() {
               <div className="mt-5 md:mt-0">
                 <Link
                   href="/areas-oportunidad"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-[400ms]"
+                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center">
-                    <span className="group-hover:text-jci-red text-xs font-medium not-italic leading-none tracking-normal text-jci-black transition-colors duration-300">
+                    <span className="group-hover:text-jci-red text-jci-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Descubre cómo lo hacemos
                     </span>
                     <div
                       className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                       aria-hidden="true"
                     >
-                      <HiOutlineArrowNarrowRight className="h-6 w-6 text-jci-black transition-colors duration-300 group-hover:text-jci-black" />
+                      <HiOutlineArrowNarrowRight className="text-jci-black group-hover:text-jci-black h-6 w-6 transition-colors duration-300" />
                     </div>
                   </div>
                 </Link>

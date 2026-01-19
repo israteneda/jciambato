@@ -24,18 +24,18 @@ export default function BienvenidaV1() {
           {/* Contenido principal */}
           <main className="relative z-20">
             <div className="flex flex-col items-start">
-              <div className="text-xs font-bold uppercase tracking-normal text-jci-yellow lg:text-sm">
+              <div className="text-jci-yellow text-xs font-bold tracking-normal uppercase lg:text-sm">
                 Impulsando el cambio
               </div>
 
               <div className="mt-6">
-                <h2 className="max-w-xl bg-gradient-to-br from-jci-navy via-white to-jci-navy bg-clip-text text-3xl font-bold text-transparent lg:text-6xl">
+                <h2 className="from-jci-navy to-jci-navy max-w-xl bg-linear-to-br via-white bg-clip-text text-3xl font-bold text-transparent lg:text-6xl">
                   Líderes que Impactan el Futuro
                 </h2>
               </div>
 
               <div className="mt-10">
-                <p className="max-w-md text-sm leading-relaxed text-white lg:text-medium">
+                <p className="lg:text-medium max-w-md text-sm leading-relaxed text-white">
                   Con cada proyecto, impulsamos el cambio a través de la innovación, transformando
                   ideas en soluciones que construyen comunidades más fuertes y mejoran vidas.
                 </p>
@@ -44,7 +44,7 @@ export default function BienvenidaV1() {
               <div className="mt-9">
                 <Button
                   radius="none"
-                  className="group relative overflow-hidden bg-jci-teal text-white"
+                  className="group bg-jci-teal relative overflow-hidden text-white"
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/nosotros">
@@ -78,7 +78,7 @@ export default function BienvenidaV1() {
         <RotatedText text="BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO" />
 
         {/* Botón de scroll */}
-        <div className="absolute right-2 top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 transform md:block">
+        <div className="absolute top-1/2 right-2 z-20 hidden -translate-x-1/2 -translate-y-1/2 transform md:block">
           <button
             aria-label="Desplazarse hacia abajo"
             onClick={() => {
@@ -101,7 +101,7 @@ export default function BienvenidaV1() {
         </div>
 
         {/* Logo Somos Liderazgo */}
-        <div className="absolute bottom-[100px] right-[40px] z-20 hidden md:bottom-[60px] md:right-[124px] md:block">
+        <div className="absolute right-[40px] bottom-[100px] z-20 hidden md:right-[124px] md:bottom-[60px] md:block">
           <Image
             alt="Somos Liderazgo Logo"
             className="h-[70px] w-[150px] object-contain"
@@ -113,7 +113,7 @@ export default function BienvenidaV1() {
         </div>
 
         {/* Enlace a JCI Ecuador */}
-        <div className="absolute bottom-[100px] left-[40px] z-20 hidden text-[10.5px] font-semibold uppercase text-jci-seafoam md:bottom-[80px] md:left-[180px] md:block">
+        <div className="text-jci-seafoam absolute bottom-[100px] left-[40px] z-20 hidden text-[10.5px] font-semibold uppercase md:bottom-[80px] md:left-[180px] md:block">
           <a
             href="https://jciecuador.com"
             target="_blank"
@@ -135,7 +135,7 @@ export default function BienvenidaV1() {
             className="flex items-center"
             aria-label="Ir a la sección Sobre Nosotros"
           >
-            <span className="text-[10.5px] font-semibold uppercase text-jci-teal">
+            <span className="text-jci-teal text-[10.5px] font-semibold uppercase">
               Sobre Nosotros
             </span>
             <Image

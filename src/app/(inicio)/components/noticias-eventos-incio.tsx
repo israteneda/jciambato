@@ -8,8 +8,8 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/navigation";
+// import "swiper/css";
+// import "swiper/css/navigation";
 import Link from "next/link";
 
 export default function NoticiasEventos() {
@@ -24,7 +24,7 @@ export default function NoticiasEventos() {
             <div className="flex justify-between">
               <h2
                 id="noticias-heading"
-                className="text-jci-off-black text-left text-2xl font-bold not-italic leading-[1.25] tracking-normal md:text-3xl"
+                className="text-jci-off-black text-left text-2xl leading-tight font-bold tracking-normal not-italic md:text-3xl"
               >
                 Noticias y Eventos
               </h2>
@@ -74,21 +74,21 @@ export default function NoticiasEventos() {
                     <Link href={`/noticias-eventos/${item.url}`} className="group w-full">
                       <div className="group w-full">
                         <header>
-                          <div className="text-jci-gray text-[13px] font-normal uppercase not-italic leading-[1.85] tracking-normal">
+                          <div className="text-jci-gray text-[13px] leading-[1.85] font-normal tracking-normal uppercase not-italic">
                             <span>{item.tipo}</span>
                           </div>
 
                           <div className="mt-4">
-                            <h3 className="text-jci-off-black text-left text-[22px] font-bold not-italic leading-[1.45] tracking-normal md:text-[calc(17.2px+0.25vw)]">
+                            <h3 className="text-jci-off-black text-left text-[22px] leading-[1.45] font-bold tracking-normal not-italic md:text-[calc(17.2px+0.25vw)]">
                               {item.titulo}
                             </h3>
                           </div>
                         </header>
 
                         <div className="mt-6">
-                          <div className="group relative inline-block max-w-full cursor-pointer transition duration-[400ms]">
+                          <div className="group relative inline-block max-w-full cursor-pointer transition duration-400">
                             <div className="flex items-center py-4">
-                              <span className="text-jci-gray group-hover:text-jci-red text-xs font-medium not-italic leading-none tracking-normal transition-colors duration-300">
+                              <span className="text-jci-gray group-hover:text-jci-red text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                                 Leer más
                               </span>
                               <div
@@ -125,12 +125,12 @@ export default function NoticiasEventos() {
         <footer className="relative mx-8 hidden max-w-6xl bg-transparent md:mx-20 md:block lg:mx-auto">
           <div className="relative mt-16 flex justify-between">
             <div className="flex items-center">
-              <div className="text-jci-gray text-[13px] font-bold uppercase not-italic leading-[1.85] tracking-normal">
+              <div className="text-jci-gray text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
                 Arrastra para mover
               </div>
               <div className="relative ml-[32px] h-px w-[60px] overflow-hidden bg-[rgb(204,204,204)]">
                 <span
-                  className="absolute left-0 top-0 h-px w-[60px] animate-loop bg-jci-teal"
+                  className="animate-loop bg-jci-teal absolute top-0 left-0 h-px w-[60px]"
                   aria-hidden="true"
                 />
               </div>

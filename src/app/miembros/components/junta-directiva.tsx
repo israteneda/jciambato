@@ -53,7 +53,7 @@ export default function Miembros() {
               <div className="w-full py-5 text-start">
                 <div className="flex flex-col justify-between lg:flex-row">
                   <div>
-                    <h3 className="text-xl font-bold text-jci-black">
+                    <h3 className="text-jci-black text-xl font-bold">
                       {miembro.nombre} {miembro.apellido}
                     </h3>
                     <p className="text-md text-jci-gray">{miembro.cargo}</p>

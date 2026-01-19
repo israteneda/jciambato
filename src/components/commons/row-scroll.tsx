@@ -4,7 +4,7 @@ export default function RowScroll() {
   return (
     <div>
       {/* Botón de scroll pantallas grandes */}
-      <div className="absolute -right-2 top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 transform sm:block">
+      <div className="absolute top-1/2 -right-2 z-20 hidden -translate-x-1/2 -translate-y-1/2 transform sm:block">
         <button
           aria-label="Desplazarse hacia abajo"
           onClick={() => {

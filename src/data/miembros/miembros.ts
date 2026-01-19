@@ -37,7 +37,7 @@ export const miembros: Miembro[] = [
     id: "romina-benitez",
     nombre: "Romina",
     apellido: "Benítez",
-    correo: "romina.benitez@jciambato.org",
+    correo: "rbenitez@jciecuador.com",
     cargo: "Miembro",
     imagen: "/images/miembros/miembros/romina-benitez.png",
     social: {
@@ -48,6 +48,7 @@ export const miembros: Miembro[] = [
     id: "christian-cabrera",
     nombre: "Christian",
     apellido: "Cabrera",
+    correo: "ccabrera@jciecuador.com",
     cargo: "Vicepresidente de Acción Comunitaria",
     imagen: "/images/miembros/miembros/christian-cabrera.png",
     social: {
@@ -70,7 +71,7 @@ export const miembros: Miembro[] = [
     nombre: "Nicolas",
     apellido: "Carrión",
     correo: "ncarrion@jciecuador.com",
-    cargo: "Vicepresidente de Acción Internacional Adhoc",
+    cargo: "Miembro",
     imagen: "/images/miembros/miembros/nicolas-carrion.png",
     social: {
       instagram: "https://www.instagram.com/nicoc.5/",
@@ -128,6 +129,7 @@ export const miembros: Miembro[] = [
     nombre: "Nancy",
     apellido: "Guillén",
     cargo: "Asesora Legal",
+    correo: "nguillen@jciecuador.com",
     imagen: "/images/miembros/miembros/nancy-guillen.png",
     social: {
       instagram: "https://www.instagram.com/abg.nancyguillen/",
@@ -219,6 +221,7 @@ export const miembros: Miembro[] = [
     nombre: "Sebastián",
     apellido: "Palate",
     cargo: "Vicepresidente de Negocios y Emprendimiento",
+    correo: "dpalate@jciecuador.com",
     imagen: "/images/miembros/miembros/sebastian-palate.png",
     social: {
       instagram: "https://www.instagram.com/sebastianpalate1/",
@@ -251,6 +254,7 @@ export const miembros: Miembro[] = [
     nombre: "María Lourdes",
     apellido: "Ramos",
     cargo: "Revisora Fiscal",
+    correo: "mramos@jciecuador.com",
     imagen: "/images/miembros/miembros/lourdes-ramos.png",
     social: {
       instagram: "https://www.instagram.com/l.u.c.i.e.r.n.a.g.a_l.u/",
@@ -294,6 +298,7 @@ export const miembros: Miembro[] = [
     nombre: "Ricardo",
     apellido: "Santamaría",
     cargo: "Vicepresidente de Cooperación Internacional",
+    correo: "rsantamaria@jciecuador.com",
     imagen: "/images/miembros/miembros/ricardo-santamaria.png",
     social: {
       instagram: "https://www.instagram.com/ricardo_.s/",

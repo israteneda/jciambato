@@ -13,15 +13,15 @@ export default function Cursos() {
         />
 
         <div className="my-10 flex flex-col md:flex-row">
-          <div className="flex flex-1 flex-col md:mr-3 md:mt-48">
+          <div className="flex flex-1 flex-col md:mt-48 md:mr-3">
             <div className="md:mt-6">
-              <div className="box-border min-h-52 w-full bg-jci-navy p-10">
-                <div className="self-end text-base font-normal not-italic leading-[1.5] tracking-normal text-gray-50">
+              <div className="bg-jci-navy box-border min-h-52 w-full p-10">
+                <div className="self-end text-base leading-normal font-normal tracking-normal text-gray-50 not-italic">
                   <strong>Introducción a JCI</strong>
                   <span> - Gratis</span>
                 </div>
                 <div className="my-2">
-                  <h4 className="w-full text-2xl font-bold not-italic leading-[1-2] tracking-normal text-gray-50">
+                  <h4 className="w-full text-2xl leading-[1-2] font-bold tracking-normal text-gray-50 not-italic">
                     ¿Qué es la JCI?
                   </h4>
                 </div>
@@ -34,18 +34,18 @@ export default function Cursos() {
                 <Link
                   href="https://aprende.educat.tech/course/section.php?id=624"
                   target="_blank"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-[400ms]"
+                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center py-4">
-                    <span className="group-hover:text-jci-red text-xs font-medium not-italic leading-none tracking-normal text-jci-seafoam transition-colors duration-300">
+                    <span className="group-hover:text-jci-red text-jci-seafoam text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Leer más
                     </span>
                     <div
                       className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                       aria-hidden="true"
                     >
-                      <HiOutlineArrowNarrowRight className="group-hover:text-jci-red h-6 w-6 text-jci-seafoam transition-colors duration-300" />
+                      <HiOutlineArrowNarrowRight className="group-hover:text-jci-red text-jci-seafoam h-6 w-6 transition-colors duration-300" />
                     </div>
                   </div>
                 </Link>
@@ -53,18 +53,18 @@ export default function Cursos() {
             </div>
 
             <div className="md:mt-6">
-              <div className="box-border min-h-52 w-full bg-jci-yellow p-10">
-                <div className="self-end text-base font-normal not-italic leading-[1.5] tracking-normal text-gray-50">
+              <div className="bg-jci-yellow box-border min-h-52 w-full p-10">
+                <div className="self-end text-base leading-normal font-normal tracking-normal text-gray-50 not-italic">
                   <strong>Introducción a JCI</strong>
                   <span> - Gratis</span>
                 </div>
                 <div className="my-2">
-                  <h4 className="w-full text-2xl font-bold not-italic leading-[1-2] tracking-normal text-jci-black">
+                  <h4 className="text-jci-black w-full text-2xl leading-[1-2] font-bold tracking-normal not-italic">
                     Credo, Misión <br /> y Visión
                   </h4>
                 </div>
 
-                <p className="mb-5 text-sm text-jci-black">
+                <p className="text-jci-black mb-5 text-sm">
                   Conoce los principios que definen nuestra identidad y cómo guían nuestras acciones
                   como ciudadanos activos.
                 </p>
@@ -72,11 +72,11 @@ export default function Cursos() {
                 <Link
                   href="https://aprende.educat.tech/course/view.php?id=54"
                   target="_blank"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-[400ms]"
+                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center py-4">
-                    <span className="group-hover:text-jci-red text-jci-off-black text-xs font-medium not-italic leading-none tracking-normal transition-colors duration-300">
+                    <span className="group-hover:text-jci-red text-jci-off-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Leer más
                     </span>
                     <div
@@ -94,17 +94,17 @@ export default function Cursos() {
           <div className="flex flex-1 flex-col md:ml-3">
             <div className="md:mt-6">
               <div className="box-border min-h-52 w-full bg-[#D8D8D8] p-10">
-                <div className="self-end text-base font-normal not-italic leading-[1.5] tracking-normal text-jci-black">
+                <div className="text-jci-black self-end text-base leading-normal font-normal tracking-normal not-italic">
                   <strong>Introducción a JCI</strong>
                   <span> - Gratis</span>
                 </div>
                 <div className="my-2">
-                  <h4 className="w-full text-2xl font-bold not-italic leading-[1-2] tracking-normal text-jci-black">
+                  <h4 className="text-jci-black w-full text-2xl leading-[1-2] font-bold tracking-normal not-italic">
                     Eventos
                   </h4>
                 </div>
 
-                <p className="mb-5 text-sm text-jci-black">
+                <p className="text-jci-black mb-5 text-sm">
                   Explora el impacto de nuestros eventos locales, nacionales e internacionales, y
                   cómo puedes participar activamente.
                 </p>
@@ -112,11 +112,11 @@ export default function Cursos() {
                 <Link
                   href="https://aprende.educat.tech/course/view.php?id=53"
                   target="_blank"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-[400ms]"
+                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center py-4">
-                    <span className="group-hover:text-jci-red text-jci-off-black text-xs font-medium not-italic leading-none tracking-normal transition-colors duration-300">
+                    <span className="group-hover:text-jci-red text-jci-off-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Leer más
                     </span>
                     <div
@@ -131,18 +131,18 @@ export default function Cursos() {
             </div>
 
             <div className="md:mt-6">
-              <div className="box-border min-h-52 w-full bg-jci-seafoam p-10">
-                <div className="self-end text-base font-normal not-italic leading-[1.5] tracking-normal text-jci-black">
+              <div className="bg-jci-seafoam box-border min-h-52 w-full p-10">
+                <div className="text-jci-black self-end text-base leading-normal font-normal tracking-normal not-italic">
                   <strong>Introducción a JCI</strong>
                   <span> - Gratis</span>
                 </div>
                 <div className="my-2">
-                  <h4 className="w-full text-2xl font-bold not-italic leading-[1-2] tracking-normal text-jci-black">
+                  <h4 className="text-jci-black w-full text-2xl leading-[1-2] font-bold tracking-normal not-italic">
                     Plan de Carrera
                   </h4>
                 </div>
 
-                <p className="mb-5 text-sm text-jci-black">
+                <p className="text-jci-black mb-5 text-sm">
                   Traza tu ruta de crecimiento dentro de JCI Ambato y JCI Ecuador para desarrollar
                   tu potencial al máximo.
                 </p>
@@ -150,11 +150,11 @@ export default function Cursos() {
                 <Link
                   href="https://aprende.educat.tech/course/view.php?id=57"
                   target="_blank"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-[400ms]"
+                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center py-4">
-                    <span className="group-hover:text-jci-red text-jci-off-black text-xs font-medium not-italic leading-none tracking-normal transition-colors duration-300">
+                    <span className="group-hover:text-jci-red text-jci-off-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Leer más
                     </span>
                     <div
@@ -170,7 +170,7 @@ export default function Cursos() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center text-center text-sm font-normal not-italic tracking-normal text-[#323232] md:text-base">
+        <div className="flex flex-col items-center justify-center text-center text-sm font-normal tracking-normal text-[#323232] not-italic md:text-base">
           <span>¿Quieres conocer más opciones de formación?</span>
           <span>
             Visita más cursos en&nbsp;

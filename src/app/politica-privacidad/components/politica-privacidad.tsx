@@ -41,7 +41,7 @@ export default function PoliticaPrivacidad() {
             <button
               key={index}
               onClick={() => setActiveButton(index)}
-              className={`mr-11 py-0 text-left text-base font-bold leading-[1.25] transition duration-300 hover:text-gray-700 ${
+              className={`mr-11 py-0 text-left text-base leading-tight font-bold transition duration-300 hover:text-gray-700 ${
                 activeButton === index ? "text-gray-800" : "text-gray-400"
               }`}
               role="tab"

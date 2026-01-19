@@ -9,7 +9,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     subtitle: "Impulsa tu espíritu emprendedor con visión global.",
     description:
       "Fomentamos la creación y crecimiento de ideas innovadoras a través de mentoría, formación empresarial y una red global de contactos que impulsa el emprendimiento con propósito.",
-    responsable: getMiembroById("erick-calvache")!,
+    responsable: getMiembroById("sebastian-palate")!,
     image: "/images/areas_oportunidad/negocios-emprendimiento/negocios-emprendimiento.jpg",
     background_image:
       "/images/areas_oportunidad/negocios-emprendimiento/negocios-emprendimiento-back.webp",
@@ -49,7 +49,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     subtitle: "Conectamos líderes para generar impacto más allá de las fronteras.",
     description:
       "Forma parte de una red global de jóvenes comprometidos con el cambio. Vive experiencias internacionales, intercambios culturales y liderazgo en escenarios globales.",
-    responsable: getMiembroById("nicolas-carrion")!,
+    responsable: getMiembroById("ricardo-santamaria")!,
     image: "/images/areas_oportunidad/cooperacion-internacional/internacionalizacion.webp",
     background_image:
       "/images/areas_oportunidad/cooperacion-internacional/cooperacion-internacional-back.webp",
@@ -94,7 +94,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     subtitle: "Descubre tu potencial y fortalece tu liderazgo personal.",
     description:
       "Ofrecemos espacios de formación, mentoría y experiencias transformadoras que te preparan para liderar con propósito, comunicar con impacto y crecer con confianza.",
-    responsable: getMiembroById("gustavo-solis")!,
+    responsable: getMiembroById("erick-calvache")!,
     image: "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual.jpeg",
     background_image:
       "/images/areas_oportunidad/desarrollo-individual/desarrollo-individual-back.webp",
@@ -140,7 +140,7 @@ export const areasOportunidad: AreaOportunidad[] = [
     subtitle: "Lideramos proyectos con propósito que transforman vidas.",
     description:
       "Diseñamos e implementamos iniciativas sociales que mejoran la calidad de vida, promueven la participación ciudadana y generan soluciones sostenibles a desafíos locales.",
-    responsable: getMiembroById("sayri-pamballo")!,
+    responsable: getMiembroById("christian-cabrera")!,
     image: "/images/areas_oportunidad/impacto-comunidad/impacto-comunidad.jpg",
     background_image: "/images/areas_oportunidad/impacto-comunidad/impacto-comunidad-back.webp",
     features: [
