@@ -124,7 +124,7 @@ export default function Presentacion() {
                 alt=""
                 width={120}
                 height={120}
-                className="h-20 w-20 object-contain md:h-30md:w-30"
+                className="md:h-30md:w-30 h-20 w-20 object-contain"
                 aria-hidden="true"
               />
             </div>

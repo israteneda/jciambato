@@ -126,7 +126,11 @@ export const Navbar = ({ className }: NavbarProps) => {
             <Image
               alt="JCI Ambato Logo"
               className="h-28 w-28 object-contain"
-              src={shouldUseDarkText ? "/images/logos/jci-ambato.png" : "/images/logos/jci-ambato-bw.png"}
+              src={
+                shouldUseDarkText
+                  ? "/images/logos/jci-ambato.png"
+                  : "/images/logos/jci-ambato-bw.png"
+              }
               width={112}
               height={115}
               priority
