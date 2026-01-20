@@ -128,8 +128,8 @@ export const Navbar = ({ className }: NavbarProps) => {
               className="h-28 w-28 object-contain"
               src={
                 shouldUseDarkText
-                  ? "/images/logos/jci-ambato.png"
-                  : "/images/logos/jci-ambato-bw.png"
+                  ? "/images/logos/jci-ambato.webp"
+                  : "/images/logos/jci-ambato-bw.webp"
               }
               width={112}
               height={115}

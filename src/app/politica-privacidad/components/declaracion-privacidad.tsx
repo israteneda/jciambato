@@ -9,7 +9,7 @@ export default function DeclaracionPrivacidad() {
             </h1>
 
             <time
-              className="text-jci-teal mt-8 block text-xl font-bold text-inherit italic"
+              className="text-jci-teal mt-8 block text-xl font-bold italic"
               dateTime="2025-07"
             >
               Julio, 2025
@@ -98,13 +98,26 @@ export default function DeclaracionPrivacidad() {
                   <div className="mt-10 flex flex-col gap-10">
                     {/* A */}
                     <article>
-                      <h4
-                        className="text-jci-black> A. Definición de Datos Personales </h4> <p> De acuerdo con la LOPDP ecuatoriana, los datos personales son cualquier información de cualquier naturaleza y en cualquier soporte concerniente a una persona natural identificada o identificable. Se considera identificable a una persona natural si puede ser identificada, directa o indirectamente, en particular por referencia a un identificador como nombre, número de identificación, datos de localización, identificadores electrónicos o uno o más elementos específicos de identidad física, fisiológica, genética, mental, económica, cultural o social. </p> </article> {/* B */} <article> <h4 className= mb-4 text-2xl font-bold"
-                        mb-4
-                        text-2xl
-                        font-bold
-                        text-jci-black
-                      >
+                      <h4 className="text-jci-black mb-4 text-2xl font-bold">
+                        A. Definición de Datos Personales
+                      </h4>
+
+                      <p>
+                        {" "}
+                        De acuerdo con la LOPDP ecuatoriana, los datos personales son cualquier
+                        información de cualquier naturaleza y en cualquier soporte concerniente a
+                        una persona natural identificada o identificable. Se considera identificable
+                        a una persona natural si puede ser identificada, directa o indirectamente,
+                        en particular por referencia a un identificador como nombre, número de
+                        identificación, datos de localización, identificadores electrónicos o uno o
+                        más elementos específicos de identidad física, fisiológica, genética,
+                        mental, económica, cultural o social.
+                      </p>
+                    </article>
+
+                    {/* B */}
+                    <article>
+                      <h4 className="text-jci-black mb-4 text-2xl font-bold">
                         B. Responsable del Tratamiento
                       </h4>
                       <p>
@@ -505,15 +518,14 @@ export default function DeclaracionPrivacidad() {
                           <strong>JCI Ambato</strong>
                         </p>
                         <p>
-                          Correo electrónico:{" "}
                           <a
                             href="mailto:jciambato@jciecuador.com"
-                            className="text-jci-teal font-bold"
+                            className="text-jci-teal font-bold underline"
                           >
                             jciambato@jciecuador.com
                           </a>
                         </p>
-                        <p>Dirección: Ambato, Ecuador</p>
+                        <p>Ambato, Ecuador</p>
                       </address>
                     </article>
                   </div>

@@ -2,14 +2,14 @@
 
 <div align="center">
 
-![JCI Ambato Logo](/public/images/logos/jci-ambato-bw.png)
+![JCI Ambato Logo](/public/images/logos/jci-ambato-bw.webp)
 
 **Unidos Construyendo un Futuro de Liderazgo**
 
-[![Next.js](https://img.shields.io/badge/Next.js-15.1.6-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-18.3.1-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.1.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.2.3-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6.3-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.16-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.18-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![HeroUI](https://img.shields.io/badge/HeroUI-v2-000000?style=for-the-badge)](https://heroui.com/)
 
 </div>
@@ -32,10 +32,10 @@
 
 ### Frontend
 
-- **[Next.js 15](https://nextjs.org/)** - Framework React con App Router
-- **[React 18](https://reactjs.org/)** - Biblioteca de interfaz de usuario
+- **[Next.js 16](https://nextjs.org/)** - Framework React con App Router
+- **[React 19](https://reactjs.org/)** - Biblioteca de interfaz de usuario
 - **[TypeScript 5.6](https://www.typescriptlang.org/)** - Tipado estático
-- **[Tailwind CSS 3.4](https://tailwindcss.com/)** - Framework CSS utilitario
+- **[Tailwind CSS 4.1](https://tailwindcss.com/)** - Framework CSS utilitario
 - **[HeroUI v2](https://heroui.com/)** - Biblioteca de componentes UI
 - **[Framer Motion](https://www.framer.com/motion/)** - Animaciones fluidas
 

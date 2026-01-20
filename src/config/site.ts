@@ -91,7 +91,7 @@ export const siteConfig = {
   },
   manifest: "/manifest.json",
   icons: {
-    icon: "/images/logos/jci-ambato.ico",
+    icon: "/images/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },

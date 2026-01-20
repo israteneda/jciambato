@@ -93,7 +93,7 @@ export function Footer() {
                     <Image
                       alt="JCI Ambato Logo"
                       className="h-15 w-27.5 object-contain"
-                      src="/images/logos/jci-ambato.png"
+                      src="/images/logos/jci-ambato.webp"
                       width={110}
                       height={50}
                     />

@@ -66,7 +66,7 @@ export default function Datos() {
               <div className="flex h-full w-full items-end justify-end bg-gray-100">
                 <div className="flex items-start gap-4 p-4">
                   <Image
-                    src="/images/logos/jci.png"
+                    src="/images/logos/jci.webp"
                     alt="Logo JCI"
                     width={90}
                     height={90}
@@ -74,7 +74,7 @@ export default function Datos() {
                   />
 
                   <Image
-                    src="/images/logos/jci-ecuador.png"
+                    src="/images/logos/jci-ecuador.webp"
                     alt="Logo JCI"
                     width={100}
                     height={100}
@@ -90,7 +90,7 @@ export default function Datos() {
 
           {/* Segundo Cuadro */}
           <div className="bg-jci-yellow col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1">
-            <div className="flex h-full min-h-[400px] flex-col justify-between p-6 md:min-h-[300px] lg:min-h-full">
+            <div className="flex h-full min-h-100 flex-col justify-between p-6 md:min-h-75 lg:min-h-full">
               <div>
                 <div className="text-jci-black text-xs leading-[1.8] font-normal tracking-normal uppercase not-italic">
                   Liderando el cambio en Ecuador
@@ -128,7 +128,7 @@ export default function Datos() {
 
           {/* Tercer Cuadro */}
           <div className="bg-jci-seafoam col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1">
-            <div className="flex h-full min-h-[400px] flex-col justify-between p-6 md:min-h-[300px] lg:min-h-full">
+            <div className="flex h-full min-h-100 flex-col justify-between p-6 md:min-h-75 lg:min-h-full">
               <div>
                 <div className="text-jci-black text-xs leading-[1.8] font-normal tracking-normal uppercase not-italic">
                   Impacto que trasciende fronteras

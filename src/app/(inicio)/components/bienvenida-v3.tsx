@@ -248,7 +248,7 @@ export default function BienvenidaV3() {
             <Image
               alt="Liderazgo con Propósito Logo"
               className="h-full w-full object-contain"
-              src="/images/logos/actuar-proposito.png"
+              src="/images/logos/actuar-proposito.webp"
               width={150}
               height={70}
               priority
