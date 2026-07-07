@@ -149,7 +149,7 @@ export function Footer() {
                         rel="noopener noreferrer"
                         aria-label="Síguenos en LinkedIn"
                       >
-                        <FaLinkedin className="hover:text-jci-seafoam h-6 w-6" aria-hidden="true" />
+                        <FaLinkedin className="hover:text-jci-teal h-6 w-6" aria-hidden="true" />
                       </a>
                       <a
                         href={siteConfig.links.facebook}
@@ -157,7 +157,7 @@ export function Footer() {
                         rel="noopener noreferrer"
                         aria-label="Síguenos en Facebook"
                       >
-                        <FaFacebook className="hover:text-jci-seafoam h-6 w-6" aria-hidden="true" />
+                        <FaFacebook className="hover:text-jci-teal h-6 w-6" aria-hidden="true" />
                       </a>
                       <a
                         href={siteConfig.links.instagram}
@@ -166,7 +166,7 @@ export function Footer() {
                         aria-label="Síguenos en Instagram"
                       >
                         <FaInstagram
-                          className="hover:text-jci-seafoam h-6 w-6"
+                          className="hover:text-jci-teal h-6 w-6"
                           aria-hidden="true"
                         />
                       </a>
@@ -193,7 +193,7 @@ export function Footer() {
                 <div className="text-jci-gray flex flex-col justify-between gap-2 lg:flex-row lg:gap-5">
                   <p className="text-default-400 text-xs md:text-sm">
                     © 2026 JCI Ambato. Todos los Derechos Reservados.
-                  </p>
+                  </p> 
 
                   <div>
                     <div className="flex flex-row justify-start gap-5">

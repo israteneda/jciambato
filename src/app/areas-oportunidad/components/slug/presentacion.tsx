@@ -11,14 +11,14 @@ export default function Presentacion({ area }: { area: AreaOportunidad }) {
         <div className="mt-16">
           <div className="max-w-5xl">
             <header>
-              <div className="text-xs leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
+              <div className="text-xs leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
                 {area.subtitle}
               </div>
 
               <div className="mt-8">
                 <h2
                   id={`presentacion-${area.slug}-heading`}
-                  className="text-left text-3xl font-bold text-black md:text-5xl md:leading-[1.33]"
+                  className="text-left text-3xl font-bold text-jci-black md:text-5xl md:leading-[1.33]"
                 >
                   {area.description}
                 </h2>
@@ -26,7 +26,7 @@ export default function Presentacion({ area }: { area: AreaOportunidad }) {
             </header>
 
             <div className="mt-16 md:mt-20">
-              <p className="text-jci-off-black columns-1 gap-10 space-y-4 text-justify text-base leading-loose md:text-left lg:columns-2">
+              <p className="text-jci-black columns-1 gap-10 space-y-4 text-justify text-base leading-loose md:text-left lg:columns-2">
                 {area.longDescription}
               </p>
             </div>

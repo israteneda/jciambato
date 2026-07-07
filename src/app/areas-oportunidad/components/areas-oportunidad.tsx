@@ -45,7 +45,7 @@ export default function AreasOportunidad() {
                 </header>
 
                 <div className="mt-5">
-                  <p className="text-md text-jci-gray max-w-[372px] text-left leading-[1.78] font-normal tracking-normal not-italic">
+                  <p className="text-md text-jci-navy max-w-[372px] text-left leading-[1.78] font-normal tracking-normal not-italic">
                     {area.description}
                   </p>
                 </div>
@@ -76,8 +76,8 @@ export default function AreasOportunidad() {
                     >
                       {area.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="w-1/2">
-                          <div className="mx-[10px] border-t border-t-[#f5f5f5] py-[11px]">
-                            <span className="text-jci-gray text-jci-navy text-[14px] leading-[1.78] font-semibold tracking-normal not-italic">
+                          <div className="mx-[10px] border-t border-t-white py-[11px]">
+                            <span className="text-jci-navy text-[14px] leading-[1.78] font-semibold tracking-normal not-italic">
                               {feature}
                             </span>
                           </div>
@@ -93,14 +93,14 @@ export default function AreasOportunidad() {
                       aria-label={`Explorar área de ${area.title}`}
                     >
                       <div className="flex items-center py-4">
-                        <span className="text-jci-black group-hover:text-jci-seafoam text-sm leading-none font-medium tracking-normal not-italic transition-colors duration-300">
+                        <span className="text-jci-black group-hover:text-jci-teal text-sm leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                           Explora esta Área de Oportunidad
                         </span>
                         <div
                           className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                           aria-hidden="true"
                         >
-                          <HiOutlineArrowNarrowRight className="text-jci-black group-hover:text-jci-seafoam h-6 w-6 transition-colors duration-300" />
+                          <HiOutlineArrowNarrowRight className="text-jci-black group-hover:text-jci-teal h-6 w-6 transition-colors duration-300" />
                         </div>
                       </div>
                     </Link>

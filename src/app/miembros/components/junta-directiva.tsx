@@ -8,10 +8,10 @@ export default function Miembros() {
       <div className="mx-8 max-w-5xl md:mx-20 lg:mx-auto">
         {/* Header */}
         <header className="mb-12 text-start">
-          <h2 id="junta-directiva-heading" className="text-3xl font-bold text-gray-800 md:text-5xl">
+          <h2 id="junta-directiva-heading" className="text-3xl font-bold text-jci-black md:text-5xl">
             Junta Directiva 2026
           </h2>
-          <p className="mt-2 max-w-3xl text-lg text-gray-600">
+          <p className="mt-2 max-w-3xl text-lg text-jci-navy">
             Lidera la JCI local con <strong>visión estratégica</strong> y{" "}
             <strong>profesionalismo</strong>, impulsando iniciativas innovadoras, gestionando
             recursos con excelencia y ejecutando proyectos alineados con la misión y visión de la
@@ -31,7 +31,7 @@ export default function Miembros() {
               className={`group flex flex-col items-center text-center ${index % 3 !== 1 ? "lg:mt-12" : ""} `}
               role="listitem"
             >
-              <figure className="w-full transform overflow-hidden bg-gray-300 transition-transform duration-300 group-hover:scale-105">
+              <figure className="w-full transform overflow-hidden bg-white transition-transform duration-300 group-hover:scale-105">
                 {miembro.imagen ? (
                   <Image
                     src={miembro.imagen}
@@ -44,7 +44,7 @@ export default function Miembros() {
                     priority={index < 6}
                   />
                 ) : (
-                  <div className="flex h-auto w-full items-center justify-center bg-gray-400 md:h-96">
+                  <div className="flex h-auto w-full items-center justify-center bg-jci-navy md:h-96">
                     <span className="h-full text-lg text-white">Próximamente</span>
                   </div>
                 )}
@@ -56,7 +56,7 @@ export default function Miembros() {
                     <h3 className="text-jci-black text-xl font-bold">
                       {miembro.nombre} {miembro.apellido}
                     </h3>
-                    <p className="text-md text-jci-gray">{miembro.cargo}</p>
+                    <p className="text-md text-jci-navy">{miembro.cargo}</p>
                   </div>
 
                   <div className="flex items-center">
@@ -70,7 +70,7 @@ export default function Miembros() {
                             href={miembro.social.instagram}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-400 transition-colors hover:text-gray-600"
+                            className="text-jci-navy transition-colors hover:text-jci-teal"
                             aria-label={`Instagram de ${miembro.nombre}`}
                           >
                             <FaInstagram />
@@ -82,7 +82,7 @@ export default function Miembros() {
                             href={miembro.social.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-400 transition-colors hover:text-gray-600"
+                            className="text-jci-navy transition-colors hover:text-jci-teal"
                             aria-label={`LinkedIn de ${miembro.nombre}`}
                           >
                             <FaLinkedin />

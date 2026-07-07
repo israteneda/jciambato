@@ -17,7 +17,7 @@ export default function Acciones() {
             </h2>
           </div>
           <div className="mt-8">
-            <p className="max-w-[666px] text-left text-base font-normal tracking-normal text-[rgb(50,50,50)] md:text-lg md:leading-[1.78]">
+            <p className="max-w-[666px] text-left text-base font-normal tracking-normal text-jci-black md:text-lg md:leading-[1.78]">
               Únete a la red global de jóvenes que ya está creando soluciones reales. No importa si
               tienes experiencia o recién comienzas: lo que necesitas es voluntad de actuar.
             </p>
@@ -38,14 +38,14 @@ export default function Acciones() {
                 <address className="mt-6 not-italic">
                   <div className="flex flex-col gap-5 md:flex-row">
                     <div className="mr-8">
-                      <h4 className="text-left text-[18px] leading-[1.78] font-bold tracking-normal text-[#323232] not-italic">
+                      <h4 className="text-left text-[18px] leading-[1.78] font-bold tracking-normal text-jci-black not-italic">
                         Ambato, Ecuador
                       </h4>
                       <div className="mt-2">
-                        <p className="text-left text-sm leading-[1.78] font-normal tracking-normal text-[#323232] not-italic">
+                        <p className="text-left text-sm leading-[1.78] font-normal tracking-normal text-jci-black not-italic">
                           Zona Metropolitana de Ambato
                         </p>
-                        <p className="text-left text-sm leading-[1.78] font-normal tracking-normal text-[#323232] not-italic">
+                        <p className="text-left text-sm leading-[1.78] font-normal tracking-normal text-jci-black not-italic">
                           Av. Cevallos y Quito.
                         </p>
                       </div>
@@ -75,7 +75,7 @@ export default function Acciones() {
                                             </div> */}
 
                     <div className="mr-8">
-                      <h4 className="text-left text-[18px] leading-[1.78] font-bold tracking-normal text-[#323232] not-italic">
+                      <h4 className="text-left text-[18px] leading-[1.78] font-bold tracking-normal text-jci-black not-italic">
                         Correo
                       </h4>
 

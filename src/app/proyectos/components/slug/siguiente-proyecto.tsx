@@ -30,7 +30,7 @@ export default function SiguienteProyecto({ proyecto }: { proyecto: Proyecto }) 
                 aria-label={`Ir a ${nextProyecto.titulo}`}
               >
                 <div className="relative z-10">
-                  <div className="font-aeonik text-[13px] leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
+                  <div className="font-sans text-[13px] leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
                     Proyectos
                   </div>
                   <div className="mt-2">

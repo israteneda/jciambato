@@ -11,7 +11,7 @@ export default function Datos() {
         {/* Grid container responsivo */}
         <div className="grid grid-cols-1 grid-rows-3 gap-0 md:grid-cols-3 md:grid-rows-1 lg:grid-cols-4 lg:grid-rows-2">
           {/* Primer Cuadro */}
-          <div className="relative col-span-1 row-span-1 overflow-hidden bg-gray-500 md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-2">
+          <div className="relative col-span-1 row-span-1 overflow-hidden bg-jci-navy md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-2">
             {/* Fotografía de Fondo - Solo visible en pantallas grandes */}
             <Image
               src="/images/inicio/base-jci.png"
@@ -26,12 +26,12 @@ export default function Datos() {
               <div className="bg-jci-navy h-full w-full overflow-hidden lg:h-1/2 lg:w-1/2">
                 <div className="flex h-full flex-col justify-between p-6">
                   <div>
-                    <div className="text-xs leading-[1.8] font-normal tracking-normal text-gray-50 uppercase not-italic">
+                    <div className="text-xs leading-[1.8] font-normal tracking-normal text-white uppercase not-italic">
                       Somos una red Internacional
                     </div>
 
                     <div className="mt-2 w-full">
-                      <h5 className="text-left text-lg leading-tight font-bold tracking-normal text-gray-50 not-italic">
+                      <h5 className="text-left text-lg leading-tight font-semibold tracking-normal text-white not-italic">
                         Una red de líderes jóvenes presente en Ambato, más de 10 ciudades del
                         Ecuador y más de 120 países del mundo.
                       </h5>
@@ -45,14 +45,14 @@ export default function Datos() {
                       aria-label="Descubre donde estamos"
                     >
                       <div className="flex items-center">
-                        <span className="text-xs leading-none font-medium tracking-normal text-gray-50 not-italic transition-colors duration-300 group-hover:text-gray-50">
+                        <span className="text-xs leading-none font-medium tracking-normal text-white not-italic transition-colors duration-300 group-hover:text-white">
                           Descrubre donde estamos
                         </span>
                         <div
                           className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                           aria-hidden="true"
                         >
-                          <HiOutlineArrowNarrowRight className="h-6 w-6 text-gray-50 transition-colors duration-300 group-hover:text-gray-50" />
+                          <HiOutlineArrowNarrowRight className="h-6 w-6 text-white transition-colors duration-300 group-hover:text-white" />
                         </div>
                       </div>
                     </Link>
@@ -63,7 +63,7 @@ export default function Datos() {
 
             {/* Contenido Inferior */}
             <div className="absolute right-0 bottom-0">
-              <div className="flex h-full w-full items-end justify-end bg-gray-100">
+              <div className="flex h-full w-full items-end justify-end bg-white">
                 <div className="flex items-start gap-4 p-4">
                   <Image
                     src="/images/logos/jci.webp"
@@ -97,7 +97,7 @@ export default function Datos() {
                 </div>
 
                 <div className="mt-2 w-full">
-                  <h5 className="text-left text-lg leading-tight font-bold tracking-normal text-black not-italic">
+                  <h5 className="text-left text-lg leading-tight font-semibold tracking-normal text-jci-black not-italic">
                     Uno de los capítulos más activos de JCI Ecuador, con impacto local y proyección
                     nacional.
                   </h5>
@@ -127,7 +127,7 @@ export default function Datos() {
           </div>
 
           {/* Tercer Cuadro */}
-          <div className="bg-jci-seafoam col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1">
+          <div className="bg-jci-teal col-span-1 row-span-1 md:col-span-1 md:row-span-1 lg:col-span-1 lg:row-span-1">
             <div className="flex h-full min-h-100 flex-col justify-between p-6 md:min-h-75 lg:min-h-full">
               <div>
                 <div className="text-jci-black text-xs leading-[1.8] font-normal tracking-normal uppercase not-italic">
@@ -135,7 +135,7 @@ export default function Datos() {
                 </div>
 
                 <div className="mt-2 w-full">
-                  <h5 className="text-left text-lg leading-tight font-bold tracking-normal text-black not-italic">
+                  <h5 className="text-left text-lg leading-tight font-semibold tracking-normal text-jci-black not-italic">
                     Desde Ambato, contribuimos al desarrollo de líderes jóvenes en comunidades de
                     todo el mundo.
                   </h5>
@@ -149,7 +149,7 @@ export default function Datos() {
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center">
-                    <span className="group-hover:text-jci-red text-jci-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
+                    <span className="group-hover:text-jci-teal text-jci-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Descubre cómo lo hacemos
                     </span>
                     <div

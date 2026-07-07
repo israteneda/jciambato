@@ -2,14 +2,14 @@ export default function PoliticaGestion() {
   return (
     <section className="relative bg-gray-50">
       <div className="box-border flex min-h-28 items-center bg-gray-200 md:mx-8">
-        <h1 className="text-jci-off-black ml-8 leading-none font-bold whitespace-nowrap transition duration-300 md:ml-20">
+        <h1 className="text-jci-black ml-8 leading-none font-bold whitespace-nowrap transition duration-300 md:ml-20">
           Política de Gestión
         </h1>
       </div>
 
       <div className="mt-16">
         <div className="relative z-10 mx-auto px-8 md:max-w-6xl">
-          <h3 className="text-jci-off-black max-w-3xl text-left text-2xl font-bold md:leading-normal lg:text-5xl">
+          <h3 className="text-jci-black max-w-3xl text-left text-2xl font-bold md:leading-normal lg:text-5xl">
             JCI Ambato se compromete a empoderar a sus miembros, senadores y colaboradores,
             fortaleciendo su sentido de pertenencia y satisfacción mediante relaciones sólidas,
             sostenibles y basadas en valores compartidos.

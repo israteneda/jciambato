@@ -1,13 +1,13 @@
-import { Inter as FontInter, Plus_Jakarta_Sans as PlusJakarta } from "next/font/google";
-
-export const fontInter = FontInter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
-});
+import { Plus_Jakarta_Sans as PlusJakarta, Arvo } from "next/font/google";
 
 export const fontPlusJakarta = PlusJakarta({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-plus-jakarta",
+});
+
+export const fontArvo = Arvo({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-arvo",
 });

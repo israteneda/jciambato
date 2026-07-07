@@ -48,11 +48,11 @@ export default function ExploraAreasOportunidad({ area }: { area: AreaOportunida
           <div className="mt-16">
             <div className="relative z-10 mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
               <div className="relative z-10">
-                <div className="font-aeonik text-[13px] leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
+                <div className="font-sans text-[13px] leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
                   Quieres conocer más?
                 </div>
                 <div className="mt-2">
-                  <h2 className="max-w-4xl text-left text-3xl leading-[1.33] font-bold tracking-normal text-black not-italic md:text-4xl">
+                  <h2 className="max-w-4xl text-left text-3xl leading-[1.33] font-bold tracking-normal text-jci-black not-italic md:text-4xl">
                     Echa un vistazo a los proyectos que nos han ayudado a crecer a lo largo de los
                     años.
                   </h2>
@@ -65,7 +65,7 @@ export default function ExploraAreasOportunidad({ area }: { area: AreaOportunida
                     aria-label="Explora nuestras áreas"
                   >
                     <Link href="/areas-oportunidad">
-                      <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
+                      <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-jci-black transition-transform duration-300 group-hover:translate-x-0"></span>
                       <span className="relative z-10">Explora nuestras áreas</span>
                     </Link>
                   </Button>

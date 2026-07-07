@@ -13,7 +13,7 @@ export default function Presentacion({ proyecto }: { proyecto: Proyecto }) {
               {proyecto.area_oportunidad}
             </div>
             <div className="mt-8">
-              <h2 className="font-aeonik-bold text-jci-off-black max-w-6xl text-left text-3xl leading-[1.33] font-bold md:text-5xl">
+              <h2 className="text-jci-black max-w-6xl text-left text-3xl leading-[1.33] font-bold md:text-5xl">
                 {proyecto.nombre}
               </h2>
             </div>

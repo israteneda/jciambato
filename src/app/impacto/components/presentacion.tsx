@@ -6,18 +6,18 @@ export default function Presentacion() {
         <div className="flex w-full justify-center">
           <div className="relative mx-auto max-w-6xl bg-white px-8 py-20 pb-20 md:px-20">
             <header className="max-w-3xl">
-              <p className="text-xs leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
+              <p className="text-xs leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
                 Cómo generamos impacto
               </p>
               <div className="mt-8">
-                <h2 className="text-left text-3xl font-bold text-black md:text-5xl md:leading-[1.33]">
+                <h2 className="text-left text-3xl font-bold text-jci-black md:text-5xl md:leading-[1.33]">
                   Liderando el desarrollo de líderes jóvenes en Ambato
                 </h2>
               </div>
             </header>
 
             <div className="mt-16 md:mt-20">
-              <div className="text-jci-off-black text-justify text-base leading-loose md:text-left">
+              <div className="text-jci-black text-justify text-base leading-loose md:text-left">
                 En JCI brindamos oportunidades de desarrollo de liderazgo prácticas, deliberadas y
                 sostenibles. A través de una amplia gama de eventos, programas, sesiones de
                 formación y proyectos, empoderamos a jóvenes líderes para generar un cambio real en
@@ -74,7 +74,7 @@ export default function Presentacion() {
             </div>
 
             <div className="mt-5">
-              <div className="text-jci-off-black text-justify text-base leading-loose md:text-left">
+              <div className="text-jci-black text-justify text-base leading-loose md:text-left">
                 Al integrar estas áreas, cada experiencia en JCI fortalece a nuestros miembros como
                 agentes de cambio global. Ya sea liderando un proyecto, participando en una
                 formación o asistiendo a un evento internacional, JCI te prepara para dejar huella.
@@ -82,7 +82,7 @@ export default function Presentacion() {
             </div>
 
             {/* <div className="hidden lg:block absolute right-[50px] bottom-[25%] rotate-90 origin-bottom-right">
-                            <div className="text-[#aeaeae] leading-none text-[11px] font-medium relative tracking-[2px] uppercase after:content-[''] after:absolute after:top-1.5 after:w-40 after:h-px after:bg-[#aeaeae] after:right-[-170px]" aria-hidden="true">
+                            <div className="text-jci-gray leading-none text-[11px] font-medium relative tracking-[2px] uppercase after:content-[''] after:absolute after:top-1.5 after:w-40 after:h-px after:bg-jci-gray after:right-[-170px]" aria-hidden="true">
                                 Conoce, Suma, Transforma
                             </div>
                         </div> */}

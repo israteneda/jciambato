@@ -10,11 +10,11 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
       <div className="hidden md:block">
         <div className="absolute top-20 left-0 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
           <div
-            className="relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap text-[rgb(174,174,174)] uppercase not-italic"
+            className="relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap text-jci-gray uppercase not-italic"
             aria-hidden="true"
           >
             {subtitle}
-            <span className="absolute top-1.5 -left-42.5 h-px w-40 bg-[rgb(174,174,174)] content-['']"></span>
+            <span className="absolute top-1.5 -left-42.5 h-px w-40 bg-jci-gray content-['']"></span>
           </div>
         </div>
       </div>
@@ -23,7 +23,7 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
         <div className="flex">
           <header className="md:max-w-xl">
             <div className="mt-20">
-              <h2 className="text-left text-4xl leading-[1.17] font-bold tracking-normal text-black not-italic md:text-5xl">
+              <h2 className="text-left text-4xl leading-[1.17] font-bold tracking-normal text-jci-black not-italic md:text-5xl">
                 {title}
               </h2>
             </div>

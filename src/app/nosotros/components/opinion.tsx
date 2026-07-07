@@ -8,7 +8,7 @@ export default function Opinion() {
       <div className="mx-8 py-36 md:mx-20 md:max-w-7xl md:py-48 lg:mx-auto">
         <div className="relative z-10 max-w-lg">
           <div className="flex flex-col">
-            <div className="text-xs leading-[1.85] font-bold text-[#989898] uppercase">
+            <div className="text-xs leading-[1.85] font-bold text-jci-gray uppercase">
               Emilia Santamaría, Presidenta de JCI Ambato 2026
             </div>
             <div className="mt-10">

@@ -4,7 +4,7 @@ export default function PoliticaCookies() {
       <div className="py-16">
         <div className="relative z-10 mx-auto px-8 md:max-w-6xl">
           <header>
-            <h1 className="text-jci-off-black max-w-3xl text-left text-2xl font-bold md:leading-[1.33] lg:text-5xl">
+            <h1 className="text-jci-black max-w-3xl text-left text-2xl font-bold md:leading-[1.33] lg:text-5xl">
               Política de Cookies
             </h1>
 

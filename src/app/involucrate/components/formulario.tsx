@@ -86,27 +86,27 @@ export default function Formulario() {
       </div>
 
       <div className="mt-16 md:mt-60">
-        <div className="bg-gray-200">
+        <div className="bg-white">
           <div className="relative z-1 mx-auto max-w-6xl bg-transparent">
             <div className="flex flex-col lg:flex-row">
               <article className="mx-8 box-border min-w-[calc(50%-100px)] flex-1 md:mx-20 md:pr-0 lg:mx-auto">
                 <div className="py-20 md:mb-24 md:py-24">
                   <header>
-                    <div className="text-[13px] leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
+                    <div className="text-[13px] leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
                       Estamos aquí para ayudarte
                     </div>
 
                     <div className="mt-6">
                       <h2
                         id="formulario-heading"
-                        className="max-w-[370px] text-left text-4xl leading-[1.17] font-bold tracking-normal text-black not-italic lg:text-5xl"
+                        className="max-w-[370px] text-left text-4xl leading-[1.17] font-bold tracking-normal text-jci-black not-italic lg:text-5xl"
                       >
                         Te esperamos con los brazos abiertos
                       </h2>
                     </div>
 
                     <div className="mt-6">
-                      <p className="max-w-[370px] text-left text-[18px] leading-[32px] font-normal tracking-normal text-[#323232] not-italic">
+                      <p className="max-w-[370px] text-left text-[18px] leading-[32px] font-normal tracking-normal text-jci-black not-italic">
                         Si deseas contactarnos, por favor completa el formulario o envíanos un
                         correo a{" "}
                         <a
@@ -202,7 +202,7 @@ export default function Formulario() {
                         placeholder="Escribe tu nombre"
                         value={name}
                         onValueChange={setName}
-                        classNames={{ label: "text-sm font-semibold text-gray-500" }}
+                        classNames={{ label: "text-sm font-semibold text-jci-navy" }}
                         isRequired
                         aria-required="true"
                       />
@@ -215,7 +215,7 @@ export default function Formulario() {
                         onValueChange={setEmail}
                         isInvalid={showError && !isEmailValid}
                         errorMessage="Por favor, introduce un email válido."
-                        classNames={{ label: "text-sm font-semibold text-gray-500" }}
+                        classNames={{ label: "text-sm font-semibold text-jci-navy" }}
                         isRequired
                         aria-required="true"
                       />
@@ -226,7 +226,7 @@ export default function Formulario() {
                         placeholder="Escribe tu número de teléfono"
                         value={phone}
                         onValueChange={setPhone}
-                        classNames={{ label: "text-sm font-semibold text-gray-500" }}
+                        classNames={{ label: "text-sm font-semibold text-jci-navy" }}
                         isRequired
                         aria-required="true"
                       />
@@ -236,7 +236,7 @@ export default function Formulario() {
                         placeholder="¿Cómo podemos ayudarte?"
                         value={message}
                         onValueChange={setMessage}
-                        classNames={{ label: "text-sm font-semibold text-gray-500" }}
+                        classNames={{ label: "text-sm font-semibold text-jci-navy" }}
                         isRequired
                         aria-required="true"
                       />
@@ -252,7 +252,7 @@ export default function Formulario() {
                           isSelected={termsAccepted}
                           onValueChange={setTermsAccepted}
                         />
-                        <label htmlFor="terms" className="ml-3 text-xs text-gray-600">
+                        <label htmlFor="terms" className="ml-3 text-xs text-jci-navy">
                           He leído y acepto los{" "}
                           <Link href="/politica-privacidad" className="font-semibold underline">
                             términos y condiciones
@@ -267,7 +267,7 @@ export default function Formulario() {
                           isSelected={promoAccepted}
                           onValueChange={setPromoAccepted}
                         />
-                        <label htmlFor="promo" className="ml-3 text-xs text-gray-600">
+                        <label htmlFor="promo" className="ml-3 text-xs text-jci-navy">
                           Acepto el procesamiento de mis datos para recibir mensajes promocionales y
                           propuestas comerciales de JCI Ambato.
                         </label>

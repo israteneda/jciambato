@@ -10,7 +10,7 @@ export default function Valores() {
             <div className="text-jci-yellow text-xs leading-2 font-bold uppercase">Nuestro ADN</div>
 
             <div className="mt-6">
-              <h2 className="max-w-[470px] text-left text-4xl leading-none font-bold text-black md:text-5xl">
+              <h2 className="max-w-[470px] text-left text-4xl leading-none font-bold text-jci-black md:text-5xl">
                 Nuestros Valores
               </h2>
             </div>
@@ -34,7 +34,7 @@ export default function Valores() {
               {valores.map((valor) => (
                 <article key={valor.id} className="mb-8 flex flex-row items-start" role="listitem">
                   <div className="mr-5">
-                    <div className="text-jci-seafoam text-5xl leading-none font-bold">
+                    <div className="text-jci-teal text-5xl leading-none font-bold">
                       {valor.id}
                     </div>
                   </div>
@@ -43,7 +43,7 @@ export default function Valores() {
                       {valor.titulo}
                     </h3>
                     <div className="mt-2">
-                      <p className="text-jci-gray text-left text-sm leading-normal">
+                      <p className="text-jci-navy text-left text-sm leading-normal">
                         {valor.descripcion}
                       </p>
                     </div>

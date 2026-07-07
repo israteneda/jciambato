@@ -17,7 +17,7 @@ export default function SiguienteArea({ area }: { area: AreaOportunidad }) {
 
   return (
     <section className="relative z-1 bg-transparent">
-      <div className="bg-[#e8e8e8] py-28">
+      <div className="bg-white py-28">
         <div className="relative">
           {/* Texto rotado */}
           <RotatedText text="Nuestras Áreas" />
@@ -30,7 +30,7 @@ export default function SiguienteArea({ area }: { area: AreaOportunidad }) {
                 aria-label={`Ir a ${nextArea.title}`}
               >
                 <div className="relative z-10">
-                  <div className="font-aeonik text-[13px] leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
+                  <div className="font-sans text-[13px] leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
                     Áreas de Oportunidad
                   </div>
                   <div className="mt-2">

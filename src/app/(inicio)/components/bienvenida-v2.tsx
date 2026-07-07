@@ -29,13 +29,13 @@ export default function BienvenidaV2() {
               </div>
 
               <div className="mt-6">
-                <h2 className="from-jci-navy via-jci-seafoam to-jci-navy max-w-xl bg-linear-to-br bg-clip-text text-3xl font-bold text-transparent lg:text-6xl">
+                <h2 className="from-jci-navy via-jci-teal to-jci-navy max-w-xl bg-linear-to-br bg-clip-text text-3xl font-bold text-transparent lg:text-6xl">
                   Líderes que Impactan el Futuro
                 </h2>
               </div>
 
               <div className="mt-10">
-                <p className="text-jci-off-black lg:text-medium max-w-md text-sm leading-relaxed">
+                <p className="text-jci-black lg:text-medium max-w-md text-sm leading-relaxed">
                   Con cada proyecto, impulsamos el cambio a través de la innovación, transformando
                   ideas en soluciones que construyen comunidades más fuertes y mejoran vidas.
                 </p>
@@ -48,7 +48,7 @@ export default function BienvenidaV2() {
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/nosotros">
-                    <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
+                    <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-jci-black transition-transform duration-300 group-hover:translate-x-0"></span>
                     <span className="relative z-10">Sobre Nosotros</span>
                   </Link>
                 </Button>
@@ -64,31 +64,31 @@ export default function BienvenidaV2() {
             {/* Formas geométricas abstractas principales */}
             <div className="from-jci-navy/20 absolute top-0 right-0 h-96 w-96 translate-x-1/2 -translate-y-1/2 transform rounded-full bg-linear-to-br to-transparent blur-3xl"></div>
 
-            <div className="from-jci-seafoam/30 absolute bottom-0 left-0 h-80 w-80 -translate-x-1/2 translate-y-1/2 transform rounded-full bg-linear-to-tr to-transparent blur-3xl"></div>
+            <div className="from-jci-teal/30 absolute bottom-0 left-0 h-80 w-80 -translate-x-1/2 translate-y-1/2 transform rounded-full bg-linear-to-tr to-transparent blur-3xl"></div>
 
             <div className="from-jci-teal/25 to-jci-yellow/20 absolute top-1/2 left-1/4 h-64 w-64 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-linear-to-r blur-2xl"></div>
 
             {/* Nuevas formas adicionales */}
-            <div className="from-jci-navy/15 to-jci-seafoam/10 absolute top-1/4 right-1/3 h-48 w-48 translate-x-1/4 -translate-y-1/4 transform rounded-full bg-linear-to-bl blur-2xl"></div>
+            <div className="from-jci-navy/15 to-jci-teal/10 absolute top-1/4 right-1/3 h-48 w-48 translate-x-1/4 -translate-y-1/4 transform rounded-full bg-linear-to-bl blur-2xl"></div>
 
             <div className="from-jci-yellow/20 to-jci-teal/15 absolute bottom-1/4 left-1/3 h-56 w-56 -translate-x-1/3 translate-y-1/3 transform rounded-full bg-linear-to-tr blur-2xl"></div>
 
             {/* Formas angulares para contraste */}
-            <div className="from-jci-navy/15 to-jci-seafoam/10 absolute top-20 right-20 h-32 w-32 rotate-45 transform bg-linear-to-br blur-xl"></div>
+            <div className="from-jci-navy/15 to-jci-teal/10 absolute top-20 right-20 h-32 w-32 rotate-45 transform bg-linear-to-br blur-xl"></div>
 
             <div className="from-jci-yellow/20 to-jci-teal/15 absolute right-1/3 bottom-32 h-24 w-24 -rotate-12 transform bg-linear-to-tl blur-lg"></div>
 
             {/* Nuevas formas angulares */}
-            <div className="from-jci-seafoam/25 to-jci-navy/10 absolute top-40 left-10 h-20 w-20 rotate-30 transform bg-linear-to-br blur-lg"></div>
+            <div className="from-jci-teal/25 to-jci-navy/10 absolute top-40 left-10 h-20 w-20 rotate-30 transform bg-linear-to-br blur-lg"></div>
 
             <div className="from-jci-teal/20 to-jci-yellow/15 absolute bottom-20 left-1/4 h-16 w-16 -rotate-45 transform bg-linear-to-tl blur-md"></div>
 
-            <div className="from-jci-navy/20 to-jci-seafoam/15 absolute top-1/3 right-10 h-28 w-28 rotate-60 transform bg-linear-to-r blur-xl"></div>
+            <div className="from-jci-navy/20 to-jci-teal/15 absolute top-1/3 right-10 h-28 w-28 rotate-60 transform bg-linear-to-r blur-xl"></div>
 
             {/* Líneas sutiles mejoradas */}
             <div className="via-jci-navy/10 absolute top-1/3 left-0 h-px w-full bg-linear-to-r from-transparent to-transparent"></div>
 
-            <div className="via-jci-seafoam/10 absolute right-0 bottom-1/3 h-px w-full bg-linear-to-l from-transparent to-transparent"></div>
+            <div className="via-jci-teal/10 absolute right-0 bottom-1/3 h-px w-full bg-linear-to-l from-transparent to-transparent"></div>
 
             {/* Nuevas líneas diagonales */}
             <div className="via-jci-teal/8 absolute top-1/4 left-0 h-px w-full rotate-12 transform bg-linear-to-r from-transparent to-transparent"></div>
@@ -97,13 +97,13 @@ export default function BienvenidaV2() {
 
             {/* Patrones de puntos sutiles */}
             <div className="bg-jci-navy/20 absolute top-1/6 left-1/6 h-2 w-2 rounded-full blur-sm"></div>
-            <div className="bg-jci-seafoam/25 absolute top-1/6 left-2/3 h-1.5 w-1.5 rounded-full blur-sm"></div>
+            <div className="bg-jci-teal/25 absolute top-1/6 left-2/3 h-1.5 w-1.5 rounded-full blur-sm"></div>
             <div className="bg-jci-teal/30 absolute top-2/3 left-1/4 h-1 w-1 rounded-full blur-sm"></div>
             <div className="bg-jci-yellow/20 absolute top-3/4 right-1/4 h-1.5 w-1.5 rounded-full blur-sm"></div>
             <div className="bg-jci-navy/15 absolute right-1/6 bottom-1/6 h-2 w-2 rounded-full blur-sm"></div>
 
             {/* Formas de ondas sutiles */}
-            <div className="from-jci-seafoam/10 absolute top-0 left-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-linear-to-br to-transparent blur-2xl"></div>
+            <div className="from-jci-teal/10 absolute top-0 left-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-linear-to-br to-transparent blur-2xl"></div>
             <div className="from-jci-teal/12 absolute right-1/2 bottom-0 h-40 w-40 translate-x-1/2 translate-y-1/2 transform rounded-full bg-linear-to-tl to-transparent blur-3xl"></div>
 
             {/* Overlay sutil para mejorar legibilidad */}
@@ -151,7 +151,7 @@ export default function BienvenidaV2() {
         </div>
 
         {/* Enlace a JCI Ecuador */}
-        <div className="text-jci-seafoam absolute bottom-[100px] left-[40px] z-20 hidden text-[10.5px] font-semibold uppercase md:bottom-[80px] md:left-[180px] md:block">
+        <div className="text-jci-teal absolute bottom-[100px] left-[40px] z-20 hidden text-[10.5px] font-semibold uppercase md:bottom-[80px] md:left-[180px] md:block">
           <a
             href="https://jciecuador.com"
             target="_blank"

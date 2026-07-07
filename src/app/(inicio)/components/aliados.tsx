@@ -8,7 +8,7 @@ export default function Aliados() {
         <div className="flex justify-center">
           <h2
             id="aliados-heading"
-            className="text-jci-off-black text-left text-2xl leading-tight font-bold tracking-normal not-italic md:text-[calc(22.4px+0.5vw)]"
+            className="text-jci-black text-left text-2xl leading-tight font-normal tracking-normal not-italic md:text-[calc(22.4px+0.5vw)]"
           >
             Nuestros Aliados
           </h2>

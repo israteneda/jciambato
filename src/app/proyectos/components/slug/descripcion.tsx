@@ -27,7 +27,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                       {proyecto.area_oportunidad}
                     </div>
                     <div className="mt-8 max-w-3xl">
-                      <h2 className="text-jci-off-black text-left text-3xl leading-[1.33] font-bold sm:text-[calc(28.8px+1vw)] md:text-5xl">
+                      <h2 className="text-jci-black text-left text-3xl leading-[1.33] font-bold sm:text-[calc(28.8px+1vw)] md:text-5xl">
                         {proyecto.nombre}
                       </h2>
                     </div>
@@ -62,7 +62,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                       <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Área de Oportunidad
                       </div>
-                      <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
+                      <div className="text-jci-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
                         {proyecto.area_oportunidad}
                       </div>
                     </div>
@@ -72,7 +72,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                       <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Director/a
                       </div>
-                      <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
+                      <div className="text-jci-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
                         {proyecto.director?.nombre} {proyecto.director?.apellido}
                       </div>
                     </div>
@@ -82,7 +82,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                       <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Subdirector/a
                       </div>
-                      <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
+                      <div className="text-jci-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
                         {proyecto.subdirector?.nombre} {proyecto.subdirector?.apellido}
                       </div>
                     </div>
@@ -92,7 +92,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                       <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Fecha
                       </div>
-                      <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
+                      <div className="text-jci-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
                         {proyecto.fecha}
                       </div>
                     </div>
@@ -102,7 +102,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                       <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Lugar
                       </div>
-                      <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
+                      <div className="text-jci-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
                         {proyecto.lugar}
                       </div>
                     </div>
@@ -134,7 +134,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
 
                         <div className="flex flex-col items-start gap-1">
                           <button
-                            className="hover:text-jci-seafoam cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300"
+                            className="hover:text-jci-teal cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300"
                             onClick={() =>
                               shareOnSocialMedia("facebook", getShareContentFromProyecto(proyecto))
                             }
@@ -143,7 +143,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                             Facebook
                           </button>
                           <button
-                            className="hover:text-jci-seafoam cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300"
+                            className="hover:text-jci-teal cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300"
                             onClick={() =>
                               shareOnSocialMedia("linkedin", getShareContentFromProyecto(proyecto))
                             }

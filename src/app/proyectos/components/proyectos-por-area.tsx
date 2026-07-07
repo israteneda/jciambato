@@ -188,7 +188,7 @@ export default function ProyectosPorArea() {
                   aria-label="Ver más proyectos"
                   onPress={() => setCurrentPage(currentPage + 1)}
                 >
-                  <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
+                  <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-jci-black transition-transform duration-300 group-hover:translate-x-0"></span>
                   <span className="relative z-10">Ver más</span>
                 </Button>
               );

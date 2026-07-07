@@ -154,7 +154,9 @@ export default function BienvenidaV3() {
         <h1 id="bienvenida-heading">Bienvenido a JCI Ambato</h1>
       </header>
 
-      <div ref={containerRef} className="relative flex w-full overflow-hidden bg-[#004268]">
+      <div ref={containerRef} className="bg-jci-navy relative flex w-full overflow-hidden">
+        {" "}
+        {/* [#004268] */}
         {/* BLOBS ABSTRACTOS */}
         <div className="pointer-events-none absolute inset-0 z-0 h-full w-full">
           {/* 4 blobs, ajustados para responsividad */}
@@ -203,7 +205,6 @@ export default function BienvenidaV3() {
             </div>
           ))}
         </div>
-
         <div className="mx-9 box-border flex h-screen w-full items-center pb-20 md:mx-20 lg:mx-44">
           <BorderFrame isScrolled={isScrolled} />
 
@@ -211,13 +212,13 @@ export default function BienvenidaV3() {
           <main className="relative z-20 w-full">
             <div className="flex flex-col items-start">
               <div className="mt-5">
-                <h2 className="from-jci-navy to-jci-navy max-w-xl bg-linear-to-br via-white bg-clip-text py-1 leading-tight font-bold text-transparent md:max-w-5xl md:text-5xl lg:text-7xl">
+                <h2 className="from-jci-navy to-jci-navy max-w-xl bg-linear-to-br via-white bg-clip-text font-bold text-transparent md:max-w-5xl md:text-5xl lg:text-7xl">
                   Unidos Construyendo un <br /> <span className="text-inherit italic">Futuro</span>{" "}
                   de Liderazgo
                 </h2>
               </div>
 
-              <div className="mt-6 lg:mt-8">
+              <div className="mt-5 lg:mt-8">
                 <p className="max-w-xl text-base leading-relaxed text-white">
                   Fomentamos el cambio mediante la innovación, convirtiendo ideas en soluciones que
                   fortalecen comunidades y mejoran vidas.
@@ -231,7 +232,7 @@ export default function BienvenidaV3() {
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/nosotros">
-                    <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-[#004D7A] transition-transform duration-300 group-hover:translate-x-0"></span>
+                    <span className="bg-jci-black/70 absolute inset-0 h-full w-full -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0"></span>
                     <span className="relative z-10">Sobre Nosotros</span>
                   </Link>
                 </Button>
@@ -257,7 +258,7 @@ export default function BienvenidaV3() {
           </div>
         </div>
         {/* Enlace a JCI Ecuador */}
-        <div className="text-jci-seafoam absolute bottom-16 left-5 z-20 hidden text-[8px] font-semibold uppercase sm:bottom-20 sm:left-8 sm:text-xs md:bottom-20 md:text-[10.5px] lg:left-44 lg:block">
+        <div className="text-jci-teal absolute bottom-16 left-5 z-20 hidden text-[8px] font-semibold uppercase sm:bottom-20 sm:left-8 sm:text-xs md:bottom-20 md:text-[10.5px] lg:left-44 lg:block">
           <a
             href="https://jciecuador.com"
             target="_blank"

@@ -24,7 +24,7 @@ export default function NoticiasEventos() {
             <div className="flex justify-between">
               <h2
                 id="noticias-heading"
-                className="text-jci-off-black text-left text-2xl leading-tight font-bold tracking-normal not-italic md:text-3xl"
+                className="text-jci-black text-left text-2xl leading-tight font-normal tracking-normal not-italic md:text-3xl"
               >
                 Noticias y Eventos
               </h2>
@@ -33,11 +33,11 @@ export default function NoticiasEventos() {
                 <Button
                   radius="none"
                   variant="bordered"
-                  className="group relative overflow-hidden border-gray-400 text-gray-400"
+                  className="group relative overflow-hidden border-jci-navy text-jci-navy"
                   aria-label="Ver todas las noticias y eventos"
                 >
                   <Link href="/noticias-eventos">
-                    <span className="absolute inset-0 -translate-x-full transform bg-gray-400 transition-transform duration-300 group-hover:translate-x-0" />
+                    <span className="absolute inset-0 -translate-x-full transform bg-jci-navy transition-transform duration-300 group-hover:translate-x-0" />
                     <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
                       Ver más
                     </span>
@@ -74,12 +74,12 @@ export default function NoticiasEventos() {
                     <Link href={`/noticias-eventos/${item.url}`} className="group w-full">
                       <div className="group w-full">
                         <header>
-                          <div className="text-jci-gray text-[13px] leading-[1.85] font-normal tracking-normal uppercase not-italic">
+                          <div className="text-jci-navy text-[13px] leading-[1.85] font-normal tracking-normal uppercase not-italic">
                             <span>{item.tipo}</span>
                           </div>
 
                           <div className="mt-4">
-                            <h3 className="text-jci-off-black text-left text-[22px] leading-[1.45] font-bold tracking-normal not-italic md:text-[calc(17.2px+0.25vw)]">
+                            <h3 className="text-jci-black text-left text-[22px] leading-[1.45] font-bold tracking-normal not-italic md:text-[calc(17.2px+0.25vw)]">
                               {item.titulo}
                             </h3>
                           </div>
@@ -88,14 +88,14 @@ export default function NoticiasEventos() {
                         <div className="mt-6">
                           <div className="group relative inline-block max-w-full cursor-pointer transition duration-400">
                             <div className="flex items-center py-4">
-                              <span className="text-jci-gray group-hover:text-jci-red text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
+                              <span className="text-jci-navy group-hover:text-jci-yellow text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                                 Leer más
                               </span>
                               <div
                                 className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                                 aria-hidden="true"
                               >
-                                <HiOutlineArrowNarrowRight className="text-jci-gray group-hover:text-jci-red h-6 w-6 transition-colors duration-300" />
+                                <HiOutlineArrowNarrowRight className="text-jci-navy group-hover:text-jci-yellow h-6 w-6 transition-colors duration-300" />
                               </div>
                             </div>
                           </div>
@@ -128,7 +128,7 @@ export default function NoticiasEventos() {
               <div className="text-jci-gray text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
                 Arrastra para mover
               </div>
-              <div className="relative ml-[32px] h-px w-[60px] overflow-hidden bg-[rgb(204,204,204)]">
+              <div className="relative ml-[32px] h-px w-[60px] overflow-hidden bg-jci-gray/30">
                 <span
                   className="animate-loop bg-jci-teal absolute top-0 left-0 h-px w-[60px]"
                   aria-hidden="true"
@@ -167,11 +167,11 @@ export default function NoticiasEventos() {
             <Button
               radius="none"
               variant="bordered"
-              className="border-jci-gray text-jci-gray group relative overflow-hidden"
+              className="border-jci-navy text-jci-navy group relative overflow-hidden"
               aria-label="Ver todas las noticias y eventos"
             >
               <Link href="/noticias-eventos">
-                <span className="absolute inset-0 -translate-x-full transform bg-gray-400 transition-transform duration-300 group-hover:translate-x-0" />
+                <span className="absolute inset-0 -translate-x-full transform bg-jci-navy transition-transform duration-300 group-hover:translate-x-0" />
                 <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
                   Ver más
                 </span>

@@ -48,7 +48,7 @@ export default function BienvenidaV1() {
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/nosotros">
-                    <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
+                    <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-jci-black transition-transform duration-300 group-hover:translate-x-0"></span>
                     <span className="relative z-10">Sobre Nosotros</span>
                   </Link>
                 </Button>
@@ -113,7 +113,7 @@ export default function BienvenidaV1() {
         </div>
 
         {/* Enlace a JCI Ecuador */}
-        <div className="text-jci-seafoam absolute bottom-[100px] left-[40px] z-20 hidden text-[10.5px] font-semibold uppercase md:bottom-[80px] md:left-[180px] md:block">
+        <div className="text-jci-teal absolute bottom-[100px] left-[40px] z-20 hidden text-[10.5px] font-semibold uppercase md:bottom-[80px] md:left-[180px] md:block">
           <a
             href="https://jciecuador.com"
             target="_blank"

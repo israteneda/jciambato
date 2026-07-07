@@ -16,16 +16,16 @@ export default function Valores() {
           <div className="flex flex-1 flex-col md:mt-48 md:mr-3">
             <div className="md:mt-6">
               <div className="bg-jci-navy box-border min-h-52 w-full p-10">
-                <div className="self-end text-base leading-normal font-normal tracking-normal text-gray-50 not-italic">
+                <div className="self-end text-base leading-normal font-normal tracking-normal text-white not-italic">
                   <strong>Negocios y Emprendimiento</strong>
                 </div>
                 <div className="my-2">
-                  <h4 className="w-full text-2xl leading-[1-2] font-bold tracking-normal text-gray-50 not-italic">
+                  <h4 className="w-full text-2xl leading-[1-2] font-bold tracking-normal text-white not-italic">
                     Programas
                   </h4>
                 </div>
 
-                <p className="mb-5 text-sm text-gray-50">
+                <p className="mb-5 text-sm text-white/80">
                   A través de iniciativas como CYE (Creative Young Entrepreneur) y JIB, impulsamos
                   la mentalidad emprendedora y el desarrollo profesional. Estos programas fomentan
                   la innovación, el crecimiento económico y el liderazgo empresarial entre nuestros
@@ -38,14 +38,14 @@ export default function Valores() {
                   aria-label="Áreas de Oportunidad"
                 >
                   <div className="flex items-center py-4">
-                    <span className="group-hover:text-jci-red text-xs leading-none font-medium tracking-normal text-gray-50 not-italic transition-colors duration-300">
+                    <span className="group-hover:text-jci-yellow text-xs leading-none font-medium tracking-normal text-white not-italic transition-colors duration-300">
                       Negocios y Emprendimiento
                     </span>
                     <div
                       className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                       aria-hidden="true"
                     >
-                      <HiOutlineArrowNarrowRight className="group-hover:text-jci-red h-6 w-6 text-gray-50 transition-colors duration-300" />
+                      <HiOutlineArrowNarrowRight className="group-hover:text-jci-yellow h-6 w-6 text-white transition-colors duration-300" />
                     </div>
                   </div>
                 </Link>
@@ -54,7 +54,7 @@ export default function Valores() {
 
             <div className="md:mt-6">
               <div className="bg-jci-yellow box-border min-h-52 w-full p-10">
-                <div className="self-end text-base leading-normal font-normal tracking-normal text-gray-50 not-italic">
+                <div className="self-end text-base leading-normal font-normal tracking-normal text-jci-black not-italic">
                   <strong>Cooperación Internacional</strong>
                 </div>
                 <div className="my-2">
@@ -75,14 +75,14 @@ export default function Valores() {
                   aria-label="Áreas de oportunidad"
                 >
                   <div className="flex items-center py-4">
-                    <span className="group-hover:text-jci-red text-jci-off-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
+                    <span className="group-hover:text-jci-teal text-jci-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Cooperación Internacional
                     </span>
                     <div
                       className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                       aria-hidden="true"
                     >
-                      <HiOutlineArrowNarrowRight className="group-hover:text-jci-red text-jci-off-black h-6 w-6 transition-colors duration-300" />
+                      <HiOutlineArrowNarrowRight className="group-hover:text-jci-teal text-jci-black h-6 w-6 transition-colors duration-300" />
                     </div>
                   </div>
                 </Link>
@@ -92,7 +92,7 @@ export default function Valores() {
 
           <div className="flex flex-1 flex-col md:ml-3">
             <div className="md:mt-6">
-              <div className="box-border min-h-52 w-full bg-[#D8D8D8] p-10">
+              <div className="box-border min-h-52 w-full bg-jci-navy/10 p-10">
                 <div className="text-jci-black self-end text-base leading-normal font-normal tracking-normal not-italic">
                   <strong>Desarrollo Individual</strong>
                 </div>
@@ -114,14 +114,14 @@ export default function Valores() {
                   aria-label="Áreas de Oportunidad"
                 >
                   <div className="flex items-center py-4">
-                    <span className="group-hover:text-jci-red text-jci-off-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
+                    <span className="group-hover:text-jci-teal text-jci-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Desarrollo Individual
                     </span>
                     <div
                       className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                       aria-hidden="true"
                     >
-                      <HiOutlineArrowNarrowRight className="group-hover:text-jci-red text-jci-off-black h-6 w-6 transition-colors duration-300" />
+                      <HiOutlineArrowNarrowRight className="group-hover:text-jci-teal text-jci-black h-6 w-6 transition-colors duration-300" />
                     </div>
                   </div>
                 </Link>
@@ -129,7 +129,7 @@ export default function Valores() {
             </div>
 
             <div className="md:mt-6">
-              <div className="bg-jci-seafoam box-border min-h-52 w-full p-10">
+              <div className="bg-jci-teal box-border min-h-52 w-full p-10">
                 <div className="text-jci-black self-end text-base leading-normal font-normal tracking-normal not-italic">
                   <strong>Impacto en la Comunidad</strong>
                 </div>
@@ -151,14 +151,14 @@ export default function Valores() {
                   aria-label="Áreas de Oportunidad"
                 >
                   <div className="flex items-center py-4">
-                    <span className="group-hover:text-jci-red text-jci-off-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
+                    <span className="group-hover:text-jci-teal text-jci-black text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                       Impacto en la Comunidad
                     </span>
                     <div
                       className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                       aria-hidden="true"
                     >
-                      <HiOutlineArrowNarrowRight className="group-hover:text-jci-red text-jci-off-black h-6 w-6 transition-colors duration-300" />
+                      <HiOutlineArrowNarrowRight className="group-hover:text-jci-teal text-jci-black h-6 w-6 transition-colors duration-300" />
                     </div>
                   </div>
                 </Link>

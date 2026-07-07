@@ -63,7 +63,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                 {noticiaEvento.tipo}
               </p>
               <div className="mt-8">
-                <h2 className="font-aeonik-bold max-w-[862px] text-left text-3xl leading-[1.33] font-bold text-black sm:text-[calc(28.8px+1vw)] md:text-[48px]">
+                <h2 className="max-w-[862px] text-left text-3xl leading-[1.33] font-bold text-jci-black sm:text-[calc(28.8px+1vw)] md:text-[48px]">
                   {noticiaEvento.titulo}
                 </h2>
               </div>
@@ -109,7 +109,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {/* Introducción */}
                         {noticiaEvento.contenido?.introduccion && (
                           <div className="mb-8">
-                            <p className="text-jci-off-black text-lg leading-relaxed font-medium md:text-xl">
+                            <p className="text-jci-black text-lg leading-relaxed font-medium md:text-xl">
                               {noticiaEvento.contenido.introduccion}
                             </p>
                           </div>
@@ -137,7 +137,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {/* Puntos destacados */}
                         {noticiaEvento.contenido?.destacados &&
                           noticiaEvento.contenido.destacados.length > 0 && (
-                            <div className="border-jci-teal my-10 border-l-4 bg-gray-50 p-6">
+                            <div className="border-jci-teal my-10 border-l-4 bg-white p-6">
                               <h3 className="text-jci-black mb-4 text-xl font-bold">
                                 Puntos Destacados
                               </h3>
@@ -162,12 +162,12 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                               {noticiaEvento.contenido.citas.map((cita, index) => (
                                 <blockquote
                                   key={index}
-                                  className="border-jci-seafoam my-6 border-l-4 py-4 pl-6 italic"
+                                  className="border-jci-teal my-6 border-l-4 py-4 pl-6 italic"
                                 >
                                   <p className="text-jci-black mb-2 text-lg leading-relaxed">
                                     &ldquo;{cita.texto}&rdquo;
                                   </p>
-                                  <footer className="text-jci-gray text-sm font-semibold">
+                                  <footer className="text-jci-navy text-sm font-semibold">
                                     — {cita.autor}
                                     {cita.cargo && (
                                       <span className="font-normal">, {cita.cargo}</span>
@@ -194,7 +194,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                                       />
                                     </div>
                                     {img.caption && (
-                                      <figcaption className="text-jci-gray text-sm italic">
+                                      <figcaption className="text-jci-navy text-sm italic">
                                         {img.caption}
                                       </figcaption>
                                     )}
@@ -207,7 +207,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                         {/* Logros */}
                         {noticiaEvento.contenido?.logros &&
                           noticiaEvento.contenido.logros.length > 0 && (
-                            <div className="from-jci-teal/10 to-jci-seafoam/10 my-10 rounded-lg bg-linear-to-br p-8">
+                            <div className="from-jci-teal/10 to-jci-teal/5 my-10 rounded-lg bg-linear-to-br p-8">
                               <h3 className="text-jci-black mb-6 text-2xl font-bold">
                                 Logros Alcanzados
                               </h3>
@@ -238,7 +238,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                                 {noticiaEvento.contenido.impacto.map((item, index) => (
                                   <div
                                     key={index}
-                                    className="border-jci-red border-l-4 bg-gray-50 p-6"
+                                    className="border-jci-teal border-l-4 bg-white p-6"
                                   >
                                     <h4 className="text-jci-black mb-2 text-lg font-bold">
                                       {item.titulo}
@@ -262,7 +262,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
 
                         <div className="flex flex-col items-start gap-1">
                           <button
-                            className="hover:text-jci-seafoam cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300"
+                            className="hover:text-jci-teal cursor-pointer text-sm font-semibold text-jci-navy transition-colors duration-300"
                             onClick={() =>
                               shareOnSocialMedia(
                                 "facebook",
@@ -274,7 +274,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                             Facebook
                           </button>
                           <button
-                            className="hover:text-jci-seafoam cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300"
+                            className="hover:text-jci-teal cursor-pointer text-sm font-semibold text-jci-navy transition-colors duration-300"
                             onClick={() =>
                               shareOnSocialMedia(
                                 "linkedin",

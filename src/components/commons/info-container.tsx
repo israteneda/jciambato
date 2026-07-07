@@ -91,14 +91,14 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
             </h2>
 
             <div className="mt-8">
-              <h1 className="max-w-4xl text-left text-3xl leading-none font-bold tracking-[-0.5px] text-gray-900 not-italic lg:text-6xl">
+              <h1 className="max-w-4xl text-left text-3xl leading-none font-bold tracking-[-0.5px] text-jci-black not-italic lg:text-6xl">
                 {title}
               </h1>
             </div>
           </header>
 
           <div className="mt-9">
-            <p className="max-w-xl text-left text-xl leading-[1.45] font-normal tracking-normal text-gray-900 not-italic">
+            <p className="max-w-xl text-left text-xl leading-[1.45] font-normal tracking-normal text-jci-black not-italic">
               {description}
             </p>
           </div>

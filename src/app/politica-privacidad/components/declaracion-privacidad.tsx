@@ -4,7 +4,7 @@ export default function DeclaracionPrivacidad() {
       <div className="py-16">
         <div className="relative z-10 mx-auto px-8 md:max-w-6xl">
           <header>
-            <h1 className="text-jci-off-black max-w-3xl text-left text-2xl font-bold md:leading-[1.33] lg:text-5xl">
+            <h1 className="text-jci-black max-w-3xl text-left text-2xl font-bold md:leading-[1.33] lg:text-5xl">
               Declaración de Privacidad y Protección de Datos Personales
             </h1>
 
@@ -513,7 +513,7 @@ export default function DeclaracionPrivacidad() {
                         Para cualquier consulta relacionada con esta Política de Privacidad o el
                         tratamiento de sus datos personales, puede contactarnos a través de:
                       </p>
-                      <address className="mt-4 rounded-lg bg-gray-100 p-6 not-italic">
+                      <address className="mt-4 rounded-lg bg-white p-6 not-italic">
                         <p>
                           <strong>JCI Ambato</strong>
                         </p>

@@ -66,12 +66,12 @@ const BackgroundText = ({
   const baseTextStyle = clsx(
     "flex justify-center",
     "opacity-[0.08]",
-    "text-7xl md:text-9xl lg:text-[210px]",
+    "text-7xl text-[240px] md:text-[calc(12px + 11.875vw)]",
     "font-extrabold",
     "whitespace-nowrap",
     "tracking-normal",
     "uppercase",
-    "text-jci-gray",
+    "text-[#000000e8]",
     "select-none"
   );
 

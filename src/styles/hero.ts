@@ -10,27 +10,27 @@ export default heroui({
     light: {
       colors: {
         primary: {
-          DEFAULT: "#1f4789", // El azul JCI
+          DEFAULT: "#0097d7", // JCI Blue — color héroe de la marca
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#efc40f", // El amarillo JCI
+          DEFAULT: "#efc40f", // JCI Yellow — acento secundario
           foreground: "#130f2d",
         },
-        focus: "#1f4789",
+        focus: "#0097d7",
       },
     },
     dark: {
       colors: {
         primary: {
-          DEFAULT: "#1f4789",
+          DEFAULT: "#0097d7",
           foreground: "#ffffff",
         },
         secondary: {
           DEFAULT: "#efc40f",
           foreground: "#130f2d",
         },
-        focus: "#1f4789",
+        focus: "#0097d7",
       },
     },
   },

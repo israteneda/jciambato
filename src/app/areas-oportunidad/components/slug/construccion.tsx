@@ -97,7 +97,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                     .map((item, index) => (
                       <SwiperSlide key={`${item.src}-${index}`}>
                         <div className="group w-full">
-                          <div className="h-96 w-full overflow-hidden bg-gray-200 md:h-[650px]">
+                          <div className="h-96 w-full overflow-hidden bg-white md:h-[650px]">
                             <div className="relative h-full w-full overflow-hidden">
                               <Image
                                 src={item.src!}

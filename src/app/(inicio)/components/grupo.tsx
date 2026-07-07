@@ -26,7 +26,7 @@ export default function Grupo() {
                 Trayectoria que Transforma
               </div>
               <div className="mt-5">
-                <h3 className="text-jci-teal max-w-xs text-left text-3xl leading-[1.33] font-bold tracking-normal normal-case md:max-w-[60%] lg:max-w-[75%] lg:text-5xl lg:leading-[1.33]">
+                <h3 className="text-jci-teal max-w-xs text-left text-3xl leading-[1.33] font-normal tracking-normal normal-case md:max-w-[60%] lg:max-w-[75%] lg:text-5xl lg:leading-[1.33]">
                   Somos la organización de liderazgo más importante del centro del país.
                 </h3>
               </div>
@@ -65,9 +65,9 @@ export default function Grupo() {
               {/* Información de la fotografía, visible en pantallas grandes */}
               <div className="hidden flex-1 shrink grow basis-0 md:block">
                 <div className="absolute -top-24 right-5 origin-left translate-x-full translate-y-[50%] rotate-90 transform">
-                  <div className="relative pl-42.5 text-[11px] leading-none font-medium tracking-[2px] text-[rgb(174,174,174)] uppercase">
+                  <div className="relative pl-42.5 text-[11px] leading-none font-medium tracking-[2px] text-jci-gray uppercase">
                     <div
-                      className="absolute top-1.25 left-0 h-px w-40 bg-[rgb(174,174,174)]"
+                      className="absolute top-1.25 left-0 h-px w-40 bg-jci-gray"
                       aria-hidden="true"
                     ></div>
                     Sesión Solemne por los 50 años de JCI Ambato, 2024

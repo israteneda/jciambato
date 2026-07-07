@@ -99,14 +99,14 @@ export const Carousel = ({
                             aria-label={`Leer más sobre ${proyecto.titulo} ${proyecto.nombre}`}
                           >
                             <div className="flex items-center py-4">
-                              <span className="group-hover:text-jci-red text-jci-seafoam text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
+                              <span className="group-hover:text-jci-teal text-jci-teal text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                                 Leer más
                               </span>
                               <div
                                 className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                                 aria-hidden="true"
                               >
-                                <HiOutlineArrowNarrowRight className="group-hover:text-jci-red text-jci-seafoam h-6 w-6 transition-colors duration-300" />
+                                <HiOutlineArrowNarrowRight className="group-hover:text-jci-teal text-jci-teal h-6 w-6 transition-colors duration-300" />
                               </div>
                             </div>
                           </Link>
@@ -171,7 +171,7 @@ export const Carousel = ({
           onPress={prevSlide}
           aria-label="Slide anterior"
         >
-          <HiChevronLeft className="h-6 w-6 text-gray-50" />
+          <HiChevronLeft className="h-6 w-6 text-white" />
         </Button>
         <div className="h-[12px]" />
         <Button
@@ -181,7 +181,7 @@ export const Carousel = ({
           onPress={nextSlide}
           aria-label="Slide siguiente"
         >
-          <HiChevronRight className="h-6 w-6 text-gray-50" />
+          <HiChevronRight className="h-6 w-6 text-white" />
         </Button>
       </nav>
 
@@ -191,10 +191,10 @@ export const Carousel = ({
           <Button
             isIconOnly
             radius="full"
-            className="bg-jci-teal transition-colors duration-300 hover:bg-[#003D62]"
+            className="bg-jci-teal hover:bg-jci-navy transition-colors duration-300"
             aria-label="Ver colección de proyectos"
           >
-            <HiOutlineCollection className="h-6 w-6 text-gray-50" />
+            <HiOutlineCollection className="h-6 w-6 text-white" />
           </Button>
         </Link>
       </div>

@@ -17,22 +17,22 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
             <div className="flex">
               <div className="relative">
                 <div className="absolute top-20 left-6 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 transform md:block">
-                  <div className="relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap text-[rgb(174,174,174)] uppercase not-italic">
+                  <div className="text-jci-gray relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap uppercase not-italic">
                     Error
-                    <span className="absolute top-1.5 -left-42.5 h-px w-40 bg-[rgb(174,174,174)] content-['']"></span>
+                    <span className="bg-jci-gray absolute top-1.5 -left-42.5 h-px w-40 content-['']"></span>
                   </div>
                 </div>
               </div>
 
               <div className="relative md:ml-36">
                 <div className="mt-20">
-                  <h3 className="text-left text-4xl leading-[1.17] font-bold tracking-normal text-black not-italic md:max-w-117.5 md:text-5xl">
+                  <h3 className="text-jci-black text-left text-4xl leading-[1.17] font-bold tracking-normal not-italic md:max-w-117.5 md:text-5xl">
                     ¡Algo salió mal!
                   </h3>
                 </div>
 
                 <div className="mt-9 flex flex-col gap-2">
-                  <div className="text-jci-gray text-medium max-w-117.5 text-left leading-[1.78] font-normal tracking-normal">
+                  <div className="text-jci-navy text-medium max-w-117.5 text-left leading-[1.78] font-normal tracking-normal">
                     Ocurrio un error inesperado. Por favor, intenta nuevamente o contacta al
                     soporte.
                   </div>
@@ -49,7 +49,7 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
                     onPress={() => reset()}
                   >
                     <Link href="/">
-                      <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
+                      <span className="bg-jci-black absolute inset-0 h-full w-full -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0"></span>
                       <span className="relative z-10">Volver al inicio</span>
                     </Link>
                   </Button>
@@ -62,7 +62,7 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           500 - Error inesperado
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+        <p className="text-jci-gray mt-6 max-w-2xl text-lg leading-8">
           Lo sentimos, ha ocurrido un error inesperado. Por favor, intenta nuevamente.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -71,7 +71,7 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
               Volver al inicio
             </Button>
           </Link>
-          <Link href="/contacto" className="text-sm leading-6 font-semibold text-gray-900">
+          <Link href="/contacto" className="text-jci-gray text-sm leading-6 font-semibold">
             Contactar soporte <span aria-hidden="true">→</span>
           </Link>
         </div>

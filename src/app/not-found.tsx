@@ -10,22 +10,22 @@ export default function NotFoundPage() {
           <div className="flex">
             <div className="relative">
               <div className="absolute top-20 left-6 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 transform md:block">
-                <div className="relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap text-[rgb(174,174,174)] uppercase not-italic">
+                <div className="relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap text-jci-gray uppercase not-italic">
                   No encontramos la página
-                  <span className="absolute top-1.5 -left-42.5 h-px w-40 bg-[rgb(174,174,174)] content-['']"></span>
+                  <span className="absolute top-1.5 -left-42.5 h-px w-40 bg-jci-gray content-['']"></span>
                 </div>
               </div>
             </div>
 
             <div className="relative md:ml-36">
               <div className="mt-20">
-                <h3 className="text-left text-4xl leading-[1.17] font-bold tracking-normal text-black not-italic md:max-w-2xl md:text-5xl">
+                <h3 className="text-left text-4xl leading-[1.17] font-bold tracking-normal text-jci-black not-italic md:max-w-2xl md:text-5xl">
                   ¡La página ha sido eliminada o no existe!
                 </h3>
               </div>
 
               <div className="mt-9">
-                <div className="text-jci-gray text-medium max-w-117.5 text-left leading-[1.78] font-normal tracking-normal">
+                <div className="text-jci-navy text-medium max-w-117.5 text-left leading-[1.78] font-normal tracking-normal">
                   ¡Lo sentimos! La página que buscas ya no está disponible o no estaba disponible
                   originalmente.
                 </div>
@@ -38,7 +38,7 @@ export default function NotFoundPage() {
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/">
-                    <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
+                    <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-jci-black transition-transform duration-300 group-hover:translate-x-0"></span>
                     <span className="relative z-10">Volver al inicio</span>
                   </Link>
                 </Button>
