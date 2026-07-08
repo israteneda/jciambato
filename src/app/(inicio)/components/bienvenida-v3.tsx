@@ -260,7 +260,7 @@ export default function BienvenidaV3() {
               <Image
                 alt="Sentir Actuar Transformar Logo"
                 className="h-full w-full object-contain"
-                src="/images/logos/sentir-actuar-transformar.png"
+                src="/images/logos/sentir-actuar-transformar.webp"
                 width={150}
                 height={70}
                 priority

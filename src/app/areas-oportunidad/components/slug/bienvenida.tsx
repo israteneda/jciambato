@@ -10,11 +10,7 @@ export default function Bienvenida({ area }: { area: AreaOportunidad }) {
   const isScrolled = useScroll();
 
   return (
-    <section className="relative" aria-labelledby={`area-${area.slug}-heading`}>
-      <header className="sr-only">
-        <h1 id={`area-${area.slug}-heading`}>{area.title}</h1>
-      </header>
-
+    <section className="relative">
       <div className="flex w-full">
         <div className="box-border flex h-screen items-center pb-[92px] lg:px-[180px]">
           <BorderFrame isScrolled={isScrolled} />

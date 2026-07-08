@@ -13,6 +13,7 @@ export default function BackgroundImage({ image, alt = "Imagen de fondo" }: Back
           src={image}
           alt={alt}
           fill
+          sizes="100vw"
           className="absolute inset-0 h-full w-full bg-transparent object-cover"
         />
       </div>

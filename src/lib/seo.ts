@@ -86,7 +86,7 @@ interface FAQSchema {
  */
 export function generateNewsArticleSchema(
   noticia: NoticiaEvento,
-  baseUrl: string = "https://jciambato.org"
+  baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!
 ): ArticleSchema {
   const articleUrl = `${baseUrl}/noticias-eventos/${noticia.url}`;
   const imageUrl = noticia.imagen.startsWith("http")
@@ -134,7 +134,7 @@ export function generateNewsArticleSchema(
  */
 export function generateEventSchema(
   evento: NoticiaEvento,
-  baseUrl: string = "https://jciambato.org"
+  baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!
 ): EventSchema {
   const imageUrl = evento.imagen.startsWith("http") ? evento.imagen : `${baseUrl}${evento.imagen}`;
 
@@ -231,7 +231,7 @@ function convertToISODate(fecha: string): string {
  */
 export function generateSocialMetadata(
   noticia: NoticiaEvento,
-  baseUrl: string = "https://jciambato.org"
+  baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!
 ) {
   const articleUrl = `${baseUrl}/noticias-eventos/${noticia.url}`;
   const imageUrl = noticia.imagen.startsWith("http")

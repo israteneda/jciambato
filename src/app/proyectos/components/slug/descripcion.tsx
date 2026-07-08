@@ -14,6 +14,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                 src={proyecto.imagen}
                 alt={proyecto.nombre + " imagen de proyecto"}
                 fill
+                sizes="100vw"
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>

@@ -11,11 +11,6 @@ export function WebsiteStructuredData() {
     url: "https://www.jciambato.org",
     name: "JCI Ambato",
     alternateName: ["Camara Junior Internacional Ambato", "JCI Ambato"],
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://www.jciambato.org/search?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
   };
 
   return (

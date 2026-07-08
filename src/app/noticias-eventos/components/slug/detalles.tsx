@@ -18,7 +18,6 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
   return (
     <section
       className="relative overflow-hidden bg-transparent"
-      aria-labelledby={`noticiaEvento-${noticiaEvento.url}-heading`}
     >
       <div>
         <div className="h-[150px] md:h-80"></div>
@@ -63,9 +62,9 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                 {noticiaEvento.tipo}
               </p>
               <div className="mt-8">
-                <h2 className="max-w-[862px] text-left text-3xl leading-[1.33] font-bold text-jci-black sm:text-[calc(28.8px+1vw)] md:text-[48px]">
+                <h1 className="max-w-[862px] text-left text-3xl leading-[1.33] font-bold text-jci-black sm:text-[calc(28.8px+1vw)] md:text-[48px]">
                   {noticiaEvento.titulo}
-                </h2>
+                </h1>
               </div>
               {noticiaEvento.subtitulo && (
                 <div className="mt-4">
@@ -96,6 +95,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                           src={noticiaEvento.imagen}
                           alt={`Imagen de ${noticiaEvento.titulo}`}
                           fill
+                          sizes="100vw"
                           className="object-cover"
                           priority
                         />
@@ -190,6 +190,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                                         src={img.url}
                                         alt={img.alt}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                         className="object-cover transition-transform duration-300 hover:scale-105"
                                       />
                                     </div>

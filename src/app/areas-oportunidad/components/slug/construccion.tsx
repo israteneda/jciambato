@@ -103,6 +103,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                                 src={item.src!}
                                 alt={item.alt || "Imagen del área"}
                                 fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
                                 className="object-cover"
                               />
                             </div>

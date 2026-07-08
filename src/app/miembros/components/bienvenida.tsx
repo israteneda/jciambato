@@ -6,14 +6,7 @@ import RotatedText from "@/components/commons/rotated-text";
 
 export default function Bienvenida() {
   return (
-    <section
-      className="fixed inset-0 box-border h-screen w-full items-center overflow-hidden pb-[80px]"
-      aria-labelledby="miembros-heading"
-    >
-      <header className="sr-only">
-        <h1 id="miembros-heading">Miembros JCI Ambato</h1>
-      </header>
-
+    <section className="fixed inset-0 box-border h-screen w-full items-center overflow-hidden pb-[80px]">
       <RotatedText text="Comunidad JCI Ambato" />
 
       <div className="relative w-full pt-48 pb-32">

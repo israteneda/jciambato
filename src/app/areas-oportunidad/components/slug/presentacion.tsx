@@ -39,7 +39,8 @@ export default function Presentacion({ area }: { area: AreaOportunidad }) {
                     src={area.logo}
                     alt={`Logo de ${area.title}`}
                     width={400}
-                    height={0}
+                    height={140}
+                    className="h-auto w-auto max-w-[280px] object-contain"
                     draggable="false"
                   />
                 )}

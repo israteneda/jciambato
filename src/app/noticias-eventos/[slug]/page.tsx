@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getNoticiaEventoBySlug, getAllNoticiasEventos } from "@/data/noticias";
 import { Detalles } from "@/app/noticias-eventos/components/slug";
 import { generateNewsArticleSchema, generateEventSchema, generateSocialMetadata } from "@/lib/seo";
-// import { generateBreadcrumbSchema } from "@/lib/breadcrumbs";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumbs";
 
 interface NoticiasEventosPageProps {
   params: Promise<{
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: NoticiasEventosPageProps) {
     };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jciambato.org";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
   const noticiaEventoUrl = `${baseUrl}/noticias-eventos/${slug}`;
 
   // Generar metadatos sociales optimizados
@@ -65,16 +65,14 @@ export default async function NoticiasEventosPage({ params }: NoticiasEventosPag
     notFound();
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jciambato.org";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
-  // Generar breadcrumbs
-  /* const breadcrumbs = [
+  const breadcrumbs = [
     { name: "Inicio", url: "/" },
     { name: "Noticias y Eventos", url: "/noticias-eventos" },
     { name: noticiaEvento.titulo, url: `/noticias-eventos/${slug}` },
   ];
- */
-  /* const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs, baseUrl); */
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs, baseUrl);
 
   // Generar datos estructurados según el tipo
   const structuredData =
@@ -85,12 +83,12 @@ export default async function NoticiasEventosPage({ params }: NoticiasEventosPag
   return (
     <>
       {/* JSON-LD para Breadcrumbs */}
-      {/* <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbSchema),
         }}
-      /> */}
+      />
 
       {/* JSON-LD para Noticia/Evento */}
       <script

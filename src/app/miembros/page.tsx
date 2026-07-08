@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Nuestros Miembros — Conoce al Equipo",
   description:
     "Conoce a nuestro equipo de líderes juveniles, junta directiva, miembros activos y senadores de JCI Ambato.",
+  alternates: {
+    canonical: "/miembros",
+  },
 };
 
 export default function MiembrosPage() {

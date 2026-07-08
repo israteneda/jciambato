@@ -2,6 +2,7 @@
 
 import { Button } from "@heroui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import {
   HiChevronLeft,
@@ -60,10 +61,13 @@ export const Carousel = ({
               aria-label={`${index + 1} de ${proyectos.length}`}
             >
               {/* Imagen de fondo */}
-              <img
+              <Image
                 src={proyecto.imagen}
                 alt={`Imagen de fondo para ${proyecto.titulo} ${proyecto.nombre}`}
+                fill
                 className="absolute inset-0 h-full w-full object-cover brightness-50"
+                sizes="100vw"
+                priority={index === 0}
               />
 
               {/* Contenido del Slide */}

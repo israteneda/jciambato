@@ -58,7 +58,8 @@ export default function AreasOportunidad() {
                         src={area.logo}
                         alt={`Logo de ${area.title}`}
                         width={290}
-                        height={0}
+                        height={100}
+                        className="h-auto w-auto max-w-[180px] object-contain"
                         draggable="false"
                       />
                     )}

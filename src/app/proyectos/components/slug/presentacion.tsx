@@ -4,7 +4,6 @@ export default function Presentacion({ proyecto }: { proyecto: Proyecto }) {
   return (
     <section
       className="relative overflow-hidden bg-transparent"
-      aria-labelledby={`proyecto-${proyecto.slug}-heading`}
     >
       <div className="py-24">
         <div className="relative mx-8 max-w-6xl md:mx-20 lg:mx-auto">
@@ -13,9 +12,9 @@ export default function Presentacion({ proyecto }: { proyecto: Proyecto }) {
               {proyecto.area_oportunidad}
             </div>
             <div className="mt-8">
-              <h2 className="text-jci-black max-w-6xl text-left text-3xl leading-[1.33] font-bold md:text-5xl">
+              <h1 className="text-jci-black max-w-6xl text-left text-3xl leading-[1.33] font-bold md:text-5xl">
                 {proyecto.nombre}
-              </h2>
+              </h1>
             </div>
           </div>
 
