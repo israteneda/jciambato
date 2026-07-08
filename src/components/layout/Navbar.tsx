@@ -152,7 +152,7 @@ export const Navbar = ({ className }: NavbarProps) => {
                 <NavbarItem key={item.href} role="none">
                   <NextLink
                     className={clsx(
-                      "transition-colors duration-200",
+                      "font-normal transition-colors duration-200",
                       getTextColor(isActive, isLast)
                     )}
                     href={item.href}

@@ -210,13 +210,13 @@ export default function BienvenidaV3() {
           <main className="relative z-20 w-full">
             <div className="flex flex-col items-start">
               <div className="mt-5">
-                <h2 className="from-jci-navy to-jci-navy max-w-xl bg-linear-to-br via-white bg-clip-text font-bold text-transparent text-2xl md:max-w-5xl md:text-5xl lg:text-7xl">
-                  Unidos Construyendo un <br /> <span className="text-inherit italic">Futuro</span>{" "}
-                  de Liderazgo
+                <h2 className="from-jci-navy to-jci-navy max-w-xl bg-linear-to-br via-white bg-clip-text pb-3 text-2xl font-bold text-transparent md:max-w-5xl md:text-5xl lg:text-7xl">
+                  Unidos Construyendo un <br />
+                  <span className="text-inherit italic">Futuro</span> de Liderazgo
                 </h2>
               </div>
 
-              <div className="mt-5 lg:mt-8">
+              <div className="mt-4 lg:mt-5">
                 <p className="max-w-xl text-base leading-relaxed text-white">
                   Fomentamos el cambio mediante la innovación, convirtiendo ideas en soluciones que
                   fortalecen comunidades y mejoran vidas.
@@ -256,7 +256,7 @@ export default function BienvenidaV3() {
               />
             </div>
 
-            <div className="md:h-auto md:w-32">
+            <div className="md:h-auto md:w-30">
               <Image
                 alt="Sentir Actuar Transformar Logo"
                 className="h-full w-full object-contain"
