@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
 
 interface LaunchCountdownProps {
@@ -138,22 +138,22 @@ export default function LaunchCountdown({ onComplete }: LaunchCountdownProps) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[9998]">
+    <div className="bg-opacity-75 fixed inset-0 z-9998 flex items-center justify-center bg-black">
       {/* Contador */}
       {count > 0 && (
         <div className="text-center">
-          <div className="text-8xl font-bold text-white mb-4 animate-pulse">{count}</div>
-          <div className="text-2xl text-white font-semibold">🚀 Preparando lanzamiento</div>
+          <div className="mb-4 animate-pulse text-8xl font-bold text-white">{count}</div>
+          <div className="text-2xl font-semibold text-white">🚀 Preparando lanzamiento</div>
         </div>
       )}
 
       {/* Mensaje de lanzamiento */}
       {count === 0 && (
         <div className="text-center">
-          <div className="text-6xl font-bold text-white mb-4 animate-bounce">
+          <div className="mb-4 animate-bounce text-6xl font-bold text-white">
             🎉 ¡LANZAMIENTO! 🎉
           </div>
-          <div className="text-3xl text-white font-semibold mb-2">¡Bienvenido a JCI Ambato!</div>
+          <div className="mb-2 text-3xl font-semibold text-white">¡Bienvenido a JCI Ambato!</div>
           <div className="text-xl text-white opacity-80">¡Una experiencia increíble te espera!</div>
         </div>
       )}

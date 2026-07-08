@@ -34,9 +34,46 @@ export async function generateMetadata({ params }: AreaOportunidadPageProps) {
     };
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  const ogImage = `${baseUrl}/og?type=area&slug=${slug}`;
+
   return {
     title: `${area.title} — Áreas de Oportunidad`,
     description: area.description,
+    keywords: [
+      "JCI Ambato",
+      area.title,
+      "áreas de oportunidad",
+      "liderazgo juvenil",
+      "desarrollo comunitario",
+      "voluntariado",
+      ...(area.subtitle ? [area.subtitle] : []),
+    ],
+    openGraph: {
+      title: `${area.title} — Áreas de Oportunidad`,
+      description: area.description,
+      url: `${baseUrl}/areas-oportunidad/${slug}`,
+      siteName: "JCI Ambato",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: `Área de Oportunidad: ${area.title}`,
+        },
+      ],
+      locale: "es_EC",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${area.title} — Áreas de Oportunidad`,
+      description: area.description,
+      images: [ogImage],
+    },
+    alternates: {
+      canonical: `${baseUrl}/areas-oportunidad/${slug}`,
+    },
   };
 }
 

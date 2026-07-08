@@ -10,7 +10,7 @@ interface BreadcrumbItem {
 
 export function generateBreadcrumbSchema(
   items: BreadcrumbItem[],
-  baseUrl: string = "https://jciambato.org"
+  baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!
 ) {
   return {
     "@context": "https://schema.org",

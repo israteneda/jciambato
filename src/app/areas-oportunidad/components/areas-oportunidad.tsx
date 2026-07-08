@@ -17,35 +17,35 @@ export default function AreasOportunidad() {
               key={area.id}
               className={`relative ${
                 index % 2 === 0
-                  ? "block md:flex flex-col md:flex-row justify-start"
-                  : "flex flex-col md:flex-row-reverse xl:flex-row justify-end"
+                  ? "block flex-col justify-start md:flex md:flex-row"
+                  : "flex flex-col justify-end md:flex-row-reverse xl:flex-row"
               }`}
               role="listitem"
             >
               {/* Imagen */}
-              <figure className="relative w-full min-h-min h-[300px] md:w-1/2 md:h-auto xl:w-1/3 overflow-hidden md:min-h-[632px]">
-                <div className="relative w-full h-full overflow-hidden">
+              <figure className="relative h-[300px] min-h-min w-full overflow-hidden md:h-auto md:min-h-[632px] md:w-1/2 xl:w-1/3">
+                <div className="relative h-full w-full overflow-hidden">
                   <Image
                     src={area.image}
                     width={1920}
                     height={1080}
                     alt={`Imagen representativa de ${area.title}`}
-                    className="absolute h-full w-full inset-0 object-cover"
+                    className="absolute inset-0 h-full w-full object-cover"
                     draggable="false"
                   />
                 </div>
               </figure>
 
               {/* Contenido */}
-              <div className="relative w-full h-auto md:w-1/2 xl:w-1/3 overflow-hidden md:min-h-[632px] p-10 md:p-20 bg-white">
+              <div className="relative h-auto w-full overflow-hidden bg-white p-10 md:min-h-[632px] md:w-1/2 md:p-20 xl:w-1/3">
                 <header>
-                  <h3 className="text-4xl not-italic text-left font-semibold leading-[1.17] tracking-normal max-w-[372px]">
+                  <h3 className="max-w-[372px] text-left text-4xl leading-[1.17] font-semibold tracking-normal not-italic">
                     {area.title}
                   </h3>
                 </header>
 
                 <div className="mt-5">
-                  <p className="text-md font-normal not-italic text-left leading-[1.78] tracking-normal text-jci-gray max-w-[372px]">
+                  <p className="text-md text-jci-navy max-w-[372px] text-left leading-[1.78] font-normal tracking-normal not-italic">
                     {area.description}
                   </p>
                 </div>
@@ -58,7 +58,8 @@ export default function AreasOportunidad() {
                         src={area.logo}
                         alt={`Logo de ${area.title}`}
                         width={290}
-                        height={0}
+                        height={100}
+                        className="h-auto w-auto max-w-[180px] object-contain"
                         draggable="false"
                       />
                     )}
@@ -71,13 +72,13 @@ export default function AreasOportunidad() {
                       Características de {area.title}
                     </h4>
                     <ul
-                      className="flex flex-row flex-wrap mt-[8px] mr-[-10px] ml-[-10px]"
+                      className="mt-[8px] mr-[-10px] ml-[-10px] flex flex-row flex-wrap"
                       role="list"
                     >
                       {area.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="w-1/2">
-                          <div className="mx-[10px] py-[11px] border-t border-t-[#f5f5f5]">
-                            <span className="text-[14px] text-jci-navy font-semibold not-italic leading-[1.78] tracking-normal text-jci-gray">
+                          <div className="mx-[10px] border-t border-t-white py-[11px]">
+                            <span className="text-jci-navy text-[14px] leading-[1.78] font-semibold tracking-normal not-italic">
                               {feature}
                             </span>
                           </div>
@@ -89,18 +90,18 @@ export default function AreasOportunidad() {
                   <footer className="mt-10">
                     <Link
                       href={`/areas-oportunidad/${area.slug}`}
-                      className="group max-w-full relative inline-block transition duration-[400ms] cursor-pointer"
+                      className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                       aria-label={`Explorar área de ${area.title}`}
                     >
                       <div className="flex items-center py-4">
-                        <span className="text-sm text-jci-black leading-none not-italic tracking-normal font-medium transition-colors duration-300 group-hover:text-jci-seafoam">
+                        <span className="text-jci-black group-hover:text-jci-teal text-sm leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                           Explora esta Área de Oportunidad
                         </span>
                         <div
-                          className="flex ml-3 items-center transform transition-transform duration-300 group-hover:translate-x-1"
+                          className="ml-3 flex transform items-center transition-transform duration-300 group-hover:translate-x-1"
                           aria-hidden="true"
                         >
-                          <HiOutlineArrowNarrowRight className="w-6 h-6 text-jci-black group-hover:text-jci-seafoam transition-colors duration-300" />
+                          <HiOutlineArrowNarrowRight className="text-jci-black group-hover:text-jci-teal h-6 w-6 transition-colors duration-300" />
                         </div>
                       </div>
                     </Link>

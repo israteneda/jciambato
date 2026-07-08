@@ -2,14 +2,14 @@ export default function CondicionesUso() {
   return (
     <article className="relative bg-gray-50">
       <div className="py-16">
-        <div className="relative z-10 md:max-w-6xl mx-auto px-8">
+        <div className="relative z-10 mx-auto px-8 md:max-w-6xl">
           <header>
-            <h1 className="text-2xl lg:text-5xl font-bold text-left text-jci-off-black max-w-3xl md:leading-[1.33]">
+            <h1 className="text-jci-black max-w-3xl text-left text-2xl font-bold md:leading-[1.33] lg:text-5xl">
               Condiciones de Uso
             </h1>
 
             <time
-              className="text-xl text-inherit italic font-bold text-jci-aqua mt-8 block"
+              className="text-jci-teal mt-8 block text-xl font-bold text-inherit italic"
               dateTime="2025-07"
             >
               Julio, 2025
@@ -18,27 +18,23 @@ export default function CondicionesUso() {
 
           <main className="mt-16">
             <section>
-              <div className="text-lg font-normal leading-[1.78] text-jci-black text-left max-w-2xl">
+              <div className="text-jci-black max-w-2xl text-left text-lg leading-[1.78] font-normal">
                 <div className="flex flex-col gap-5">
                   <section>
                     <div className="flex flex-col gap-10">
                       <article>
-                        <h4 className="text-3xl font-bold mb-4 text-jci-off-black">Alcance</h4>
-                        <p>
-                          Estas Condiciones de Uso regulan el acceso y uso del sitio web de JCI
-                          Ambato, incluyendo sus contenidos, servicios y funcionalidades. Nos
-                          reservamos el derecho de modificar estas condiciones en cualquier momento,
-                          publicando los cambios en esta página con la fecha de actualización.
-                        </p>
-                      </article>
-
-                      <article>
-                        <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                        <h4
+                          className="text-jci-black>Alcance</h4> <p> Estas Condiciones de Uso regulan el acceso y uso del sitio web de JCI Ambato, incluyendo sus contenidos, servicios y funcionalidades. Nos reservamos el derecho de modificar estas condiciones en cualquier momento, publicando los cambios en esta página con la fecha de actualización. </p> </article> <article> <h4 className= mb-4 text-3xl font-bold"
+                          mb-4
+                          text-2xl
+                          font-bold
+                          text-jci-black
+                        >
                           1. Propiedad Intelectual
                         </h4>
-                        <ul className="space-y-3 my-2">
+                        <ul className="my-2 space-y-3">
                           <li className="flex items-start">
-                            <span className="text-jci-aqua mr-3" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -51,7 +47,7 @@ export default function CondicionesUso() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="text-jci-aqua mr-3" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -63,7 +59,7 @@ export default function CondicionesUso() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="text-jci-aqua mr-3" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -71,7 +67,7 @@ export default function CondicionesUso() {
                               cualquier contenido, contáctenos en{" "}
                               <a
                                 href="mailto:ambato@jciecuador.com"
-                                className="text-jci-aqua font-bold"
+                                className="text-jci-teal font-bold"
                               >
                                 ambato@jciecuador.com
                               </a>
@@ -81,12 +77,12 @@ export default function CondicionesUso() {
                       </article>
 
                       <article>
-                        <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           2. Uso Adecuado del Sitio
                         </h4>
-                        <ul className="space-y-3 my-2">
+                        <ul className="my-2 space-y-3">
                           <li className="flex items-start">
-                            <span className="text-jci-aqua mr-3" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -99,7 +95,7 @@ export default function CondicionesUso() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="text-jci-aqua mr-3" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -112,16 +108,16 @@ export default function CondicionesUso() {
                       </article>
 
                       <article>
-                        <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           3. Consecuencias Legales
                         </h4>
                         <p>
                           JCI Ambato se reserva el derecho de iniciar acciones legales contra
                           cualquier persona o entidad que:
                         </p>
-                        <ul className="space-y-3 my-2">
+                        <ul className="my-2 space-y-3">
                           <li className="flex items-start">
-                            <span className="text-jci-aqua mr-3" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -130,7 +126,7 @@ export default function CondicionesUso() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="text-jci-aqua mr-3" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -140,7 +136,7 @@ export default function CondicionesUso() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="text-jci-aqua mr-3" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -151,7 +147,7 @@ export default function CondicionesUso() {
                       </article>
 
                       <article>
-                        <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           4. Enlaces a Terceros
                         </h4>
                         <p>
@@ -164,12 +160,12 @@ export default function CondicionesUso() {
                       </article>
 
                       <article>
-                        <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           5. Limitación de Responsabilidad
                         </h4>
-                        <ul className="space-y-3 my-2">
+                        <ul className="my-2 space-y-3">
                           <li className="flex items-start">
-                            <span className="text-jci-aqua mr-3" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -178,7 +174,7 @@ export default function CondicionesUso() {
                             </span>
                           </li>
                           <li className="flex items-start">
-                            <span className="text-jci-aqua mr-3" aria-hidden="true">
+                            <span className="text-jci-teal mr-3" aria-hidden="true">
                               •
                             </span>
                             <span>
@@ -191,7 +187,7 @@ export default function CondicionesUso() {
                       </article>
 
                       <article>
-                        <h4 className="text-2xl font-bold mb-4 text-jci-off-black">
+                        <h4 className="text-jci-black mb-4 text-2xl font-bold">
                           6. Modificaciones al Sitio
                         </h4>
                         <p>
@@ -209,7 +205,7 @@ export default function CondicionesUso() {
                       Zona Distrital de la provincia de Tungurahua, municipio de Ambato, Ecuador{" "}
                       <br />
                       Inscrita en el Registro con el número 000 000. <br />
-                      <a href="mailto:ambato@jciecuador.com" className="text-jci-aqua font-bold">
+                      <a href="mailto:ambato@jciecuador.com" className="text-jci-teal font-bold">
                         ambato@jciecuador.com
                       </a>
                     </p>

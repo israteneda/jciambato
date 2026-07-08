@@ -7,33 +7,29 @@ export const metadata: Metadata = {
   title: "Nuestros Miembros — Conoce al Equipo",
   description:
     "Conoce a nuestro equipo de líderes juveniles, junta directiva, miembros activos y senadores de JCI Ambato.",
+  alternates: {
+    canonical: "/miembros",
+  },
 };
 
 export default function MiembrosPage() {
   return (
     <main className="relative">
-      {/* Sección de Bienvenida */}
       <Bienvenida />
 
       {/* Bloque espaciado para efecto de scroll */}
       <div className="h-screen" aria-hidden="true"></div>
       <div
-        className="absolute top-0 w-full h-full bg-gray-50"
+        className="absolute top-0 h-full w-full bg-jci-bg"
         style={{ transform: "translateY(100vh)" }}
         aria-hidden="true"
       ></div>
 
-      {/* Sección de Miembros */}
       <JuntaDirectiva />
-
-      {/* Sección de Miembros Generales */}
       <Miembros />
-
-      {/* Sección de Senadores */}
       <Senadores />
-
-      {/* Sección de Miembros Nacionales */}
       <MiembrosNacionales />
+      {/* <PasadosPresidentes /> */}
     </main>
   );
 }

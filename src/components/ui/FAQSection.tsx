@@ -25,7 +25,7 @@ export function FAQSection({
   const faqSchema = generateFAQSchema(faqs);
 
   return (
-    <section className={`py-16 px-4 ${className}`}>
+    <section className={`px-4 py-16 ${className}`}>
       {/* JSON-LD Schema */}
       <script
         type="application/ld+json"
@@ -34,10 +34,10 @@ export function FAQSection({
         }}
       />
 
-      <div className="max-w-4xl mx-auto">
+      <div className="mx-auto max-w-4xl">
         {/* Título de la sección */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">{title}</h2>
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-4xl font-bold text-gray-900">{title}</h2>
           {subtitle && <p className="text-lg text-gray-600">{subtitle}</p>}
         </div>
 

@@ -7,18 +7,18 @@ export default function Presentacion({ area }: { area: AreaOportunidad }) {
       className="relative z-20 overflow-hidden"
       aria-labelledby={`presentacion-${area.slug}-heading`}
     >
-      <div className="relative z-[1] bg-transparent max-w-6xl mx-8 md:mx-20 lg:mx-auto">
+      <div className="relative z-1 mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
         <div className="mt-16">
           <div className="max-w-5xl">
             <header>
-              <div className="text-xs leading-[1.85] not-italic uppercase text-[#989898] font-bold tracking-normal">
+              <div className="text-xs leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
                 {area.subtitle}
               </div>
 
               <div className="mt-8">
                 <h2
                   id={`presentacion-${area.slug}-heading`}
-                  className="text-3xl md:text-5xl font-bold md:leading-[1.33] text-black text-left"
+                  className="text-left text-3xl font-bold text-jci-black md:text-5xl md:leading-[1.33]"
                 >
                   {area.description}
                 </h2>
@@ -26,7 +26,7 @@ export default function Presentacion({ area }: { area: AreaOportunidad }) {
             </header>
 
             <div className="mt-16 md:mt-20">
-              <p className="text-base leading-loose text-jci-off-black text-justify md:text-left columns-1 lg:columns-2 gap-10 space-y-4">
+              <p className="text-jci-black columns-1 gap-10 space-y-4 text-justify text-base leading-loose md:text-left lg:columns-2">
                 {area.longDescription}
               </p>
             </div>
@@ -39,7 +39,8 @@ export default function Presentacion({ area }: { area: AreaOportunidad }) {
                     src={area.logo}
                     alt={`Logo de ${area.title}`}
                     width={400}
-                    height={0}
+                    height={140}
+                    className="h-auto w-auto max-w-[280px] object-contain"
                     draggable="false"
                   />
                 )}

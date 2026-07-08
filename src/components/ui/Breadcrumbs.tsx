@@ -26,12 +26,12 @@ export function Breadcrumbs({ items, className = "" }: BreadcrumbsProps) {
 
             {isLast ? (
               // Último elemento - no es un link
-              <span className="text-gray-600 font-medium line-clamp-1">{item.name}</span>
+              <span className="line-clamp-1 font-medium text-gray-600">{item.name}</span>
             ) : (
               // Elementos intermedios - son links
               <Link
                 href={item.url}
-                className="text-blue-600 hover:text-blue-800 hover:underline transition-colors flex items-center gap-1"
+                className="flex items-center gap-1 text-jci-teal transition-colors hover:text-jci-navy hover:underline"
               >
                 {/* {isFirst && <FiHome size={16} />} */}
                 <span>{item.name}</span>

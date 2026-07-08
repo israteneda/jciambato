@@ -8,12 +8,13 @@ interface BackgroundImageProps {
 export default function BackgroundImage({ image, alt = "Imagen de fondo" }: BackgroundImageProps) {
   return (
     <figure className="absolute inset-0 overflow-hidden" aria-hidden="true">
-      <div className="relative bg-white w-full h-full overflow-hidden">
+      <div className="relative h-full w-full overflow-hidden bg-white">
         <Image
           src={image}
           alt={alt}
           fill
-          className="absolute h-full w-full inset-0 bg-transparent object-cover"
+          sizes="100vw"
+          className="absolute inset-0 h-full w-full bg-transparent object-cover"
         />
       </div>
 

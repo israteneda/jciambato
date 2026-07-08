@@ -73,7 +73,7 @@ export default function Formulario() {
   };
 
   return (
-    <section className="relative z-[1] overflow-hidden" aria-labelledby="formulario-heading">
+    <section className="relative z-1 overflow-hidden" aria-labelledby="formulario-heading">
       <div className="mt-8 md:mt-16">
         <BackgroundText
           textoPrimario="Hablemos"
@@ -86,32 +86,32 @@ export default function Formulario() {
       </div>
 
       <div className="mt-16 md:mt-60">
-        <div className="bg-gray-200">
-          <div className="relative z-[1] bg-transparent max-w-6xl mx-auto">
+        <div className="bg-white">
+          <div className="relative z-1 mx-auto max-w-6xl bg-transparent">
             <div className="flex flex-col lg:flex-row">
-              <article className="flex-1 md:pr-0 mx-8 md:mx-20 lg:mx-auto box-border min-w-[calc(50%-100px)]">
-                <div className="py-20 md:py-24 md:mb-24">
+              <article className="mx-8 box-border min-w-[calc(50%-100px)] flex-1 md:mx-20 md:pr-0 lg:mx-auto">
+                <div className="py-20 md:mb-24 md:py-24">
                   <header>
-                    <div className="text-[13px] leading-[1.85] not-italic uppercase text-[#989898] font-bold tracking-normal">
+                    <div className="text-[13px] leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
                       Estamos aquí para ayudarte
                     </div>
 
                     <div className="mt-6">
                       <h2
                         id="formulario-heading"
-                        className="text-4xl lg:text-5xl font-bold not-italic text-left leading-[1.17] tracking-normal text-black max-w-[370px]"
+                        className="max-w-[370px] text-left text-4xl leading-[1.17] font-bold tracking-normal text-jci-black not-italic lg:text-5xl"
                       >
                         Te esperamos con los brazos abiertos
                       </h2>
                     </div>
 
                     <div className="mt-6">
-                      <p className="text-[18px] font-normal not-italic leading-[32px] tracking-normal text-[#323232] text-left max-w-[370px]">
+                      <p className="max-w-[370px] text-left text-[18px] leading-[32px] font-normal tracking-normal text-jci-black not-italic">
                         Si deseas contactarnos, por favor completa el formulario o envíanos un
                         correo a{" "}
                         <a
                           href="mailto:jciambato@jciecuador.com"
-                          className="text-jci-aqua underline"
+                          className="text-jci-teal underline"
                           aria-label="Enviar correo electrónico a jciambato@jciecuador.com"
                         >
                           jciambato@jciecuador.com
@@ -122,18 +122,18 @@ export default function Formulario() {
                 </div>
               </article>
 
-              <div className="flex-1 md:mx-20 lg:mx-auto min-w-[calc(50%+100px)]">
+              <div className="min-w-[calc(50%+100px)] flex-1 md:mx-20 lg:mx-auto">
                 {/* Formulario */}
-                <div className="w-full h-full box-border p-10 py-14 md:p-16 lg:p-20 bg-white md:-translate-y-24">
-                  <div className="text-sm font-bold text-jci-aqua uppercase tracking-wider mb-8">
+                <div className="box-border h-full w-full bg-white p-10 py-14 md:-translate-y-24 md:p-16 lg:p-20">
+                  <div className="text-jci-teal mb-8 text-sm font-bold tracking-wider uppercase">
                     Envíanos un mensaje
                   </div>
 
                   {/* Mensajes de estado */}
                   {submissionStatus === "success" && (
-                    <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
+                    <div className="mb-6 rounded-md border border-green-200 bg-green-50 p-4">
                       <div className="flex">
-                        <div className="flex-shrink-0">
+                        <div className="shrink-0">
                           <svg
                             className="h-5 w-5 text-green-400"
                             viewBox="0 0 20 20"
@@ -150,7 +150,7 @@ export default function Formulario() {
                           <p className="text-sm font-medium text-green-800">
                             ¡Mensaje enviado exitosamente!
                           </p>
-                          <p className="text-sm text-green-700 mt-1">
+                          <p className="mt-1 text-sm text-green-700">
                             Te hemos enviado un email de confirmación y nuestro equipo se pondrá en
                             contacto contigo pronto.
                           </p>
@@ -160,9 +160,9 @@ export default function Formulario() {
                   )}
 
                   {submissionStatus === "error" && (
-                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
+                    <div className="mb-6 rounded-md border border-red-200 bg-red-50 p-4">
                       <div className="flex">
-                        <div className="flex-shrink-0">
+                        <div className="shrink-0">
                           <svg
                             className="h-5 w-5 text-red-400"
                             viewBox="0 0 20 20"
@@ -179,7 +179,7 @@ export default function Formulario() {
                           <p className="text-sm font-medium text-red-800">
                             Error al enviar el mensaje
                           </p>
-                          <p className="text-sm text-red-700 mt-1">
+                          <p className="mt-1 text-sm text-red-700">
                             Hubo un problema al enviar tu mensaje. Por favor intenta nuevamente o
                             contactanos directamente.
                           </p>
@@ -202,7 +202,7 @@ export default function Formulario() {
                         placeholder="Escribe tu nombre"
                         value={name}
                         onValueChange={setName}
-                        classNames={{ label: "text-sm font-semibold text-gray-500" }}
+                        classNames={{ label: "text-sm font-semibold text-jci-navy" }}
                         isRequired
                         aria-required="true"
                       />
@@ -215,7 +215,7 @@ export default function Formulario() {
                         onValueChange={setEmail}
                         isInvalid={showError && !isEmailValid}
                         errorMessage="Por favor, introduce un email válido."
-                        classNames={{ label: "text-sm font-semibold text-gray-500" }}
+                        classNames={{ label: "text-sm font-semibold text-jci-navy" }}
                         isRequired
                         aria-required="true"
                       />
@@ -226,7 +226,7 @@ export default function Formulario() {
                         placeholder="Escribe tu número de teléfono"
                         value={phone}
                         onValueChange={setPhone}
-                        classNames={{ label: "text-sm font-semibold text-gray-500" }}
+                        classNames={{ label: "text-sm font-semibold text-jci-navy" }}
                         isRequired
                         aria-required="true"
                       />
@@ -236,13 +236,13 @@ export default function Formulario() {
                         placeholder="¿Cómo podemos ayudarte?"
                         value={message}
                         onValueChange={setMessage}
-                        classNames={{ label: "text-sm font-semibold text-gray-500" }}
+                        classNames={{ label: "text-sm font-semibold text-jci-navy" }}
                         isRequired
                         aria-required="true"
                       />
                     </fieldset>
 
-                    <fieldset className="pt-6 space-y-5" disabled={isSubmitting}>
+                    <fieldset className="space-y-5 pt-6" disabled={isSubmitting}>
                       <legend className="sr-only">Términos y condiciones</legend>
 
                       <div className="flex items-start">
@@ -252,9 +252,9 @@ export default function Formulario() {
                           isSelected={termsAccepted}
                           onValueChange={setTermsAccepted}
                         />
-                        <label htmlFor="terms" className="ml-3 text-xs text-gray-600">
+                        <label htmlFor="terms" className="ml-3 text-xs text-jci-navy">
                           He leído y acepto los{" "}
-                          <Link href="/politica-privacidad" className="underline font-semibold">
+                          <Link href="/politica-privacidad" className="font-semibold underline">
                             términos y condiciones
                           </Link>{" "}
                           de la política de privacidad de JCI Ambato.
@@ -267,7 +267,7 @@ export default function Formulario() {
                           isSelected={promoAccepted}
                           onValueChange={setPromoAccepted}
                         />
-                        <label htmlFor="promo" className="ml-3 text-xs text-gray-600">
+                        <label htmlFor="promo" className="ml-3 text-xs text-jci-navy">
                           Acepto el procesamiento de mis datos para recibir mensajes promocionales y
                           propuestas comerciales de JCI Ambato.
                         </label>
@@ -278,13 +278,13 @@ export default function Formulario() {
                       <Button
                         type="submit"
                         disabled={isButtonDisabled || isSubmitting}
-                        className="bg-jci-aqua text-white font-semibold rounded-md transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="bg-jci-teal rounded-md font-semibold text-white transition-opacity disabled:cursor-not-allowed disabled:opacity-50"
                         {...(isButtonDisabled && { "aria-describedby": "form-error" })}
                       >
                         {isSubmitting ? "Enviando..." : "Postula ahora"}
                       </Button>
                       {showError && isButtonDisabled && !isSubmitting && (
-                        <p id="form-error" className="text-sm text-red-600 mt-2">
+                        <p id="form-error" className="mt-2 text-sm text-red-600">
                           Por favor, completa todos los campos requeridos y acepta los términos.
                         </p>
                       )}

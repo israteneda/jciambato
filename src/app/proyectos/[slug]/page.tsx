@@ -27,11 +27,9 @@ export async function generateMetadata({ params }: ProyectosPageProps) {
     };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jciambato.org";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
   const projectUrl = `${baseUrl}/proyectos/${slug}`;
-  const projectImage = proyecto.imagen
-    ? `${baseUrl}${proyecto.imagen}`
-    : `${baseUrl}/images/logos/jci-ambato.webp`;
+  const ogImage = `${baseUrl}/og?type=proyecto&slug=${slug}`;
 
   return {
     title: `${proyecto.nombre} — Proyectos`,
@@ -53,7 +51,7 @@ export async function generateMetadata({ params }: ProyectosPageProps) {
       siteName: "JCI Ambato",
       images: [
         {
-          url: projectImage,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: `Imagen del proyecto: ${proyecto.nombre}`,
@@ -67,7 +65,7 @@ export async function generateMetadata({ params }: ProyectosPageProps) {
       title: proyecto.nombre,
       description:
         proyecto.descripcion || proyecto.subtitulo || "Descubre este proyecto de JCI Ambato",
-      images: [projectImage],
+      images: [ogImage],
     },
     alternates: {
       canonical: projectUrl,

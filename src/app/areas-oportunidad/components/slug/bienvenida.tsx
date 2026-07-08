@@ -10,13 +10,9 @@ export default function Bienvenida({ area }: { area: AreaOportunidad }) {
   const isScrolled = useScroll();
 
   return (
-    <section className="relative" aria-labelledby={`area-${area.slug}-heading`}>
-      <header className="sr-only">
-        <h1 id={`area-${area.slug}-heading`}>{area.title}</h1>
-      </header>
-
+    <section className="relative">
       <div className="flex w-full">
-        <div className="h-screen flex lg:px-[180px] pb-[92px] items-center box-border">
+        <div className="box-border flex h-screen items-center pb-[92px] lg:px-[180px]">
           <BorderFrame isScrolled={isScrolled} />
 
           <InfoContainer
@@ -28,7 +24,7 @@ export default function Bienvenida({ area }: { area: AreaOportunidad }) {
           <BackgroundImage image={area.background_image} alt={`Imagen de fondo de ${area.title}`} />
         </div>
 
-        <div className="hidden md:block absolute z-20 top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute top-1/2 right-2 z-20 hidden -translate-x-1/2 -translate-y-1/2 transform md:block">
           <button
             aria-label="Desplazarse hacia abajo"
             onClick={() => {
@@ -44,14 +40,14 @@ export default function Bienvenida({ area }: { area: AreaOportunidad }) {
               alt=""
               width={30}
               height={30}
-              className="relative w-[30px] h-[30px] object-contain"
+              className="relative h-[30px] w-[30px] object-contain"
               aria-hidden="true"
             />
           </button>
         </div>
       </div>
 
-      <nav className="absolute left-1/2 bottom-0 transform -translate-x-1/2 rotate-90 z-20">
+      <nav className="absolute bottom-0 left-1/2 z-20 -translate-x-1/2 rotate-90 transform">
         <div className="">
           <button
             className="flex items-center"
@@ -64,7 +60,7 @@ export default function Bienvenida({ area }: { area: AreaOportunidad }) {
               });
             }}
           >
-            <span className="text-jci-aqua text-[10.5px] font-semibold text-end uppercase">
+            <span className="text-jci-teal text-end text-[10.5px] font-semibold uppercase">
               Descubre <br /> más
             </span>
             <Image
@@ -72,7 +68,7 @@ export default function Bienvenida({ area }: { area: AreaOportunidad }) {
               alt=""
               width={500}
               height={500}
-              className="w-[96px] h-[69px] -rotate-90 object-cover"
+              className="h-[69px] w-[96px] -rotate-90 object-cover"
               aria-hidden="true"
             />
           </button>

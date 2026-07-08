@@ -5,29 +5,30 @@ import Image from "next/image";
 
 export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
   return (
-    <section className="relative bg-transparent z-10">
+    <section className="relative z-10 bg-transparent">
       <div className="pb-28">
         <section className="relative overflow-hidden">
-          <div className="relative w-full h-[550px] md:h-[860px]">
-            <div className="relative w-full h-full overflow-hidden bg-white">
+          <div className="relative h-[550px] w-full md:h-[860px]">
+            <div className="relative h-full w-full overflow-hidden bg-white">
               <Image
                 src={proyecto.imagen}
                 alt={proyecto.nombre + " imagen de proyecto"}
                 fill
-                className="absolute h-full w-full inset-0 object-cover"
+                sizes="100vw"
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
           </div>
-          <div className="relative top-[-140px] mb-[-140px] z-20">
-            <div className="relative bg-white mx-auto max-w-7xl">
-              <div className="p-8 md:pt-20 md:p-20 w-full box-border">
-                <div className="flex flex-col md:flex-row justify-between md:items-center">
+          <div className="relative top-[-140px] z-20 mb-[-140px]">
+            <div className="relative mx-auto max-w-7xl bg-white">
+              <div className="box-border w-full p-8 md:p-20 md:pt-20">
+                <div className="flex flex-col justify-between md:flex-row md:items-center">
                   <div>
-                    <div className="text-[13px] leading-[1.85] not-italic uppercase text-jci-black tracking-[1px]">
+                    <div className="text-jci-black text-[13px] leading-[1.85] tracking-[1px] uppercase not-italic">
                       {proyecto.area_oportunidad}
                     </div>
-                    <div className="max-w-3xl mt-8">
-                      <h2 className="text-3xl md:text-5xl font-bold leading-[1.33] text-jci-off-black text-left  sm:text-[calc(28.8px+1vw)]">
+                    <div className="mt-8 max-w-3xl">
+                      <h2 className="text-jci-black text-left text-3xl leading-[1.33] font-bold sm:text-[calc(28.8px+1vw)] md:text-5xl">
                         {proyecto.nombre}
                       </h2>
                     </div>
@@ -40,7 +41,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                         alt={proyecto.nombre + " logo"}
                         width={500}
                         height={300}
-                        className="h-auto w-52 md:w-64 lg:w-72 object-cover"
+                        className="h-auto w-52 object-cover md:w-64 lg:w-72"
                       />
                     </div>
                   )}
@@ -48,61 +49,61 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
 
                 <div className="mt-10 md:mt-20">
                   <div className="border-t border-t-gray-200">
-                    <div className="flex flex-col md:flex-row py-[23px] border-a border-a-gray-200">
-                      <div className="leading-[1.33] text-[18px] text-jci-black md:w-[30%]">
+                    <div className="border-a border-a-gray-200 flex flex-col py-[23px] md:flex-row">
+                      <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Estado
                       </div>
-                      <div className="leading-[1.33] text-medium md:text-[18px] text-jci-off-black md:w-[70%] md:pl-[20px]">
+                      <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
                         {proyecto.estado}
                       </div>
                     </div>
                   </div>
-                  <div className="border-t border-t-gray-200 w-full">
-                    <div className="flex flex-col md:flex-row py-[23px] border-a border-a-gray-200 w-full">
-                      <div className="leading-[1.33] text-[18px] text-jci-black md:w-[30%]">
+                  <div className="w-full border-t border-t-gray-200">
+                    <div className="border-a border-a-gray-200 flex w-full flex-col py-[23px] md:flex-row">
+                      <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Área de Oportunidad
                       </div>
-                      <div className="leading-[1.33] text-medium md:text-[18px] text-jci-off-black md:w-[70%] md:pl-[20px]">
+                      <div className="text-jci-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
                         {proyecto.area_oportunidad}
                       </div>
                     </div>
                   </div>
                   <div className="border-t border-t-gray-200">
-                    <div className="flex flex-col md:flex-row py-[23px] border-a border-a-gray-200">
-                      <div className="leading-[1.33] text-[18px] text-jci-black md:w-[30%]">
+                    <div className="border-a border-a-gray-200 flex flex-col py-[23px] md:flex-row">
+                      <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Director/a
                       </div>
-                      <div className="leading-[1.33] text-medium md:text-[18px] text-jci-off-black md:w-[70%] md:pl-[20px]">
+                      <div className="text-jci-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
                         {proyecto.director?.nombre} {proyecto.director?.apellido}
                       </div>
                     </div>
                   </div>
                   <div className="border-t border-t-gray-200">
-                    <div className="flex flex-col md:flex-row py-[23px] border-a border-a-gray-200">
-                      <div className="leading-[1.33] text-[18px] text-jci-black md:w-[30%]">
+                    <div className="border-a border-a-gray-200 flex flex-col py-[23px] md:flex-row">
+                      <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Subdirector/a
                       </div>
-                      <div className="leading-[1.33] text-medium md:text-[18px] text-jci-off-black md:w-[70%] md:pl-[20px]">
+                      <div className="text-jci-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
                         {proyecto.subdirector?.nombre} {proyecto.subdirector?.apellido}
                       </div>
                     </div>
                   </div>
                   <div className="border-t border-t-gray-200">
-                    <div className="flex flex-col md:flex-row py-[23px] border-a border-a-gray-200">
-                      <div className="leading-[1.33] text-[18px] text-jci-black md:w-[30%]">
+                    <div className="border-a border-a-gray-200 flex flex-col py-[23px] md:flex-row">
+                      <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Fecha
                       </div>
-                      <div className="leading-[1.33] text-medium md:text-[18px] text-jci-off-black md:w-[70%] md:pl-[20px]">
+                      <div className="text-jci-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
                         {proyecto.fecha}
                       </div>
                     </div>
                   </div>
                   <div className="border-t border-t-gray-200">
-                    <div className="flex flex-col md:flex-row py-[23px] border-a border-a-gray-200">
-                      <div className="leading-[1.33] text-[18px] text-jci-black md:w-[30%]">
+                    <div className="border-a border-a-gray-200 flex flex-col py-[23px] md:flex-row">
+                      <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Lugar
                       </div>
-                      <div className="leading-[1.33] text-medium md:text-[18px] text-jci-off-black md:w-[70%] md:pl-[20px]">
+                      <div className="text-jci-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
                         {proyecto.lugar}
                       </div>
                     </div>
@@ -110,13 +111,13 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                 </div>
 
                 <div className="mt-20">
-                  <div className="text-xl mb-5 font-bold leading-[1.33] text-jci-off-black">
+                  <div className="text-jci-black mb-5 text-xl leading-[1.33] font-bold">
                     Intervención
                   </div>
-                  <div className="flex flex-col md:flex-row w-full">
-                    <div className="pr-0 md:pr-24 w-full">
+                  <div className="flex w-full flex-col md:flex-row">
+                    <div className="w-full pr-0 md:pr-24">
                       <div className="pb-20">
-                        <div className="flex flex-col gap-5 text-medium leading-[1.71] text-jci-off-black">
+                        <div className="text-medium text-jci-black flex flex-col gap-5 leading-[1.71]">
                           <p>{proyecto.descripcion}</p>
 
                           <p>
@@ -128,13 +129,13 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
 
                     <div className="w-[20%]">
                       <div className="flex flex-col items-start gap-2">
-                        <div className="text-xs font-semibold tracking-[1px] text-jci-black uppercase">
+                        <div className="text-jci-black text-xs font-semibold tracking-[1px] uppercase">
                           Compartir en
                         </div>
 
                         <div className="flex flex-col items-start gap-1">
                           <button
-                            className="text-sm font-semibold text-gray-400 hover:text-jci-seafoam transition-colors duration-300 cursor-pointer"
+                            className="hover:text-jci-teal cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300"
                             onClick={() =>
                               shareOnSocialMedia("facebook", getShareContentFromProyecto(proyecto))
                             }
@@ -143,7 +144,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                             Facebook
                           </button>
                           <button
-                            className="text-sm font-semibold text-gray-400 hover:text-jci-seafoam transition-colors duration-300 cursor-pointer"
+                            className="hover:text-jci-teal cursor-pointer text-sm font-semibold text-gray-400 transition-colors duration-300"
                             onClick={() =>
                               shareOnSocialMedia("linkedin", getShareContentFromProyecto(proyecto))
                             }

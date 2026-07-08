@@ -3,14 +3,7 @@ import RotatedText from "@/components/commons/rotated-text";
 
 export default function Bienvenida() {
   return (
-    <section
-      className="relative z-10 w-full pt-48 pb-32 box-border h-auto"
-      aria-labelledby="impacto-heading"
-    >
-      <header className="sr-only">
-        <h1 id="impacto-heading">Impacto</h1>
-      </header>
-
+    <section className="relative z-10 box-border h-auto w-full pt-48 pb-32">
       <RotatedText text="Formas de Actuar" />
       <div className="relative w-full">
         <InfoContainer

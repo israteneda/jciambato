@@ -10,11 +10,11 @@ export default function Caracteristicas({ area }: { area: AreaOportunidad }) {
         <div className="hidden md:block">
           <div className="absolute top-[80px] left-0 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
             <div
-              className="relative text-[rgb(174,174,174)] leading-none text-[11px] font-medium not-italic tracking-[2px] whitespace-nowrap uppercase"
+              className="relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap text-jci-gray uppercase not-italic"
               aria-hidden="true"
             >
               Vicepresidencia Local
-              <span className="absolute top-[6px] left-[-170px] w-[160px] h-[1px] bg-[rgb(174,174,174)] content-['']"></span>
+              <span className="absolute top-1.5 left-[-170px] h-px w-40 bg-jci-gray content-['']"></span>
             </div>
           </div>
         </div>
@@ -23,7 +23,7 @@ export default function Caracteristicas({ area }: { area: AreaOportunidad }) {
           <div className="flex">
             <header className="md:max-w-2xl">
               <div className="mt-20">
-                <h2 className="text-4xl md:text-5xl font-bold not-italic text-left leading-[1.17] tracking-normal text-black">
+                <h2 className="text-left text-4xl leading-[1.17] font-bold tracking-normal text-jci-black not-italic md:text-5xl">
                   Vicepresidencia <br /> {area.title}
                 </h2>
               </div>
@@ -34,13 +34,13 @@ export default function Caracteristicas({ area }: { area: AreaOportunidad }) {
                     Características de {area.title}
                   </h4>
                   <ul
-                    className="flex flex-row flex-wrap mt-[8px] mr-[-10px] mb-[68px] ml-[-10px]"
+                    className="mt-[8px] mr-[-10px] mb-[68px] ml-[-10px] flex flex-row flex-wrap"
                     role="list"
                   >
                     {area.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="w-1/2">
-                        <div className="mx-3 py-4 border-t border-t-jci-gray">
-                          <span className="text-lg text-jci-black font-bold not-italic leading-[1.78] tracking-normal">
+                        <div className="border-t-jci-navy mx-3 border-t py-4">
+                          <span className="text-jci-black text-lg leading-[1.78] font-bold tracking-normal not-italic">
                             {feature}
                           </span>
                         </div>
@@ -51,14 +51,14 @@ export default function Caracteristicas({ area }: { area: AreaOportunidad }) {
               </div>
 
               <div className="mt-8">
-                <div className="flex flex-col gap-3 text-left text-base leading-[1.78] text-jci-black">
-                  <div className="text-xl md:text-2xl font-bold leading-[1.33] text-[#323232] w-full md:w-1/2 flex pr-0 md:pr-10 box-border items-center mb-6 md:mb-0">
-                    <div className="p-[24px_0_24px_0] md:p-[24px_40px_24px_0] w-full border-b border-[#cccccc]">
+                <div className="text-jci-black flex flex-col gap-3 text-left text-base leading-[1.78]">
+                  <div className="mb-6 box-border flex w-full items-center pr-0 text-xl leading-[1.33] font-bold text-jci-black md:mb-0 md:w-1/2 md:pr-10 md:text-2xl">
+                    <div className="w-full border-b border-jci-navy/20 p-[24px_0_24px_0] md:p-[24px_40px_24px_0]">
                       {area.responsable.nombre} {area.responsable.apellido}
                       <div>
                         <a
                           href={`mailto:${area.responsable.correo}`}
-                          className="text-lg underline text-jci-aqua leading-[1.5] not-italic font-normal tracking-normal md:text-xl"
+                          className="text-jci-teal text-lg leading-normal font-normal tracking-normal not-italic underline md:text-xl"
                         >
                           {area.responsable.correo}
                         </a>

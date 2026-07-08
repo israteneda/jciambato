@@ -81,19 +81,19 @@ export const Navbar = ({ className }: NavbarProps) => {
 
   const getTextColor = (isActive: boolean, isLast: boolean) => {
     if (isLast) {
-      return "text-jci-gold font-semibold hover:text-yellow-400";
+      return "text-jci-yellow font-semibold hover:text-yellow-400";
     }
 
     if (shouldUseDarkText) {
-      return isActive ? "text-jci-gold" : "text-jci-black hover:text-jci-gold";
+      return isActive ? "text-jci-yellow" : "text-jci-black hover:text-jci-yellow";
     } else {
-      return isActive ? "text-jci-gold" : "text-white hover:text-jci-gold";
+      return isActive ? "text-jci-yellow" : "text-white hover:text-jci-yellow";
     }
   };
 
   const getMobileTextColor = (isActive: boolean, isLast: boolean) => {
     if (isLast) {
-      return "text-jci-gold font-semibold hover:text-yellow-400 transition-colors duration-200";
+      return "text-jci-yellow font-semibold hover:text-yellow-400 transition-colors duration-200";
     }
 
     return isActive
@@ -104,7 +104,7 @@ export const Navbar = ({ className }: NavbarProps) => {
   return (
     <HeroUINavbar
       className={clsx(
-        "fixed top-0 left-0 right-0 transition-all duration-300 z-50 select-none",
+        "fixed top-0 right-0 left-0 z-50 transition-all duration-300 select-none",
         isScrolled ? "bg-white shadow-md" : "bg-transparent",
         className
       )}
@@ -121,14 +121,18 @@ export const Navbar = ({ className }: NavbarProps) => {
       aria-label="Navegación principal"
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
+        <NavbarBrand as="li" className="max-w-fit gap-3">
           <NextLink href="/" aria-label="Ir a la página de inicio">
             <Image
               alt="JCI Ambato Logo"
-              className="object-contain w-[90px] h-[90px]"
-              src="/images/logos/jci-ambato.webp"
-              width={90}
-              height={90}
+              className="h-28 w-28 object-contain"
+              src={
+                shouldUseDarkText
+                  ? "/images/logos/jci-ambato.webp"
+                  : "/images/logos/jci-ambato-bw.webp"
+              }
+              width={112}
+              height={115}
               priority
               draggable="false"
             />
@@ -139,7 +143,7 @@ export const Navbar = ({ className }: NavbarProps) => {
       {/* Sección de navegación */}
       <NavbarContent className="flex basis-1/5 sm:basis-full" justify="end">
         <nav className="hidden lg:block" aria-label="Navegación principal">
-          <ul className="flex gap-8 justify-start ml-2" role="menubar">
+          <ul className="ml-2 flex justify-start gap-8" role="menubar">
             {siteConfig.navItems.map((item, index) => {
               const isLast = index === siteConfig.navItems.length - 1;
               const isActive = pathname === item.href;
@@ -148,7 +152,7 @@ export const Navbar = ({ className }: NavbarProps) => {
                 <NavbarItem key={item.href} role="none">
                   <NextLink
                     className={clsx(
-                      "transition-colors duration-200",
+                      "font-normal transition-colors duration-200",
                       getTextColor(isActive, isLast)
                     )}
                     href={item.href}
@@ -165,7 +169,7 @@ export const Navbar = ({ className }: NavbarProps) => {
 
         <div className="lg:hidden">
           <NavbarMenuToggle
-            className={clsx("w-12 h-12 p-2", shouldUseDarkText ? "text-jci-black" : "text-white")}
+            className={clsx("h-12 w-12 p-2", shouldUseDarkText ? "text-jci-black" : "text-white")}
             srOnlyText="Abrir menú de navegación"
             aria-label="Abrir menú de navegación"
             aria-expanded={isMenuOpen}
@@ -175,11 +179,11 @@ export const Navbar = ({ className }: NavbarProps) => {
       </NavbarContent>
 
       <NavbarMenu
-        className={clsx("bg-white flex flex-col")}
+        className={clsx("flex flex-col bg-white")}
         id="mobile-menu"
         aria-label="Menú de navegación móvil"
       >
-        <nav className="mx-4 mt-6 flex flex-col gap-6 flex-1" aria-label="Navegación móvil">
+        <nav className="mx-4 mt-6 flex flex-1 flex-col gap-6" aria-label="Navegación móvil">
           {siteConfig.navItems.map((item, index) => {
             const isLast = index === siteConfig.navItems.length - 1;
             const isActive = pathname === item.href;
@@ -188,7 +192,7 @@ export const Navbar = ({ className }: NavbarProps) => {
               <NavbarMenuItem key={`${item}-${index}`} className="flex flex-col items-start">
                 <NextLink
                   className={clsx(
-                    "transition-colors duration-200 text-lg font-medium",
+                    "text-lg font-medium transition-colors duration-200",
                     getMobileTextColor(isActive, isLast)
                   )}
                   href={item.href}
@@ -197,7 +201,7 @@ export const Navbar = ({ className }: NavbarProps) => {
                   {item.label}
                 </NextLink>
                 {item.description && (
-                  <p className="text-sm text-gray-600 mt-1 leading-relaxed">{item.description}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-gray-600">{item.description}</p>
                 )}
               </NavbarMenuItem>
             );
@@ -205,17 +209,17 @@ export const Navbar = ({ className }: NavbarProps) => {
         </nav>
 
         {/* Redes sociales - Pie del menú móvil */}
-        <div className="mx-4 mt-auto pt-6 border-t border-gray-200 pb-6">
-          <div className="flex gap-4 justify-start">
+        <div className="mx-4 mt-auto border-t border-gray-200 pt-6 pb-6">
+          <div className="flex justify-start gap-4">
             {siteConfig.links.facebook && (
               <a
                 href={siteConfig.links.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9"
+                className="h-9 w-9"
                 aria-label="Síguenos en Facebook"
               >
-                <FaFacebook className="w-full h-full" aria-hidden="true" />
+                <FaFacebook className="h-full w-full" aria-hidden="true" />
               </a>
             )}
             {siteConfig.links.instagram && (
@@ -223,10 +227,10 @@ export const Navbar = ({ className }: NavbarProps) => {
                 href={siteConfig.links.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9"
+                className="h-9 w-9"
                 aria-label="Síguenos en Instagram"
               >
-                <FaInstagram className="w-full h-full" aria-hidden="true" />
+                <FaInstagram className="h-full w-full" aria-hidden="true" />
               </a>
             )}
             {siteConfig.links.linkedin && (
@@ -234,10 +238,10 @@ export const Navbar = ({ className }: NavbarProps) => {
                 href={siteConfig.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9"
+                className="h-9 w-9"
                 aria-label="Síguenos en LinkedIn"
               >
-                <FaLinkedin className="w-full h-full" aria-hidden="true" />
+                <FaLinkedin className="h-full w-full" aria-hidden="true" />
               </a>
             )}
           </div>

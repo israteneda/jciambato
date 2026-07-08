@@ -27,7 +27,7 @@ export default function HomePage() {
         <Image
           src="/images/figura.png"
           alt="Imagen desde la izquierda"
-          className="hidden lg:block absolute -left-28 -translate-y-full w-auto h-96 object-cover"
+          className="absolute -left-28 hidden h-96 w-auto -translate-y-full object-cover lg:block"
           width={400}
           height={320}
         />
@@ -35,7 +35,7 @@ export default function HomePage() {
         <Image
           src="/images/figura.png"
           alt="Imagen desde la derecha"
-          className="hidden lg:block absolute -translate-y-10 -right-28 w-auto h-96 object-cover"
+          className="absolute -right-28 hidden h-96 w-auto -translate-y-10 object-cover lg:block"
           width={400}
           height={320}
         />

@@ -1,5 +1,19 @@
 export type SiteConfig = typeof siteConfig;
 
+// Utility function to generate absolute URLs for images
+const getImageUrl = (path: string): string => {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jciambato.org";
+  return new URL(path, baseUrl).toString();
+};
+
+// Type for navigation items
+type NavItem = {
+  label: string;
+  href: string;
+  description: string;
+  children?: NavItem[];
+};
+
 export const siteConfig = {
   name: "JCI Ambato",
   description:
@@ -22,16 +36,9 @@ export const siteConfig = {
   ],
   creator: "JCI Ambato",
   publisher: "JCI Ambato",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000"
-  ),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jciambato.org"),
   alternates: {
     canonical: "https://www.jciambato.org",
-    /* languages: {
-      "es-EC": "https://www.jciambato.org/es",
-    }, */
   },
   openGraph: {
     type: "website",
@@ -44,21 +51,18 @@ export const siteConfig = {
       "Únete a JCI Ambato para desarrollar habilidades de liderazgo, participar en proyectos sociales y generar un impacto positivo en la comunidad.",
     images: [
       {
-        url: "https://www.jciambato.org/images/jci-ambato.ico",
-        width: 100,
-        height: 100,
+        url: getImageUrl("/images/logos/jci-ambato.webp"),
+        width: 1200,
+        height: 630,
         alt: "Logo oficial de JCI Ambato",
       },
       {
-        url: "https://www.jciambato.org/images/grupo/sesion-solemne-50-aniversario.webp",
-        width: 100,
-        height: 100,
+        url: getImageUrl("/images/grupo/sesion-solemne-50-aniversario.webp"),
+        width: 1200,
+        height: 630,
         alt: "JCI Ambato en acción",
       },
-    ].map((img) => ({
-      ...img,
-      url: new URL(img.url, process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").toString(),
-    })),
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -67,9 +71,7 @@ export const siteConfig = {
     title: "JCI Ambato - Líderes Juveniles",
     description:
       "Organización de jóvenes líderes en Ambato, Ecuador, dedicada al voluntariado y desarrollo comunitario.",
-    images: ["/images/jci-ambato-twitter.png"].map((img) =>
-      new URL(img, process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").toString()
-    ),
+    images: [getImageUrl("/images/grupo/sesion-solemne-50-aniversario.webp")],
   },
   robots: {
     index: true,
@@ -84,7 +86,7 @@ export const siteConfig = {
   },
   manifest: "/manifest.json",
   icons: {
-    icon: "/images/jci-ambato.ico",
+    icon: "/images/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
@@ -124,14 +126,13 @@ export const siteConfig = {
       href: "/involucrate",
       description: "Únete y forma parte del cambio.",
     },
-  ],
+  ] as const satisfies readonly NavItem[],
   links: {
     facebook: "https://www.facebook.com/jciambatoec",
     instagram: "https://www.instagram.com/jciambato",
     linkedin: "https://www.linkedin.com/company/jci-ambato/",
     twitter: "https://twitter.com/jciambato",
     youtube: "https://www.youtube.com/channel/jciambato",
-    /* whatsapp: "https://wa.me/+593999999999", // Replace with actual WhatsApp number */
   },
   structuredData: {
     "@context": "https://schema.org",
@@ -205,7 +206,6 @@ export const siteConfig = {
   // Datos adicionales para redes sociales
   socialProfiles: {
     facebook: {
-      appId: "", // Agregar si tienen Facebook App ID
       pages: ["https://www.facebook.com/jciambatoec"],
     },
     linkedin: {

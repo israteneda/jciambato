@@ -18,24 +18,24 @@ export default function BienvenidaV1() {
       </header>
 
       <div className="flex w-full">
-        <div className="h-screen flex px-[45px] lg:px-[180px] pb-[92px] items-center box-border">
+        <div className="box-border flex h-screen items-center px-[45px] pb-[92px] lg:px-[180px]">
           <BorderFrame isScrolled={isScrolled} />
 
           {/* Contenido principal */}
           <main className="relative z-20">
             <div className="flex flex-col items-start">
-              <div className="text-xs lg:text-sm uppercase text-jci-gold font-bold tracking-normal">
+              <div className="text-jci-yellow text-xs font-bold tracking-normal uppercase lg:text-sm">
                 Impulsando el cambio
               </div>
 
               <div className="mt-6">
-                <h2 className="bg-gradient-to-br from-jci-navy via-white to-jci-navy text-transparent bg-clip-text font-bold text-3xl lg:text-6xl max-w-xl">
+                <h2 className="from-jci-navy to-jci-navy max-w-xl bg-linear-to-br via-white bg-clip-text text-3xl font-bold text-transparent lg:text-6xl">
                   Líderes que Impactan el Futuro
                 </h2>
               </div>
 
               <div className="mt-10">
-                <p className="text-white max-w-md text-sm lg:text-medium leading-relaxed">
+                <p className="lg:text-medium max-w-md text-sm leading-relaxed text-white">
                   Con cada proyecto, impulsamos el cambio a través de la innovación, transformando
                   ideas en soluciones que construyen comunidades más fuertes y mejoran vidas.
                 </p>
@@ -44,11 +44,11 @@ export default function BienvenidaV1() {
               <div className="mt-9">
                 <Button
                   radius="none"
-                  className="relative bg-jci-aqua text-white group overflow-hidden"
+                  className="group bg-jci-teal relative overflow-hidden text-white"
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/nosotros">
-                    <span className="absolute inset-0 w-full h-full transform -translate-x-full bg-[#003D62] transition-transform duration-300 group-hover:translate-x-0"></span>
+                    <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-jci-black transition-transform duration-300 group-hover:translate-x-0"></span>
                     <span className="relative z-10">Sobre Nosotros</span>
                   </Link>
                 </Button>
@@ -60,7 +60,7 @@ export default function BienvenidaV1() {
           <figure className="absolute inset-0">
             <video
               autoPlay
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
               /* src="/videos/rotary.mp4" */
               src="/videos/company-hero.mp4"
               loop
@@ -78,7 +78,7 @@ export default function BienvenidaV1() {
         <RotatedText text="BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO" />
 
         {/* Botón de scroll */}
-        <div className="hidden md:block absolute z-20 top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute top-1/2 right-2 z-20 hidden -translate-x-1/2 -translate-y-1/2 transform md:block">
           <button
             aria-label="Desplazarse hacia abajo"
             onClick={() => {
@@ -94,17 +94,17 @@ export default function BienvenidaV1() {
               alt=""
               width={30}
               height={30}
-              className="relative w-[30px] h-[30px] object-contain"
+              className="relative h-[30px] w-[30px] object-contain"
               aria-hidden="true"
             />
           </button>
         </div>
 
         {/* Logo Somos Liderazgo */}
-        <div className="hidden md:block absolute bottom-[100px] right-[40px] md:bottom-[60px] md:right-[124px] z-20">
+        <div className="absolute right-[40px] bottom-[100px] z-20 hidden md:right-[124px] md:bottom-[60px] md:block">
           <Image
             alt="Somos Liderazgo Logo"
-            className="object-contain w-[150px] h-[70px]"
+            className="h-[70px] w-[150px] object-contain"
             src="/images/logos/somos-liderazgo.webp"
             width={150}
             height={70}
@@ -113,7 +113,7 @@ export default function BienvenidaV1() {
         </div>
 
         {/* Enlace a JCI Ecuador */}
-        <div className="hidden md:block absolute bottom-[100px] left-[40px] md:bottom-[80px] md:left-[180px] text-[10.5px] font-semibold uppercase z-20 text-jci-seafoam">
+        <div className="text-jci-teal absolute bottom-[100px] left-[40px] z-20 hidden text-[10.5px] font-semibold uppercase md:bottom-[80px] md:left-[180px] md:block">
           <a
             href="https://jciecuador.com"
             target="_blank"
@@ -122,20 +122,20 @@ export default function BienvenidaV1() {
             aria-label="Visitar JCI Ecuador (se abre en nueva ventana)"
           >
             <span>JCI Ecuador</span>
-            <MdOutlineArrowOutward className="w-5 h-5" aria-hidden="true" />
+            <MdOutlineArrowOutward className="h-5 w-5" aria-hidden="true" />
           </a>
         </div>
       </div>
 
       {/* Botón lateral de navegación */}
-      <nav className="absolute left-1/2 z-20 bottom-0 transform -translate-x-1/2 rotate-90">
+      <nav className="absolute bottom-0 left-1/2 z-20 -translate-x-1/2 rotate-90 transform">
         <div className="hidden md:block">
           <Link
             href="/nosotros"
             className="flex items-center"
             aria-label="Ir a la sección Sobre Nosotros"
           >
-            <span className="text-jci-aqua text-[10.5px] font-semibold uppercase">
+            <span className="text-jci-teal text-[10.5px] font-semibold uppercase">
               Sobre Nosotros
             </span>
             <Image
@@ -143,7 +143,7 @@ export default function BienvenidaV1() {
               alt=""
               width={500}
               height={500}
-              className="w-[96px] h-[69px] -rotate-90 object-cover"
+              className="h-[69px] w-[96px] -rotate-90 object-cover"
               aria-hidden="true"
             />
           </Link>

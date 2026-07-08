@@ -182,61 +182,61 @@ export default function Chatbot({ className }: ChatbotProps) {
       {/* Componente de cuenta regresiva */}
       {showLaunchCountdown && <LaunchCountdown onComplete={handleLaunchComplete} />}
 
-      <div className={`fixed bottom-3 right-3 z-[9999] ${className}`}>
+      <div className={`fixed right-3 bottom-3 z-9999 ${className}`}>
         {/* Chat Window */}
         <div
-          className={`absolute bottom-16 right-0 transition-all duration-300 ease-in-out transform ${
+          className={`absolute right-0 bottom-16 transform transition-all duration-300 ease-in-out ${
             isOpen
-              ? "opacity-100 scale-100 translate-y-0"
-              : "opacity-0 scale-95 translate-y-4 pointer-events-none"
+              ? "translate-y-0 scale-100 opacity-100"
+              : "pointer-events-none translate-y-4 scale-95 opacity-0"
           }`}
         >
-          <Card className="w-80 h-96 shadow-2xl border-0 bg-white">
+          <Card className="h-96 w-80 border-0 bg-white shadow-2xl">
             {/* Header */}
-            <div className="flex items-center justify-between p-4 bg-gradient-to-r from-jci-navy to-jci-aqua text-white rounded-t-lg">
+            <div className="from-jci-navy to-jci-teal flex items-center justify-between rounded-t-lg bg-linear-to-r p-4 text-white">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <BsRobot className="w-5 h-5 text-jci-navy" />
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
+                  <BsRobot className="text-jci-navy h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm">Junior Bot</h3>
+                  <h3 className="text-sm font-semibold">Junior Bot</h3>
                   <p className="text-xs opacity-90">En línea</p>
                 </div>
               </div>
               <Button
                 isIconOnly
                 variant="light"
-                className="text-white hover:bg-white/10 transition-all duration-200"
+                className="text-white transition-all duration-200 hover:bg-white/10"
                 onPress={toggleChat}
               >
-                <IoIosClose className="w-6 h-6" />
+                <IoIosClose className="h-6 w-6" />
               </Button>
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-50">
+            <div className="flex-1 space-y-3 overflow-y-auto bg-gray-50 p-4">
               {messages.map((message) => (
                 <div
                   key={message.id}
-                  className={`flex items-start gap-2 animate-in slide-in-from-bottom-2 duration-300 ${
+                  className={`animate-in slide-in-from-bottom-2 flex items-start gap-2 duration-300 ${
                     message.sender === "user" ? "justify-end" : "justify-start"
                   }`}
                 >
                   {message.sender === "bot" && (
-                    <div className="w-6 h-6 bg-jci-aqua rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <BsRobot className="w-3 h-3 text-white" />
+                    <div className="bg-jci-teal mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
+                      <BsRobot className="h-3 w-3 text-white" />
                     </div>
                   )}
                   <div
-                    className={`max-w-[70%] p-3 rounded-lg text-sm transition-all duration-200 ${
+                    className={`max-w-[70%] rounded-lg p-3 text-sm transition-all duration-200 ${
                       message.sender === "user"
-                        ? "bg-jci-navy text-white rounded-br-none"
-                        : "bg-white text-gray-800 rounded-bl-none border"
+                        ? "bg-jci-navy rounded-br-none text-white"
+                        : "rounded-bl-none border bg-white text-gray-800"
                     }`}
                   >
                     <p className="whitespace-pre-wrap">{message.content}</p>
                     <p
-                      className={`text-xs mt-1 opacity-70 ${
+                      className={`mt-1 text-xs opacity-70 ${
                         message.sender === "user" ? "text-gray-200" : "text-gray-500"
                       }`}
                     >
@@ -244,27 +244,27 @@ export default function Chatbot({ className }: ChatbotProps) {
                     </p>
                   </div>
                   {message.sender === "user" && (
-                    <div className="w-6 h-6 bg-jci-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <HiUser className="w-3 h-3 text-white" />
+                    <div className="bg-jci-yellow mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
+                      <HiUser className="h-3 w-3 text-white" />
                     </div>
                   )}
                 </div>
               ))}
 
               {isLoading && (
-                <div className="flex items-start gap-2 animate-in slide-in-from-bottom-2 duration-300">
-                  <div className="w-6 h-6 bg-jci-aqua rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <BsRobot className="w-3 h-3 text-white" />
+                <div className="animate-in slide-in-from-bottom-2 flex items-start gap-2 duration-300">
+                  <div className="bg-jci-teal mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
+                    <BsRobot className="h-3 w-3 text-white" />
                   </div>
-                  <div className="bg-white text-gray-800 rounded-lg rounded-bl-none border p-3 max-w-[70%]">
+                  <div className="max-w-[70%] rounded-lg rounded-bl-none border bg-white p-3 text-gray-800">
                     <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-jci-aqua rounded-full animate-bounce"></div>
+                      <div className="bg-jci-teal h-2 w-2 animate-bounce rounded-full"></div>
                       <div
-                        className="w-2 h-2 bg-jci-aqua rounded-full animate-bounce"
+                        className="bg-jci-teal h-2 w-2 animate-bounce rounded-full"
                         style={{ animationDelay: "0.1s" }}
                       ></div>
                       <div
-                        className="w-2 h-2 bg-jci-aqua rounded-full animate-bounce"
+                        className="bg-jci-teal h-2 w-2 animate-bounce rounded-full"
                         style={{ animationDelay: "0.2s" }}
                       ></div>
                     </div>
@@ -275,25 +275,25 @@ export default function Chatbot({ className }: ChatbotProps) {
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t bg-white rounded-b-lg">
+            <div className="rounded-b-lg border-t bg-white p-4">
               <div className="flex gap-2">
                 <Input
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Escribe tu mensaje..."
-                  className="flex-1 transition-all duration-200 focus:ring-2 focus:ring-jci-aqua"
+                  className="focus:ring-jci-teal flex-1 transition-all duration-200 focus:ring-2"
                   size="sm"
                   disabled={isLoading}
                 />
                 <Button
                   onPress={sendMessage}
                   isIconOnly
-                  className="bg-jci-aqua text-white hover:bg-jci-navy transition-all duration-200 hover:scale-105 active:scale-95"
+                  className="bg-jci-teal hover:bg-jci-navy text-white transition-all duration-200 hover:scale-105 active:scale-95"
                   disabled={isLoading || !inputMessage.trim()}
                   size="sm"
                 >
-                  <IoIosSend className="w-4 h-4" />
+                  <IoIosSend className="h-4 w-4" />
                 </Button>
               </div>
             </div>
@@ -303,15 +303,15 @@ export default function Chatbot({ className }: ChatbotProps) {
         {/* Toggle Button */}
         <Button
           onPress={toggleChat}
-          className={`w-14 h-14 rounded-full bg-gradient-to-r from-jci-navy to-jci-aqua text-white shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-110 active:scale-95 ${
+          className={`from-jci-navy to-jci-teal h-14 w-14 transform rounded-full bg-linear-to-r text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl active:scale-95 ${
             isOpen ? "rotate-45" : "rotate-0"
           }`}
           isIconOnly
         >
           {isOpen ? (
-            <IoIosClose className="w-6 h-6 transition-transform duration-300" />
+            <IoIosClose className="h-6 w-6 transition-transform duration-300" />
           ) : (
-            <IoChatbubbleOutline className="w-6 h-6 transition-transform duration-300" />
+            <IoChatbubbleOutline className="h-6 w-6 transition-transform duration-300" />
           )}
         </Button>
       </div>

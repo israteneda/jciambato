@@ -6,7 +6,7 @@ export default function RotatedText({ text }: RotatedTextProps) {
   return (
     <div className="hidden md:block">
       <span
-        className="absolute top-1/2 left-[27px] text-[#aeaeae] text-[11px] font-semibold z-10 leading-[60px] tracking-[1px] uppercase transform -translate-x-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap select-none"
+        className="absolute top-1/2 left-[27px] z-10 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform text-[11px] leading-[60px] font-semibold tracking-[1px] whitespace-nowrap text-jci-gray uppercase select-none"
         aria-hidden="true"
         role="presentation"
       >

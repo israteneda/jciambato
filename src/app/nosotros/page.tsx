@@ -11,6 +11,9 @@ export const metadata = {
   title: "Sobre Nosotros — Liderazgo y Oportunidades",
   description:
     "Conoce nuestra misión, visión, valores y la historia de JCI Ambato en el desarrollo de líderes juveniles.",
+  alternates: {
+    canonical: "/nosotros",
+  },
 };
 
 export default function NosotrosPage() {
@@ -19,10 +22,10 @@ export default function NosotrosPage() {
       <Bienvenida />
 
       {/* Bloque espaciado */}
-      <div className="h-[640px]" aria-hidden="true"></div>
+      <div className="h-160" aria-hidden="true"></div>
 
       <div
-        className="absolute top-0 w-full h-full bg-gray-50"
+        className="absolute top-0 h-full w-full bg-jci-bg"
         style={{
           transform: "translateY(99.9vh)",
         }}

@@ -1,0 +1,23 @@
+# Ignore build outputs and dependencies
+.next/
+node_modules/
+dist/
+build/
+coverage/
+
+# Lockfiles and env
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+.env
+.env.*
+
+# Generated assets
+public/fonts/*
+public/images/*
+public/icons/*
+public/videos/*
+
+# Editor/project files
+.vscode/
+.DS_Store
