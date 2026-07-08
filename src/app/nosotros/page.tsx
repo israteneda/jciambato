@@ -22,7 +22,7 @@ export default function NosotrosPage() {
       <div className="h-160" aria-hidden="true"></div>
 
       <div
-        className="absolute top-0 h-full w-full bg-white"
+        className="absolute top-0 h-full w-full bg-jci-bg"
         style={{
           transform: "translateY(99.9vh)",
         }}

@@ -11,7 +11,7 @@ export default function Datos() {
         {/* Grid container responsivo */}
         <div className="grid grid-cols-1 grid-rows-3 gap-0 md:grid-cols-3 md:grid-rows-1 lg:grid-cols-4 lg:grid-rows-2">
           {/* Primer Cuadro */}
-          <div className="relative col-span-1 row-span-1 overflow-hidden bg-jci-navy md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-2">
+          <div className="bg-jci-navy relative col-span-1 row-span-1 overflow-hidden md:col-span-1 md:row-span-1 lg:col-span-2 lg:row-span-2">
             {/* Fotografía de Fondo - Solo visible en pantallas grandes */}
             <Image
               src="/images/inicio/base-jci.png"
@@ -82,6 +82,7 @@ export default function Datos() {
                   />
                 </div>
               </div>
+              
             </div>
           </div>
 
@@ -97,7 +98,7 @@ export default function Datos() {
                 </div>
 
                 <div className="mt-2 w-full">
-                  <h5 className="text-left text-lg leading-tight font-semibold tracking-normal text-jci-black not-italic">
+                  <h5 className="text-jci-black text-left text-lg leading-tight font-semibold tracking-normal not-italic">
                     Uno de los capítulos más activos de JCI Ecuador, con impacto local y proyección
                     nacional.
                   </h5>
@@ -135,7 +136,7 @@ export default function Datos() {
                 </div>
 
                 <div className="mt-2 w-full">
-                  <h5 className="text-left text-lg leading-tight font-semibold tracking-normal text-jci-black not-italic">
+                  <h5 className="text-jci-black text-left text-lg leading-tight font-semibold tracking-normal not-italic">
                     Desde Ambato, contribuimos al desarrollo de líderes jóvenes en comunidades de
                     todo el mundo.
                   </h5>

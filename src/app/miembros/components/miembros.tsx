@@ -44,7 +44,7 @@ export default function MiembrosGenerales() {
               <h3 className="text-lg font-bold text-jci-black">
                 {miembro.nombre} {miembro.apellido}
               </h3>
-              <p className="mb-3 text-sm text-jci-navy">{miembro.cargo}</p>
+              <p className="mb-3 text-sm text-jci-black">{miembro.cargo}</p>
 
               {miembro.social && (miembro.social.instagram || miembro.social.linkedin) && (
                 <nav
@@ -56,7 +56,7 @@ export default function MiembrosGenerales() {
                       href={miembro.social.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-jci-navy transition-colors hover:text-jci-teal"
+                      className="text-jci-black transition-colors hover:text-jci-teal"
                       aria-label={`Instagram de ${miembro.nombre}`}
                     >
                       <FaInstagram />
@@ -67,7 +67,7 @@ export default function MiembrosGenerales() {
                       href={miembro.social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-jci-navy transition-colors hover:text-jci-teal"
+                      className="text-jci-black transition-colors hover:text-jci-teal"
                       aria-label={`LinkedIn de ${miembro.nombre}`}
                     >
                       <FaLinkedin />

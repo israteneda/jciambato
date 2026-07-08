@@ -15,7 +15,7 @@ export default function Presentacion() {
                 Liderazgo con historia
               </div>
               <div className="mt-8">
-                <h2 className="text-left text-4xl font-normal md:max-w-[75%] md:text-5xl md:leading-[1.1] lg:text-[65px]">
+                <h2 className="text-left text-4xl font-light md:max-w-[75%] md:text-5xl md:leading-[1.1] lg:text-[65px]">
                   A lo largo de más de 50 años, JCI Ambato ha fomentado el desarrollo de líderes en
                   la ciudad.
                 </h2>

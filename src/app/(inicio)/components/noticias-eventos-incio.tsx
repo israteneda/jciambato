@@ -24,7 +24,7 @@ export default function NoticiasEventos() {
             <div className="flex justify-between">
               <h2
                 id="noticias-heading"
-                className="text-jci-black text-left text-2xl leading-tight font-normal tracking-normal not-italic md:text-3xl"
+                className="text-jci-dark max-w-xs text-left text-3xl leading-[1.33] font-semibold tracking-normal normal-case md:max-w-[60%] lg:max-w-[75%] lg:text-5xl lg:leading-[1.33]"
               >
                 Noticias y Eventos
               </h2>

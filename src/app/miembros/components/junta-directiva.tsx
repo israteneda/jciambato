@@ -11,7 +11,7 @@ export default function Miembros() {
           <h2 id="junta-directiva-heading" className="text-3xl font-bold text-jci-black md:text-5xl">
             Junta Directiva 2026
           </h2>
-          <p className="mt-2 max-w-3xl text-lg text-jci-navy">
+          <p className="mt-2 max-w-3xl text-lg">
             Lidera la JCI local con <strong>visión estratégica</strong> y{" "}
             <strong>profesionalismo</strong>, impulsando iniciativas innovadoras, gestionando
             recursos con excelencia y ejecutando proyectos alineados con la misión y visión de la
@@ -56,7 +56,7 @@ export default function Miembros() {
                     <h3 className="text-jci-black text-xl font-bold">
                       {miembro.nombre} {miembro.apellido}
                     </h3>
-                    <p className="text-md text-jci-navy">{miembro.cargo}</p>
+                    <p className="text-md text-jci-black">{miembro.cargo}</p>
                   </div>
 
                   <div className="flex items-center">
@@ -70,7 +70,7 @@ export default function Miembros() {
                             href={miembro.social.instagram}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-jci-navy transition-colors hover:text-jci-teal"
+                            className="text-jci-black transition-colors hover:text-jci-teal"
                             aria-label={`Instagram de ${miembro.nombre}`}
                           >
                             <FaInstagram />
@@ -82,7 +82,7 @@ export default function Miembros() {
                             href={miembro.social.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-jci-navy transition-colors hover:text-jci-teal"
+                            className="text-jci-black transition-colors hover:text-jci-teal"
                             aria-label={`LinkedIn de ${miembro.nombre}`}
                           >
                             <FaLinkedin />

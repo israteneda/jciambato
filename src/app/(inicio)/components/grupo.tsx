@@ -26,7 +26,7 @@ export default function Grupo() {
                 Trayectoria que Transforma
               </div>
               <div className="mt-5">
-                <h3 className="text-jci-teal max-w-xs text-left text-3xl leading-[1.33] font-normal tracking-normal normal-case md:max-w-[60%] lg:max-w-[75%] lg:text-5xl lg:leading-[1.33]">
+                <h3 className="text-jci-teal max-w-xs text-left text-3xl leading-[1.33] font-semibold tracking-normal normal-case md:max-w-[60%] lg:max-w-[75%] lg:text-5xl lg:leading-[1.33]">
                   Somos la organización de liderazgo más importante del centro del país.
                 </h3>
               </div>
@@ -65,9 +65,9 @@ export default function Grupo() {
               {/* Información de la fotografía, visible en pantallas grandes */}
               <div className="hidden flex-1 shrink grow basis-0 md:block">
                 <div className="absolute -top-24 right-5 origin-left translate-x-full translate-y-[50%] rotate-90 transform">
-                  <div className="relative pl-42.5 text-[11px] leading-none font-medium tracking-[2px] text-jci-gray uppercase">
+                  <div className="text-jci-gray relative pl-42.5 text-[11px] leading-none font-medium tracking-[2px] uppercase">
                     <div
-                      className="absolute top-1.25 left-0 h-px w-40 bg-jci-gray"
+                      className="bg-jci-gray absolute top-1.25 left-0 h-px w-40"
                       aria-hidden="true"
                     ></div>
                     Sesión Solemne por los 50 años de JCI Ambato, 2024
@@ -79,7 +79,7 @@ export default function Grupo() {
               <div className="relative flex-1 shrink grow basis-0 lg:mt-28 lg:mr-20">
                 <div className="flex flex-wrap gap-10">
                   <div className="mt-20">
-                    <div className="text-jci-navy text-6xl leading-none font-light tracking-[-5px] md:text-8xl">
+                    <div className="text-jci-navy text-6xl leading-none tracking-[-5px] md:text-8xl">
                       <span>+50</span>
                     </div>
                     <p className="mt-1 max-w-48 text-left text-base leading-normal tracking-normal uppercase md:text-lg">
@@ -89,7 +89,7 @@ export default function Grupo() {
 
                   <div className="flex w-full flex-col gap-10 md:flex-row">
                     <div className="flex-1">
-                      <div className="text-jci-navy text-6xl leading-none font-light tracking-[-5px] md:text-8xl">
+                      <div className="text-jci-navy text-6xl leading-none tracking-[-5px] md:text-8xl">
                         <span>+200</span>
                       </div>
                       <p className="mt-1 max-w-48 text-left text-base leading-normal tracking-normal uppercase md:text-lg">
@@ -98,7 +98,7 @@ export default function Grupo() {
                     </div>
 
                     <div className="flex-1">
-                      <div className="text-jci-navy text-6xl leading-none font-light tracking-[-5px] md:text-8xl">
+                      <div className="text-jci-navy text-6xl leading-none tracking-[-5px] md:text-8xl">
                         <span>+500</span>
                       </div>
                       <p className="mt-1 max-w-48 text-left text-base leading-normal tracking-normal uppercase md:text-lg">

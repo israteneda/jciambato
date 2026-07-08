@@ -75,7 +75,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const bodyClasses = clsx(
-    "min-h-screen bg-background font-sans antialiased",
+    "min-h-screen font-sans antialiased",
     fontPlusJakarta.variable,
     fontArvo.variable
   );
@@ -102,7 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <div className="relative flex min-h-screen flex-col">
             <Navbar />
-            <main className="grow bg-gray-50">{children}</main>
+            <main className="grow">{children}</main>
             <Footer />
             <ChatbotWrapper />
             <Clarity />

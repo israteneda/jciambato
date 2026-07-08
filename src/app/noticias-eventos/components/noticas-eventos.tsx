@@ -74,8 +74,8 @@ export default function NoticiasEventosPorTipo() {
             </div>
           </div>
 
-          <figure className="mt-auto h-[280px] overflow-hidden bg-white md:h-[350px]">
-            <div className="relative h-full w-full overflow-hidden bg-white">
+          <figure className="mt-auto h-[280px] overflow-hidden md:h-[350px]">
+            <div className="relative h-full w-full overflow-hidden">
               <Image
                 src={noticiaEvento.imagen}
                 alt={`Imagen de ${noticiaEvento.titulo}`}
@@ -195,7 +195,7 @@ export default function NoticiasEventosPorTipo() {
         </div>
       </nav>
 
-      <div className="min-h-96 bg-white pb-9">
+      <div className="min-h-96 bg-jci-bg pb-9">
         <div className="relative z-10 mx-8 max-w-6xl md:mx-20 lg:mx-auto">
           <div className="transition-all duration-300 ease-in-out">
             <div className="min-h-[650px]" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
@@ -204,7 +204,7 @@ export default function NoticiasEventosPorTipo() {
           </div>
         </div>
 
-        <footer className="flex justify-center bg-white py-20">
+        <footer className="flex justify-center bg-jci-bg py-20">
           {(() => {
             let proyectosAMostrar = [];
             if (activeButton === 0) {

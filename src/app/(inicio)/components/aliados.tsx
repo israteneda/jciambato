@@ -5,13 +5,20 @@ export default function Aliados() {
   return (
     <section className="select-none" aria-labelledby="aliados-heading">
       <header className="relative mx-8 md:mx-20 md:w-[calc(100%-180px)] lg:mx-auto">
-        <div className="flex justify-center">
-          <h2
-            id="aliados-heading"
-            className="text-jci-black text-left text-2xl leading-tight font-normal tracking-normal not-italic md:text-[calc(22.4px+0.5vw)]"
-          >
-            Nuestros Aliados
-          </h2>
+        <div
+          id="aliados-heading"
+          className="relative z-10 mx-8 w-full max-w-6xl bg-transparent md:mx-20 lg:mx-auto"
+        >
+          <header className="lg:max-w-5xl">
+            <div className="text-jci-yellow text-sm leading-[1.85] font-bold tracking-normal uppercase">
+              Apoyo que impulsa nuestro impacto
+            </div>
+            <div className="mt-5">
+              <h3 className="text-jci-black max-w-xs text-left text-3xl leading-[1.33] font-semibold tracking-normal normal-case md:max-w-[60%] lg:max-w-[75%] lg:text-5xl lg:leading-[1.33]">
+                Aliados Estratégicos
+              </h3>
+            </div>
+          </header>
         </div>
       </header>
 

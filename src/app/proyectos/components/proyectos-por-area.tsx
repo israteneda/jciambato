@@ -46,8 +46,8 @@ export default function ProyectosPorArea() {
         className="w-full"
         aria-label={`Ver detalles de ${proyecto.nombre}`}
       >
-        <figure className="h-[350px] overflow-hidden bg-gray-200 md:h-[512px]">
-          <div className="relative h-full w-full overflow-hidden bg-white">
+        <figure className="h-[350px] overflow-hidden md:h-[512px]">
+          <div className="relative h-full w-full overflow-hidden">
             <Image
               src={proyecto.imagen}
               alt={`Imagen de ${proyecto.nombre}`}
@@ -121,11 +121,8 @@ export default function ProyectosPorArea() {
 
   return (
     <div>
-      <nav
-        className="box-border bg-gray-50 p-12 lg:mx-20"
-        aria-label="Filtros de proyectos por área"
-      >
-        <div className="text-[13px] leading-[1.85] font-bold text-[#989898] uppercase not-italic">
+      <nav className="box-border bg-white p-12 lg:mx-20" aria-label="Filtros de proyectos por área">
+        <div className="text-jci-gray text-[13px] leading-[1.85] font-bold uppercase not-italic">
           Explora por área de oportunidad
         </div>
         <div
@@ -154,7 +151,7 @@ export default function ProyectosPorArea() {
         </div>
       </nav>
 
-      <div className="bg-white">
+      <div className="bg-jci-bg">
         {/* Contenedor con animación de transición */}
         <div className="transition-all duration-300 ease-in-out">
           <div className="min-h-[650px]" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
@@ -162,7 +159,7 @@ export default function ProyectosPorArea() {
           </div>
         </div>
 
-        <footer className="flex justify-center bg-white py-20">
+        <footer className="flex justify-center py-20">
           {(() => {
             let proyectosAMostrar: Proyecto[] = [];
             if (activeButton === 0) {
@@ -188,7 +185,7 @@ export default function ProyectosPorArea() {
                   aria-label="Ver más proyectos"
                   onPress={() => setCurrentPage(currentPage + 1)}
                 >
-                  <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-jci-black transition-transform duration-300 group-hover:translate-x-0"></span>
+                  <span className="bg-jci-black absolute inset-0 h-full w-full -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0"></span>
                   <span className="relative z-10">Ver más</span>
                 </Button>
               );

@@ -56,7 +56,7 @@ export default function MiembrosNacionales() {
                       href={miembro.social.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-jci-navy transition-colors hover:text-jci-teal"
+                      className="text-jci-black transition-colors hover:text-jci-teal"
                       aria-label={`Instagram de ${miembro.nombre}`}
                     >
                       <FaInstagram />
@@ -67,7 +67,7 @@ export default function MiembrosNacionales() {
                       href={miembro.social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-jci-navy transition-colors hover:text-jci-teal"
+                      className="text-jci-black transition-colors hover:text-jci-teal"
                       aria-label={`LinkedIn de ${miembro.nombre}`}
                     >
                       <FaLinkedin />

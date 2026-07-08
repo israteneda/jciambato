@@ -39,12 +39,12 @@ export function Footer() {
               >
                 <div className="flex flex-col items-start md:flex-row md:items-center">
                   <header>
-                    <span className="line-clamp-1 text-xs tracking-widest text-gray-50 uppercase">
+                    <span className="text-sm leading-[1.85] font-bold tracking-normal text-gray-50 uppercase">
                       Conoce. Suma. Transforma.
                     </span>
                     <h2
                       id="cta-heading"
-                      className="font-base mt-8 max-w-2xl text-3xl tracking-tight text-white md:text-4xl md:leading-[1.33] lg:text-5xl"
+                      className="font-base mt-8 max-w-2xl text-3xl tracking-tight text-white md:text-4xl lg:text-5xl"
                     >
                       Te atreves a <strong>ser el cambio que quieres ver en el mundo?</strong>
                     </h2>
@@ -165,10 +165,7 @@ export function Footer() {
                         rel="noopener noreferrer"
                         aria-label="Síguenos en Instagram"
                       >
-                        <FaInstagram
-                          className="hover:text-jci-teal h-6 w-6"
-                          aria-hidden="true"
-                        />
+                        <FaInstagram className="hover:text-jci-teal h-6 w-6" aria-hidden="true" />
                       </a>
 
                       {/* Botón para volver arriba para pantallas pequeñas y medianas*/}
@@ -193,7 +190,7 @@ export function Footer() {
                 <div className="text-jci-gray flex flex-col justify-between gap-2 lg:flex-row lg:gap-5">
                   <p className="text-default-400 text-xs md:text-sm">
                     © 2026 JCI Ambato. Todos los Derechos Reservados.
-                  </p> 
+                  </p>
 
                   <div>
                     <div className="flex flex-row justify-start gap-5">
