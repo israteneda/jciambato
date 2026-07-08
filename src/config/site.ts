@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 // Utility function to generate absolute URLs for images
 const getImageUrl = (path: string): string => {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jciambato.org";
   return new URL(path, baseUrl).toString();
 };
 
@@ -36,7 +36,7 @@ export const siteConfig = {
   ],
   creator: "JCI Ambato",
   publisher: "JCI Ambato",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jciambato.org"),
   alternates: {
     canonical: "https://www.jciambato.org",
   },

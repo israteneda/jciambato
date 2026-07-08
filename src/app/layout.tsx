@@ -12,7 +12,7 @@ import { OrganizationStructuredData, WebsiteStructuredData } from "@/components/
 import { GoogleTagManager } from "@/components/analytics";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jciambato.org"),
   title: {
     default: "JCI Ambato — Unidos Construyendo un Futuro de Liderazgo",
     template: "%s | JCI Ambato",

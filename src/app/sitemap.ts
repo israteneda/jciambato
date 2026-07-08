@@ -4,7 +4,7 @@ import { getAllNoticiasEventos } from "@/data/noticias";
 import { getAllAreas } from "@/data/areas-oportunidad";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jciambato.org";
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl, changeFrequency: "weekly", priority: 1.0 },

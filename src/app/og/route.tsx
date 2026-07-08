@@ -10,7 +10,7 @@ export async function GET(request: Request) {
   const type = searchParams.get("type");
   const slug = searchParams.get("slug");
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jciambato.org";
 
   let title = "JCI Ambato";
   let subtitle = "";
