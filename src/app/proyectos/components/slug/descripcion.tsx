@@ -53,7 +53,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                       <div className="text-jci-black text-[18px] leading-[1.33] md:w-[30%]">
                         Estado
                       </div>
-                      <div className="text-jci-off-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
+                      <div className="text-jci-black text-medium leading-[1.33] md:w-[70%] md:pl-[20px] md:text-[18px]">
                         {proyecto.estado}
                       </div>
                     </div>

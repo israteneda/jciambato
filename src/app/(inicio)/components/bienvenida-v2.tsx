@@ -3,10 +3,10 @@
 /* import { useScroll } from "@/hooks"; */
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Image from "next/image";
-import { Button } from "@heroui/button";
 import Link from "next/link";
 /* import BorderFrame from "@/components/commons/border-frame"; */
 import RotatedText from "@/components/commons/rotated-text";
+import { Button } from "@/components/ui/button";
 
 export default function BienvenidaV2() {
   /* const isScrolled = useScroll(); */
@@ -43,8 +43,7 @@ export default function BienvenidaV2() {
 
               <div className="mt-9">
                 <Button
-                  radius="none"
-                  className="group bg-jci-teal relative overflow-hidden text-white"
+                  className="relative bg-jci-blue text-white group overflow-hidden"
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/nosotros">

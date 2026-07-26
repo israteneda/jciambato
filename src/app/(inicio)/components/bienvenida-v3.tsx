@@ -4,12 +4,12 @@ import { useScroll } from "@/hooks";
 import { useEffect, useRef, useState } from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Image from "next/image";
-import { Button } from "@heroui/button";
 import Link from "next/link";
 import BorderFrame from "@/components/commons/border-frame";
 import RotatedText from "@/components/commons/rotated-text";
 import gsap from "gsap";
 import { RowScroll } from "@/components/commons";
+import { Button } from "@/components/ui/button";
 
 export default function BienvenidaV3() {
   const isScrolled = useScroll();
@@ -225,8 +225,7 @@ export default function BienvenidaV3() {
 
               <div className="mt-6 lg:mt-8">
                 <Button
-                  radius="none"
-                  className="group bg-jci-blue relative overflow-hidden text-sm text-white"
+                  className="relative bg-jci-blue text-white group overflow-hidden text-sm"
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/nosotros">

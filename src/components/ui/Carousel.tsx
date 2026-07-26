@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@heroui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -12,6 +11,7 @@ import {
 } from "react-icons/hi";
 import { getProyectosDestacados } from "@/data/proyectos/destacados/proyectos-destacados";
 import { Proyecto } from "@/types/proyecto";
+import { Button } from "./button";
 
 interface CarouselProps {
   proyectos?: Proyecto[];
@@ -119,22 +119,18 @@ export const Carousel = ({
 
                       <nav className="flex gap-1 md:hidden" aria-label="Navegación del carrusel">
                         <Button
-                          isIconOnly
-                          variant="bordered"
-                          radius="full"
-                          className="h-[40px] w-[40px] border-[#989898] text-[#989898]"
-                          onPress={prevSlide}
+                          size="icon"
+                          className="w-[40px] h-[40px] text-[#989898] border-[#989898]"
+                          /* onPress={prevSlide} */
                           aria-label="Slide anterior"
                         >
                           <HiChevronLeft className="h-6 w-6 text-gray-50" />
                         </Button>
                         <div className="h-[12px]" />
                         <Button
-                          isIconOnly
-                          variant="bordered"
-                          radius="full"
-                          className="h-[40px] w-[40px] border-[#989898] text-[#989898]"
-                          onPress={nextSlide}
+                          size="icon"
+                          className="w-[40px] h-[40px] text-[#989898] border-[#989898]"
+                          /* onPress={nextSlide} */
                           aria-label="Slide siguiente"
                         >
                           <HiChevronRight className="h-6 w-6 text-gray-50" />
@@ -169,20 +165,16 @@ export const Carousel = ({
         aria-label="Navegación del carrusel"
       >
         <Button
-          isIconOnly
-          variant="bordered"
-          radius="full"
-          onPress={prevSlide}
+          size="icon"
+          /* onPress={prevSlide} */
           aria-label="Slide anterior"
         >
           <HiChevronLeft className="h-6 w-6 text-white" />
         </Button>
         <div className="h-[12px]" />
         <Button
-          isIconOnly
-          variant="bordered"
-          radius="full"
-          onPress={nextSlide}
+          size="icon"          
+          /* onPress={nextSlide} */
           aria-label="Slide siguiente"
         >
           <HiChevronRight className="h-6 w-6 text-white" />
@@ -193,9 +185,8 @@ export const Carousel = ({
       <div className="absolute right-[45px] bottom-[48px] hidden md:block">
         <Link href="/proyectos" aria-label="Ver todos los proyectos">
           <Button
-            isIconOnly
-            radius="full"
-            className="bg-jci-teal hover:bg-jci-navy transition-colors duration-300"
+            size="icon"
+            className="bg-jci-blue hover:bg-[#003D62] transition-colors duration-300"
             aria-label="Ver colección de proyectos"
           >
             <HiOutlineCollection className="h-6 w-6 text-white" />

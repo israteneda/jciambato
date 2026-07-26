@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@heroui/button";
 import BackgroundText from "@/components/commons/background-text";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function Presentacion() {
@@ -24,9 +24,7 @@ export default function Presentacion() {
 
             <div className="mt-16">
               <Button
-                radius="none"
-                variant="bordered"
-                className="group border-jci-navy text-jci-navy relative overflow-hidden"
+                className="relative overflow-hidden border-jci-blue text-jci-blue group"
                 aria-label="Conoce nuestra misión y visión"
               >
                 <Link href="/nosotros">

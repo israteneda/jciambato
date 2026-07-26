@@ -8,9 +8,6 @@ import { Navigation } from "swiper/modules";
 import Image from "next/image";
 import { useState, useRef } from "react";
 
-import "swiper/css";
-import "swiper/css/navigation";
-
 export default function Construccion({ area }: { area: AreaOportunidad }) {
   const [currentSlide, setCurrentSlide] = useState(1);
   const totalSlides = area.images?.length || 0;

@@ -1,16 +1,14 @@
 "use client";
 
 import { getAllNoticiasEventos } from "@/data/noticias";
-import { Button } from "@heroui/button";
 import Image from "next/image";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
-// import "swiper/css";
-// import "swiper/css/navigation";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function NoticiasEventos() {
   const noticiasItems = getAllNoticiasEventos();
@@ -31,9 +29,7 @@ export default function NoticiasEventos() {
 
               <div className="hidden md:block">
                 <Button
-                  radius="none"
-                  variant="bordered"
-                  className="group relative overflow-hidden border-jci-navy text-jci-navy"
+                  className="relative overflow-hidden border-gray-400 text-gray-400 group"
                   aria-label="Ver todas las noticias y eventos"
                 >
                   <Link href="/noticias-eventos">
@@ -165,9 +161,7 @@ export default function NoticiasEventos() {
         <div className="mt-20 block md:hidden">
           <div className="flex items-center justify-center">
             <Button
-              radius="none"
-              variant="bordered"
-              className="border-jci-navy text-jci-navy group relative overflow-hidden"
+              className="relative overflow-hidden border-jci-gray text-jci-gray group"
               aria-label="Ver todas las noticias y eventos"
             >
               <Link href="/noticias-eventos">

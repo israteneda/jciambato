@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import BackgroundText from "@/components/commons/background-text";
-import { Input } from "@heroui/input";
-import { Button } from "@heroui/button";
-import { Switch } from "@heroui/switch";
+import { Switch } from "@/components/ui/switch";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export default function Formulario() {
   const [name, setName] = useState("");
@@ -196,50 +196,66 @@ export default function Formulario() {
                     <fieldset className="space-y-6" disabled={isSubmitting}>
                       <legend className="sr-only">Información personal</legend>
 
-                      <Input
-                        label="Tu Nombre"
-                        variant="underlined"
-                        placeholder="Escribe tu nombre"
-                        value={name}
-                        onValueChange={setName}
-                        classNames={{ label: "text-sm font-semibold text-jci-navy" }}
-                        isRequired
-                        aria-required="true"
-                      />
-                      <Input
-                        label="Tu Email"
-                        variant="underlined"
-                        type="email"
-                        placeholder="Escribe tu email"
-                        value={email}
-                        onValueChange={setEmail}
-                        isInvalid={showError && !isEmailValid}
-                        errorMessage="Por favor, introduce un email válido."
-                        classNames={{ label: "text-sm font-semibold text-jci-navy" }}
-                        isRequired
-                        aria-required="true"
-                      />
-                      <Input
-                        label="Teléfono"
-                        variant="underlined"
-                        type="tel"
-                        placeholder="Escribe tu número de teléfono"
-                        value={phone}
-                        onValueChange={setPhone}
-                        classNames={{ label: "text-sm font-semibold text-jci-navy" }}
-                        isRequired
-                        aria-required="true"
-                      />
-                      <Input
-                        label="Mensaje"
-                        variant="underlined"
-                        placeholder="¿Cómo podemos ayudarte?"
-                        value={message}
-                        onValueChange={setMessage}
-                        classNames={{ label: "text-sm font-semibold text-jci-navy" }}
-                        isRequired
-                        aria-required="true"
-                      />
+                      <div>
+                        <label htmlFor="name" className="text-sm font-semibold text-gray-500">
+                          Tu Nombre
+                        </label>
+                        <Input
+                          id="name"
+                          placeholder="Escribe tu nombre"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                          required
+                          aria-required="true"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="text-sm font-semibold text-gray-500">
+                          Tu Email
+                        </label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="Escribe tu email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          aria-invalid={showError && !isEmailValid ? true : undefined}
+                          required
+                          aria-required="true"
+                        />
+                        {showError && !isEmailValid && (
+                          <p className="text-sm text-red-600 mt-1">
+                            Por favor, introduce un email válido.
+                          </p>
+                        )}
+                      </div>
+                      <div>
+                        <label htmlFor="phone" className="text-sm font-semibold text-gray-500">
+                          Teléfono
+                        </label>
+                        <Input
+                          id="phone"
+                          type="tel"
+                          placeholder="Escribe tu número de teléfono"
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
+                          required
+                          aria-required="true"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="message" className="text-sm font-semibold text-gray-500">
+                          Mensaje
+                        </label>
+                        <Input
+                          id="message"
+                          placeholder="¿Cómo podemos ayudarte?"
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                          required
+                          aria-required="true"
+                        />
+                      </div>
                     </fieldset>
 
                     <fieldset className="space-y-5 pt-6" disabled={isSubmitting}>
@@ -249,8 +265,8 @@ export default function Formulario() {
                         <Switch
                           id="terms"
                           aria-label="Aceptar términos y condiciones"
-                          isSelected={termsAccepted}
-                          onValueChange={setTermsAccepted}
+                          checked={termsAccepted}
+                          onCheckedChange={setTermsAccepted}
                         />
                         <label htmlFor="terms" className="ml-3 text-xs text-jci-navy">
                           He leído y acepto los{" "}
@@ -264,8 +280,8 @@ export default function Formulario() {
                         <Switch
                           id="promo"
                           aria-label="Aceptar mensajes promocionales"
-                          isSelected={promoAccepted}
-                          onValueChange={setPromoAccepted}
+                          checked={promoAccepted}
+                          onCheckedChange={setPromoAccepted}
                         />
                         <label htmlFor="promo" className="ml-3 text-xs text-jci-navy">
                           Acepto el procesamiento de mis datos para recibir mensajes promocionales y

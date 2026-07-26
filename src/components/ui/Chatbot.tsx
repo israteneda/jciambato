@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { Button } from "@heroui/button";
-import { Input } from "@heroui/input";
-import { Card } from "@heroui/card";
 import { IoIosSend, IoIosClose } from "react-icons/io";
 import { IoChatbubbleOutline } from "react-icons/io5";
 import { BsRobot } from "react-icons/bs";
 import { HiUser } from "react-icons/hi";
 import LaunchCountdown from "./LaunchCountdown";
+import { Button } from "./button";
+import { Card } from "./card";
+import { Input } from "./input";
 
 interface Message {
   id: string;
@@ -204,10 +204,9 @@ export default function Chatbot({ className }: ChatbotProps) {
                 </div>
               </div>
               <Button
-                isIconOnly
-                variant="light"
-                className="text-white transition-all duration-200 hover:bg-white/10"
-                onPress={toggleChat}
+                size="icon"
+                className="text-white hover:bg-white/10 transition-all duration-200"
+                /* onPress={toggleChat} */
               >
                 <IoIosClose className="h-6 w-6" />
               </Button>
@@ -279,19 +278,17 @@ export default function Chatbot({ className }: ChatbotProps) {
               <div className="flex gap-2">
                 <Input
                   value={inputMessage}
-                  onChange={(e) => setInputMessage(e.target.value)}
+                  /* onChange={(e) => setInputMessage(e.target.value)} */
                   onKeyDown={handleKeyDown}
                   placeholder="Escribe tu mensaje..."
-                  className="focus:ring-jci-teal flex-1 transition-all duration-200 focus:ring-2"
-                  size="sm"
+                  className="flex-1 transition-all duration-200 focus:ring-2 focus:ring-jci-blue"
                   disabled={isLoading}
                 />
                 <Button
-                  onPress={sendMessage}
-                  isIconOnly
-                  className="bg-jci-teal hover:bg-jci-navy text-white transition-all duration-200 hover:scale-105 active:scale-95"
+                  /* onPress={sendMessage} */
+                  size="icon"
+                  className="bg-jci-blue text-white hover:bg-jci-navy transition-all duration-200 hover:scale-105 active:scale-95"
                   disabled={isLoading || !inputMessage.trim()}
-                  size="sm"
                 >
                   <IoIosSend className="h-4 w-4" />
                 </Button>
@@ -302,11 +299,11 @@ export default function Chatbot({ className }: ChatbotProps) {
 
         {/* Toggle Button */}
         <Button
-          onPress={toggleChat}
-          className={`from-jci-navy to-jci-teal h-14 w-14 transform rounded-full bg-linear-to-r text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl active:scale-95 ${
+          /* onPress={toggleChat} */
+          className={`w-14 h-14 rounded-full bg-gradient-to-r from-jci-navy to-jci-blue text-white shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-110 active:scale-95 ${
             isOpen ? "rotate-45" : "rotate-0"
           }`}
-          isIconOnly
+          size="icon"
         >
           {isOpen ? (
             <IoIosClose className="h-6 w-6 transition-transform duration-300" />

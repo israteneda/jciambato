@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@heroui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -8,6 +7,7 @@ import { getAllAreas } from "@/data/areas-oportunidad";
 import { getAllProyectos, getProyectosPorArea, getConteoProyectosPorArea } from "@/data/proyectos";
 import { Proyecto } from "@/types/proyecto";
 import { getAreaBySlug } from "@/types/enums";
+import { Button } from "@/components/ui/button";
 
 export default function ProyectosPorArea() {
   // Estado para controlar el botón activo (0 = Todos, 1 = Negocios, etc.)
@@ -179,11 +179,10 @@ export default function ProyectosPorArea() {
             if (hayMasProyectos) {
               return (
                 <Button
-                  radius="none"
                   size="lg"
                   className="group bg-jci-teal relative overflow-hidden text-white"
                   aria-label="Ver más proyectos"
-                  onPress={() => setCurrentPage(currentPage + 1)}
+                  /* onPress={() => setCurrentPage(currentPage + 1)} */
                 >
                   <span className="bg-jci-black absolute inset-0 h-full w-full -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0"></span>
                   <span className="relative z-10">Ver más</span>

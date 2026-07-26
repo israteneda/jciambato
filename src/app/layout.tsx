@@ -2,8 +2,9 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import { Providers } from "./providers";
-import { siteConfig } from "@/config/site";
-import { fontArvo, fontPlusJakarta } from "@/config/fonts";
+
+import { MAIN_NAV, siteConfig } from "@/config/site";
+import { fontPlusJakarta, fontArvo } from "@/config/fonts";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import ChatbotWrapper from "@/components/ui/ChatbotWrapper";
@@ -81,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   );
 
   return (
-    <html suppressHydrationWarning lang="es">
+    <html suppressHydrationWarning lang="es" className={fontPlusJakarta.variable}>
       <head>
         <meta name="application-name" content="JCI Ambato" />
         <meta name="apple-mobile-web-app-title" content="JCI Ambato" />
@@ -100,9 +101,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <body className={bodyClasses}>
         <Providers>
-          <div className="relative flex min-h-screen flex-col">
-            <Navbar />
-            <main className="grow">{children}</main>
+          <div className="relative flex flex-col min-h-screen">
+            <Navbar items={MAIN_NAV} socialLinks={siteConfig.links} />
+            <main className="container max-w-full bg-gray-50">{children}</main>
             <Footer />
             <ChatbotWrapper />
             <Clarity />

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@heroui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useEffect } from "react";
 
@@ -43,10 +43,9 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 
                 <div className="mt-8">
                   <Button
-                    radius="none"
-                    className="group bg-jci-teal relative overflow-hidden text-white"
+                    className="relative bg-jci-blue text-white group overflow-hidden"
                     aria-label="Más información sobre nosotros"
-                    onPress={() => reset()}
+                    /* onPress={() => reset()} */
                   >
                     <Link href="/">
                       <span className="bg-jci-black absolute inset-0 h-full w-full -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0"></span>

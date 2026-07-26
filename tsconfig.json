@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -21,7 +25,9 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     },
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -35,7 +41,10 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     ".next/types/**/*.ts",
+    "src/app/nosotros/components/bienvenida.2tsx",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

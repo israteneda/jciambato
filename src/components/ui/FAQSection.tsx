@@ -1,7 +1,7 @@
 "use client";
 
-import { Accordion, AccordionItem } from "@heroui/accordion";
 import { generateFAQSchema } from "@/lib/seo";
+import { Accordion, AccordionItem } from "./accordion";
 
 export interface FAQItem {
   question: string;
@@ -42,15 +42,14 @@ export function FAQSection({
         </div>
 
         {/* Accordion con las preguntas */}
-        <Accordion
-          className="gap-3"
-          itemClasses={{
+        <Accordion className="max-w-lg">
+          {/* {{
             base: "px-6 py-2",
             title: "font-semibold text-gray-800 text-lg",
             trigger: "py-4",
             content: "text-gray-600 pb-6 pt-2",
-          }}
-        >
+          }} */}
+
           {faqs.map((faq, index) => (
             <AccordionItem key={index} aria-label={faq.question} title={faq.question} className="">
               <div className="whitespace-pre-line">{faq.answer}</div>

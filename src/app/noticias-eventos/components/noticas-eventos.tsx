@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@heroui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -11,6 +10,7 @@ import {
 } from "@/data/noticias";
 import { NoticiaEvento } from "@/types/noticia";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { Button } from "@/components/ui/button";
 
 export default function NoticiasEventosPorTipo() {
   // Estado para controlar el botón activo (0 = Todos, 1 = Noticas, 2 = Eventos)
@@ -223,11 +223,10 @@ export default function NoticiasEventosPorTipo() {
             if (hayMasNoticiasEventos) {
               return (
                 <Button
-                  radius="none"
                   size="lg"
                   className="group bg-jci-teal relative overflow-hidden text-white"
                   aria-label="Ver más noticias y eventos"
-                  onPress={() => setCurrentPage(currentPage + 1)}
+                  /* onPress={() => setCurrentPage(currentPage + 1)} */
                 >
                   <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>
                   <span className="relative z-10">Ver más</span>

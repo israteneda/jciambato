@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@heroui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function NotFoundPage() {
@@ -33,8 +33,7 @@ export default function NotFoundPage() {
 
               <div className="mt-8">
                 <Button
-                  radius="none"
-                  className="group bg-jci-teal relative overflow-hidden text-white"
+                  className="relative bg-jci-blue text-white group overflow-hidden"
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/">

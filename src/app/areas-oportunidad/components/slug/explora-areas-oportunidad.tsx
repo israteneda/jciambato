@@ -1,6 +1,6 @@
 import { BackgroundText, RotatedText } from "@/components/commons";
+import { Button } from "@/components/ui/button";
 import { AreaOportunidad } from "@/types/area-oportunidad";
-import { Button } from "@heroui/button";
 import Link from "next/link";
 
 // Función para extraer dos palabras clave del título
@@ -60,8 +60,7 @@ export default function ExploraAreasOportunidad({ area }: { area: AreaOportunida
 
                 <div className="mt-9">
                   <Button
-                    radius="none"
-                    className="group bg-jci-teal relative overflow-hidden text-white"
+                    className="relative bg-jci-blue text-white group overflow-hidden"
                     aria-label="Explora nuestras áreas"
                   >
                     <Link href="/areas-oportunidad">

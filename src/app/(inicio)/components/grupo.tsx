@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@heroui/button";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -47,9 +47,7 @@ export default function Grupo() {
 
                 <div className="mt-12">
                   <Button
-                    radius="none"
-                    variant="bordered"
-                    className="group border-jci-navy text-jci-navy relative overflow-hidden"
+                    className="relative overflow-hidden border-jci-black text-jci-black group"
                     aria-label="Conoce nuestra misión y visión"
                   >
                     <Link href="/nosotros">

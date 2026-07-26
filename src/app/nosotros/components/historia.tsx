@@ -5,10 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Navigation, Mousewheel, FreeMode } from "swiper/modules";
 import { historiaItems } from "@/data/historia";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/free-mode";
 import Image from "next/image";
 
 export default function ActividadesAnuales() {
