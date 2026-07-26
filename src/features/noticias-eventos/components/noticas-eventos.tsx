@@ -7,7 +7,7 @@ import {
   getAllNoticiasEventos,
   getConteoNoticiasEventos,
   getNoticiasEventosPorTipo,
-} from "@/data/noticias";
+} from "@/features/noticias-eventos/data";
 import { NoticiaEvento } from "@/types/noticia";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Button } from "@/components/ui/button";
@@ -47,7 +47,7 @@ export default function NoticiasEventosPorTipo() {
       >
         <div className="group flex h-full w-full flex-col">
           <header className="flex min-h-[120px] flex-col justify-start">
-            <div className="text-[13px] leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
+            <div className="text-jci-gray text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
               <span>{noticiaEvento.tipo}</span>
             </div>
 
@@ -60,7 +60,7 @@ export default function NoticiasEventosPorTipo() {
 
           <div className="mt-6 shrink-0">
             <div className="group relative inline-block max-w-full cursor-pointer transition duration-400">
-              <div className="flex items-center py-4 text-jci-gray">
+              <div className="text-jci-gray flex items-center py-4">
                 <span className="group-hover:text-jci-teal text-xs leading-none font-medium tracking-normal not-italic transition-colors duration-300">
                   Leer más
                 </span>
@@ -145,7 +145,7 @@ export default function NoticiasEventosPorTipo() {
             className="box-border bg-white p-12 lg:mx-20"
             aria-label="Filtros de proyectos por área"
           >
-            <div className="text-[13px] leading-[1.85] font-bold text-jci-gray uppercase not-italic">
+            <div className="text-jci-gray text-[13px] leading-[1.85] font-bold uppercase not-italic">
               Explora por tipo
             </div>
 
@@ -159,7 +159,7 @@ export default function NoticiasEventosPorTipo() {
                 <button
                   key={index}
                   onClick={() => handleCategoryChange(index)}
-                  className={`mr-[42px] p-0 text-left text-2xl leading-tight font-bold transition duration-300 hover:text-jci-navy ${
+                  className={`hover:text-jci-navy mr-[42px] p-0 text-left text-2xl leading-tight font-bold transition duration-300 ${
                     activeButton === index ? "text-jci-black" : "text-jci-navy"
                   }`}
                   role="tab"
@@ -195,7 +195,7 @@ export default function NoticiasEventosPorTipo() {
         </div>
       </nav>
 
-      <div className="min-h-96 bg-jci-bg pb-9">
+      <div className="bg-jci-bg min-h-96 pb-9">
         <div className="relative z-10 mx-8 max-w-6xl md:mx-20 lg:mx-auto">
           <div className="transition-all duration-300 ease-in-out">
             <div className="min-h-[650px]" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
@@ -204,7 +204,7 @@ export default function NoticiasEventosPorTipo() {
           </div>
         </div>
 
-        <footer className="flex justify-center bg-jci-bg py-20">
+        <footer className="bg-jci-bg flex justify-center py-20">
           {(() => {
             let proyectosAMostrar = [];
             if (activeButton === 0) {

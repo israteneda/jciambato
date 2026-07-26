@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getProyectoBySlug } from "@/data/proyectos";
 import { getNoticiaEventoBySlug } from "@/data/noticias";
-import { getAreaBySlug } from "@/data/areas-oportunidad";
+import { getAreaBySlug } from "@/features/home/data/areas-oportunidad";
 
 export const runtime = "edge";
 

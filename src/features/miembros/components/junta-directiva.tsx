@@ -1,4 +1,4 @@
-import { juntaDirectiva } from "@/data/miembros/junta-directiva";
+import { juntaDirectiva } from "@/features/miembros/data/junta-directiva";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 

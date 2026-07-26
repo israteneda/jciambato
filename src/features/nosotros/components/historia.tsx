@@ -4,7 +4,7 @@ import BackgroundText from "@/components/commons/background-text";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Navigation, Mousewheel, FreeMode } from "swiper/modules";
-import { historiaItems } from "@/data/historia";
+import { historiaItems } from "@/features/home/data/historia";
 import Image from "next/image";
 
 export default function ActividadesAnuales() {

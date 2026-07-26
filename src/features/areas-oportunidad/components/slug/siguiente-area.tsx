@@ -1,5 +1,5 @@
 import { RotatedText } from "@/components/commons";
-import { getAllAreas } from "@/data/areas-oportunidad";
+import { getAllAreas } from "@/features/home/data/areas-oportunidad";
 import { AreaOportunidad } from "@/types/area-oportunidad";
 import Image from "next/image";
 import Link from "next/link";

@@ -9,9 +9,9 @@ import {
   HiOutlineCollection,
   HiOutlineArrowNarrowRight,
 } from "react-icons/hi";
-import { getProyectosDestacados } from "@/data/proyectos/destacados/proyectos-destacados";
 import { Proyecto } from "@/types/proyecto";
 import { Button } from "./button";
+import { getProyectosDestacados } from "@/features/proyectos/data/destacados/proyectos-destacados";
 
 interface CarouselProps {
   proyectos?: Proyecto[];
@@ -30,15 +30,11 @@ export const Carousel = ({
   }
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? proyectos.length - 1 : prevIndex - 1,
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? proyectos.length - 1 : prevIndex - 1));
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === proyectos.length - 1 ? 0 : prevIndex + 1,
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === proyectos.length - 1 ? 0 : prevIndex + 1));
   };
 
   useEffect(() => {
@@ -124,7 +120,7 @@ export const Carousel = ({
                       <nav className="flex gap-1 md:hidden" aria-label="Navegación del carrusel">
                         <Button
                           size="icon"
-                          className="w-[40px] h-[40px] text-[#989898] border-[#989898]"
+                          className="h-[40px] w-[40px] border-[#989898] text-[#989898]"
                           onClick={prevSlide}
                           aria-label="Slide anterior"
                         >
@@ -133,7 +129,7 @@ export const Carousel = ({
                         <div className="h-[12px]" />
                         <Button
                           size="icon"
-                          className="w-[40px] h-[40px] text-[#989898] border-[#989898]"
+                          className="h-[40px] w-[40px] border-[#989898] text-[#989898]"
                           onClick={nextSlide}
                           aria-label="Slide siguiente"
                         >
@@ -168,19 +164,11 @@ export const Carousel = ({
         className="absolute right-[45px] bottom-[112px] hidden flex-col md:flex"
         aria-label="Navegación del carrusel"
       >
-        <Button
-          size="icon"
-          onClick={prevSlide}
-          aria-label="Slide anterior"
-        >
+        <Button size="icon" onClick={prevSlide} aria-label="Slide anterior">
           <HiChevronLeft className="h-6 w-6 text-white" />
         </Button>
         <div className="h-[12px]" />
-        <Button
-          size="icon"
-          onClick={nextSlide}
-          aria-label="Slide siguiente"
-        >
+        <Button size="icon" onClick={nextSlide} aria-label="Slide siguiente">
           <HiChevronRight className="h-6 w-6 text-white" />
         </Button>
       </nav>
@@ -190,7 +178,7 @@ export const Carousel = ({
         <Link href="/proyectos" aria-label="Ver todos los proyectos">
           <Button
             size="icon"
-            className="bg-jci-blue hover:bg-[#003D62] transition-colors duration-300"
+            className="bg-jci-blue transition-colors duration-300 hover:bg-[#003D62]"
             aria-label="Ver colección de proyectos"
           >
             <HiOutlineCollection className="h-6 w-6 text-white" />

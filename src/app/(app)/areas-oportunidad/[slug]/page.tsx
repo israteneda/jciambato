@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getAreaBySlug, getAllAreas } from "@/data/areas-oportunidad";
+import { getAreaBySlug, getAllAreas } from "@/features/home/data/areas-oportunidad";
 import {
   Bienvenida,
   Presentacion,
@@ -7,7 +7,7 @@ import {
   ExploraAreasOportunidad,
   SiguienteArea,
   Caracteristicas,
-} from "../components/slug";
+} from "@/features/areas-oportunidad/components/slug";
 
 interface AreaOportunidadPageProps {
   params: Promise<{

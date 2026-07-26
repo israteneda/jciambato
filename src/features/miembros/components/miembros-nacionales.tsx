@@ -1,4 +1,4 @@
-import { miembrosNacionales } from "@/data/miembros/miembros-nacionales";
+import { miembrosNacionales } from "@/features/miembros/data/miembros-nacionales";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 

@@ -1,5 +1,5 @@
-import { proyectosDestacados } from "@/data/proyectos/destacados/proyectos-destacados";
 import { Carousel } from "@/components/ui/Carousel";
+import { proyectosDestacados } from "@/features/proyectos/data/destacados/proyectos-destacados";
 
 export default function ProyectosDestacados() {
   return (

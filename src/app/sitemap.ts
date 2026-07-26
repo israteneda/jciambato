@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { getAllProyectos } from "@/data/proyectos";
 import { getAllNoticiasEventos } from "@/data/noticias";
-import { getAllAreas } from "@/data/areas-oportunidad";
+import { getAllAreas } from "@/features/home/data/areas-oportunidad";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jciambato.org";

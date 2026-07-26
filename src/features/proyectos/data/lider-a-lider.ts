@@ -1,6 +1,6 @@
 import { Proyecto } from "@/types/proyecto";
 import { AreaOportunidadEnum } from "@/types/enums/area-oportunidad.enum";
-import { getMiembroById } from "@/data/miembros/miembros";
+import { getMiembroById } from "@/features/miembros/data/miembros";
 
 export const liderALider: Proyecto = {
   id: "10",

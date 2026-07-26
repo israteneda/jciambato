@@ -11,7 +11,7 @@ import {
 } from "@/features/home/components";
 import Image from "next/image";
 import { FAQSection } from "@/components/ui/FAQSection";
-import { faqsInicio } from "@/data/faqs";
+import { faqsInicio } from "@/features/home/data/faqs";
 
 /**
  * SEO: No necesitamos page-specific JSON-LD aquí.

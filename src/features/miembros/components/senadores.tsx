@@ -1,4 +1,4 @@
-import { senadores } from "@/data/miembros/senadores";
+import { senadores } from "@/features/miembros/data/senadores";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 

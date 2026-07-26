@@ -1,8 +1,8 @@
 import { RotatedText } from "@/components/commons";
-import { getAllProyectos } from "@/data/proyectos";
 import { Proyecto } from "@/types/proyecto";
 import Image from "next/image";
 import Link from "next/link";
+import { getAllProyectos } from "../../data";
 
 export default function SiguienteProyecto({ proyecto }: { proyecto: Proyecto }) {
   // Obtener todos los proyectos y encontrar el siguiente

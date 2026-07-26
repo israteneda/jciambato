@@ -1,4 +1,4 @@
-import { pasadosPresidentes } from "@/data/miembros/pasados-presidentes";
+import { pasadosPresidentes } from "@/features/miembros/data/pasados-presidentes";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { getAllNoticiasEventos } from "@/data/noticias";
+import { getAllNoticiasEventos } from "@/features/noticias-eventos/data";
 import Image from "next/image";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
@@ -29,11 +29,11 @@ export default function NoticiasEventos() {
 
               <div className="hidden md:block">
                 <Button
-                  className="relative overflow-hidden border-gray-400 text-gray-400 group"
+                  className="group relative overflow-hidden border-gray-400 text-gray-400"
                   aria-label="Ver todas las noticias y eventos"
                 >
                   <Link href="/noticias-eventos">
-                    <span className="absolute inset-0 -translate-x-full transform bg-jci-navy transition-transform duration-300 group-hover:translate-x-0" />
+                    <span className="bg-jci-navy absolute inset-0 -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0" />
                     <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
                       Ver más
                     </span>
@@ -124,7 +124,7 @@ export default function NoticiasEventos() {
               <div className="text-jci-gray text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
                 Arrastra para mover
               </div>
-              <div className="relative ml-[32px] h-px w-[60px] overflow-hidden bg-jci-gray/30">
+              <div className="bg-jci-gray/30 relative ml-[32px] h-px w-[60px] overflow-hidden">
                 <span
                   className="animate-loop bg-jci-teal absolute top-0 left-0 h-px w-[60px]"
                   aria-hidden="true"
@@ -161,11 +161,11 @@ export default function NoticiasEventos() {
         <div className="mt-20 block md:hidden">
           <div className="flex items-center justify-center">
             <Button
-              className="relative overflow-hidden border-jci-gray text-jci-gray group"
+              className="border-jci-gray text-jci-gray group relative overflow-hidden"
               aria-label="Ver todas las noticias y eventos"
             >
               <Link href="/noticias-eventos">
-                <span className="absolute inset-0 -translate-x-full transform bg-jci-navy transition-transform duration-300 group-hover:translate-x-0" />
+                <span className="bg-jci-navy absolute inset-0 -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0" />
                 <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
                   Ver más
                 </span>

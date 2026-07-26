@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { jciLinks } from "@/data/footer";
+import { jciLinks } from "@/features/home/data/footer";
 import { siteConfig } from "@/config/seo";
 
 export function Footer() {

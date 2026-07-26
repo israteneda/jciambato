@@ -1,5 +1,5 @@
+import { getMiembroById } from "@/features/miembros/data/miembros";
 import { AreaOportunidad } from "@/types/area-oportunidad";
-import { getMiembroById } from "./miembros/miembros";
 
 export const areasOportunidad: AreaOportunidad[] = [
   {
