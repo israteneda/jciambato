@@ -206,7 +206,7 @@ export default function Chatbot({ className }: ChatbotProps) {
               <Button
                 size="icon"
                 className="text-white hover:bg-white/10 transition-all duration-200"
-                /* onPress={toggleChat} */
+                onClick={toggleChat}
               >
                 <IoIosClose className="h-6 w-6" />
               </Button>
@@ -278,14 +278,14 @@ export default function Chatbot({ className }: ChatbotProps) {
               <div className="flex gap-2">
                 <Input
                   value={inputMessage}
-                  /* onChange={(e) => setInputMessage(e.target.value)} */
+                  onChange={(e) => setInputMessage(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Escribe tu mensaje..."
                   className="flex-1 transition-all duration-200 focus:ring-2 focus:ring-jci-blue"
                   disabled={isLoading}
                 />
                 <Button
-                  /* onPress={sendMessage} */
+                  onClick={sendMessage}
                   size="icon"
                   className="bg-jci-blue text-white hover:bg-jci-navy transition-all duration-200 hover:scale-105 active:scale-95"
                   disabled={isLoading || !inputMessage.trim()}
@@ -299,7 +299,7 @@ export default function Chatbot({ className }: ChatbotProps) {
 
         {/* Toggle Button */}
         <Button
-          /* onPress={toggleChat} */
+          onClick={toggleChat}
           className={`w-14 h-14 rounded-full bg-gradient-to-r from-jci-navy to-jci-blue text-white shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-110 active:scale-95 ${
             isOpen ? "rotate-45" : "rotate-0"
           }`}

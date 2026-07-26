@@ -225,6 +225,8 @@ export default function BienvenidaV3() {
 
               <div className="mt-6 lg:mt-8">
                 <Button
+                size="lg"
+                
                   className="relative bg-jci-blue text-white group overflow-hidden text-sm"
                   aria-label="Más información sobre nosotros"
                 >

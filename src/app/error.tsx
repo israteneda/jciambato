@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useEffect } from "react";
 
-export default function Error({ error, reset }: { error: Error; reset: () => void }) {
+export default function Error({ error }: { error: Error }) {
   useEffect(() => {
     console.error(error);
   }, [error]);
@@ -45,7 +45,6 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
                   <Button
                     className="relative bg-jci-blue text-white group overflow-hidden"
                     aria-label="Más información sobre nosotros"
-                    /* onPress={() => reset()} */
                   >
                     <Link href="/">
                       <span className="bg-jci-black absolute inset-0 h-full w-full -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0"></span>

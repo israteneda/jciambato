@@ -5,7 +5,7 @@ import Link from "next/link";
 import { HiOutlineArrowUp } from "react-icons/hi2";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { jciLinks } from "@/data/footer";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/seo";
 import { useEffect, useState } from "react";
 
 export function Footer() {

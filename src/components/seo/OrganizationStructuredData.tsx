@@ -1,4 +1,4 @@
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/seo";
 
 /**
  * Datos estructurados JSON-LD para Organización

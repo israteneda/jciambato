@@ -226,7 +226,7 @@ export default function NoticiasEventosPorTipo() {
                   size="lg"
                   className="group bg-jci-teal relative overflow-hidden text-white"
                   aria-label="Ver más noticias y eventos"
-                  /* onPress={() => setCurrentPage(currentPage + 1)} */
+                  onClick={() => setCurrentPage(currentPage + 1)}
                 >
                   <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>
                   <span className="relative z-10">Ver más</span>

@@ -3,7 +3,8 @@ import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import { Providers } from "./providers";
 
-import { MAIN_NAV, siteConfig } from "@/config/site";
+import { MAIN_NAV, SOCIAL_LINKS } from "@/config/site";
+import { siteConfig } from "@/config/seo";
 import { fontPlusJakarta, fontArvo } from "@/config/fonts";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
@@ -102,7 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={bodyClasses}>
         <Providers>
           <div className="relative flex flex-col min-h-screen">
-            <Navbar items={MAIN_NAV} socialLinks={siteConfig.links} />
+            <Navbar items={MAIN_NAV} socialLinks={SOCIAL_LINKS} />
             <main className="container max-w-full bg-gray-50">{children}</main>
             <Footer />
             <ChatbotWrapper />

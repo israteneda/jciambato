@@ -29,12 +29,16 @@ export const Carousel = ({
     return null;
   }
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === proyectos.length - 1 ? 0 : prevIndex + 1));
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? proyectos.length - 1 : prevIndex - 1,
+    );
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? proyectos.length - 1 : prevIndex - 1));
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === proyectos.length - 1 ? 0 : prevIndex + 1,
+    );
   };
 
   useEffect(() => {
@@ -121,7 +125,7 @@ export const Carousel = ({
                         <Button
                           size="icon"
                           className="w-[40px] h-[40px] text-[#989898] border-[#989898]"
-                          /* onPress={prevSlide} */
+                          onClick={prevSlide}
                           aria-label="Slide anterior"
                         >
                           <HiChevronLeft className="h-6 w-6 text-gray-50" />
@@ -130,7 +134,7 @@ export const Carousel = ({
                         <Button
                           size="icon"
                           className="w-[40px] h-[40px] text-[#989898] border-[#989898]"
-                          /* onPress={nextSlide} */
+                          onClick={nextSlide}
                           aria-label="Slide siguiente"
                         >
                           <HiChevronRight className="h-6 w-6 text-gray-50" />
@@ -166,15 +170,15 @@ export const Carousel = ({
       >
         <Button
           size="icon"
-          /* onPress={prevSlide} */
+          onClick={prevSlide}
           aria-label="Slide anterior"
         >
           <HiChevronLeft className="h-6 w-6 text-white" />
         </Button>
         <div className="h-[12px]" />
         <Button
-          size="icon"          
-          /* onPress={nextSlide} */
+          size="icon"
+          onClick={nextSlide}
           aria-label="Slide siguiente"
         >
           <HiChevronRight className="h-6 w-6 text-white" />
