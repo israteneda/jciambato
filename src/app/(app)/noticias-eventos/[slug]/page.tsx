@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getNoticiaEventoBySlug, getAllNoticiasEventos } from "@/data/noticias";
-import { Detalles } from "../components/slug";
+import { Detalles } from "@/features/noticias-eventos/components/slug";
 import { generateNewsArticleSchema, generateEventSchema, generateSocialMetadata } from "@/lib/seo";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumbs";
 

@@ -1,5 +1,5 @@
-import Proyectos from "./components/proyectos";
-import Bienvenida from "./components/bienvenida";
+import Proyectos from "@/features/proyectos/components/proyectos";
+import Bienvenida from "@/features/proyectos/components/bienvenida";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

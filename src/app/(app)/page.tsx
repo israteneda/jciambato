@@ -8,7 +8,7 @@ import {
   NoticiasEventos,
   Aliados,
   Bienvenida,
-} from "@/app/(app)/_components";
+} from "@/features/home/components";
 import Image from "next/image";
 import { FAQSection } from "@/components/ui/FAQSection";
 import { faqsInicio } from "@/data/faqs";

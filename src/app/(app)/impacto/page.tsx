@@ -1,4 +1,4 @@
-import { Bienvenida, Presentacion, Valores } from "./components";
+import { Bienvenida, Presentacion, Valores } from "@/features/impacto/components";
 
 export const metadata = {
   title: "Impacto — Conoce que hacemos",

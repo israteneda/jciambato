@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Bienvenida, Acciones, Beneficios, Cursos, Formulario } from "./components";
+import { Bienvenida, Acciones, Beneficios, Cursos, Formulario } from "@/features/involucrate/components";
 
 export const metadata: Metadata = {
   title: "Involúcrate — Únete a JCI Ambato",

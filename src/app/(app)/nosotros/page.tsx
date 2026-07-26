@@ -5,7 +5,7 @@ import {
   Presentacion,
   Valores,
   Opinion,
-} from "./components";
+} from "@/features/nosotros/components";
 
 export const metadata = {
   title: "Sobre Nosotros — Liderazgo y Oportunidades",

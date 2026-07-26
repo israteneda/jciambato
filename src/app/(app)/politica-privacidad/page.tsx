@@ -1,4 +1,4 @@
-import { Bienvenida, PoliticaPrivacidad } from "./components";
+import { Bienvenida, PoliticaPrivacidad } from "@/features/politica-privacidad/components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

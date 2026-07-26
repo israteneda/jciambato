@@ -1,4 +1,4 @@
-import { Bienvenida, PoliticaGestion } from "./components";
+import { Bienvenida, PoliticaGestion } from "@/features/politica-gestion/components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

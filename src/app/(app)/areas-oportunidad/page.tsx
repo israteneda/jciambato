@@ -1,4 +1,4 @@
-import { Bienvenida, AreasOportunidad } from "./components";
+import { Bienvenida, AreasOportunidad } from "@/features/areas-oportunidad/components";
 
 export const metadata = {
   title: "Áreas de Oportunidad — Desarrolla tu Potencial",

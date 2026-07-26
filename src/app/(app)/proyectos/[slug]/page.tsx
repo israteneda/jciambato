@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getProyectoBySlug, getAllProyectos } from "@/data/proyectos";
-import { Presentacion, Descripcion, SiguienteProyecto } from "../components/slug";
+import { Presentacion, Descripcion, SiguienteProyecto } from "@/features/proyectos/components/slug";
 
 interface ProyectosPageProps {
   params: Promise<{
