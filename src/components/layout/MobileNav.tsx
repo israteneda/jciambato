@@ -1,50 +1,32 @@
 "use client";
 
-import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 import type { NavItem } from "@/types/nav";
+import { isActive } from "@/lib/nav";
 import { cn } from "@/lib/utils";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetClose,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
-/* -------------------------------------------------------------------------- */
-/*  Helpers                                                                   */
-/* -------------------------------------------------------------------------- */
-
-function isActive(href: string, pathname: string): boolean {
-  if (href === "/") return pathname === "/";
-  return pathname.startsWith(href);
-}
-
-/* -------------------------------------------------------------------------- */
-/*  MobileNav                                                                 */
-/* -------------------------------------------------------------------------- */
+import { NavItem as NavLink } from "./NavItem";
 
 export function MobileNav({
   items,
   socialLinks,
-  isScrolled,
-  pathname,
 }: {
   items: NavItem[];
   socialLinks: Record<string, string | undefined>;
-  isScrolled: boolean;
-  pathname: string;
 }) {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
         className={cn(
-          "lg:hidden w-12 h-12 p-2 transition-colors duration-200 inline-flex items-center justify-center rounded-md",
-          isScrolled ? "text-jci-black" : "text-white",
+          "inline-flex h-12 w-12 items-center justify-center rounded-md p-2 transition-colors duration-200 lg:hidden",
+          "group-data-[affix=true]:text-jci-black group-data-[affix=false]:text-white"
         )}
         aria-label="Abrir menú de navegación"
         aria-controls="mobile-menu"
@@ -69,16 +51,13 @@ export function MobileNav({
 
       <SheetContent
         side="right"
-        className="w-full sm:w-80 p-0"
+        className="w-full p-0 sm:w-80"
         id="mobile-menu"
         aria-label="Menú de navegación móvil"
       >
-        <div className="flex flex-col h-full">
+        <div className="flex h-full flex-col">
           {/* Navegación */}
-          <nav
-            className="flex-1 overflow-y-auto px-6 pt-8"
-            aria-label="Navegación móvil"
-          >
+          <nav className="flex-1 overflow-y-auto px-6 pt-8" aria-label="Navegación móvil">
             <ul className="flex flex-col gap-6">
               {items.map((item) => {
                 const active = isActive(item.href, pathname);
@@ -87,23 +66,21 @@ export function MobileNav({
                   <li key={item.href}>
                     <SheetClose
                       render={
-                        <Link
+                        <NavLink
                           href={item.href}
+                          active={active}
                           className={cn(
                             "block transition-colors duration-200",
                             active
-                              ? "text-jci-navy font-semibold"
-                              : "text-jci-black hover:text-gray-600",
+                              ? "text-jci-yellow font-semibold"
+                              : "text-jci-black hover:text-gray-600"
                           )}
-                          aria-current={active ? "page" : undefined}
                         />
                       }
                     >
-                      <span className="text-lg font-medium">
-                        {item.label}
-                      </span>
+                      <span className="text-lg font-medium">{item.label}</span>
                       {item.description && (
-                        <p className="text-sm text-gray-600 mt-0.5 leading-relaxed font-normal">
+                        <p className="mt-0.5 text-sm leading-relaxed font-normal text-gray-600">
                           {item.description}
                         </p>
                       )}
@@ -115,17 +92,17 @@ export function MobileNav({
           </nav>
 
           {/* Redes sociales — pie del menú móvil */}
-          <div className="px-6 pt-6 border-t border-gray-200 pb-8">
+          <div className="border-t border-gray-200 px-6 pt-6 pb-8">
             <div className="flex gap-4">
               {socialLinks.facebook && (
                 <a
                   href={socialLinks.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 text-jci-black hover:text-jci-yellow transition-colors"
+                  className="text-jci-black hover:text-jci-yellow h-9 w-9 transition-colors"
                   aria-label="Síguenos en Facebook"
                 >
-                  <FaFacebook className="w-full h-full" aria-hidden="true" />
+                  <FaFacebook className="h-full w-full" aria-hidden="true" />
                 </a>
               )}
               {socialLinks.instagram && (
@@ -133,10 +110,10 @@ export function MobileNav({
                   href={socialLinks.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 text-jci-black hover:text-jci-yellow transition-colors"
+                  className="text-jci-black hover:text-jci-yellow h-9 w-9 transition-colors"
                   aria-label="Síguenos en Instagram"
                 >
-                  <FaInstagram className="w-full h-full" aria-hidden="true" />
+                  <FaInstagram className="h-full w-full" aria-hidden="true" />
                 </a>
               )}
               {socialLinks.linkedin && (
@@ -144,10 +121,10 @@ export function MobileNav({
                   href={socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 text-jci-black hover:text-jci-yellow transition-colors"
+                  className="text-jci-black hover:text-jci-yellow h-9 w-9 transition-colors"
                   aria-label="Síguenos en LinkedIn"
                 >
-                  <FaLinkedin className="w-full h-full" aria-hidden="true" />
+                  <FaLinkedin className="h-full w-full" aria-hidden="true" />
                 </a>
               )}
             </div>

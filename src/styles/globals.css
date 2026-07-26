@@ -163,5 +163,7 @@
     font-weight: 400;
     color: var(--color-jci-black);
     background-color: var(--color-jci-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }

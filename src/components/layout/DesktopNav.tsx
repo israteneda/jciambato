@@ -1,32 +1,15 @@
 "use client";
 
-import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import type { NavItem } from "@/types/nav";
-import { cn } from "@/lib/utils";
+import { isActive } from "@/lib/nav";
 
-/* -------------------------------------------------------------------------- */
-/*  Helpers                                                                   */
-/* -------------------------------------------------------------------------- */
+import { NavItem as NavLink } from "./NavItem";
 
-function isActive(href: string, pathname: string): boolean {
-  if (href === "/") return pathname === "/";
-  return pathname.startsWith(href);
-}
+export function DesktopNav({ items }: { items: NavItem[] }) {
+  const pathname = usePathname();
 
-/* -------------------------------------------------------------------------- */
-/*  DesktopNav                                                                 */
-/* -------------------------------------------------------------------------- */
-
-export function DesktopNav({
-  items,
-  isScrolled,
-  pathname,
-}: {
-  items: NavItem[];
-  isScrolled: boolean;
-  pathname: string;
-}) {
   return (
     <nav className="hidden lg:block" aria-label="Navegación principal">
       <ul className="flex gap-8" role="menubar">
@@ -36,24 +19,17 @@ export function DesktopNav({
 
           const baseColor = isLast
             ? "text-jci-yellow font-semibold hover:text-yellow-400"
-            : isScrolled
-              ? "text-jci-black hover:text-jci-yellow"
-              : "text-white hover:text-jci-yellow";
+            : "group-data-[affix=false]:text-white group-data-[affix=true]:text-jci-black hover:text-jci-yellow";
 
           return (
             <li key={item.href} role="none">
-              <Link
+              <NavLink
                 href={item.href}
-                role="menuitem"
-                aria-current={active ? "page" : undefined}
-                className={cn(
-                  "transition-colors duration-200",
-                  baseColor,
-                  active && "text-jci-yellow",
-                )}
+                active={active}
+                className={`transition-colors duration-200 ${baseColor} ${active ? "text-jci-yellow" : ""}`}
               >
                 {item.label}
-              </Link>
+              </NavLink>
             </li>
           );
         })}

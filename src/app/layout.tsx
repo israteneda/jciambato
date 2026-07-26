@@ -1,16 +1,12 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import clsx from "clsx";
 import { Providers } from "./providers";
 
-import { MAIN_NAV, SOCIAL_LINKS } from "@/config/site";
+import { META_THEME_COLORS } from "@/config/site";
 import { siteConfig } from "@/config/seo";
 import { fontPlusJakarta, fontArvo } from "@/config/fonts";
-import { Footer } from "@/components/layout/Footer";
-import { Navbar } from "@/components/layout/Navbar";
-import ChatbotWrapper from "@/components/ui/ChatbotWrapper";
-import Clarity from "@/components/ui/Clarity";
-import { OrganizationStructuredData, WebsiteStructuredData } from "@/components/seo";
+import { JsonLd } from "@/components/seo";
+import { getOrganizationJsonLd, getWebsiteJsonLd } from "@/config/structured-data";
 import { GoogleTagManager } from "@/components/analytics";
 
 export const metadata: Metadata = {
@@ -64,52 +60,49 @@ export const metadata: Metadata = {
     apple: "/favicon.ico",
   },
   manifest: "/manifest.json",
+  applicationName: "JCI Ambato",
+  appleWebApp: {
+    title: "JCI Ambato",
+  },
   verification: {
     google: "your-google-verification-code",
   },
 };
 
+// Script inline que se ejecuta antes del render para detección de plataforma
+const platformScript = String.raw`
+  try {
+    if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+      document.documentElement.classList.add('os-macos')
+    }
+  } catch (_) {}
+`;
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  viewportFit: "cover",
+  themeColor: META_THEME_COLORS.light,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const bodyClasses = clsx(
-    "min-h-screen font-sans antialiased",
-    fontPlusJakarta.variable,
-    fontArvo.variable
-  );
-
   return (
-    <html suppressHydrationWarning lang="es" className={fontPlusJakarta.variable}>
+    <html lang="es" className={`${fontPlusJakarta.variable} ${fontArvo.variable}`} suppressHydrationWarning>
       <head>
-        <meta name="application-name" content="JCI Ambato" />
-        <meta name="apple-mobile-web-app-title" content="JCI Ambato" />
-
-        {/* Open Graph adicional para Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="JCI Ambato" />
+        {/* Script pre-render: detección de plataforma */}
+        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: platformScript }} />
 
         {/* Datos Estructurados para SEO */}
-        <OrganizationStructuredData />
-        <WebsiteStructuredData />
+        <JsonLd data={getOrganizationJsonLd()} />
+        <JsonLd data={getWebsiteJsonLd()} />
 
-        {/* Google Tag Manager para Analytics */}
+        {/* Google Tag Manager */}
         <GoogleTagManager />
       </head>
 
-      <body className={bodyClasses}>
-        <Providers>
-          <div className="relative flex flex-col min-h-screen">
-            <Navbar items={MAIN_NAV} socialLinks={SOCIAL_LINKS} />
-            <main className="container max-w-full bg-gray-50">{children}</main>
-            <Footer />
-            <ChatbotWrapper />
-            <Clarity />
-          </div>
-        </Providers>
+      <body suppressHydrationWarning>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

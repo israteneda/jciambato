@@ -1,26 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { HiOutlineArrowUp } from "react-icons/hi2";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { jciLinks } from "@/data/footer";
 import { siteConfig } from "@/config/seo";
-import { useEffect, useState } from "react";
 
 export function Footer() {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  const handleScrollToTop = () => {
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
   return (
     <footer
       className="relative z-20 overflow-hidden bg-gray-50 select-none"
@@ -167,19 +151,6 @@ export function Footer() {
                       >
                         <FaInstagram className="hover:text-jci-teal h-6 w-6" aria-hidden="true" />
                       </a>
-
-                      {/* Botón para volver arriba para pantallas pequeñas y medianas*/}
-                      <div className="mt-10 block lg:hidden">
-                        <button
-                          type="button"
-                          aria-label="Volver arriba"
-                          onClick={handleScrollToTop}
-                          className={isClient ? "block" : "hidden"}
-                          suppressHydrationWarning
-                        >
-                          <HiOutlineArrowUp className="h-10 w-10" aria-hidden="true" />
-                        </button>
-                      </div>
                     </div>
                   </aside>
                 </div>
@@ -208,21 +179,6 @@ export function Footer() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Botón para volver arriba, pantallas grandes*/}
-            <div className="absolute top-[45%] right-[5%] hidden md:top-[50%] md:right-[8%] lg:top-[30%] lg:right-[5%] lg:block">
-              <div className="flex items-center justify-center">
-                <button
-                  type="button"
-                  aria-label="Volver arriba"
-                  onClick={handleScrollToTop}
-                  className={isClient ? "block" : "hidden"}
-                  suppressHydrationWarning
-                >
-                  <HiOutlineArrowUp className="h-10 w-10" aria-hidden="true" />
-                </button>
               </div>
             </div>
           </div>

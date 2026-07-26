@@ -1,0 +1,41 @@
+"use client";
+
+import { ArrowUpIcon } from "lucide-react";
+import { useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
+
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+export function ScrollTop() {
+  const { scrollY } = useScroll();
+  const [visible, setVisible] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("down");
+
+  useMotionValueEvent(scrollY, "change", (latestValue) => {
+    setVisible(latestValue >= 400);
+
+    const prev = scrollY.getPrevious() ?? 0;
+    const diff = latestValue - prev;
+    setScrollDirection(diff > 0 ? "down" : "up");
+  });
+
+  return (
+    <Button
+      data-visible={visible}
+      data-scroll-direction={scrollDirection}
+      className={cn(
+        "[--bottom:1rem] lg:[--bottom:2rem]",
+        "fixed right-4 bottom-[calc(var(--bottom,1rem)+env(safe-area-inset-bottom,0px))] z-50 lg:right-8",
+        "shadow-md transition-[background-color,opacity] duration-300",
+        "data-[scroll-direction=down]:opacity-30 data-[scroll-direction=up]:opacity-100 data-[visible=false]:opacity-0",
+      )}
+      variant="secondary"
+      size="icon-lg"
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      aria-label="Volver arriba"
+    >
+      <ArrowUpIcon className="size-5" />
+    </Button>
+  );
+}

@@ -22,6 +22,15 @@ export const SITE_INFO = {
   ],
 };
 
+/**
+ * Meta theme colors para theme-color dinámico.
+ * Se usa en layout.tsx para el script inline y el viewport.
+ */
+export const META_THEME_COLORS = {
+  light: "#ffffff",
+  dark: "#09090b",
+};
+
 export const SOCIAL_LINKS = {
   facebook: "https://www.facebook.com/jciambatoec",
   instagram: "https://www.instagram.com/jciambato",
