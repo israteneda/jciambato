@@ -2,7 +2,7 @@ import { Plus_Jakarta_Sans as PlusJakarta, Arvo } from "next/font/google";
 
 export const fontPlusJakarta = PlusJakarta({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-plus-jakarta",
 });
 

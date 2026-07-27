@@ -52,7 +52,7 @@ export function Footer() {
 
       {/* Sección decorativa */}
       <section className="relative z-20 hidden md:block" aria-hidden="true">
-        <div className="pointer-events-none absolute -top-36.25 right-0 left-0 z-3 text-center leading-70 font-black tracking-normal whitespace-nowrap uppercase not-italic opacity-20 md:text-[125px] lg:text-[235px]">
+        <div className="pointer-events-none absolute -top-36.25 right-0 left-0 z-3 text-center leading-70 font-extrabold tracking-normal whitespace-nowrap uppercase not-italic opacity-20 md:text-[125px] lg:text-[235px]">
           JCI AMBATO
         </div>
       </section>
