@@ -15,7 +15,7 @@ export const feriaDelLibro: Proyecto = {
   },
   fecha: "24 Junio, 2024",
   lugar: "Ambato, Ecuador",
-  imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/feria-libro.webp",
+  imagen: "/images/proyectos/impacto-comunidad/feria-libro.webp",
   logo: "",
   area_oportunidad: AreaOportunidadEnum.IMPACTO_COMUNITARIO,
   url: "/proyectos/feria-del-libro",

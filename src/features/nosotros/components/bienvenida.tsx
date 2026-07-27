@@ -17,7 +17,7 @@ export default function Bienvenida() {
         />
       </div>
 
-      <BackgroundImage image="/images/secciones/nosotros.png" />
+      <BackgroundImage image="/images/inicio/cincuentenario.png" />
 
       {/* Botón de scroll */}
       <RowScroll />

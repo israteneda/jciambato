@@ -12,7 +12,7 @@ export const construyendoCulturaJuntos: Proyecto = {
   fecha: "2 y 9 de marzo, 2025",
   lugar: "Ecuador",
   imagen:
-    "/images/areas_oportunidad/cooperacion-internacional/proyectos/cooperacion-internacional-p1.webp",
+    "/images/proyectos/cooperacion-internacional/cooperacion-internacional-p1.webp",
   logo: "",
   area_oportunidad: AreaOportunidadEnum.COOPERACION_INTERNACIONAL,
   url: "/proyectos/construyendo-cultura-juntos",

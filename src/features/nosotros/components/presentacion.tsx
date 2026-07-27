@@ -69,7 +69,7 @@ export default function Presentacion() {
             <div className="mt-20 lg:mt-40">
               <div className="flex justify-end">
                 <div
-                  className="flex flex-wrap gap-8"
+                  className="flex flex-wrap gap-6"
                   role="list"
                   aria-label="Estadísticas de JCI Ambato"
                 >

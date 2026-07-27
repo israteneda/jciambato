@@ -12,8 +12,8 @@ export const podcastPanDePinllo: Proyecto = {
   subdirector: getMiembroById("ricardo-santamaria")!,
   fecha: "24 Junio, 2024",
   lugar: "Ambato, Ecuador",
-  imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/podcast.png",
-  logo: "/images/areas_oportunidad/impacto-comunidad/proyectos/alpp.png",
+  imagen: "/images/proyectos/impacto-comunidad/podcast.png",
+  logo: "/images/proyectos/impacto-comunidad/alpp.png",
   area_oportunidad: AreaOportunidadEnum.IMPACTO_COMUNITARIO,
   url: "/proyectos/podcast-pan-de-pinllo",
   descripcion:

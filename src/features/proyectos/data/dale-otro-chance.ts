@@ -12,7 +12,7 @@ export const daleOtroChance: Proyecto = {
   lugar: "Ambato, Ecuador",
   director: getMiembroById("erick-calvache")!,
   subdirector: getMiembroById("sebastian-palate")!,
-  imagen: "/images/areas_oportunidad/negocios-emprendimiento/proyectos/dale-otro-chance.webp",
+  imagen: "/images/proyectos/negocios-emprendimiento/dale-otro-chance.webp",
   logo: "",
   area_oportunidad: AreaOportunidadEnum.NEGOCIOS_EMPRENDIMIENTO,
   url: "/proyectos/dale-otro-chance",

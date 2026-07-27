@@ -3,7 +3,7 @@ export const historiaItems = [
     id: 1,
     year: 2025,
     title: "Presencia Ambateña en JCI Ecuador",
-    image: "/images/nosotros/presidenta-nacional.webp",
+    image: "/images/nosotros/historia/presidenta-nacional.webp",
     description: {
       paragraph:
         "María Augusta Gordillo asume la presidencia nacional de JCI Ecuador, marcando un hito al convertirse en la primera ambateña en liderar esta organización a nivel nacional.",
@@ -17,7 +17,7 @@ export const historiaItems = [
     id: 2,
     year: 2024,
     title: "De Ambato para el Mundo",
-    image: "/images/nosotros/ambato-para-el-mundo.webp",
+    image: "/images/nosotros/historia/proyeccion-regional.png",
     description: {
       paragraph:
         "Alex Barreno, miembro de JCI Ambato, obtiene el título de Campeón Mundial de Debate, destacando entre representantes de más de 100 países en una de las competencias más prestigiosas del orbe.",
@@ -31,7 +31,7 @@ export const historiaItems = [
     id: 3,
     year: 2023,
     title: "Pan de Pinllo: El Podcast",
-    image: "/images/nosotros/podcast.png",
+    image: "/images/nosotros/historia/podcast.png",
     description: {
       paragraph:
         "Se lanza el proyecto “Pan de Pinllo: El Podcast”, una innovadora plataforma para promover el pensamiento creativo, la historia local y la expresión juvenil.",
@@ -104,8 +104,7 @@ export const historiaItems = [
     id: 8,
     year: "1973",
     title: "Fundación de JCI Ambato",
-    // TODO: Agregar imagen
-    // image: "/images/nosotros/historia.jpg",
+    image: "/images/nosotros/historia/fundacion.png",
     description: {
       paragraph:
         "JCI Ambato fue fundada en 1973 por un grupo de jóvenes visionarios que creyeron en la acción como motor del cambio. Inspirados por el lema 'Servir a la humanidad es la mejor obra de una vida', impulsaron la creación de una organización comprometida con el desarrollo social.",

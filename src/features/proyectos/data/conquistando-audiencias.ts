@@ -21,7 +21,7 @@ export const conquistandoAudiencias: Proyecto = {
   },
   fecha: "24 Junio, 2024",
   lugar: "Ambato, Ecuador",
-  imagen: "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
+  imagen: "/images/proyectos/desarrollo-individual/desarrollo-individual-p1.webp",
   logo: "",
   area_oportunidad: AreaOportunidadEnum.DESARROLLO_INDIVIDUAL,
   url: "/proyectos/conquistando-audiencias",

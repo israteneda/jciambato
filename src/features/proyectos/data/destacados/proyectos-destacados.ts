@@ -11,7 +11,7 @@ export const proyectosDestacados: Proyecto[] = [
     fecha: "2024-05-15",
     lugar: "Ambato, Ecuador",
     imagen:
-      "/images/areas_oportunidad/desarrollo-individual/proyectos/desarrollo-individual-p1.webp",
+      "/images/proyectos/desarrollo-individual/desarrollo-individual-p1.webp",
     url: "/proyectos/conquistando-audiencias",
     descripcion:
       "Un programa intensivo diseñado para potenciar las habilidades comunicativas de los jóvenes, brindándoles las herramientas necesarias para hablar con confianza y elocuencia en cualquier escenario.",
@@ -30,7 +30,7 @@ export const proyectosDestacados: Proyecto[] = [
     url: "/proyectos/feria-del-libro",
     descripcion:
       "Un evento cultural que fomenta la lectura y el acceso a libros, promoviendo el intercambio de conocimientos y el desarrollo intelectual dentro de la comunidad.",
-    imagen: "/images/areas_oportunidad/impacto-comunidad/proyectos/feria-libro.webp",
+    imagen: "/images/proyectos/impacto-comunidad/feria-libro.webp",
     premio: "Proyecto Más Innovador del Año",
     area_oportunidad: AreaOportunidadEnum.IMPACTO_COMUNITARIO,
     año: "2024",
@@ -47,7 +47,7 @@ export const proyectosDestacados: Proyecto[] = [
     descripcion:
       "Un programa de capacitación y mentoría que impulsa el liderazgo en jóvenes profesionales, fomentando una red de líderes comprometidos con el desarrollo sostenible de la comunidad.",
     imagen:
-      "/images/areas_oportunidad/desarrollo-individual/proyectos/lider-a-lider/lider-a-lider.jpg",
+      "/images/proyectos/desarrollo-individual/lider-a-lider/lider-a-lider.jpg",
     premio: "Excelencia en Liderazgo Joven",
     area_oportunidad: AreaOportunidadEnum.DESARROLLO_INDIVIDUAL,
     año: "2024",
