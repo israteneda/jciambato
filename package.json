@@ -4,7 +4,9 @@
   "version": "0.0.1",
   "description": "JCI Ambato - Official Website",
   "private": true,
+  "packageManager": "pnpm@10.18.2",
   "scripts": {
+    "preinstall": "only-allow pnpm",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
@@ -55,6 +57,7 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-unused-imports": "4.1.4",
+    "only-allow": "^1.2.2",
     "postcss": "^8.5.23",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
