@@ -8,7 +8,7 @@ export default function Opinion() {
       <div className="mx-8 py-36 md:mx-20 md:max-w-7xl md:py-48 lg:mx-auto">
         <div className="relative z-10 max-w-lg">
           <div className="flex flex-col">
-            <div className="text-xs leading-[1.85] font-bold text-jci-gray uppercase">
+            <div className="text-jci-gray text-xs leading-[1.85] font-bold uppercase">
               Emilia Santamaría, Presidenta de JCI Ambato 2026
             </div>
             <div className="mt-10">
@@ -27,10 +27,10 @@ export default function Opinion() {
       <div className="absolute inset-0 bg-black">
         <div className="relative h-full w-full overflow-hidden bg-white">
           <Image
-            alt="Gabriela González, Presidenta de JCI Ambato 2025"
+            alt="Emilia Santamaría, Presidenta de JCI Ambato 2025"
             draggable="false"
             className="absolute inset-0 h-full w-full object-cover"
-            src="/images/secciones/hero-presidenta.png"
+            src="/images/nosotros/hero-presidenta.png"
             width={800}
             height={800}
           />

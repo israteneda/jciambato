@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import BackgroundText from "@/components/background-text";
-import { Switch } from "@/components/ui/switch";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Field, FieldLabel, FieldGroup, FieldError } from "@/components/ui/field";
+import Link from "next/link";
 
 export default function Formulario() {
   const [name, setName] = useState("");
@@ -50,7 +52,6 @@ export default function Formulario() {
 
         if (response.ok) {
           setSubmissionStatus("success");
-          // Limpiar el formulario
           setName("");
           setEmail("");
           setPhone("");
@@ -85,28 +86,28 @@ export default function Formulario() {
         />
       </div>
 
-      <div className="mt-16 md:mt-60 bg-[#e8e8e8]">
+      <div className="mt-16 bg-[#e8e8e8] md:mt-60">
         <div className="">
           <div className="relative z-1 mx-auto max-w-6xl bg-transparent">
             <div className="flex flex-col lg:flex-row">
               <article className="mx-8 box-border min-w-[calc(50%-100px)] flex-1 md:mx-20 md:pr-0 lg:mx-auto">
                 <div className="py-20 md:mb-24 md:py-24">
                   <header>
-                    <div className="text-[13px] leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
+                    <div className="text-jci-gray text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
                       Estamos aquí para ayudarte
                     </div>
 
                     <div className="mt-6">
                       <h2
                         id="formulario-heading"
-                        className="max-w-[370px] text-left text-4xl leading-[1.17] font-bold tracking-normal text-jci-black not-italic lg:text-5xl"
+                        className="text-jci-black max-w-[370px] text-left text-4xl leading-[1.17] font-bold tracking-normal not-italic lg:text-5xl"
                       >
                         Te esperamos con los brazos abiertos
                       </h2>
                     </div>
 
                     <div className="mt-6">
-                      <p className="max-w-[370px] text-left text-[18px] leading-[32px] font-normal tracking-normal text-jci-black not-italic">
+                      <p className="text-jci-black max-w-[370px] text-left text-[18px] leading-[32px] font-normal tracking-normal not-italic">
                         Si deseas contactarnos, por favor completa el formulario o envíanos un
                         correo a{" "}
                         <a
@@ -188,106 +189,108 @@ export default function Formulario() {
                     </div>
                   )}
 
-                  <form
-                    className="space-y-6"
-                    aria-label="Formulario de contacto"
-                    onSubmit={handleSubmit}
-                  >
+                  <form aria-label="Formulario de contacto" onSubmit={handleSubmit}>
                     <fieldset className="space-y-6" disabled={isSubmitting}>
                       <legend className="sr-only">Información personal</legend>
 
-                      <div>
-                        <label htmlFor="name" className="text-sm font-semibold text-gray-500">
-                          Tu Nombre
-                        </label>
-                        <Input
-                          id="name"
-                          placeholder="Escribe tu nombre"
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                          required
-                          aria-required="true"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="email" className="text-sm font-semibold text-gray-500">
-                          Tu Email
-                        </label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="Escribe tu email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          aria-invalid={showError && !isEmailValid ? true : undefined}
-                          required
-                          aria-required="true"
-                        />
-                        {showError && !isEmailValid && (
-                          <p className="text-sm text-red-600 mt-1">
-                            Por favor, introduce un email válido.
-                          </p>
-                        )}
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className="text-sm font-semibold text-gray-500">
-                          Teléfono
-                        </label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          placeholder="Escribe tu número de teléfono"
-                          value={phone}
-                          onChange={(e) => setPhone(e.target.value)}
-                          required
-                          aria-required="true"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="message" className="text-sm font-semibold text-gray-500">
-                          Mensaje
-                        </label>
-                        <Input
-                          id="message"
-                          placeholder="¿Cómo podemos ayudarte?"
-                          value={message}
-                          onChange={(e) => setMessage(e.target.value)}
-                          required
-                          aria-required="true"
-                        />
-                      </div>
+                      <FieldGroup>
+                        <Field data-invalid={showError && !name ? true : undefined}>
+                          <FieldLabel htmlFor="name">Tu Nombre</FieldLabel>
+                          <Input
+                            id="name"
+                            placeholder="Escribe tu nombre"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                            aria-required="true"
+                          />
+                        </Field>
+
+                        <Field data-invalid={showError && !isEmailValid ? true : undefined}>
+                          <FieldLabel htmlFor="email">Tu Email</FieldLabel>
+                          <Input
+                            id="email"
+                            type="email"
+                            placeholder="Escribe tu email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            aria-invalid={showError && !isEmailValid ? true : undefined}
+                            required
+                            aria-required="true"
+                          />
+                          {showError && !isEmailValid && (
+                            <FieldError>Por favor, introduce un email válido.</FieldError>
+                          )}
+                        </Field>
+
+                        <Field>
+                          <FieldLabel htmlFor="phone">Teléfono</FieldLabel>
+                          <Input
+                            id="phone"
+                            type="tel"
+                            placeholder="Escribe tu número de teléfono"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            required
+                            aria-required="true"
+                          />
+                        </Field>
+
+                        <Field data-invalid={showError && !message ? true : undefined}>
+                          <FieldLabel htmlFor="message">Mensaje</FieldLabel>
+                          <Textarea
+                            id="message"
+                            placeholder="¿Cómo podemos ayudarte?"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            className="min-h-[120px]"
+                            required
+                            aria-required="true"
+                          />
+                        </Field>
+                      </FieldGroup>
                     </fieldset>
 
                     <fieldset className="space-y-5 pt-6" disabled={isSubmitting}>
                       <legend className="sr-only">Términos y condiciones</legend>
 
-                      <div className="flex items-start">
-                        <Switch
-                          id="terms"
-                          aria-label="Aceptar términos y condiciones"
-                          checked={termsAccepted}
-                          onCheckedChange={setTermsAccepted}
-                        />
-                        <label htmlFor="terms" className="ml-3 text-xs text-jci-navy">
-                          He leído y acepto los{" "}
-                          <Link href="/politica-privacidad" className="font-semibold underline">
-                            términos y condiciones
-                          </Link>{" "}
-                          de la política de privacidad de JCI Ambato.
-                        </label>
-                      </div>
-                      <div className="flex items-start">
-                        <Switch
-                          id="promo"
-                          aria-label="Aceptar mensajes promocionales"
-                          checked={promoAccepted}
-                          onCheckedChange={setPromoAccepted}
-                        />
-                        <label htmlFor="promo" className="ml-3 text-xs text-jci-navy">
-                          Acepto el procesamiento de mis datos para recibir mensajes promocionales y
-                          propuestas comerciales de JCI Ambato.
-                        </label>
-                      </div>
+                      <FieldGroup data-slot="checkbox-group">
+                        <Field orientation="horizontal">
+                          <Checkbox
+                            id="terms"
+                            aria-label="Aceptar términos y condiciones"
+                            checked={termsAccepted}
+                            onCheckedChange={setTermsAccepted}
+                            className="data-checked:border-jci-teal data-checked:bg-jci-teal data-checked:text-white"
+                          />
+                          <FieldLabel htmlFor="terms" className="text-xs font-normal text-gray-600">
+                            <p>
+                              He leído y acepto los{" "}
+                              <Link
+                                href="/politica-privacidad"
+                                className="font-semibold hover:underline"
+                              >
+                                términos y condiciones
+                              </Link>{" "}
+                              de la política de privacidad de JCI Ambato.
+                            </p>
+                          </FieldLabel>
+                        </Field>
+
+                        <Field orientation="horizontal">
+                          <Checkbox
+                            id="promo"
+                            aria-label="Aceptar mensajes promocionales"
+                            checked={promoAccepted}
+                            onCheckedChange={setPromoAccepted}
+                            className="data-checked:border-jci-teal data-checked:bg-jci-teal data-checked:text-white"
+                          />
+                          <FieldLabel htmlFor="promo" className="text-xs font-normal text-gray-600">
+                            Acepto el procesamiento de mis datos para recibir mensajes promocionales
+                            y propuestas comerciales de JCI Ambato.
+                          </FieldLabel>
+                        </Field>
+                      </FieldGroup>
                     </fieldset>
 
                     <div className="pt-6">
