@@ -26,31 +26,31 @@ export function Navbar() {
           <Image
             src="/images/marca/jci-ambato-bw.webp"
             alt="JCI Ambato"
-            width={90}
-            height={90}
+            fill
             priority
             draggable={false}
             className={cn(
-              "absolute inset-0 size-full object-contain",
+              "object-contain",
               "transition-opacity duration-300",
               "group-data-[affix=false]:opacity-100",
               "group-data-[affix=true]:opacity-0"
             )}
+            sizes="92px"
           />
 
           <Image
             src="/images/marca/jci-ambato.webp"
             alt="JCI Ambato"
-            width={90}
-            height={90}
+            fill
             priority
             draggable={false}
             className={cn(
-              "absolute inset-0 size-full object-contain",
+              "object-contain",
               "transition-opacity duration-300",
               "group-data-[affix=false]:opacity-0",
               "group-data-[affix=true]:opacity-100"
             )}
+            sizes="92px"
           />
         </Link>
 

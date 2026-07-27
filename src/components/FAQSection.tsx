@@ -1,12 +1,13 @@
 "use client";
 
+import type { FAQItem } from "@/features/inicio/types/faq";
 import { generateFAQSchema } from "@/lib/json-ld";
-import { Accordion, AccordionItem } from "@/components/ui/accordion";
-
-export interface FAQItem {
-  question: string;
-  answer: string;
-}
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 interface FAQSectionProps {
   faqs: FAQItem[];
@@ -21,12 +22,11 @@ export function FAQSection({
   subtitle = "Encuentra respuestas a las dudas más comunes sobre JCI Ambato",
   className = "",
 }: FAQSectionProps) {
-  // Generar JSON-LD para SEO
   const faqSchema = generateFAQSchema(faqs);
 
   return (
     <section className={`px-4 py-16 ${className}`}>
-      {/* JSON-LD Schema */}
+      {/* JSON-LD Schema para SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -34,25 +34,25 @@ export function FAQSection({
         }}
       />
 
-      <div className="mx-auto max-w-4xl">
-        {/* Título de la sección */}
+      <div className="mx-auto max-w-3xl">
+        {/* Encabezado de la sección */}
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-4xl font-bold text-gray-900">{title}</h2>
-          {subtitle && <p className="text-lg text-gray-600">{subtitle}</p>}
+          <p className="text-jci-yellow text-sm leading-[1.85] font-bold tracking-normal uppercase">
+            {subtitle}
+          </p>
+          <h2 className="text-jci-black mt-3 text-3xl font-semibold md:text-4xl">{title}</h2>
         </div>
 
-        {/* Accordion con las preguntas */}
-        <Accordion className="max-w-lg">
-          {/* {{
-            base: "px-6 py-2",
-            title: "font-semibold text-gray-800 text-lg",
-            trigger: "py-4",
-            content: "text-gray-600 pb-6 pt-2",
-          }} */}
-
+        {/* Accordion */}
+        <Accordion defaultValue={["item-0"]}>
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} aria-label={faq.question} title={faq.question} className="">
-              <div className="whitespace-pre-line">{faq.answer}</div>
+            <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionTrigger className="text-jci-black text-left text-base font-semibold md:text-lg">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-600 text-base leading-relaxed">
+                <div className="whitespace-pre-line">{faq.answer}</div>
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

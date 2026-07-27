@@ -17,7 +17,7 @@ export default function Acciones() {
             </h2>
           </div>
           <div className="mt-8">
-            <p className="max-w-[666px] text-left text-base font-normal tracking-normal text-jci-black md:text-lg md:leading-[1.78]">
+            <p className="text-jci-black max-w-[666px] text-left text-base font-normal tracking-normal md:text-lg md:leading-[1.78]">
               Únete a la red global de jóvenes que ya está creando soluciones reales. No importa si
               tienes experiencia o recién comienzas: lo que necesitas es voluntad de actuar.
             </p>
@@ -38,44 +38,43 @@ export default function Acciones() {
                 <address className="mt-6 not-italic">
                   <div className="flex flex-col gap-5 md:flex-row">
                     <div className="mr-8">
-                      <h4 className="text-left text-[18px] leading-[1.78] font-bold tracking-normal text-jci-black not-italic">
+                      <h4 className="text-jci-black text-left text-[18px] leading-[1.78] font-bold tracking-normal not-italic">
                         Ambato, Ecuador
                       </h4>
                       <div className="mt-2">
-                        <p className="text-left text-sm leading-[1.78] font-normal tracking-normal text-jci-black not-italic">
+                        <p className="text-jci-black text-left text-sm leading-[1.78] font-normal tracking-normal not-italic">
                           Zona Metropolitana de Ambato
                         </p>
-                        <p className="text-left text-sm leading-[1.78] font-normal tracking-normal text-jci-black not-italic">
+                        <p className="text-jci-black text-left text-sm leading-[1.78] font-normal tracking-normal not-italic">
                           Av. Cevallos y Quito.
                         </p>
                       </div>
                     </div>
 
                     {/* <div className="mr-8">
-                                                <h4 className="text-[18px] font-bold not-italic leading-[1.78] tracking-normal text-[#323232] text-left">
-                                                    Teléfono
-                                                </h4>
-                                                <div className="mt-2">
-                                                    <a
-                                                        href="tel:+593984567890"
-                                                        className="text-sm font-normal not-italic leading-[1.78] tracking-normal text-[#323232] text-left block"
-                                                        aria-label="Llamar al número +593 98 456 7890"
-                                                    >
-                                                        +593 98 456 7890
-                                                    </a>
-                                                    <a
-                                                        href="tel:+593984567890"
-                                                        className="text-sm font-normal not-italic leading-[1.78] tracking-normal text-[#323232] text-left block"
-                                                        aria-label="Llamar al número +593 98 456 7890"
-                                                    >
-                                                        +593 98 456 7890
-                                                    </a>
-
-                                                </div>
-                                            </div> */}
+                      <h4 className="text-left text-[18px] leading-[1.78] font-bold tracking-normal text-[#323232] not-italic">
+                        Teléfono
+                      </h4>
+                      <div className="mt-2">
+                        <a
+                          href="tel:+593984567890"
+                          className="block text-left text-sm leading-[1.78] font-normal tracking-normal text-[#323232] not-italic"
+                          aria-label="Llamar al número +593 98 456 7890"
+                        >
+                          +593 98 456 7890
+                        </a>
+                        <a
+                          href="tel:+593984567890"
+                          className="block text-left text-sm leading-[1.78] font-normal tracking-normal text-[#323232] not-italic"
+                          aria-label="Llamar al número +593 98 456 7890"
+                        >
+                          +593 98 456 7890
+                        </a>
+                      </div>
+                    </div> */}
 
                     <div className="mr-8">
-                      <h4 className="text-left text-[18px] leading-[1.78] font-bold tracking-normal text-jci-black not-italic">
+                      <h4 className="text-jci-black text-left text-[18px] leading-[1.78] font-bold tracking-normal not-italic">
                         Correo
                       </h4>
 

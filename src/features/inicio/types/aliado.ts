@@ -1,6 +1,6 @@
 export type Aliado = {
   id: string;
   titulo: string;
-  tamano: string;
+  url: string;
   imagenUrl: string;
 };

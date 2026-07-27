@@ -85,7 +85,7 @@ export default function Formulario() {
         />
       </div>
 
-      <div className="mt-16 md:mt-60">
+      <div className="mt-16 md:mt-60 bg-[#e8e8e8]">
         <div className="">
           <div className="relative z-1 mx-auto max-w-6xl bg-transparent">
             <div className="flex flex-col lg:flex-row">

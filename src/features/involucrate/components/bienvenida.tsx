@@ -21,7 +21,7 @@ export default function Bienvenida() {
         />
       </header>
 
-      <BackgroundImage image="/images/secciones/involucrate.jpg" />
+      <BackgroundImage image="/images/involucrate/hero-presidenta.jpg" />
 
       <RowScroll />
     </section>

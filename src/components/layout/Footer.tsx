@@ -76,7 +76,7 @@ export function Footer() {
                   <Link href="/" aria-label="Ir a Inicio">
                     <Image
                       alt="JCI Ambato Logo"
-                      className="h-15 w-27.5 object-contain"
+                      className="h-15 w-auto object-contain"
                       src="/images/marca/jci-ambato.webp"
                       width={110}
                       height={50}
