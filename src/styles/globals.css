@@ -14,7 +14,6 @@
   --color-jci-gray: #aeaeae;
   --color-jci-blue: #0097d7;
   --color-jci-black: #130f2d;
-  --color-jci-white: #ffffff;
   --color-jci-navy: #1f4789;
   --color-jci-teal: #57bcbc;
   --color-jci-yellow: #efc40f;
@@ -49,10 +48,13 @@
   --color-border: var(--border);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -158,6 +160,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  ::selection {
+    @apply bg-foreground text-background;
+  }
+
   body {
     font-family: var(--font-sans);
     font-size: 16px;
@@ -166,5 +173,23 @@
     background-color: var(--color-jci-bg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* ─── Scrollbar ──────────── */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 5px;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
   }
 }
