@@ -1,4 +1,4 @@
-import { RotatedText } from "@/components/commons";
+import RotatedText from "@/components/rotated-text";
 import { Proyecto } from "@/types/proyecto";
 import Image from "next/image";
 import Link from "next/link";

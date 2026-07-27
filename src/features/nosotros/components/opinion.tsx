@@ -1,4 +1,4 @@
-import { RotatedText } from "@/components/commons";
+import RotatedText from "@/components/rotated-text";
 import Image from "next/image";
 
 export default function Opinion() {

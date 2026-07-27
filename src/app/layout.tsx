@@ -6,7 +6,7 @@ import { META_THEME_COLORS } from "@/config/site";
 import { siteConfig } from "@/config/seo";
 import { fontPlusJakarta, fontArvo } from "@/config/fonts";
 import { JsonLd } from "@/components/seo";
-import { getOrganizationJsonLd, getWebsiteJsonLd } from "@/config/structured-data";
+import { getOrganizationJsonLd, getWebsiteJsonLd } from "@/lib/json-ld";
 import { GoogleTagManager } from "@/components/analytics";
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "JCI Ambato",
     images: [
       {
-        url: "/images/logos/jci-ambato.webp",
+        url: "/images/marca/jci-ambato.webp",
         width: 1200,
         height: 630,
         alt: "JCI Ambato - Organización de Jóvenes Líderes",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     creator: "@jciambato",
     title: "JCI Ambato — Unidos Construyendo un Futuro de Liderazgo",
     description: siteConfig.description,
-    images: ["/images/logos/jci-ambato.webp"],
+    images: ["/images/marca/jci-ambato.webp"],
   },
   alternates: siteConfig.alternates,
   robots: {

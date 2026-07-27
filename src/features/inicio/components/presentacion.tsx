@@ -1,6 +1,6 @@
 "use client";
 
-import BackgroundText from "@/components/commons/background-text";
+import BackgroundText from "@/components/background-text";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 

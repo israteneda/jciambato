@@ -45,7 +45,7 @@ export const siteConfig = {
       },
       {
         url: new URL(
-          "/images/grupo/sesion-solemne-50-aniversario.webp",
+          "/images/nosotros/sesion-solemne-50-aniversario.webp",
           process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
         ).toString(),
         width: 1200,
@@ -63,7 +63,7 @@ export const siteConfig = {
       "Organización de jóvenes líderes en Ambato, Ecuador, dedicada al voluntariado y desarrollo comunitario.",
     images: [
       new URL(
-        "/images/grupo/sesion-solemne-50-aniversario.webp",
+        "/images/nosotros/sesion-solemne-50-aniversario.webp",
         process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
       ).toString(),
     ],
@@ -100,11 +100,11 @@ export const siteConfig = {
     url: "https://www.jciambato.org",
     logo: {
       "@type": "ImageObject" as const,
-      url: "https://www.jciambato.org/images/logos/jci-ambato.webp",
+      url: "https://www.jciambato.org/images/marca/jci-ambato.webp",
       width: 500,
       height: 500,
     },
-    image: "https://www.jciambato.org/images/logos/jci-ambato.webp",
+    image: "https://www.jciambato.org/images/marca/jci-ambato.webp",
     description:
       "JCI Ambato es una organización de jóvenes líderes dedicada al desarrollo personal, proyectos de impacto social y crecimiento comunitario en Ambato, Ecuador.",
     foundingDate: "1986",

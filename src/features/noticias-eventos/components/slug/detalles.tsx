@@ -1,6 +1,6 @@
 "use client";
-import { RotatedText } from "@/components/commons";
-// import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import RotatedText from "@/components/rotated-text";
+// import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { NoticiaEvento } from "@/types/noticia";
 import { shareOnSocialMedia, getShareContentFromNoticia } from "@/lib/share";
 import Link from "next/link";

@@ -8,10 +8,10 @@ import {
   NoticiasEventos,
   Aliados,
   Bienvenida,
-} from "@/features/home/components";
+} from "@/features/inicio/components";
 import Image from "next/image";
-import { FAQSection } from "@/components/ui/FAQSection";
-import { faqsInicio } from "@/features/home/data/faqs";
+import { FAQSection } from "@/components/FAQSection";
+import { faqsInicio } from "@/features/inicio/data/faqs";
 
 /**
  * SEO: No necesitamos page-specific JSON-LD aquí.
@@ -30,14 +30,14 @@ export default function HomePage() {
       {/* Contenedor para las imágenes posicionadas */}
       <div className="relative">
         <Image
-          src="/images/figura.png"
+          src="/images/marca/figura.png"
           alt="Imagen desde la izquierda"
           className="absolute -left-28 hidden h-96 w-auto -translate-y-full object-cover lg:block"
           width={400}
           height={320}
         />
         <Image
-          src="/images/figura.png"
+          src="/images/marca/figura.png"
           alt="Imagen desde la derecha"
           className="absolute -right-28 hidden h-96 w-auto -translate-y-10 object-cover lg:block"
           width={400}

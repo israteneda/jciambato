@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import BackgroundText from "@/components/commons/background-text";
+import BackgroundText from "@/components/background-text";
 import { Switch } from "@/components/ui/switch";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";

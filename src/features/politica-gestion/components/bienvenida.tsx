@@ -1,5 +1,6 @@
 "use client";
-import { InfoContainer, RowScroll } from "@/components/commons";
+import InfoContainer from "@/components/info-container";
+import RowScroll from "@/components/row-scroll";
 
 export default function Bienvenida() {
   return (

@@ -5,10 +5,10 @@ import { useEffect, useRef, useState } from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
-import BorderFrame from "@/components/commons/border-frame";
-import RotatedText from "@/components/commons/rotated-text";
+import BorderFrame from "@/components/border-frame";
+import RotatedText from "@/components/rotated-text";
 import gsap from "gsap";
-import { RowScroll } from "@/components/commons";
+import RowScroll from "@/components/row-scroll";
 import { Button } from "@/components/ui/button";
 
 export default function Bienvenida() {
@@ -249,7 +249,7 @@ export default function Bienvenida() {
               <Image
                 alt="Liderazgo con Propósito Logo"
                 className="h-full w-full object-contain"
-                src="/images/logos/actuar-proposito.webp"
+                src="/images/marca/actuar-proposito.webp"
                 width={150}
                 height={70}
                 priority
@@ -261,7 +261,7 @@ export default function Bienvenida() {
               <Image
                 alt="Sentir Actuar Transformar Logo"
                 className="h-full w-full object-contain"
-                src="/images/logos/sentir-actuar-transformar.webp"
+                src="/images/marca/sentir-actuar-transformar.webp"
                 width={150}
                 height={70}
                 priority

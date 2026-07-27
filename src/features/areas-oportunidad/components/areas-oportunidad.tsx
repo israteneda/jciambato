@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { areasOportunidad } from "@/features/home/data/areas-oportunidad";
+import { areasOportunidad } from "@/features/inicio/data/areas-oportunidad";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 export default function AreasOportunidad() {

@@ -1,4 +1,4 @@
-import { Carousel } from "@/components/ui/Carousel";
+import { Carousel } from "@/components/Carousel";
 import { proyectosDestacados } from "@/features/proyectos/data/destacados/proyectos-destacados";
 
 export default function ProyectosDestacados() {

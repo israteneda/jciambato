@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AnimatedNumber from "@/components/ui/AnimatedNumber";
+import AnimatedNumber from "@/components/AnimatedNumber";
 
 export default function Presentacion() {
   return (
@@ -132,7 +132,7 @@ export default function Presentacion() {
             {/* Imagen principal */}
             <figure className="max-h-auto relative h-auto w-full overflow-hidden md:w-auto md:flex-1">
               <Image
-                src="/images/grupo/grupo.webp"
+                src="/images/nosotros/grupo.webp"
                 alt="Miembros de JCI Ambato trabajando en equipo"
                 width={1920}
                 height={1080}

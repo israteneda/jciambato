@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { getAllAreas } from "@/features/home/data/areas-oportunidad";
+import { getAllAreas } from "@/features/inicio/data/areas-oportunidad";
 import { Proyecto } from "@/types/proyecto";
 import { getAreaBySlug } from "@/types/enums";
 import { Button } from "@/components/ui/button";

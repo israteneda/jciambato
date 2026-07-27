@@ -1,4 +1,5 @@
-import { BackgroundText, RotatedText } from "@/components/commons";
+import BackgroundText from "@/components/background-text";
+import RotatedText from "@/components/rotated-text";
 import { Button } from "@/components/ui/button";
 import { AreaOportunidad } from "@/types/area-oportunidad";
 import Link from "next/link";

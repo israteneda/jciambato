@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
-import { getProyectoBySlug } from "@/data/proyectos";
-import { getNoticiaEventoBySlug } from "@/data/noticias";
-import { getAreaBySlug } from "@/features/home/data/areas-oportunidad";
+import { getProyectoBySlug } from "@/features/proyectos/data";
+import { getNoticiaEventoBySlug } from "@/features/noticias-eventos/data";
+import { getAreaBySlug } from "@/features/inicio/data/areas-oportunidad";
 
 export const runtime = "edge";
 
@@ -64,7 +64,7 @@ export async function GET(request: Request) {
           }}
         >
           <img
-            src={`${baseUrl}/images/logos/jci-ambato.webp`}
+            src={`${baseUrl}/images/marca/jci-ambato.webp`}
             alt="JCI Ambato"
             width={60}
             height={60}

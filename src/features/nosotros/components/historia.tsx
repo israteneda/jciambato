@@ -1,10 +1,10 @@
 "use client";
 
-import BackgroundText from "@/components/commons/background-text";
+import BackgroundText from "@/components/background-text";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Navigation, Mousewheel, FreeMode } from "swiper/modules";
-import { historiaItems } from "@/features/home/data/historia";
+import { historiaItems } from "@/features/inicio/data/historia";
 import Image from "next/image";
 
 export default function ActividadesAnuales() {

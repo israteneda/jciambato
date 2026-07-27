@@ -1,8 +1,8 @@
 "use client";
-import { RowScroll } from "@/components/commons";
-import BackgroundImage from "@/components/commons/background-image";
-import InfoContainer from "@/components/commons/info-container";
-import RotatedText from "@/components/commons/rotated-text";
+import RowScroll from "@/components/row-scroll";
+import BackgroundImage from "@/components/background-image";
+import InfoContainer from "@/components/info-container";
+import RotatedText from "@/components/rotated-text";
 
 export default function Bienvenida() {
   return (

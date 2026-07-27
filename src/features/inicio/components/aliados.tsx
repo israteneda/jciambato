@@ -1,4 +1,4 @@
-import { aliados } from "@/features/home/data/aliados";
+import { aliados } from "@/features/inicio/data/aliados";
 import Image from "next/image";
 
 export default function Aliados() {

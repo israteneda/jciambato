@@ -1,4 +1,4 @@
-import { toJsonLd } from "@/config/structured-data";
+import { toJsonLd } from "@/lib/json-ld";
 
 /**
  * Componente genérico para inyectar cualquier schema JSON-LD.

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getAreaBySlug, getAllAreas } from "@/features/home/data/areas-oportunidad";
+import { getAreaBySlug, getAllAreas } from "@/features/inicio/data/areas-oportunidad";
 import {
   Bienvenida,
   Presentacion,

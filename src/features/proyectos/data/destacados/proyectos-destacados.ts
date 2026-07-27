@@ -60,7 +60,7 @@ export const proyectosDestacados: Proyecto[] = [
     url: "/proyectos/mejor-presidencia-local-2025",
     descripcion:
       "JCI Ambato fue reconocida como la Mejor Presidencia Local de JCI Ecuador, destacando por su excepcional gestión durante el 2025, bajo el liderazgo de Gabriela González.",
-    imagen: "/images/premios/convencion-nacional-premios.jpg",
+    imagen: "/images/inicio/convencion-nacional-premios.jpg",
     premio: "Mejor Presidencia Local 2025 de JCI Ecuador",
     area_oportunidad: AreaOportunidadEnum.DESARROLLO_INDIVIDUAL,
     año: "2024",

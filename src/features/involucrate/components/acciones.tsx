@@ -93,7 +93,7 @@ export default function Acciones() {
               <div className="mt-10 self-center md:mt-0">
                 {/* Logo con dimensiones reales para optimización de Next.js */}
                 <Image
-                  src="/images/logos/logo-riseup.webp"
+                  src="/images/marca/logo-riseup.webp"
                   alt="Logo RISEUP"
                   width={3899}
                   height={3663}

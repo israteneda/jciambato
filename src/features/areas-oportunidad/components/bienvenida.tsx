@@ -1,5 +1,5 @@
-import InfoContainer from "@/components/commons/info-container";
-import RotatedText from "@/components/commons/rotated-text";
+import InfoContainer from "@/components/info-container";
+import RotatedText from "@/components/rotated-text";
 
 export default function Bienvenida() {
   return (

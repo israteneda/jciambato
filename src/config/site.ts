@@ -7,7 +7,7 @@ import type { NavItem } from "@/types/nav";
 export const SITE_INFO = {
   name: "JCI Ambato",
   url: "https://www.jciambato.org",
-  ogImage: "/images/logos/jci-ambato.webp",
+  ogImage: "/images/marca/jci-ambato.webp",
   description:
     "Únete a JCI Ambato, la red de jóvenes líderes que impulsa proyectos de impacto social, liderazgo y crecimiento personal en Ambato. ¡Sé parte del cambio!",
   keywords: [

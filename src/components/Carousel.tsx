@@ -10,7 +10,7 @@ import {
   HiOutlineArrowNarrowRight,
 } from "react-icons/hi";
 import { Proyecto } from "@/types/proyecto";
-import { Button } from "./button";
+import { Button } from "@/components/ui/button";
 import { getProyectosDestacados } from "@/features/proyectos/data/destacados/proyectos-destacados";
 
 interface CarouselProps {

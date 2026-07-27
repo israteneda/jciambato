@@ -1,9 +1,9 @@
 "use client";
 import { useScroll } from "@/hooks";
 import Image from "next/image";
-import BorderFrame from "@/components/commons/border-frame";
-import InfoContainer from "@/components/commons/info-container";
-import BackgroundImage from "@/components/commons/background-image";
+import BorderFrame from "@/components/border-frame";
+import InfoContainer from "@/components/info-container";
+import BackgroundImage from "@/components/background-image";
 import { AreaOportunidad } from "@/types/area-oportunidad";
 
 export default function Bienvenida({ area }: { area: AreaOportunidad }) {

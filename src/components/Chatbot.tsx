@@ -5,10 +5,10 @@ import { IoIosSend, IoIosClose } from "react-icons/io";
 import { IoChatbubbleOutline } from "react-icons/io5";
 import { BsRobot } from "react-icons/bs";
 import { HiUser } from "react-icons/hi";
-import LaunchCountdown from "./LaunchCountdown";
-import { Button } from "./button";
-import { Card } from "./card";
-import { Input } from "./input";
+import LaunchCountdown from "@/components/LaunchCountdown";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 
 interface Message {
   id: string;

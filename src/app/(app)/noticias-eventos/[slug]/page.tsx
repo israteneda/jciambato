@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { getNoticiaEventoBySlug, getAllNoticiasEventos } from "@/features/noticias-eventos/data";
 import { Detalles } from "@/features/noticias-eventos/components/slug";
-import { generateNewsArticleSchema, generateEventSchema, generateSocialMetadata } from "@/lib/seo";
-import { generateBreadcrumbSchema } from "@/lib/breadcrumbs";
+import { generateNewsArticleSchema, generateEventSchema, generateBreadcrumbSchema } from "@/lib/json-ld";
+import { generateSocialMetadata } from "@/lib/seo";
 
 interface NoticiasEventosPageProps {
   params: Promise<{

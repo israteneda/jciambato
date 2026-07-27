@@ -24,7 +24,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" aria-label="Ir a la página de inicio" className="relative block size-23">
           <Image
-            src="/images/logos/jci-ambato-bw.webp"
+            src="/images/marca/jci-ambato-bw.webp"
             alt="JCI Ambato"
             width={90}
             height={90}
@@ -39,7 +39,7 @@ export function Navbar() {
           />
 
           <Image
-            src="/images/logos/jci-ambato.webp"
+            src="/images/marca/jci-ambato.webp"
             alt="JCI Ambato"
             width={90}
             height={90}

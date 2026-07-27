@@ -1,4 +1,4 @@
-import { valores } from "@/features/home/data/valores";
+import { valores } from "@/features/inicio/data/valores";
 
 export default function Valores() {
   return (

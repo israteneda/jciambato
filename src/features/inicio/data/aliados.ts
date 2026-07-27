@@ -1,4 +1,4 @@
-import { Aliado } from "@/types/aliado";
+import type { Aliado } from "../types/aliado";
 
 export const aliados: Aliado[] = [
   {

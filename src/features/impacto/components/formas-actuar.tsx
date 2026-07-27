@@ -1,4 +1,4 @@
-import { SubContainer } from "@/components/commons";
+import SubContainer from "@/components/sub-container";
 import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 

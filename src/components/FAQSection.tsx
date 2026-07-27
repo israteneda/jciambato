@@ -1,7 +1,7 @@
 "use client";
 
-import { generateFAQSchema } from "@/lib/seo";
-import { Accordion, AccordionItem } from "./accordion";
+import { generateFAQSchema } from "@/lib/json-ld";
+import { Accordion, AccordionItem } from "@/components/ui/accordion";
 
 export interface FAQItem {
   question: string;

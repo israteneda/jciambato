@@ -1,4 +1,4 @@
-import { FAQItem } from "@/components/ui/FAQSection";
+import { FAQItem } from "@/components/FAQSection";
 
 export const faqsInicio: FAQItem[] = [
   {

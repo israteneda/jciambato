@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { jciLinks } from "@/features/home/data/footer";
+import { jciLinks } from "@/features/inicio/data/footer";
 import { siteConfig } from "@/config/seo";
 
 export function Footer() {
@@ -77,7 +77,7 @@ export function Footer() {
                     <Image
                       alt="JCI Ambato Logo"
                       className="h-15 w-27.5 object-contain"
-                      src="/images/logos/jci-ambato.webp"
+                      src="/images/marca/jci-ambato.webp"
                       width={110}
                       height={50}
                     />

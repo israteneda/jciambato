@@ -66,7 +66,7 @@ export default function Datos() {
               <div className="flex h-full w-full items-end justify-end bg-white">
                 <div className="flex items-start gap-4 p-4">
                   <Image
-                    src="/images/logos/jci.webp"
+                    src="/images/marca/jci.webp"
                     alt="Logo JCI"
                     width={90}
                     height={90}
@@ -74,7 +74,7 @@ export default function Datos() {
                   />
 
                   <Image
-                    src="/images/logos/jci-ecuador.webp"
+                    src="/images/marca/jci-ecuador.webp"
                     alt="Logo JCI"
                     width={100}
                     height={100}
