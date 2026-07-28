@@ -197,7 +197,7 @@ Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 
 ### JCI Ambato
 
-- **Email**: tecnologias@jciambato.com
+- **Email**: tecnologia@jciambato.com
 - **Ubicación**: Ambato, Ecuador
 
 ### Redes Sociales

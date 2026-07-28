@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let resend: Resend | null = null;
+
+function getResend(): Resend {
+  if (!resend) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -23,7 +30,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Enviar email de notificación a JCI Ambato
-    await resend.emails.send({
+    await getResend().emails.send({
       from: "tecnologia@jciambato.org",
       to: "ambato@jciecuador.com",
       subject: "Nuevo mensaje de contacto - JCI Ambato",
@@ -60,7 +67,7 @@ export async function POST(request: NextRequest) {
     });
 
     // Enviar email de confirmación al usuario
-    await resend.emails.send({
+    await getResend().emails.send({
       from: "tecnologia@jciambato.org",
       to: email,
       subject: "Gracias por contactarnos - JCI Ambato",
