@@ -33,7 +33,7 @@ export default function NotFoundPage() {
 
               <div className="mt-8">
                 <Button
-                  className="bg-jci-blue group relative overflow-hidden text-white"
+                  className="bg-jci-blue hover:bg-jci-blue group relative overflow-hidden text-white"
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/">
@@ -45,23 +45,6 @@ export default function NotFoundPage() {
             </div>
           </div>
         </div>
-      </div>
-
-      <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-        404 - Página no encontrada
-      </h1>
-      <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-        Lo sentimos, la página que estás buscando no existe o ha sido movida.
-      </p>
-      <div className="mt-10 flex items-center justify-center gap-x-6">
-        <Link href="/">
-          <Button className="bg-primary hover:bg-primary/90 rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm">
-            Volver al inicio
-          </Button>
-        </Link>
-        <Link href="/contacto" className="text-sm leading-6 font-semibold text-gray-900">
-          Contactar soporte <span aria-hidden="true">→</span>
-        </Link>
       </div>
     </div>
   );

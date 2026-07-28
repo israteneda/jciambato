@@ -184,7 +184,7 @@ export default function ProyectosPorArea() {
               return (
                 <Button
                   size="lg"
-                  className="group bg-jci-teal relative overflow-hidden text-white"
+                  className="group bg-jci-teal hover:bg-jci-teal relative overflow-hidden text-white"
                   aria-label="Ver más proyectos"
                   onClick={() => setCurrentPage(currentPage + 1)}
                 >

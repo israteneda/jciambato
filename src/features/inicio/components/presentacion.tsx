@@ -24,7 +24,7 @@ export default function Presentacion() {
 
             <div className="mt-16">
               <Button
-                className="border-jci-blue text-jci-blue group relative overflow-hidden"
+                className="border-jci-blue text-jci-blue group relative overflow-hidden bg-transparent hover:bg-transparent"
                 aria-label="Conoce nuestra misión y visión"
               >
                 <Link href="/nosotros">

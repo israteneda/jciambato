@@ -6,7 +6,7 @@ import RotatedText from "@/components/rotated-text";
 
 export default function Bienvenida() {
   return (
-    <section className="fixed inset-0 box-border h-screen w-full items-center overflow-hidden pb-[80px]">
+    <section className="fixed inset-0 box-border h-screen w-full items-center overflow-hidden pb-20">
       <RotatedText text="Comunidad JCI Ambato" />
 
       <div className="relative w-full pt-48 pb-32">
@@ -18,7 +18,7 @@ export default function Bienvenida() {
       </div>
 
       <BackgroundImage
-        image="/images/secciones/miembros.webp"
+        image="/images/miembros/miembros.webp"
         alt="Imagen de fondo de miembros de JCI Ambato"
       />
 

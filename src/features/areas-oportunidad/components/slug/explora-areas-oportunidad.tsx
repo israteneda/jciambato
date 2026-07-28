@@ -61,7 +61,7 @@ export default function ExploraAreasOportunidad({ area }: { area: AreaOportunida
 
                 <div className="mt-9">
                   <Button
-                    className="bg-jci-blue group relative overflow-hidden text-white"
+                    className="bg-jci-blue hover:bg-jci-blue group relative overflow-hidden text-white"
                     aria-label="Explora nuestras áreas"
                   >
                     <Link href="/areas-oportunidad">

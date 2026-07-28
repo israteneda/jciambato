@@ -29,7 +29,7 @@ export default function NoticiasEventos() {
 
               <div className="hidden md:block">
                 <Button
-                  className="group relative overflow-hidden border-gray-400 text-gray-400"
+                  className="group relative overflow-hidden border-gray-400 bg-transparent text-gray-400 hover:bg-transparent"
                   aria-label="Ver todas las noticias y eventos"
                 >
                   <Link href="/noticias-eventos">
@@ -161,7 +161,7 @@ export default function NoticiasEventos() {
         <div className="mt-20 block md:hidden">
           <div className="flex items-center justify-center">
             <Button
-              className="border-jci-gray text-jci-gray group relative overflow-hidden"
+              className="border-jci-gray text-jci-gray group relative overflow-hidden bg-transparent hover:bg-transparent"
               aria-label="Ver todas las noticias y eventos"
             >
               <Link href="/noticias-eventos">

@@ -43,7 +43,7 @@ export default function Error({ error }: { error: Error }) {
 
                 <div className="mt-8">
                   <Button
-                    className="bg-jci-blue group relative overflow-hidden text-white"
+                    className="bg-jci-blue hover:bg-jci-blue group relative overflow-hidden text-white"
                     aria-label="Más información sobre nosotros"
                   >
                     <Link href="/">

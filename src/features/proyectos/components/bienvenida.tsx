@@ -18,7 +18,7 @@ export default function Bienvenida() {
       </div>
 
       <BackgroundImage
-        image="/images/secciones/proyecto-feria-libro.webp"
+        image="/images/proyectos/proyecto-feria-libro.webp"
         alt="Imagen de fondo de proyectos de JCI Ambato"
       />
 

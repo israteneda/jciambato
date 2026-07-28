@@ -224,7 +224,7 @@ export default function NoticiasEventosPorTipo() {
               return (
                 <Button
                   size="lg"
-                  className="group bg-jci-teal relative overflow-hidden text-white"
+                  className="group bg-jci-teal hover:bg-jci-teal relative overflow-hidden text-white"
                   aria-label="Ver más noticias y eventos"
                   onClick={() => setCurrentPage(currentPage + 1)}
                 >

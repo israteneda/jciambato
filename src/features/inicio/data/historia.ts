@@ -90,7 +90,7 @@ export const historiaItems = [
     id: 7,
     year: "1975 - 1980",
     title: "Primeros Proyectos y Formación de Oradores",
-    image: "/images/nosotros/primeros-proyectos.png",
+    image: "/images/nosotros/historia/primeros-proyectos.png",
     description: {
       paragraph:
         "En sus primeros años, JCI Ambato se enfoca en programas de alfabetización, campañas de salud y formación de oradores, sentando las bases para una cultura de liderazgo participativo.",
