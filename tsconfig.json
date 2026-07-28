@@ -19,9 +19,8 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     },
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -35,7 +34,6 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/nosotros/components/bienvenida.2tsx",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
