@@ -12,45 +12,45 @@ Whether you are designing a presentation, creating event material, or communicat
 
 ## Index
 
-| Chapter | Section | Page |
-| --- | --- | --- |
-| 01 Story | — | 3 |
-| | Brand Story | 4 |
-| | Core Messaging | 5 |
-| 02 Logo | — | 6 |
-| | Primary Logo | 7 |
-| | Meaning | 8 |
-| | Construction | 9 |
-| | Secondary Logo | 10 |
-| | National and Local Organisations | 11 |
-| | National and Local Organisations Layout | 12 |
-| | Shield Icon | 13 |
-| | Clearspace | 14 |
-| | Logo Colourways | 15 |
-| | Logo Variant Colourways | 16 |
-| | Common Mistakes | 17 |
-| 03 Colours | — | 18 |
-| | Primary Brand Colours | 19 |
-| | Secondary Brand Colours | 20 |
-| | Colour Hierarchy | 21 |
-| | Colour Pairings | 22 |
-| 04 Typography | — | 23 |
-| | Primary Typeface | 24 |
-| | Fallback Typeface | 25 |
-| | Non-Latin Typeface | 26 |
-| | Secondary Typeface | 27 |
-| | Type Hierarchy | 28 |
-| 05 Brand in Action | — | 29 |
-| | Logo Placement | 30 |
-| | Ripple | 31 |
-| | Ripple Construction | 32 |
-| | Photography | 33 |
+| Chapter            | Section                                 | Page |
+| ------------------ | --------------------------------------- | ---- |
+| 01 Story           | —                                       | 3    |
+|                    | Brand Story                             | 4    |
+|                    | Core Messaging                          | 5    |
+| 02 Logo            | —                                       | 6    |
+|                    | Primary Logo                            | 7    |
+|                    | Meaning                                 | 8    |
+|                    | Construction                            | 9    |
+|                    | Secondary Logo                          | 10   |
+|                    | National and Local Organisations        | 11   |
+|                    | National and Local Organisations Layout | 12   |
+|                    | Shield Icon                             | 13   |
+|                    | Clearspace                              | 14   |
+|                    | Logo Colourways                         | 15   |
+|                    | Logo Variant Colourways                 | 16   |
+|                    | Common Mistakes                         | 17   |
+| 03 Colours         | —                                       | 18   |
+|                    | Primary Brand Colours                   | 19   |
+|                    | Secondary Brand Colours                 | 20   |
+|                    | Colour Hierarchy                        | 21   |
+|                    | Colour Pairings                         | 22   |
+| 04 Typography      | —                                       | 23   |
+|                    | Primary Typeface                        | 24   |
+|                    | Fallback Typeface                       | 25   |
+|                    | Non-Latin Typeface                      | 26   |
+|                    | Secondary Typeface                      | 27   |
+|                    | Type Hierarchy                          | 28   |
+| 05 Brand in Action | —                                       | 29   |
+|                    | Logo Placement                          | 30   |
+|                    | Ripple                                  | 31   |
+|                    | Ripple Construction                     | 32   |
+|                    | Photography                             | 33   |
 
 ---
 
-# 01 Story *(p. 3)*
+# 01 Story _(p. 3)_
 
-## Brand Story *(p. 4)*
+## Brand Story _(p. 4)_
 
 Our brand story captures the purpose, spirit, and ambition behind JCI. It defines why we exist, what drives us, and what unites our global community. This narrative is the foundation for how we communicate, guiding the tone, emotion, and messaging across our communications.
 
@@ -64,7 +64,7 @@ The full brand story is outlined below and serves as a reference for shaping cle
 >
 > **Become the Change.**
 
-## Core Messages *(p. 5)*
+## Core Messages _(p. 5)_
 
 These core messages form the foundation for our internal and external communications. They highlight the essential ideas we want every audience to understand about JCI and translate our brand story into clear, actionable statements that can be used consistently across communications.
 
@@ -76,15 +76,15 @@ These messages are not scripts, but jumping-off points. They can be adapted to s
 
 ---
 
-# 02 Logo *(p. 6)*
+# 02 Logo _(p. 6)_
 
-## Primary Logo *(p. 7)*
+## Primary Logo _(p. 7)_
 
 The primary logo is the main visual identifier of our brand and should be used in the majority of applications. It consists of a shield icon paired with our JCI wordmark. The logo is marked with the ™ (trademark) symbol.
 
 Consistent use of the primary logo reinforces familiarity, strengthens brand recognition, and ensures a unified identity across all touchpoints.
 
-## Meaning *(p. 8)*
+## Meaning _(p. 8)_
 
 The logo brings together several symbolic elements that reflect the heritage, mission, and global scope of JCI.
 
@@ -93,13 +93,13 @@ The logo brings together several symbolic elements that reflect the heritage, mi
 - **Acronym (J / C / I):** Embedded subtly within the shield are the letters J, C, and I, making the icon distinctly ownable. They create recognition even when the icon is used on its own.
 - **4 elements — 4 regions & 4 areas of opportunity:** The shield is composed of four elements, symbolising our structural pillars. They echo the four global regions, as well as our four areas of opportunity.
 
-## Construction *(p. 9)*
+## Construction _(p. 9)_
 
 The shield icon is constructed from three sets of concentric circles, carefully aligned to form a symmetrical and visually balanced shape. This geometric foundation ensures that the logo feels consistent, proportionate, and well-balanced at any scale.
 
 Understanding the construction reinforces why the logo should never be altered or distorted. Each element is deliberately designed to maintain visual harmony and brand recognition.
 
-## Secondary Logo *(p. 10)*
+## Secondary Logo _(p. 10)_
 
 The secondary logo includes the full name **Junior Chamber International** alongside the primary lock-up.
 
@@ -107,7 +107,7 @@ This version is primarily intended for official and administrative materials, su
 
 Whenever the full name is not required for context or formality, the primary logo should remain the default choice.
 
-## National and Local Organisations *(p. 11)*
+## National and Local Organisations _(p. 11)_
 
 National and local organisations use the primary logo as the foundation of their identity, with the official location name added below. This ensures a consistent visual connection to the global JCI brand while allowing each organisation to represent its own community.
 
@@ -119,9 +119,9 @@ All rules governing the primary logo, including colour usage, clearspace, and mi
 
 Logos can be easily created with the official JCI logo generator: [jci.cc/logo-generator](https://jci.cc/logo-generator/)
 
-*Example location-name lockups shown in the guideline: República Dominicana, Côte d'Ivoire, Aklan, Flughafenregion Zürich, Kalantiao.*
+_Example location-name lockups shown in the guideline: República Dominicana, Côte d'Ivoire, Aklan, Flughafenregion Zürich, Kalantiao._
 
-## National and Local Organisations Layout *(p. 12)*
+## National and Local Organisations Layout _(p. 12)_
 
 1. **Scale** — Using a version of the primary logo that is 570 pixels wide as a baseline, the text size of the location name is measured at 60 points. The location name always scales in equal proportion to the rest of the logo.
 2. **Text style** — The location name is shown in Plus Jakarta Sans Bold, in proper case with only the first letter of each word capitalised. The default colour is always JCI Blue; rare exceptions are outlined later in these brand guidelines.
@@ -131,15 +131,15 @@ Logos can be easily created with the official JCI logo generator: [jci.cc/logo-g
 
 **Specification:** Typeface: Plus Jakarta Sans | Weight: Bold | Size: 60pt | Leading: 110% | Tracking: 0
 
-*The diagram illustrates these rules using a sample lockup for "República Dominicana" with a logo width of 570px, annotated with callouts 1–5 corresponding to the points above.*
+_The diagram illustrates these rules using a sample lockup for "República Dominicana" with a logo width of 570px, annotated with callouts 1–5 corresponding to the points above._
 
-## Shield Icon *(p. 13)*
+## Shield Icon _(p. 13)_
 
 The shield icon can be used on its own, without the wordmark, in rare circumstances where limited space makes the full logo impractical. This includes applications such as social media profile images, favicons, or small-scale merchandise.
 
 Wherever possible, the full logo should remain the primary representation of JCI. The icon is reserved for moments when legibility takes priority.
 
-## Clearspace *(p. 14)*
+## Clearspace _(p. 14)_
 
 To maintain legibility and visual impact, the logo must always be surrounded by sufficient clearspace. This space ensures the logo is not crowded or compromised by other graphic elements, text, or edges.
 
@@ -149,7 +149,7 @@ To preserve legibility, the logo should never be reproduced smaller than 5 mm in
 
 **Minimum size:** 5 mm (print) / 32 px (digital)
 
-## Logo Colourways *(p. 15)*
+## Logo Colourways _(p. 15)_
 
 To ensure our logo remains clear, legible, and recognisable across all possible situations, it is available in four colour variations: default, inverted, black, and white.
 
@@ -170,7 +170,7 @@ Example applications shown in the guideline:
 5. White version on dark photography
 6. Black version on light photography
 
-## Logo Variant Colourways *(p. 16)*
+## Logo Variant Colourways _(p. 16)_
 
 The different logo variations follow the same colour guidelines as the primary logo.
 
@@ -178,9 +178,9 @@ For the secondary logo, the colour of the full "Junior Chamber International" na
 
 For national and local logo variants, JCI Blue is the preferred option for the location name for both the default and inverted colourways. When the situation asks for a single-colour version, change the location name accordingly.
 
-*Example shown: the "Côte d'Ivoire" national logo lockup with "Junior Chamber International" in matching colourways.*
+_Example shown: the "Côte d'Ivoire" national logo lockup with "Junior Chamber International" in matching colourways._
 
-## Common Mistakes *(p. 17)*
+## Common Mistakes _(p. 17)_
 
 To protect the integrity of our brand, the logo must always be used as provided without any alterations.
 
@@ -200,9 +200,9 @@ The following examples illustrate common mistakes that must be avoided:
 
 ---
 
-# 03 Colours *(p. 18)*
+# 03 Colours _(p. 18)_
 
-## Primary Brand Colours *(p. 19)*
+## Primary Brand Colours _(p. 19)_
 
 The primary colour palette includes JCI Blue, Black, and White. Together, they form a clean and easily adaptable base that ensures contrast and readability.
 
@@ -210,15 +210,15 @@ JCI Blue is the main colour for our brand. It should be used prominently to stre
 
 Black and white provide calm and contrast. Used as background or text colours, they create space to allow JCI Blue to stand out.
 
-| Colour | HEX | RGB | CMYK | PMS |
-| --- | --- | --- | --- | --- |
-| JCI Blue | #0097D7 | 0 / 151 / 215 | 77 / 27 / 0 / 0 | 2925 C |
-| JCI Black | #130F2D | 19 / 15 / 45 | 100 / 98 / 47 / 66 | 5395 C |
-| JCI White | #FFFFFF | 255 / 255 / 255 | 0 / 0 / 0 / 0 | N/A |
+| Colour    | HEX     | RGB             | CMYK               | PMS    |
+| --------- | ------- | --------------- | ------------------ | ------ |
+| JCI Blue  | #0097D7 | 0 / 151 / 215   | 77 / 27 / 0 / 0    | 2925 C |
+| JCI Black | #130F2D | 19 / 15 / 45    | 100 / 98 / 47 / 66 | 5395 C |
+| JCI White | #FFFFFF | 255 / 255 / 255 | 0 / 0 / 0 / 0      | N/A    |
 
 **Tints shown:** 75%, 50%, 25% (for JCI Blue and JCI Black)
 
-## Secondary Brand Colours *(p. 20)*
+## Secondary Brand Colours _(p. 20)_
 
 The secondary colour palette consists of JCI Navy, Teal, and Yellow. These colours were chosen to support and expand on the primary brand palette.
 
@@ -226,15 +226,15 @@ Navy and Teal sit naturally alongside our JCI Blue, forming an analogous range o
 
 Yellow serves as a contrasting colour to the various shades of blue. It should be used sparingly as an accent, introducing emphasis when needed.
 
-| Colour | HEX | RGB | CMYK | PMS |
-| --- | --- | --- | --- | --- |
-| JCI Navy | #1F4789 | 31 / 71 / 137 | 96 / 76 / 15 / 3 | 2728 C |
-| JCI Teal | #57BCBC | 87 / 188 / 188 | 63 / 0 / 30 / 0 | 3265 C |
-| JCI Yellow | #EFC40F | 239 / 196 / 15 | 7 / 21 / 93 / 0 | 142 C |
+| Colour     | HEX     | RGB            | CMYK             | PMS    |
+| ---------- | ------- | -------------- | ---------------- | ------ |
+| JCI Navy   | #1F4789 | 31 / 71 / 137  | 96 / 76 / 15 / 3 | 2728 C |
+| JCI Teal   | #57BCBC | 87 / 188 / 188 | 63 / 0 / 30 / 0  | 3265 C |
+| JCI Yellow | #EFC40F | 239 / 196 / 15 | 7 / 21 / 93 / 0  | 142 C  |
 
 **Tints shown:** 75%, 50%, 25% (for each secondary colour)
 
-## Colour Hierarchy *(p. 21)*
+## Colour Hierarchy _(p. 21)_
 
 Not all colours in our brand palette carry the same weight. A proper distribution ensures our brand looks professional and is easily recognised.
 
@@ -242,21 +242,21 @@ The secondary palette of Navy, Teal, and Yellow should be used more sparingly, t
 
 Note that this hierarchy only serves as a guideline: based on the context in which they are used, the colour distribution can be changed to better fit the situation.
 
-*Example colour-distribution chart shown in the guideline (proportions, unlabelled): 35%, 20%, 20%, 10%, 10%, 5%.*
+_Example colour-distribution chart shown in the guideline (proportions, unlabelled): 35%, 20%, 20%, 10%, 10%, 5%._
 
-## Colour Pairings *(p. 22)*
+## Colour Pairings _(p. 22)_
 
 Although the colours in our palette were chosen to work well together, not all combinations provide enough contrast for legibility or visual balance.
 
 When in doubt, prioritise legibility. Clear communication should always come before stylistic preference.
 
-*A grid of colour-pairing swatches is shown in the guideline, without accompanying text labels.*
+_A grid of colour-pairing swatches is shown in the guideline, without accompanying text labels._
 
 ---
 
-# 04 Typography *(p. 23)*
+# 04 Typography _(p. 23)_
 
-## Primary Typeface *(p. 24)*
+## Primary Typeface _(p. 24)_
 
 **Plus Jakarta Sans**
 
@@ -272,9 +272,9 @@ Plus Jakarta Sans can be downloaded via: [fonts.google.com/specimen/Plus+Jakarta
 
 **Available weights:** Light, Regular, SemiBold, Bold
 
-*Each weight specimen displays the full lowercase and uppercase alphabet and the character set `1234567890(,.;:?!$&*)`.*
+_Each weight specimen displays the full lowercase and uppercase alphabet and the character set `1234567890(,.;:?!$&_)`.\*
 
-## Fallback Typeface *(p. 25)*
+## Fallback Typeface _(p. 25)_
 
 **Readex Pro**
 
@@ -288,9 +288,9 @@ Wherever possible, Plus Jakarta Sans remains the required typeface to maintain f
 
 **Available weights:** ExtraLight, Light, Regular, Medium
 
-*Each weight specimen displays the full lowercase and uppercase alphabet and the character set `1234567890(,.;:?!$&*)`.*
+_Each weight specimen displays the full lowercase and uppercase alphabet and the character set `1234567890(,.;:?!$&_)`.\*
 
-## Non-Latin Typeface *(p. 26)*
+## Non-Latin Typeface _(p. 26)_
 
 **Noto Sans**
 
@@ -311,7 +311,7 @@ Specimen examples shown in the guideline:
 - **Noto Sans Devanagari:** कंचूि मानव परिवार क े सभी सदस्यों क े जनम्जात गौरव और समान
 - **Noto Sans Japanese:** 人類社会のすべての構成員の固有の尊厳と平等で譲ることのできない権利とを承認することは
 
-## Secondary Typeface *(p. 27)*
+## Secondary Typeface _(p. 27)_
 
 **Arvo**
 
@@ -327,9 +327,9 @@ Arvo can be downloaded via: [fonts.google.com/specimen/Arvo](https://fonts.googl
 
 **Available weight:** Regular
 
-*The specimen displays the full lowercase and uppercase alphabet and the character set `1234567890(,.;:?!$&*)`.*
+_The specimen displays the full lowercase and uppercase alphabet and the character set `1234567890(,.;:?!$&_)`.\*
 
-## Type Hierarchy *(p. 28)*
+## Type Hierarchy _(p. 28)_
 
 A clear typographic hierarchy ensures that content is easy to read, scan, and understand.
 
@@ -337,36 +337,41 @@ As a general rule, we lean toward lighter weights of Plus Jakarta Sans (Light, R
 
 Hierarchy should be created through a combination of weight, size, spacing, and alignment. Aim for clarity first: the reader should be able to understand the structure of the content at a glance.
 
-| Level | Typeface | Weight | Size | Leading | Tracking |
-| --- | --- | --- | --- | --- | --- |
-| Title | Plus Jakarta Sans | Regular | 48pt | 120% | 0 |
-| Subtitle | Plus Jakarta Sans | Regular | 24pt | 130% | 0 |
-| Subheading | Plus Jakarta Sans | SemiBold | 20pt | 140% | 0 |
-| Paragraph | Plus Jakarta Sans | Regular | 16pt | 140% | 0 |
-| Quote | Arvo | Regular | 24pt | 130% | 0 |
+| Level      | Typeface          | Weight   | Size | Leading | Tracking |
+| ---------- | ----------------- | -------- | ---- | ------- | -------- |
+| Title      | Plus Jakarta Sans | Regular  | 48pt | 120%    | 0        |
+| Subtitle   | Plus Jakarta Sans | Regular  | 24pt | 130%    | 0        |
+| Subheading | Plus Jakarta Sans | SemiBold | 20pt | 140%    | 0        |
+| Paragraph  | Plus Jakarta Sans | Regular  | 16pt | 140%    | 0        |
+| Quote      | Arvo              | Regular  | 24pt | 130%    | 0        |
 
 Example text shown for each level:
 
 **Title:**
+
 > Developing leaders
 
 **Subtitle:**
+
 > Ilit ipit, quam lab id ut accusamus in evelit, que maionet alia venditi duciaerum quam laut re et asped ullandem atur?
 
 **Subheading:**
+
 > Lorem ipsum dolor sit amet
 
 **Paragraph:**
+
 > Occullesequi ne ent od ut la nobisinctem am ant, sequo quam reptatet quiat quid quiaturero molorion et alia ditatur, veriae volupit qui dusti rest, quodit es inverum rem quundae non corem et exerum et estiur, si quiam debita sim rem reptasimaion pa consequibus pre planda sinvell oreicim voluptatio. Tur rent fuga. Voluptat qui blaut et dis sae nonsenis est, con rerum etur moluptatem es aut fugitat iberum expellab is eum apis di sitias re sum, vollautem velitatis quiasim sin comnit ut ut eaquam qui te lant quae labor rerum sunt dolut quatium eosanti busande litium quia vent, volorei untusda nihitium aut molut et abo. Cum comnimet eata voluptur? Quis dipsundus a dollupt atureptatis maximax imperci lissincil.
 
 **Quote:**
+
 > "Ilit ipit, quam lab id ut accusamus in evelit, que maionet alia venditi duciaerum quam laut re et asped ullandem atur?"
 
 ---
 
-# 05 Brand in Action *(p. 29)*
+# 05 Brand in Action _(p. 29)_
 
-## Logo Placement *(p. 30)*
+## Logo Placement _(p. 30)_
 
 Consistent placement strengthens recognition and creates a clear visual structure across all of our materials.
 
@@ -386,16 +391,16 @@ The top centre and bottom centre positions should be used only when none of the 
 
 Wherever it appears, the logo must always maintain its clearspace, avoid crowding, and remain positioned on a background that ensures full legibility and contrast.
 
-| Position | Status |
-| --- | --- |
-| Top left | Preferred |
-| Top right | Preferred |
-| Top centre | If necessary |
-| Bottom left | Optional |
-| Bottom right | Optional |
+| Position      | Status       |
+| ------------- | ------------ |
+| Top left      | Preferred    |
+| Top right     | Preferred    |
+| Top centre    | If necessary |
+| Bottom left   | Optional     |
+| Bottom right  | Optional     |
 | Bottom centre | If necessary |
 
-## Ripple *(p. 31)*
+## Ripple _(p. 31)_
 
 The ripple effect from the logo serves as a central motif across the entire identity. Variants of the ripple are used as primary graphic elements throughout our communications, creating a cohesive and recognisable visual language.
 
@@ -403,7 +408,7 @@ Whether applied subtly in the background or used as a distinctive visual element
 
 By consistently integrating ripple-based graphics across applications, we reinforce a unified visual system that is distinctly JCI.
 
-## Ripple Construction *(p. 32)*
+## Ripple Construction _(p. 32)_
 
 The ripple is based on a precise geometric system that ensures consistency across all applications. By following these construction principles, it becomes a consistent but flexible graphic asset.
 
@@ -419,7 +424,7 @@ The spacing between each ring is the same as the width of the ring itself. The r
 
 Each ring is rotated by 15 degrees relative to the ring one size smaller. This rotation introduces subtle movement, making the entire asset feel more dynamic.
 
-## Photography *(p. 33)*
+## Photography _(p. 33)_
 
 Photography plays a key role in expressing the energy, diversity, and real-world impact of our organisation. The goal is to tell genuine stories, not stage perfect snapshots.
 

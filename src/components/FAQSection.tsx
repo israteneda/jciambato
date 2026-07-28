@@ -50,7 +50,7 @@ export function FAQSection({
               <AccordionTrigger className="text-jci-black text-left text-base font-semibold md:text-lg">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 text-base leading-relaxed">
+              <AccordionContent className="text-base leading-relaxed text-gray-600">
                 <div className="whitespace-pre-line">{faq.answer}</div>
               </AccordionContent>
             </AccordionItem>

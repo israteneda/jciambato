@@ -225,9 +225,8 @@ export default function Bienvenida() {
 
               <div className="mt-6 lg:mt-8">
                 <Button
-                size="lg"
-                
-                  className="relative bg-jci-blue text-white group overflow-hidden text-sm"
+                  size="lg"
+                  className="bg-jci-blue group relative overflow-hidden text-sm text-white"
                   aria-label="Más información sobre nosotros"
                 >
                   <Link href="/nosotros">

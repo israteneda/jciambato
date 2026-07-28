@@ -21,7 +21,6 @@ La aplicación presenta información institucional, proyectos, noticias, eventos
 
 ![Previsualización de la plataforma](/public/images/preview-welcome.png)
 
-
 ## Arquitectura del Proyecto
 
 El proyecto utiliza una arquitectura basada en funcionalidades (**Feature-Based Architecture**), permitiendo organizar cada módulo del sistema de manera independiente y escalable.

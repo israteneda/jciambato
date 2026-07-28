@@ -6,11 +6,11 @@ export default function Presentacion() {
         <div className="flex w-full justify-center">
           <div className="relative mx-auto max-w-6xl bg-white px-8 py-20 pb-20 md:px-20">
             <header className="max-w-3xl">
-              <p className="text-xs leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
+              <p className="text-jci-gray text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">
                 Cómo generamos impacto
               </p>
               <div className="mt-8">
-                <h2 className="text-left text-3xl font-bold text-jci-black md:text-5xl md:leading-[1.33]">
+                <h2 className="text-jci-black text-left text-3xl font-bold md:text-5xl md:leading-[1.33]">
                   Liderando el desarrollo de líderes jóvenes en Ambato
                 </h2>
               </div>

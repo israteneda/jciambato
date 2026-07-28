@@ -82,7 +82,6 @@ export default function Datos() {
                   />
                 </div>
               </div>
-              
             </div>
           </div>
 

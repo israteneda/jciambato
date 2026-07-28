@@ -88,7 +88,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${fontPlusJakarta.variable} ${fontArvo.variable}`} suppressHydrationWarning>
+    <html
+      lang="es"
+      className={`${fontPlusJakarta.variable} ${fontArvo.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         {/* Script pre-render: detección de plataforma */}
         <script type="text/javascript" dangerouslySetInnerHTML={{ __html: platformScript }} />

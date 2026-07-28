@@ -54,7 +54,7 @@ export default function Valores() {
 
             <div className="md:mt-6">
               <div className="bg-jci-yellow box-border min-h-52 w-full p-10">
-                <div className="self-end text-base leading-normal font-normal tracking-normal text-jci-black not-italic">
+                <div className="text-jci-black self-end text-base leading-normal font-normal tracking-normal not-italic">
                   <strong>Cooperación Internacional</strong>
                 </div>
                 <div className="my-2">
@@ -92,7 +92,7 @@ export default function Valores() {
 
           <div className="flex flex-1 flex-col md:ml-3">
             <div className="md:mt-6">
-              <div className="box-border min-h-52 w-full bg-jci-navy/10 p-10">
+              <div className="bg-jci-navy/10 box-border min-h-52 w-full p-10">
                 <div className="text-jci-black self-end text-base leading-normal font-normal tracking-normal not-italic">
                   <strong>Desarrollo Individual</strong>
                 </div>

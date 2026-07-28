@@ -12,11 +12,7 @@ export function NavItem({
   className?: string;
 }) {
   return (
-    <Link
-      href={href}
-      aria-current={active ? "page" : undefined}
-      className={className}
-    >
+    <Link href={href} aria-current={active ? "page" : undefined} className={className}>
       {children}
     </Link>
   );

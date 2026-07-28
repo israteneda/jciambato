@@ -8,10 +8,10 @@ export default function Senadores() {
       <div className="mx-8 max-w-6xl md:mx-20 lg:mx-auto">
         {/* Header */}
         <header className="mb-12 text-start">
-          <h2 id="senadores-heading" className="text-3xl font-bold text-jci-black md:text-5xl">
+          <h2 id="senadores-heading" className="text-jci-black text-3xl font-bold md:text-5xl">
             Senaduría
           </h2>
-          <p className="mt-2 max-w-3xl text-lg text-jci-black">
+          <p className="text-jci-black mt-2 max-w-3xl text-lg">
             Al cumplir <strong>41 años</strong>, los miembros activos concluyen su etapa regular y
             pueden optar por la condición de <strong>Miembro Asociado Mayor (MAM)</strong>,
             manteniendo su vínculo con la JCI sin derecho a voto ni a cargos electivos.
@@ -41,11 +41,11 @@ export default function Senadores() {
                   className="h-full w-full rounded-full object-cover"
                 />
               </figure>
-              <h3 className="text-lg font-bold text-jci-black">
+              <h3 className="text-jci-black text-lg font-bold">
                 {miembro.nombre} {miembro.apellido}
               </h3>
 
-              <p className="mb-3 text-sm text-jci-black">{miembro.cargo}</p>
+              <p className="text-jci-black mb-3 text-sm">{miembro.cargo}</p>
 
               {miembro.social && (miembro.social.instagram || miembro.social.linkedin) && (
                 <nav
@@ -57,7 +57,7 @@ export default function Senadores() {
                       href={miembro.social.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-jci-black transition-colors hover:text-jci-teal"
+                      className="text-jci-black hover:text-jci-teal transition-colors"
                       aria-label={`Instagram de ${miembro.nombre}`}
                     >
                       <FaInstagram />
@@ -68,7 +68,7 @@ export default function Senadores() {
                       href={miembro.social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-jci-black transition-colors hover:text-jci-teal"
+                      className="text-jci-black hover:text-jci-teal transition-colors"
                       aria-label={`LinkedIn de ${miembro.nombre}`}
                     >
                       <FaLinkedin />

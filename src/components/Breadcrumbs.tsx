@@ -31,7 +31,7 @@ export function Breadcrumbs({ items, className = "" }: BreadcrumbsProps) {
               // Elementos intermedios - son links
               <Link
                 href={item.url}
-                className="flex items-center gap-1 text-jci-teal transition-colors hover:text-jci-navy hover:underline"
+                className="text-jci-teal hover:text-jci-navy flex items-center gap-1 transition-colors hover:underline"
               >
                 {/* {isFirst && <FiHome size={16} />} */}
                 <span>{item.name}</span>

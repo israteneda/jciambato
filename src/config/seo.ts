@@ -18,9 +18,7 @@ export const siteConfig = {
   ],
   creator: "JCI Ambato",
   publisher: "JCI Ambato",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jciambato.org",
-  ),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jciambato.org"),
   alternates: {
     canonical: SITE_INFO.url,
   },
@@ -37,7 +35,7 @@ export const siteConfig = {
       {
         url: new URL(
           SITE_INFO.ogImage,
-          process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+          process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
         ).toString(),
         width: 1200,
         height: 630,
@@ -46,7 +44,7 @@ export const siteConfig = {
       {
         url: new URL(
           "/images/nosotros/sesion-solemne-50-aniversario.webp",
-          process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+          process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
         ).toString(),
         width: 1200,
         height: 630,
@@ -64,7 +62,7 @@ export const siteConfig = {
     images: [
       new URL(
         "/images/nosotros/sesion-solemne-50-aniversario.webp",
-        process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+        process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
       ).toString(),
     ],
   },
@@ -93,10 +91,7 @@ export const siteConfig = {
     "@id": "https://www.jciambato.org/#organization",
     name: "JCI Ambato",
     legalName: "Cámara Junior Internacional Ambato",
-    alternateName: [
-      "Cámara Junior Internacional Ambato",
-      "JCI Ambato Ecuador",
-    ],
+    alternateName: ["Cámara Junior Internacional Ambato", "JCI Ambato Ecuador"],
     url: "https://www.jciambato.org",
     logo: {
       "@type": "ImageObject" as const,

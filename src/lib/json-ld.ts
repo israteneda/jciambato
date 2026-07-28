@@ -129,7 +129,7 @@ export function getOrganizationJsonLd() {
  */
 export function generateBreadcrumbSchema(
   items: BreadcrumbItem[],
-  baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!,
+  baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!
 ) {
   return {
     "@context": "https://schema.org",
@@ -152,7 +152,7 @@ export function generateBreadcrumbSchema(
  */
 export function generateNewsArticleSchema(
   noticia: NoticiaEvento,
-  baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!,
+  baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!
 ): ArticleSchema {
   const articleUrl = `${baseUrl}/noticias-eventos/${noticia.url}`;
   const imageUrl = noticia.imagen.startsWith("http")
@@ -200,11 +200,9 @@ export function generateNewsArticleSchema(
  */
 export function generateEventSchema(
   evento: NoticiaEvento,
-  baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!,
+  baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!
 ): EventSchema {
-  const imageUrl = evento.imagen.startsWith("http")
-    ? evento.imagen
-    : `${baseUrl}${evento.imagen}`;
+  const imageUrl = evento.imagen.startsWith("http") ? evento.imagen : `${baseUrl}${evento.imagen}`;
 
   return {
     "@context": "https://schema.org",
@@ -243,9 +241,7 @@ export function generateEventSchema(
 /**
  * Genera JSON-LD para FAQ
  */
-export function generateFAQSchema(
-  faqs: Array<{ question: string; answer: string }>,
-): FAQSchema {
+export function generateFAQSchema(faqs: Array<{ question: string; answer: string }>): FAQSchema {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",

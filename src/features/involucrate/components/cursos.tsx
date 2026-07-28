@@ -54,7 +54,7 @@ export default function Cursos() {
 
             <div className="md:mt-6">
               <div className="bg-jci-yellow box-border min-h-52 w-full p-10">
-                <div className="self-end text-base leading-normal font-normal tracking-normal text-jci-black not-italic">
+                <div className="text-jci-black self-end text-base leading-normal font-normal tracking-normal not-italic">
                   <strong>Introducción a JCI</strong>
                   <span> - Gratis</span>
                 </div>
@@ -93,7 +93,7 @@ export default function Cursos() {
 
           <div className="flex flex-1 flex-col md:ml-3">
             <div className="md:mt-6">
-              <div className="box-border min-h-52 w-full bg-jci-navy/10 p-10">
+              <div className="bg-jci-navy/10 box-border min-h-52 w-full p-10">
                 <div className="text-jci-black self-end text-base leading-normal font-normal tracking-normal not-italic">
                   <strong>Introducción a JCI</strong>
                   <span> - Gratis</span>
@@ -170,7 +170,7 @@ export default function Cursos() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center text-center text-sm font-normal tracking-normal text-jci-navy not-italic md:text-base">
+        <div className="text-jci-navy flex flex-col items-center justify-center text-center text-sm font-normal tracking-normal not-italic md:text-base">
           <span>¿Quieres conocer más opciones de formación?</span>
           <span>
             Visita más cursos en&nbsp;

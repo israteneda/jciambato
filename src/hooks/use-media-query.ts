@@ -14,7 +14,7 @@ export function useMediaQuery(query: string) {
       (event: MediaQueryListEvent) => {
         setValue(event.matches);
       },
-      { signal },
+      { signal }
     );
 
     setValue(result.matches);

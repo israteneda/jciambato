@@ -9,13 +9,13 @@ export default function Presentacion() {
         <div className="flex w-full justify-center">
           <div className="relative mx-auto max-w-6xl bg-white px-8 py-20 pb-36 md:px-20">
             <header className="max-w-3xl">
-              <p className="text-xs leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
+              <p className="text-jci-gray text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">
                 Conócenos mejor
               </p>
               <div className="mt-8">
-                  <h2 className="text-left text-3xl font-bold text-jci-black md:text-5xl md:leading-[1.33]">
-                    Lideramos con propósito para transformar nuestra ciudad y conectar con el mundo.
-                  </h2>
+                <h2 className="text-jci-black text-left text-3xl font-bold md:text-5xl md:leading-[1.33]">
+                  Lideramos con propósito para transformar nuestra ciudad y conectar con el mundo.
+                </h2>
               </div>
             </header>
 
@@ -77,7 +77,7 @@ export default function Presentacion() {
                     <div className="text-jci-navy text-7xl leading-none font-light md:text-8xl">
                       <AnimatedNumber end={50} prefix="+" duration={2.5} delay={0.2} />
                     </div>
-                    <p className="md:text-medium max-w-44 text-left text-jci-black uppercase">
+                    <p className="md:text-medium text-jci-black max-w-44 text-left uppercase">
                       <strong>Años</strong> inspirando líderes
                     </p>
                   </div>
@@ -86,7 +86,7 @@ export default function Presentacion() {
                     <div className="text-jci-navy text-7xl leading-none font-light md:text-8xl">
                       <AnimatedNumber end={200} prefix="+" duration={2.5} delay={0.4} />
                     </div>
-                    <p className="md:text-medium max-w-44 text-left text-jci-black uppercase">
+                    <p className="md:text-medium text-jci-black max-w-44 text-left uppercase">
                       <strong>Proyectos</strong> ejecutados
                     </p>
                   </div>
@@ -95,7 +95,7 @@ export default function Presentacion() {
                     <div className="text-jci-navy text-7xl leading-none font-light md:text-8xl">
                       <AnimatedNumber end={500} prefix="+" duration={2.5} delay={0.6} />
                     </div>
-                    <p className="max-w-44 text-left text-base text-jci-black uppercase">
+                    <p className="text-jci-black max-w-44 text-left text-base uppercase">
                       <strong>Jóvenes</strong> formados y empoderados
                     </p>
                   </div>
@@ -105,7 +105,7 @@ export default function Presentacion() {
 
             <div className="absolute right-12.5 bottom-[25%] hidden origin-bottom-right rotate-90 lg:block">
               <div
-                className="relative text-[11px] leading-none font-medium tracking-[2px] text-jci-gray uppercase after:absolute after:top-1.5 after:-right-42.5 after:h-px after:w-40 after:bg-jci-gray after:content-['']"
+                className="text-jci-gray after:bg-jci-gray relative text-[11px] leading-none font-medium tracking-[2px] uppercase after:absolute after:top-1.5 after:-right-42.5 after:h-px after:w-40 after:content-['']"
                 aria-hidden="true"
               >
                 Conoce, Suma, Transforma

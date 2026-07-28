@@ -13,7 +13,7 @@ export default function Aliados() {
             <p className="text-jci-yellow text-sm leading-[1.85] font-bold tracking-normal uppercase">
               Apoyo que impulsa nuestro impacto
             </p>
-            <h2 className="mt-5 text-jci-black max-w-xs text-left text-3xl leading-[1.33] font-semibold tracking-normal normal-case md:max-w-[60%] lg:max-w-[75%] lg:text-5xl lg:leading-[1.33]">
+            <h2 className="text-jci-black mt-5 max-w-xs text-left text-3xl leading-[1.33] font-semibold tracking-normal normal-case md:max-w-[60%] lg:max-w-[75%] lg:text-5xl lg:leading-[1.33]">
               Aliados Estratégicos
             </h2>
           </div>
@@ -26,11 +26,7 @@ export default function Aliados() {
         aria-label="Logos de aliados estratégicos"
       >
         {aliados.map((aliado) => (
-          <figure
-            key={aliado.id}
-            role="listitem"
-            className="flex h-20 items-center justify-center"
-          >
+          <figure key={aliado.id} role="listitem" className="flex h-20 items-center justify-center">
             <a
               href={aliado.url}
               target="_blank"

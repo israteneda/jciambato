@@ -7,7 +7,11 @@ import { getAllAreas } from "@/features/inicio/data/areas-oportunidad";
 import { Proyecto } from "@/types/proyecto";
 import { getAreaBySlug } from "@/types/enums";
 import { Button } from "@/components/ui/button";
-import { getAllProyectos, getConteoProyectosPorArea, getProyectosPorArea } from "@/features/proyectos/data";
+import {
+  getAllProyectos,
+  getConteoProyectosPorArea,
+  getProyectosPorArea,
+} from "@/features/proyectos/data";
 
 export default function ProyectosPorArea() {
   // Estado para controlar el botón activo (0 = Todos, 1 = Negocios, etc.)

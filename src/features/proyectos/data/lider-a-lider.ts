@@ -17,8 +17,7 @@ export const liderALider: Proyecto = {
   },
   fecha: "Actualmente en la 4ta Edición",
   lugar: "Ambato, Ecuador",
-  imagen:
-    "/images/proyectos/desarrollo-individual/lider-a-lider/lider-a-lider.jpg",
+  imagen: "/images/proyectos/desarrollo-individual/lider-a-lider/lider-a-lider.jpg",
   logo: "/images/proyectos/desarrollo-individual/lider-a-lider/lal.png",
   area_oportunidad: AreaOportunidadEnum.DESARROLLO_INDIVIDUAL,
   url: "/proyectos/lider-a-lider",

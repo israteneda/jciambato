@@ -30,7 +30,7 @@ export default function SiguienteArea({ area }: { area: AreaOportunidad }) {
                 aria-label={`Ir a ${nextArea.title}`}
               >
                 <div className="relative z-10">
-                  <div className="font-sans text-[13px] leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
+                  <div className="text-jci-gray font-sans text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
                     Áreas de Oportunidad
                   </div>
                   <div className="mt-2">

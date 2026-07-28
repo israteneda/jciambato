@@ -16,9 +16,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
   ]; */
 
   return (
-    <section
-      className="relative overflow-hidden bg-transparent"
-    >
+    <section className="relative overflow-hidden bg-transparent">
       <div>
         <div className="h-[150px] md:h-80"></div>
 
@@ -62,7 +60,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                 {noticiaEvento.tipo}
               </p>
               <div className="mt-8">
-                <h1 className="max-w-[862px] text-left text-3xl leading-[1.33] font-bold text-jci-black sm:text-[calc(28.8px+1vw)] md:text-[48px]">
+                <h1 className="text-jci-black max-w-[862px] text-left text-3xl leading-[1.33] font-bold sm:text-[calc(28.8px+1vw)] md:text-[48px]">
                   {noticiaEvento.titulo}
                 </h1>
               </div>
@@ -263,7 +261,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
 
                         <div className="flex flex-col items-start gap-1">
                           <button
-                            className="hover:text-jci-teal cursor-pointer text-sm font-semibold text-jci-navy transition-colors duration-300"
+                            className="hover:text-jci-teal text-jci-navy cursor-pointer text-sm font-semibold transition-colors duration-300"
                             onClick={() =>
                               shareOnSocialMedia(
                                 "facebook",
@@ -275,7 +273,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                             Facebook
                           </button>
                           <button
-                            className="hover:text-jci-teal cursor-pointer text-sm font-semibold text-jci-navy transition-colors duration-300"
+                            className="hover:text-jci-teal text-jci-navy cursor-pointer text-sm font-semibold transition-colors duration-300"
                             onClick={() =>
                               shareOnSocialMedia(
                                 "linkedin",

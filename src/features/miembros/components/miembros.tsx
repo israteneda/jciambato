@@ -10,11 +10,11 @@ export default function MiembrosGenerales() {
         <header className="mb-12 text-start">
           <h2
             id="miembros-activos-heading"
-            className="text-3xl font-bold text-jci-black md:text-5xl"
+            className="text-jci-black text-3xl font-bold md:text-5xl"
           >
             Miembros
           </h2>
-          <p className="mt-2 max-w-3xl text-lg text-jci-black">
+          <p className="text-jci-black mt-2 max-w-3xl text-lg">
             Integrado por personas de entre <strong>18 y 40 años</strong> comprometidas con la
             transformación, desarrollando proyectos que fortalecen el
             <strong> liderazgo</strong>, el <strong>emprendimiento</strong> y la
@@ -41,10 +41,10 @@ export default function MiembrosGenerales() {
                   className="h-full w-full rounded-full object-cover"
                 />
               </figure>
-              <h3 className="text-lg font-bold text-jci-black">
+              <h3 className="text-jci-black text-lg font-bold">
                 {miembro.nombre} {miembro.apellido}
               </h3>
-              <p className="mb-3 text-sm text-jci-black">{miembro.cargo}</p>
+              <p className="text-jci-black mb-3 text-sm">{miembro.cargo}</p>
 
               {miembro.social && (miembro.social.instagram || miembro.social.linkedin) && (
                 <nav
@@ -56,7 +56,7 @@ export default function MiembrosGenerales() {
                       href={miembro.social.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-jci-black transition-colors hover:text-jci-teal"
+                      className="text-jci-black hover:text-jci-teal transition-colors"
                       aria-label={`Instagram de ${miembro.nombre}`}
                     >
                       <FaInstagram />
@@ -67,7 +67,7 @@ export default function MiembrosGenerales() {
                       href={miembro.social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-jci-black transition-colors hover:text-jci-teal"
+                      className="text-jci-black hover:text-jci-teal transition-colors"
                       aria-label={`LinkedIn de ${miembro.nombre}`}
                     >
                       <FaLinkedin />

@@ -7,11 +7,9 @@ export function useIsInViewport(ref: React.RefObject<HTMLElement | null>) {
   const observer = useMemo(
     () =>
       typeof window !== "undefined"
-        ? new IntersectionObserver(([entry]) =>
-            setIsIntersecting(entry.isIntersecting),
-          )
+        ? new IntersectionObserver(([entry]) => setIsIntersecting(entry.isIntersecting))
         : null,
-    [],
+    []
   );
 
   useEffect(() => {

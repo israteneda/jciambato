@@ -11,14 +11,14 @@ export default function Presentacion({ area }: { area: AreaOportunidad }) {
         <div className="mt-16">
           <div className="max-w-5xl">
             <header>
-              <div className="text-xs leading-[1.85] font-bold tracking-normal text-jci-gray uppercase not-italic">
+              <div className="text-jci-gray text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">
                 {area.subtitle}
               </div>
 
               <div className="mt-8">
                 <h2
                   id={`presentacion-${area.slug}-heading`}
-                  className="text-left text-3xl font-bold text-jci-black md:text-5xl md:leading-[1.33]"
+                  className="text-jci-black text-left text-3xl font-bold md:text-5xl md:leading-[1.33]"
                 >
                   {area.description}
                 </h2>

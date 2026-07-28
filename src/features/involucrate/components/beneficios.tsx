@@ -10,8 +10,8 @@ export default function Beneficios() {
         {/* Caja de Información */}
         <div className="relative hidden lg:block">
           <div className="absolute top-20 left-0 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
-            <div className="relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap text-jci-gray uppercase not-italic">
-              <span className="absolute top-1.5 -left-42.5 h-px w-40 bg-jci-gray"></span>
+            <div className="text-jci-gray relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap uppercase not-italic">
+              <span className="bg-jci-gray absolute top-1.5 -left-42.5 h-px w-40"></span>
               Cada día
             </div>
           </div>
@@ -22,7 +22,7 @@ export default function Beneficios() {
             <header className="mt-20 md:max-w-xl">
               <h2
                 id="beneficios-heading"
-                className="text-left text-4xl leading-[1.17] font-bold tracking-normal text-jci-black not-italic md:text-5xl"
+                className="text-jci-black text-left text-4xl leading-[1.17] font-bold tracking-normal not-italic md:text-5xl"
               >
                 Beneficios de ser parte de JCI Ambato
               </h2>

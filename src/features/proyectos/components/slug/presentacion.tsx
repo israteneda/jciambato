@@ -2,9 +2,7 @@ import { Proyecto } from "@/types/proyecto";
 
 export default function Presentacion({ proyecto }: { proyecto: Proyecto }) {
   return (
-    <section
-      className="relative overflow-hidden bg-transparent"
-    >
+    <section className="relative overflow-hidden bg-transparent">
       <div className="py-24">
         <div className="relative mx-8 max-w-6xl md:mx-20 lg:mx-auto">
           <div>

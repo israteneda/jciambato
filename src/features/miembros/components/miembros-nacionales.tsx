@@ -10,11 +10,11 @@ export default function MiembrosNacionales() {
         <header className="mb-12 text-start">
           <h2
             id="miembros-activos-heading"
-            className="text-3xl font-bold text-jci-black md:text-5xl"
+            className="text-jci-black text-3xl font-bold md:text-5xl"
           >
             En JCI Ecuador
           </h2>
-          <p className="mt-2 max-w-3xl text-lg text-jci-black">
+          <p className="text-jci-black mt-2 max-w-3xl text-lg">
             Esta participación proyecta el impacto local hacia escenarios nacionales e
             internacionales, mediante <strong>iniciativas de alto alcance</strong>, la conexión con
             <strong> líderes globales</strong> y la colaboración en
@@ -41,10 +41,10 @@ export default function MiembrosNacionales() {
                   className="h-full w-full rounded-full object-cover"
                 />
               </figure>
-              <h3 className="text-lg font-bold text-jci-black">
+              <h3 className="text-jci-black text-lg font-bold">
                 {miembro.nombre} {miembro.apellido}
               </h3>
-              <p className="mb-3 text-sm text-jci-navy">{miembro.cargo}</p>
+              <p className="text-jci-navy mb-3 text-sm">{miembro.cargo}</p>
 
               {miembro.social && (miembro.social.instagram || miembro.social.linkedin) && (
                 <nav
@@ -56,7 +56,7 @@ export default function MiembrosNacionales() {
                       href={miembro.social.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-jci-black transition-colors hover:text-jci-teal"
+                      className="text-jci-black hover:text-jci-teal transition-colors"
                       aria-label={`Instagram de ${miembro.nombre}`}
                     >
                       <FaInstagram />
@@ -67,7 +67,7 @@ export default function MiembrosNacionales() {
                       href={miembro.social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-jci-black transition-colors hover:text-jci-teal"
+                      className="text-jci-black hover:text-jci-teal transition-colors"
                       aria-label={`LinkedIn de ${miembro.nombre}`}
                     >
                       <FaLinkedin />

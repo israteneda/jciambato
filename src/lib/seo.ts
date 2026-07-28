@@ -11,7 +11,7 @@ import { convertToISODate } from "@/lib/json-ld";
  */
 export function generateSocialMetadata(
   noticia: NoticiaEvento,
-  baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!,
+  baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!
 ) {
   const articleUrl = `${baseUrl}/noticias-eventos/${noticia.url}`;
   const imageUrl = noticia.imagen.startsWith("http")

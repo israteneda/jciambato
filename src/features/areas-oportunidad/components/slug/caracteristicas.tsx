@@ -10,11 +10,11 @@ export default function Caracteristicas({ area }: { area: AreaOportunidad }) {
         <div className="hidden md:block">
           <div className="absolute top-[80px] left-0 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
             <div
-              className="relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap text-jci-gray uppercase not-italic"
+              className="text-jci-gray relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap uppercase not-italic"
               aria-hidden="true"
             >
               Vicepresidencia Local
-              <span className="absolute top-1.5 left-[-170px] h-px w-40 bg-jci-gray content-['']"></span>
+              <span className="bg-jci-gray absolute top-1.5 left-[-170px] h-px w-40 content-['']"></span>
             </div>
           </div>
         </div>
@@ -23,7 +23,7 @@ export default function Caracteristicas({ area }: { area: AreaOportunidad }) {
           <div className="flex">
             <header className="md:max-w-2xl">
               <div className="mt-20">
-                <h2 className="text-left text-4xl leading-[1.17] font-bold tracking-normal text-jci-black not-italic md:text-5xl">
+                <h2 className="text-jci-black text-left text-4xl leading-[1.17] font-bold tracking-normal not-italic md:text-5xl">
                   Vicepresidencia <br /> {area.title}
                 </h2>
               </div>
@@ -52,8 +52,8 @@ export default function Caracteristicas({ area }: { area: AreaOportunidad }) {
 
               <div className="mt-8">
                 <div className="text-jci-black flex flex-col gap-3 text-left text-base leading-[1.78]">
-                  <div className="mb-6 box-border flex w-full items-center pr-0 text-xl leading-[1.33] font-bold text-jci-black md:mb-0 md:w-1/2 md:pr-10 md:text-2xl">
-                    <div className="w-full border-b border-jci-navy/20 p-[24px_0_24px_0] md:p-[24px_40px_24px_0]">
+                  <div className="text-jci-black mb-6 box-border flex w-full items-center pr-0 text-xl leading-[1.33] font-bold md:mb-0 md:w-1/2 md:pr-10 md:text-2xl">
+                    <div className="border-jci-navy/20 w-full border-b p-[24px_0_24px_0] md:p-[24px_40px_24px_0]">
                       {area.responsable.nombre} {area.responsable.apellido}
                       <div>
                         <a

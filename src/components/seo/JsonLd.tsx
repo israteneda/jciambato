@@ -10,10 +10,5 @@ import { toJsonLd } from "@/lib/json-ld";
  * <JsonLd data={getOrganizationJsonLd()} />
  */
 export function JsonLd({ data }: { data: unknown }) {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: toJsonLd(data) }}
-    />
-  );
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(data) }} />;
 }

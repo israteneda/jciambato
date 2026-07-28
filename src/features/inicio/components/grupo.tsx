@@ -47,7 +47,7 @@ export default function Grupo() {
 
                 <div className="mt-12">
                   <Button
-                    className="relative overflow-hidden border-jci-black text-jci-black group"
+                    className="border-jci-black text-jci-black group relative overflow-hidden"
                     aria-label="Conoce nuestra misión y visión"
                   >
                     <Link href="/nosotros">

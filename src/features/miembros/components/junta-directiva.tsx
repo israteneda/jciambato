@@ -8,7 +8,10 @@ export default function Miembros() {
       <div className="mx-8 max-w-5xl md:mx-20 lg:mx-auto">
         {/* Header */}
         <header className="mb-12 text-start">
-          <h2 id="junta-directiva-heading" className="text-3xl font-bold text-jci-black md:text-5xl">
+          <h2
+            id="junta-directiva-heading"
+            className="text-jci-black text-3xl font-bold md:text-5xl"
+          >
             Junta Directiva 2026
           </h2>
           <p className="mt-2 max-w-3xl text-lg">
@@ -44,7 +47,7 @@ export default function Miembros() {
                     priority={index < 6}
                   />
                 ) : (
-                  <div className="flex h-auto w-full items-center justify-center bg-jci-navy md:h-96">
+                  <div className="bg-jci-navy flex h-auto w-full items-center justify-center md:h-96">
                     <span className="h-full text-lg text-white">Próximamente</span>
                   </div>
                 )}
@@ -70,7 +73,7 @@ export default function Miembros() {
                             href={miembro.social.instagram}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-jci-black transition-colors hover:text-jci-teal"
+                            className="text-jci-black hover:text-jci-teal transition-colors"
                             aria-label={`Instagram de ${miembro.nombre}`}
                           >
                             <FaInstagram />
@@ -82,7 +85,7 @@ export default function Miembros() {
                             href={miembro.social.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-jci-black transition-colors hover:text-jci-teal"
+                            className="text-jci-black hover:text-jci-teal transition-colors"
                             aria-label={`LinkedIn de ${miembro.nombre}`}
                           >
                             <FaLinkedin />

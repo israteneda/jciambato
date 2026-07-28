@@ -20,7 +20,7 @@ export default function MiembrosPage() {
       {/* Bloque espaciado para efecto de scroll */}
       <div className="h-screen" aria-hidden="true"></div>
       <div
-        className="absolute top-0 h-full w-full bg-jci-bg"
+        className="bg-jci-bg absolute top-0 h-full w-full"
         style={{ transform: "translateY(100vh)" }}
         aria-hidden="true"
       ></div>

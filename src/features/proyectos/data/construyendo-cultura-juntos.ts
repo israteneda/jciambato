@@ -11,8 +11,7 @@ export const construyendoCulturaJuntos: Proyecto = {
   director: getMiembroById("romina-benitez")!,
   fecha: "2 y 9 de marzo, 2025",
   lugar: "Ecuador",
-  imagen:
-    "/images/proyectos/cooperacion-internacional/cooperacion-internacional-p1.webp",
+  imagen: "/images/proyectos/cooperacion-internacional/cooperacion-internacional-p1.webp",
   logo: "",
   area_oportunidad: AreaOportunidadEnum.COOPERACION_INTERNACIONAL,
   url: "/proyectos/construyendo-cultura-juntos",

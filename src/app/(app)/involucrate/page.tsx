@@ -1,5 +1,11 @@
 import { Metadata } from "next";
-import { Bienvenida, Acciones, Beneficios, Cursos, Formulario } from "@/features/involucrate/components";
+import {
+  Bienvenida,
+  Acciones,
+  Beneficios,
+  Cursos,
+  Formulario,
+} from "@/features/involucrate/components";
 
 export const metadata: Metadata = {
   title: "Involúcrate — Únete a JCI Ambato",
@@ -18,7 +24,7 @@ export default function InvolucratePage() {
       {/* Bloque espaciado */}
       <div className="h-[640px]" aria-hidden="true"></div>
       <div
-        className="absolute top-0 h-full w-full bg-jci-bg"
+        className="bg-jci-bg absolute top-0 h-full w-full"
         style={{ transform: "translateY(99.9vh)" }}
         aria-hidden="true"
       ></div>

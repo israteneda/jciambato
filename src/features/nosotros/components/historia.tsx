@@ -26,23 +26,23 @@ export default function ActividadesAnuales() {
           <div className="flex">
             <div className="absolute top-[80px] left-0 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 transform md:block">
               <div
-                className="relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap text-jci-gray uppercase not-italic"
+                className="text-jci-gray relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap uppercase not-italic"
                 aria-hidden="true"
               >
                 Desde 1973
-                <span className="absolute top-1.5 left-[-170px] h-px w-40 bg-jci-gray content-['']"></span>
+                <span className="bg-jci-gray absolute top-1.5 left-[-170px] h-px w-40 content-['']"></span>
               </div>
             </div>
 
             <div className="md:mr-48">
               <header>
                 <div className="mt-20">
-                  <h2 className="text-left text-4xl leading-[1.17] font-bold tracking-normal text-jci-black not-italic md:max-w-[470px] md:text-5xl">
+                  <h2 className="text-jci-black text-left text-4xl leading-[1.17] font-bold tracking-normal not-italic md:max-w-[470px] md:text-5xl">
                     Un legado que trasciende generaciones.
                   </h2>
                 </div>
                 <div className="mt-8">
-                  <p className="text-left text-base leading-[1.78] font-normal tracking-normal text-jci-black not-italic md:max-w-[470px]">
+                  <p className="text-jci-black text-left text-base leading-[1.78] font-normal tracking-normal not-italic md:max-w-[470px]">
                     Por cinco décadas, JCI Ambato ha forjado un liderazgo transformador, impulsando
                     la formación de ciudadanos activos y ejecutando proyectos de gran impacto. Su
                     legado se construye con logros, retos superados y generaciones de jóvenes
@@ -85,13 +85,13 @@ export default function ActividadesAnuales() {
                 <article className="max-max-w-xs ml-8 flex h-full flex-col md:ml-10">
                   <header>
                     <div className="mt-6">
-                      <h3 className="text-left text-3xl leading-tight font-bold tracking-normal text-jci-black not-italic">
+                      <h3 className="text-jci-black text-left text-3xl leading-tight font-bold tracking-normal not-italic">
                         {history.year}
                       </h3>
                     </div>
 
                     <div className="mt-16">
-                      <h4 className="text-left text-lg leading-normal font-bold tracking-normal text-jci-black not-italic">
+                      <h4 className="text-jci-black text-left text-lg leading-normal font-bold tracking-normal not-italic">
                         {history.title}
                       </h4>
                     </div>
