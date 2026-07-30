@@ -1,2 +1,1 @@
-export { OrganizationStructuredData } from "./OrganizationStructuredData";
-export { WebsiteStructuredData } from "./WebsiteStructuredData";
+export { JsonLd } from "./JsonLd";

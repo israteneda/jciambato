@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
-import { getProyectoBySlug } from "@/data/proyectos";
-import { getNoticiaEventoBySlug } from "@/data/noticias";
-import { getAreaBySlug } from "@/data/areas-oportunidad";
+import { getProyectoBySlug } from "@/features/proyectos/data";
+import { getNoticiaEventoBySlug } from "@/features/noticias-eventos/data";
+import { getAreaBySlug } from "@/features/inicio/data/areas-oportunidad";
 
 export const runtime = "edge";
 
@@ -42,139 +42,137 @@ export async function GET(request: Request) {
   }
 
   return new ImageResponse(
-    (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        height: "100%",
+        background: "linear-gradient(135deg, #1F4789 0%, #130F2D 100%)",
+        fontFamily: "'Plus Jakarta Sans'",
+        padding: "60px 80px",
+        position: "relative",
+      }}
+    >
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          width: "100%",
-          height: "100%",
-          background: "linear-gradient(135deg, #1F4789 0%, #130F2D 100%)",
-          fontFamily: "'Plus Jakarta Sans'",
-          padding: "60px 80px",
-          position: "relative",
+          alignItems: "center",
+          gap: "16px",
+          marginBottom: "40px",
         }}
       >
+        <img
+          src={`${baseUrl}/images/marca/jci-ambato.webp`}
+          alt="JCI Ambato"
+          width={60}
+          height={60}
+          style={{ borderRadius: "8px" }}
+        />
+        <span
+          style={{
+            color: "#57BCBC",
+            fontSize: "24px",
+            fontWeight: 600,
+            letterSpacing: "1px",
+          }}
+        >
+          JCI AMBATO
+        </span>
+      </div>
+
+      {category && (
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "16px",
-            marginBottom: "40px",
-          }}
-        >
-          <img
-            src={`${baseUrl}/images/logos/jci-ambato.webp`}
-            alt="JCI Ambato"
-            width={60}
-            height={60}
-            style={{ borderRadius: "8px" }}
-          />
-          <span
-            style={{
-              color: "#57BCBC",
-              fontSize: "24px",
-              fontWeight: 600,
-              letterSpacing: "1px",
-            }}
-          >
-            JCI AMBATO
-          </span>
-        </div>
-
-        {category && (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "12px",
-              marginBottom: "16px",
-            }}
-          >
-            <span
-              style={{
-                color: "#EFC40F",
-                fontSize: "18px",
-                fontWeight: 600,
-                letterSpacing: "2px",
-                textTransform: "uppercase",
-              }}
-            >
-              {category}
-            </span>
-          </div>
-        )}
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            flex: 1,
-          }}
-        >
-          <h1
-            style={{
-              color: "#FFFFFF",
-              fontSize: "56px",
-              fontWeight: 600,
-              lineHeight: 1.2,
-              letterSpacing: "-0.5px",
-              margin: 0,
-              maxWidth: "900px",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              display: "-webkit-box",
-            }}
-          >
-            {title}
-          </h1>
-          {subtitle && (
-            <p
-              style={{
-                color: "#aeaeae",
-                fontSize: "28px",
-                fontWeight: 400,
-                marginTop: "16px",
-                margin: 0,
-                maxWidth: "700px",
-              }}
-            >
-              {subtitle}
-            </p>
-          )}
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-            borderTop: "1px solid rgba(255,255,255,0.15)",
-            paddingTop: "24px",
+            gap: "12px",
+            marginBottom: "16px",
           }}
         >
           <span
             style={{
-              color: "#FFFFFF",
+              color: "#EFC40F",
               fontSize: "18px",
-              fontWeight: 400,
+              fontWeight: 600,
+              letterSpacing: "2px",
+              textTransform: "uppercase",
             }}
           >
-            jciambato.org
-          </span>
-          <span
-            style={{
-              color: "#57BCBC",
-              fontSize: "16px",
-              fontWeight: 500,
-            }}
-          >
-            @jciambato
+            {category}
           </span>
         </div>
+      )}
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          flex: 1,
+        }}
+      >
+        <h1
+          style={{
+            color: "#FFFFFF",
+            fontSize: "56px",
+            fontWeight: 600,
+            lineHeight: 1.2,
+            letterSpacing: "-0.5px",
+            margin: 0,
+            maxWidth: "900px",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            display: "-webkit-box",
+          }}
+        >
+          {title}
+        </h1>
+        {subtitle && (
+          <p
+            style={{
+              color: "#aeaeae",
+              fontSize: "28px",
+              fontWeight: 400,
+              marginTop: "16px",
+              margin: 0,
+              maxWidth: "700px",
+            }}
+          >
+            {subtitle}
+          </p>
+        )}
       </div>
-    ),
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "flex-end",
+          borderTop: "1px solid rgba(255,255,255,0.15)",
+          paddingTop: "24px",
+        }}
+      >
+        <span
+          style={{
+            color: "#FFFFFF",
+            fontSize: "18px",
+            fontWeight: 400,
+          }}
+        >
+          jciambato.org
+        </span>
+        <span
+          style={{
+            color: "#57BCBC",
+            fontSize: "16px",
+            fontWeight: 500,
+          }}
+        >
+          @jciambato
+        </span>
+      </div>
+    </div>,
     {
       width: 1200,
       height: 630,

@@ -1,12 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Optimizaciones de rendimiento
-  experimental: {
-    optimizePackageImports: ["@heroui/react"],
-  },
-
-  transpilePackages: ["@heroui/react", "@heroui/theme"],
-
   // Configuración de imágenes
   images: {
     formats: ["image/webp", "image/avif"],
