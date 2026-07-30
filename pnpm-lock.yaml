@@ -4,6 +4,10 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@types/react': 19.2.17
+  '@types/react-dom': 19.2.3
+
 importers:
 
   .:
@@ -91,10 +95,10 @@ importers:
         specifier: 20.5.7
         version: 20.5.7
       '@types/react':
-        specifier: ^19.2.17
+        specifier: 19.2.17
         version: 19.2.17
       '@types/react-dom':
-        specifier: ^19.2.3
+        specifier: 19.2.3
         version: 19.2.3(@types/react@19.2.17)
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.0.0
@@ -295,7 +299,7 @@ packages:
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@date-fns/tz': ^1.2.0
-      '@types/react': ^17 || ^18 || ^19
+      '@types/react': 19.2.17
       date-fns: ^4.0.0
       react: ^17 || ^18 || ^19
       react-dom: ^17 || ^18 || ^19
@@ -310,7 +314,7 @@ packages:
   '@base-ui/utils@0.3.1':
     resolution: {integrity: sha512-gFFiltORVmW/N6IILTGxizP3PBpVpysqML1ALY5Vk0mH+7faVkCknOU31goYHN5Aoek2dkjxva1XOD2Ce9WuIg==}
     peerDependencies:
-      '@types/react': ^17 || ^18 || ^19
+      '@types/react': 19.2.17
       react: ^17 || ^18 || ^19
       react-dom: ^17 || ^18 || ^19
     peerDependenciesMeta:
@@ -685,7 +689,7 @@ packages:
   '@shadcn/react@0.2.1':
     resolution: {integrity: sha512-5krgi3dRMKb5jH6a+qPzVJUy/54s0kKE4Rw4LjDfLqOdVQTWKUgxWf1kW8r912I0jX/Lzxqc+pgjkjWxUIK5BQ==}
     peerDependencies:
-      '@types/react': '>=19'
+      '@types/react': 19.2.17
       react: '>=19'
     peerDependenciesMeta:
       '@types/react':
@@ -812,7 +816,7 @@ packages:
   '@types/react-dom@19.2.3':
     resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
     peerDependencies:
-      '@types/react': ^19.2.0
+      '@types/react': 19.2.17
 
   '@types/react@19.2.17':
     resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
