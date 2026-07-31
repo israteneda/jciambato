@@ -207,7 +207,7 @@ export default function Bienvenida() {
           <BorderFrame isScrolled={isScrolled} />
 
           {/* Contenido principal */}
-          <main className="relative z-20 w-full">
+          <div className="relative z-20 w-full">
             <div className="flex flex-col items-start">
               <div className="mt-5">
                 <h2 className="from-jci-navy to-jci-navy max-w-xl bg-linear-to-br via-white bg-clip-text pb-3 text-2xl font-bold text-transparent md:max-w-5xl md:text-5xl lg:text-7xl">
@@ -236,7 +236,7 @@ export default function Bienvenida() {
                 </Button>
               </div>
             </div>
-          </main>
+          </div>
         </div>
         <RotatedText text="BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO" />
         {/* Botón de scroll */}

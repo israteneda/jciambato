@@ -18,7 +18,7 @@ export const metadata = {
 
 export default function NosotrosPage() {
   return (
-    <main className="relative overflow-hidden">
+    <div className="relative overflow-hidden">
       <Bienvenida />
 
       {/* Bloque espaciado */}
@@ -36,6 +36,6 @@ export default function NosotrosPage() {
       <Valores />
       <Opinion />
       <ActividadesAnuales />
-    </main>
+    </div>
   );
 }

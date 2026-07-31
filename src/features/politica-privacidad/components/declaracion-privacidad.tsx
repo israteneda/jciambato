@@ -13,7 +13,7 @@ export default function DeclaracionPrivacidad() {
             </time>
           </header>
 
-          <main className="mt-16">
+          <div className="mt-16">
             <section>
               <h2 className="text-jci-black mb-4 text-left text-3xl leading-tight font-bold">
                 Declaración de Privacidad y Protección de Datos Personales
@@ -529,7 +529,7 @@ export default function DeclaracionPrivacidad() {
                 </div>
               </div>
             </section>
-          </main>
+          </div>
         </div>
       </div>
     </article>

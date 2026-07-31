@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 export default function PoliticaGestionPage() {
   return (
-    <main>
+    <div>
       <Bienvenida />
-      <div className="h-[640px]" aria-hidden="true"></div>
+      <div className="h-160" aria-hidden="true"></div>
 
       <PoliticaGestion />
-    </main>
+    </div>
   );
 }

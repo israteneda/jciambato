@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function MiembrosPage() {
   return (
-    <main className="relative">
+    <div className="relative">
       <Bienvenida />
 
       {/* Bloque espaciado para efecto de scroll */}
@@ -30,6 +30,6 @@ export default function MiembrosPage() {
       <Senadores />
       <MiembrosNacionales />
       {/* <PasadosPresidentes /> */}
-    </main>
+    </div>
   );
 }

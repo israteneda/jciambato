@@ -11,9 +11,9 @@ export const metadata = {
 
 export default function AreasOportunidadPage() {
   return (
-    <main className="relative">
+    <div className="relative">
       <Bienvenida />
       <AreasOportunidad />
-    </main>
+    </div>
   );
 }

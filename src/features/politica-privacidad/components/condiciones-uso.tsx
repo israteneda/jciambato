@@ -8,15 +8,12 @@ export default function CondicionesUso() {
               Condiciones de Uso
             </h1>
 
-            <time
-              className="text-jci-teal mt-8 block text-xl font-bold text-inherit italic"
-              dateTime="2025-07"
-            >
+            <time className="text-jci-teal mt-8 block text-xl font-bold italic" dateTime="2025-07">
               Julio, 2025
             </time>
           </header>
 
-          <main className="mt-16">
+          <div className="mt-16">
             <section>
               <div className="text-jci-black max-w-2xl text-left text-lg leading-[1.78] font-normal">
                 <div className="flex flex-col gap-5">
@@ -213,7 +210,7 @@ export default function CondicionesUso() {
                 </div>
               </div>
             </section>
-          </main>
+          </div>
         </div>
       </div>
     </article>

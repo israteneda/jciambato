@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 export default function ProyectosPage() {
   return (
-    <main>
+    <div>
       {/* Sección de Bienvenida */}
       <Bienvenida />
-      <div className="h-[640px]" aria-hidden="true"></div>
+      <div className="h-160" aria-hidden="true"></div>
       <Proyectos />
-    </main>
+    </div>
   );
 }

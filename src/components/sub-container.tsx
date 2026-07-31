@@ -1,10 +1,10 @@
-interface InfoContainerProps {
+interface SubContainerProps {
   subtitle: string;
   title: string;
   description: string;
 }
 
-export default function InfoContainer({ subtitle, title, description }: InfoContainerProps) {
+export default function SubContainer({ subtitle, title, description }: SubContainerProps) {
   return (
     <section>
       <div className="hidden md:block">

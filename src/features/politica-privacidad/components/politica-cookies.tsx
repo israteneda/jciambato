@@ -18,7 +18,7 @@ export default function PoliticaCookies() {
             </p>
           </header>
 
-          <main className="mt-16">
+          <div className="mt-16">
             <section>
               <div className="mt-8">
                 <div className="text-jci-black max-w-2xl text-left text-lg leading-[1.78] font-normal">
@@ -193,7 +193,7 @@ export default function PoliticaCookies() {
                 </div>
               </div>
             </section>
-          </main>
+          </div>
         </div>
       </div>
     </article>

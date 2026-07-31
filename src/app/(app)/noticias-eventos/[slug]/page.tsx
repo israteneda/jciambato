@@ -101,9 +101,9 @@ export default async function NoticiasEventosPage({ params }: NoticiasEventosPag
           __html: JSON.stringify(structuredData),
         }}
       />
-      <main className="relative">
+      <div className="relative">
         <Detalles noticiaEvento={noticiaEvento} />
-      </main>
+      </div>
     </>
   );
 }
