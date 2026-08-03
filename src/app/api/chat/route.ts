@@ -1,9 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+let openai: OpenAI | null = null;
+
+function getOpenAI(): OpenAI {
+  if (!openai) {
+    openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+  }
+  return openai;
+}
 
 // Contexto sobre JCI Ambato
 const JCI_AMBATO_CONTEXT = `
@@ -145,7 +152,7 @@ Ejemplo de respuesta: "¡Hola! 👋 Soy Junior Bot de JCI Ambato. Te puedo ayuda
       },
     ];
 
-    const completion = await openai.chat.completions.create({
+    const completion = await getOpenAI().chat.completions.create({
       model: "gpt-4o-mini",
       messages: messages,
       max_tokens: 800,

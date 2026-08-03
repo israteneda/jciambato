@@ -9,13 +9,13 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/images/logos/jci-ambato.webp",
+      "src": "/images/marca/jci-ambato.webp",
       "sizes": "192x192",
       "type": "image/webp",
       "purpose": "any maskable"
     },
     {
-      "src": "/images/logos/jci-ambato.webp",
+      "src": "/images/marca/jci-ambato.webp",
       "sizes": "512x512",
       "type": "image/webp",
       "purpose": "any maskable"

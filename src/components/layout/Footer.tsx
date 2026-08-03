@@ -1,26 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { HiOutlineArrowUp } from "react-icons/hi2";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { jciLinks } from "@/data/footer";
-import { siteConfig } from "@/config/site";
-import { useEffect, useState } from "react";
+import { jciLinks } from "@/features/inicio/data/footer";
+import { siteConfig } from "@/config/seo";
 
 export function Footer() {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  const handleScrollToTop = () => {
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
   return (
     <footer
       className="relative z-20 overflow-hidden bg-gray-50 select-none"
@@ -68,7 +52,7 @@ export function Footer() {
 
       {/* Sección decorativa */}
       <section className="relative z-20 hidden md:block" aria-hidden="true">
-        <div className="pointer-events-none absolute -top-36.25 right-0 left-0 z-3 text-center leading-70 font-black tracking-normal whitespace-nowrap uppercase not-italic opacity-20 md:text-[125px] lg:text-[235px]">
+        <div className="pointer-events-none absolute -top-36.25 right-0 left-0 z-3 text-center leading-70 font-extrabold tracking-normal whitespace-nowrap uppercase not-italic opacity-20 md:text-[125px] lg:text-[235px]">
           JCI AMBATO
         </div>
       </section>
@@ -92,8 +76,8 @@ export function Footer() {
                   <Link href="/" aria-label="Ir a Inicio">
                     <Image
                       alt="JCI Ambato Logo"
-                      className="h-15 w-27.5 object-contain"
-                      src="/images/logos/jci-ambato.webp"
+                      className="h-15 w-auto object-contain"
+                      src="/images/marca/jci-ambato.webp"
                       width={110}
                       height={50}
                     />
@@ -167,19 +151,6 @@ export function Footer() {
                       >
                         <FaInstagram className="hover:text-jci-teal h-6 w-6" aria-hidden="true" />
                       </a>
-
-                      {/* Botón para volver arriba para pantallas pequeñas y medianas*/}
-                      <div className="mt-10 block lg:hidden">
-                        <button
-                          type="button"
-                          aria-label="Volver arriba"
-                          onClick={handleScrollToTop}
-                          className={isClient ? "block" : "hidden"}
-                          suppressHydrationWarning
-                        >
-                          <HiOutlineArrowUp className="h-10 w-10" aria-hidden="true" />
-                        </button>
-                      </div>
                     </div>
                   </aside>
                 </div>
@@ -208,21 +179,6 @@ export function Footer() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Botón para volver arriba, pantallas grandes*/}
-            <div className="absolute top-[45%] right-[5%] hidden md:top-[50%] md:right-[8%] lg:top-[30%] lg:right-[5%] lg:block">
-              <div className="flex items-center justify-center">
-                <button
-                  type="button"
-                  aria-label="Volver arriba"
-                  onClick={handleScrollToTop}
-                  className={isClient ? "block" : "hidden"}
-                  suppressHydrationWarning
-                >
-                  <HiOutlineArrowUp className="h-10 w-10" aria-hidden="true" />
-                </button>
               </div>
             </div>
           </div>
