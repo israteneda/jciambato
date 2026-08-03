@@ -156,7 +156,7 @@ pnpm format
 
 El sitio se despliega en **[Vercel](https://vercel.com/)**.
 
-- Vercel detecta pnpm automáticamente a través del campo `packageManager` en `package.json` (vía Corepack), sin configuración adicional de build.
+- El comando de instalación (`pnpm install --frozen-lockfile`) está fijado en [`vercel.json`](./vercel.json), que tiene prioridad sobre cualquier configuración manual del dashboard (Settings → Build & Development Settings). Esto asegura que Vercel siempre use pnpm, sin depender de configuración fuera del repositorio.
 - Las variables de entorno de [Variables de Entorno](#variables-de-entorno) deben configurarse en el proyecto de Vercel (Settings → Environment Variables) para que el build y el runtime de producción funcionen.
 
 ## Contribución
