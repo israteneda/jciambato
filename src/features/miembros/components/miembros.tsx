@@ -1,11 +1,13 @@
+import { Container } from "@/components/layout/container";
+import { Section } from "@/components/layout/section";
 import { miembros } from "@/features/miembros/data/miembros";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function MiembrosGenerales() {
   return (
-    <section className="relative z-10 py-16" aria-labelledby="miembros-activos-heading">
-      <div className="mx-8 max-w-6xl md:mx-20 lg:mx-auto">
+    <Section className="bg-jci-bg" aria-labelledby="miembros-activos-heading">
+      <Container className="mx-8 max-w-6xl md:mx-20 lg:mx-auto">
         {/* Header */}
         <header className="mb-12 text-start">
           <h2
@@ -78,7 +80,7 @@ export default function MiembrosGenerales() {
             </article>
           ))}
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

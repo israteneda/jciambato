@@ -76,14 +76,7 @@ export default function Formulario() {
   return (
     <section className="relative z-1 overflow-hidden" aria-labelledby="formulario-heading">
       <div className="mt-8 md:mt-16">
-        <BackgroundText
-          textoPrimario="Hablemos"
-          textoSecundario=""
-          numberLeft={0.15}
-          numberRight={0.1}
-          numberLeftMobile={0.05}
-          numberRightMobile={0.03}
-        />
+        <BackgroundText primary="Hablemos" />
       </div>
 
       <div className="mt-16 bg-[#e8e8e8] md:mt-60">

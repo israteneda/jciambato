@@ -12,6 +12,7 @@
 @theme inline {
   /* ─── Colores oficiales JCI (Internacional v1.4) ─── */
   --color-jci-gray: #aeaeae;
+  /* Ver la posibilidad de agregar este nuetvo texto de color [#323232] */
   --color-jci-blue: #0097d7;
   --color-jci-black: #130f2d;
   --color-jci-navy: #1f4789;
@@ -165,7 +166,13 @@
     @apply bg-foreground text-background;
   }
 
+  main {
+    display: block;
+    unicode-bidi: isolate;
+  }
+
   body {
+    line-height: 1;
     font-family: var(--font-sans);
     font-size: 16px;
     font-weight: 400;

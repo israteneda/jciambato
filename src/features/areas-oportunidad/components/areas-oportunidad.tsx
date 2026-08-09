@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { areasOportunidad } from "@/features/inicio/data/areas-oportunidad";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { Section } from "@/components/layout/section";
 
 export default function AreasOportunidad() {
   return (
-    <section className="relative bg-transparent" aria-labelledby="areas-oportunidad-heading">
-      <div className="my-20">
+    <Section className="py-0 md:py-0" aria-labelledby="areas-oportunidad-heading">
+      <div className="my-10">
         <header className="sr-only">
           <h2 id="areas-oportunidad-heading">Áreas de Oportunidad</h2>
         </header>
@@ -23,7 +24,7 @@ export default function AreasOportunidad() {
               role="listitem"
             >
               {/* Imagen */}
-              <figure className="relative h-[300px] min-h-min w-full overflow-hidden md:h-auto md:min-h-[632px] md:w-1/2 xl:w-1/3">
+              <figure className="relative h-75 min-h-min w-full overflow-hidden md:h-auto md:min-h-158 md:w-1/2 xl:w-1/3">
                 <div className="relative h-full w-full overflow-hidden">
                   <Image
                     src={area.image}
@@ -37,15 +38,15 @@ export default function AreasOportunidad() {
               </figure>
 
               {/* Contenido */}
-              <div className="relative h-auto w-full overflow-hidden bg-white p-10 md:min-h-[632px] md:w-1/2 md:p-20 xl:w-1/3">
+              <div className="relative h-auto w-full overflow-hidden bg-white p-10 md:min-h-158 md:w-1/2 md:p-20 xl:w-1/3">
                 <header>
-                  <h3 className="max-w-[372px] text-left text-4xl leading-[1.17] font-semibold tracking-normal not-italic">
+                  <h3 className="max-w-93 text-left text-4xl leading-[1.17] font-semibold tracking-normal not-italic">
                     {area.title}
                   </h3>
                 </header>
 
                 <div className="mt-5">
-                  <p className="text-md text-jci-navy max-w-[372px] text-left leading-[1.78] font-normal tracking-normal not-italic">
+                  <p className="text-md text-jci-navy max-w-93 text-left leading-[1.78] font-normal tracking-normal not-italic">
                     {area.description}
                   </p>
                 </div>
@@ -59,7 +60,7 @@ export default function AreasOportunidad() {
                         alt={`Logo de ${area.title}`}
                         width={290}
                         height={100}
-                        className="h-auto w-auto max-w-[180px] object-contain"
+                        className="h-auto w-auto max-w-45 object-contain"
                         draggable="false"
                       />
                     )}
@@ -71,13 +72,10 @@ export default function AreasOportunidad() {
                     <h4 id={`features-${area.id}`} className="sr-only">
                       Características de {area.title}
                     </h4>
-                    <ul
-                      className="mt-[8px] mr-[-10px] ml-[-10px] flex flex-row flex-wrap"
-                      role="list"
-                    >
+                    <ul className="-mx-2.5 mt-2 flex flex-row flex-wrap" role="list">
                       {area.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="w-1/2">
-                          <div className="mx-[10px] border-t border-t-white py-[11px]">
+                          <div className="mx-2.5 border-t border-t-white py-2.75">
                             <span className="text-jci-navy text-[14px] leading-[1.78] font-semibold tracking-normal not-italic">
                               {feature}
                             </span>
@@ -112,6 +110,6 @@ export default function AreasOportunidad() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

@@ -1,10 +1,11 @@
+import { Section } from "@/components/layout/section";
 import { juntaDirectiva } from "@/features/miembros/data/junta-directiva";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
-export default function Miembros() {
+export default function JuntaDirectiva() {
   return (
-    <section className="relative z-10 py-16" aria-labelledby="junta-directiva-heading">
+    <Section className="bg-jci-bg py-24 md:py-34" aria-labelledby="junta-directiva-heading">
       <div className="mx-8 max-w-5xl md:mx-20 lg:mx-auto">
         {/* Header */}
         <header className="mb-12 text-start">
@@ -100,6 +101,6 @@ export default function Miembros() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

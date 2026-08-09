@@ -1,6 +1,9 @@
+import { Container } from "@/components/layout/container";
+import { Section } from "@/components/layout/section";
+
 export default function PoliticaGestion() {
   return (
-    <section className="relative bg-gray-50">
+    <Section className="bg-gray-50">
       <div className="box-border flex min-h-28 items-center bg-gray-200 md:mx-8">
         <h1 className="text-jci-black ml-8 leading-none font-bold whitespace-nowrap transition duration-300 md:ml-20">
           Política de Gestión
@@ -8,7 +11,7 @@ export default function PoliticaGestion() {
       </div>
 
       <div className="mt-16">
-        <div className="relative z-10 mx-auto px-8 md:max-w-6xl">
+        <Container>
           <h3 className="text-jci-black max-w-3xl text-left text-2xl font-bold md:leading-normal lg:text-5xl">
             JCI Ambato se compromete a empoderar a sus miembros, senadores y colaboradores,
             fortaleciendo su sentido de pertenencia y satisfacción mediante relaciones sólidas,
@@ -24,7 +27,7 @@ export default function PoliticaGestion() {
                 impacto transformador.
               </h4>
             </div>
-            <div className="mt-8 max-w-[666px] text-left leading-[1.78]">
+            <div className="mt-8 max-w-166 text-left leading-[1.78]">
               <p className="text-jci-teal my-3 font-bold">Así, se compromete a:</p>
 
               <ul className="text-jci-black space-y-3">
@@ -108,8 +111,8 @@ export default function PoliticaGestion() {
               </ul>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
-    </section>
+    </Section>
   );
 }

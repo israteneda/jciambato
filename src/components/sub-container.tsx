@@ -6,7 +6,7 @@ interface SubContainerProps {
 
 export default function SubContainer({ subtitle, title, description }: SubContainerProps) {
   return (
-    <section>
+    <>
       <div className="hidden md:block">
         <div className="absolute top-20 left-0 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
           <div
@@ -19,22 +19,20 @@ export default function SubContainer({ subtitle, title, description }: SubContai
         </div>
       </div>
 
-      <div className="md:ml-36">
-        <div className="flex">
-          <header className="md:max-w-xl">
-            <div className="mt-20">
-              <h2 className="text-jci-black text-left text-4xl leading-[1.17] font-bold tracking-normal not-italic md:text-5xl">
-                {title}
-              </h2>
-            </div>
-            <div className="mt-8">
-              <div className="text-jci-black flex flex-col gap-3 text-left text-base leading-[1.78]">
-                {description}
-              </div>
-            </div>
-          </header>
-        </div>
+      <div className="flex">
+        <header className="md:max-w-xl">
+          <div className="mt-20">
+            <h2 className="text-jci-black text-left text-4xl leading-[1.17] font-bold tracking-normal not-italic md:max-w-117.5 md:text-5xl">
+              {title}
+            </h2>
+          </div>
+          <div className="mt-8">
+            <p className="text-jci-black flex flex-col gap-3 text-left text-base leading-[1.78] font-normal tracking-normal not-italic md:max-w-117.5">
+              {description}
+            </p>
+          </div>
+        </header>
       </div>
-    </section>
+    </>
   );
 }

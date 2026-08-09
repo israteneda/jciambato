@@ -1,20 +1,19 @@
+import { Container } from "@/components/layout/container";
+import { Section } from "@/components/layout/section";
 import { AreaOportunidad } from "@/types/area-oportunidad";
 
 export default function Caracteristicas({ area }: { area: AreaOportunidad }) {
   return (
-    <section
-      className="relative my-20 lg:my-48"
-      aria-labelledby={`presentacion-${area.slug}-heading`}
-    >
-      <div className="relative max-w-6xl px-8 md:mx-20 lg:mx-auto">
+    <Section aria-labelledby={`presentacion-${area.slug}-heading`}>
+      <Container>
         <div className="hidden md:block">
-          <div className="absolute top-[80px] left-0 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
+          <div className="absolute top-20 left-0 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform">
             <div
               className="text-jci-gray relative text-[11px] leading-none font-medium tracking-[2px] whitespace-nowrap uppercase not-italic"
               aria-hidden="true"
             >
               Vicepresidencia Local
-              <span className="bg-jci-gray absolute top-1.5 left-[-170px] h-px w-40 content-['']"></span>
+              <span className="bg-jci-gray absolute top-1.5 -left-42.5 h-px w-40 content-['']"></span>
             </div>
           </div>
         </div>
@@ -33,10 +32,7 @@ export default function Caracteristicas({ area }: { area: AreaOportunidad }) {
                   <h4 id={`features-${area.id}`} className="sr-only">
                     Características de {area.title}
                   </h4>
-                  <ul
-                    className="mt-[8px] mr-[-10px] mb-[68px] ml-[-10px] flex flex-row flex-wrap"
-                    role="list"
-                  >
+                  <ul className="mt-2 -mr-2.5 mb-17 -ml-2.5 flex flex-row flex-wrap" role="list">
                     {area.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="w-1/2">
                         <div className="border-t-jci-navy mx-3 border-t py-4">
@@ -70,7 +66,7 @@ export default function Caracteristicas({ area }: { area: AreaOportunidad }) {
             </header>
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

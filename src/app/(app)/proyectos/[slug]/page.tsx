@@ -82,10 +82,10 @@ export default async function ProyectosPage({ params }: ProyectosPageProps) {
   }
 
   return (
-    <div className="relative">
+    <>
       <Presentacion proyecto={proyecto} />
       <Descripcion proyecto={proyecto} />
       <SiguienteProyecto proyecto={proyecto} />
-    </div>
+    </>
   );
 }

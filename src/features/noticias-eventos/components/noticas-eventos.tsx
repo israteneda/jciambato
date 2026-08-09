@@ -11,6 +11,8 @@ import {
 import { NoticiaEvento } from "@/types/noticia";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Button } from "@/components/ui/button";
+import { Section } from "@/components/layout/section";
+import { Container } from "@/components/layout/container";
 
 export default function NoticiasEventosPorTipo() {
   // Estado para controlar el botón activo (0 = Todos, 1 = Noticas, 2 = Eventos)
@@ -46,7 +48,7 @@ export default function NoticiasEventosPorTipo() {
         aria-label={`Ver detalles de ${noticiaEvento.titulo}`}
       >
         <div className="group flex h-full w-full flex-col">
-          <header className="flex min-h-[120px] flex-col justify-start">
+          <header className="flex min-h-30 flex-col justify-start">
             <div className="text-jci-gray text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
               <span>{noticiaEvento.tipo}</span>
             </div>
@@ -74,7 +76,7 @@ export default function NoticiasEventosPorTipo() {
             </div>
           </div>
 
-          <figure className="mt-auto h-[280px] overflow-hidden md:h-[350px]">
+          <figure className="mt-auto h-70 overflow-hidden md:h-87.5">
             <div className="relative h-full w-full overflow-hidden">
               <Image
                 src={noticiaEvento.imagen}
@@ -131,16 +133,16 @@ export default function NoticiasEventosPorTipo() {
   };
 
   return (
-    <div className="relative z-10">
+    <Section className="py-0 md:py-0" aria-labelledby="proyectos-contenido-heading">
       <header className="sr-only">
         <h2 id="proyectos-contenido-heading">Contenido de Noticias y Eventos</h2>
       </header>
 
       <nav
-        className="relative z-10 w-full opacity-[1] transition-all duration-300"
+        className="relative w-full opacity-[1] transition-all duration-300"
         aria-label="Filtros de noticias y eventos por tipo"
       >
-        <div className="relative z-10 mx-auto h-full">
+        <div className="relative mx-auto h-full">
           <div
             className="box-border bg-white p-12 lg:mx-20"
             aria-label="Filtros de proyectos por área"
@@ -159,7 +161,7 @@ export default function NoticiasEventosPorTipo() {
                 <button
                   key={index}
                   onClick={() => handleCategoryChange(index)}
-                  className={`hover:text-jci-navy mr-[42px] p-0 text-left text-2xl leading-tight font-bold transition duration-300 ${
+                  className={`hover:text-jci-navy mr-10.5 p-0 text-left text-2xl leading-tight font-bold transition duration-300 ${
                     activeButton === index ? "text-jci-black" : "text-jci-navy"
                   }`}
                   role="tab"
@@ -168,7 +170,7 @@ export default function NoticiasEventosPorTipo() {
                   id={`tab-${index}`}
                 >
                   {tipo.name}
-                  <sup className="inline pl-[10px] align-super text-[16px] font-normal">
+                  <sup className="inline pl-2.5 align-super text-[16px] font-normal">
                     {tipo.count}
                   </sup>
                 </button>
@@ -176,33 +178,33 @@ export default function NoticiasEventosPorTipo() {
             </div>
 
             {/* Select desde pantallas medianas */}
-            {/* <div className="block sm:hidden w-full max-w-xs">
-                            <Select
-                                label="Filtrar por tipo"
-                                placeholder="Selecciona una opción"
-                                value={activeButton}
-                                onChange={(value) => handleCategoryChange(Number(value))}
-                                className="max-w-xs"
-                            >
-                                {tipos.map((tipo, index) => (
-                                    <SelectItem key={tipo.name} data-value={index.toString()}>
-                                        {tipo.name}
-                                    </SelectItem>
-                                ))}
-                            </Select>
-                        </div> */}
+            {/* <div className="block w-full max-w-xs sm:hidden">
+              <Select
+                label="Filtrar por tipo"
+                placeholder="Selecciona una opción"
+                value={activeButton}
+                onChange={(value) => handleCategoryChange(Number(value))}
+                className="max-w-xs"
+              >
+                {tipos.map((tipo, index) => (
+                  <SelectItem key={tipo.name} data-value={index.toString()}>
+                    {tipo.name}
+                  </SelectItem>
+                ))}
+              </Select>
+            </div> */}
           </div>
         </div>
       </nav>
 
       <div className="bg-jci-bg min-h-96 pb-9">
-        <div className="relative z-10 mx-8 max-w-6xl md:mx-20 lg:mx-auto">
+        <Container>
           <div className="transition-all duration-300 ease-in-out">
-            <div className="min-h-[650px]" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
+            <div className="min-h-162.5" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
               {renderContent()}
             </div>
           </div>
-        </div>
+        </Container>
 
         <footer className="bg-jci-bg flex justify-center py-20">
           {(() => {
@@ -229,7 +231,7 @@ export default function NoticiasEventosPorTipo() {
                   onClick={() => setCurrentPage(currentPage + 1)}
                 >
                   <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-cyan-950 transition-transform duration-300 group-hover:translate-x-0"></span>
-                  <span className="relative z-10">Ver más</span>
+                  <span className="relative">Ver más</span>
                 </Button>
               );
             }
@@ -237,6 +239,6 @@ export default function NoticiasEventosPorTipo() {
           })()}
         </footer>
       </div>
-    </div>
+    </Section>
   );
 }

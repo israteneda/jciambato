@@ -1,24 +1,23 @@
+import { Container } from "@/components/layout/container";
+import { Section } from "@/components/layout/section";
 import { AreaOportunidad } from "@/types/area-oportunidad";
 import Image from "next/image";
 
 export default function Presentacion({ area }: { area: AreaOportunidad }) {
   return (
-    <section
-      className="relative z-20 overflow-hidden"
-      aria-labelledby={`presentacion-${area.slug}-heading`}
-    >
-      <div className="relative z-1 mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
+    <Section className="overflow-hidden" aria-labelledby={`presentacion-${area.slug}-heading`}>
+      <Container>
         <div className="mt-16">
           <div className="max-w-5xl">
             <header>
-              <div className="text-jci-gray text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">
+              <div className="text-jci-gray text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
                 {area.subtitle}
               </div>
 
               <div className="mt-8">
                 <h2
                   id={`presentacion-${area.slug}-heading`}
-                  className="text-jci-black text-left text-3xl font-bold md:text-5xl md:leading-[1.33]"
+                  className="text-jci-black text-left text-3xl leading-[1.1] font-bold tracking-[-1px] not-italic md:max-w-[75%] md:text-4xl lg:text-5xl"
                 >
                   {area.description}
                 </h2>
@@ -40,7 +39,7 @@ export default function Presentacion({ area }: { area: AreaOportunidad }) {
                     alt={`Logo de ${area.title}`}
                     width={400}
                     height={140}
-                    className="h-auto w-auto max-w-[280px] object-contain"
+                    className="h-auto w-auto max-w-70 object-contain"
                     draggable="false"
                   />
                 )}
@@ -48,7 +47,7 @@ export default function Presentacion({ area }: { area: AreaOportunidad }) {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

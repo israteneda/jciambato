@@ -11,10 +11,10 @@ export const metadata = {
 
 export default function ImpactoPage() {
   return (
-    <div className="relative">
+    <>
       <Bienvenida />
       <Presentacion />
       <Valores />
-    </div>
+    </>
   );
 }

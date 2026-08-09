@@ -12,6 +12,7 @@ import {
 import { Proyecto } from "@/types/proyecto";
 import { Button } from "@/components/ui/button";
 import { getProyectosDestacados } from "@/features/proyectos/data/destacados/proyectos-destacados";
+import { Container } from "./layout/container";
 
 interface CarouselProps {
   proyectos?: Proyecto[];
@@ -43,13 +44,13 @@ export const Carousel = ({
   }, [autoPlayInterval, proyectos.length]);
 
   return (
-    <section
+    <div
       className="relative overflow-hidden"
       aria-label="Carrusel de proyectos"
       aria-roledescription="carousel"
       aria-live="polite"
     >
-      <div className="relative h-[650px] w-full md:h-[760px]">
+      <div className="relative h-162 w-full md:h-190">
         <div className="">
           {proyectos.map((proyecto, index) => (
             <article
@@ -71,8 +72,8 @@ export const Carousel = ({
               />
 
               {/* Contenido del Slide */}
-              <div className="relative h-full w-full pt-24 pb-[46px]">
-                <div className="relative mx-8 h-full md:mx-20 md:max-w-7xl lg:mx-auto">
+              <div className="relative h-full w-full pt-24 pb-11">
+                <Container className="h-full">
                   {/* Texto y botón */}
                   <header>
                     <div className="text-[13px] leading-[1.85] font-bold text-white uppercase">
@@ -86,7 +87,7 @@ export const Carousel = ({
                       </h3>
                     </div>
                     <div className="mt-10 md:mt-20">
-                      <p className="text-medium max-w-[470px] text-left leading-[1.78] text-white md:text-[calc(15.6px+0.125vw)]">
+                      <p className="text-medium max-w-117 text-left leading-[1.78] text-white md:text-[calc(15.6px+0.125vw)]">
                         {proyecto.descripcion}
                       </p>
                     </div>
@@ -118,27 +119,17 @@ export const Carousel = ({
                       </div>
 
                       <nav className="flex gap-1 md:hidden" aria-label="Navegación del carrusel">
-                        <Button
-                          size="icon"
-                          className="h-[40px] w-[40px] border-[#989898] text-[#989898]"
-                          onClick={prevSlide}
-                          aria-label="Slide anterior"
-                        >
+                        <Button size="icon" onClick={prevSlide} aria-label="Slide anterior">
                           <HiChevronLeft className="h-6 w-6 text-gray-50" />
                         </Button>
-                        <div className="h-[12px]" />
-                        <Button
-                          size="icon"
-                          className="h-[40px] w-[40px] border-[#989898] text-[#989898]"
-                          onClick={nextSlide}
-                          aria-label="Slide siguiente"
-                        >
+                        <div className="h-3" />
+                        <Button size="icon" onClick={nextSlide} aria-label="Slide siguiente">
                           <HiChevronRight className="h-6 w-6 text-gray-50" />
                         </Button>
                       </nav>
                     </div>
                   </footer>
-                </div>
+                </Container>
               </div>
             </article>
           ))}
@@ -147,7 +138,7 @@ export const Carousel = ({
 
       {/* Indicadores numéricos */}
       <div
-        className="absolute top-1/2 right-[54px] z-50 hidden w-[22px] -translate-y-1/2 transform flex-col items-center md:flex"
+        className="absolute top-1/2 right-13 z-50 hidden w-5 -translate-y-1/2 transform flex-col items-center md:flex"
         aria-label="Indicador de posición"
         aria-live="polite"
       >
@@ -161,23 +152,23 @@ export const Carousel = ({
 
       {/* Botones de navegación pantallas grandes */}
       <nav
-        className="absolute right-[45px] bottom-[112px] hidden flex-col md:flex"
+        className="absolute right-11 bottom-28 hidden flex-col md:flex"
         aria-label="Navegación del carrusel"
       >
-        <Button size="icon" onClick={prevSlide} aria-label="Slide anterior">
+        <Button size="icon-lg" onClick={prevSlide} aria-label="Slide anterior">
           <HiChevronLeft className="h-6 w-6 text-white" />
         </Button>
-        <div className="h-[12px]" />
-        <Button size="icon" onClick={nextSlide} aria-label="Slide siguiente">
+        <div className="h-3" />
+        <Button size="icon-lg" onClick={nextSlide} aria-label="Slide siguiente">
           <HiChevronRight className="h-6 w-6 text-white" />
         </Button>
       </nav>
 
       {/* Botón colección */}
-      <div className="absolute right-[45px] bottom-[48px] hidden md:block">
+      <div className="absolute right-11 bottom-12 hidden md:block">
         <Link href="/proyectos" aria-label="Ver todos los proyectos">
           <Button
-            size="icon"
+            size="icon-lg"
             className="bg-jci-blue transition-colors duration-300 hover:bg-[#003D62]"
             aria-label="Ver colección de proyectos"
           >
@@ -185,6 +176,6 @@ export const Carousel = ({
           </Button>
         </Link>
       </div>
-    </section>
+    </div>
   );
 };

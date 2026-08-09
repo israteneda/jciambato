@@ -18,21 +18,12 @@ export const metadata: Metadata = {
 
 export default function InvolucratePage() {
   return (
-    <div className="relative">
+    <>
       <Bienvenida />
-
-      {/* Bloque espaciado */}
-      <div className="h-160" aria-hidden="true"></div>
-      <div
-        className="bg-jci-bg absolute top-0 h-full w-full"
-        style={{ transform: "translateY(99.9vh)" }}
-        aria-hidden="true"
-      ></div>
-
       <Acciones />
       <Beneficios />
       <Cursos />
       <Formulario />
-    </div>
+    </>
   );
 }

@@ -1,9 +1,10 @@
 import InfoContainer from "@/components/info-container";
+import { Section } from "@/components/layout/section";
 import RotatedText from "@/components/rotated-text";
 
 export default function Bienvenida() {
   return (
-    <section className="relative z-1 box-border h-auto w-full pt-48 pb-32">
+    <Section>
       <div className="relative">
         <RotatedText text="Nuestras Áreas de Oportunidad" />
 
@@ -13,6 +14,6 @@ export default function Bienvenida() {
           description="Descubre en qué área puedes desarrollarte, servir y liderar con propósito."
         />
       </div>
-    </section>
+    </Section>
   );
 }

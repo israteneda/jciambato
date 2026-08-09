@@ -4,6 +4,7 @@ import { useState } from "react";
 import DeclaracionPrivacidad from "./declaracion-privacidad";
 import CondicionesUso from "./condiciones-uso";
 import PoliticaCookies from "./politica-cookies";
+import { Section } from "@/components/layout/section";
 
 export default function PoliticaPrivacidad() {
   // Estado para controlar el botón de activo
@@ -30,7 +31,7 @@ export default function PoliticaPrivacidad() {
   };
 
   return (
-    <section className="relative bg-gray-50">
+    <Section className="bg-gray-50">
       <nav className="mx-8 box-border flex min-h-28 items-center bg-gray-200">
         <div
           className="ml-8 flex flex-wrap gap-6 py-8 md:ml-20"
@@ -63,6 +64,6 @@ export default function PoliticaPrivacidad() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

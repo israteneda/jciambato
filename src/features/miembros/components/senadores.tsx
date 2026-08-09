@@ -1,11 +1,13 @@
+import { Container } from "@/components/layout/container";
+import { Section } from "@/components/layout/section";
 import { senadores } from "@/features/miembros/data/senadores";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Senadores() {
   return (
-    <section className="relative z-10 py-16" aria-labelledby="senadores-heading">
-      <div className="mx-8 max-w-6xl md:mx-20 lg:mx-auto">
+    <Section className="bg-jci-bg" aria-labelledby="senadores-heading">
+      <Container>
         {/* Header */}
         <header className="mb-12 text-start">
           <h2 id="senadores-heading" className="text-jci-black text-3xl font-bold md:text-5xl">
@@ -79,7 +81,7 @@ export default function Senadores() {
             </article>
           ))}
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

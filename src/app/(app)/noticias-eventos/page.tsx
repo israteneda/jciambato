@@ -44,10 +44,10 @@ export const metadata: Metadata = {
 
 export default function NoticiasEventosPage() {
   return (
-    <div>
+    <>
       <Bienvenida />
       <div className="h-160" aria-hidden="true"></div>
       <NoticiasEventos />
-    </div>
+    </>
   );
 }

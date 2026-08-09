@@ -2,6 +2,8 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Section } from "./layout/section";
+import { Container } from "./layout/container";
 
 interface InfoContainerProps {
   subtitle: string;
@@ -60,38 +62,38 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
   }, [pathname]);
 
   return (
-    <section className="relative z-30 mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
+    <Section className="z-10">
       {shouldUseLightText ? (
         // Version Claro (para fondos oscuros)
-        <>
+        <Container>
           <header>
-            <h2 className="text-jci-yellow text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">
+            <h2 className="text-jci-yellow text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
               {subtitle}
             </h2>
 
-            <div className="mt-8">
-              <h1 className="max-w-4xl text-left text-3xl leading-none font-bold tracking-[-0.5px] text-gray-200 not-italic md:text-5xl lg:text-6xl">
+            <div className="mt-3">
+              <h1 className="max-w-240 text-left text-3xl leading-none font-bold tracking-[-0.5px] text-gray-200 normal-case not-italic md:text-5xl lg:text-[72px]">
                 {title}
               </h1>
             </div>
           </header>
 
           <div className="mt-9">
-            <p className="max-w-xl text-left text-xl leading-[1.45] font-normal tracking-normal text-gray-100 not-italic">
+            <p className="max-w-xl text-left text-xl leading-[1.45] font-normal tracking-normal text-gray-200 not-italic">
               {description}
             </p>
           </div>
-        </>
+        </Container>
       ) : (
         // Version Oscuro (para fondos claros)
-        <>
+        <Container>
           <header>
-            <h2 className="text-jci-teal text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">
+            <h2 className="text-jci-teal text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
               {subtitle}
             </h2>
 
-            <div className="mt-8">
-              <h1 className="text-jci-black max-w-4xl text-left text-3xl leading-none font-bold tracking-[-0.5px] not-italic lg:text-6xl">
+            <div className="mt-3">
+              <h1 className="text-jci-black max-w-240 text-left text-3xl leading-none font-bold tracking-[-0.5px] normal-case not-italic md:text-5xl lg:text-[72px]">
                 {title}
               </h1>
             </div>
@@ -102,8 +104,8 @@ export default function InfoContainer({ subtitle, title, description }: InfoCont
               {description}
             </p>
           </div>
-        </>
+        </Container>
       )}
-    </section>
+    </Section>
   );
 }

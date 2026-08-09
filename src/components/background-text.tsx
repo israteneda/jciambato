@@ -1,100 +1,113 @@
 "use client";
 
-import { useScrollPositionText } from "@/hooks";
-import clsx from "clsx";
-import { useMemo, useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
+import { useEffect, useRef } from "react";
 
 interface BackgroundTextProps {
-  textoPrimario: string;
-  textoSecundario: string;
-  numberLeft: number;
-  numberRight: number;
-  numberLeftMobile?: number;
-  numberRightMobile?: number;
+  primary: string;
+  secondary?: string;
+  /**
+   * Amplitud del vaiven, en % del ancho del CONTENEDOR (no del texto):
+   * `translateX(%)` toma como base el border-box del div, que es `w-full`.
+   * Cada palabra recorre de -spread/2 a +spread/2 al cruzar el viewport.
+   *
+   * No define la posicion de reposo — esa sale de `text-left` / `text-right`.
+   * Con spread=15 en un viewport de 1440px el recorrido es de +-108px, y al
+   * escalar con el contenedor se mantiene proporcional en mobile sin ajustes.
+   */
+  spread?: number;
+  /**
+   * Corrimiento hacia el centro de cada palabra, en % del ancho del contenedor.
+   * Desplaza el punto de partida del recorrido sin tocar su amplitud: `primary`
+   * se corre a la derecha e `inset` la misma cantidad a la izquierda `secondary`.
+   *
+   * Es la palanca para despegar las palabras de los bordes. Subirlo evita que
+   * el recorrido hacia afuera recorte la primera/ultima letra.
+   */
+  inset?: number;
+  className?: string;
 }
 
 const BackgroundText = ({
-  textoPrimario,
-  textoSecundario,
-  numberLeft,
-  numberRight,
-  numberLeftMobile = numberLeft * 0.5, // Default to half the desktop value
-  numberRightMobile = numberRight * 0.5,
+  primary,
+  secondary,
+  spread = 15,
+  inset = 0,
+  className,
 }: BackgroundTextProps) => {
-  const scrollY = useScrollPositionText();
-  const [isMobile, setIsMobile] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const primaryRef = useRef<HTMLDivElement>(null);
+  const secondaryRef = useRef<HTMLDivElement>(null);
 
-  // Ensure component is mounted before accessing window
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  // Detect screen size changes - only after mounting
-  useEffect(() => {
-    if (!isMounted) return;
+    let frame = 0;
 
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768); // md breakpoint
+    const update = () => {
+      frame = 0;
+      const root = rootRef.current;
+      if (!root) return;
+
+      const { top, height } = root.getBoundingClientRect();
+      // Al scrollear hacia abajo `top` decrece, asi que `progress` crece:
+      // 0 = el bloque asoma por abajo, 1 = termina de salir por arriba.
+      const raw = 1 - (top + height) / (window.innerHeight + height);
+      const progress = Math.min(1, Math.max(0, raw));
+
+      // `travel` crece de -spread/2 a +spread/2, o sea se desplaza hacia la
+      // derecha: `primary` va de izquierda a derecha y `secondary` al reves.
+      // `inset` corre el punto de partida hacia el centro sin alterar el
+      // recorrido, asi amplitud y posicion quedan desacopladas.
+      const travel = (progress - 0.5) * spread;
+      const shift = inset + travel;
+
+      if (primaryRef.current) {
+        primaryRef.current.style.transform = `translateX(${shift}%)`;
+      }
+      if (secondaryRef.current) {
+        secondaryRef.current.style.transform = `translateX(${-shift}%)`;
+      }
     };
 
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
 
-    return () => window.removeEventListener("resize", checkScreenSize);
-  }, [isMounted]);
+    // ResizeObserver cubre resize de viewport y reflow por carga de fuentes.
+    const observer = new ResizeObserver(schedule);
+    if (rootRef.current) observer.observe(rootRef.current);
+    window.addEventListener("scroll", schedule, { passive: true });
 
-  // Use appropriate values based on screen size - default to desktop during SSR
-  const currentNumberLeft = isMounted ? (isMobile ? numberLeftMobile : numberLeft) : numberLeft;
-  const currentNumberRight = isMounted ? (isMobile ? numberRightMobile : numberRight) : numberRight;
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", schedule);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, [spread, inset]);
 
-  // Calculamos desplazamientos de forma memoizada con mayor precisión
-  const translateStyles = useMemo(
-    () => ({
-      left: {
-        transform: `translateX(${scrollY * currentNumberLeft}px)`,
-        willChange: "transform",
-      },
-      right: {
-        transform: `translateX(${-scrollY * currentNumberRight}px)`,
-        willChange: "transform",
-      },
-    }),
-    [scrollY, currentNumberLeft, currentNumberRight]
-  );
-
-  const baseTextStyle = clsx(
-    "flex justify-center",
-    "opacity-[0.08]",
-    "text-7xl text-[240px] md:text-[calc(12px + 11.875vw)]",
-    "font-extrabold",
-    "whitespace-nowrap",
-    "tracking-normal",
-    "uppercase",
-    "text-[#000000e8]",
-    "select-none"
+  const word = cn(
+    "relative whitespace-nowrap uppercase select-none",
+    "text-[length:clamp(3rem,11.875vw,240px)] font-black tracking-normal [line-height:normal]",
+    "text-[#000000e8] opacity-[0.08] will-change-transform"
   );
 
   return (
-    <section className="mx-auto overflow-hidden" aria-hidden="true">
-      <h2
-        className={baseTextStyle}
-        style={translateStyles.left}
-        aria-hidden="true"
-        role="presentation"
-      >
-        {textoPrimario}
-      </h2>
+    <div
+      ref={rootRef}
+      className={cn("relative w-full overflow-hidden", className)}
+      aria-hidden="true"
+    >
+      <div ref={primaryRef} className={cn(word, "text-left")}>
+        {primary}
+      </div>
 
-      <h2
-        className={baseTextStyle}
-        style={translateStyles.right}
-        aria-hidden="true"
-        role="presentation"
-      >
-        {textoSecundario}
-      </h2>
-    </section>
+      {secondary && (
+        <div ref={secondaryRef} className={cn(word, "text-right")}>
+          {secondary}
+        </div>
+      )}
+    </div>
   );
 };
 

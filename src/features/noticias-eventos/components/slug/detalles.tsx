@@ -6,6 +6,8 @@ import { shareOnSocialMedia, getShareContentFromNoticia } from "@/lib/share";
 import Link from "next/link";
 import Image from "next/image";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
+import { Section } from "@/components/layout/section";
+import { Container } from "@/components/layout/container";
 
 export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEvento }) {
   // Definir breadcrumbs para navegación
@@ -16,12 +18,11 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
   ]; */
 
   return (
-    <section className="relative overflow-hidden bg-transparent">
+    <Section>
       <div>
-        <div className="h-[150px] md:h-80"></div>
-
-        <div className="absolute top-0 right-0 left-0 z-20 pt-24 md:pt-44">
-          <div className="relative z-10 mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
+        <div className="h-37.5 md:h-80"></div>
+        <div className="absolute top-0 right-0 left-0 pt-24 md:pt-44">
+          <Container>
             {/* Breadcrumbs */}
             {/* <div className="mb-4">
               <Breadcrumbs items={breadcrumbs} className="text-gray-600" />
@@ -44,7 +45,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                 </span>
               </div>
             </Link>
-          </div>
+          </Container>
 
           <div className="pointer-events-none fixed inset-0">
             <RotatedText text={`${noticiaEvento.titulo}`} />
@@ -60,13 +61,13 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                 {noticiaEvento.tipo}
               </p>
               <div className="mt-8">
-                <h1 className="text-jci-black max-w-[862px] text-left text-3xl leading-[1.33] font-bold sm:text-[calc(28.8px+1vw)] md:text-[48px]">
+                <h1 className="text-jci-black max-w-215 text-left text-3xl leading-[1.33] font-bold sm:text-[calc(28.8px+1vw)] md:text-[48px]">
                   {noticiaEvento.titulo}
                 </h1>
               </div>
               {noticiaEvento.subtitulo && (
                 <div className="mt-4">
-                  <p className="text-jci-gray max-w-[862px] text-lg leading-relaxed font-medium">
+                  <p className="text-jci-gray max-w-215 text-lg leading-relaxed font-medium">
                     {noticiaEvento.subtitulo}
                   </p>
                 </div>
@@ -88,7 +89,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                   {/* Imagen principal */}
                   {noticiaEvento.imagen && (
                     <figure className="mb-12 w-full md:mb-16">
-                      <div className="relative h-[300px] w-full overflow-hidden md:h-[500px]">
+                      <div className="relative h-75 w-full overflow-hidden md:h-125">
                         <Image
                           src={noticiaEvento.imagen}
                           alt={`Imagen de ${noticiaEvento.titulo}`}
@@ -183,7 +184,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
                               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                                 {noticiaEvento.contenido.imagenes.map((img, index) => (
                                   <figure key={index} className="overflow-hidden">
-                                    <div className="relative mb-2 h-[250px] w-full md:h-[300px]">
+                                    <div className="relative mb-2 h-62 w-full md:h-75">
                                       <Image
                                         src={img.url}
                                         alt={img.alt}
@@ -294,6 +295,6 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

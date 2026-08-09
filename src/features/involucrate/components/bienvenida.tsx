@@ -7,7 +7,7 @@ import RowScroll from "@/components/row-scroll";
 export default function Bienvenida() {
   return (
     <section
-      className="fixed inset-0 box-border h-[760px] w-full items-center overflow-hidden pb-[80px]"
+      className="sticky top-0 box-border h-[760px] w-full items-center overflow-hidden pb-[80px]"
       aria-label="Bienvenida a Involúcrate"
       role="banner"
     >

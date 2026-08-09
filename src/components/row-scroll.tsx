@@ -4,7 +4,7 @@ export default function RowScroll() {
   return (
     <div>
       {/* Botón de scroll pantallas grandes */}
-      <div className="absolute top-1/2 -right-2 z-20 hidden -translate-x-1/2 -translate-y-1/2 transform sm:block">
+      <div className="absolute top-1/2 -right-2 hidden -translate-x-1/2 -translate-y-1/2 transform sm:block">
         <button
           aria-label="Desplazarse hacia abajo"
           onClick={() => {
@@ -20,14 +20,14 @@ export default function RowScroll() {
             alt=""
             width={45}
             height={45}
-            className="relative h-[45px] w-[45px] object-contain"
+            className="relative h-11 w-11 object-contain"
             aria-hidden="true"
           />
         </button>
       </div>
 
       {/* Botón de scroll pantallas pequeñas */}
-      <div className="absolute bottom-28 left-1/2 z-20 block -translate-x-1/2 -translate-y-1/2 transform md:hidden">
+      <div className="absolute bottom-28 left-1/2 block -translate-x-1/2 -translate-y-1/2 transform md:hidden">
         <button
           aria-label="Desplazarse hacia abajo"
           onClick={() => {
@@ -43,7 +43,7 @@ export default function RowScroll() {
             alt=""
             width={55}
             height={55}
-            className="relative h-[55px] w-[55px] object-contain"
+            className="relative h-11 w-11 object-contain"
             aria-hidden="true"
           />
         </button>

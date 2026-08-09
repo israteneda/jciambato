@@ -50,7 +50,7 @@ export default function ProyectosPorArea() {
         className="w-full"
         aria-label={`Ver detalles de ${proyecto.nombre}`}
       >
-        <figure className="h-[350px] overflow-hidden md:h-[512px]">
+        <figure className="h-87.5 overflow-hidden md:h-128">
           <div className="relative h-full w-full overflow-hidden">
             <Image
               src={proyecto.imagen}
@@ -138,7 +138,7 @@ export default function ProyectosPorArea() {
             <button
               key={index}
               onClick={() => handleCategoryChange(index)}
-              className={`mr-[42px] p-0 text-left text-[30px] leading-tight font-bold transition duration-300 hover:text-gray-700 ${
+              className={`mr-10.5 p-0 text-left text-[30px] leading-tight font-bold transition duration-300 hover:text-gray-700 ${
                 activeButton === index ? "text-gray-800" : "text-gray-400"
               }`}
               role="tab"
@@ -147,7 +147,7 @@ export default function ProyectosPorArea() {
               id={`tab-${index}`}
             >
               {category.name}
-              <sup className="inline pl-[10px] align-super text-[16px] font-normal">
+              <sup className="inline pl-2.5 align-super text-[16px] font-normal">
                 {category.count}
               </sup>
             </button>
@@ -158,7 +158,7 @@ export default function ProyectosPorArea() {
       <div className="bg-jci-bg">
         {/* Contenedor con animación de transición */}
         <div className="transition-all duration-300 ease-in-out">
-          <div className="min-h-[650px]" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
+          <div className="min-h-162.5" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
             {renderContent()}
           </div>
         </div>

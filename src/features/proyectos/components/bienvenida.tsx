@@ -6,10 +6,10 @@ import RotatedText from "@/components/rotated-text";
 
 export default function Bienvenida() {
   return (
-    <section className="fixed inset-0 box-border h-[760px] w-full items-center overflow-hidden pb-[80px]">
+    <section className="fixed inset-0 box-border flex h-160 w-full items-center overflow-hidden pb-0 md:h-190 md:pb-20">
       <RotatedText text="Dentro de nuestros proyectos" />
 
-      <div className="relative w-full pt-48 pb-32">
+      <div className="w-full">
         <InfoContainer
           subtitle="Proyectos"
           title="Acciones que dejan huella"

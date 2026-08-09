@@ -13,7 +13,7 @@ export function Navbar() {
   return (
     <NavbarWrapper
       className={cn(
-        "group fixed top-0 right-0 left-0 z-50 select-none",
+        "group fixed top-0 right-0 left-0 z-20 select-none",
         "transition-all duration-300",
         "data-[affix=true]:bg-white data-[affix=true]:shadow-md",
         "data-[affix=false]:bg-transparent"

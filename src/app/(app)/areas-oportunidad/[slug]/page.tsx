@@ -86,13 +86,13 @@ export default async function AreaOportunidadPage({ params }: AreaOportunidadPag
   }
 
   return (
-    <div className="relative">
+    <>
       <Bienvenida area={area} />
       <Presentacion area={area} />
       <Construccion area={area} />
       <ExploraAreasOportunidad area={area} />
       <Caracteristicas area={area} />
       <SiguienteArea area={area} />
-    </div>
+    </>
   );
 }

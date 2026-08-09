@@ -14,22 +14,17 @@ export const metadata: Metadata = {
 
 export default function MiembrosPage() {
   return (
-    <div className="relative">
+    <>
       <Bienvenida />
 
-      {/* Bloque espaciado para efecto de scroll */}
-      <div className="h-screen" aria-hidden="true"></div>
-      <div
-        className="bg-jci-bg absolute top-0 h-full w-full"
-        style={{ transform: "translateY(100vh)" }}
-        aria-hidden="true"
-      ></div>
+      {/* Espacio */}
+      <div className="h-160" aria-hidden="true"></div>
 
       <JuntaDirectiva />
       <Miembros />
       <Senadores />
       <MiembrosNacionales />
       {/* <PasadosPresidentes /> */}
-    </div>
+    </>
   );
 }

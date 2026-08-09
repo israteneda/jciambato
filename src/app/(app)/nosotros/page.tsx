@@ -18,24 +18,20 @@ export const metadata = {
 
 export default function NosotrosPage() {
   return (
-    <div className="relative overflow-hidden">
+    <>
       <Bienvenida />
 
-      {/* Bloque espaciado */}
+      {/* Espacio */}
       <div className="h-160" aria-hidden="true"></div>
 
-      <div
-        className="bg-jci-bg absolute top-0 h-full w-full"
-        style={{
-          transform: "translateY(99.9vh)",
-        }}
-        aria-hidden="true"
-      ></div>
+      {/* Bloque */}
+      <div className="bg-jci-bg absolute top-0 h-full w-full translate-y-[99.9vh]"></div>
+
       <Presentacion />
       <MisionVision />
       <Valores />
       <Opinion />
       <ActividadesAnuales />
-    </div>
+    </>
   );
 }

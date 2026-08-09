@@ -7,6 +7,8 @@ import type { Swiper as SwiperType } from "swiper";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
 import { useState, useRef } from "react";
+import { Section } from "@/components/layout/section";
+import { Container } from "@/components/layout/container";
 
 export default function Construccion({ area }: { area: AreaOportunidad }) {
   const [currentSlide, setCurrentSlide] = useState(1);
@@ -30,12 +32,15 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
   };
 
   return (
-    <section className="relative z-1 overflow-hidden">
+    <Section
+      className="overflow-hidden py-0 md:py-0"
+      aria-labelledby={`construccion-${area.slug}-heading`}
+    >
       <div>
         {/*Caja Roja del Brochure*/}
-        <div className="relative z-20">
-          <div className="relative z-10 m-8 max-w-6xl md:mx-20 lg:mx-auto">
-            <div className="bg-jci-navy z-30 box-border flex p-4 md:max-w-[65%] md:translate-y-1/2 md:p-10 lg:max-w-[50%]">
+        <div className="relative z-10">
+          <Container>
+            <div className="bg-jci-navy box-border flex p-4 md:max-w-[65%] md:translate-y-1/2 md:p-10 lg:max-w-[50%]">
               <div className="w-full">
                 <div className="flex flex-wrap gap-x-2 text-xs font-bold text-white md:text-sm">
                   <span>Brochure</span>
@@ -71,15 +76,15 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                 </a>
               </div>
             </div>
-          </div>
+          </Container>
         </div>
 
         {/* Contenedor del Swiper*/}
-        <section className="relative z-10 bg-transparent">
+        <section className="relative bg-transparent">
           {/* Swiper con imágenes */}
           <div>
             <div className="cursor-none">
-              <div className="relative z-10 mx-auto max-w-4xl bg-transparent px-0 md:px-0">
+              <div className="relative mx-auto max-w-4xl bg-transparent px-0 md:px-0">
                 <Swiper
                   ref={swiperRef}
                   modules={[Navigation]}
@@ -94,7 +99,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                     .map((item, index) => (
                       <SwiperSlide key={`${item.src}-${index}`}>
                         <div className="group w-full">
-                          <div className="h-96 w-full overflow-hidden bg-white md:h-[650px]">
+                          <div className="h-96 w-full overflow-hidden bg-white md:h-162.5">
                             <div className="relative h-full w-full overflow-hidden">
                               <Image
                                 src={item.src!}
@@ -114,7 +119,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
           </div>
 
           {/* Controles de navegación */}
-          <div className="relative z-10 mx-8 max-w-3xl bg-transparent px-4 md:mx-20 md:px-0 lg:mx-auto">
+          <div className="relative mx-8 max-w-3xl bg-transparent px-4 md:mx-20 md:px-0 lg:mx-auto">
             <div className="mt-2 flex items-center justify-between">
               {/* Contador */}
               <div className="pointer-events-none inline-flex -rotate-90 flex-col">
@@ -143,7 +148,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                     alt=""
                     width={500}
                     height={500}
-                    className="relative w-[16px] rotate-90 object-cover transition-transform duration-300 hover:scale-110 md:w-[24px]"
+                    className="relative w-4 rotate-90 object-cover transition-transform duration-300 hover:scale-110 md:w-6"
                     aria-hidden="true"
                   />
                 </button>
@@ -159,7 +164,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                     alt=""
                     width={500}
                     height={500}
-                    className="relative w-[16px] -rotate-90 object-cover transition-transform duration-300 hover:scale-110 md:w-[24px]"
+                    className="relative w-4 -rotate-90 object-cover transition-transform duration-300 hover:scale-110 md:w-6"
                     aria-hidden="true"
                   />
                 </button>
@@ -168,6 +173,6 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
           </div>
         </section>
       </div>
-    </section>
+    </Section>
   );
 }
