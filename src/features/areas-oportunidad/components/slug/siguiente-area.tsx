@@ -1,4 +1,5 @@
 import { Section } from "@/components/layout/section";
+import { Container } from "@/components/layout/container";
 import RotatedText from "@/components/rotated-text";
 import { getAllAreas } from "@/features/inicio/data/areas-oportunidad";
 import { AreaOportunidad } from "@/types/area-oportunidad";
@@ -20,41 +21,39 @@ export default function SiguienteArea({ area }: { area: AreaOportunidad }) {
     <Section className="bg-white" aria-labelledby={`siguiente-area-${area.slug}-heading`}>
       <RotatedText text="Nuestras Áreas" />
       <div>
-        <div className="relative z-10 mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
+        <Container>
           <Link
             href={`/areas-oportunidad/${nextArea.slug}`}
             className="group cursor-pointer md:ml-48"
             aria-label={`Ir a ${nextArea.title}`}
           >
-            <div className="relative z-10">
-              <div className="text-jci-gray font-sans text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
-                Áreas de Oportunidad
-              </div>
-              <div className="mt-2">
-                <div className="flex flex-col gap-2 md:flex-row md:items-center">
-                  <div className="flex flex-col">
-                    <h2 className="text-jci-black max-w-4xl text-left text-3xl leading-[1.33] font-light tracking-normal md:text-4xl lg:text-5xl">
-                      Siguiente Área
-                    </h2>
-                    <h2 className="text-jci-black max-w-4xl text-left text-3xl leading-[1.33] font-bold tracking-normal not-italic md:text-4xl lg:text-5xl">
-                      {nextArea.title}
-                    </h2>
-                  </div>
+            <div className="text-jci-gray font-sans text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
+              Áreas de Oportunidad
+            </div>
+            <div className="mt-2">
+              <div className="flex flex-col gap-2 md:flex-row md:items-center">
+                <div className="flex flex-col">
+                  <h2 className="text-jci-black max-w-4xl text-left text-3xl leading-[1.33] font-light tracking-normal md:text-4xl lg:text-5xl">
+                    Siguiente Área
+                  </h2>
+                  <h2 className="text-jci-black max-w-4xl text-left text-3xl leading-[1.33] font-bold tracking-normal not-italic md:text-4xl lg:text-5xl">
+                    {nextArea.title}
+                  </h2>
+                </div>
 
-                  <div className="my-8 md:ml-56">
-                    <Image
-                      src="/icons/arrow-right-gray.svg"
-                      alt=""
-                      width={128}
-                      height={128}
-                      className="h-20 w-20 -rotate-90 transform transition-transform duration-300 group-hover:translate-x-4 md:h-32 md:w-32"
-                    />
-                  </div>
+                <div className="my-8 md:ml-56">
+                  <Image
+                    src="/icons/arrow-right-gray.svg"
+                    alt=""
+                    width={128}
+                    height={128}
+                    className="h-20 w-20 -rotate-90 transform transition-transform duration-300 group-hover:translate-x-4 md:h-32 md:w-32"
+                  />
                 </div>
               </div>
             </div>
           </Link>
-        </div>
+        </Container>
       </div>
     </Section>
   );

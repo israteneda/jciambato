@@ -17,13 +17,11 @@ export default function Historia() {
         <BackgroundText primary="Desde" secondary="1973" inset={15} />
       </div>
       <Container>
-        <div className="mx-8 md:mx-28">
-          <SubContainer
-            subtitle="Desde 1973"
-            title="Un legado que trasciende generaciones."
-            description="Por cinco décadas, JCI Ambato ha forjado un liderazgo transformador, impulsando la formación de ciudadanos activos y ejecutando proyectos de gran impacto. Su legado se construye con logros, retos superados y generaciones de jóvenes dedicadas a hacer de Ambato una ciudad más inclusiva, participativa y preparada para el futuro."
-          />
-        </div>
+        <SubContainer
+          subtitle="Desde 1973"
+          title="Un legado que trasciende generaciones."
+          description="Por cinco décadas, JCI Ambato ha forjado un liderazgo transformador, impulsando la formación de ciudadanos activos y ejecutando proyectos de gran impacto. Su legado se construye con logros, retos superados y generaciones de jóvenes dedicadas a hacer de Ambato una ciudad más inclusiva, participativa y preparada para el futuro."
+        />
       </Container>
       <div className="my-24 sm:ml-20 md:my-32 lg:ml-56">
         <Swiper

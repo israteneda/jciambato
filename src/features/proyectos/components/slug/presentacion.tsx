@@ -1,10 +1,11 @@
 import { Section } from "@/components/layout/section";
+import { Container } from "@/components/layout/container";
 import { Proyecto } from "@/types/proyecto";
 
 export default function Presentacion({ proyecto }: { proyecto: Proyecto }) {
   return (
     <Section aria-labelledby={`presentacion-${proyecto.slug}-heading`}>
-      <div className="relative mx-8 max-w-6xl md:mx-20 lg:mx-auto">
+      <Container>
         <div>
           <div className="text-jci-black text-xs leading-[1.85] tracking-[1px] uppercase not-italic">
             {proyecto.area_oportunidad}
@@ -24,7 +25,7 @@ export default function Presentacion({ proyecto }: { proyecto: Proyecto }) {
             <div className="text-jci-black text-sm leading-[1.33]">{proyecto.lugar}</div>
           </div>
         </div>
-      </div>
+      </Container>
     </Section>
   );
 }

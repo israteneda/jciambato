@@ -1,12 +1,14 @@
 "use client";
+import { Container } from "@/components/layout/container";
+import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function NotFoundPage() {
   return (
-    <div className="relative z-10 h-screen">
+    <Section className="h-screen">
       <div className="flex h-full items-center">
-        <div className="relative z-10 mx-8 max-w-6xl md:mx-auto">
+        <Container>
           <div className="flex">
             <div className="relative">
               <div className="absolute top-20 left-6 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 transform md:block">
@@ -44,8 +46,8 @@ export default function NotFoundPage() {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
-    </div>
+    </Section>
   );
 }

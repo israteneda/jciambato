@@ -14,15 +14,15 @@ export default function Bienvenida({ area }: { area: AreaOportunidad }) {
     <Section className="py-0 md:py-0" aria-labelledby="bienvenida-heading">
       <div className="flex w-full">
         <div className="box-border flex h-screen w-full items-center pb-23 md:px-45">
+          <BackgroundImage image={area.background_image} alt={`Imagen de fondo de ${area.title}`} />
+
+          <BorderFrame isScrolled={isScrolled} />
+
           <InfoContainer
             subtitle={area.subtitle}
             title={area.title}
             description={area.description}
           />
-
-          <BackgroundImage image={area.background_image} alt={`Imagen de fondo de ${area.title}`} />
-
-          <BorderFrame isScrolled={isScrolled} />
         </div>
       </div>
 

@@ -1,25 +1,21 @@
 "use client";
+import RowScroll from "@/components/row-scroll";
+import BackgroundImage from "@/components/background-image";
 import InfoContainer from "@/components/info-container";
 import RotatedText from "@/components/rotated-text";
-import BackgroundImage from "@/components/background-image";
-import RowScroll from "@/components/row-scroll";
 
 export default function Bienvenida() {
   return (
-    <section
-      className="sticky top-0 box-border h-[760px] w-full items-center overflow-hidden pb-[80px]"
-      aria-label="Bienvenida a Involúcrate"
-      role="banner"
-    >
+    <section className="fixed inset-0 box-border flex h-160 w-full items-center overflow-hidden pb-0 md:h-190 md:pb-20">
       <RotatedText text="Sé el cambio" />
 
-      <header className="relative w-full pt-48 pb-32">
+      <div className="w-full">
         <InfoContainer
           subtitle="Involúcrate"
           title="Da el primer paso hacia el cambio"
           description="¿Te atreves a liderar, servir y crecer? Tu camino empieza aquí."
         />
-      </header>
+      </div>
 
       <BackgroundImage image="/images/involucrate/hero-presidenta.jpg" />
 

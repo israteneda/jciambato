@@ -6,8 +6,8 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function MiembrosGenerales() {
   return (
-    <Section className="bg-jci-bg" aria-labelledby="miembros-activos-heading">
-      <Container className="mx-8 max-w-6xl md:mx-20 lg:mx-auto">
+    <Section className="bg-jci-bg py-0 md:py-0" aria-labelledby="miembros-activos-heading">
+      <Container>
         {/* Header */}
         <header className="mb-12 text-start">
           <h2

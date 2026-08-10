@@ -1,11 +1,13 @@
 import SubContainer from "@/components/sub-container";
+import { Container } from "@/components/layout/container";
 import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { Section } from "@/components/layout/section";
 
 export default function Cursos() {
   return (
-    <section className="relative z-10 mx-8 max-w-6xl md:mx-20 lg:mx-auto">
-      <div className="my-24 md:my-40">
+    <Section className="bg-jci-bg" aria-labelledby="cursos-heading">
+      <Container>
         <SubContainer
           title="Prepárate para ser parte de JCI"
           subtitle="Conócenos más a fondo"
@@ -184,7 +186,7 @@ export default function Cursos() {
             </a>
           </span>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

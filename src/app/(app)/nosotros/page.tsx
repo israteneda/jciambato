@@ -20,13 +20,8 @@ export default function NosotrosPage() {
   return (
     <>
       <Bienvenida />
-
-      {/* Espacio */}
       <div className="h-160" aria-hidden="true"></div>
-
-      {/* Bloque */}
       <div className="bg-jci-bg absolute top-0 h-full w-full translate-y-[99.9vh]"></div>
-
       <Presentacion />
       <MisionVision />
       <Valores />

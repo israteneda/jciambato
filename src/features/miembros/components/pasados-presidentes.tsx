@@ -1,11 +1,13 @@
+import { Section } from "@/components/layout/section";
+import { Container } from "@/components/layout/container";
 import { pasadosPresidentes } from "@/features/miembros/data/pasados-presidentes";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function PasadosPresidentes() {
   return (
-    <section className="relative z-10 py-16" aria-labelledby="pasados-presidentes-heading">
-      <div className="mx-8 max-w-6xl md:mx-20 lg:mx-auto">
+    <Section aria-labelledby="pasados-presidentes-heading">
+      <Container>
         {/* Header */}
         <header className="mb-12 text-start">
           <h2
@@ -79,7 +81,7 @@ export default function PasadosPresidentes() {
             </article>
           ))}
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

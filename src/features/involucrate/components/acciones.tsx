@@ -1,23 +1,23 @@
+import { Section } from "@/components/layout/section";
 import Image from "next/image";
 
 export default function Acciones() {
   return (
-    <section className="relative z-10" aria-labelledby="accion-heading">
-      <article className="relative max-w-6xl bg-white lg:mx-auto">
-        <header className="p-8 md:p-20">
-          <div className="text-jci-yellow text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
+    <Section className="py-0 md:py-0" aria-labelledby="accion-heading">
+      <article className="relative mx-auto bg-white md:max-w-[calc(676px+50vw)]">
+        <div className="p-8 md:p-30">
+          <p className="text-jci-yellow text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">
             Grupo JCI
-          </div>
-          <div className="mt-8">
-            <h2
-              id="accion-heading"
-              className="text-jci-navy max-w-4xl text-left text-3xl font-bold tracking-normal md:text-4xl lg:text-5xl lg:leading-[1.33]"
-            >
+          </p>
+
+          <div className="mt-8 md:max-w-225">
+            <h3 className="text-jci-navy text-left text-3xl font-bold md:text-5xl md:leading-[1.33]">
               Se parte de un mundo cambiante, contribuir día a día, estés donde estés.
-            </h2>
+            </h3>
           </div>
+
           <div className="mt-8">
-            <p className="text-jci-black max-w-[666px] text-left text-base font-normal tracking-normal md:text-lg md:leading-[1.78]">
+            <p className="text-jci-black max-w-166 text-left text-base font-normal tracking-normal md:text-lg md:leading-[1.78]">
               Únete a la red global de jóvenes que ya está creando soluciones reales. No importa si
               tienes experiencia o recién comienzas: lo que necesitas es voluntad de actuar.
             </p>
@@ -101,8 +101,8 @@ export default function Acciones() {
               </div>
             </div>
           </div>
-        </header>
+        </div>
       </article>
-    </section>
+    </Section>
   );
 }

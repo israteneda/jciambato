@@ -79,7 +79,7 @@ export default function Grupo() {
             {/* Derecha */}
             <div className="mt-0 flex-1 md:mt-30">
               <div className="flex flex-wrap">
-                <div className="mt-12 box-border w-full flex-none md:ml-6">
+                <div className="flex-full mt-12 box-border w-full flex-none">
                   <div className="text-jci-navy text-6xl leading-none font-light tracking-[-5px] not-italic md:text-8xl">
                     <span>+50</span>
                   </div>
@@ -90,7 +90,7 @@ export default function Grupo() {
                     </p>
                   </div>
                 </div>
-                <div className="mt-12 box-border flex-1 md:ml-6 md:w-full">
+                <div className="mt-12 box-border w-full md:flex-1">
                   <div className="text-jci-navy text-6xl leading-none font-light tracking-[-5px] not-italic md:text-8xl">
                     <span>+200</span>
                   </div>
@@ -98,7 +98,7 @@ export default function Grupo() {
                     <strong>Proyectos</strong> con impacto comunitario
                   </p>
                 </div>
-                <div className="mt-12 box-border md:ml-6 md:w-full">
+                <div className="mt-12 box-border w-full md:flex-1">
                   <div className="text-jci-navy text-6xl leading-none font-light tracking-[-5px] not-italic md:text-8xl">
                     <span>+500</span>
                   </div>

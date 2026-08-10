@@ -12,6 +12,7 @@ import {
   getConteoProyectosPorArea,
   getProyectosPorArea,
 } from "@/features/proyectos/data";
+import { Section } from "@/components/layout/section";
 
 export default function ProyectosPorArea() {
   // Estado para controlar el botón activo (0 = Todos, 1 = Negocios, etc.)
@@ -124,41 +125,65 @@ export default function ProyectosPorArea() {
   };
 
   return (
-    <div>
-      <nav className="box-border bg-white p-12 lg:mx-20" aria-label="Filtros de proyectos por área">
-        <div className="text-jci-gray text-[13px] leading-[1.85] font-bold uppercase not-italic">
-          Explora por área de oportunidad
-        </div>
-        <div
-          className="mt-5 flex flex-wrap gap-6"
-          role="tablist"
-          aria-label="Categorías de proyectos"
-        >
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              onClick={() => handleCategoryChange(index)}
-              className={`mr-10.5 p-0 text-left text-[30px] leading-tight font-bold transition duration-300 hover:text-gray-700 ${
-                activeButton === index ? "text-gray-800" : "text-gray-400"
-              }`}
-              role="tab"
-              aria-selected={activeButton === index}
-              aria-controls={`panel-${index}`}
-              id={`tab-${index}`}
-            >
-              {category.name}
-              <sup className="inline pl-2.5 align-super text-[16px] font-normal">
-                {category.count}
-              </sup>
-            </button>
-          ))}
+    <Section className="py-0 md:py-0" aria-labelledby="proyectos-contenido-heading">
+      {/* Navegador */}
+      <nav
+        className="relative mx-auto bg-white md:max-w-[calc(676px+50vw)]"
+        aria-label="Filtros de proyectos por área"
+      >
+        <div className="py-7 md:p-14" aria-label="Filtros de proyectos por área">
+          <div className="text-jci-gray text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">
+            Explora por área de oportunidad
+          </div>
+
+          {/* Para pantallas grandes */}
+          <div
+            className="mt-5 hidden flex-wrap gap-6 lg:flex"
+            role="tablist"
+            aria-label="Categorías de proyectos"
+          >
+            {categories.map((category, index) => (
+              <button
+                key={index}
+                onClick={() => handleCategoryChange(index)}
+                className={`hover:text-jci-black mr-10 cursor-pointer text-left text-3xl leading-tight font-bold transition duration-300 ${
+                  activeButton === index ? "text-gray-800" : "text-gray-400"
+                }`}
+                role="tab"
+                aria-selected={activeButton === index}
+                aria-controls={`panel-${index}`}
+                id={`tab-${index}`}
+              >
+                {category.name}
+                <sup className="inline pl-2 align-super text-[16px] font-normal">
+                  {category.count}
+                </sup>
+              </button>
+            ))}
+          </div>
+
+          {/* Para pantallas pequeñas */}
+          {/* <div className="block w-full max-w-xs sm:hidden">
+              <Select
+                label="Filtrar por tipo"
+                placeholder="Selecciona una opción"
+                value={activeButton}
+                onChange={(value) => handleCategoryChange(Number(value))}
+                className="max-w-xs"
+              >
+                {tipos.map((tipo, index) => (
+                  <SelectItem key={tipo.name} data-value={index.toString()}>
+                    {tipo.name}
+                  </SelectItem>
+                ))}
+              </Select>
+            </div> */}
         </div>
       </nav>
 
-      <div className="bg-jci-bg">
-        {/* Contenedor con animación de transición */}
+      <div className="bg-jci-bg min-h-96 pb-9">
         <div className="transition-all duration-300 ease-in-out">
-          <div className="min-h-162.5" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
+          <div className="min-h-163" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
             {renderContent()}
           </div>
         </div>
@@ -188,8 +213,8 @@ export default function ProyectosPorArea() {
                   aria-label="Ver más proyectos"
                   onClick={() => setCurrentPage(currentPage + 1)}
                 >
-                  <span className="bg-jci-black absolute inset-0 h-full w-full -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0"></span>
-                  <span className="relative z-10">Ver más</span>
+                  <span className="bg-jci-blue absolute inset-0 h-full w-full -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0"></span>
+                  <span>Ver más</span>
                 </Button>
               );
             }
@@ -197,6 +222,6 @@ export default function ProyectosPorArea() {
           })()}
         </footer>
       </div>
-    </div>
+    </Section>
   );
 }

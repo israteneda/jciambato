@@ -1,5 +1,6 @@
 import BackgroundText from "@/components/background-text";
 import { Section } from "@/components/layout/section";
+import { Container } from "@/components/layout/container";
 import RotatedText from "@/components/rotated-text";
 import { Button } from "@/components/ui/button";
 import { AreaOportunidad } from "@/types/area-oportunidad";
@@ -47,31 +48,28 @@ export default function ExploraAreasOportunidad({ area }: { area: AreaOportunida
 
         {/* Caja de Información */}
         <div className="mt-16">
-          <div className="relative z-10 mx-8 max-w-6xl bg-transparent md:mx-20 lg:mx-auto">
-            <div className="relative z-10">
-              <div className="text-jci-gray font-sans text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
-                Quieres conocer más?
-              </div>
-              <div className="mt-2">
-                <h2 className="text-jci-black max-w-4xl text-left text-3xl leading-[1.33] font-bold tracking-normal not-italic md:text-4xl">
-                  Echa un vistazo a los proyectos que nos han ayudado a crecer a lo largo de los
-                  años.
-                </h2>
-              </div>
-
-              <div className="mt-9">
-                <Button
-                  className="bg-jci-blue hover:bg-jci-blue group relative overflow-hidden text-white"
-                  aria-label="Explora nuestras áreas"
-                >
-                  <Link href="/areas-oportunidad">
-                    <span className="bg-jci-black absolute inset-0 h-full w-full -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0"></span>
-                    <span className="relative z-10">Explora nuestras áreas</span>
-                  </Link>
-                </Button>
-              </div>
+          <Container>
+            <div className="text-jci-gray font-sans text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
+              Quieres conocer más?
             </div>
-          </div>
+            <div className="mt-2">
+              <h2 className="text-jci-black max-w-4xl text-left text-3xl leading-[1.33] font-bold tracking-normal not-italic md:text-4xl">
+                Echa un vistazo a los proyectos que nos han ayudado a crecer a lo largo de los años.
+              </h2>
+            </div>
+
+            <div className="mt-9">
+              <Button
+                className="bg-jci-blue hover:bg-jci-blue group relative overflow-hidden text-white"
+                aria-label="Explora nuestras áreas"
+              >
+                <Link href="/areas-oportunidad">
+                  <span className="bg-jci-black absolute inset-0 h-full w-full -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0"></span>
+                  <span className="relative z-10">Explora nuestras áreas</span>
+                </Link>
+              </Button>
+            </div>
+          </Container>
         </div>
       </div>
 

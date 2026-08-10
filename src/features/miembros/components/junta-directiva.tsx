@@ -1,12 +1,13 @@
 import { Section } from "@/components/layout/section";
+import { Container } from "@/components/layout/container";
 import { juntaDirectiva } from "@/features/miembros/data/junta-directiva";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function JuntaDirectiva() {
   return (
-    <Section className="bg-jci-bg py-24 md:py-34" aria-labelledby="junta-directiva-heading">
-      <div className="mx-8 max-w-5xl md:mx-20 lg:mx-auto">
+    <Section className="bg-jci-bg" aria-labelledby="junta-directiva-heading">
+      <Container>
         {/* Header */}
         <header className="mb-12 text-start">
           <h2
@@ -40,15 +41,15 @@ export default function JuntaDirectiva() {
                   <Image
                     src={miembro.imagen}
                     alt={`Foto de ${miembro.nombre} ${miembro.apellido}`}
-                    width={800}
-                    height={800}
-                    className="h-auto w-full object-cover md:h-96"
+                    width={1414}
+                    height={2000}
+                    className="aspect-1414/2000 h-auto w-full object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     draggable="false"
                     priority={index < 6}
                   />
                 ) : (
-                  <div className="bg-jci-navy flex h-auto w-full items-center justify-center md:h-96">
+                  <div className="bg-jci-navy flex aspect-1414/2000 w-full items-center justify-center">
                     <span className="h-full text-lg text-white">Próximamente</span>
                   </div>
                 )}
@@ -100,7 +101,7 @@ export default function JuntaDirectiva() {
             </article>
           ))}
         </div>
-      </div>
+      </Container>
     </Section>
   );
 }

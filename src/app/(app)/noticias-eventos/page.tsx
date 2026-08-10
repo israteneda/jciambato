@@ -47,6 +47,7 @@ export default function NoticiasEventosPage() {
     <>
       <Bienvenida />
       <div className="h-160" aria-hidden="true"></div>
+      <div className="bg-jci-bg absolute top-0 h-full w-full translate-y-[99.9vh]"></div>
       <NoticiasEventos />
     </>
   );

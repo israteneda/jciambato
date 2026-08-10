@@ -40,7 +40,7 @@ export default function Presentacion() {
       </div>
 
       <div className="mt-16">
-        <BackgroundText primary="JCI AMBATO" secondary="LIDERAZGO" inset={12} />
+        <BackgroundText primary="JCI AMBATO" secondary="LIDERAZGO" inset={25} />
       </div>
     </Section>
   );
