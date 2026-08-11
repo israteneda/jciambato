@@ -131,7 +131,7 @@ export default function ProyectosPorArea() {
         className="relative mx-auto bg-white md:max-w-[calc(676px+50vw)]"
         aria-label="Filtros de proyectos por área"
       >
-        <div className="py-7 md:p-14" aria-label="Filtros de proyectos por área">
+        <div className="p-7 md:p-14" aria-label="Filtros de proyectos por área">
           <div className="text-jci-gray text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">
             Explora por área de oportunidad
           </div>

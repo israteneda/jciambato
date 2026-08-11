@@ -16,7 +16,7 @@ export function Container({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
       data-slot="container"
-      className={cn("relative mx-7 max-w-7xl md:mx-20 lg:mx-auto", className)}
+      className={cn("relative mx-8 max-w-7xl md:mx-20 lg:mx-auto", className)}
       {...props}
     />
   );

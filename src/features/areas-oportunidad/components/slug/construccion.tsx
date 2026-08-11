@@ -82,44 +82,42 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
         {/* Contenedor del Swiper*/}
         <section className="relative bg-transparent">
           {/* Swiper con imágenes */}
-          <div>
-            <div className="cursor-none">
-              <div className="relative mx-auto max-w-4xl bg-transparent px-0 md:px-0">
-                <Swiper
-                  ref={swiperRef}
-                  modules={[Navigation]}
-                  spaceBetween={0}
-                  slidesPerView={"auto"}
-                  grabCursor={true}
-                  className="overflow-visible!"
-                  onSlideChange={handleSlideChange}
-                >
-                  {area.images
-                    ?.filter((item) => item.src) // Filtrar solo imágenes con src definido
-                    .map((item, index) => (
-                      <SwiperSlide key={`${item.src}-${index}`}>
-                        <div className="group w-full">
-                          <div className="h-96 w-full overflow-hidden bg-white md:h-162.5">
-                            <div className="relative h-full w-full overflow-hidden">
-                              <Image
-                                src={item.src!}
-                                alt={item.alt || "Imagen del área"}
-                                fill
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                className="object-cover"
-                              />
-                            </div>
+          <div className="cursor-none">
+            <Container className="relative mx-auto max-w-4xl">
+              <Swiper
+                ref={swiperRef}
+                modules={[Navigation]}
+                spaceBetween={0}
+                slidesPerView={"auto"}
+                grabCursor={true}
+                className="overflow-visible!"
+                onSlideChange={handleSlideChange}
+              >
+                {area.images
+                  ?.filter((item) => item.src) // Filtrar solo imágenes con src definido
+                  .map((item, index) => (
+                    <SwiperSlide key={`${item.src}-${index}`}>
+                      <div className="group w-full">
+                        <div className="h-96 w-full overflow-hidden bg-white md:h-162.5">
+                          <div className="relative h-full w-full overflow-hidden">
+                            <Image
+                              src={item.src!}
+                              alt={item.alt || "Imagen del área"}
+                              fill
+                              sizes="(max-width: 768px) 100vw, 50vw"
+                              className="object-cover"
+                            />
                           </div>
                         </div>
-                      </SwiperSlide>
-                    ))}
-                </Swiper>
-              </div>
-            </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+              </Swiper>
+            </Container>
           </div>
 
           {/* Controles de navegación */}
-          <div className="relative mx-8 max-w-3xl bg-transparent px-4 md:mx-20 md:px-0 lg:mx-auto">
+          <Container className="relative mx-auto max-w-4xl">
             <div className="mt-2 flex items-center justify-between">
               {/* Contador */}
               <div className="pointer-events-none inline-flex -rotate-90 flex-col">
@@ -170,7 +168,7 @@ export default function Construccion({ area }: { area: AreaOportunidad }) {
                 </button>
               </nav>
             </div>
-          </div>
+          </Container>
         </section>
       </div>
     </Section>

@@ -8,7 +8,7 @@ export default function Bienvenida() {
   return (
     <section className="fixed inset-0 box-border flex h-160 w-full items-center overflow-hidden pb-0 md:h-190 md:pb-20">
       <RotatedText text="Dentro de nuestros proyectos" />
-      
+
       <div className="w-full">
         <InfoContainer
           subtitle="Proyectos"

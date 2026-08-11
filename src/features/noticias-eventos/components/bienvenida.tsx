@@ -8,7 +8,7 @@ export default function Bienvenida() {
   return (
     <section className="fixed inset-0 box-border flex h-160 w-full items-center overflow-hidden pb-0 md:h-190 md:pb-20">
       <RotatedText text="Lo más reciente en JCI Ambato" />
-      
+
       <div className="w-full">
         <InfoContainer
           subtitle="Noticias y Eventos"

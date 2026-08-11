@@ -3,10 +3,11 @@ import { Proyecto } from "@/types/proyecto";
 import { shareOnSocialMedia, getShareContentFromProyecto } from "@/lib/share";
 import Image from "next/image";
 import { Section } from "@/components/layout/section";
+import { Container } from "@/components/layout/container";
 
 export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
   return (
-    <Section>
+    <Section className="py-0 md:py-0" aria-label="Descripción del proyecto">
       <div className="relative h-137.5 w-full md:h-215">
         <div className="relative h-full w-full overflow-hidden bg-white">
           <Image
@@ -18,10 +19,10 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
           />
         </div>
       </div>
-      <div className="relative -top-35 z-20 -mb-35">
-        <div className="relative mx-auto max-w-7xl bg-white">
-          <div className="box-border w-full p-8 md:p-20 md:pt-20">
-            <div className="flex flex-col justify-between md:flex-row md:items-center">
+      <div className="relative -top-35 -mb-35">
+        <Container className="mx-auto bg-white p-8 md:p-30">
+          <div>
+            <header className="flex flex-col justify-between md:flex-row md:items-center">
               <div>
                 <div className="text-jci-black text-[13px] leading-[1.85] tracking-[1px] uppercase not-italic">
                   {proyecto.area_oportunidad}
@@ -44,7 +45,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
                   />
                 </div>
               )}
-            </div>
+            </header>
 
             <div className="mt-10 md:mt-20">
               <div className="border-t border-t-gray-200">
@@ -151,7 +152,7 @@ export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
     </Section>
   );

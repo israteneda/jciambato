@@ -76,16 +76,16 @@ export default function Formulario() {
   };
 
   return (
-    <Section className="bg-jci-bg py-0 md:py-0" aria-labelledby="formulario-heading">
+    <Section className="bg-jci-bg" aria-labelledby="formulario-heading">
       <div className="mt-8 md:mt-16">
         <BackgroundText primary="Hablemos" />
       </div>
 
       <div className="mt-16 bg-[#e8e8e8] md:mt-60">
-        <Container>
+        <Container className="mx-auto">
           <div className="flex flex-col lg:flex-row">
-            <article className="mx-8 box-border min-w-[calc(50%-100px)] flex-1 md:mx-20 md:pr-0 lg:mx-auto">
-              <div className="py-20 md:mb-24 md:py-24">
+            <div className="flex-1">
+              <div className="px-8 py-20 md:mb-24 md:py-24">
                 <header>
                   <div className="text-jci-gray text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
                     Estamos aquí para ayudarte
@@ -115,12 +115,12 @@ export default function Formulario() {
                   </div>
                 </header>
               </div>
-            </article>
+            </div>
 
-            <div className="min-w-[calc(50%+100px)] flex-1 md:mx-20 lg:mx-auto">
+            <div className="flex-1">
               {/* Formulario */}
-              <div className="box-border h-full w-full bg-white p-10 py-14 md:-translate-y-24 md:p-16 lg:p-20">
-                <div className="text-jci-teal mb-8 text-sm font-bold tracking-wider uppercase">
+              <div className="bg-white p-8 md:-translate-y-24 md:p-20">
+                <div className="text-jci-teal mb-10 text-sm font-bold tracking-wider uppercase">
                   Envíanos un mensaje
                 </div>
 
