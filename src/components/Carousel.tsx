@@ -138,7 +138,7 @@ export const Carousel = ({
 
       {/* Indicadores numéricos */}
       <div
-        className="absolute top-1/2 right-13 z-50 hidden w-5 -translate-y-1/2 transform flex-col items-center md:flex"
+        className="absolute top-1/2 right-13 hidden w-5 -translate-y-1/2 transform flex-col items-center md:flex"
         aria-label="Indicador de posición"
         aria-live="polite"
       >

@@ -112,7 +112,7 @@ export default function ProyectosPorArea() {
     }
 
     return (
-      <div className="relative mx-8 flex flex-wrap">
+      <div className="relative flex flex-wrap px-8 md:px-10">
         {proyectosAgrupados.map((grupo, grupoIndex) => (
           <div key={grupoIndex} className="flex w-full flex-col items-center md:flex-row">
             {grupo.map((proyecto) => (

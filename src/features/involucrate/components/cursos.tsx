@@ -36,7 +36,7 @@ export default function Cursos() {
                 <Link
                   href="https://aprende.educat.tech/course/section.php?id=624"
                   target="_blank"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
+                  className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center py-4">
@@ -74,7 +74,7 @@ export default function Cursos() {
                 <Link
                   href="https://aprende.educat.tech/course/view.php?id=54"
                   target="_blank"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
+                  className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center py-4">
@@ -114,7 +114,7 @@ export default function Cursos() {
                 <Link
                   href="https://aprende.educat.tech/course/view.php?id=53"
                   target="_blank"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
+                  className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center py-4">
@@ -152,7 +152,7 @@ export default function Cursos() {
                 <Link
                   href="https://aprende.educat.tech/course/view.php?id=57"
                   target="_blank"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
+                  className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center py-4">

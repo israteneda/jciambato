@@ -3,8 +3,8 @@ import { Section } from "@/components/layout/section";
 
 export default function PoliticaGestion() {
   return (
-    <Section className="bg-gray-50">
-      <div className="box-border flex min-h-28 items-center bg-gray-200 md:mx-8">
+    <Section className="bg-jci-bg py-0 md:py-0">
+      <div className="box-border flex min-h-28 items-center bg-gray-200">
         <h1 className="text-jci-black ml-8 leading-none font-bold whitespace-nowrap transition duration-300 md:ml-20">
           Política de Gestión
         </h1>

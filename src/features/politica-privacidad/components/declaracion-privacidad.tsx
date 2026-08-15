@@ -10,8 +10,8 @@ export default function DeclaracionPrivacidad() {
             Declaración de Privacidad y Protección de Datos Personales
           </h1>
 
-          <time className="text-jci-teal mt-8 block text-xl font-bold italic" dateTime="2025-07">
-            Julio, 2025
+          <time className="text-jci-teal mt-8 block text-xl font-bold italic" dateTime="2026-07">
+            Julio, 2026
           </time>
         </header>
 

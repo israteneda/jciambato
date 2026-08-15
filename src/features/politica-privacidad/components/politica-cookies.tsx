@@ -10,8 +10,8 @@ export default function PoliticaCookies() {
             Política de Cookies
           </h1>
 
-          <time className="text-jci-teal mt-8 block text-xl font-bold italic" dateTime="2025-07">
-            Julio, 2025
+          <time className="text-jci-teal mt-8 block text-xl font-bold italic" dateTime="2026-07">
+            Julio, 2026
           </time>
           <p className="text-jci-black mt-2 text-lg">
             Al utilizar este sitio web, usted acepta el uso de cookies conforme a esta Política de

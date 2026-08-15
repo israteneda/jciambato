@@ -38,7 +38,7 @@ export default function Valores() {
 
                   <Link
                     href="/areas-oportunidad"
-                    className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
+                    className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                     aria-label="Áreas de Oportunidad"
                   >
                     <div className="flex items-center py-4">
@@ -75,7 +75,7 @@ export default function Valores() {
 
                   <Link
                     href="/areas-oportunidad"
-                    className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
+                    className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                     aria-label="Áreas de oportunidad"
                   >
                     <div className="flex items-center py-4">
@@ -114,7 +114,7 @@ export default function Valores() {
 
                   <Link
                     href="/areas-oportunidad"
-                    className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
+                    className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                     aria-label="Áreas de Oportunidad"
                   >
                     <div className="flex items-center py-4">
@@ -152,7 +152,7 @@ export default function Valores() {
 
                   <Link
                     href="/areas-oportunidad"
-                    className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
+                    className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                     aria-label="Áreas de Oportunidad"
                   >
                     <div className="flex items-center py-4">
