@@ -1,10 +1,11 @@
+"use client";
+
 import clsx from "clsx";
+import { useScroll } from "@/hooks";
 
-interface BorderFrameProps {
-  isScrolled: boolean;
-}
+export default function BorderFrame() {
+  const isScrolled = useScroll();
 
-export default function BorderFrame({ isScrolled }: BorderFrameProps) {
   return (
     <div
       className={clsx(

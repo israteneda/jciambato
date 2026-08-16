@@ -32,8 +32,8 @@ export function Navbar() {
             className={cn(
               "object-contain",
               "transition-opacity duration-300",
-              "group-data-[affix=false]:opacity-100",
-              "group-data-[affix=true]:opacity-0"
+              "opacity-0",
+              "group-data-[affix=false]:group-data-[tone=light]:opacity-100"
             )}
             sizes="92px"
           />
@@ -47,7 +47,8 @@ export function Navbar() {
             className={cn(
               "object-contain",
               "transition-opacity duration-300",
-              "group-data-[affix=false]:opacity-0",
+              "opacity-0",
+              "group-data-[affix=false]:group-data-[tone=dark]:opacity-100",
               "group-data-[affix=true]:opacity-100"
             )}
             sizes="92px"

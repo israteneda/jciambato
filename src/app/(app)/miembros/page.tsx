@@ -16,10 +16,7 @@ export default function MiembrosPage() {
   return (
     <>
       <Bienvenida />
-
-      {/* Espacio */}
-      <div className="h-160" aria-hidden="true"></div>
-
+      <div className="h-190" aria-hidden="true"></div>
       <JuntaDirectiva />
       <Miembros />
       <Senadores />

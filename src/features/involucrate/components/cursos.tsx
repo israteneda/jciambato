@@ -1,4 +1,4 @@
-import SubContainer from "@/components/sub-container";
+import SectionHeader from "@/components/layout/section-header";
 import { Container } from "@/components/layout/container";
 import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
@@ -8,7 +8,7 @@ export default function Cursos() {
   return (
     <Section className="bg-jci-bg" aria-labelledby="cursos-heading">
       <Container>
-        <SubContainer
+        <SectionHeader
           title="Prepárate para ser parte de JCI"
           subtitle="Conócenos más a fondo"
           description="Participa en nuestros cursos de inducción, formación y liderazgo. Estos programas te permitirán comprender a profundidad el propósito de nuestra organización, fortalecer tus competencias personales y profesionales, y descubrir cómo contribuir activamente al desarrollo de tu comunidad."

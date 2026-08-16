@@ -8,7 +8,7 @@ import { historiaItems } from "@/features/inicio/data/historia";
 import Image from "next/image";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
-import SubContainer from "@/components/sub-container";
+import SectionHeader from "@/components/layout/section-header";
 
 export default function Historia() {
   return (
@@ -17,7 +17,7 @@ export default function Historia() {
         <BackgroundText primary="Desde" secondary="1973" inset={15} />
       </div>
       <Container>
-        <SubContainer
+        <SectionHeader
           subtitle="Desde 1973"
           title="Un legado que trasciende generaciones."
           description="Por cinco décadas, JCI Ambato ha forjado un liderazgo transformador, impulsando la formación de ciudadanos activos y ejecutando proyectos de gran impacto. Su legado se construye con logros, retos superados y generaciones de jóvenes dedicadas a hacer de Ambato una ciudad más inclusiva, participativa y preparada para el futuro."

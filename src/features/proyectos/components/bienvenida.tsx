@@ -1,28 +1,15 @@
-"use client";
-import RowScroll from "@/components/row-scroll";
-import BackgroundImage from "@/components/background-image";
-import InfoContainer from "@/components/info-container";
-import RotatedText from "@/components/rotated-text";
+import PageHero from "@/components/layout/page-hero";
 
 export default function Bienvenida() {
   return (
-    <section className="fixed inset-0 box-border flex h-160 w-full items-center overflow-hidden pb-0 md:h-190 md:pb-20">
-      <RotatedText text="Dentro de nuestros proyectos" />
-
-      <div className="w-full">
-        <InfoContainer
-          subtitle="Proyectos"
-          title="Acciones que dejan huella"
-          description="Cada proyecto nace del compromiso por mejorar nuestra ciudad. Unidos, logramos un mayor impacto."
-        />
-      </div>
-
-      <BackgroundImage
-        image="/images/proyectos/proyecto-feria-libro.webp"
-        alt="Imagen de fondo de proyectos de JCI Ambato"
-      />
-
-      <RowScroll />
-    </section>
+    <PageHero
+      tone="light"
+      rotatedText="Dentro de nuestros proyectos"
+      subtitle="Proyectos"
+      title="Acciones que dejan huella"
+      description="Cada proyecto nace del compromiso por mejorar nuestra ciudad. Unidos, logramos un mayor impacto."
+      image="/images/proyectos/proyecto-feria-libro.webp"
+      imageAlt="Imagen de fondo de proyectos de JCI Ambato"
+    />
   );
 }

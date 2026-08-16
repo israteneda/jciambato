@@ -1,6 +1,6 @@
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
-import SubContainer from "@/components/sub-container";
+import SectionHeader from "@/components/layout/section-header";
 import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
@@ -9,7 +9,7 @@ export default function Valores() {
     <Section>
       <Container>
         <div className="md:mx-28">
-          <SubContainer
+          <SectionHeader
             title="Transformamos ideas en acciones concretas"
             subtitle="Nuestras formas de actuar"
             description="En JCI Ambato, convertimos el liderazgo en impacto a través de cuatro formas de actuar. Estas representan cómo llevamos a la práctica el desarrollo de nuestros miembros y el servicio a la comunidad."

@@ -1,10 +1,10 @@
-interface SubContainerProps {
+interface SectionHeaderProps {
   subtitle: string;
   title: string;
   description: string;
 }
 
-export default function SubContainer({ subtitle, title, description }: SubContainerProps) {
+export default function SectionHeader({ subtitle, title, description }: SectionHeaderProps) {
   return (
     <div className="flex">
       <div className="hidden md:block">

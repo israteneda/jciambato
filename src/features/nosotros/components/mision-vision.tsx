@@ -1,6 +1,6 @@
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
-import SubContainer from "@/components/sub-container";
+import SectionHeader from "@/components/layout/section-header";
 import Image from "next/image";
 
 export default function MisionVision() {
@@ -8,7 +8,7 @@ export default function MisionVision() {
     <Section className="bg-jci-bg">
       <Container>
         <div className="flex flex-col items-center justify-between md:flex-row">
-          <SubContainer
+          <SectionHeader
             subtitle="Nuestro Propósito"
             title="Nuestra Misión y Visión"
             description="Ofrecer oportunidades de desarrollo de liderazgo que empoderen a los jóvenes para crear un impacto positivo. Ser la principal red mundial de jóvenes líderes."

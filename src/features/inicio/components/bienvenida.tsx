@@ -1,23 +1,21 @@
 "use client";
 
-import { useScroll } from "@/hooks";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
 import BorderFrame from "@/components/border-frame";
 import RotatedText from "@/components/rotated-text";
 import RowScroll from "@/components/row-scroll";
+import ScrollNav from "@/components/scroll-nav";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/layout/section";
 
 export default function Bienvenida() {
-  const isScrolled = useScroll();
-
   return (
-    <Section className="py-0 md:py-0">
+    <Section className="bg-[#003D62] py-0 md:py-0">
       <div className="flex w-full">
-        <div className="box-border flex h-screen w-full items-center bg-[#003D62] px-8 pb-23 md:px-45">
-          <BorderFrame isScrolled={isScrolled} />
+        <div className="box-border flex h-screen w-full items-center px-8 pb-23 md:px-45">
+          <BorderFrame />
 
           <div className="relative">
             <div className="flex">
@@ -51,9 +49,6 @@ export default function Bienvenida() {
               </div>
             </div>
           </div>
-
-          {/* Video */}
-          {/* <div className="absolute inset-0"></div> */}
         </div>
 
         <RotatedText text="BIENVENIDO A LA RED GLOBAL DE LÍDERES QUE TRANSFORMAN EL MUNDO" />
@@ -106,28 +101,7 @@ export default function Bienvenida() {
         </a>
       </div>
 
-      {/* Botón lateral de navegación */}
-      <nav className="absolute bottom-0 left-1/2 -translate-x-1/2 rotate-90 transform">
-        <div className="hidden md:block">
-          <Link
-            href="/nosotros"
-            className="flex items-center"
-            aria-label="Ir a la sección Sobre Nosotros"
-          >
-            <span className="text-jci-teal text-[8px] font-semibold uppercase md:text-[10.5px]">
-              Sobre Nosotros
-            </span>
-            <Image
-              src="/icons/arrow-down.svg"
-              alt=""
-              width={500}
-              height={500}
-              className="h-10 w-14 -rotate-90 object-cover md:h-16 md:w-24"
-              aria-hidden="true"
-            />
-          </Link>
-        </div>
-      </nav>
+      <ScrollNav />
     </Section>
   );
 }
