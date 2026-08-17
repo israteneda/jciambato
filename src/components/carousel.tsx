@@ -55,7 +55,7 @@ export const Carousel = ({
           {proyectos.map((proyecto, index) => (
             <article
               key={proyecto.id}
-              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? "opacity-100" : "pointer-events-none opacity-0"}`}
               aria-hidden={index !== currentIndex}
               role="group"
               aria-roledescription="slide"
