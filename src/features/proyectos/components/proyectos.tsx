@@ -1,7 +1,7 @@
 import { Section } from "@/components/layout/section";
-import { ProyectosPorArea } from "@/features/proyectos/components";
+import { ProyectosPorArea } from "./";
 
-export default function Proyectos() {
+export function Proyectos() {
   return (
     <Section className="py-0 md:py-0" aria-labelledby="proyectos-contenido-heading">
       <header className="sr-only">

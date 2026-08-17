@@ -2,7 +2,7 @@ import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import { Proyecto } from "@/types/proyecto";
 
-export default function Presentacion({ proyecto }: { proyecto: Proyecto }) {
+export function Presentacion({ proyecto }: { proyecto: Proyecto }) {
   return (
     <Section aria-labelledby={`presentacion-${proyecto.slug}-heading`}>
       <Container>

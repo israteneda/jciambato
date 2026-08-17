@@ -10,7 +10,7 @@ import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import SectionHeader from "@/components/layout/section-header";
 
-export default function Historia() {
+export function Historia() {
   return (
     <Section className="bg-jci-bg">
       <div className="pt-12 md:pt-24">

@@ -1,7 +1,7 @@
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 
-export default function DeclaracionPrivacidad() {
+export function DeclaracionPrivacidad() {
   return (
     <Section aria-label="Declaración de Privacidad y Protección de Datos Personales">
       <Container>

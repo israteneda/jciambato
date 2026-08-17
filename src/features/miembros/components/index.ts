@@ -1,5 +1,6 @@
-export { default as Bienvenida } from "./bienvenida";
-export { default as JuntaDirectiva } from "./junta-directiva";
-export { default as Miembros } from "./miembros";
-export { default as Senadores } from "./senadores";
-export { default as PasadosPresidentes } from "./pasados-presidentes";
+export { Bienvenida } from "./bienvenida";
+export { JuntaDirectiva } from "./junta-directiva";
+export { MiembrosGenerales as Miembros } from "./miembros";
+export { Senadores } from "./senadores";
+export { PasadosPresidentes } from "./pasados-presidentes";
+export { MiembrosNacionales } from "./miembros-nacionales";

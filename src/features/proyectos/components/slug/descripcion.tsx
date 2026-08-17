@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 
-export default function Descripcion({ proyecto }: { proyecto: Proyecto }) {
+export function Descripcion({ proyecto }: { proyecto: Proyecto }) {
   return (
     <Section className="py-0 md:py-0" aria-label="Descripción del proyecto">
       <div className="relative h-137.5 w-full md:h-215">

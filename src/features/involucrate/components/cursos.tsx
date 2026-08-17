@@ -4,7 +4,7 @@ import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Section } from "@/components/layout/section";
 
-export default function Cursos() {
+export function Cursos() {
   return (
     <Section className="bg-jci-bg" aria-labelledby="cursos-heading">
       <Container>

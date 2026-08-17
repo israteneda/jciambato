@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
-export default function Grupo() {
+export function Grupo() {
   return (
     <Section className="overflow-hidden py-0 md:py-0">
       {/* Imagen */}
@@ -22,7 +22,7 @@ export default function Grupo() {
       {/* Información */}
       <div className="-mt-22 md:-mt-52">
         <Container>
-          <div className="text-[13px] leading-[1.85] font-bold tracking-normal text-[#989898] uppercase not-italic">
+          <div className="text-jci-gray text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
             Trayectoria que Transforma
           </div>
 
@@ -40,7 +40,7 @@ export default function Grupo() {
               <div className="ml-8 md:ml-16">
                 <div>
                   <div className="mt-8">
-                    <div className="max-w-83 text-left leading-[1.78] font-normal tracking-normal text-[#323232] not-italic md:text-[18px]">
+                    <div className="text-jci-dark-text max-w-83 text-left leading-[1.78] font-normal tracking-normal not-italic md:text-[18px]">
                       <p>
                         <strong>En JCI Ambato, no solo observamos, actuamos. </strong> Lideramos con
                         propósito, servimos con pasión y forjamos un futuro mejor con cada paso que

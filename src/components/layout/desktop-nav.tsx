@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 
 import type { NavItem } from "@/types/nav";
-import { isActive } from "@/lib/nav";
+import { isActive } from "@/utils/nav";
 
 import { NavItem as NavLink } from "./NavItem";
 

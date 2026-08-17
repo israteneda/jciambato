@@ -1,7 +1,7 @@
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 
-export default function PoliticaCookies() {
+export function PoliticaCookies() {
   return (
     <Section aria-label="Política de Cookies">
       <Container>

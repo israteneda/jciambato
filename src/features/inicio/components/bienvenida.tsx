@@ -8,9 +8,9 @@ import ScrollNav from "@/components/scroll-nav";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/layout/section";
 
-export default function Bienvenida() {
+export function Bienvenida() {
   return (
-    <Section className="bg-[#003D62] py-0 md:py-0">
+    <Section className="bg-jci-navy py-0 md:py-0">
       <div className="flex w-full">
         <div className="box-border flex h-screen w-full items-center px-8 pb-23 md:px-45">
           <BorderFrame />

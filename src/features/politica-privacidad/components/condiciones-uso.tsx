@@ -1,7 +1,7 @@
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 
-export default function CondicionesUso() {
+export function CondicionesUso() {
   return (
     <Section aria-label="Condiciones de Uso">
       <Container>
@@ -22,9 +22,7 @@ export default function CondicionesUso() {
                 <section>
                   <div className="flex flex-col gap-10">
                     <article>
-                      <h4 className="text-jci-black mb-4 text-2xl font-bold">
-                        Alcance
-                      </h4>
+                      <h4 className="text-jci-black mb-4 text-2xl font-bold">Alcance</h4>
                       <p>
                         Estas Condiciones de Uso regulan el acceso y uso del sitio web de JCI
                         Ambato, incluyendo sus contenidos, servicios y funcionalidades. Nos

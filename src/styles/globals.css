@@ -12,7 +12,6 @@
 @theme inline {
   /* ─── Colores oficiales JCI (Internacional v1.4) ─── */
   --color-jci-gray: #aeaeae;
-  /* Ver la posibilidad de agregar este nuetvo texto de color [#323232] */
   --color-jci-blue: #0097d7;
   --color-jci-black: #130f2d;
   --color-jci-navy: #1f4789;
@@ -21,6 +20,8 @@
 
   /* --- Fondos y superficies --- */
   --color-jci-bg: #f5f5f5;
+  --color-jci-dark-text: #323232;    /* Texto oscuro / títulos */
+  --color-jci-gray-light: #e8e8e8;   /* Gris secundario de superficie */
 
   /* --- Tipografías --- */
   --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui;

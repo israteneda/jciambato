@@ -4,7 +4,7 @@ import { areasOportunidad } from "@/features/inicio/data/areas-oportunidad";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Section } from "@/components/layout/section";
 
-export default function AreasOportunidad() {
+export function AreasOportunidad() {
   return (
     <Section className="py-0 md:py-0" aria-labelledby="areas-oportunidad-heading">
       <header className="sr-only">

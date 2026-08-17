@@ -1,6 +1,6 @@
 import {
   Bienvenida,
-  ActividadesAnuales,
+  Historia,
   MisionVision,
   Presentacion,
   Valores,
@@ -26,7 +26,7 @@ export default function NosotrosPage() {
       <MisionVision />
       <Valores />
       <Opinion />
-      <ActividadesAnuales />
+      <Historia />
     </>
   );
 }

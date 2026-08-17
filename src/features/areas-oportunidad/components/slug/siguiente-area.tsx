@@ -6,7 +6,7 @@ import { AreaOportunidad } from "@/types/area-oportunidad";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function SiguienteArea({ area }: { area: AreaOportunidad }) {
+export function SiguienteArea({ area }: { area: AreaOportunidad }) {
   // Obtener todas las áreas y encontrar la siguiente
   const allAreas = getAllAreas();
   const currentIndex = allAreas.findIndex((a) => a.slug === area.slug);

@@ -4,7 +4,7 @@ import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function Presentacion() {
+export function Presentacion() {
   return (
     <Section>
       <div className="overflow-hidden">

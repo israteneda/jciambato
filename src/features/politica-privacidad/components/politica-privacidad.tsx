@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import DeclaracionPrivacidad from "./declaracion-privacidad";
-import CondicionesUso from "./condiciones-uso";
-import PoliticaCookies from "./politica-cookies";
+import { DeclaracionPrivacidad } from "./declaracion-privacidad";
+import { CondicionesUso } from "./condiciones-uso";
+import { PoliticaCookies } from "./politica-cookies";
 import { Section } from "@/components/layout/section";
 
-export default function PoliticaPrivacidad() {
+export function PoliticaPrivacidad() {
   // Estado para controlar el botón de activo
   const [activeButton, setActiveButton] = useState(0);
 

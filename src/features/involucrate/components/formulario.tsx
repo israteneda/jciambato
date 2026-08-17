@@ -11,7 +11,7 @@ import Link from "next/link";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 
-export default function Formulario() {
+export function Formulario() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -81,7 +81,7 @@ export default function Formulario() {
         <BackgroundText primary="Hablemos" />
       </div>
 
-      <div className="mt-16 bg-[#e8e8e8] md:mt-60">
+      <div className="bg-jci-gray-light mt-16 md:mt-60">
         <Container className="mx-auto">
           <div className="flex flex-col lg:flex-row">
             <div className="flex-1">

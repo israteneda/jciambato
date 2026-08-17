@@ -2,7 +2,7 @@ import { valores } from "@/features/inicio/data/valores";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 
-export default function Valores() {
+export function Valores() {
   return (
     <Section className="bg-jci-navy py-24 md:py-34">
       <Container>

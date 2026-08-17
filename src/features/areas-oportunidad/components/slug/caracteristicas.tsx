@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { AreaOportunidad } from "@/types/area-oportunidad";
 
-export default function Caracteristicas({ area }: { area: AreaOportunidad }) {
+export function Caracteristicas({ area }: { area: AreaOportunidad }) {
   return (
     <Section aria-labelledby={`presentacion-${area.slug}-heading`}>
       <Container>

@@ -5,8 +5,8 @@ import { useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 import type { NavItem } from "@/types/nav";
-import { isActive } from "@/lib/nav";
-import { cn } from "@/lib/utils";
+import { isActive } from "@/utils/nav";
+import { cn } from "@/utils/utils";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
 import { NavItem as NavLink } from "./NavItem";
@@ -26,7 +26,7 @@ export function MobileNav({
       <SheetTrigger
         className={cn(
           "inline-flex h-12 w-12 items-center justify-center rounded-md p-2 transition-colors duration-200 lg:hidden",
-          "group-data-[affix=false]:group-data-[tone=light]:text-white group-data-[affix=false]:group-data-[tone=dark]:text-jci-black group-data-[affix=true]:text-jci-black"
+          "group-data-[affix=false]:group-data-[tone=dark]:text-jci-black group-data-[affix=true]:text-jci-black group-data-[affix=false]:group-data-[tone=light]:text-white"
         )}
         aria-label="Abrir menú de navegación"
         aria-controls="mobile-menu"

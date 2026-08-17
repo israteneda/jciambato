@@ -1,9 +1,9 @@
 import Image from "next/image";
-import AnimatedNumber from "@/components/AnimatedNumber";
+import AnimatedNumber from "@/components/animated-number";
 import ParallaxImage from "@/components/parallax-image";
 import { Section } from "@/components/layout/section";
 
-export default function Presentacion() {
+export function Presentacion() {
   return (
     <Section className="py-0 md:py-0" aria-labelledby="presentacion-heading">
       <article className="relative mx-auto bg-white md:max-w-[calc(676px+50vw)]">

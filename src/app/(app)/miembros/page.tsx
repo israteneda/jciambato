@@ -1,5 +1,10 @@
-import { Bienvenida, JuntaDirectiva, Miembros, Senadores } from "@/features/miembros/components";
-import MiembrosNacionales from "@/features/miembros/components/miembros-nacionales";
+import {
+  Bienvenida,
+  JuntaDirectiva,
+  Miembros,
+  Senadores,
+  MiembrosNacionales,
+} from "@/features/miembros/components";
 
 import { Metadata } from "next";
 

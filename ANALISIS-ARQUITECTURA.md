@@ -534,7 +534,7 @@ export function SectionHeader({
 
 Ordenado por **beneficio ÷ esfuerzo**.
 
-> **Estado al 2026-08-16 (actualizado):** Fase 0 ✅ COMPLETA. Fase 1 ✅ COMPLETA — Container ampliado a `max-w-7xl` (decisión de diseño 2026-08-09, más ancho y elegante), Section default `py-24 md:py-34` (ritmo dominante real del sitio), bienvenidas de inicio/involucrate alineadas al estándar `fixed`, y cierre final 2026-08-14 (restos del carril padded erradicados, grises alineados a marca, z-index redundantes limpios). **Fase 2 ✅ COMPLETA el 2026-08-15** (ver abajo, con las decisiones tomadas en ejecución). **Fase 3 ✅ COMPLETA el 2026-08-16** (ver abajo). Pendiente Fase 4.
+> **Estado al 2026-08-17 (actualizado):** Fase 0 ✅ COMPLETA. Fase 1 ✅ COMPLETA — Container ampliado a `max-w-7xl` (decisión de diseño 2026-08-09, más ancho y elegante), Section default `py-24 md:py-34` (ritmo dominante real del sitio), bienvenidas de inicio/involucrate alineadas al estándar `fixed`, y cierre final 2026-08-14 (restos del carril padded erradicados, grises alineados a marca, z-index redundantes limpios). **Fase 2 ✅ COMPLETA el 2026-08-15** (ver abajo, con las decisiones tomadas en ejecución). **Fase 3 ✅ COMPLETA el 2026-08-16** (ver abajo). **Fase 4 ✅ COMPLETA el 2026-08-17** (ver abajo). Plan de migración completado.
 
 ### Fase 0 — Bugs · ✅ COMPLETA
 
@@ -596,15 +596,30 @@ Ordenado por **beneficio ÷ esfuerzo**.
 - [x] **Hook `useFilterableGrid`** (2026-08-16): `proyectos-por-area.tsx` y `noticas-eventos-por-tipo.tsx` duplicaban ~45 líneas de estado de filtro + `selectItems` + paginación. Extraído a `src/hooks/use-filterable-grid.ts` (`items`, `categories`, `getItemsBySlug`, `pageSize` → `{ activeIndex, selectItems, visibleItems, hasMore, handleCategoryChange, loadMore }`). Cada página conserva su JSX (card, grouping 2 vs 3, Container en noticias). Además se eliminó el `<Section>` duplicado: los orquestadores (`proyectos.tsx`, `noticas-eventos.tsx`) son los únicos dueños de la sección; los subcomponentes renderizan fragment. Corregido también el `id` duplicado del heading sr-only (`noticias-contenido-heading` vs `proyectos-contenido-heading`). Colores de debug de testing visual eliminados.
 - [x] **Renames semánticos y hoist de doble-llamado** (2026-08-16): `NoticiaEvento.url` → `slug` (era un segmento de ruta, no una URL; `getNoticiaEventoBySlug` ya comparaba `noticia.url === slug`). Eliminado `Proyecto.url` (se derivaba del slug; Carousel ahora usa `href={`/proyectos/${proyecto.slug}`}`). `getAllProyectos()`/`getAllNoticiasEventos()` se llamaban DOS veces por página (`.length` + `items`); se hoistean a una constante. Pendiente: decidir unificación `nombre`/`titulo` (afecta hero del Carousel, es decisión de diseño visible). El destacado `mejor-presidencia-local-2025` se mantiene como está (decisión: no crear proyecto fantasma para un premio; es link muerto conocido).
 
-### Fase 4 — Consistencia · progresivo, sin fecha
+### Fase 4 — Consistencia · ✅ COMPLETA (2026-08-17)
 
-- [ ] Named exports, feature por feature. Eliminar el alias `ActividadesAnuales`.
-- [ ] Kebab-case en `components/`: `AnimatedNumber.tsx` → `animated-number.tsx`, `Carousel.tsx`, `Chatbot.tsx`, `FAQSection.tsx`, `LaunchCountdown.tsx`, `Breadcrumbs.tsx`, `Clarity.tsx`, `ChatbotWrapper.tsx`.
-- [ ] Barrels `index.tsx` → `index.ts` en `politica-gestion` y `politica-privacidad`.
-- [ ] Crear `src/utils/` para funciones puras; dejar `lib/` solo para lo acoplado a Next/browser.
-- [ ] Mapear tokens semánticos de shadcn a la paleta JCI; erradicar `#003D62` y demás hexes.
-- [ ] Extraer `<PersonGrid>` de las 4 secciones de miembros.
-- [ ] Mover `features/inicio/types/{aliado,faq}.ts` a `src/types/` (los consume código compartido).
+- [x] Named exports, feature por feature (52 archivos `export default function` → `export function`). Eliminados los aliases engañosos: `ActividadesAnuales` → `Historia` (nosotros) y `Valores` se mantuvo (el nombre de función coincide con el uso en página).
+- [x] Kebab-case en `components/` raíz: `AnimatedNumber.tsx`, `Carousel.tsx`, `Chatbot.tsx`, `ChatbotWrapper.tsx`, `Clarity.tsx`, `LaunchCountdown.tsx`, `Breadcrumbs.tsx` → kebab-case. (`FAQSection.tsx` no existía — la FAQ ya estaba en `preguntas-frecuentes.tsx`.)
+- [x] Barrels `index.tsx` → `index.ts` en `politica-gestion` y `politica-privacidad`.
+- [x] Crear `src/utils/` con `utils.ts` (`cn()`) y `nav.ts` (`isActive`, `getHeroTone`). `lib/` solo conserva `share.ts`, `seo.ts`, `json-ld.ts` (acoplados a Next/browser). 32 imports actualizados.
+- [x] Tokens de color: agregados `--color-jci-dark-text: #323232` (texto oscuro / títulos) y `--color-jci-gray-light: #e8e8e8` (gris secundario). Hexes erradicados: `#003D62` → `jci-navy` (bridge temporal hasta el rediseño del home), `#323232` → `jci-dark-text`, `#989898` → `jci-gray`, `#e8e8e8` → `jci-gray-light`.
+- [x] Extraer `<PersonGrid>` en `src/components/layout/person-grid.tsx` — Server Component con props `title`, `description`, `data`, `ariaLabel`. 4 componentes reducidos de ~86 a ~22 líneas cada uno (~250 líneas de duplicación eliminadas). `junta-directiva` intocada (layout rectangular distinto).
+- [x] `features/inicio/types/aliado.ts`: se conservó (es importado por `data/aliados.ts`). `faq.ts`: inlineado en `inicio/data/faqs.ts` y eliminado.
+- [x] Estandarización de imports: 24 violaciones corregidas (reglas: `./` para misma carpeta, `./sub/` para subcarpeta directa, `@/` para salir del contexto local o 2+ niveles `../`).
+
+**Decisiones tomadas en ejecución:**
+
+- `aliado.ts` no era código muerto como decía la auditoría inicial — tiene un consumidor real (`data/aliados.ts`). Se verificó antes de eliminar.
+- `Valores` alias en impacto se mantuvo porque el nombre de función `Valores` coincide con su uso en la página; el archivo se llama `formas-actuar` pero el export es consistente con el componente.
+- `#003D62` se reemplazó por `jci-navy` como bridge temporal; se eliminará completamente con el rediseño de la bienvenida de inicio.
+
+> **Héroes `variant="section"` (sin imagen):** `impacto` y `areas-oportunidad` (listing) usan esta variante intencionalmente — son bienvenidas que muestran al usuario dónde está, sin ocupar pantalla completa. Patrón aceptado y consistente con la personalización del sitio.
+
+### Fase 5 — Ajustes post-validación · en curso
+
+- [ ] Mover `not-found.tsx` de `src/app/` a `src/app/(app)/` para que renderice dentro del layout correcto (Navbar + Footer). Verificar que el scroll restoration nativo de Next.js funcione al navegar a rutas desconocidas.
+- [ ] Decidir destino de `mejor-presidencia-local-2025` (4to destacado del carousel): slug fantasma que no existe en el array de proyectos → link muerto conocido. Opciones: crear proyecto placeholder, quitar del carousel, o aceptar el404.
+- [ ] Ajustes adicionales que surjan de pruebas en el navegador.
 
 ---
 
@@ -651,6 +666,6 @@ $ rg "mx-8|md:mx-20|lg:mx-auto|max-w-6xl|max-w-7xl|container mx-auto" src --coun
 
 La arquitectura de carpetas ya está a la altura — eso quedó resuelto en la reorganización del 2026-07-27.
 
-Lo que faltaba era **abstracción de layout**. Hay componentes que saben demasiado de CSS y nada de composición. Las **fases 0 a 3** quedaron ejecutadas al 2026-08-16: eliminan aproximadamente el 80 % del dolor de mantenimiento actual y dejan el árbol RSC limpio (página de inicio server, con metadata).
+Lo que faltaba era **abstracción de layout** y **consistencia de código**. Las **fases 0 a 4** quedaron ejecutadas al 2026-08-17: eliminan el ~90 % del dolor de mantenimiento actual, dejan el árbol RSC limpio (página de inicio server, con metadata), y establecen convenciones de exports, naming, tokens y composición.
 
-Recorrido de ejecución completado: Fase 0, Fase 1, Fase 2 y Fase 3 se terminaron antes de tocar cualquier otra cosa. El rediseño de la bienvenida (con librerías de animación adicionales) queda como trabajo futuro al cierre del plan.
+Recorrido de ejecución completado: Fase 0 (bugs), Fase 1 (Container), Fase 2 (Section + PageHero), Fase 3 (Responsive + RSC) y Fase 4 (Consistencia) se terminaron antes de tocar cualquier otra cosa. El rediseño de la bienvenida de inicio (con librerías de animación adicionales) queda como trabajo futuro.

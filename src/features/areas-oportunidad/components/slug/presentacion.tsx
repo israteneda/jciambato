@@ -3,7 +3,7 @@ import { Section } from "@/components/layout/section";
 import { AreaOportunidad } from "@/types/area-oportunidad";
 import Image from "next/image";
 
-export default function Presentacion({ area }: { area: AreaOportunidad }) {
+export function Presentacion({ area }: { area: AreaOportunidad }) {
   return (
     <Section className="overflow-hidden" aria-labelledby={`presentacion-${area.slug}-heading`}>
       <Container>

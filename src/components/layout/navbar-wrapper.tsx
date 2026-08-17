@@ -4,7 +4,7 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useState, type ComponentProps } from "react";
 
-import { getHeroTone } from "@/lib/nav";
+import { getHeroTone } from "@/utils/nav";
 
 export function NavbarWrapper(props: ComponentProps<"header">) {
   const { scrollY } = useScroll();

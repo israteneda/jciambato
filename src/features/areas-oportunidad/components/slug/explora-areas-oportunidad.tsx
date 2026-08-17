@@ -24,7 +24,7 @@ function extractTwoKeywords(title: string): [string, string] {
   return [firstWord.toUpperCase(), secondWord.toUpperCase()];
 }
 
-export default function ExploraAreasOportunidad({ area }: { area: AreaOportunidad }) {
+export function ExploraAreasOportunidad({ area }: { area: AreaOportunidad }) {
   if (!area || !area.title) {
     return null; // O puedes retornar un componente de error/loading
   }

@@ -4,8 +4,8 @@ import { ArrowUpIcon } from "lucide-react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
 
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import { cn } from "@/utils/utils";
 
 export function ScrollTop() {
   const { scrollY } = useScroll();

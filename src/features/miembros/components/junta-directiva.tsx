@@ -4,7 +4,7 @@ import { juntaDirectiva } from "@/features/miembros/data/junta-directiva";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
-export default function JuntaDirectiva() {
+export function JuntaDirectiva() {
   return (
     <Section className="bg-jci-bg py-0 md:py-0" aria-labelledby="junta-directiva-heading">
       <Container className="mx-auto">

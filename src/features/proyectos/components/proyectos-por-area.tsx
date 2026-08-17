@@ -21,7 +21,7 @@ import {
 } from "@/features/proyectos/data";
 import { useFilterableGrid } from "@/hooks/use-filterable-grid";
 
-export default function ProyectosPorArea() {
+export function ProyectosPorArea() {
   const proyectos = getAllProyectos();
   const areas = getAllAreas();
   const conteoProyectos = getConteoProyectosPorArea();

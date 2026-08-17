@@ -1,7 +1,7 @@
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 
-export default function PoliticaGestion() {
+export function PoliticaGestion() {
   return (
     <Section className="bg-jci-bg py-0 md:py-0">
       <div className="box-border flex min-h-28 items-center bg-gray-200">

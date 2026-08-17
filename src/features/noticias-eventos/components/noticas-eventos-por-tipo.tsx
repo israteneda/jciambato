@@ -21,7 +21,7 @@ import {
 import { Container } from "@/components/layout/container";
 import { useFilterableGrid } from "@/hooks/use-filterable-grid";
 
-export default function NoticiasEventosPorTipo() {
+export function NoticiasEventosPorTipo() {
   const noticiasEventos = getAllNoticiasEventos();
   const conteoNoticiasEventos = getConteoNoticiasEventos();
   const totalNoticiasEventos = noticiasEventos.length;

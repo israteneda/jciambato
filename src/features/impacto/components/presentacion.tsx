@@ -1,7 +1,7 @@
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 
-export default function Presentacion() {
+export function Presentacion() {
   return (
     <Section className="py-0 md:py-0" aria-labelledby="presentacion-heading">
       <Container>

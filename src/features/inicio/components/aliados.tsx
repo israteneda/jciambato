@@ -3,7 +3,7 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import Image from "next/image";
 
-export default function Aliados() {
+export function Aliados() {
   return (
     <Section>
       <Container>

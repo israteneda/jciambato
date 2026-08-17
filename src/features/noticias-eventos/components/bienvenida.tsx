@@ -1,6 +1,6 @@
 import PageHero from "@/components/layout/page-hero";
 
-export default function Bienvenida() {
+export function Bienvenida() {
   return (
     <PageHero
       tone="light"

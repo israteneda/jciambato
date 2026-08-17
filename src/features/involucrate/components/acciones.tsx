@@ -1,7 +1,7 @@
 import { Section } from "@/components/layout/section";
 import Image from "next/image";
 
-export default function Acciones() {
+export function Acciones() {
   return (
     <Section className="py-0 md:py-0" aria-labelledby="accion-heading">
       <article className="relative mx-auto bg-white md:max-w-[calc(676px+50vw)]">
@@ -52,20 +52,20 @@ export default function Acciones() {
                     </div>
 
                     {/* <div className="mr-8">
-                      <h4 className="text-left text-[18px] leading-[1.78] font-bold tracking-normal text-[#323232] not-italic">
+                      <h4 className="text-left text-[18px] leading-[1.78] font-bold tracking-normal text-jci-dark-text not-italic">
                         Teléfono
                       </h4>
                       <div className="mt-2">
                         <a
                           href="tel:+593984567890"
-                          className="block text-left text-sm leading-[1.78] font-normal tracking-normal text-[#323232] not-italic"
+                          className="block text-left text-sm leading-[1.78] font-normal tracking-normal text-jci-dark-text not-italic"
                           aria-label="Llamar al número +593 98 456 7890"
                         >
                           +593 98 456 7890
                         </a>
                         <a
                           href="tel:+593984567890"
-                          className="block text-left text-sm leading-[1.78] font-normal tracking-normal text-[#323232] not-italic"
+                          className="block text-left text-sm leading-[1.78] font-normal tracking-normal text-jci-dark-text not-italic"
                           aria-label="Llamar al número +593 98 456 7890"
                         >
                           +593 98 456 7890

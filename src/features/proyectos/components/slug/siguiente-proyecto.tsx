@@ -2,11 +2,11 @@ import RotatedText from "@/components/rotated-text";
 import { Proyecto } from "@/types/proyecto";
 import Image from "next/image";
 import Link from "next/link";
-import { getAllProyectos } from "../../data";
+import { getAllProyectos } from "@/features/proyectos/data";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 
-export default function SiguienteProyecto({ proyecto }: { proyecto: Proyecto }) {
+export function SiguienteProyecto({ proyecto }: { proyecto: Proyecto }) {
   // Obtener todos los proyectos y encontrar el siguiente
   const allProyectos = getAllProyectos();
   const currentIndex = allProyectos.findIndex((a) => a.slug === proyecto.slug);
@@ -18,7 +18,7 @@ export default function SiguienteProyecto({ proyecto }: { proyecto: Proyecto }) 
   }
 
   return (
-    <Section className="bg-[#e8e8e8] py-28">
+    <Section className="bg-jci-gray-light py-28">
       <div className="relative">
         {/* Texto rotado */}
         <RotatedText text="Nuestros Proyectos" />

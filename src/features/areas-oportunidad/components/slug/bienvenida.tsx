@@ -1,7 +1,7 @@
 import PageHero from "@/components/layout/page-hero";
 import { AreaOportunidad } from "@/types/area-oportunidad";
 
-export default function Bienvenida({ area }: { area: AreaOportunidad }) {
+export function Bienvenida({ area }: { area: AreaOportunidad }) {
   return (
     <PageHero
       variant="full"

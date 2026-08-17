@@ -12,7 +12,7 @@ import { Container } from "@/components/layout/container";
 const TITLE = "Preguntas Frecuentes";
 const SUBTITLE = "Sobre JCI Ambato";
 
-export default function PreguntasFrecuentes() {
+export function PreguntasFrecuentes() {
   const faqSchema = generateFAQSchema(faqsInicio);
 
   return (

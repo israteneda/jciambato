@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
+/* import { Providers } from "./providers"; */
 import { Providers } from "./providers";
 
 import { META_THEME_COLORS } from "@/config/site";

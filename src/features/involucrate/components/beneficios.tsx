@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { FiAward, FiGlobe, FiUsers } from "react-icons/fi";
 
-export default function Beneficios() {
+export function Beneficios() {
   return (
     <Section className="bg-jci-bg" aria-labelledby="beneficios-heading">
       <Container>

@@ -3,7 +3,7 @@ import { Section } from "@/components/layout/section";
 import Image from "next/image";
 import { Container } from "@/components/layout/container";
 
-export default function Opinion() {
+export function Opinion() {
   return (
     <Section className="overflow-hidden">
       <div className="py-24">

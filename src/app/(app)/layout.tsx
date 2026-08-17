@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
 import { Footer } from "@/components/layout/Footer";
-import { Navbar } from "@/components/layout/Navbar";
+import { Navbar } from "@/components/layout/navbar";
 
 const ScrollTop = dynamic(() => import("@/components/scroll-top").then((mod) => mod.ScrollTop));
 

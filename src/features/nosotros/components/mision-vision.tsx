@@ -3,7 +3,7 @@ import { Section } from "@/components/layout/section";
 import SectionHeader from "@/components/layout/section-header";
 import Image from "next/image";
 
-export default function MisionVision() {
+export function MisionVision() {
   return (
     <Section className="bg-jci-bg">
       <Container>

@@ -4,7 +4,7 @@ import SectionHeader from "@/components/layout/section-header";
 import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
-export default function Valores() {
+export function Valores() {
   return (
     <Section>
       <Container>

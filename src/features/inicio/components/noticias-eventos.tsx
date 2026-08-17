@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 
-export default function NoticiasEventos() {
+export function NoticiasEventos() {
   const noticiasItems = getAllNoticiasEventos();
 
   return (

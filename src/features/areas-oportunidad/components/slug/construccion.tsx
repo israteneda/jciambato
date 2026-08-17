@@ -10,7 +10,7 @@ import { useState, useRef } from "react";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 
-export default function Construccion({ area }: { area: AreaOportunidad }) {
+export function Construccion({ area }: { area: AreaOportunidad }) {
   const [currentSlide, setCurrentSlide] = useState(1);
   const totalSlides = area.images?.length || 0;
   const swiperRef = useRef<{ swiper: SwiperType }>(null);

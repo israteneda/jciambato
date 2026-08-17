@@ -1,6 +1,6 @@
 "use client";
 import RotatedText from "@/components/rotated-text";
-// import { Breadcrumbs } from "@/components/Breadcrumbs";
+// import { Breadcrumbs } from "@/components/breadcrumbs";
 import { NoticiaEvento } from "@/types/noticia";
 import { shareOnSocialMedia, getShareContentFromNoticia } from "@/lib/share";
 import Link from "next/link";
@@ -9,7 +9,7 @@ import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 
-export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEvento }) {
+export function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEvento }) {
   // Definir breadcrumbs para navegación
   /*   const breadcrumbs = [
     { name: "Inicio", url: "/" },
@@ -60,7 +60,10 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
               {noticiaEvento.tipo}
             </p>
             <div className="mt-8">
-              <h1 id="detalles-heading" className="text-jci-black max-w-215 text-left text-3xl leading-[1.33] font-bold sm:text-[calc(28.8px+1vw)] md:text-[48px]">
+              <h1
+                id="detalles-heading"
+                className="text-jci-black max-w-215 text-left text-3xl leading-[1.33] font-bold sm:text-[calc(28.8px+1vw)] md:text-[48px]"
+              >
                 {noticiaEvento.titulo}
               </h1>
             </div>
