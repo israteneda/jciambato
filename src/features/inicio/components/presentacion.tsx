@@ -1,5 +1,3 @@
-"use client";
-
 import BackgroundText from "@/components/background-text";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";

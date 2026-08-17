@@ -38,7 +38,7 @@ export function getNoticiaEventoById(id: string): NoticiaEvento | undefined {
 }
 
 export function getNoticiaEventoBySlug(slug: string): NoticiaEvento | undefined {
-  return noticiasEventos.find((noticia) => noticia.url === slug);
+  return noticiasEventos.find((noticia) => noticia.slug === slug);
 }
 
 // Función para obtener el conteo de noticias y eventos

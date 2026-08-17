@@ -6,7 +6,7 @@ export type NoticiaEvento = {
   fecha: string;
   lugar: string;
   imagen: string;
-  url: string;
+  slug: string;
   descripcion?: string;
   contenido?: {
     introduccion?: string;

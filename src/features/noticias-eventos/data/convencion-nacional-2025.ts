@@ -8,7 +8,7 @@ export const convencionNacional2025: NoticiaEvento = {
   fecha: "17 al 19 de Octubre de 2025",
   lugar: "Crucita, Manabí",
   imagen: "/images/noticias_eventos/eventos/convencion-nacional-crucita-2025.png",
-  url: "lxix-convencion-nacional-crucita-2025",
+  slug: "lxix-convencion-nacional-crucita-2025",
   descripcion:
     "La LXIX Convención Nacional de JCI Ecuador se llevará a cabo en Crucita, Manabí, del 17 al 19 de octubre de 2025. Serán tres días y dos noches de formación, conexión y celebración entre las 14 organizaciones locales de la red, fortaleciendo el liderazgo juvenil y la visión compartida hacia el futuro de la organización.",
   contenido: {

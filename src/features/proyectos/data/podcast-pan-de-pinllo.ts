@@ -15,7 +15,6 @@ export const podcastPanDePinllo: Proyecto = {
   imagen: "/images/proyectos/impacto-comunidad/podcast.png",
   logo: "/images/proyectos/impacto-comunidad/alpp.png",
   area_oportunidad: AreaOportunidadEnum.IMPACTO_COMUNITARIO,
-  url: "/proyectos/podcast-pan-de-pinllo",
   descripcion:
     "Este podcast, titulado 'A los Tiempos Pan de Pinllo', es una plataforma que destaca las historias y experiencias de líderes destacados de Ambato, Ecuador. A través de entrevistas en profundidad, el programa explora los desafíos, logros y lecciones de vida de figuras influyentes en áreas como el emprendimiento, la educación, la cultura y el activismo comunitario. Cada episodio busca inspirar a la audiencia, especialmente a los jóvenes, a perseguir sus metas y contribuir al desarrollo de su comunidad. El podcast es producido por un equipo de jóvenes comunicadores y se distribuye en plataformas digitales, con planes de expandir su alcance a otras ciudades de Ecuador.",
   impacto:

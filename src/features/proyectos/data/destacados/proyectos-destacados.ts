@@ -11,7 +11,7 @@ export const proyectosDestacados: Proyecto[] = [
     fecha: "2024-05-15",
     lugar: "Ambato, Ecuador",
     imagen: "/images/proyectos/desarrollo-individual/desarrollo-individual-p1.webp",
-    url: "/proyectos/conquistando-audiencias",
+    slug: "conquistando-audiencias",
     descripcion:
       "Un programa intensivo diseñado para potenciar las habilidades comunicativas de los jóvenes, brindándoles las herramientas necesarias para hablar con confianza y elocuencia en cualquier escenario.",
     premio: "Mejor Proyecto de Desarrollo Individual",
@@ -26,10 +26,10 @@ export const proyectosDestacados: Proyecto[] = [
     edicion: "1ª Edición",
     fecha: "2024-06-20",
     lugar: "Ambato, Ecuador",
-    url: "/proyectos/feria-del-libro",
     descripcion:
       "Un evento cultural que fomenta la lectura y el acceso a libros, promoviendo el intercambio de conocimientos y el desarrollo intelectual dentro de la comunidad.",
     imagen: "/images/proyectos/impacto-comunidad/feria-libro.webp",
+    slug: "feria-del-libro",
     premio: "Proyecto Más Innovador del Año",
     area_oportunidad: AreaOportunidadEnum.IMPACTO_COMUNITARIO,
     año: "2024",
@@ -42,7 +42,7 @@ export const proyectosDestacados: Proyecto[] = [
     edicion: "2ª Edición",
     fecha: "2024-07-10",
     lugar: "Ambato, Ecuador",
-    url: "/proyectos/lider-a-lider",
+    slug: "lider-a-lider",
     descripcion:
       "Un programa de capacitación y mentoría que impulsa el liderazgo en jóvenes profesionales, fomentando una red de líderes comprometidos con el desarrollo sostenible de la comunidad.",
     imagen: "/images/proyectos/desarrollo-individual/lider-a-lider/lider-a-lider.jpg",
@@ -55,7 +55,7 @@ export const proyectosDestacados: Proyecto[] = [
     titulo: "Mejor Presidencia Local 2025",
     subtitulo: "Reconocimiento Nacional a la Excelencia Organizacional",
     nombre: "JCI Ambato",
-    url: "/proyectos/mejor-presidencia-local-2025",
+    slug: "mejor-presidencia-local-2025",
     descripcion:
       "JCI Ambato fue reconocida como la Mejor Presidencia Local de JCI Ecuador, destacando por su excepcional gestión durante el 2025, bajo el liderazgo de Gabriela González.",
     imagen: "/images/inicio/convencion-nacional-premios.jpg",

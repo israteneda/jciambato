@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const noticiasEventos = getAllNoticiasEventos().map((n) => ({
-    url: `${baseUrl}/noticias-eventos/${n.url}`,
+    url: `${baseUrl}/noticias-eventos/${n.slug}`,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));

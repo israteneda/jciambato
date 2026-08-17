@@ -14,7 +14,7 @@ export default function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEven
   /*   const breadcrumbs = [
     { name: "Inicio", url: "/" },
     { name: "Noticias y Eventos", url: "/noticias-eventos" },
-    { name: noticiaEvento.titulo, url: `/noticias-eventos/${noticiaEvento.url}` },
+    { name: noticiaEvento.titulo, url: `/noticias-eventos/${noticiaEvento.slug}` },
   ]; */
 
   return (

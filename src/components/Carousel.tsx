@@ -99,7 +99,7 @@ export const Carousel = ({
                       <div className="relative inline-block transition duration-400">
                         <div className="flex py-4">
                           <Link
-                            href={proyecto.url}
+                            href={`/proyectos/${proyecto.slug}`}
                             className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                             aria-label={`Leer más sobre ${proyecto.titulo} ${proyecto.nombre}`}
                           >

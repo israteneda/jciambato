@@ -18,7 +18,7 @@ export async function generateStaticParams() {
   const noticiasEventos = getAllNoticiasEventos();
 
   return noticiasEventos.map((noticia) => ({
-    slug: noticia.url,
+    slug: noticia.slug,
   }));
 }
 

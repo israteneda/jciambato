@@ -1,5 +1,3 @@
-"use client";
-
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";

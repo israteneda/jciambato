@@ -9,7 +9,7 @@ export const sesionSolemne2025: NoticiaEvento = {
   fecha: "25 Octubre, 2025",
   lugar: "Quinta Juan León Mera, Ambato, Ecuador",
   imagen: "/images/noticias_eventos/eventos/sesion-solemne-noticia.webp",
-  url: "sesion-solemne-2025",
+  slug: "sesion-solemne-2025",
   descripcion:
     "JCI Ambato conmemoró su 51 aniversario con una Sesión Solemne que reunió a autoridades, senadores, ex presidentes y miembros activos en una noche dedicada al liderazgo, la gratitud y la visión de futuro.",
   contenido: {

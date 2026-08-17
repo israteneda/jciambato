@@ -1,5 +1,5 @@
 import { Section } from "@/components/layout/section";
-import ProyectosPorArea from "./proyectos-por-area";
+import { ProyectosPorArea } from "@/features/proyectos/components";
 
 export default function Proyectos() {
   return (

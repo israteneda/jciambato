@@ -66,7 +66,7 @@ export default function NoticiasEventos() {
                 className={index === 0 ? "ml-8 md:ml-20 lg:md:ml-[13%]" : ""}
               >
                 <article>
-                  <Link href={`/noticias-eventos/${item.url}`} className="group w-full">
+                  <Link href={`/noticias-eventos/${item.slug}`} className="group w-full">
                     <div className="group w-full">
                       <header>
                         <div className="text-jci-navy text-[13px] leading-[1.85] font-normal tracking-normal uppercase not-italic">
