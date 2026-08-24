@@ -14,6 +14,14 @@ const DARK_HERO_TONE_PAGES = [
   "/politica-privacidad",
 ];
 
+/**
+ * Rutas cuyas páginas internas (slugs) tienen fondo claro, pero el index
+ * tiene imagen de fondo (oscuro). El navbar necesita texto oscuro solo en slugs.
+ */
+const DARK_HERO_TONE_SLUG_ROUTES = ["/noticias-eventos", "/proyectos"];
+
 export function getHeroTone(pathname: string): "light" | "dark" {
-  return DARK_HERO_TONE_PAGES.includes(pathname) ? "dark" : "light";
+  if (DARK_HERO_TONE_PAGES.includes(pathname)) return "dark";
+  if (DARK_HERO_TONE_SLUG_ROUTES.some((r) => pathname.startsWith(r + "/"))) return "dark";
+  return "light";
 }

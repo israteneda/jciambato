@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import dynamic from "next/dynamic";
 import { Metadata, Viewport } from "next";
 /* import { Providers } from "./providers"; */
 import { Providers } from "./providers";
@@ -9,6 +10,11 @@ import { fontPlusJakarta, fontArvo } from "@/config/fonts";
 import { JsonLd } from "@/components/seo";
 import { getOrganizationJsonLd, getWebsiteJsonLd } from "@/lib/json-ld";
 import { GoogleTagManager } from "@/components/analytics";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/navbar";
+import { NavbarToneProvider } from "@/contexts/navbar-tone-context";
+
+const ScrollTop = dynamic(() => import("@/components/scroll-top").then((mod) => mod.ScrollTop));
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.jciambato.org"),
@@ -107,7 +113,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
 
       <body suppressHydrationWarning>
-        <Providers>{children}</Providers>
+        <Providers>
+          <NavbarToneProvider>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+            <ScrollTop />
+          </NavbarToneProvider>
+        </Providers>
       </body>
     </html>
   );

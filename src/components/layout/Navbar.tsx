@@ -1,13 +1,11 @@
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 
 import { MAIN_NAV, SOCIAL_LINKS } from "@/config/site";
 import { cn } from "@/utils/utils";
 import { DesktopNav } from "./desktop-nav";
+import { MobileNav } from "./mobile-nav";
 import { NavbarWrapper } from "./navbar-wrapper";
-
-const MobileNav = dynamic(() => import("./mobile-nav").then((mod) => mod.MobileNav));
 
 export function Navbar() {
   return (

@@ -3,13 +3,27 @@
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
+import { useNavbarToneOverride } from "@/contexts/navbar-tone-context";
 import Link from "next/link";
 import { useEffect } from "react";
 
-export default function Error({ error }: { error: Error }) {
+export default function Error({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  const { setDark, clear } = useNavbarToneOverride();
+
   useEffect(() => {
     console.error(error);
-  }, [error]);
+    setDark();
+
+    return () => {
+      clear();
+    };
+  }, [error, setDark, clear]);
 
   return (
     <Section className="h-screen">
@@ -43,6 +57,7 @@ export default function Error({ error }: { error: Error }) {
 
               <div className="mt-8">
                 <Button
+                  onClick={() => reset()}
                   className="bg-jci-blue hover:bg-jci-blue group relative overflow-hidden text-white"
                   aria-label="Más información sobre nosotros"
                 >

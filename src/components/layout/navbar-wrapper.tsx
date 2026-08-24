@@ -4,16 +4,20 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useState, type ComponentProps } from "react";
 
+import { useNavbarToneOverride } from "@/contexts/navbar-tone-context";
 import { getHeroTone } from "@/utils/nav";
 
 export function NavbarWrapper(props: ComponentProps<"header">) {
   const { scrollY } = useScroll();
   const pathname = usePathname();
   const [affix, setAffix] = useState(false);
+  const { toneOverride } = useNavbarToneOverride();
 
   useMotionValueEvent(scrollY, "change", (latestValue) => {
     setAffix(latestValue >= 50);
   });
 
-  return <header data-affix={affix} data-tone={getHeroTone(pathname)} {...props} />;
+  const tone = toneOverride ?? getHeroTone(pathname);
+
+  return <header data-affix={affix} data-tone={tone} {...props} />;
 }

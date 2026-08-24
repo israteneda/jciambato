@@ -2,9 +2,18 @@
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
+import { useNavbarToneOverride } from "@/contexts/navbar-tone-context";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function NotFoundPage() {
+  const { setDark, clear } = useNavbarToneOverride();
+
+  useEffect(() => {
+    setDark();
+    return () => clear();
+  }, [setDark, clear]);
+
   return (
     <Section className="h-screen">
       <div className="flex h-full items-center">
