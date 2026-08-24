@@ -59,10 +59,4 @@ export default [
       ],
     },
   },
-  {
-    files: ["src/app/[...page]/page.tsx", "src/app/page.tsx", "src/components/BuilderContent.tsx"],
-    rules: {
-      "@typescript-eslint/no-explicit-any": "off",
-    },
-  },
 ];

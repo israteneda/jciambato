@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     siteName: "JCI Ambato",
     images: [
       {
-        url: "/images/marca/jci-ambato.webp",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "JCI Ambato - Organización de Jóvenes Líderes",
+        alt: "JCI Ambato - Unidos Construyendo un Futuro de Liderazgo",
       },
     ],
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     creator: "@jciambato",
     title: "JCI Ambato — Unidos Construyendo un Futuro de Liderazgo",
     description: siteConfig.description,
-    images: ["/images/marca/jci-ambato.webp"],
+    images: ["/opengraph-image.png"],
   },
   alternates: siteConfig.alternates,
   robots: {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
   manifest: "/manifest.json",
   applicationName: "JCI Ambato",
