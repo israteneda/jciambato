@@ -114,14 +114,14 @@ src/
 
 Componentes compartidos que definen la estructura visual del sitio:
 
-| Componente | Archivo | Responsabilidad |
-|---|---|---|
-| `Container` | `components/layout/container.tsx` | Ancho max-w-7xl, padding responsive. Un solo punto de cambio para todo el sitio. |
-| `Section` | `components/layout/section.tsx` | Ritmo vertical py-24 md:py-34. Base para todas las secciones. |
-| `PageHero` | `components/layout/page-hero.tsx` | Hero unificado con 3 variantes (fixed, section, full). |
-| `SectionHeader` | `components/layout/section-header.tsx` | Header de sección (eyebrow + título + descripción). |
-| `PersonGrid` | `components/layout/person-grid.tsx` | Grilla de personas reutilizable (miembros, junta, pasados). |
-| `NavbarToneProvider` | `contexts/navbar-tone-context.tsx` | Contexto que gestiona tone light/dark del navbar. |
+| Componente           | Archivo                                | Responsabilidad                                                                  |
+| -------------------- | -------------------------------------- | -------------------------------------------------------------------------------- |
+| `Container`          | `components/layout/container.tsx`      | Ancho max-w-7xl, padding responsive. Un solo punto de cambio para todo el sitio. |
+| `Section`            | `components/layout/section.tsx`        | Ritmo vertical py-24 md:py-34. Base para todas las secciones.                    |
+| `PageHero`           | `components/layout/page-hero.tsx`      | Hero unificado con 3 variantes (fixed, section, full).                           |
+| `SectionHeader`      | `components/layout/section-header.tsx` | Header de sección (eyebrow + título + descripción).                              |
+| `PersonGrid`         | `components/layout/person-grid.tsx`    | Grilla de personas reutilizable (miembros, junta, pasados).                      |
+| `NavbarToneProvider` | `contexts/navbar-tone-context.tsx`     | Contexto que gestiona tone light/dark del navbar.                                |
 
 ## Stack Tecnológico
 

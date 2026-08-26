@@ -45,14 +45,12 @@ export function Footer() {
           </Container>
         </div>
       </Section>
-
-      {/* Sección decorativa */}
+      {/* Sección decorativa */} {/* text-[clamp(100px,13vw,190px)] */}
       <Section className="hidden py-0 md:block md:py-0" aria-hidden="true">
-        <div className="pointer-events-none absolute -top-36.25 right-0 left-0 z-10 text-center leading-70 font-extrabold tracking-normal whitespace-nowrap uppercase not-italic opacity-20 md:text-[125px] lg:text-[235px]">
+        <div className="pointer-events-none absolute -top-36.25 right-0 left-0 z-10 text-center leading-70 font-black tracking-normal whitespace-nowrap uppercase not-italic font-stretch-normal opacity-20 md:text-[clamp(100px,13vw,190px)] lg:text-[240px]">
           JCI AMBATO
         </div>
       </Section>
-
       {/* Sección principal del footer */}
       <Section
         className="bg-jci-bg hidden py-0 md:block md:py-0"
@@ -67,7 +65,7 @@ export function Footer() {
             Conócenos mejor
           </span>
 
-          <div className="pt-14 md:px-20 md:pt-20 lg:pt-48">
+          <div className="pt-14 md:pt-20 lg:pt-48">
             {/* Items */}
             <Container>
               <div className="mb-8 flex flex-row items-center justify-between gap-8">

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { MAIN_NAV, SOCIAL_LINKS } from "@/config/site";
+import { MAIN_NAV } from "@/config/site";
 import { cn } from "@/utils/utils";
 import { DesktopNav } from "./desktop-nav";
-import { MobileNav } from "./mobile-nav";
 import { NavbarWrapper } from "./navbar-wrapper";
+import { StaggeredNav } from "./staggered-nav";
 
 export function Navbar() {
   return (
@@ -56,8 +56,8 @@ export function Navbar() {
         {/* Navegación desktop */}
         <DesktopNav items={MAIN_NAV} />
 
-        {/* Navegación mobile */}
-        <MobileNav items={MAIN_NAV} socialLinks={SOCIAL_LINKS} />
+        {/* Navegación mobile and tablet */}
+        <StaggeredNav />
       </div>
     </NavbarWrapper>
   );
