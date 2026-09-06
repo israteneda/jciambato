@@ -128,9 +128,6 @@ NEXT_PUBLIC_SITE_URL=https://www.jciambato.org
 
 # Envío del formulario de contacto (Resend)
 RESEND_API_KEY=your_resend_api_key
-
-# Chatbot (OpenAI)
-OPENAI_API_KEY=your_openai_api_key
 ```
 
 ## Scripts
