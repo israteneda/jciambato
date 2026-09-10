@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import dynamic from "next/dynamic";
+import Script from "next/script";
 import { Metadata, Viewport } from "next";
-/* import { Providers } from "./providers"; */
 import { Providers } from "./providers";
 
 import { META_THEME_COLORS } from "@/config/site";
@@ -101,8 +101,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
       <head>
-        {/* Script pre-render: detección de plataforma */}
-        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: platformScript }} />
+        {/* Script pre-render: detección de plataforma (via next/script antes de hidratar) */}
+        <Script id="platform-detection" strategy="beforeInteractive">
+          {platformScript}
+        </Script>
 
         {/* Datos Estructurados para SEO */}
         <JsonLd data={getOrganizationJsonLd()} />

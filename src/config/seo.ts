@@ -3,8 +3,7 @@ import { MAIN_NAV, SITE_INFO, SOCIAL_LINKS } from "./site";
 /**
  * Configuración completa de SEO, metadatos y datos estructurados.
  *
- * Separado de site.ts para mantener la configuración de navegación limpia
- * y al estilo de My-Portfolio (SITE_INFO + MAIN_NAV como constantes independientes).
+ * Separado de site.ts para mantener la configuración de navegación limpia (SITE_INFO + MAIN_NAV como constantes independientes).
  */
 export const siteConfig = {
   name: SITE_INFO.name,

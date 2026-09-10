@@ -29,12 +29,9 @@ export const jciLinks = [
     items: [],
   },
   {
-    title: "Media",
-    href: "/media",
-    items: [
-      { title: "Noticias y Eventos", href: "/noticias-eventos" },
-      { title: "Premios", href: "/premios" },
-    ],
+    title: "Noticias & Eventos",
+    href: "/noticias-eventos",
+    items: [],
   },
   {
     title: "Involúcrate",

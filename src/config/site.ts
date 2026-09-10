@@ -1,7 +1,7 @@
 import type { NavItem } from "@/types/nav";
 
 /**
- * Información básica del sitio — estilo My-Portfolio (SITE_INFO + MAIN_NAV).
+ * Información básica del sitio.
  * El SEO pesado vive en src/config/seo.ts.
  */
 export const SITE_INFO = {
@@ -66,7 +66,7 @@ export const MAIN_NAV: NavItem[] = [
     description: "Explora nuestros proyectos.",
   },
   {
-    label: "Media",
+    label: "Noticias & Eventos",
     href: "/noticias-eventos",
     description: "Explora nuestras noticias y eventos.",
   },
