@@ -159,9 +159,23 @@ export function Footer() {
               {/* Derechos reservados */}
               <div className="relative z-10 mx-8 mt-16 max-w-6xl py-5 sm:mx-auto">
                 <div className="text-jci-gray flex flex-col justify-between gap-2 lg:flex-row lg:gap-5">
-                  <p className="text-default-400 text-xs md:text-sm">
-                    © 2026 JCI Ambato. Todos los Derechos Reservados.
-                  </p>
+                  <div className="flex flex-col gap-1">
+                    <p className="text-default-400 text-xs md:text-sm">
+                      © 2026 JCI Ambato. Todos los Derechos Reservados.
+                    </p>
+                    <p className="text-default-400 text-xs md:text-sm">
+                      Con el apoyo de{" "}
+                      <a
+                        href="https://tenpisoft.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold hover:text-gray-500"
+                        aria-label="Visitar el sitio web de Tenpisoft (se abre en una nueva pestaña)"
+                      >
+                        Tenpisoft
+                      </a>
+                    </p>
+                  </div>
 
                   <div>
                     <div className="flex flex-row justify-start gap-5">
