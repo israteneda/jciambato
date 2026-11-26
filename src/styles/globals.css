@@ -31,6 +31,7 @@
 
   /* ─── Animación ─── */
   --animate-loop: loop 2.5s ease infinite;
+  --animate-marquee: marquee 40s linear infinite;
 
   /* ─── Shadcn/ui ─── */
   --color-sidebar-ring: var(--sidebar-ring);
@@ -71,6 +72,16 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* Cinta continua: el contenido va duplicado y se desplaza la mitad del ancho. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes loop {

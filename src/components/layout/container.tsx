@@ -11,12 +11,15 @@ import { cn } from "@/utils/utils";
  * 2026-08-09 para un carril más ancho y elegante. Casos especiales
  * sobrescriben el ancho con `className` en el call-site — nunca con props
  * de tamaño.
+ *
+ * Se centra recién desde 1440px (1280 + 2×80): con `lg:mx-auto` el contenido
+ * quedaba pegado a los bordes entre 1024px y 1439px.
  */
 export function Container({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
       data-slot="container"
-      className={cn("relative mx-8 max-w-7xl md:mx-20 lg:mx-auto", className)}
+      className={cn("relative mx-8 max-w-7xl md:mx-20 min-[1440px]:mx-auto", className)}
       {...props}
     />
   );

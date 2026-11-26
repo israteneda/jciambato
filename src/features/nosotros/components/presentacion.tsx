@@ -5,7 +5,7 @@ import { Section } from "@/components/layout/section";
 
 export function Presentacion() {
   return (
-    <Section className="py-0 md:py-0" aria-labelledby="presentacion-heading">
+    <Section className="overflow-x-clip py-0 md:py-0" aria-labelledby="presentacion-heading">
       <article className="relative mx-auto bg-white md:max-w-[calc(676px+50vw)]">
         <div className="relative p-8 md:p-30 lg:max-w-350">
           <p className="text-jci-gray text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">

@@ -45,12 +45,6 @@ export function Footer() {
           </Container>
         </div>
       </Section>
-      {/* Sección decorativa */} {/* text-[clamp(100px,13vw,190px)] */}
-      <Section className="hidden overflow-x-clip py-0 md:block md:py-0" aria-hidden="true">
-        <div className="pointer-events-none absolute -top-36.25 right-0 left-0 z-10 text-center leading-70 font-black tracking-normal whitespace-nowrap uppercase not-italic font-stretch-normal opacity-20 md:text-[clamp(100px,13vw,190px)] lg:text-[240px]">
-          JCI AMBATO
-        </div>
-      </Section>
       {/* Sección principal del footer */}
       <Section
         className="bg-jci-bg py-0 md:py-0"
@@ -65,7 +59,7 @@ export function Footer() {
             Conócenos mejor
           </span>
 
-          <div className="pt-14 md:pt-20 lg:pt-48">
+          <div className="pt-14 md:pt-20 lg:pt-28">
             {/* Items */}
             <Container>
               <div className="mb-8 flex flex-row items-center justify-between gap-8">
@@ -202,6 +196,24 @@ export function Footer() {
                 </a>
               </div>
             </Container>
+
+            {/* Marquee decorativo al final de la página */}
+            <div className="overflow-hidden pt-4 pb-8 md:pt-8 md:pb-12" aria-hidden="true">
+              <div className="animate-marquee flex w-max motion-reduce:animate-none">
+                {[0, 1].map((copia) => (
+                  <div key={copia} className="flex shrink-0">
+                    {Array.from({ length: 4 }).map((_, i) => (
+                      <span
+                        key={i}
+                        className="text-jci-black pr-[0.4em] text-[clamp(64px,13vw,190px)] leading-none font-black tracking-normal whitespace-nowrap uppercase opacity-10 select-none"
+                      >
+                        JCI Ambato
+                      </span>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </Section>

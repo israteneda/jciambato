@@ -102,7 +102,7 @@ export function Grupo() {
                   </div>
 
                   <p className="text-left text-[16px] leading-normal font-normal tracking-normal text-black uppercase not-italic last:mr-0 md:max-w-45">
-                    <strong>Proyectos</strong> con impacto comunitario
+                    <strong>Jóvenes</strong> formados y empoderados
                   </p>
                 </div>
               </div>
@@ -134,11 +134,15 @@ export function Grupo() {
         <Container>
           <div className="flex w-full flex-col flex-wrap items-start md:flex-row md:items-end">
             {/* BLOQUE 1 - Globe */}
-            <div className="relative w-full overflow-hidden bg-gray-500 before:block before:pt-[100%] before:content-[''] md:w-1/2">
-              {/* Globe */}
-              <div className="absolute top-1/2 left-1/2 h-auto min-h-full w-auto min-w-full -translate-x-1/2 -translate-y-1/2">
-                {/* <Globe markers={networkMarkers} arcs={networkArcs} autoRotate={false} /> */}
-              </div>
+            <div className="bg-jci-navy relative w-full overflow-hidden before:block before:pt-[100%] before:content-[''] md:w-1/2">
+              {/* Fondo */}
+              <Image
+                src="/images/inicio/base-jci.png"
+                alt=""
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+              />
 
               {/* Overlay */}
               <div className="absolute top-0 left-0 z-10 h-full w-full">
@@ -163,12 +167,12 @@ export function Grupo() {
                         {/* Link */}
                         <div className="w-full flex-[0_1_auto]">
                           <Link
-                            href="/donde-estamos"
-                            aria-label="Descubre donde estamos"
-                            className="group corsor-pointer inline-block transition duration-400"
+                            href="/nosotros"
+                            aria-label="Descubre dónde estamos"
+                            className="group inline-block cursor-pointer transition duration-400"
                           >
                             <div className="flex items-center">
-                              <span className="text-xs text-white">Descubre donde estamos</span>
+                              <span className="text-xs text-white">Descubre dónde estamos</span>
 
                               <div className="ml-3 flex items-center transition-transform duration-300 group-hover:translate-x-1">
                                 <HiOutlineArrowNarrowRight className="h-6 w-6 text-white" />
@@ -190,14 +194,14 @@ export function Grupo() {
                 <div className="box-border flex h-full flex-col p-6">
                   <div className="flex h-full flex-col">
                     {/* Título */}
-                    <div className="w-full flex-[0_1_auto] text-[13px] leading-[1.85] font-normal tracking-[1px] text-white uppercase">
+                    <div className="text-jci-black w-full flex-[0_1_auto] text-[13px] leading-[1.85] font-normal tracking-[1px] uppercase">
                       Liderando el cambio en Ecuador
                     </div>
 
                     {/* Descripción */}
                     <div className="mt-2 w-full flex-[2_1_auto]">
-                      <h5 className="text-left text-lg leading-tight font-bold text-white">
-                        Uno de los capítulos mas activos de JCI Ecuador, con impacto local y
+                      <h5 className="text-jci-black text-left text-lg leading-tight font-bold">
+                        Uno de los capítulos más activos de JCI Ecuador, con impacto local y
                         proyección nacional.
                       </h5>
                     </div>
@@ -205,15 +209,15 @@ export function Grupo() {
                     {/* Link */}
                     <div className="w-full flex-[0_1_auto]">
                       <Link
-                        href="/en/investors/overview"
-                        aria-label="Learn more"
-                        className="group corsor-pointer inline-block transition duration-400"
+                        href="/proyectos"
+                        aria-label="Saber más sobre nuestros proyectos"
+                        className="group inline-block cursor-pointer transition duration-400"
                       >
                         <div className="flex items-center">
-                          <span className="text-xs text-white">Saber más</span>
+                          <span className="text-jci-black text-xs">Saber más</span>
 
                           <div className="ml-3 flex items-center transition-transform duration-300 group-hover:translate-x-1">
-                            <HiOutlineArrowNarrowRight className="h-6 w-6 text-white" />
+                            <HiOutlineArrowNarrowRight className="text-jci-black h-6 w-6" />
                           </div>
                         </div>
                       </Link>
@@ -224,29 +228,19 @@ export function Grupo() {
             </div>
 
             {/* BLOQUE 3 - Impacto */}
-            <div className="relative w-full overflow-hidden bg-cover bg-center before:block before:pt-[100%] before:content-[''] md:w-1/4">
-              {/* Fondo */}
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(to right, rgba(219, 0, 41, 0.9), rgba(219, 0, 41, 0.9)), url('/images/inicio/base-jci.png')",
-                  backgroundBlendMode: "multiply",
-                }}
-              />
-
+            <div className="bg-jci-teal relative w-full overflow-hidden before:block before:pt-[100%] before:content-[''] md:w-1/4">
               {/* Contenido */}
               <div className="absolute top-0 left-0 z-10 h-full w-full">
                 <div className="box-border flex h-full flex-col p-6">
                   <div className="flex h-full flex-col">
                     {/* Título */}
-                    <div className="w-full flex-[0_1_auto] text-[13px] leading-[1.85] font-normal tracking-[1px] text-white uppercase">
+                    <div className="text-jci-black w-full flex-[0_1_auto] text-[13px] leading-[1.85] font-normal tracking-[1px] uppercase">
                       Impacto que trasciende fronteras
                     </div>
 
                     {/* Descripción */}
                     <div className="mt-2 w-full flex-[2_1_auto]">
-                      <h5 className="text-left text-lg leading-tight font-bold text-white">
+                      <h5 className="text-jci-black text-left text-lg leading-tight font-bold">
                         Desde Ambato, contribuimos al desarrollo de líderes jóvenes en comunidades
                         de todo el mundo.
                       </h5>
@@ -255,15 +249,15 @@ export function Grupo() {
                     {/* Link */}
                     <div className="w-full flex-[0_1_auto]">
                       <Link
-                        href="/en/media/downloads"
-                        aria-label="Read more"
-                        className="group corsor-pointer inline-block transition duration-400"
+                        href="/impacto"
+                        aria-label="Descubre cómo lo hacemos"
+                        className="group inline-block cursor-pointer transition duration-400"
                       >
                         <div className="flex items-center">
-                          <span className="text-xs text-white">Descubre como lo hacemos</span>
+                          <span className="text-jci-black text-xs">Descubre cómo lo hacemos</span>
 
                           <div className="ml-3 flex items-center transition-transform duration-300 group-hover:translate-x-1">
-                            <HiOutlineArrowNarrowRight className="h-6 w-6 text-white" />
+                            <HiOutlineArrowNarrowRight className="text-jci-black h-6 w-6" />
                           </div>
                         </div>
                       </Link>
