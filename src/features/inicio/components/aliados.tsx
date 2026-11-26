@@ -42,7 +42,7 @@ export function Aliados() {
                 width={170}
                 height={64}
                 className="h-full w-auto object-contain transition-opacity duration-300 group-hover:opacity-70"
-                style={{ width: "auto", height: "100%" }}
+                style={{ width: "auto", height: aliado.alturaRelativa ?? "100%" }}
                 draggable={false}
               />
             </a>

@@ -46,14 +46,14 @@ export function Footer() {
         </div>
       </Section>
       {/* Sección decorativa */} {/* text-[clamp(100px,13vw,190px)] */}
-      <Section className="hidden py-0 md:block md:py-0" aria-hidden="true">
+      <Section className="hidden overflow-x-clip py-0 md:block md:py-0" aria-hidden="true">
         <div className="pointer-events-none absolute -top-36.25 right-0 left-0 z-10 text-center leading-70 font-black tracking-normal whitespace-nowrap uppercase not-italic font-stretch-normal opacity-20 md:text-[clamp(100px,13vw,190px)] lg:text-[240px]">
           JCI AMBATO
         </div>
       </Section>
       {/* Sección principal del footer */}
       <Section
-        className="bg-jci-bg hidden py-0 md:block md:py-0"
+        className="bg-jci-bg py-0 md:py-0"
         aria-labelledby="footer-content-heading"
       >
         <div className="w-full">
@@ -155,9 +155,11 @@ export function Footer() {
             <Container className="mt-14">
               <div className="py-5">
                 <div className="text-jci-gray flex flex-col justify-between gap-2 lg:flex-row lg:gap-5">
-                  <p className="text-default-400 text-xs md:text-sm">
-                    © 2026 JCI Ambato. Todos los Derechos Reservados.
-                  </p>
+                  <div className="flex flex-col gap-1">
+                    <p className="text-default-400 text-xs md:text-sm">
+                      © 2026 JCI Ambato. Todos los Derechos Reservados.
+                    </p>
+                  </div>
 
                   <div>
                     <div className="flex flex-row justify-start gap-5">
@@ -175,6 +177,29 @@ export function Footer() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </Container>
+
+            {/* Firma Tenpisoft (fondo claro → logo versión color) */}
+            <Container>
+              <div className="border-t border-gray-200 py-6">
+                <a
+                  href="https://tenpisoft.com"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Tenpisoft, sitio web"
+                  className="flex w-fit items-center gap-2.5 opacity-80 transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100 lg:ml-auto"
+                >
+                  <span className="text-xs text-gray-500">Mantenido por</span>
+                  <img
+                    src="/images/marca/tenpisoft/tenpisoft-horizontal-color.svg"
+                    alt=""
+                    width={111}
+                    height={24}
+                    className="block h-6 w-auto"
+                    draggable={false}
+                  />
+                </a>
               </div>
             </Container>
           </div>

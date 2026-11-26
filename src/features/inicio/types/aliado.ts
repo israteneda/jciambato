@@ -3,4 +3,6 @@ export type Aliado = {
   titulo: string;
   url: string;
   imagenUrl: string;
+  /** Altura relativa del logo dentro de su caja (para logos vectoriales sin margen interno). */
+  alturaRelativa?: string;
 };

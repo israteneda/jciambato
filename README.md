@@ -45,7 +45,7 @@ RootLayout (Server Component)
 ├── <html> + <head> (metadata, JSON-LD, GTM, fonts)
 │
 └── <body>
-     └── Providers (Client — analytics, chatbot, clarity)
+     └── Providers (Client — analytics, clarity)
           └── NavbarToneProvider (Client — tone override state)
                ├── Navbar
                ├── <main>{children}</main>
@@ -69,7 +69,7 @@ src/
 │   ├── not-found.tsx           # 404 global
 │   ├── error.tsx               # Error Boundary (dentro del shell)
 │   ├── global-error.tsx        # Error Boundary del root layout (fuera del shell)
-│   ├── providers.tsx           # Client boundary (analytics, chatbot)
+│   ├── providers.tsx           # Client boundary (analytics, clarity)
 │   ├── (app)/                  # Route group organizativo (sin layout propio)
 │   │   ├── (inicio)/
 │   │   ├── areas-oportunidad/
@@ -193,9 +193,6 @@ NEXT_PUBLIC_SITE_URL=https://www.jciambato.org
 
 # Envío del formulario de contacto (Resend)
 RESEND_API_KEY=your_resend_api_key
-
-# Chatbot (OpenAI)
-OPENAI_API_KEY=your_openai_api_key
 ```
 
 ## Scripts
