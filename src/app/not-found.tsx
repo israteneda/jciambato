@@ -17,7 +17,7 @@ export default function NotFoundPage() {
   return (
     <Section className="h-screen">
       <div className="flex h-full items-center">
-        <Container>
+        <Container className="flex-1">
           <div className="flex">
             <div className="relative">
               <div className="absolute top-20 left-6 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 transform md:block">
