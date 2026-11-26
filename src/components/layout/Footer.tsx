@@ -163,18 +163,6 @@ export function Footer() {
                     <p className="text-default-400 text-xs md:text-sm">
                       © 2026 JCI Ambato. Todos los Derechos Reservados.
                     </p>
-                    <p className="text-default-400 text-xs md:text-sm">
-                      Con el apoyo de{" "}
-                      <a
-                        href="https://tenpisoft.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-semibold hover:text-gray-500"
-                        aria-label="Visitar el sitio web de Tenpisoft (se abre en una nueva pestaña)"
-                      >
-                        Tenpisoft
-                      </a>
-                    </p>
                   </div>
 
                   <div>
@@ -193,6 +181,27 @@ export function Footer() {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Firma Tenpisoft (fondo claro → logo versión color) */}
+              <div className="relative z-10 mx-8 max-w-6xl border-t border-gray-200 py-6 sm:mx-auto">
+                <a
+                  href="https://tenpisoft.com"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Tenpisoft, sitio web"
+                  className="flex w-fit items-center gap-2.5 opacity-80 transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100 lg:ml-auto"
+                >
+                  <span className="text-xs text-gray-500">Mantenido por</span>
+                  <img
+                    src="/images/marca/tenpisoft/tenpisoft-horizontal-color.svg"
+                    alt=""
+                    width={111}
+                    height={24}
+                    className="block h-6 w-auto"
+                    draggable={false}
+                  />
+                </a>
               </div>
             </div>
           </div>
