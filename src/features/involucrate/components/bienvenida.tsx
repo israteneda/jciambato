@@ -1,29 +1,15 @@
-"use client";
-import InfoContainer from "@/components/info-container";
-import RotatedText from "@/components/rotated-text";
-import BackgroundImage from "@/components/background-image";
-import RowScroll from "@/components/row-scroll";
+import PageHero from "@/components/layout/page-hero";
 
-export default function Bienvenida() {
+export function Bienvenida() {
   return (
-    <section
-      className="fixed inset-0 box-border h-[760px] w-full items-center overflow-hidden pb-[80px]"
-      aria-label="Bienvenida a Involúcrate"
-      role="banner"
-    >
-      <RotatedText text="Sé el cambio" />
-
-      <header className="relative w-full pt-48 pb-32">
-        <InfoContainer
-          subtitle="Involúcrate"
-          title="Da el primer paso hacia el cambio"
-          description="¿Te atreves a liderar, servir y crecer? Tu camino empieza aquí."
-        />
-      </header>
-
-      <BackgroundImage image="/images/involucrate/hero-presidenta.jpg" />
-
-      <RowScroll />
-    </section>
+    <PageHero
+      tone="light"
+      rotatedText="Sé el cambio"
+      subtitle="Involúcrate"
+      title="Da el primer paso hacia el cambio"
+      description="¿Te atreves a liderar, servir y crecer? Tu camino empieza aquí."
+      image="/images/involucrate/hero-presidenta.jpg"
+      imageAlt="Bienvenida Presidencia"
+    />
   );
 }

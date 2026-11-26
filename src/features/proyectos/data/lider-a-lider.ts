@@ -20,7 +20,6 @@ export const liderALider: Proyecto = {
   imagen: "/images/proyectos/desarrollo-individual/lider-a-lider/lider-a-lider.jpg",
   logo: "/images/proyectos/desarrollo-individual/lider-a-lider/lal.png",
   area_oportunidad: AreaOportunidadEnum.DESARROLLO_INDIVIDUAL,
-  url: "/proyectos/lider-a-lider",
   descripcion:
     "'Líder a Líder' es un programa de formación intensiva dirigido a líderes emergentes que buscan fortalecer sus habilidades de liderazgo en contextos comunitarios, educativos o empresariales. A través de módulos teóricos y prácticos, los participantes exploran temas como inteligencia emocional, gestión de equipos, toma de decisiones y resolución de conflictos. El programa utiliza metodologías interactivas, como estudios de caso, dinámicas grupales y mentorías personalizadas, para preparar a los líderes para enfrentar desafíos reales. Además, fomenta la creación de redes de apoyo entre los participantes, promoviendo la colaboración y el intercambio de experiencias. Actualmente, el programa sigue activo, con planes de expansión para incluir más líderes de diferentes regiones de Ecuador.",
   impacto:

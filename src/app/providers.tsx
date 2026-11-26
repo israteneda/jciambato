@@ -3,7 +3,7 @@
 import * as React from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Clarity from "@/components/Clarity";
+import Clarity from "@/components/clarity";
 
 export interface ProvidersProps {
   children: React.ReactNode;

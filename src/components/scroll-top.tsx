@@ -4,8 +4,8 @@ import { ArrowUpIcon } from "lucide-react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
 
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import { cn } from "@/utils/utils";
 
 export function ScrollTop() {
   const { scrollY } = useScroll();
@@ -26,7 +26,7 @@ export function ScrollTop() {
       data-scroll-direction={scrollDirection}
       className={cn(
         "[--bottom:1rem] lg:[--bottom:2rem]",
-        "fixed right-4 bottom-[calc(var(--bottom,1rem)+env(safe-area-inset-bottom,0px))] z-50 lg:right-8",
+        "fixed right-4 bottom-[calc(var(--bottom,1rem)+env(safe-area-inset-bottom,0px))] z-20 cursor-pointer lg:right-8",
         "shadow-md transition-[background-color,opacity] duration-300",
         "data-[scroll-direction=down]:opacity-30 data-[scroll-direction=up]:opacity-100 data-[visible=false]:opacity-0"
       )}

@@ -8,7 +8,7 @@ export const convencionNacionalJCIAmbato: NoticiaEvento = {
   fecha: "17-19 Octubre, 2025",
   lugar: "Crucita, Manabí",
   imagen: "/images/noticias_eventos/noticias/convencion-nacional-ambato.webp",
-  url: "convencion-nacional-jci-ambato",
+  slug: "convencion-nacional-jci-ambato",
   descripcion:
     "Del 17 al 19 de octubre, la delegación de JCI Ambato participó activamente en la Convención Nacional en Crucita, un evento que marcó el cierre de actividades nacionales de este gran año 2025.",
   contenido: {

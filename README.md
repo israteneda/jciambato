@@ -6,8 +6,8 @@
 
 **Unidos Construyendo un Futuro de Liderazgo**
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.1.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19.2.3-blue?style=for-the-badge&logo=react)](https://react.dev/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.3.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.2.8-blue?style=for-the-badge&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6.3-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.18-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![pnpm](https://img.shields.io/badge/pnpm-10.18.2-F69220?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
@@ -27,21 +27,72 @@ El proyecto utiliza una arquitectura basada en funcionalidades (**Feature-Based 
 
 La estructura separa responsabilidades entre:
 
+- **Shell global** — root layout con Navbar, Footer y providers compartidos.
 - Rutas y layouts de aplicación.
 - Componentes reutilizables.
 - Funcionalidades específicas del negocio.
 - Configuraciones globales.
-- Utilidades compartidas.
+- Utilidades puras (separadas de lib acoplada al framework).
 - Tipos y definiciones TypeScript.
 
-Estructura principal:
+### Shell global (root layout)
+
+`src/app/layout.tsx` es el **SiteShell** de toda la aplicación. Contiene Navbar, Footer, NavbarToneProvider y `<main>`. El route group `(app)` es puramente organizativo — no tiene layout propio.
+
+```
+RootLayout (Server Component)
+│
+├── <html> + <head> (metadata, JSON-LD, GTM, fonts)
+│
+└── <body>
+     └── Providers (Client — analytics, clarity)
+          └── NavbarToneProvider (Client — tone override state)
+               ├── Navbar
+               ├── <main>{children}</main>
+               │    ├── (app)/ → páginas del sitio
+               │    ├── not-found → 404 global
+               │    └── error → Error Boundary global
+               ├── Footer
+               └── ScrollTop
+```
+
+- `error.tsx` y `not-found.tsx` están en `src/app/` (no en `(app)/`) y ya renderizan dentro del shell.
+- `global-error.tsx` es el Error Boundary del root layout mismo — captura errores que `error.tsx` no puede (errores en `layout.tsx` o en el árbol de providers). Renderiza su propio `<html>` y `<body>` porque el shell original se destruye.
+- El tone del navbar se gestiona por contexto (`NavbarToneProvider`), no por `usePathname` en componentes hijos.
+
+### Estructura de archivos
 
 ```text
 src/
-├── app/                    # Rutas y layouts mediante Next.js App Router
-├── components/             # Componentes reutilizables globales
-├── config/                 # Configuraciones generales
-├── features/               # Módulos organizados por funcionalidad
+├── app/                        # Rutas y layouts — Next.js App Router
+│   ├── layout.tsx              # Shell global (Navbar + Footer + providers)
+│   ├── not-found.tsx           # 404 global
+│   ├── error.tsx               # Error Boundary (dentro del shell)
+│   ├── global-error.tsx        # Error Boundary del root layout (fuera del shell)
+│   ├── providers.tsx           # Client boundary (analytics, clarity)
+│   ├── (app)/                  # Route group organizativo (sin layout propio)
+│   │   ├── (inicio)/
+│   │   ├── areas-oportunidad/
+│   │   ├── impacto/
+│   │   ├── involucrate/
+│   │   ├── miembros/
+│   │   ├── nosotros/
+│   │   ├── noticias-eventos/
+│   │   ├── politica-gestion/
+│   │   ├── politica-privacidad/
+│   │   └── proyectos/
+│   ├── api/
+│   ├── og/
+│   ├── robots.ts
+│   └── sitemap.ts
+├── components/                 # Componentes reutilizables globales
+│   ├── layout/                 # Componentes de layout (Container, Section, etc.)
+│   ├── ui/                     # Componentes shadcn/ui
+│   ├── analytics/
+│   └── seo/
+├── config/                     # Configuraciones generales (site, fonts, SEO)
+├── contexts/                   # React contexts (NavbarToneProvider)
+├── features/                   # Módulos organizados por funcionalidad
 │   ├── areas-oportunidad/
 │   ├── impacto/
 │   ├── inicio/
@@ -52,11 +103,25 @@ src/
 │   ├── politica-gestion/
 │   ├── politica-privacidad/
 │   └── proyectos/
-├── hooks/                  # Custom hooks compartidos
-├── lib/                    # Utilidades y lógica compartida
-├── styles/                 # Estilos globales
-└── types/                  # Definiciones TypeScript compartidas
+├── hooks/                      # Custom hooks compartidos
+├── lib/                        # Lógica acoplada al framework (Next.js, SEO, browser)
+├── styles/                     # Estilos globales (Tailwind)
+├── types/                      # Definiciones TypeScript compartidas
+└── utils/                      # Funciones puras (cn, nav helpers)
 ```
+
+### Componentes de layout
+
+Componentes compartidos que definen la estructura visual del sitio:
+
+| Componente           | Archivo                                | Responsabilidad                                                                  |
+| -------------------- | -------------------------------------- | -------------------------------------------------------------------------------- |
+| `Container`          | `components/layout/container.tsx`      | Ancho max-w-7xl, padding responsive. Un solo punto de cambio para todo el sitio. |
+| `Section`            | `components/layout/section.tsx`        | Ritmo vertical py-24 md:py-34. Base para todas las secciones.                    |
+| `PageHero`           | `components/layout/page-hero.tsx`      | Hero unificado con 3 variantes (fixed, section, full).                           |
+| `SectionHeader`      | `components/layout/section-header.tsx` | Header de sección (eyebrow + título + descripción).                              |
+| `PersonGrid`         | `components/layout/person-grid.tsx`    | Grilla de personas reutilizable (miembros, junta, pasados).                      |
+| `NavbarToneProvider` | `contexts/navbar-tone-context.tsx`     | Contexto que gestiona tone light/dark del navbar.                                |
 
 ## Stack Tecnológico
 

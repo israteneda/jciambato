@@ -1,2 +1,2 @@
-export { default as Bienvenida } from "./bienvenida";
-export { default as AreasOportunidad } from "./areas-oportunidad";
+export { Bienvenida } from "./bienvenida";
+export { AreasOportunidad } from "./areas-oportunidad";

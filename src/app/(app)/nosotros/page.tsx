@@ -1,6 +1,6 @@
 import {
   Bienvenida,
-  ActividadesAnuales,
+  Historia,
   MisionVision,
   Presentacion,
   Valores,
@@ -18,24 +18,15 @@ export const metadata = {
 
 export default function NosotrosPage() {
   return (
-    <main className="relative overflow-hidden">
+    <>
       <Bienvenida />
-
-      {/* Bloque espaciado */}
       <div className="h-160" aria-hidden="true"></div>
-
-      <div
-        className="bg-jci-bg absolute top-0 h-full w-full"
-        style={{
-          transform: "translateY(99.9vh)",
-        }}
-        aria-hidden="true"
-      ></div>
+      <div className="bg-jci-bg absolute top-0 h-full w-full translate-y-[99.9vh]"></div>
       <Presentacion />
       <MisionVision />
       <Valores />
       <Opinion />
-      <ActividadesAnuales />
-    </main>
+      <Historia />
+    </>
   );
 }

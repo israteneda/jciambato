@@ -1,4 +1,7 @@
-import type { FAQItem } from "@/features/inicio/types/faq";
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 
 export const faqsInicio: FAQItem[] = [
   {

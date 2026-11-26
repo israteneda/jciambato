@@ -11,20 +11,36 @@
 
 @theme inline {
   /* ─── Colores oficiales JCI (Internacional v1.4) ─── */
-  --color-jci-gray: #aeaeae;
   --color-jci-blue: #0097d7;
   --color-jci-black: #130f2d;
   --color-jci-navy: #1f4789;
   --color-jci-teal: #57bcbc;
   --color-jci-yellow: #efc40f;
 
+  --color-jci-gray: #aeaeae;
+  
   /* --- Fondos y superficies --- */
   --color-jci-bg: #f5f5f5;
+  --color-jci-dark-text: #323232;    /* Texto oscuro / títulos */
+  --color-jci-gray-light: #e8e8e8;   /* Gris secundario de superficie */
 
   /* --- Tipografías --- */
   --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui;
   --font-heading: var(--font-plus-jakarta), sans-serif;
   --font-arvo: var(--font-arvo), serif;
+
+  /* ─── Ritmo vertical ───
+   * Escala fluida (celular → escritorio) para que el espacio entre bloques
+   * sea consistente en todo el sitio:
+   *   section     64px → 104px  padding vertical de cada banda
+   *   section-lg  80px → 128px  bandas de cierre (CTA del footer)
+   *   block       40px →  64px  separación entre bloques dentro de una banda
+   *   stack       24px →  32px  encabezado → contenido
+   */
+  --spacing-section: clamp(4rem, 2.4rem + 4.5vw, 6.5rem);
+  --spacing-section-lg: clamp(5rem, 3rem + 6vw, 8rem);
+  --spacing-block: clamp(2.5rem, 2rem + 2vw, 4rem);
+  --spacing-stack: clamp(1.5rem, 1.25rem + 0.75vw, 2rem);
 
   /* ─── Animación ─── */
   --animate-loop: loop 2.5s ease infinite;
@@ -165,7 +181,13 @@
     @apply bg-foreground text-background;
   }
 
+  main {
+    display: block;
+    unicode-bidi: isolate;
+  }
+
   body {
+    line-height: 1;
     font-family: var(--font-sans);
     font-size: 16px;
     font-weight: 400;

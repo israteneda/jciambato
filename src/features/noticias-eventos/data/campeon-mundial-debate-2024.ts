@@ -9,7 +9,7 @@ export const campeonMundialDebate2024: NoticiaEvento = {
   fecha: "Noviembre, 2024",
   lugar: "Taoyuan, Taiwán",
   imagen: "/images/noticias_eventos/noticias/concurso.webp",
-  url: "ecuador-campeon-mundial-de-debate-jci-2024",
+  slug: "ecuador-campeon-mundial-de-debate-jci-2024",
   descripcion:
     "Por primera vez en la historia, Ecuador se corona Campeón Mundial de Debate JCI durante el Congreso Mundial 2024 celebrado en Taoyuan, Taiwán. Un triunfo histórico que consolida el liderazgo juvenil ecuatoriano en el escenario internacional.",
   contenido: {

@@ -8,7 +8,7 @@ export const transmisionMando2025: NoticiaEvento = {
   fecha: "24 Enero, 2025",
   lugar: "Hotel Florida, Ambato, Ecuador",
   imagen: "/images/noticias_eventos/eventos/noticiaEvento.webp",
-  url: "transmision-mando-local-jci-ambato-2025",
+  slug: "transmision-mando-local-jci-ambato-2025",
   descripcion:
     "JCI Ambato celebró la ceremonia de transmisión de mando en el Hotel Florida, donde Gabriela González recibió la presidencia local de manos de Israel Teneda, marcando el inicio de un nuevo año de liderazgo, compromiso y servicio comunitario.",
   contenido: {

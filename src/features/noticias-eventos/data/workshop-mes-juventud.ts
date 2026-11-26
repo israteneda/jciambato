@@ -8,7 +8,7 @@ export const workshopMesJuventud: NoticiaEvento = {
   fecha: "16 Agosto, 2025",
   lugar: "Museo HAMBATU, Ambato, Ecuador",
   imagen: "/images/noticias_eventos/eventos/workshop-mes-juventud.webp",
-  url: "workshop-mes-juventud",
+  slug: "workshop-mes-juventud",
   descripcion:
     "En el marco del Mes de la Juventud, el MIES en coordinación con JCI Ambato desarrolló el foro 'Liderando Juventudes' con la participación de 60 jóvenes de la provincia de Tungurahua.",
   contenido: {

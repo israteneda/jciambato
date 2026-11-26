@@ -44,10 +44,11 @@ export const metadata: Metadata = {
 
 export default function NoticiasEventosPage() {
   return (
-    <main>
+    <>
       <Bienvenida />
-      <div className="h-[640px]" aria-hidden="true"></div>
+      <div className="h-160" aria-hidden="true"></div>
+      <div className="bg-jci-bg absolute top-0 h-full w-full translate-y-[99.9vh]"></div>
       <NoticiasEventos />
-    </main>
+    </>
   );
 }

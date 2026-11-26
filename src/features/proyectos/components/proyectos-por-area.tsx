@@ -2,38 +2,32 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { getAllAreas } from "@/features/inicio/data/areas-oportunidad";
 import { Proyecto } from "@/types/proyecto";
 import { getAreaBySlug } from "@/types/enums";
 import { Button } from "@/components/ui/button";
 import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
   getAllProyectos,
   getConteoProyectosPorArea,
   getProyectosPorArea,
 } from "@/features/proyectos/data";
+import { useFilterableGrid } from "@/hooks/use-filterable-grid";
 
-export default function ProyectosPorArea() {
-  // Estado para controlar el botón activo (0 = Todos, 1 = Negocios, etc.)
-  const [activeButton, setActiveButton] = useState(0);
-
-  // Estado para controlar la paginación
-  const [currentPage, setCurrentPage] = useState(1);
-  const proyectosPorPagina = 8;
-
-  // Obtener áreas de oportunidad y conteo de proyectos
+export function ProyectosPorArea() {
+  const proyectos = getAllProyectos();
   const areas = getAllAreas();
   const conteoProyectos = getConteoProyectosPorArea();
-  const totalProyectos = getAllProyectos().length;
+  const totalProyectos = proyectos.length;
 
-  // Resetear página cuando cambie la categoría
-  const handleCategoryChange = (index: number) => {
-    setActiveButton(index);
-    setCurrentPage(1);
-  };
-
-  // Categorías con sus contadores dinámicos
-  const categories = [
+  const categorias = [
     { name: "Todos", count: totalProyectos, slug: "todos" },
     ...areas.map((area) => ({
       name: area.title,
@@ -42,15 +36,25 @@ export default function ProyectosPorArea() {
     })),
   ];
 
-  // Componente para renderizar una actividad individual
+  const { activeIndex, selectItems, visibleItems, hasMore, handleCategoryChange, loadMore } =
+    useFilterableGrid<Proyecto>({
+      items: proyectos,
+      categories: categorias,
+      getItemsBySlug: (slug) => {
+        const areaEnum = getAreaBySlug(slug);
+        return areaEnum ? getProyectosPorArea(areaEnum) : [];
+      },
+      pageSize: 8,
+    });
+
   const ActivityCard = ({ proyecto }: { proyecto: Proyecto }) => (
-    <article className="m-5 mt-10 w-full lg:mt-16 lg:w-1/2">
+    <article className="mt-10 mb-16 w-full lg:w-1/2">
       <Link
         href={`/proyectos/${proyecto.slug}`}
         className="w-full"
         aria-label={`Ver detalles de ${proyecto.nombre}`}
       >
-        <figure className="h-[350px] overflow-hidden md:h-[512px]">
+        <figure className="h-87.5 overflow-hidden md:h-128">
           <div className="relative h-full w-full overflow-hidden">
             <Image
               src={proyecto.imagen}
@@ -83,120 +87,106 @@ export default function ProyectosPorArea() {
     </article>
   );
 
-  // Contenido según la categoría seleccionada
-  const renderContent = () => {
-    let proyectosAMostrar: Proyecto[] = [];
-
-    if (activeButton === 0) {
-      // Mostrar todos los proyectos
-      proyectosAMostrar = getAllProyectos();
-    } else {
-      // Mostrar proyectos de la categoría seleccionada
-      const areaSeleccionada = categories[activeButton];
-      const areaEnum = getAreaBySlug(areaSeleccionada.slug);
-      if (areaEnum) {
-        proyectosAMostrar = getProyectosPorArea(areaEnum);
-      }
-    }
-
-    // Calcular proyectos para la página actual
-    const inicio = 0;
-    const fin = currentPage * proyectosPorPagina;
-    const proyectosPaginaActual = proyectosAMostrar.slice(inicio, fin);
-
-    // Agrupar proyectos en pares para el layout
-    const proyectosAgrupados = [];
-    for (let i = 0; i < proyectosPaginaActual.length; i += 2) {
-      proyectosAgrupados.push(proyectosPaginaActual.slice(i, i + 2));
-    }
-
-    return (
-      <div className="relative mx-8 flex flex-wrap">
-        {proyectosAgrupados.map((grupo, grupoIndex) => (
-          <div key={grupoIndex} className="flex w-full flex-col items-center md:flex-row">
-            {grupo.map((proyecto) => (
-              <ActivityCard key={proyecto.id} proyecto={proyecto} />
-            ))}
-          </div>
-        ))}
-      </div>
-    );
-  };
+  const proyectosAgrupados = [];
+  for (let i = 0; i < visibleItems.length; i += 2) {
+    proyectosAgrupados.push(visibleItems.slice(i, i + 2));
+  }
 
   return (
-    <div>
-      <nav className="box-border bg-white p-12 lg:mx-20" aria-label="Filtros de proyectos por área">
-        <div className="text-jci-gray text-[13px] leading-[1.85] font-bold uppercase not-italic">
-          Explora por área de oportunidad
-        </div>
-        <div
-          className="mt-5 flex flex-wrap gap-6"
-          role="tablist"
-          aria-label="Categorías de proyectos"
-        >
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              onClick={() => handleCategoryChange(index)}
-              className={`mr-[42px] p-0 text-left text-[30px] leading-tight font-bold transition duration-300 hover:text-gray-700 ${
-                activeButton === index ? "text-gray-800" : "text-gray-400"
-              }`}
-              role="tab"
-              aria-selected={activeButton === index}
-              aria-controls={`panel-${index}`}
-              id={`tab-${index}`}
+    <>
+      {/* Navegador */}
+      <nav
+        className="relative mx-auto bg-white md:max-w-[calc(676px+50vw)]"
+        aria-label="Filtros de proyectos por área"
+      >
+        <div className="p-7 md:p-14" aria-label="Filtros de proyectos por área">
+          <div className="text-jci-gray text-xs leading-[1.85] font-bold tracking-normal uppercase not-italic">
+            Explora por área de oportunidad
+          </div>
+
+          {/* Para pantallas grandes */}
+          <div
+            className="mt-5 hidden flex-wrap gap-6 lg:flex"
+            role="tablist"
+            aria-label="Categorías de proyectos"
+          >
+            {categorias.map((category, index) => (
+              <button
+                key={index}
+                onClick={() => handleCategoryChange(index)}
+                className={`hover:text-jci-black mr-10 cursor-pointer text-left text-3xl leading-tight font-bold transition duration-300 ${
+                  activeIndex === index ? "text-gray-800" : "text-gray-400"
+                }`}
+                role="tab"
+                aria-selected={activeIndex === index}
+                aria-controls={`panel-${index}`}
+                id={`tab-${index}`}
+              >
+                {category.name}
+                <sup className="inline pl-2 align-super text-[16px] font-normal">
+                  {category.count}
+                </sup>
+              </button>
+            ))}
+          </div>
+
+          {/* Para pantallas pequeñas */}
+          <div className="mt-5 block lg:hidden">
+            <Select
+              items={selectItems}
+              value={activeIndex.toString()}
+              onValueChange={(value) => handleCategoryChange(Number(value))}
             >
-              {category.name}
-              <sup className="inline pl-[10px] align-super text-[16px] font-normal">
-                {category.count}
-              </sup>
-            </button>
-          ))}
+              <SelectTrigger className="w-full" aria-label="Filtrar por área de oportunidad">
+                <SelectValue placeholder="Todos" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  {categorias.map((category, index) => (
+                    <SelectItem key={category.slug} value={index.toString()}>
+                      {category.name}
+                      <span className="text-muted-foreground ml-auto">({category.count})</span>
+                    </SelectItem>
+                  ))}
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
       </nav>
 
-      <div className="bg-jci-bg">
-        {/* Contenedor con animación de transición */}
+      <div className="bg-jci-bg min-h-96 pb-9">
         <div className="transition-all duration-300 ease-in-out">
-          <div className="min-h-[650px]" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
-            {renderContent()}
+          <div className="min-h-163" role="tabpanel" aria-labelledby={`tab-${activeIndex}`}>
+            <div className="relative flex flex-wrap px-8 md:px-14">
+              {proyectosAgrupados.map((grupo, grupoIndex) => (
+                <div
+                  key={grupoIndex}
+                  className="flex w-full flex-col items-center gap-8 md:flex-row"
+                >
+                  {grupo.map((proyecto) => (
+                    <ActivityCard key={proyecto.id} proyecto={proyecto} />
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        <footer className="flex justify-center py-20">
-          {(() => {
-            let proyectosAMostrar: Proyecto[] = [];
-            if (activeButton === 0) {
-              proyectosAMostrar = getAllProyectos();
-            } else {
-              const areaSeleccionada = categories[activeButton];
-              const areaEnum = getAreaBySlug(areaSeleccionada.slug);
-              if (areaEnum) {
-                proyectosAMostrar = getProyectosPorArea(areaEnum);
-              }
-            }
-
-            const totalProyectosCategoria = proyectosAMostrar.length;
-            const proyectosMostrados = currentPage * proyectosPorPagina;
-            const hayMasProyectos = proyectosMostrados < totalProyectosCategoria;
-
-            if (hayMasProyectos) {
-              return (
-                <Button
-                  size="lg"
-                  className="group bg-jci-teal hover:bg-jci-teal relative overflow-hidden text-white"
-                  aria-label="Ver más proyectos"
-                  onClick={() => setCurrentPage(currentPage + 1)}
-                >
-                  <span className="bg-jci-black absolute inset-0 h-full w-full -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0"></span>
-                  <span className="relative z-10">Ver más</span>
-                </Button>
-              );
-            }
-            return null;
-          })()}
+        <footer className="flex justify-center">
+          {hasMore ? (
+            <Button
+              size="lg"
+              className="group bg-jci-teal hover:bg-jci-teal relative overflow-hidden text-white"
+              aria-label="Ver más proyectos"
+              onClick={loadMore}
+            >
+              <span className="bg-jci-blue absolute inset-0 h-full w-full -translate-x-full transform transition-transform duration-300 group-hover:translate-x-0"></span>
+              <span>Ver más</span>
+            </Button>
+          ) : null}
         </footer>
       </div>
-    </div>
+    </>
   );
 }

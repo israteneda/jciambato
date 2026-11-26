@@ -1,14 +1,15 @@
+"use client";
+
 import clsx from "clsx";
+import { useScroll } from "@/hooks";
 
-interface BorderFrameProps {
-  isScrolled: boolean;
-}
+export default function BorderFrame() {
+  const isScrolled = useScroll();
 
-export default function BorderFrame({ isScrolled }: BorderFrameProps) {
   return (
     <div
       className={clsx(
-        "absolute inset-0 z-10 transform border-gray-50 transition-all duration-400",
+        "border-jci-bg absolute inset-0 transform transition-all duration-400",
         isScrolled ? "border-22 md:border-55" : "border-0"
       )}
       aria-hidden="true"

@@ -1,26 +1,15 @@
-"use client";
-import RowScroll from "@/components/row-scroll";
-import BackgroundImage from "@/components/background-image";
-import InfoContainer from "@/components/info-container";
-import RotatedText from "@/components/rotated-text";
+import PageHero from "@/components/layout/page-hero";
 
-export default function Bienvenida() {
+export function Bienvenida() {
   return (
-    <section className="h-[190 fixed inset-0 box-border w-full items-center overflow-hidden pb-20">
-      <RotatedText text="Enfocados en el desarrollo de nuestra ciudad" />
-
-      <div className="relative w-full pt-48 pb-32">
-        <InfoContainer
-          subtitle="Quienes Somos"
-          title="Creando el futuro de nuestra ciudad, juntos."
-          description="Somos una comunidad de líderes jóvenes comprometidos con transformar nuestra ciudad y construir un futuro mejor para todos."
-        />
-      </div>
-
-      <BackgroundImage image="/images/inicio/cincuentenario.png" />
-
-      {/* Botón de scroll */}
-      <RowScroll />
-    </section>
+    <PageHero
+      tone="light"
+      rotatedText="Enfocados en el desarrollo de nuestra ciudad"
+      subtitle="Quienes Somos"
+      title="Creando el futuro de nuestra ciudad, juntos."
+      description="Somos una comunidad de líderes jóvenes comprometidos con transformar nuestra ciudad y construir un futuro mejor para todos."
+      image="/images/inicio/cincuentenario.png"
+      imageAlt="Cincuentenario de JCI Ambato"
+    />
   );
 }

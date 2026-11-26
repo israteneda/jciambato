@@ -13,7 +13,7 @@ export function generateSocialMetadata(
   noticia: NoticiaEvento,
   baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!
 ) {
-  const articleUrl = `${baseUrl}/noticias-eventos/${noticia.url}`;
+  const articleUrl = `${baseUrl}/noticias-eventos/${noticia.slug}`;
   const imageUrl = noticia.imagen.startsWith("http")
     ? noticia.imagen
     : `${baseUrl}${noticia.imagen}`;

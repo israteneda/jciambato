@@ -1,5 +1,4 @@
-import Proyectos from "@/features/proyectos/components/proyectos";
-import Bienvenida from "@/features/proyectos/components/bienvenida";
+import { Bienvenida, Proyectos } from "@/features/proyectos/components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,11 +11,11 @@ export const metadata: Metadata = {
 
 export default function ProyectosPage() {
   return (
-    <main>
-      {/* Sección de Bienvenida */}
+    <>
       <Bienvenida />
-      <div className="h-[640px]" aria-hidden="true"></div>
+      <div className="h-160" aria-hidden="true"></div>
+      <div className="bg-jci-bg absolute top-0 h-full w-full translate-y-[99.9vh]"></div>
       <Proyectos />
-    </main>
+    </>
   );
 }

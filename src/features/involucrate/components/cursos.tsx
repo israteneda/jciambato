@@ -1,18 +1,20 @@
-import SubContainer from "@/components/sub-container";
+import SectionHeader from "@/components/layout/section-header";
+import { Container } from "@/components/layout/container";
 import Link from "next/link";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { Section } from "@/components/layout/section";
 
-export default function Cursos() {
+export function Cursos() {
   return (
-    <section className="relative z-10 mx-8 max-w-6xl md:mx-20 lg:mx-auto">
-      <div className="my-24 md:my-40">
-        <SubContainer
+    <Section className="bg-jci-bg pt-0" aria-labelledby="cursos-heading">
+      <Container>
+        <SectionHeader
           title="Prepárate para ser parte de JCI"
           subtitle="Conócenos más a fondo"
           description="Participa en nuestros cursos de inducción, formación y liderazgo. Estos programas te permitirán comprender a profundidad el propósito de nuestra organización, fortalecer tus competencias personales y profesionales, y descubrir cómo contribuir activamente al desarrollo de tu comunidad."
         />
 
-        <div className="my-10 flex flex-col md:flex-row">
+        <div className="mt-block flex flex-col md:flex-row">
           <div className="flex flex-1 flex-col md:mt-48 md:mr-3">
             <div className="md:mt-6">
               <div className="bg-jci-navy box-border min-h-52 w-full p-10">
@@ -34,7 +36,7 @@ export default function Cursos() {
                 <Link
                   href="https://aprende.educat.tech/course/section.php?id=624"
                   target="_blank"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
+                  className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center py-4">
@@ -72,7 +74,7 @@ export default function Cursos() {
                 <Link
                   href="https://aprende.educat.tech/course/view.php?id=54"
                   target="_blank"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
+                  className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center py-4">
@@ -112,7 +114,7 @@ export default function Cursos() {
                 <Link
                   href="https://aprende.educat.tech/course/view.php?id=53"
                   target="_blank"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
+                  className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center py-4">
@@ -150,7 +152,7 @@ export default function Cursos() {
                 <Link
                   href="https://aprende.educat.tech/course/view.php?id=57"
                   target="_blank"
-                  className="group relative z-20 inline-block max-w-full cursor-pointer transition duration-400"
+                  className="group relative inline-block max-w-full cursor-pointer transition duration-400"
                   aria-label="Leer más sobre"
                 >
                   <div className="flex items-center py-4">
@@ -184,7 +186,7 @@ export default function Cursos() {
             </a>
           </span>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

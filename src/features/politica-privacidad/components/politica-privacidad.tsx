@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import DeclaracionPrivacidad from "./declaracion-privacidad";
-import CondicionesUso from "./condiciones-uso";
-import PoliticaCookies from "./politica-cookies";
+import { DeclaracionPrivacidad } from "./declaracion-privacidad";
+import { CondicionesUso } from "./condiciones-uso";
+import { PoliticaCookies } from "./politica-cookies";
+import { Section } from "@/components/layout/section";
 
-export default function PoliticaPrivacidad() {
+export function PoliticaPrivacidad() {
   // Estado para controlar el botón de activo
   const [activeButton, setActiveButton] = useState(0);
 
@@ -30,8 +31,8 @@ export default function PoliticaPrivacidad() {
   };
 
   return (
-    <section className="relative bg-gray-50">
-      <nav className="mx-8 box-border flex min-h-28 items-center bg-gray-200">
+    <Section className="bg-jci-bg py-0 md:py-0">
+      <nav className="box-border flex min-h-28 items-center bg-gray-200">
         <div
           className="ml-8 flex flex-wrap gap-6 py-8 md:ml-20"
           role="tablist"
@@ -55,14 +56,12 @@ export default function PoliticaPrivacidad() {
         </div>
       </nav>
 
-      <div className="bg-white">
-        {/* Contenedor con animación de transición */}
-        <div className="transition-all duration-300 ease-in-out">
-          <div className="" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
-            {renderContent()}
-          </div>
+      {/* Contenedor con animación de transición */}
+      <div className="transition-all duration-300 ease-in-out">
+        <div className="" role="tabpanel" aria-labelledby={`tab-${activeButton}`}>
+          {renderContent()}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

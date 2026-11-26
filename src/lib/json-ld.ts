@@ -154,7 +154,7 @@ export function generateNewsArticleSchema(
   noticia: NoticiaEvento,
   baseUrl: string = process.env.NEXT_PUBLIC_SITE_URL!
 ): ArticleSchema {
-  const articleUrl = `${baseUrl}/noticias-eventos/${noticia.url}`;
+  const articleUrl = `${baseUrl}/noticias-eventos/${noticia.slug}`;
   const imageUrl = noticia.imagen.startsWith("http")
     ? noticia.imagen
     : `${baseUrl}${noticia.imagen}`;
@@ -233,7 +233,7 @@ export function generateEventSchema(
       price: "0",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
-      url: `${baseUrl}/noticias-eventos/${evento.url}`,
+      url: `${baseUrl}/noticias-eventos/${evento.slug}`,
     },
   };
 }

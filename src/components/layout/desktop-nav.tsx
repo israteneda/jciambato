@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 
 import type { NavItem } from "@/types/nav";
-import { isActive } from "@/lib/nav";
+import { isActive } from "@/utils/nav";
 
 import { NavItem as NavLink } from "./NavItem";
 
@@ -19,7 +19,7 @@ export function DesktopNav({ items }: { items: NavItem[] }) {
 
           const baseColor = isLast
             ? "text-jci-yellow font-semibold hover:text-yellow-400"
-            : "group-data-[affix=false]:text-white group-data-[affix=true]:text-jci-black hover:text-jci-yellow";
+            : "group-data-[affix=false]:group-data-[tone=light]:text-white group-data-[affix=false]:group-data-[tone=dark]:text-jci-black group-data-[affix=true]:text-jci-black hover:text-jci-yellow";
 
           return (
             <li key={item.href} role="none">

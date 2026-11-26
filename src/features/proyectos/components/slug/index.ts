@@ -1,3 +1,3 @@
-export { default as Presentacion } from "./presentacion";
-export { default as Descripcion } from "./descripcion";
-export { default as SiguienteProyecto } from "./siguiente-proyecto";
+export { Presentacion } from "./presentacion";
+export { Descripcion } from "./descripcion";
+export { SiguienteProyecto } from "./siguiente-proyecto";
