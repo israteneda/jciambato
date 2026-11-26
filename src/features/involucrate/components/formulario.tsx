@@ -76,12 +76,12 @@ export function Formulario() {
   };
 
   return (
-    <Section className="bg-jci-bg" aria-labelledby="formulario-heading">
-      <div className="mt-8 md:mt-16">
+    <Section className="bg-jci-bg py-0" aria-labelledby="formulario-heading">
+      <div>
         <BackgroundText primary="Hablemos" inset={8} />
       </div>
 
-      <div className="bg-jci-gray-light mt-16 md:mt-60">
+      <div className="bg-jci-gray-light mt-stack md:mt-40">
         <Container className="mx-auto">
           <div className="flex flex-col lg:flex-row">
             <div className="flex-1">

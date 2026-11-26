@@ -16,7 +16,7 @@ export function Valores() {
           />
         </div>
         <div>
-          <div className="flex flex-col py-10 md:flex-row">
+          <div className="flex flex-col pt-block md:flex-row">
             <div className="flex flex-1 flex-col md:mt-48 md:mr-3">
               <div className="md:mt-6">
                 <div className="bg-jci-navy box-border min-h-52 w-full p-10">

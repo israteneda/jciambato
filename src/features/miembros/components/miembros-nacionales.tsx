@@ -5,7 +5,8 @@ export function MiembrosNacionales() {
   return (
     <PersonGrid
       title="En JCI Ecuador"
-      headingId="miembros-activos-heading"
+      headingId="miembros-nacionales-heading"
+      sectionClassName="bg-jci-bg pt-0"
       description={
         <>
           Esta participación proyecta el impacto local hacia escenarios nacionales e
@@ -16,7 +17,7 @@ export function MiembrosNacionales() {
         </>
       }
       data={miembrosNacionales}
-      ariaLabel="Lista de miembros activos"
+      ariaLabel="Lista de miembros en JCI Ecuador"
     />
   );
 }

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Presentacion() {
   return (
-    <Section>
+    <Section className="pb-stack">
       <div className="overflow-hidden">
         <Container>
           <div>
@@ -37,7 +37,7 @@ export function Presentacion() {
         </Container>
       </div>
 
-      <div className="mt-16">
+      <div className="mt-block">
         <BackgroundText primary="JCI AMBATO" secondary="LIDERAZGO" inset={25} />
       </div>
     </Section>

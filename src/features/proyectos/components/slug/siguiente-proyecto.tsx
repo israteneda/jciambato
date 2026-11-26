@@ -18,7 +18,7 @@ export function SiguienteProyecto({ proyecto }: { proyecto: Proyecto }) {
   }
 
   return (
-    <Section className="bg-jci-gray-light py-28">
+    <Section className="bg-jci-gray-light">
       <div className="relative">
         {/* Texto rotado */}
         <RotatedText text="Nuestros Proyectos" />

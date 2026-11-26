@@ -5,13 +5,14 @@ import { jciLinks } from "@/features/inicio/data/footer";
 import { siteConfig } from "@/config/seo";
 import { Section } from "./section";
 import { Container } from "./container";
+import ScrollMarquee from "@/components/scroll-marquee";
 
 export function Footer() {
   return (
     <footer>
       {/* Sección de llamada a la acción */}
-      <Section className="bg-jci-blue py-24 md:py-48" aria-labelledby="cta-heading">
-        <div className="mb-0 lg:mb-16">
+      <Section className="bg-jci-blue py-section-lg" aria-labelledby="cta-heading">
+        <div>
           <Container>
             <Link
               href="/involucrate"
@@ -25,13 +26,13 @@ export function Footer() {
                   </span>
                   <h2
                     id="cta-heading"
-                    className="font-base mt-8 max-w-2xl text-3xl tracking-tight text-white md:text-4xl lg:text-5xl"
+                    className="font-base mt-stack max-w-2xl text-3xl tracking-tight text-white md:text-4xl lg:text-5xl"
                   >
-                    Te atreves a <strong>ser el cambio que quieres ver en el mundo?</strong>
+                    ¿Te atreves a <strong>ser el cambio que quieres ver en el mundo?</strong>
                   </h2>
                 </header>
 
-                <div className="my-16 text-white md:ml-48">
+                <div className="mt-stack text-white md:mt-0 md:ml-48">
                   <Image
                     src="/icons/arrow-down.svg"
                     alt=""
@@ -59,7 +60,7 @@ export function Footer() {
             Conócenos mejor
           </span>
 
-          <div className="pt-14 md:pt-20 lg:pt-28">
+          <div className="pt-section">
             {/* Items */}
             <Container>
               <div className="mb-8 flex flex-row items-center justify-between gap-8">
@@ -146,7 +147,7 @@ export function Footer() {
             </Container>
 
             {/* Derechos reservados */}
-            <Container className="mt-14">
+            <Container className="mt-block">
               <div className="py-5">
                 <div className="text-jci-gray flex flex-col justify-between gap-2 lg:flex-row lg:gap-5">
                   <div className="flex flex-col gap-1">
@@ -198,22 +199,10 @@ export function Footer() {
             </Container>
 
             {/* Marquee decorativo al final de la página */}
-            <div className="overflow-hidden pt-4 pb-8 md:pt-8 md:pb-12" aria-hidden="true">
-              <div className="animate-marquee flex w-max motion-reduce:animate-none">
-                {[0, 1].map((copia) => (
-                  <div key={copia} className="flex shrink-0">
-                    {Array.from({ length: 4 }).map((_, i) => (
-                      <span
-                        key={i}
-                        className="text-jci-black pr-[0.4em] text-[clamp(64px,13vw,190px)] leading-none font-black tracking-normal whitespace-nowrap uppercase opacity-10 select-none"
-                      >
-                        JCI Ambato
-                      </span>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </div>
+            <ScrollMarquee
+              text="JCI Ambato"
+              className="text-jci-black pt-stack pb-block text-[clamp(64px,13vw,190px)] leading-none font-black tracking-normal uppercase opacity-10 select-none"
+            />
           </div>
         </div>
       </Section>

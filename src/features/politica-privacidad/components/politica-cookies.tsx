@@ -20,7 +20,7 @@ export function PoliticaCookies() {
           </p>
         </header>
 
-        <div className="mt-16">
+        <div className="mt-block">
           <section>
             <div className="mt-8">
               <div className="text-jci-black max-w-2xl text-left text-lg leading-[1.78] font-normal">

@@ -7,7 +7,7 @@ export function Presentacion({ area }: { area: AreaOportunidad }) {
   return (
     <Section className="overflow-hidden" aria-labelledby={`presentacion-${area.slug}-heading`}>
       <Container>
-        <div className="mt-16">
+        <div>
           <div className="max-w-5xl">
             <header>
               <div className="text-jci-gray text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">

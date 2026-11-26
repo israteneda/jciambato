@@ -3,14 +3,14 @@ import { Section } from "@/components/layout/section";
 
 export function PoliticaGestion() {
   return (
-    <Section className="bg-jci-bg py-0 md:py-0">
+    <Section className="bg-jci-bg pt-0">
       <div className="box-border flex min-h-28 items-center bg-gray-200">
         <h1 className="text-jci-black ml-8 leading-none font-bold whitespace-nowrap transition duration-300 md:ml-20">
           Política de Gestión
         </h1>
       </div>
 
-      <div className="mt-16">
+      <div className="mt-section">
         <Container>
           <h3 className="text-jci-black max-w-3xl text-left text-2xl font-bold md:leading-normal lg:text-5xl">
             JCI Ambato se compromete a empoderar a sus miembros, senadores y colaboradores,
@@ -18,7 +18,7 @@ export function PoliticaGestion() {
             sostenibles y basadas en valores compartidos.
           </h3>
 
-          <div className="py-16">
+          <div className="pt-block">
             <div className="relative">
               <h4 className="text-jci-black text-left text-2xl leading-tight font-bold">
                 El objetivo es ser un diferenciador clave por nuestra capacidad colaborativa,

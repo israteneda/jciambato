@@ -40,7 +40,12 @@ const BackgroundText = ({
   const secondaryRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      // Sin vaivén, pero respetando `inset` para no pegar las palabras al borde.
+      if (primaryRef.current) primaryRef.current.style.transform = `translateX(${inset}%)`;
+      if (secondaryRef.current) secondaryRef.current.style.transform = `translateX(${-inset}%)`;
+      return;
+    }
 
     let frame = 0;
 

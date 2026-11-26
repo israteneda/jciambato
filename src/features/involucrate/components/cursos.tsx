@@ -6,7 +6,7 @@ import { Section } from "@/components/layout/section";
 
 export function Cursos() {
   return (
-    <Section className="bg-jci-bg" aria-labelledby="cursos-heading">
+    <Section className="bg-jci-bg pt-0" aria-labelledby="cursos-heading">
       <Container>
         <SectionHeader
           title="Prepárate para ser parte de JCI"
@@ -14,7 +14,7 @@ export function Cursos() {
           description="Participa en nuestros cursos de inducción, formación y liderazgo. Estos programas te permitirán comprender a profundidad el propósito de nuestra organización, fortalecer tus competencias personales y profesionales, y descubrir cómo contribuir activamente al desarrollo de tu comunidad."
         />
 
-        <div className="my-10 flex flex-col md:flex-row">
+        <div className="mt-block flex flex-col md:flex-row">
           <div className="flex flex-1 flex-col md:mt-48 md:mr-3">
             <div className="md:mt-6">
               <div className="bg-jci-navy box-border min-h-52 w-full p-10">

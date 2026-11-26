@@ -18,7 +18,7 @@ export function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEvento }) {
   ]; */
 
   return (
-    <Section className="py-0 md:py-0" aria-labelledby="detalles-heading">
+    <Section className="pt-0" aria-labelledby="detalles-heading">
       <div>
         <div className="h-37.5 md:h-80"></div>
         <div className="absolute top-0 right-0 left-0 pt-24 md:pt-44">
@@ -53,7 +53,7 @@ export function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEvento }) {
         </div>
       </div>
 
-      <Container className="mx-auto bg-white p-8 md:p-30">
+      <Container className="mx-auto bg-white p-8 md:px-30 md:pt-30 md:pb-block">
         <div>
           <header>
             <p className="text-jci-black text-xs leading-[1.85] font-bold uppercase">
@@ -106,7 +106,7 @@ export function Detalles({ noticiaEvento }: { noticiaEvento: NoticiaEvento }) {
 
                 <div className="flex w-full flex-col md:flex-row">
                   <div className="w-full pr-0 md:w-[80%] md:pr-24">
-                    <article className="pb-20">
+                    <article>
                       {/* Introducción */}
                       {noticiaEvento.contenido?.introduccion && (
                         <div className="mb-8">

@@ -4,7 +4,7 @@ import { Container } from "@/components/layout/container";
 
 export function Valores() {
   return (
-    <Section className="bg-jci-navy py-24 md:py-34">
+    <Section className="bg-jci-navy">
       <Container>
         <div>
           <div className="text-jci-yellow text-[13px] leading-[1.85] font-bold tracking-normal uppercase">

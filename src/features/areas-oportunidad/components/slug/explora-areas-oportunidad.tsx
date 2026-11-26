@@ -41,13 +41,13 @@ export function ExploraAreasOportunidad({ area }: { area: AreaOportunidad }) {
   const [firstKeyword, secondKeyword] = extractTwoKeywords(area.title);
 
   return (
-    <Section aria-labelledby={`explora-areas-oportunidad-${area.slug}-heading`}>
+    <Section className="pb-0" aria-labelledby={`explora-areas-oportunidad-${area.slug}-heading`}>
       <div className="relative">
         {/* Texto rotado */}
         <RotatedText text="Selecciona nuestras áreas" />
 
         {/* Caja de Información */}
-        <div className="mt-16">
+        <div>
           <Container>
             <div className="text-jci-gray font-sans text-[13px] leading-[1.85] font-bold tracking-normal uppercase not-italic">
               Quieres conocer más?
@@ -74,7 +74,7 @@ export function ExploraAreasOportunidad({ area }: { area: AreaOportunidad }) {
       </div>
 
       {/* Texto de fondo */}
-      <div className="mt-16">
+      <div className="mt-block">
         <BackgroundText primary={firstKeyword} secondary={secondKeyword} />
       </div>
     </Section>

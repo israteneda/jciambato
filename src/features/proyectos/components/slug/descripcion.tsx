@@ -7,7 +7,7 @@ import { Container } from "@/components/layout/container";
 
 export function Descripcion({ proyecto }: { proyecto: Proyecto }) {
   return (
-    <Section className="py-0 md:py-0" aria-label="Descripción del proyecto">
+    <Section className="pt-0" aria-label="Descripción del proyecto">
       <div className="relative h-137.5 w-full md:h-215">
         <div className="relative h-full w-full overflow-hidden bg-white">
           <Image
@@ -20,7 +20,7 @@ export function Descripcion({ proyecto }: { proyecto: Proyecto }) {
         </div>
       </div>
       <div className="relative -top-35 -mb-35">
-        <Container className="mx-auto bg-white p-8 md:p-30">
+        <Container className="mx-auto bg-white p-8 md:px-30 md:pt-30 md:pb-block">
           <div>
             <header className="flex flex-col justify-between md:flex-row md:items-center">
               <div>
@@ -110,7 +110,7 @@ export function Descripcion({ proyecto }: { proyecto: Proyecto }) {
               </div>
               <div className="flex w-full flex-col md:flex-row">
                 <div className="w-full pr-0 md:pr-24">
-                  <div className="pb-20">
+                  <div>
                     <div className="text-medium text-jci-black flex flex-col gap-5 leading-[1.71]">
                       <p>{proyecto.descripcion}</p>
 

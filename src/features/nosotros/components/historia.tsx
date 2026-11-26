@@ -13,7 +13,7 @@ import SectionHeader from "@/components/layout/section-header";
 export function Historia() {
   return (
     <Section className="bg-jci-bg">
-      <div className="pt-12 md:pt-24">
+      <div>
         <BackgroundText primary="Desde" secondary="1973" inset={15} />
       </div>
       <Container>
@@ -23,7 +23,7 @@ export function Historia() {
           description="Por cinco décadas, JCI Ambato ha forjado un liderazgo transformador, impulsando la formación de ciudadanos activos y ejecutando proyectos de gran impacto. Su legado se construye con logros, retos superados y generaciones de jóvenes dedicadas a hacer de Ambato una ciudad más inclusiva, participativa y preparada para el futuro."
         />
       </Container>
-      <div className="my-24 sm:ml-20 md:my-32 lg:ml-56">
+      <div className="mt-block sm:ml-20 lg:ml-56">
         <Swiper
           modules={[Navigation, Mousewheel, FreeMode]}
           spaceBetween={20}

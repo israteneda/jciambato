@@ -15,7 +15,7 @@ export function CondicionesUso() {
           </time>
         </header>
 
-        <div className="mt-16">
+        <div className="mt-block">
           <section>
             <div className="text-jci-black max-w-2xl text-left text-lg leading-[1.78] font-normal">
               <div className="flex flex-col gap-5">

@@ -17,7 +17,7 @@ export function Presentacion() {
             </div>
           </header>
 
-          <div className="mt-16 md:mt-20">
+          <div className="mt-stack">
             <div className="text-jci-black text-justify text-base leading-loose md:text-left">
               En JCI brindamos oportunidades de desarrollo de liderazgo prácticas, deliberadas y
               sostenibles. A través de una amplia gama de eventos, programas, sesiones de formación
@@ -26,8 +26,8 @@ export function Presentacion() {
             </div>
           </div>
 
-          <div className="mt-20">
-            <div className="my-5 leading-loose md:p-6">
+          <div className="mt-block">
+            <div className="leading-loose md:px-6">
               <p className="mb-4">Nuestro enfoque está guiado por cuatro áreas de oportunidad:</p>
               <ul className="space-y-2">
                 <li className="flex items-start">
@@ -74,7 +74,7 @@ export function Presentacion() {
             </div>
           </div>
 
-          <div className="mt-5">
+          <div className="mt-stack">
             <div className="text-jci-black text-justify text-base leading-loose md:text-left">
               Al integrar estas áreas, cada experiencia en JCI fortalece a nuestros miembros como
               agentes de cambio global. Ya sea liderando un proyecto, participando en una formación

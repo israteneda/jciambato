@@ -6,7 +6,7 @@ import { Container } from "@/components/layout/container";
 export function Opinion() {
   return (
     <Section className="overflow-hidden">
-      <div className="py-24">
+      <div>
         <RotatedText text="Forma parte de una organización a futuro" />
 
         <Container className="z-10">
