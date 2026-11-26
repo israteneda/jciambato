@@ -83,7 +83,7 @@ export function Construccion({ area }: { area: AreaOportunidad }) {
         <section className="relative bg-transparent">
           {/* Swiper con imágenes */}
           <div className="cursor-none">
-            <Container className="relative mx-auto max-w-4xl">
+            <Container className="relative max-w-4xl lg:mx-auto">
               <Swiper
                 ref={swiperRef}
                 modules={[Navigation]}
@@ -117,7 +117,7 @@ export function Construccion({ area }: { area: AreaOportunidad }) {
           </div>
 
           {/* Controles de navegación */}
-          <Container className="relative mx-auto max-w-4xl">
+          <Container className="relative max-w-4xl lg:mx-auto">
             <div className="mt-2 flex items-center justify-between">
               {/* Contador */}
               <div className="pointer-events-none inline-flex -rotate-90 flex-col">

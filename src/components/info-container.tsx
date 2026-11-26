@@ -17,7 +17,7 @@ export default function InfoContainer({
   const textColor = tone === "light" ? "text-gray-200" : "text-jci-black";
 
   return (
-    <div className="relative z-10">
+    <div className="relative z-10 w-full">
       <Container>
         <header>
           <h2

@@ -29,6 +29,13 @@
   --font-heading: var(--font-plus-jakarta), sans-serif;
   --font-arvo: var(--font-arvo), serif;
 
+  /* ─── Breakpoint del carril de contenido ───
+   * 1440px = 1280 (max-w-7xl) + 2×80 de margen. Desde aquí Container se
+   * centra. Debe ser un breakpoint con nombre: un variant arbitrario
+   * (min-[1440px]:) se ordena antes que md: y no gana.
+   */
+  --breakpoint-wide: 90rem;
+
   /* ─── Ritmo vertical ───
    * Escala fluida (celular → escritorio) para que el espacio entre bloques
    * sea consistente en todo el sitio:
