@@ -24,8 +24,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
+# env files: las claves viven en Vercel (Settings → Environment Variables)
+.env
+.env.*
+!.env.example
 
 # vercel
 .vercel

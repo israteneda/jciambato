@@ -34,6 +34,7 @@
     "start": "next start",
     "lint": "eslint . --fix",
     "check-types": "tsc --noEmit --pretty",
+    "check:datos": "node scripts/check-datos-personales.mjs",
     "format": "prettier --write --cache \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {

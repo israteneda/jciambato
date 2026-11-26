@@ -1,0 +1,7 @@
+# Excepciones revisadas a scripts/check-datos-personales.mjs
+# Formato:  ruta/del/archivo:texto-exacto   # motivo y quién lo aprobó
+# Solo para datos que su titular decidió publicar. Nunca para cédulas, salud,
+# datos de menores ni claves.
+
+package.json:israteneda@gmail.com   # correo que Israel publicó como contribuidor del proyecto
+package.json:sebas.palate11@gmail.com   # correo que Sebastián publicó como contribuidor del proyecto
