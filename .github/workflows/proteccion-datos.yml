@@ -1,0 +1,50 @@
+name: Protección de datos
+
+# Bloquea PRs y pushes que agreguen secretos o datos personales (LOPDP).
+# Gratis: en repos públicos los runners estándar de GitHub Actions no tienen costo.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  datos-personales:
+    name: Datos personales (LOPDP)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Revisar cédulas, celulares, correos personales y términos sensibles
+        run: node scripts/check-datos-personales.mjs
+
+  secretos:
+    name: Secretos (gitleaks)
+    runs-on: ubuntu-latest
+    env:
+      GITLEAKS_VERSION: 8.28.0
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Instalar gitleaks
+        run: |
+          curl -sSL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
+            | tar -xz -C /usr/local/bin gitleaks
+          gitleaks version
+      - name: Buscar claves en los commits nuevos
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            RANGE="${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }}"
+          else
+            RANGE="${{ github.event.before }}..${{ github.sha }}"
+            # Primer push de la rama: revisar todo el historial.
+            if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then RANGE="${{ github.sha }}"; fi
+          fi
+          echo "Rango: $RANGE"
+          gitleaks git --log-opts="$RANGE" --redact --no-banner -v .

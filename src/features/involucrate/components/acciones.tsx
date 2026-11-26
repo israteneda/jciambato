@@ -51,28 +51,6 @@ export function Acciones() {
                       </div>
                     </div>
 
-                    {/* <div className="mr-8">
-                      <h4 className="text-left text-[18px] leading-[1.78] font-bold tracking-normal text-jci-dark-text not-italic">
-                        Teléfono
-                      </h4>
-                      <div className="mt-2">
-                        <a
-                          href="tel:+593984567890"
-                          className="block text-left text-sm leading-[1.78] font-normal tracking-normal text-jci-dark-text not-italic"
-                          aria-label="Llamar al número +593 98 456 7890"
-                        >
-                          +593 98 456 7890
-                        </a>
-                        <a
-                          href="tel:+593984567890"
-                          className="block text-left text-sm leading-[1.78] font-normal tracking-normal text-jci-dark-text not-italic"
-                          aria-label="Llamar al número +593 98 456 7890"
-                        >
-                          +593 98 456 7890
-                        </a>
-                      </div>
-                    </div> */}
-
                     <div className="mr-8">
                       <h4 className="text-jci-black text-left text-[18px] leading-[1.78] font-bold tracking-normal not-italic">
                         Correo
