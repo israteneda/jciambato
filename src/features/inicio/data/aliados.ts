@@ -79,4 +79,11 @@ export const aliados: Aliado[] = [
     url: "https://www.pucesa.edu.ec/",
     imagenUrl: "/images/aliados/logo-pucesa.webp",
   },
+  {
+    id: "tenpisoft",
+    titulo: "Tenpisoft",
+    url: "https://tenpisoft.com",
+    imagenUrl: "/images/marca/tenpisoft/tenpisoft-horizontal-color.svg",
+    alturaRelativa: "55%",
+  },
 ];
